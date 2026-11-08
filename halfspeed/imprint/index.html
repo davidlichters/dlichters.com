@@ -179,10 +179,136 @@ font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;
 .ios .sb input::placeholder{color:#707073;opacity:1}
 .ios .sb input::-webkit-search-cancel-button{-webkit-appearance:none}
 :root{--back:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAA5CAYAAAC4YUKZAAACWUlEQVR42sXZS4hPcRQH8I8Z4/0OERYUyiywkIWIKCVKiFCKDVZkpWwkhWwkC0nZIIqFsCE1XnmMjIQyCiVRQh7jbcbmTk0TM+df94xTv92t36df/e4933OrdW1NwjJMxlt86MrNu2EPmtFSrB/Y3JWAQ202b79mVScDqnEE6zp4piUT0B0nOjiB1nWmexKgB05iceDZhgxAL5wPnEALXmJo2YA+uBgEvEJt2YD+uBwEvMD4sgEDcSMIeIqxZQOG4E4Q8BijywYMx/0g4AFGlA0YiUdBwN2MWzAGT4KAmxhUNmAcngUBV4pbU2pNKK5XBHCxeG+UWrXFCyYCOIeeZQOm4E0QcAo1ZQOm4V0QcLT4fJdaM4oWLAI4jKqyAXPwOQg4UHRQpdZ8fAkC9mb0A4vwLQjYkQFYVnTBEcDWDMBq/AoCNmUA1uJ3YPNmrM8AzAmewC+syWrNrwUAP7E8Mx98DSBWZMe01wHEJfTNROwP3oirGJCFGFBBn3gLg7Mgw3AvCGnI6Bfbtu71QcjDjM65bYi5HoQ0ZmSI1uqHuiDkWUaaaq3euFBBrpyQBemJs/8zYbdWDU4HIW8wNXPsczwIeY/pWZCqYgAWgXzEzMxR4MEgpAlzM781+4KQr1iQCdkdhHzHkkzI9iDkJ1ZmQrYGIb+LPjatNgchzdiYCdnQboLf0dqSCYnGhhZsy4SsqiBA7cyELK0gSu7KhCysIFTPy/rp0ojbRcDubHTUnJ1pZuNTJydxpioZUVcMXD528Ey9Lqp/Dd+eZ+aYv9XEYr7ZVDQ/xzAK/gAQcR7593xSwAAAAABJRU5ErkJggg==)}
+.gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
+--sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+--sft:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+--cb:cubic-bezier(.4,0,.6,1)}
+.gn ul{list-style:none;margin:0;padding:0}
+.gn-content{--rate:375ms;position:absolute;top:0;left:0;width:100%;height:48px;overflow:hidden;
+background:rgba(250,250,252,.8);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
+transition:height var(--rate) var(--cb) 80ms,background var(--rate) var(--cb) 80ms}
+.gn-open .gn-content{height:100vh;height:100dvh;background:#fafafc;overflow-x:hidden;overflow-y:auto;overscroll-behavior:none;transition-delay:0ms}
+.gn-menu,.gn-submenu{position:absolute;top:0;left:0;width:100%}
+.gn-flyout{padding-top:50px;box-sizing:border-box}
+.gn-menu-list{display:flex;flex-direction:column;padding-bottom:84px}
+.gn-item{opacity:0;transform:translateY(-8px);
+transition:opacity .24s var(--cb) calc(.2s + var(--n) * 20ms),transform .24s var(--cb) calc(.2s + var(--n) * 20ms)}
+.gn-open .gn-item{opacity:1;transform:none}
+.gn-closing .gn-item{transition-delay:0s;transition-duration:min(.16s + 20ms * (8 - var(--n)),.24s)}
+.gn-sub .gn-item{transition:none}
+.gn-sub:not(.gn-anim) .gn-item{opacity:0;visibility:hidden;transform:translate(-8px)}
+.gn-item:first-child{margin-top:-3px}
+.gn-link{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:-7px;padding:3px 48px 4px;
+color:#333336;text-decoration:none;font-family:var(--sfd);font-size:28px;line-height:1.1428571429;font-weight:600;
+letter-spacing:-.0066em;pointer-events:none;transition:color .32s var(--cb);-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-open .gn-link{pointer-events:auto}
+.gn-link:hover,.gn-link:focus-visible{color:#000}
+.gn-link:focus{outline:none}
+.gn-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
+.gn-link-text{pointer-events:none;padding-top:7.5px;padding-bottom:7.5px}
+.gn-link-chevron{display:block;height:47px;margin-top:-1px;margin-right:-48px;padding-right:19px;color:#333336;
+opacity:0;visibility:hidden;transform:scale(.8);transform-origin:center;
+transition:opacity .24s var(--cb),transform .24s var(--cb),visibility .24s step-end}
+.gn-link-chevron svg{fill:currentColor;transform:scaleX(-1) translateZ(0)}
+@media (hover:hover){.gn-open:not(.gn-sub):not(.gn-closing) .gn-link:hover .gn-link-chevron{visibility:visible;
+opacity:1;transform:none;transition:visibility .24s step-start;animation:gn-chevron-in .24s var(--cb) both}}
+@keyframes gn-chevron-in{0%{opacity:0;transform:translate(-4px)}to{opacity:1;transform:translate(0)}}
+.gn-submenu{opacity:0;visibility:hidden;pointer-events:none;overflow:hidden}
+.gn-sub .gn-submenu{opacity:1;visibility:visible;pointer-events:auto}
+.gn.gn-closing .gn-submenu{opacity:0;transform:translateY(-8px);transition:opacity .24s var(--cb),transform .24s var(--cb)}
+.gn-submenu-content{display:flex;flex-wrap:wrap;padding:50px 48px 0;box-sizing:border-box}
+.gn-submenu-group{padding-bottom:92px}
+.gn-submenu-header{margin:0;color:#6e6e73;font-family:var(--sft);font-size:17px;line-height:1.2353641176;
+font-weight:400;letter-spacing:.0033em}
+.gn-submenu-list-item{margin:0 -11px;font-family:var(--sft);font-size:17px;line-height:1.4705882353;font-weight:600;
+letter-spacing:-.022em}
+.gn-submenu-list-item:first-child{margin-top:14px}
+.gn-submenu-link{display:flex;align-items:center;max-width:max-content;padding:8px 11px 7px;margin-bottom:-5px;
+color:#333336;text-decoration:none;transition:color .32s var(--cb);-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-submenu-link:hover,.gn-submenu-link:focus-visible{color:#000}
+.gn-submenu-link:focus{outline:none}
+.gn-submenu-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
+.gn-fwd .gn-menu .gn-link-text{animation:gn-fwd-prev .24s var(--cb) both}
+.gn-fwd .gn-submenu{animation:gn-fwd-next .24s var(--cb) .16s both}
+.gn-bwd .gn-submenu{animation:gn-bwd-prev .24s var(--cb) both}
+.gn-bwd .gn-menu .gn-link-text{animation:gn-bwd-next .24s var(--cb) .16s both}
+@keyframes gn-fwd-next{0%{opacity:0;transform:translate(8px)}to{opacity:1;transform:translate(0)}}
+@keyframes gn-fwd-prev{0%{opacity:1;transform:translate(0)}to{opacity:0;transform:translate(-8px)}}
+@keyframes gn-bwd-prev{0%{opacity:1;transform:translate(0)}to{opacity:0;transform:translate(8px)}}
+@keyframes gn-bwd-next{0%{opacity:0;transform:translate(-8px)}to{opacity:1;transform:translate(0)}}
+.gn-menuback{position:absolute;top:0;left:max(0px,env(safe-area-inset-left) - 18px);z-index:3;width:48px;height:48px;
+opacity:0;pointer-events:none;visibility:hidden;transform:translate(4px) scale(1);transform-origin:center;
+transition:opacity .24s var(--cb),transform .24s var(--cb),visibility .24s step-end}
+.gn-sub:not(.gn-bwd):not(.gn-closing) .gn-menuback{visibility:visible;transform:translate(0) scale(1);opacity:1;pointer-events:auto;
+transition:opacity .24s var(--cb) .16s,transform .24s var(--cb) .16s,visibility .24s step-start .16s}
+.gn.gn-closing .gn-menuback{opacity:0;transform:translate(0) scale(.8)}
+.gn button:focus:not(:focus-visible){outline:none}
+.gn-menuback-button{-webkit-appearance:none;appearance:none;background:none;border:0;margin:0;
+padding:0;font:inherit;cursor:pointer;outline-offset:-7px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-menuback-button{display:flex;justify-content:center;width:100%;height:100%;color:#333336;transition:color .32s var(--cb)}
+.gn-menuback-button:hover{color:#000}
+.gn-chevron-icon{display:flex;margin-left:-1px}
+.gn-chevron-icon svg{fill:currentColor}
+
+.gn-page{position:fixed;pointer-events:none}
+.gn-page a,.gn-page a:hover{text-decoration:none}
+.gn-page:not(.gn-open) .gn-content{background:rgba(250,250,252,0);-webkit-backdrop-filter:none;backdrop-filter:none}
+.gn-page.gn-open .gn-content{pointer-events:auto}
+.gn-menutrigger{position:absolute;top:3px;right:max(0px,env(safe-area-inset-right) - 16px);z-index:3;width:48px;pointer-events:auto}
+.gn-menutrigger-button{-webkit-appearance:none;appearance:none;background:none;border:0;margin:0;padding:0;font:inherit;cursor:pointer;
+outline-offset:-7px;-webkit-tap-highlight-color:rgba(0,0,0,0);position:relative;display:flex;justify-content:center;align-items:center;
+width:48px;height:48px;color:#000;opacity:.8;transition:opacity .32s var(--cb),color .32s var(--cb)}
+.gn-menutrigger-button:hover{opacity:1}
+html.gn-lock,html.gn-lock body{overflow:hidden}
+html.srch .gn{display:none}
 </style></head>
 <body>
 <div class="navfx" id="fx" aria-hidden="true"></div>
-<header class="nb"><a class="glass" href="../" aria-label="Back to Halfspeed"><i aria-hidden="true"></i></a><b>Imprint</b></header>
+<header class="nb"><b>Imprint</b></header>
+<nav class="gn gn-page" id="gn" aria-label="Menu">
+<div class="gn-content">
+<div class="gn-menuback"><button class="gn-menuback-button" type="button" aria-label="Main menu"><span class="gn-chevron-icon" aria-hidden="true"><svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m1.5618 24.0621 6.5581-6.4238c.2368-.2319.2407-.6118.0088-.8486-.2324-.2373-.6123-.2407-.8486-.0088l-7 6.8569c-.1157.1138-.1807.2695-.1802.4316.001.1621.0674.3174.1846.4297l7 6.7241c.1162.1118.2661.1675.4155.1675.1577 0 .3149-.062.4326-.1846.2295-.2388.2222-.6187-.0171-.8481z"/></svg></span></button></div>
+<div class="gn-menutrigger"><button class="gn-menutrigger-button" type="button" aria-label="Menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><polyline fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 12, 16 12"><animate id="gn-bread-bottom-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate><animate id="gn-bread-bottom-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate></polyline><polyline fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="2 5, 16 5"><animate id="gn-bread-top-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate><animate id="gn-bread-top-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate></polyline></svg></button></div>
+<div class="gn-menu"><div class="gn-flyout"><ul class="gn-menu-list">
+<li class="gn-item" style="--n:1"><a class="gn-link" href="../../story/"><span class="gn-link-text">story</span></a></li>
+<li class="gn-item" style="--n:2"><a class="gn-link" href="../../ai/" data-sub="gn-ai" aria-haspopup="true" aria-expanded="false" aria-controls="gn-ai"><span class="gn-link-text">ai</span><span class="gn-link-chevron" aria-hidden="true"><svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m1.5618 24.0621 6.5581-6.4238c.2368-.2319.2407-.6118.0088-.8486-.2324-.2373-.6123-.2407-.8486-.0088l-7 6.8569c-.1157.1138-.1807.2695-.1802.4316.001.1621.0674.3174.1846.4297l7 6.7241c.1162.1118.2661.1675.4155.1675.1577 0 .3149-.062.4326-.1846.2295-.2388.2222-.6187-.0171-.8481z"/></svg></span></a></li>
+<li class="gn-item" style="--n:3"><a class="gn-link" href="../../diet/"><span class="gn-link-text">diet</span></a></li>
+<li class="gn-item" style="--n:4"><a class="gn-link" href="../../ecom/"><span class="gn-link-text">ecom</span></a></li>
+<li class="gn-item" style="--n:5"><a class="gn-link" href="../../instagram/"><span class="gn-link-text">instagram</span></a></li>
+<li class="gn-item" style="--n:6"><a class="gn-link" href="../../car/"><span class="gn-link-text">car</span></a></li>
+<li class="gn-item" style="--n:7"><a class="gn-link" href="../../apps/"><span class="gn-link-text">apps</span></a></li>
+<li class="gn-item" style="--n:8"><a class="gn-link" href="../../support/"><span class="gn-link-text">support</span></a></li>
+</ul></div></div>
+<div class="gn-submenu" id="gn-ai" inert aria-hidden="true"><div class="gn-submenu-content"><div class="gn-submenu-group">
+<h2 class="gn-submenu-header">everything david knows, written for ai</h2>
+<ul class="gn-submenu-list"><li class="gn-submenu-list-item"><a class="gn-submenu-link" href="https://chatgpt.com/?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know.">test davids brain upload</a></li></ul>
+</div></div></div>
+</div>
+</nav>
+<script>(function(){var g=document.getElementById("gn");if(!g)return;
+var c=g.querySelector(".gn-content"),menu=g.querySelector(".gn-menu"),sub=document.getElementById("gn-ai"),
+ai=g.querySelector("[data-sub]"),back=g.querySelector(".gn-menuback-button"),trig=g.querySelector(".gn-menutrigger-button"),busy=0;
+function has(k){return g.classList.contains(k)}
+function hide(el,on){el.inert=on;if(on)el.setAttribute("aria-hidden","true");else el.removeAttribute("aria-hidden")}
+function bread(n){["bottom","top"].forEach(function(p){var a=document.getElementById("gn-bread-"+p+"-"+n);
+if(a&&a.beginElement)a.beginElement()})}
+ai.addEventListener("click",function(e){e.preventDefault();if(busy||!has("gn-open")||has("gn-sub"))return;busy=1;
+hide(sub,false);ai.setAttribute("aria-expanded","true");g.classList.add("gn-sub","gn-anim","gn-fwd");
+setTimeout(function(){g.classList.remove("gn-anim","gn-fwd");hide(menu,true);busy=0;back.focus({preventScroll:true})},400)});
+back.addEventListener("click",function(){if(busy||!has("gn-sub"))return;busy=1;hide(menu,false);
+g.classList.add("gn-anim","gn-bwd");
+setTimeout(function(){g.classList.remove("gn-sub","gn-anim","gn-bwd");hide(sub,true);ai.setAttribute("aria-expanded","false");
+busy=0;ai.focus({preventScroll:true})},400)});
+trig.addEventListener("click",function(){if(busy)return;busy=1;var r=Math.min(480,Math.max(240,innerHeight/2));
+c.style.setProperty("--rate",r+"ms");
+if(has("gn-open")){g.classList.add("gn-closing");g.classList.remove("gn-open");bread("close");
+trig.setAttribute("aria-label","Menu");trig.setAttribute("aria-expanded","false");
+setTimeout(function(){g.classList.remove("gn-closing","gn-sub");hide(menu,false);hide(sub,true);
+ai.setAttribute("aria-expanded","false");document.documentElement.classList.remove("gn-lock");busy=0},r+80)}
+else{g.classList.add("gn-open");bread("open");document.documentElement.classList.add("gn-lock");trig.setAttribute("aria-label","Close");trig.setAttribute("aria-expanded","true");
+setTimeout(function(){busy=0},Math.max(r,200+20*8+240))}});
+document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
+addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 <main class="wrap">
 <article class="legal"><h1>Imprint</h1>
 <div class="card group"><section><h2>Provider (§ 5 DDG, Germany)</h2>
