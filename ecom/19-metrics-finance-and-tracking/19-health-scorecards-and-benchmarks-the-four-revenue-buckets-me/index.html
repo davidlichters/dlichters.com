@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Health scorecards and benchmarks: the four revenue buckets, MER and report cards | Ecommerce Playbook</title>
+<meta name="description" content="- Before you react to a sales drop, check whether the same drop happens at the same time every year. - Compare each month with the same month last year, not only with last month. - Ad prices rise during holiday sales because more shops bid for the ...">
+<link rel="canonical" href="https://dlichters.com/ecom/19-metrics-finance-and-tracking/19-health-scorecards-and-benchmarks-the-four-revenue-buckets-me/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Health scorecards and benchmarks: the four revenue buckets, MER and report cards | Ecommerce Playbook"><meta property="og:description" content="- Before you react to a sales drop, check whether the same drop happens at the same time every year. - Compare each month with the same month last year, not only with last month. - Ad prices rise during holiday sales because more shops bid for the ..."><meta property="og:url" content="https://dlichters.com/ecom/19-metrics-finance-and-tracking/19-health-scorecards-and-benchmarks-the-four-revenue-buckets-me/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../19-metrics-finance-and-tracking/">19. Metrics, finance and tracking</a></div><h1>Health scorecards and benchmarks: the four revenue buckets, MER and report cards</h1><p class="meta">Section 19.19 &middot; 19 of 23 in this chapter &middot; 19 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Before you react to a sales drop, check whether the same drop happens at the same time every year.</li>
+<li>Compare each month with the same month last year, not only with last month.</li>
+<li>Ad prices rise during holiday sales because more shops bid for the same buyers. Compare with last year before you change your bids.</li>
+<li>If the same size of drop keeps coming back, the market is getting full. Then try new products, new markets or new ways to reach buyers.</li>
+</ul>
+</div><article><div class="parts-bar"><span>This section has 12 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="pulling-the-inputs-from-shopify-and-the-ad-accounts"><summary><h2>Pulling the inputs from Shopify and the ad accounts</h2><span class="pm">1 min</span></summary>
+<p>Use the Shopify reports exactly as listed here, because the report card depends on them.</p>
+<p><strong>New and returning customer data</strong></p>
+<ol type="1">
+<li>Go to Analytics &gt; Reports.</li>
+<li>Click "New vs Returning Customers over Time".</li>
+<li>Set period to "Last 90 Days" and "No Comparison".</li>
+<li>Remove the "Total Sales" metric and remove all dimensions <span class="ex">(no by-day breakdown)</span>.</li>
+<li>Add these metrics: Orders, Gross Sales, Discounts, Total Shipping Charges, Taxes, Sales Reversals <span class="ex">(these are returns)</span>, Net Items Sold.</li>
+<li>Remove visualization.</li>
+<li>Apply and copy the data.</li>
+<li>In the report card, paste using "Paste Values Only".</li>
+</ol>
+<ul>
+<li>In Shopify reports, "Sales Reversals" is the metric name for customer returns.</li>
+</ul>
+<p><strong>Conversion rate, sessions and visitors</strong></p>
+<ol type="1">
+<li>Go to Analytics &gt; Conversion Rate Breakdown.</li>
+<li>Set period to "Last 90 Days" and "No Comparison".</li>
+<li>Remove dimensions.</li>
+<li>Add metrics: Conversion Rate, Sessions, Online Store Visitors.</li>
+<li>Copy the data.</li>
+<li>Paste into the report card using "Paste Values Only".</li>
+</ol>
+<ul>
+<li>Example values for this extraction: conversion rate 0.81%, sessions over 90 days 1,005,049, online store visitors 705,255.</li>
+</ul>
+<p><strong>Ad spend and fulfillment</strong></p>
+<ul>
+<li>Ad spend from TikTok, Snapchat, Pinterest and other platforms goes in the "Other Spend" field.</li>
+<li>Combine all channels, such as Facebook, Google and other spend, into one total before it is used for MER and the marketing bucket.</li>
+<li>Fulfillment cost is a formula field and must not be entered by hand. The system calculates it from your fulfillment data.</li>
+</ul>
+<p><strong>Input checks</strong></p>
+<ul>
+<li>If homepage data <span class="ex">(revenue, ad spend and operating expenses)</span> is wrong, every downstream tab gives wrong results. Verify all inputs before moving to other sections.</li>
+<li>Take all revenue, refund, tax and cost inputs from the calculator homepage and check them for accuracy. If the results do not match the P&amp;L, check the inputs before drawing any conclusion.</li>
+<li>Use the last 90 days of data and include both new and returning customers, so the report shows total business performance and not one customer group.</li>
+<li>Example COGS for a 90-day period: $216,980.</li>
+<li>Example return rate: 2.1%.</li>
+</ul>
+</details><details class="part" id="report-card-setup-and-workflow"><summary><h2>Report card setup and workflow</h2><span class="pm">2 min</span></summary>
+<p><strong>Opening the template</strong></p>
+<ol type="1">
+<li>Click the link to the AI Report Card Google Sheet.</li>
+<li>Click "Make a Copy" or go to File &gt; Make a Copy to save a personal version.</li>
+<li>Never edit the original template.</li>
+<li>Only fill cells showing blue text <span class="ex">(manual inputs)</span>.</li>
+<li>Never modify black text cells, because these contain formulas that calculate automatically.</li>
+</ol>
+<p><strong>Reading the colours and time windows</strong></p>
+<ul>
+<li>Blue font marks manually entered cells. Black font marks formula cells. Change only the blue cells.</li>
+<li>The report card uses a 90-day lookback window for all metrics except operating expenses, which is calculated on a 30-day basis and then multiplied by three.</li>
+<li>The Fix column records whether each metric must increase or decrease to reach target, and it sets the next priorities.</li>
+<li>The report card is a Google Sheets template. It combines the calculator inputs, the four revenue buckets, the benchmarks and the growth metrics.</li>
+<li>The benchmark figures and the contribution margin in the report card come from the new customer contribution margin calculator. Its homepage numbers feed the bucket values, so that calculator must be filled in before the report card is read.</li>
+</ul>
+<p><strong>90 Day Company Snapshot layout</strong></p>
+<p>Values come from the calculator homepage and the last 90 days of store data.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Fields</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Customer (NC)</td>
+<td>Total Gross Sales NC; Returns; Tax Collected; NC Performance Sales; # of orders; Average Order Value; Tax Obligation/Collected; Tax %; Net Items Sold; COGS Amount; Returns %</td>
+<td></td>
+</tr>
+<tr>
+<td>Returning Customer (RC)</td>
+<td>Total Gross Sales RC; Returns; Tax Collected; RC Performance Sales; Shopify COGS Amount; RC Returns %</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulfillment</td>
+<td>Cost to Fulfill Orders</td>
+<td></td>
+</tr>
+<tr>
+<td>Ad Spend</td>
+<td>Facebook Spend; Google Spend; Other Spend; Total Spend</td>
+<td></td>
+</tr>
+<tr>
+<td>Site Metrics</td>
+<td>Visitors; Sessions; Conversion Rate</td>
+<td></td>
+</tr>
+<tr>
+<td>Team</td>
+<td>Position; Salary <span class="ex">(one row per person, e.g. owner, ops manager, customer service)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Software / Subscriptions</td>
+<td>Name; Area; Bill <span class="ex">(e.g. Klaviyo, Shopify, Gorgias)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Totals</td>
+<td>MONTH TOTAL; 90 DAY TOTAL</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Working through the report card</strong></p>
+<ol type="1">
+<li>Fill the calculator homepage with the last 90 days of data for new and returning customers, and check the figures against the P&amp;L.</li>
+<li>Fill the 90 Day Company Snapshot with customer blocks, fulfillment cost, ad spend by channel, site metrics, team salaries and software bills.</li>
+<li>Read the four financial buckets <span class="ex">(profit, COGS, marketing and advertising, OPEX)</span> and confirm they add up to 100% of total revenue.</li>
+<li>Note each bucket's colour against its benchmark. Before cutting any cost, check whether a strong bucket such as profit can offset a red one.</li>
+<li>Start at the first red bucket and drill down with the decision tree until the most expensive component is found.</li>
+<li>Check the growth benchmarks: MER, contribution margin, ads launched, conversion rate, OPEX, promo events and emails per week.</li>
+<li>Enter an increase or decrease in the Fix column for each metric that is off target.</li>
+<li>Set priorities from the Fix column, make the changes, and repeat the report card later to measure the effect.</li>
+</ol>
+</details><details class="part" id="derived-metrics"><summary><h2>Derived metrics</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Performance Sales = Gross Sales − Discounts − Returns + Shipping Charges + Taxes. It is calculated separately for new and returning customers. Tax is included here and is removed in later analysis sections.</li>
+<li>Total revenue for the report card = gross revenue − discounts − refunds + shipping charges − tax. Sales tax is subtracted because it is a pass-through cost and not real revenue for the business.</li>
+<li>Average Order Value <span class="ex">(report card)</span> = Performance Sales ÷ Number of Orders.</li>
+<li>Return Rate Percentage = Returns ÷ Total Gross Sales.</li>
+<li>Other AOV definitions in the sources:
+<ul>
+<li>AOV = total revenue ÷ number of orders in the same period. Example: 40 USD rising to 70 USD means each order brings 30 USD more on average.</li>
+<li>AOV = sum of the sale prices ÷ number of sales. Example: sales of $67, $197 and $247 give an AOV of about $170.</li>
+<li>AOV = total revenue ÷ number of orders, compared before and after a change on similar traffic sources.</li>
+<li>AOV = total sales ÷ number of orders. Examples from 2021 monthly reports: infrared sauna store 227,949.55 / 134 ≈ 1,701 USD; gazebo store 738,209.32 / 402 ≈ 1,836 USD; air purifier store 65,170 / 137 ≈ 476 USD.</li>
+</ul></li>
+<li>Use the definition that matches the sheet. Performance Sales includes tax, and total revenue excludes it. Each is correct for its own section.</li>
+</ul>
+</details><details class="part" id="the-four-revenue-buckets"><summary><h2>The four revenue buckets</h2><span class="pm">2 min</span></summary>
+<p><strong>Structure</strong></p>
+<ul>
+<li>Split total revenue into four buckets: profit, COGS, marketing and advertising, and OPEX. Together they must equal 100% of total revenue. If the four percentages add up to more than 100%, the input data is wrong.</li>
+<li>OPEX is fixed operating cost such as salaries and software subscriptions. The template lists Shopify, Klaviyo and Gorgias. Marketing and advertising is total ad spend. COGS is the cost of the goods sold.</li>
+<li>Rapid-growth expenses are a different grouping. OpEx in this view includes courier fees, 3PL warehousing, supplier payments and freight forwarding. Avoid long-term contracts with these vendors, because their unit rates drop sharply as you scale.</li>
+<li>The two definitions of OpEx conflict. Use the report card definition <span class="ex">(fixed costs)</span> when reading the buckets. Use the rapid-growth definition when planning vendor contracts and scaling costs. The sources do not reconcile them further.</li>
+<li>Traffic is the largest P&amp;L expense in ecommerce, followed by people costs. Automation tools reduce the people category by removing repetitive tasks.</li>
+</ul>
+<p><strong>Benchmarks</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Benchmark</th>
+<th>Reading</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profit</td>
+<td>15%</td>
+<td>At or above 15% is good</td>
+<td></td>
+</tr>
+<tr>
+<td>COGS</td>
+<td>40%</td>
+<td>At or below 40% is good; above 40% needs work</td>
+<td></td>
+</tr>
+<tr>
+<td>Marketing and advertising</td>
+<td>30%</td>
+<td>At or below 30% is good</td>
+<td></td>
+</tr>
+<tr>
+<td>OPEX</td>
+<td>15%</td>
+<td>Below 15% is good</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Colour and reading</strong></p>
+<ul>
+<li>Each bucket is colour-coded against its benchmark. A healthy result shows green and an unhealthy result shows red. A red category is where to look first.</li>
+<li>A bucket below its benchmark frees room. The surplus can go to marketing, OPEX or profit. Example: COGS 7% below benchmark means 7 points of revenue that can fund more ads or more profit.</li>
+<li>A bucket above benchmark can be offset by the others. Example: COGS about 3 points over 40% while profit is at double its benchmark. The business is still healthy, but the gap should be recovered in marketing or OPEX, and COGS should still be reduced.</li>
+<li>Do not cut costs just because one bucket is red. First check whether another bucket, such as profit, is strong enough to compensate, then decide where the fix is needed.</li>
+</ul>
+<p><strong>Decision tree</strong></p>
+<ol type="1">
+<li>Look at the four buckets and identify which ones are red.</li>
+<li>If OPEX is red, break OPEX down into its fixed cost lines and find the largest one.</li>
+<li>If COGS is red, break COGS down into shipping, payment processing fees and 3PL fees.</li>
+<li>Identify the most expensive component in that breakdown.</li>
+<li>Continue drilling down, since each sub-cost has its own benchmark, until the root cause is clear.</li>
+<li>Once the bucket problem is clear, move on to the growth metrics (MER, contribution margin, ads launched, conversion rate, emails, promo events) to find the next fix.</li>
+</ol>
+</details><details class="part" id="new-customer-contribution-margin-calculator"><summary><h2>New customer contribution margin calculator</h2><span class="pm">3 min</span></summary>
+<p><strong>Build procedure</strong></p>
+<p>Build the calculator from the last 90 days of data, in this order:</p>
+<ol type="1">
+<li>Start with the new customer AOV <span class="ex">(last 90 days, new customers only, tax-inclusive, as shown in Facebook)</span>.</li>
+<li>Subtract sales tax (GST around 10% if collected; higher if the tax is collected at a higher rate) to get the post-tax AOV.</li>
+<li>Subtract blended COGS: average product cost across SKUs, packaging and supplies <span class="ex">(box, tape, inserts)</span>, and freight to the customer.</li>
+<li>Subtract payment processing fees <span class="ex">(about 2.9% of order value, adjusted for heavy Klarna or PayPal use)</span>, plus the fixed transaction fee of $0.30 per order <span class="ex">(set to 0 if the card fee is a fixed monthly cost)</span>.</li>
+<li>Subtract Shopify Markets fees, weighted by the share of revenue from Markets orders, not the full rate.</li>
+<li>Subtract 3PL pick/pack fees <span class="ex">(about $1.50 to $2.50 per pick; 0 if no 3PL)</span>.</li>
+<li>Subtract refunds, using the new customer return rate.</li>
+<li>The result is gross profit per order, which is the basis for all later targets.</li>
+</ol>
+<p><strong>Key metrics and benchmarks</strong></p>
+<ul>
+<li>Gross profit per order <span class="ex">(after COGS, fulfillment, fees and refunds)</span> should be at least 60% of AOV. Blended COGS including returns should stay at 40% or below. If shipping alone pushes gross profit under 60%, reduce shipping costs by changing 3PL or renegotiating carrier rates.</li>
+<li>Customer acquisition cost (CAC) = total ad spend ÷ number of new customers in the period. CAC as a share of new customer AOV should be 30% or below. Example: $400,000 total spend ÷ 6,829 new customers = $58.57 CAC, which is 25.73% of a $227.65 post-tax AOV.</li>
+<li>First order contribution margin = AOV <span class="ex">(post-tax)</span> − blended COGS <span class="ex">(including refunds)</span> − customer acquisition cost <span class="ex">(ad spend)</span>. It is the profit left before fixed operating expenses (OPEX). Benchmark for a first order: 15% to 25% of AOV. Higher targets suit businesses without repeat buyers. Brands with strong repeat customers can accept a lower first-order margin.</li>
+<li>The report card's growth table sets contribution margin at 35%. This is a different measure from the 15% to 25% first-order benchmark, and the sources do not reconcile them. Use 35% for the whole-business view in the report card. Use 15% to 25% for a first order of new customers.</li>
+</ul>
+<p><strong>Worked case</strong></p>
+<ul>
+<li>Post-tax AOV $227.65, gross profit per order $130.27, CAC $58.57 (Facebook $300,000 plus Google $100,000 spend). First-order contribution margin: 31.63% or $71.69, above the 15% to 25% benchmark. If COGS were set to 80% of the order, the contribution margin turns negative, so COGS is the variable to fix first.</li>
+</ul>
+<p><strong>Diagnosis and scope</strong></p>
+<ul>
+<li>When a metric misses its benchmark, check the line item one step below or above target and fix that first. Example: if CAC is within 30% but COGS is 80%, the problem is product cost, not ad spend. Diagnose the calculator before touching ad accounts.</li>
+<li>Build the calculator for the whole business first, then split it by collection, product, drop or month when more detail is needed. Operators should be at or above benchmark before scaling spend, because unprofitable unit economics become harder to fix as volume grows.</li>
+<li>If the business sells in several countries, build a separate contribution margin calculator for each region. Taxes, payment fees, shipping and Markets fees differ by market. Build the whole-business version first, then split by region when needed.</li>
+</ul>
+</details><details class="part" id="growth-benchmarks-and-mer"><summary><h2>Growth benchmarks and MER</h2><span class="pm">2 min</span></summary>
+<p><strong>MER</strong></p>
+<ul>
+<li>MER = total ad spend ÷ total revenue, expressed as a percentage. Target is 30% or below. Example: 400,000 USD ad spend ÷ 1,835,273 USD total revenue = 21.80%, which is 8 points below target and shows green.</li>
+<li>The marketing bucket benchmark (30%) and the MER target (30%) use the same logic: ad spend against revenue.</li>
+<li>Example: at a 35% MER, a brand spends 35% of revenue on marketing. If 80% of orders then carry a gross margin of only 31% under a BOGO offer, the brand loses money. Adjust the MER target before running the offer, or skip the offer if the margin is too tight.</li>
+</ul>
+<p><strong>ROAS</strong></p>
+<ul>
+<li>Blended ROAS = total revenue ÷ total ad spend, including all traffic sources <span class="ex">(organic, referral, paid)</span>, not isolated per-channel data.</li>
+<li>When multi-channel attribution is fragmented, use total monthly revenue ÷ total ad spend. This ratio shows overall ad efficiency regardless of which platform gets last-click credit.</li>
+<li>Breakeven ROAS sources differ:
+<ul>
+<li>A breakeven ROAS of 1.6 or lower leaves enough margin for ad spend, apps, staff and processing fees. At scale, Facebook and TikTok campaigns typically reach a ROAS of 2 to 2.5, and very strong campaigns may go higher.</li>
+<li>Typical benchmarks are a breakeven ROAS of about 1.2 to 1.3 and an average Facebook ROAS of about 1.8 to 1.9 for a store with healthy margins. These figures are for one store and must be checked against your own margin.</li>
+</ul></li>
+<li>Use 1.6 as a breakeven guide when the cost stack includes apps and staff. Use 1.2 to 1.3 only after checking that the store's margin supports it.</li>
+<li>Ad spend for one established brand was about 30,000 to 50,000 USD per month, depending on the day and whether the account is scaling.</li>
+</ul>
+<p><strong>Growth table</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>Reading</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MER</td>
+<td>30% or below of total revenue</td>
+<td>Above 30% needs investigation</td>
+<td></td>
+</tr>
+<tr>
+<td>Contribution margin</td>
+<td>35%</td>
+<td>Below 35%: check whether COGS or marketing is the cause</td>
+<td></td>
+</tr>
+<tr>
+<td>Monthly number of ads launched</td>
+<td>More than 20 for beginners</td>
+<td>Below 20 means too few tests</td>
+<td></td>
+</tr>
+<tr>
+<td>Website conversion rate</td>
+<td>Above 2.5%</td>
+<td>Below 2.5% needs work on the site</td>
+<td></td>
+</tr>
+<tr>
+<td>OPEX</td>
+<td>Below 15%</td>
+<td>Above 15% needs cost review</td>
+<td></td>
+</tr>
+<tr>
+<td>Marketing promo events per year</td>
+<td>At least 3</td>
+<td>Fewer than 3 needs more sales peaks</td>
+<td></td>
+</tr>
+<tr>
+<td>Emails sent per week</td>
+<td>About 3, minimum 1 to 3</td>
+<td>Below 1 per week is too low</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Ads launched</strong></p>
+<ul>
+<li>Expected monthly ads launched = monthly ad spend ÷ 500 to 1,000 USD. The range reflects the average spend per ad in most accounts, so use it as a rough estimate.</li>
+<li>Worked example: a store spending 20,000 USD a month on ads, divided by 500 to 1,000 USD per ad, has an expected 20 to 40 ads launched per month. At the lower end, the store is only just at the beginner minimum of more than 20 ads per month.</li>
+</ul>
+<p><strong>Whole-report example</strong></p>
+<ul>
+<li>Total revenue 1,835,273 USD, ad spend 400,000 USD. MER 21.80%, below the 30% target and green. OPEX 4.12%, well below 15%. COGS about 3 points above the 40% benchmark, and profit roughly double its benchmark, so the surplus covered the COGS gap. Contribution margin 35%, on target. The priority is to bring COGS down further to raise profit.</li>
+</ul>
+</details><details class="part" id="customer-value-new-versus-returning-aov-and-ltv"><summary><h2>Customer value: new versus returning, AOV and LTV</h2><span class="pm">3 min</span></summary>
+<p><strong>Measuring each customer group</strong></p>
+<ul>
+<li>Track repeat-customer order value separately from first-order value. Repeat customers typically have an AOV about 20 to 30% higher than first-time buyers, according to the estimate given.</li>
+<li>Measure customer value per buyer by tracking each customer's order count and cumulative spend over time (1st, 2nd, 3rd order and so on). AOV alone hides whether customers return, which matters most for repeat-purchase consumables.</li>
+<li>Use the per-customer view to find where customers stop buying, and fix that step.</li>
+<li>Example from a supplement brand: AOV about $70, the most expensive product $49, and one loyal customer spent $7,436 over 3 years. Repeat purchases matter for consumable, high-margin products.</li>
+<li>Measure success on orders and revenue together, not revenue alone. A single high-value customer does not show consistency. Look for repeating daily patterns <span class="ex">(e.g. 20-30 orders daily)</span>.</li>
+<li>Keep profit margins stable week to week alongside revenue. Scaling without margin stability indicates unsustainable growth.</li>
+<li>Track refund rate and chargeback rate as percentages of orders, not only as raw counts. A rising percentage is the early warning, because each extra order is more likely to become a refund or chargeback, and the damage grows faster than sales.</li>
+</ul>
+<p><strong>Lifetime value</strong></p>
+<ul>
+<li>LTV per year = units bought per year × price per unit. Example: 17 units × $8 = $136 per year.</li>
+<li>LTV is driven by three levers: AOV, churn and how often customers come back. Improving only one usually leaves the others unchanged, so track them together.</li>
+<li>LTV is the most powerful lever in paid traffic because it improves the other metrics. The strongest advertisers combine high CTR, high Quality Score, high Relevance Score and cheaper CPCs.</li>
+<li>Know profit per customer and LTV, because these decide how much you can spend on acquisition. A customer who buys repeatedly can justify a first purchase that loses money.</li>
+<li>Your AOV and LTV set the maximum you can spend to acquire a customer. Raising either lets you spend more on traffic and grow faster than competitors.</li>
+<li>Judge loyalty rewards over the customer's lifetime, not on one order. A customer who earns points by referring new buyers can be profitable even when the repeat order has a thin margin, because each referred first order brings full-price revenue.</li>
+<li>Cost per acquisition for cold customers can stay high for established brands and remain sustainable, as long as returning-customer value is strong. Judge acquisition costs against the lifetime value of repeat buyers, not only the first order.</li>
+<li>In the early bootstrapped phase, the brand needed a 3x to 5x return on each marketing dollar to stay solvent. A 25% returning-customer rate showed that LTV exceeded AOV.</li>
+</ul>
+<p><strong>Returning-customer rates by niche</strong></p>
+<ul>
+<li>Subscription model: 61% returning customers. Traditional dropshipping: 2-8%. Subscriptions are 7-30x more effective at retention.</li>
+<li>Health-related niches are often around 10% to 15% returning, compared with 50% to 60% in fashion. New-customer acquisition therefore matters more in health.</li>
+</ul>
+<p><strong>Margins and store economics</strong></p>
+<ul>
+<li>Dropshipping gross margin has an absolute minimum of about 20%. Below that, the business is very hard to run profitably. A gross margin near 14% is a serious warning sign.</li>
+<li>A typical full-year net profit margin after all costs is 15 to 20%. Stores that do not actively work on margins rarely exceed about 20%, so a net margin of about 9% signals a profitability problem.</li>
+<li>Net profit margins in the examples ranged from 14 to 22%. In high-ticket dropshipping, margins can reach the 20s and up to 30%. A 14% margin is still meaningful at high sales volume.</li>
+<li>Gazebo store, about 3 years old (June example year): 402 orders produced 738,209.32 USD in sales (806,805.49 USD gross minus 68,596.17 USD returns) and 103,201.65 USD net profit at a 14% margin. The business needed one to two hours per day of management.</li>
+<li>A store doing $15,000 to $20,000 monthly revenue with a few thousand dollars of net profit can be a working outcome. Compare with stores doing hundreds of thousands in monthly revenue and tens of thousands in net profit to see the range.</li>
+</ul>
+</details><details class="part" id="year-on-year-seasonality-and-saturation"><summary><h2>Year-on-year, seasonality and saturation</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="seasonality-first"><summary><h2>Seasonality first</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Before you react to a sales drop, check whether it is seasonal. Seasonal means it repeats at the same time each year. Compare at least <strong>two years</strong> of data. Most markets have predictable seasonal patterns.</li>
+<li>In 2021, sales fell in <strong>July and August</strong> across roughly 100 Google Analytics accounts (Google's free website statistics tool) and ad accounts in the US.</li>
+<li>This pointed to market-wide forces, not problems in one store.</li>
+<li>The speaker linked it to broader economic conditions and stock delays <span class="ex">(products that arrived late)</span>.</li>
+<li>Read dips in your monthly creative report <span class="ex">(a report on how well your ad pictures and text perform)</span> against your ad account's seasonality.</li>
+<li>A drop in <strong>January and February</strong> can be an off-season <span class="ex">(a normally quiet time of year)</span>, not a problem.</li>
+<li>Compare each region or account with its own past seasons.</li>
+<li>A store with consistent prior sales should not expect a drop in <strong>February</strong>.</li>
+<li>If sales fall, check the <strong>optimization steps</strong> (adjusting ads and pages to work better) for Meta (Facebook and Instagram ads) and Google Ads (Google's paid ads) to find what changed.</li>
+<li>Launch timing matters little for non-seasonal niches <span class="ex">(markets without a yearly pattern)</span>, so <strong>any month</strong> is a good month to launch.</li>
+<li>Tax refund season can bring a small sales spike.</li>
+<li>Supplier closures <span class="ex">(suppliers are the companies that send you products)</span> from <strong>Black Friday through Christmas</strong> matter more when you secure stock <span class="ex">(make sure you have enough products)</span>.</li>
+<li>Black Friday example: revenue <span class="ex">(total money from sales)</span> <strong>doubled</strong> compared with the previous month.</li>
+<li>January and February were the store's best months because competitors were out of stock <span class="ex">(had no products to sell)</span>.</li>
+<li>Q1 (the first three months of a year, January through March) 2025 sales were up about <strong>10%</strong> compared with Q1 2024.</li>
+<li>This indicated healthy market conditions despite economic concerns.</li>
+</ul>
+</details><details class="part" id="holiday-auctions"><summary><h2>Holiday auctions</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Ads are bought in auctions <span class="ex">(bidding contests for ad space)</span>. Black Friday <span class="ex">(the big sale day after US Thanksgiving)</span> and Cyber Monday <span class="ex">(the online sale day after that)</span> are holiday peaks.</li>
+<li>When <strong>CPM</strong> rises during Black Friday and Cyber Monday, ad costs go up because more competitors bid in the same auctions.</li>
+<li>Check CPM, CPC and clicks <strong>year on year</strong> (this year against the same time last year) to see which part changed.</li>
+<li>Use the Google Ads date range selector <span class="ex">(the tool that picks which dates you look at)</span> to compare the <strong>same range</strong> (e.g. Thanksgiving week through Cyber Monday) across two years when measuring seasonal performance.</li>
+<li><strong>CPM</strong> is the cost per 1,000 impressions <span class="ex">(how often your ad is shown)</span>, meaning what it costs to reach 1,000 people with an ad.</li>
+<li><strong>CPC</strong> is the cost per click.</li>
+<li>If CPM and CPC both rise during a holiday period, competitors are often bidding for the same auctions, so <strong>compare year on year</strong> before changing bids.</li>
+</ul>
+</details><details class="part" id="growth-trend-and-saturation"><summary><h2>Growth trend and saturation</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Compare revenue <strong>month over month</strong> (this month against last month) and use the trend to set the next goal.</li>
+<li>Example: $30,000 in one month and an average of $35,000 in the following month shows growth <span class="ex">(more money earned)</span> of about <strong>17%</strong>.</li>
+<li>This growth becomes the basis for planning the next quarter <span class="ex">(the next three months)</span>.</li>
+<li>Ask the same question every month so growth opportunities are not missed.</li>
+<li>Early-stage, patchy sales <span class="ex">(uneven sales in a new store)</span> hide whether a trend is fatiguing <span class="ex">(wearing out)</span> or just seasonal.</li>
+<li>This happens when you have no proper <strong>forecasts</strong> (predictions of future sales) and no inventory tracking <span class="ex">(counting the stock you have on hand)</span>.</li>
+<li>Track <strong>weekly</strong> to spot real trend signals and adjust investment accordingly.</li>
+<li>Year-on-year tracking <span class="ex">(comparing with the same period last year)</span>, excluding seasonality <span class="ex">(leaving out the yearly ups and downs)</span>, reveals market <strong>saturation</strong> (the market is full, with few new buyers left).</li>
+<li>A <strong>20%</strong> year-on-year revenue drop in March, followed by a 20-25% drop two months later, signals that the market is fatiguing and the trend is plateauing <span class="ex">(flattening out, no longer growing)</span>.</li>
+<li>When year-on-year drops <strong>repeat</strong> at similar levels <span class="ex">(e.g. 20-25% down in consecutive periods, meaning periods in a row)</span>, the trend is fatiguing.</li>
+<li>Adjust investment toward <strong>product innovation</strong> (new products), new markets or channel diversification <span class="ex">(using more ways to reach buyers)</span>.</li>
+</ul>
+</details><details class="part" id="test-input-for-the-audit-flow"><summary><h2>Test input for the audit flow</h2><span class="pm">1 min</span></summary>
+<p>Example input metrics <span class="ex">(practice numbers)</span> for a fictional premium beauty-tool store <span class="ex">(a made-up store selling high-end beauty tools)</span>, used to test the audit flow <span class="ex">(the step-by-step checking routine)</span>:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Example value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conversion rate <span class="ex">(share of visitors who buy)</span></td>
+<td>2.6%</td>
+<td></td>
+</tr>
+<tr>
+<td>Average order value (AOV) (average money spent per order)</td>
+<td>$185</td>
+<td></td>
+</tr>
+<tr>
+<td>Traffic by channel <span class="ex">(where visitors come from)</span></td>
+<td>Paid Social 48%, Organic Search 22%, Direct 15%, Email 10%, Influencer &amp; Affiliate 5%</td>
+<td></td>
+</tr>
+<tr>
+<td>Returning customer rate <span class="ex">(share of buyers who come back)</span></td>
+<td>31%</td>
+<td></td>
+</tr>
+<tr>
+<td>Add-to-cart rate <span class="ex">(share of visitors who put an item in their cart)</span></td>
+<td>8.5%</td>
+<td></td>
+</tr>
+<tr>
+<td>Checkout completion rate <span class="ex">(share of people who start checkout and finish it)</span></td>
+<td>54%</td>
+<td></td>
+</tr>
+<tr>
+<td>Meta ROAS <span class="ex">(return on ad spend on Meta: money earned per dollar spent on Meta ads)</span></td>
+<td>2.7x</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Channel words in the table:</p>
+<ul>
+<li>Paid Social: paid ads on social media.</li>
+<li>Organic Search: free visits from search engine results.</li>
+<li>Direct: people who type your web address themselves.</li>
+<li>Email: visits from your email messages.</li>
+<li>Influencer &amp; Affiliate: paid creators and partner links.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/19-metrics-finance-and-tracking/19-health-scorecards-and-benchmarks-the-four-revenue-buckets-me/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../19-metrics-finance-and-tracking/18-cash-management-profit-first-taxes-and-budgeting/"><span class="k">&larr; Previous</span><span class="v">Cash management, Profit First, taxes and budgeting</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/20-market-and-competitor-estimation/"><span class="k">Next &rarr;</span><span class="v">Market and competitor estimation</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

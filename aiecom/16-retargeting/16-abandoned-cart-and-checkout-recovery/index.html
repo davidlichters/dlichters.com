@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Abandoned cart and checkout recovery | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.16: Abandoned cart and checkout recovery.">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/16-abandoned-cart-and-checkout-recovery/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Abandoned cart and checkout recovery | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.16: Abandoned cart and checkout recovery."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/16-abandoned-cart-and-checkout-recovery/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/16-abandoned-cart-and-checkout-recovery/">Plain version</a></div><h1>16.16 Abandoned cart and checkout recovery</h1><article><h2 id="finding-abandoned-carts-in-shopify">Finding Abandoned Carts in Shopify</h2>
+<ul>
+<li>Abandoned carts appear in the Shopify admin under the Orders dropdown menu. [L0470.026]</li>
+<li>Abandoned checkouts are listed under Orders &gt; Abandoned Checkouts. The list shows the checkout number, order date, customer, email status and whether the cart was recovered. [L0737.003]</li>
+</ul>
+<h2 id="nightly-check-routine">Nightly Check Routine</h2>
+<p>Check abandoned carts every night in the Shopify admin (older, 2021). [L0671.018, L0671.294]</p>
+<ol type="1">
+<li>Open Orders in the admin panel. [L0671.018, L0671.294]</li>
+<li>Click Abandoned carts. [L0671.018, L0671.294]</li>
+<li>Note who abandoned which products. [L0671.018, L0671.294]</li>
+<li>Follow up with each one, or have someone do this for you. [L0671.018, L0671.294]</li>
+</ol>
+<h2 id="speed-and-channel-priority">Speed and Channel Priority</h2>
+<ul>
+<li>Following up on abandoned carts is one of the first automations worth building for a dropshipping store. [L0437.014]</li>
+<li>The follow-up should be sent as quickly as possible after a shopper leaves without buying, ideally within minutes rather than hours. [L0437.014]</li>
+<li>Abandoned-cart recovery works best through direct calls and text messages as soon as possible, while email runs automatically in the background. (2023) [L0470.025]</li>
+<li>A Shopify and Slack integration can send an alert with the customer's name and cart items so you can reach out quickly. [L0470.025]</li>
+</ul>
+<h2 id="email-follow-up">Email Follow-Up</h2>
+<ul>
+<li>At the very least, send an email to every abandoned cart. Early on, calling them directly is a way to recover more sales (older, 2021). [L0671.019, L0671.295]</li>
+<li>Once the store is established, run abandoned cart follow-up as an automated email flow, for example one built in Klaviyo (older, 2021). [L0671.296]</li>
+<li>The Klaviyo app can run the abandoned cart reminder flow. [L1400.004]</li>
+</ul>
+<h3 id="manual-abandoned-checkout-emails-before-automating">Manual Abandoned Checkout Emails (before automating)</h3>
+<ol type="1">
+<li>In Shopify, click Orders. [L0857.043]</li>
+<li>In the dropdown, click Abandoned checkouts. [L0857.043]</li>
+<li>Open the records that include customer details and email each customer. [L0857.043]</li>
+<li>Start with manual emails before automating this step. [L0857.043]</li>
+</ol>
+<p>Template for the manual email (replace the bracketed parts before sending):</p>
+<pre><code>Subject: Quick question about your order
+
+Hi [customer first name], this is [your name], the owner of [store name].com. I noticed you had [items in cart] in your cart but did not finish your order. I wanted to check whether anything stopped you from ordering from our store. If you have any questions or comments that would help us understand why you did not complete the order, please reply. I am happy to help and to do what we can to earn your business.
+
+[Your name]
+[Store name]</code></pre>
+<p>[L0857.044]</p>
+<h2 id="phone-and-sms-follow-up">Phone and SMS Follow-Up</h2>
+<h3 id="call-recovery-procedure-older-2022">Call Recovery Procedure (older, 2022)</h3>
+<ol type="1">
+<li>Keep automated follow-up emails as the first step. [L0429.057]</li>
+<li>Set a delay timer of a few minutes after a cart is started and not completed. [L0429.057]</li>
+<li>Send an alert (for example through Slack, or Zapier as an alternative) with the customer's name, products and phone number. [L0429.057]</li>
+<li>Call as soon as possible and ask whether there are questions or problems with the order. [L0429.057]</li>
+</ol>
+<h3 id="call-script-older-2022">Call Script (older, 2022)</h3>
+<pre><code>Hi [customer first name], this is [your name] from [store name]. I noticed you started an order for [product name] but did not finish checking out. Is there anything I can help with, such as a question about the product, the shipping time or the payment options?</code></pre>
+<p>[L0429.087]</p>
+<h3 id="personal-outreach">Personal Outreach</h3>
+<ul>
+<li>Contact people who left items in their cart and ask what happened, since a direct conversation can turn them into buyers. [L0709.031]</li>
+<li>Personal outreach can recover sales that automated messages miss. [L0709.031]</li>
+</ul>
+<h2 id="visitors-without-contact-details">Visitors Without Contact Details</h2>
+<ul>
+<li>Visitors who start checkout but leave before entering any contact details cannot be followed up personally. Reach them through remarketing ads only. [L0471.058]</li>
+</ul>
+<h2 id="messenger-and-ad-funnel-day-by-day">Messenger and Ad Funnel (Day by Day)</h2>
+<h3 id="tool-stack">Tool Stack</h3>
+<ul>
+<li>The automated abandoned-cart funnel uses five tools: Facebook, Shopify, an email marketing tool, Minichat as a Facebook Messenger bot, and Zapier to connect Minichat with Shopify. [L1243.016]</li>
+<li>Minichat and Zapier both have free plans. Their paid plans were cited at under 20 USD per month. [L1243.016]</li>
+</ul>
+<h3 id="messenger-and-social-retargeting">Messenger and Social Retargeting</h3>
+<ul>
+<li>Keep Facebook and Instagram retargeting set up properly, because influencer visitors who did not buy can be retargeted to convert later. [L0790.070]</li>
+<li>Add Messenger abandoned cart messages to capture visitors who add items but leave. [L0790.070]</li>
+</ul>
+<h3 id="funnel-steps">Funnel Steps</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day after abandoned cart</th>
+<th>Shopper status</th>
+<th>Action</th>
+<th>Channels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 to 2</td>
+<td>Has not bought</td>
+<td>Reminder that the cart is still waiting. Assume the shopper was distracted, busy or comparing prices. Do not offer a discount yet.</td>
+<td>Messenger sequence and Facebook ads</td>
+</tr>
+<tr>
+<td>3 to 4</td>
+<td>Still has not bought</td>
+<td>Offer the easiest incentive: often free shipping, or 10% off if free shipping is not the lowest-cost option. Include the discount code and a link back to the store.</td>
+<td>Messenger, collection ad and email</td>
+</tr>
+<tr>
+<td>5 to 7</td>
+<td>Still has not bought</td>
+<td>Send the best offer and add scarcity. Use social proof on days 5 and 6. On day 7, make the best discount expire within 12 hours.</td>
+<td>Video ads and emails</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sources: Day 0 to 2 [L1243.020]; Day 3 to 4 [L1243.027]; Day 5 to 7 [L1243.030]</p>
+<ul>
+<li>Reach the shopper through several channels, because many buyers need multiple touchpoints before they purchase and may not check a single channel. [L1243.029]</li>
+<li>Each message should show that the store wants the sale, since competition is high. [L1243.029]</li>
+</ul>
+<h2 id="offers">Offers</h2>
+<ul>
+<li>Abandoned cart reminders work better when they include a valuable offer, because the offer gives the shopper a reason to return and finish checkout. [L1399.006]</li>
+</ul>
+<h2 id="cart-audiences-and-exclusions">Cart Audiences and Exclusions</h2>
+<h3 id="fallback-without-abandoned-cart-data">Fallback Without Abandoned Cart Data</h3>
+<ul>
+<li>When you have no abandoned cart data, use Facebook retargeting ads to target people who viewed your products or added items to their cart. [L0276.006]</li>
+<li>Combine Facebook retargeting with Google remarketing using the same audience to maximize visibility. [L0276.006]</li>
+</ul>
+<h3 id="audience-setup-procedure">Audience Setup Procedure</h3>
+<ol type="1">
+<li>Create a custom audience of people who visited your cart page. [L0643.028]</li>
+<li>Create an exclusion audience of people who reached the thank-you, confirmation or checkout-complete page. [L0643.028]</li>
+<li>Use a generic retargeting image such as your store logo or a range of your products, and not necessarily the exact product left in the cart. [L0643.028]</li>
+<li>Show a message such as "Did life get in the way? Come back and finish your order." [L0643.028]</li>
+<li>Optionally, after a while, show a 5 or 10 percent discount code to people who have still not bought, and never to buyers. [L0643.028]</li>
+</ol>
+<h3 id="trigger-setting">Trigger Setting</h3>
+<ul>
+<li>For the abandoned-cart campaign, use the Add to Cart event as the trigger when building Facebook audiences. In the collection ad audience settings, select Add to Cart from the viewed product, add to cart and purchase options. [L1243.023]</li>
+</ul>
+<h3 id="three-audience-sequence">Three-Audience Sequence</h3>
+<p>Set up these three audiences once so the shopper moves through the funnel automatically. [L1243.024]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Added to cart</th>
+<th>Excludes</th>
+<th>Funnel step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0 to 2 days ago, not purchased</td>
+<td>nothing</td>
+<td>Reminder</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3 to 4 days ago, not purchased</td>
+<td>last 2 days</td>
+<td>Easy offer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5 to 7 days ago, not purchased</td>
+<td>previous 4 days</td>
+<td>Best offer and deadline</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The lesson's wording for audience 2 was ambiguous, but this table matches the funnel timing it describes. [L1243.024]</li>
+</ul>
+<h3 id="expected-results">Expected Results</h3>
+<ul>
+<li>Retargeting abandoned cart visitors on Facebook can recapture up to 25 percent of lost sales, on top of the automated abandoned-cart email sequence. [L0643.029]</li>
+</ul>
+<h2 id="testing-and-benchmarks">Testing and Benchmarks</h2>
+<ul>
+<li>The commonly cited average abandoned cart rate is 67%, based on a 2015 study. The presenter estimated the current figure is higher, in the 70s, but gave no source for that estimate. [L1243.002]</li>
+<li>Automated follow-up for abandoned checkouts must be tested. A low answer rate (about 1 in 10 calls answered) is normal. [L0806.079]</li>
+<li>Phone follow-up by hand often does better than automation alone. [L0806.079]</li>
+</ul>
+</article><nav class="pn"><a href="../../16-retargeting/15-content-based-retargeting/"><span class="k">&larr; Previous</span><span class="v">Content-Based Retargeting</span></a><a class="nx" href="../../16-retargeting/17-capturing-emails-and-cross-channel-follow-up/"><span class="k">Next &rarr;</span><span class="v">Capturing emails and cross-Channel follow-Up</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

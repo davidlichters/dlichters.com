@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Fraud screening and risky orders | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 17.13: Fraud screening and risky orders.">
+<link rel="canonical" href="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/13-fraud-screening-and-risky-orders/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Fraud screening and risky orders | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 17.13: Fraud screening and risky orders."><meta property="og:url" content="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/13-fraud-screening-and-risky-orders/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">17. Customer service, returns and chargebacks</a> &rsaquo; <a href="../../../ecom/17-customer-service-returns-and-chargebacks/13-fraud-screening-and-risky-orders/">Plain version</a></div><h1>17.13 Fraud screening and risky orders</h1><article><h2 id="shopify-fraud-analysis-levels">Shopify fraud analysis levels</h2>
+<ul>
+<li>Shopify Payments ranks the fraud risk of each order through fraud analysis. Medium or high risk orders should be checked before they are shipped. [L0360.060]</li>
+<li>Shopify Fraud Analysis scores orders for fraud risk. Use it to review suspicious orders before fulfilling them and to reduce chargebacks. [L1095.011]</li>
+<li>Shopify's built-in fraud analysis flags high-risk orders, which usually have a reason to be high risk. Do not process flagged orders without first contacting the customer. [L0934.099]</li>
+<li>Shopify's fraud analysis rates orders low, medium, or high. A high rating is almost always fraud. A medium rating needs a check of the reason shown plus verification of the customer. [L0856.088]</li>
+<li>Shopify includes risk tools that flag orders likely to be fraud. Use them to reduce stolen-card chargebacks, which are a separate risk from delivery disputes. (Older advice, 2019) [L1086.064]</li>
+<li>The level scales differ between sources. Both are given below, and the 2019 scale is marked as older. [L0467.003, L0856.088]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Levels</th>
+<th>Meaning and action</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>Low, medium, high</td>
+<td>High is almost always fraud. Medium needs the shown reason checked and the customer verified. Check medium and high orders before shipping.</td>
+<td>L0856.088, L0360.060</td>
+</tr>
+<tr>
+<td>2019 (older)</td>
+<td>No risk, moderate risk, probably fraudulent</td>
+<td>Levels are based on card activity Shopify sees across its network. Probably fraudulent orders are not processed.</td>
+<td>L0467.003</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="daily-checks-of-new-orders">Daily checks of new orders</h2>
+<ol type="1">
+<li>Open each new order and read the fraud analysis risk rating that Shopify shows. [L0360.061]</li>
+<li>For a medium or high risk order, contact the customer by phone or email before shipping. [L0360.061, L0360.060]</li>
+<li>For any order you are not comfortable processing, call the phone number the customer entered before shipping. (Older advice, 2019) [L0467.002]</li>
+<li>Check the order status and the fraud tool's reason regularly. Do not assume an order went through. [L0807.040]</li>
+</ol>
+<h2 id="verifying-flagged-orders-by-phone-and-email">Verifying flagged orders by phone and email</h2>
+<h3 id="routine-for-medium-and-high-risk-orders-2024">Routine for medium and high risk orders (2024)</h3>
+<ol type="1">
+<li>Check the fraud analysis risk rating that Shopify shows for each new order. [L0360.061]</li>
+<li>For a medium or high risk order, contact the customer by phone or email before shipping. [L0360.061]</li>
+<li>If the customer does not reply, cancel the order and send nothing, since fraudulent orders often use fake phone numbers. [L0360.061, L0960.079]</li>
+</ol>
+<h3 id="routine-for-flagged-orders-2023">Routine for flagged orders (2023)</h3>
+<ol type="1">
+<li>Call the customer to find out why the order was flagged. [L0934.100]</li>
+<li>Confirm the identity and details. [L0934.100]</li>
+<li>Process the order only if the risk is resolved. [L0934.100]</li>
+<li>Decline the order if the customer cannot be verified. [L0934.100]</li>
+</ol>
+<h3 id="chargeback-prevention-routine-2019-older">Chargeback prevention routine (2019, older)</h3>
+<ol type="1">
+<li>Read the risk level that Shopify assigns to the order. [L0467.002]</li>
+<li>For any order you are not comfortable processing, call the phone number the customer entered before shipping. [L0467.002]</li>
+<li>If nobody answers or calls back, treat the order as a major red flag and do not ship it. [L0467.002]</li>
+<li>Optionally add fraud protection, either Shopify's native option or the ClearSale app, so that fraud chargebacks on orders marked safe are covered by the provider. [L0467.002, L0467.004]</li>
+</ol>
+<h3 id="routine-for-shopify-flagged-orders-2020-older">Routine for Shopify-flagged orders (2020, older)</h3>
+<ol type="1">
+<li>Shopify fraud protection flags an order as high risk. [L1111.129]</li>
+<li>Call the phone number the customer provided. [L1111.129]</li>
+<li>If the number is disconnected or no one answers, treat it as a likely fraud case. [L1111.129, L0960.079]</li>
+<li>If the customer answers and confirms, ask why the shipping and billing addresses differ. [L1111.129]</li>
+<li>For large orders, request proof of billing address, such as a photo of a billing statement. [L1111.129]</li>
+</ol>
+<ul>
+<li>Orders that do not pass Shopify's built-in fraud protection must be checked before they are shipped. Contact the customer and try to verify the order by any means before you decide. (Older advice, 2020) [L0961.052]</li>
+<li>A phone number that goes unanswered after a suspicious order is a further warning sign. (Older advice, 2019) [L0960.079]</li>
+</ul>
+<h3 id="high-fraud-orders-request-for-card-and-id-2025">High-fraud orders: request for card and ID (2025)</h3>
+<ol type="1">
+<li>Do not ship the order immediately. [L0472.049]</li>
+<li>Email the customer, thank them, explain that a fraud alert was raised, and ask them to reply with a copy of the card used at checkout and a photo of their driver's license or ID. [L0472.049, L0472.078]</li>
+<li>Ship only once both are received and the name on the card matches. [L0472.049]</li>
+<li>Do not accept an order flagged "high fraud" without verification, even when the shipping address matches the billing address. A mismatched billing address and card holder is a warning sign. [L0472.050]</li>
+</ol>
+<p>Email template (2025):</p>
+<pre><code>Hi [Customer name], thank you for your order with [Store name]. Our system has placed a fraud alert on this order. Sometimes these alerts are wrong, for example because an address was entered incorrectly, but before we ship your order, please reply to this email with a copy of the card you used at checkout, showing your name on the card, and a photo of your driver&#39;s license or ID. Once we have both, we can confirm that you are the cardholder and process your order. Thank you for your patience.
+
+[Your name]
+[Store name]</code></pre>
+<p>[L0472.078]</p>
+<h3 id="declined-or-voided-orders-2025">Declined or voided orders (2025)</h3>
+<ul>
+<li>A fraud tool can void a transaction without telling the customer, even when the payment processor marks the order as safe. Check the order status and the fraud tool's reason regularly. [L0807.040]</li>
+<li>Handle an order flagged as fraud by the tool as follows:
+<ol type="1">
+<li>Find the exact reason the fraud tool gives for the decline. [L0807.041]</li>
+<li>Decide whether the flag looks justified, especially if the payment processor marked the order safe. [L0807.041]</li>
+<li>If it looks wrong, contact the customer and explain that the order was flagged for a reason, without blaming them. [L0807.041]</li>
+<li>Ask for verification, such as proof of address or ID, that matches the flag. [L0807.041]</li>
+<li>Process and ship the order again once verification arrives. [L0807.041]</li>
+</ol></li>
+</ul>
+<h2 id="suspicious-order-patterns">Suspicious order patterns</h2>
+<ul>
+<li>Suspicious orders often come from emails that ask to pay with an unfamiliar method, such as QuickBooks, and to ship through the buyer's own carrier. Treat this as a likely scam, especially when the buyer wants expensive items shipped to a family member or a vacation home. [L0472.052]</li>
+<li>Fraudsters often enter fake phone numbers and do not answer calls. (Older advice, 2019) [L0960.079]</li>
+</ul>
+<h2 id="bots-testing-prices">Bots testing prices</h2>
+<ul>
+<li>Bots that add the cheapest product to the cart repeatedly are often Google or Meta testing checkout prices against the product feed. Ignoring them is usually fine. [L0472.053]</li>
+</ul>
+<h2 id="high-fraud-regions">High-fraud regions</h2>
+<ul>
+<li>For orders from high-fraud regions, such as the UAE, use Shopify's fraud protection tools, require strong payment confirmation, and remain cautious. (Older advice, 2020) [L0245.062]</li>
+<li>Shipping costs to these regions often equal or exceed the product price, which makes the orders uneconomical. (Older advice, 2020) [L0245.062]</li>
+</ul>
+<h2 id="fraud-tools-and-chargeback-insurance">Fraud tools and chargeback insurance</h2>
+<ul>
+<li>Shopify's native option and the ClearSale app are the two ways to transfer fraud-chargeback risk away from the merchant. [L0467.004]</li>
+<li>ClearSale independently verifies orders and covers the chargeback if an order it marked as safe turns out to be fraud. (Older advice, 2019) [L0467.004]</li>
+<li>ClearSale is a fraud-screening app for e-commerce orders. It reviews transactions to reduce fraudulent orders and chargeback losses. [L0984.005]</li>
+<li>ClearSale reimburses the money if an order it approved is later found fraudulent. One host did not use it personally. [L0804.093]</li>
+<li>Chargeback insurance services such as ClearSale pay out only when the provider approved the order as safe and it then turned out fraudulent. They do not cover all disputes. (Older advice, 2022) [L0969.037]</li>
+<li>Chargeback insurance services work with Shopify. The lesson pointed to one such tool without using it personally. [L0934.101]</li>
+<li>Rely on Shopify's built-in fraud protection and review any order it flags as high risk, including the reason. Some members also used the third-party chargeback app Signifyd early on, then stopped once they could spot risky orders themselves. [L0470.081]</li>
+<li>Some stores rely only on Shopify's built-in notifications and skip third-party fraud apps, while others use paid fraud tools. Choose based on your chargeback risk. (Older advice, 2021) [L0968.101]</li>
+<li>A chargeback on a stolen credit card is usually lost by the merchant if the order was shipped and no evidence can counter the claim, so the business absorbs the loss. Fraud protection and careful order checks reduce this exposure. (Older advice, 2019) [L0467.001]</li>
+</ul>
+<h2 id="cancelling-when-in-doubt">Cancelling when in doubt</h2>
+<ul>
+<li>If you think an order might be fraud, treat it as fraud and cancel it. This rule of thumb prevents losses from suspicious orders. (Older advice, 2020) [L0961.053]</li>
+<li>If the customer does not reply to verification, cancel the order and send nothing. [L0360.061]</li>
+<li>If nobody answers or calls back, do not ship the order. [L0467.002]</li>
+</ul>
+</article><nav class="pn"><a href="../../17-customer-service-returns-and-chargebacks/12-reducing-return-and-refund-rates/"><span class="k">&larr; Previous</span><span class="v">Reducing return and refund rates</span></a><a class="nx" href="../../17-customer-service-returns-and-chargebacks/14-preventing-chargebacks-and-protecting-the-payment-account/"><span class="k">Next &rarr;</span><span class="v">Preventing chargebacks and protecting the payment account</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Core admin settings: general, checkout, payments and orders | Ecommerce Playbook</title>
+<meta name="description" content="- The only required setup step at first is turning on Shopify Payments, the tool that takes card money. - Set the time zone first. It decides when orders and reports are recorded. - Let buyers check out as guests, without making an account. - For ...">
+<link rel="canonical" href="https://dlichters.com/ecom/04-store-build-and-shopify/04-core-admin-settings-general-checkout-payments-and-orders/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Core admin settings: general, checkout, payments and orders | Ecommerce Playbook"><meta property="og:description" content="- The only required setup step at first is turning on Shopify Payments, the tool that takes card money. - Set the time zone first. It decides when orders and reports are recorded. - Let buyers check out as guests, without making an account. - For ..."><meta property="og:url" content="https://dlichters.com/ecom/04-store-build-and-shopify/04-core-admin-settings-general-checkout-payments-and-orders/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../04-store-build-and-shopify/">4. Store build and Shopify</a></div><h1>Core admin settings: general, checkout, payments and orders</h1><p class="meta">Section 4.4 &middot; 4 of 20 in this chapter &middot; 30 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>The only required setup step at first is turning on Shopify Payments, the tool that takes card money.</li>
+<li>Set the time zone first. It decides when orders and reports are recorded.</li>
+<li>Let buyers check out as guests, without making an account.</li>
+<li>For dropshipping, orders must not be marked shipped automatically. Set them to fulfill manually.</li>
+<li>Before the store goes public, set payment capture to manual so test orders do not charge real cards.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>Do not change taxes, duties or sender email settings yet. Those come later.</li>
+<li>At the start, keep only the Online Store sales channel active. Remove Point of Sale.</li>
+<li>For shipping, make one free shipping price of $0 and delete the International zone.</li>
+<li>Enter the tracking number before you mark an order as fulfilled. Marking it fulfilled sends the customer an email right away.</li>
+<li>Shopify does not send orders to your supplier by itself. You must forward them.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 20 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="store-identity-and-account-settings"><summary><h2>Store identity and account settings</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="opening-settings-and-the-section-map"><summary><h2>Opening Settings and the section map</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Open the admin <span class="ex">(the store's back office in Shopify, the platform the store runs on)</span> with the <strong>gear icon</strong> labeled Settings in the bottom-left corner.</li>
+<li>The sections are: Store details, Plan, Billing, Users, Payments, Checkout, Customer accounts, Shipping and delivery, Locations, Apps, Sales channels, Domains, Notifications and Policies.</li>
+<li>Settings open with the <strong>gear icon</strong> at the bottom left of the admin, labeled Settings.</li>
+<li>Shopify's Settings sections are reached from the <strong>gear icon</strong>.</li>
+<li>Payments are opened with <strong>Settings &gt; Payments</strong>.</li>
+</ul>
+</details><details class="part" id="store-details"><summary><h2>Store details</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Under <strong>Settings &gt; Store details</strong>, the billing address is tied to the card on file <span class="ex">(the card saved in your account)</span>.</li>
+<li>The <strong>pencil icon</strong> edits three fields.
+<ul>
+<li>Store name: internal only, not shown to customers.</li>
+<li>Store email.</li>
+<li>Store phone number.</li>
+</ul></li>
+<li>The default store name is "my store". <strong>Replace it</strong> with the real business name.</li>
+<li>To change the store name, click <strong>Edit</strong>, change the name and then click <strong>Save</strong>.</li>
+<li>The store URL <span class="ex">(web address)</span> does not change.</li>
+<li><strong>Keep</strong> the store email and store phone number as entered at account creation.</li>
+<li>Keep them until a business email address and business phone number exist.</li>
+<li><strong>Update</strong> them after the business accounts are created.</li>
+<li>The billing address shows the business address entered at account creation.</li>
+<li><strong>Leave it as is</strong> at first.</li>
+<li>Update it later with <strong>Edit</strong> once a business address is available.</li>
+<li>The general store settings, including Store details, are preset.</li>
+<li>Other default options do not need changes at launch.</li>
+<li>Older advice: fill in these fields.
+<ul>
+<li>Store name.</li>
+<li>Store contact email.</li>
+<li>Sender email.</li>
+<li>Store address.</li>
+<li>Legal name of business.</li>
+<li>Phone number.</li>
+</ul></li>
+<li>The store address appears on invoices. It is also used to calculate shipping rates <span class="ex">(the shipping price)</span>.</li>
+<li>Shopify shows a <strong>warning</strong> if tax information is missing.</li>
+<li>Older advice: in <strong>Settings &gt; General</strong>, also fill in these fields.
+<ul>
+<li>Store name.</li>
+<li>Store contact email <span class="ex">(where Shopify contacts you)</span>.</li>
+<li>Sender email.</li>
+<li>Legal name of business.</li>
+<li>Phone.</li>
+<li>Store address.</li>
+</ul></li>
+<li>Also set the <strong>industry</strong> field.</li>
+<li>Conflict: the two approaches disagree on the store email, phone and sender email.</li>
+<li><strong>Use the Source A approach</strong> for a new store: keep them until business contacts exist.</li>
+<li><strong>Use the Source B approach</strong> (fill them in during setup) only where business contacts already exist.</li>
+</ul>
+</details><details class="part" id="plan-billing-and-users"><summary><h2>Plan, billing and users</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Settings &gt; Plan</strong> shows the current Shopify plan.</li>
+<li>The recommended plan at the start is <strong>Basic Shopify</strong>.</li>
+<li>Upgrades <span class="ex">(moving to a bigger plan)</span> and downgrades <span class="ex">(moving to a smaller one)</span> are handled here.</li>
+<li>Paid apps <span class="ex">(add-on tools)</span> and subscriptions <span class="ex">(regular payments for a service)</span> also appear in this section.</li>
+<li><strong>Settings &gt; Billing</strong> lists Shopify charges and billing history.</li>
+<li><strong>No changes</strong> are needed there at the start.</li>
+<li><strong>Settings &gt; Users</strong> controls who can access the store.</li>
+<li>The default user is the account owner.</li>
+<li>Add staff users <span class="ex">(team members with store access)</span> <strong>later</strong>, when help is hired.</li>
+<li>No action is needed at the start.</li>
+<li>At the foundation stage <span class="ex">(the first basic setup)</span>, <strong>check the trial and billing dates</strong>.</li>
+<li>A trial is a free test period.</li>
+</ul>
+</details><details class="part" id="store-defaults-time-zone-units-currency-and-order-numbers"><summary><h2>Store defaults: time zone, units, currency and order numbers</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="what-settings--general-contains"><summary><h2>What Settings &gt; General contains</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Settings &gt; General</strong> contains these fields.
+<ul>
+<li>Backup Region <span class="ex">(the fallback region for visitors whose location is not known)</span>.</li>
+<li>Unit system <span class="ex">(the measuring system, Metric or Imperial)</span>.</li>
+<li>Default weight unit.</li>
+<li>Time zone.</li>
+<li>Order ID format <span class="ex">(how order numbers look)</span>.</li>
+<li>The store currency.</li>
+</ul></li>
+<li>Currency display is <strong>not set</strong> in General.</li>
+<li>Customer-facing currencies are managed under <strong>Markets</strong>.</li>
+<li>Markets are the countries and currencies the store sells in.</li>
+<li>Keep only the <strong>primary market</strong> active under <strong>Settings &gt; Markets</strong>.</li>
+<li>The primary market is the main country you sell to.</li>
+</ul>
+</details><details class="part" id="time-zone"><summary><h2>Time zone</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The time zone controls when orders and analytics <span class="ex">(sales and visitor reports)</span> are recorded.</li>
+<li><strong>Set it first.</strong></li>
+<li>Examples: <strong>GMT+08:00 Singapore</strong> for a Singapore-based business.</li>
+<li>GMT+08:00 is the clock offset from world standard time.</li>
+<li>The same case is shown as <strong>(GMT+08:00) Singapore</strong>.</li>
+<li>Older example: an Australian store uses <strong>(GMT+10:00) Brisbane</strong>.</li>
+<li>The time zone defaults to the sign-up location.</li>
+<li><strong>Using your own time zone is recommended</strong>, because it makes analytics tracking easier.</li>
+</ul>
+</details><details class="part" id="unit-system-and-default-weight-unit"><summary><h2>Unit system and default weight unit</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Target market</th>
+<th>Unit system</th>
+<th>Default weight unit</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>United States</td>
+<td>Imperial</td>
+<td>Pound (lb)</td>
+<td></td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Metric</td>
+<td>Kilogram (kg)</td>
+<td></td>
+</tr>
+<tr>
+<td>Metric-based store</td>
+<td>Metric</td>
+<td>Kilogram (kg)</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Metric uses meters and kilograms. Imperial uses feet and pounds.</li>
+<li><strong>Set the unit system to Imperial</strong> when the store targets the US.</li>
+<li><strong>Set the default weight unit to Pound (lb)</strong> when the store targets the US.</li>
+<li>The US uses the imperial system.</li>
+<li><strong>Keep</strong> the unit system on <strong>Imperial</strong> for a US store.</li>
+<li><strong>Keep</strong> the default weight unit on <strong>pound</strong> for a US store.</li>
+<li>Store defaults are set under <strong>Settings &gt; General</strong>.</li>
+<li>Set the unit system to <strong>Metric</strong>.</li>
+<li>Set the default weight unit to <strong>Kilogram (kg)</strong>.</li>
+<li>Conflict: Source D 2026 lists the default weight unit as <strong>Pound (lb)</strong>.</li>
+<li>Another source sets <strong>Metric and Kilogram (kg)</strong>.</li>
+<li><strong>Choose the pair that matches where the store sells.</strong></li>
+<li>For the US: Imperial and lb.</li>
+<li>For metric markets: Metric and kg.</li>
+</ul>
+</details><details class="part" id="order-id-format"><summary><h2>Order ID format</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify starts order numbers at <strong>#1001</strong> by default.</li>
+<li>The number itself <strong>cannot be changed</strong>.</li>
+<li>A <strong>prefix</strong> (text before the number) or <strong>suffix</strong> (text after the number) can be added.</li>
+<li>Find it under <strong>Settings &gt; General &gt; Edit order ID format</strong>.</li>
+<li>Examples: EN1001 or 1001-A.</li>
+<li>Older advice.</li>
+<li>Use the <strong>pound symbol (#)</strong> as the prefix for order numbers.</li>
+<li>Use <strong>no suffix</strong>.</li>
+<li><strong>Set the Order ID format</strong> so the first order number is high.</li>
+<li>Start from around <strong>200</strong> onwards, for example #200 or #2001 style numbers.</li>
+<li>This replaces the default #1001.</li>
+<li>A low starting number makes a store look new to buyers.</li>
+<li>Conflict: the 2021-22 source says the starting number <strong>cannot be changed</strong>.</li>
+<li>Source D 2026 sets a higher starting number.</li>
+<li><strong>Verify in the admin</strong> whether the starting number is editable on the plan in use.</li>
+<li>If it is not editable, <strong>use the prefix option</strong>.</li>
+</ul>
+</details><details class="part" id="checkout-the-page-where-customers-enter-details-and-pay"><summary><h2>Checkout <span class="ex">(the page where customers enter details and pay)</span></h2><span class="pm">6 min</span></summary>
+<h3 id="contact-method-and-required-fields">Contact method and required fields</h3>
+<ul>
+<li>Set the customer contact method to <strong>Email</strong>.</li>
+<li><strong>Show the link</strong> to download the Shop app.</li>
+<li>The Shop app is a customer app from Shopify for tracking orders and reordering.</li>
+<li><strong>Keep the order tracking link enabled.</strong></li>
+<li>Customer information fields:
+<ul>
+<li><strong>Require last name only</strong>: left on.</li>
+<li><strong>Require first and last name</strong>: left on, with last name required and first name also required.</li>
+<li><strong>Company name</strong>: disabled.</li>
+<li>Include Company name <strong>only for B2B</strong> (selling to businesses).</li>
+<li><strong>Address line two</strong>: optional.</li>
+<li><strong>Shipping address phone number</strong>: don't include.</li>
+<li>The phone number entered as the main order phone is used by carriers <span class="ex">(delivery companies)</span>.</li>
+</ul></li>
+<li>Conflict on name fields: turns on only "Require last name".</li>
+<li>lists both name options as left on.</li>
+<li><strong>Use one option consistently</strong>, and check the field in the admin.</li>
+<li><strong>Verify</strong> all required fields are configured under <strong>Shopify &gt; Settings &gt; Checkout &gt; Customer contact</strong>.</li>
+<li>That source is from 2023.</li>
+</ul>
+<h3 id="sign-in-and-customer-accounts">Sign-in and customer accounts</h3>
+<ul>
+<li><strong>Keep "Require customer to log into their account before checkout" OFF</strong>, so customers can check out as guests.</li>
+<li>A login requirement adds friction <span class="ex">(anything that slows buying down)</span>.</li>
+<li>No required sign-in before checkout is the Source D 2026 default.</li>
+<li><strong>Keep customer accounts enabled</strong> and sign-in links enabled.</li>
+<li>No customization is required at this stage.</li>
+<li><strong>Keep customer account creation hidden</strong>, so there are no accounts before purchase.</li>
+<li><strong>Leave the login experience and self-serve returns off.</strong></li>
+<li>Self-serve returns means customers start returns on their own.</li>
+<li><strong>Enable Shop Pay</strong> under <strong>Sign in with shop</strong>.</li>
+<li>Enable Shop Pay only <strong>after Shopify Payments is active</strong>.</li>
+<li>Source D 2026: <strong>keep the default customer account configuration</strong>.</li>
+<li>Self-serve returns and cancellations can be configured later, with conditions and fees.</li>
+<li>The sign-in links and store credit options <span class="ex">(a balance the customer can spend in the store)</span> stay at their defaults.</li>
+</ul>
+<h3 id="marketing-tipping-billing-address-and-order-notes">Marketing, tipping, billing address and order notes</h3>
+<ul>
+<li><strong>Turn on</strong> the email marketing opt-in <span class="ex">(the customer agrees to get emails)</span>.</li>
+<li>Keep the opt-in <strong>pre-selected</strong> (already ticked).</li>
+<li>SMS <span class="ex">(text message)</span> opt-in can also be offered.</li>
+<li>Default marketing settings are left enabled.</li>
+<li><strong>SMS marketing is not enabled by default.</strong></li>
+<li>Source D 2026 keeps <strong>no marketing opt-in checkbox</strong> at the foundation stage.</li>
+<li>Conflict: Source A turns the email opt-in <strong>on</strong>.</li>
+<li>Source D 2026 foundation keeps <strong>no opt-in checkbox</strong>.</li>
+<li><strong>Choose the setting that matches your consent</strong> (the customer's permission) and email plan.</li>
+<li>Tipping <span class="ex">(an optional extra amount the buyer can add)</span> has three positions.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Source</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keep off</td>
+<td></td>
+<td>Standard Source A setup</td>
+</tr>
+<tr>
+<td>No tipping options</td>
+<td></td>
+<td>Source D 2026 foundation</td>
+</tr>
+<tr>
+<td>Enable the default tip setting <span class="ex">(for example a 5, 2 or 3 pound tip)</span></td>
+<td></td>
+<td>Source C notes many store owners remove these settings</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Address collection: <strong>keep "Use the shipping address as the billing address" on</strong> by default.</li>
+<li><strong>Also keep "Use address completion" on.</strong> Address completion fills in the rest of an address as the customer types.</li>
+<li><strong>Keep the order notes field enabled</strong> in the Shopify cart before checkout.</li>
+<li>Order notes are a box where buyers can write a message.</li>
+<li>Few customers use it, but it is worth having.</li>
+<li><strong>Leave the order notes field on</strong> at first.</li>
+<li>Then <strong>remove it</strong> if customers never use it.</li>
+<li>Checkout language should default to the store's business language.</li>
+<li><strong>Change it only if needed.</strong></li>
+<li>No checkout rules <span class="ex">(special conditions for checkout)</span> are added.</li>
+<li>Customized checkout <span class="ex">(logo, favicon and checkout appearance)</span> can be <strong>left for later</strong>.</li>
+<li>A favicon is the small icon in the browser tab.</li>
+<li>Checkout trust and security.</li>
+<li>Trust elements are signs that make buyers feel safe.</li>
+<li><strong>Shopify's default checkout trust elements are enough</strong> for security display.</li>
+<li><strong>No extra security app</strong> is needed at checkout.</li>
+</ul>
+<h3 id="order-processing-dropshipping">Order processing <span class="ex">(dropshipping)</span></h3>
+<ul>
+<li>Dropshipping means a supplier ships the product to the buyer, not your store.</li>
+<li>Order processing options after payment.
+<ul>
+<li><strong>Automatically fulfill the order's line items.</strong> (Line items are the product rows in an order. Fulfill means send out or mark as shipped.)</li>
+<li>Automatically fulfill only the gift cards of the order.</li>
+<li><strong>Don't fulfill</strong> any of the order's line items automatically.</li>
+<li><strong>Automatically archive order</strong> after fulfillment or payment can also be set.</li>
+</ul></li>
+<li>Archive means move out of the open list.</li>
+<li>The Source D 2026 approach left these at the <strong>default</strong> for the foundation setup.</li>
+<li>For dropshipping, <strong>choose option 3</strong>: do not automatically fulfill any line items.</li>
+<li>The order is then marked as fulfilled <strong>manually</strong>, once the supplier provides tracking.</li>
+<li>Tracking is the number that shows where the parcel is.</li>
+<li><strong>Keep the automatic archiving</strong> of fulfilled orders on.</li>
+<li>Archived orders are not deleted. They are only removed from the open list.</li>
+<li>Mistake: automatic fulfillment after payment marks orders as fulfilled <strong>before a supplier has shipped</strong> or provided tracking.</li>
+<li><strong>Option 3 avoids this.</strong></li>
+<li>Conflict: Source A recommends <strong>option 3</strong> for dropshipping.</li>
+<li>Source D 2026 foundation keeps the default.</li>
+<li>For a dropshipping store, <strong>option 3</strong> avoids marking orders fulfilled too early.</li>
+</ul>
+<h3 id="checkout-apps-custom-code-and-third-party-buttons">Checkout apps, custom code and third-party buttons</h3>
+<ul>
+<li>Checkout customization apps <span class="ex">(countdown timers, custom images)</span> were <strong>removed</strong> from the Shopify app store around 2020.</li>
+<li>A countdown timer is a clock that counts down a deadline.</li>
+<li>Checkout customization is reserved for <strong>Shopify Plus</strong>.</li>
+<li>Shopify Plus is Shopify's top plan for large stores.</li>
+<li>Shopify Plus starts at about <strong>$2,000 per month</strong> (as of 2020).</li>
+<li><strong>Use the native cart and theme settings</strong> for standard stores.</li>
+<li>Native means built into Shopify. A theme is the store's design template.</li>
+<li><strong>Avoid adding custom code</strong> (hand-written code) to the Shopify checkout page.</li>
+<li>Custom code can cause issues.</li>
+<li>Extra payment buttons such as Klarna, Affirm or Amazon Pay appear prominently on their own.</li>
+<li>Those buttons are <strong>a better way to add choices</strong>.</li>
+<li>Klarna, Affirm and Amazon Pay are payment options that let buyers pay later or with saved details.</li>
+<li>Blocks or links for Amazon checkout are <strong>not a trust signal</strong> (a sign that makes buyers feel safe).</li>
+<li><strong>Keep your store's checkout</strong> on your own platform and payment methods.</li>
+<li><strong>Avoid links</strong> that send visitors to the marketplace <span class="ex">(a shop like Amazon or eBay)</span>.</li>
+<li><strong>Use the discount code and discount row settings at their defaults.</strong></li>
+<li>The discount row is the line that shows a discount in the cart.</li>
+<li>The footer <span class="ex">(the bottom of each page)</span> and the shipping protection row <span class="ex">(an optional add-on for shipping problems)</span> are <strong>optional extras during testing</strong>.</li>
+<li>The Shopify checkout allows <strong>little customization</strong>.</li>
+<li>Conversion means a visitor completing a purchase.</li>
+<li><strong>Most conversion changes must happen earlier</strong> in the journey <span class="ex">(the steps a buyer takes before buying)</span>.</li>
+<li>Those changes are on the product page, in the offer and in the shipping and trust messaging.</li>
+<li><strong>Plan the store around these pre-checkout elements.</strong></li>
+</ul>
+<h3 id="checkout-friction-and-language">Checkout friction and language</h3>
+<ul>
+<li><strong>Minimize checkout friction</strong> by accepting common payment methods.</li>
+<li><strong>Reduce steps to purchase.</strong></li>
+<li>Every additional step increases cart abandonment <span class="ex">(buyers leaving before they pay)</span>.</li>
+<li><strong>Use words that signal security and trust</strong>, such as "free" and "tracked".</li>
+<li><strong>Check the checkout and cart</strong> for hidden prices.</li>
+<li>Also check for mismatched currencies.</li>
+<li>Also check for a missing add-to-cart button <span class="ex">(the button that puts an item in the cart)</span>.</li>
+<li>Shipping charged by mistake is a common cause of abandonment.</li>
+<li>PayPal one-click checkout: <strong>integrate PayPal's payment button</strong> so customers can buy with one click after adding a product to the cart.</li>
+<li>This removes the multi-step checkout and reduces effort.</li>
+<li>It increases the completion rate <span class="ex">(the share of buyers who finish paying)</span>.</li>
+<li>One-click checkout app: displays checkout <strong>immediately</strong> after the customer adds a product to the cart.</li>
+<li>It bypasses <span class="ex">(skips)</span> the cart review page.</li>
+</ul>
+<h3 id="price-display">Price display</h3>
+<ul>
+<li><strong>Settings &gt; Pricing &gt; Price rounding</strong> is off by default.</li>
+<li>Price rounding sets how prices end.</li>
+<li><strong>Enable it</strong> and choose the ending <strong>95 or 99</strong>.</li>
+<li>Bundle prices <span class="ex">(several products sold together)</span> then end in.95 or.99.</li>
+<li>Other pricing toggles <span class="ex">(on/off switches)</span> in the same section are:
+<ul>
+<li>Show prices per item.</li>
+<li>Use product compare-at price <span class="ex">(the crossed-out original price)</span>.</li>
+<li>Show prices without decimals.</li>
+</ul></li>
+</ul>
+</details><details class="part" id="payments"><summary><h2>Payments</h2><span class="pm">9 min</span></summary>
+<h3 id="choosing-a-processor-the-company-that-moves-customer-money">Choosing a processor <span class="ex">(the company that moves customer money)</span></h3>
+<ul>
+<li>Shopify Payments is a <strong>built-in</strong> payment processor with the most straightforward integration.</li>
+<li>Integration means connecting it to the store.</li>
+<li><strong>Implement it when your region is supported.</strong></li>
+<li>Supported list: Australia, Austria, Belgium, Canada, Denmark, Germany, Hong Kong, Ireland, Italy, Japan, Netherlands, New Zealand, Singapore, Spain, Sweden, UK and US.</li>
+<li>Shopify integrates with most payment processors.</li>
+<li>A store can be built with a <strong>gateway</strong> (a link between the store and a payment company) other than Shopify Payments.</li>
+<li><strong>Shopify Payments is recommended</strong>, because it is the easiest option.</li>
+<li>Older advice, Source A.</li>
+<li>Use a checkout-related Shopify payment processor: <strong>Shopify Payments or Stripe</strong>.</li>
+<li>Stripe is another payment company.</li>
+<li><strong>Check the main payment processor</strong> of the target country <span class="ex">(the country you sell to)</span> before launch.</li>
+<li><strong>Use Stripe instead</strong> where Shopify Payments is not available.</li>
+<li>Other payment providers can be used if Shopify integrates with them.</li>
+<li>The Payments page links to the list of all providers via <strong>See all other providers</strong>.</li>
+<li>The recommended setup is <strong>Shopify Payments plus PayPal</strong>.</li>
+<li><strong>Accept at least one processor</strong> for credit cards and PayPal.</li>
+<li>PayPal performs particularly well in the USA and the top four markets.</li>
+<li>One source reports that adding PayPal to a single-processor checkout <strong>roughly doubled</strong> conversion in one case.</li>
+<li>Crypto <span class="ex">(digital currency such as Bitcoin)</span> acceptance.</li>
+<li>It can be added through Coinbase Commerce, BitPay or CoinPayments.net in a few minutes.</li>
+<li>But it historically <strong>did not generate sales</strong> for the business.</li>
+</ul>
+<h3 id="activating-shopify-payments">Activating Shopify Payments</h3>
+<ul>
+<li>The <strong>only required action</strong> at the initial setup stage is <strong>activating Shopify Payments</strong>.</li>
+<li>The goal is to learn where settings are located, rather than to configure heavily.</li>
+<li><strong>Settings &gt; Payments</strong>: click <strong>Activate Shopify payments</strong>.</li>
+<li>Then enter bank account details for payouts <span class="ex">(money sent from the store to your bank)</span>.</li>
+<li>Customers can then pay by card, debit, Apple Pay and Google Pay.</li>
+<li>The setup takes <strong>a few minutes</strong>.</li>
+<li>Accepted methods: <strong>credit cards, debit cards, Apple Pay and Google Pay</strong>.</li>
+<li>Apple Pay and Google Pay are phone-based payment wallets.</li>
+<li>Shopify Payments <strong>deposits funds within 2 business days</strong> of order completion.</li>
+<li>A deposit is money paid into your bank.</li>
+<li><strong>No upfront money</strong> is needed to submit orders to suppliers in the first month.</li>
+<li>Business or personal account.</li>
+<li><strong>Either</strong> a personal or a business checking account <span class="ex">(everyday bank account)</span> works to accept payments.</li>
+<li>Business checking accounts are easy to open, by phone or online, typically in <strong>20 minutes</strong>.</li>
+<li>Business checking accounts are <strong>recommended</strong> for long-term operations.</li>
+<li>Reason: account numbers do not change later.</li>
+<li>Shopify Payments shows as <strong>Shop Pay</strong>, the first option listed under <strong>Settings &gt; Payments</strong>.</li>
+<li>Enabled payment methods <strong>must match</strong> those declared in Google Merchant Center (Google's product listing tool).</li>
+<li>Enable or disable Apple Pay, Google Pay and other options under <strong>Settings &gt; Checkout &gt; Payment methods</strong>.</li>
+<li>Apple Pay shows at checkout when Shopify Payments or Stripe is active.</li>
+<li>Some themes can hide it.</li>
+<li>After switching themes, <strong>place a real test payment</strong> to confirm the button appears.</li>
+<li>Payment methods shown in the footer: <strong>tick the checkboxes</strong> under payment methods for every method you accept.</li>
+<li>Each ticked method then appears automatically in the store footer.</li>
+<li>Test mode: the payment section of Shopify has an <strong>Enable test mode</strong> option.</li>
+<li>Test mode checks whether transactions go through.</li>
+<li>One seller skipped it in favour of a dummy order <span class="ex">(a fake test order)</span> with an immediate refund.</li>
+<li>Payments are set under <strong>Settings &gt; Payments</strong>.</li>
+</ul>
+<h3 id="paypal">PayPal</h3>
+<ul>
+<li><strong>Settings &gt; Payments &gt; PayPal</strong>: click <strong>Complete account setup</strong> to link PayPal to the store.</li>
+<li>Customers can then choose PayPal at checkout, alongside Shopify Payments.</li>
+<li>PayPal <strong>must be on a business account</strong> before it links to Shopify.</li>
+<li>If PayPal is not connected after opening the business account, <strong>retry the connection</strong> in Shopify payment settings.</li>
+<li>Older advice, Source A.</li>
+<li>Shopify has support documentation on integrating PayPal as a payment method.</li>
+<li>It was shared in the September 2025 coaching call.</li>
+</ul>
+<h3 id="payment-capture-method">Payment capture method</h3>
+<ul>
+<li>Payment capture is the step that actually charges the card.</li>
+<li>Capture options.</li>
+<li><strong>Automatic</strong> captures and charges immediately.</li>
+<li><strong>Manual</strong> authorizes the card <span class="ex">(reserves the money)</span> but holds the charge until you confirm stock.</li>
+<li><strong>Set the payment capture method</strong> from automatically at checkout to <strong>manually</strong> (<strong>Manage &gt; manually</strong>).</li>
+<li>Orders then only authorize funds. They are not charged until you capture them.</li>
+<li>This prevents charges on test or demo orders.</li>
+<li>Mistake: leaving payment capture on <strong>automatic</strong> lets any test or demo purchase charge the buyer's card immediately.</li>
+<li><strong>Set it to manual</strong> before the store is public.</li>
+<li>With manual capture, each new order triggers a notification email to the account email.</li>
+<li>The payment must be captured manually in Shopify to charge the card.</li>
+<li>Authorization windows <span class="ex">(the time the reserved money is held)</span>. Sources conflict.</li>
+<li>Shopify payment authorization defaults to <strong>seven days</strong> and cannot be extended on Shopify Payments.</li>
+<li>Older advice, Source A.</li>
+<li>If a product will arrive after that window, <strong>plan a deposit or payment-capture workflow</strong> in advance.</li>
+<li>Shopify payment capture windows vary by card.</li>
+<li>So a manual capture must be completed within the authorization window.</li>
+<li><strong>Check the timeframe</strong> before relying on a long hold.</li>
+<li>Older advice, Source A.</li>
+<li><strong>Use seven days</strong> as the planning figure for Shopify Payments.</li>
+<li><strong>Check the card-specific window</strong> before relying on any longer hold.</li>
+</ul>
+<h3 id="authorization-only-workflows">Authorization-only workflows</h3>
+<ul>
+<li>Set up payment <strong>authorizations <span class="ex">(not capture)</span></strong> initially, using the payment authorization setting.</li>
+<li>This holds funds on the customer's card without charging them.</li>
+<li>You can confirm stock with the supplier.</li>
+<li>Then decide whether to capture <span class="ex">(charge)</span> or release <span class="ex">(cancel the hold)</span> the payment.</li>
+<li>Older advice, Source A.</li>
+<li>Procedure: capturing payments only after stock is confirmed.
+<ol type="1">
+<li>In the Shopify payment settings, <strong>turn on</strong> the setting that authorizes the card without capturing the payment.</li>
+<li>When a customer orders, the card is authorized, which confirms that the funds are available.</li>
+<li><strong>Confirm with the supplier</strong> that the product is in stock.</li>
+<li><strong>Click the capture payment button</strong> on the order to charge the customer.</li>
+<li><strong>Process the order</strong> with the supplier once the payment is captured.</li>
+</ol></li>
+<li>Deposit workflow for an out-of-stock item whose authorization will expire.
+<ul>
+<li>Step 1: <strong>ask</strong> the customer if they will pay a 50% deposit <span class="ex">(a partial payment to hold the order)</span>.</li>
+<li>Step 2: <strong>charge</strong> that half to the card.</li>
+<li>Step 3: <strong>submit</strong> the order to the supplier.</li>
+<li>Step 4: when the product arrives, <strong>charge the remaining balance</strong> and send the invoice <span class="ex">(the bill)</span> before shipping.</li>
+</ul></li>
+</ul>
+<h3 id="manual-payment-methods-draft-orders-and-invoices">Manual payment methods, draft orders and invoices</h3>
+<ul>
+<li>Shopify <strong>draft orders</strong> are orders the store makes by hand, before payment.</li>
+<li>They can be used to create a customer invoice before the order is paid.</li>
+<li>This lets a store owner send a payable order to a customer manually.</li>
+<li><strong>Continue using Shopify draft orders</strong> to improve customer service and checkout completion.</li>
+<li>They have a limit on conversion tracking <span class="ex">(measuring which visits turn into sales)</span>.</li>
+<li>Despite that limit, they make operations easier.</li>
+<li>They are an effective way for customers to finalize orders, especially in high-ticket businesses <span class="ex">(businesses selling expensive products)</span>.</li>
+<li>Older advice, Source B.</li>
+<li>Procedure: to accept ACH <span class="ex">(an electronic bank transfer)</span> or wire transfer <span class="ex">(a bank-to-bank transfer)</span> payments.
+<ol type="1">
+<li><strong>Create a draft order</strong> in Shopify for the customer.</li>
+<li>In the draft order notes section, include the routing number <span class="ex">(bank code)</span> and checking account number for the wire or ACH transfer.</li>
+<li><strong>Send the draft order</strong> to the customer.</li>
+<li>The customer sends the ACH or wire transfer to your bank.</li>
+<li>Once funds are received, <strong>manually mark the order as paid</strong> in Shopify.</li>
+<li>Note: ACH and wire transfers have <strong>no fraud protection</strong> (protection against scams) like credit cards.</li>
+</ol></li>
+<li>Procedure: for split payment orders.
+<ol type="1">
+<li><strong>Create the first draft order</strong> for half of the total amount.</li>
+<li><strong>Create the second draft order</strong> for the remaining balance.</li>
+<li><strong>Send both draft orders</strong> to the customer.</li>
+<li>Specify payment method for each <span class="ex">(e.g., draft 1 on card, draft 2 via wire)</span>.</li>
+<li>The customer pays both.</li>
+<li><strong>Mark orders as paid</strong> when payments are received.</li>
+</ol></li>
+<li>Phone order process.
+<ol type="1">
+<li>The customer calls and tells you the product they want.</li>
+<li>You go to the website and <strong>pull up the product page</strong>.</li>
+<li><strong>Add it to the cart</strong> through your store.</li>
+<li><strong>Walk through checkout</strong> with the customer on the phone.</li>
+<li><strong>Collect name and payment details</strong> as the customer reads them to you.</li>
+</ol></li>
+<li>Partial refund for return shipping: when a return is accepted and the customer is charged a return shipping fee, <strong>issue a partial refund</strong> (return part of the money) in Shopify to deduct the fee.</li>
+</ul>
+<h3 id="shop-pay-installments">Shop Pay Installments</h3>
+<ul>
+<li>Shop Pay Installments is a Shopify Payments feature.</li>
+<li>It lets customers split purchases into <strong>2 or 4 interest-free installments</strong> (payments spread over time, with no extra charge).</li>
+<li>The payment option is selected at checkout.</li>
+<li>On product pages, messaging such as "Pay in 4 interest-free payments" displays below the product price.</li>
+<li>The calculated installment amount <span class="ex">(the amount per payment)</span> displays with it.</li>
+<li>Both adjust automatically based on the product price.</li>
+<li>The toggle <span class="ex">(on/off switch)</span> applies to the <strong>whole store</strong>, not to individual products.</li>
+<li>Once switched on, installment messages can appear on <strong>every eligible product page</strong>.</li>
+<li>All payment method changes <strong>save automatically</strong> in Shopify Payments.</li>
+<li>No additional configuration is required after enabling Shop Pay Installments.</li>
+<li>The option turns on in <strong>roughly 30 seconds</strong> of clicking.</li>
+<li>It can take a few minutes to appear on storefront pages <span class="ex">(the pages customers see)</span> after the toggle is switched on.</li>
+<li>Once active, the financing message <span class="ex">(text about paying in installments)</span> appears across the store's pages.</li>
+<li>This includes product pages, the cart and checkout.</li>
+<li><strong>No separate theme editing</strong> is needed.</li>
+<li>Activation path: <strong>Settings &gt; Payments</strong>, click <strong>Manage</strong> under Shopify Payments, then <strong>Manage payment methods</strong>.</li>
+<li>Locate Shop Pay Installments and <strong>toggle it ON</strong>.</li>
+<li>Procedure: enable Shop Pay Installments in the Shopify admin.
+<ol type="1">
+<li>Log in to the Shopify admin.</li>
+<li>Click the <strong>settings gear icon</strong> in the bottom left of the admin navigation.</li>
+<li>Click <strong>Payments</strong>.</li>
+<li>Under Shopify Payments, click <strong>Manage</strong>.</li>
+<li>Click <strong>Manage payment methods</strong>.</li>
+<li>Find Shop Pay Installments in the list. If it is off, click the slider and drag it to the right to turn it on.</li>
+<li>If a save prompt appears, <strong>save the settings</strong>.</li>
+<li><strong>Wait a few minutes</strong>, then open any product page on the store and refresh it.</li>
+<li>Confirm that the financing message appears on the product page. Check that it also shows in the cart and at checkout.</li>
+</ol></li>
+<li>Troubleshooting: if the financing message does not show right after enabling, the most likely cause is that the page has not refreshed yet.</li>
+<li><strong>Give the change a few minutes</strong> and refresh the product page before assuming the setup failed.</li>
+<li>Testing Shop Pay Installments against Affirm <span class="ex">(another pay-later company)</span>.
+<ol type="1">
+<li><strong>Keep the Affirm account open.</strong></li>
+<li><strong>Turn off Affirm</strong> on the site for two weeks.</li>
+<li><strong>Turn on Shop Pay Installments</strong> for the same period.</li>
+<li>Compare conversion results at the end of the two weeks and <strong>keep the option that performs better</strong>.</li>
+</ol></li>
+<li>Shop Pay as installment financing.</li>
+<li>Shop Pay is sufficient for installment options.</li>
+<li><strong>No separate Klarna setup</strong> is required.</li>
+<li>Klarna <span class="ex">(a pay-later service)</span> or Afterpay <span class="ex">(another one)</span> can be added when the product price is <strong>above 60 USD</strong>.</li>
+<li>Conflict: (2022) says no separate Klarna setup is needed.</li>
+<li>adds Klarna or Afterpay above 60 USD.</li>
+<li><strong>Use Shop Pay Installments as the base.</strong></li>
+<li><strong>Add Klarna or Afterpay</strong> for products above 60 USD.</li>
+</ul>
+<h3 id="settings-order-for-payments">Settings order for payments</h3>
+<ul>
+<li><strong>Payments must be configured before ads.</strong></li>
+<li>Once payments are configured and saved, the checkout is live and visitors can place real orders.</li>
+<li>Older advice, Source B.</li>
+<li><strong>Complete the Shopify settings in this order</strong> before running any ads.</li>
+<li>The order is: General, Payments, Shipping and delivery, Taxes, then Legal.</li>
+<li>Older advice, Source B.</li>
+</ul>
+</details><details class="part" id="shipping-taxes-and-duties-boundary-of-this-section"><summary><h2>Shipping, taxes and duties <span class="ex">(boundary of this section)</span></h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Do not adjust taxes or duties</strong> in the shipping settings yet. Tax setup <span class="ex">(telling Shopify which taxes to collect)</span> is done in a later stage.</li>
+<li>Shipping procedure (Source A, complete setup order, step 8): delete default rates <span class="ex">(the prices Shopify starts with)</span>, <strong>create Custom flat rate Free shipping at $0</strong> (one fixed shipping price of $0), and delete the International zone <span class="ex">(the shipping group for countries outside your own)</span>.</li>
+<li>Taxes and duties <span class="ex">(government fees on sales and on imports)</span>: <strong>no changes</strong> at this stage.</li>
+</ul>
+</details><details class="part" id="orders-fulfilment-and-notifications"><summary><h2>Orders, fulfilment and notifications</h2><span class="pm">2 min</span></summary>
+<p>Fulfilment means packing and shipping an order. Notifications are the automatic emails and alerts Shopify sends.</p>
+<h3 id="order-notification-emails">Order notification emails</h3>
+<ul>
+<li>Go to <strong>Settings &gt; Orders</strong>: set which email addresses receive order notifications <span class="ex">(alerts that a new order came in)</span> and which address the emails are sent from. The customer can choose to receive notifications at any configured email.</li>
+<li><strong>Set your notification email</strong> in Settings &gt; Orders. The Shopify mobile app <span class="ex">(the Shopify app on your phone)</span> can play a sound with every sale.</li>
+<li>Customer order notes field at checkout <span class="ex">(the payment pages where the customer pays)</span>: <strong>leave it on</strong> at first, then remove it if customers never use it.</li>
+<li>Use the Shopify order number and the order's information for customer purchase receipts <span class="ex">(proof of purchase)</span>. If a customer does not receive the automatic Shopify order email, <strong>resend it from the order page</strong> or send a screenshot of the order.</li>
+</ul>
+<h3 id="order-details">Order details</h3>
+<ul>
+<li><strong>Click into an order</strong> in Shopify Admin (Shopify's back office, where you run the store). It shows the products bought, any notes the customer added at checkout, the customer's name, email and address, and the customer's full purchase history with the store.</li>
+</ul>
+<h3 id="fulfilment-and-tracking">Fulfilment and tracking</h3>
+<ul>
+<li>Shopify Admin &gt; Fulfillment screen &gt; Tracking Information section: <strong>select the shipping service and enter the tracking number</strong> (the code that shows where the package is) before marking the order as fulfilled.</li>
+<li>Mistake: <strong>marking an order as fulfilled</strong> sends the shipping notice <span class="ex">(the shipping email)</span> to the customer straight away. Do not mark it fulfilled before the shipping service and tracking number are entered.</li>
+<li>Procedure: send tracking information to a customer when the supplier ships:
+<ol type="1">
+<li><strong>Get the tracking number</strong> from the supplier.</li>
+<li>Open the customer's order in the Shopify admin.</li>
+<li>Attach the tracking number to the order so the customer receives updates.</li>
+</ol></li>
+<li>Procedure: orders split across multiple suppliers:
+<ol type="1">
+<li>Receive order.</li>
+<li><strong>Mark as partially fulfilled</strong> in Shopify <span class="ex">(only part of the order has shipped)</span>.</li>
+<li>Add tracking number for first shipment, send first email.</li>
+<li>Mark remaining items as fulfilled when second shipment ships.</li>
+<li>Customer receives separate tracking email for each shipment.</li>
+</ol></li>
+<li>Fulfilment request notification: <strong>turn on the option</strong> that notifies your fulfilment service provider when an order is marked as fulfilled. Use it when an outside 3PL <span class="ex">(a outside warehouse company that packs and ships for you)</span> or fulfilment partner needs the order update automatically instead of by hand.</li>
+<li><strong>Install a fulfilment app</strong> via Apps &gt; Sales channel settings &gt; Shopify App Store (Shopify's shop for add-on apps). Search for the app name, then click Install. Once installed, the app shows Open app.</li>
+</ul>
+<h3 id="draft-orders-and-receipts-cross-reference">Draft orders and receipts <span class="ex">(cross-reference)</span></h3>
+<ul>
+<li><strong>Use the draft order and receipt rules above</strong> for manual orders. A draft order is an order you create by hand.</li>
+</ul>
+</details><details class="part" id="locations"><summary><h2>Locations</h2><span class="pm">2 min</span></summary>
+<p>A location is a place where stock is kept or sent from, such as a warehouse or an office.</p>
+<h3 id="default-location-and-plan-limits">Default location and plan limits</h3>
+<ul>
+<li>Settings &gt; Locations: <strong>the default single location</strong> is the address entered at sign-up. It is sufficient at launch. Extra locations are only needed for inventory tracking <span class="ex">(keeping count of stock)</span> across several warehouses or suppliers.</li>
+<li>Shopify's Locations page shows <strong>how many active locations the plan allows</strong> (the plan is the monthly package you pay Shopify for), for example "Using 1 of 10 active locations available on your plan". A Point of Sale subscription <span class="ex">(the in-store cash register app)</span> is included with the plan, so in-person selling can start from any active location.</li>
+<li><strong>Up to 1000 locations</strong> are allowed on the Shopify Basic plan.</li>
+<li>Conflict: the Locations page example shows a limit of 10, while gives up to 1000 on Basic. <strong>Read the number shown on the Locations page</strong> for the plan in use.</li>
+<li><strong>Keep the default location</strong> at the foundation stage <span class="ex">(the first basic setup)</span>. A location only needs to be changed when stock is held or sold from a different address, or when in-person selling is added.</li>
+</ul>
+<h3 id="dropshipping-rules">Dropshipping rules</h3>
+<p>Dropshipping means the supplier ships the product straight to the customer. You do not keep the stock yourself.</p>
+<ul>
+<li>Warehouse locations in Shopify should reflect the primary fulfilment location <span class="ex">(the main place orders are shipped from)</span>, typically the home office for dropshipping. <strong>Setting one per supplier is unnecessary</strong>, because the supplier location determines the actual shipping, not the Shopify warehouse setting.</li>
+<li><strong>Set the Shopify default location</strong> to the country from which you actually ship <span class="ex">(the shipping origin)</span>. If all orders ship from the US, set the Shopify location to USA so it matches the shipping origin in Google Merchant Center (Google's tool that holds your product list for Google shopping ads).</li>
+<li>Point of sale <strong>is not used</strong> for a dropshipping store, since it requires a physical card reader <span class="ex">(a small machine that takes card payments in person)</span>.</li>
+</ul>
+</details><details class="part" id="customer-notifications-and-sender-email"><summary><h2>Customer notifications and sender email</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Settings &gt; Notifications contains the sender email settings <span class="ex">(the address your emails come from)</span>. <strong>Do not change them yet.</strong> They are updated once the business email setup is finished.</li>
+<li><strong>The sender email address can be changed later</strong> once business email addresses <span class="ex">(for example @yourstore.com)</span> exist. Add the logo and brand colours to email templates <span class="ex">(ready-made email designs)</span>. The default templates <span class="ex">(for example order confirmation)</span> can be edited, but editing is not required.</li>
+<li>The sender email in Settings &gt; General is the address customers see when the store emails them. It <strong>may not appear in the same way in every inbox</strong> (the place where emails arrive).</li>
+<li><strong>Revisit</strong> brand <span class="ex">(your store's name and look)</span>, notifications and business contact details once the logo, brand colours, business phone, business email and business address are in place.</li>
+<li>Policies <span class="ex">(the store pages for rules such as returns and privacy)</span> are completed during an earlier step of the setup, so <strong>no action is needed</strong> in Settings &gt; Policies.</li>
+<li>Source D 2026 places Policies in the foundation order <strong>before any sales channel is opened</strong>.</li>
+</ul>
+</details><details class="part" id="gift-cards"><summary><h2>Gift cards</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Set an expiration date</strong> for gift cards rather than never expiring. This stops unused gift cards <span class="ex">(pending gift cards)</span> from becoming old liabilities <span class="ex">(money you owe customers)</span> when the business is sold. Apple Wallet passes <span class="ex">(gift cards saved to a phone wallet)</span> are optional and not a priority.</li>
+<li>Shopify has a <strong>built-in gift card feature</strong> (already part of Shopify). Customers choose the amount they want to pay, and the code is sent by email to be used by the buyer or given to someone else.</li>
+</ul>
+</details><details class="part" id="apps-sales-channels-and-domains"><summary><h2>Apps, sales channels and domains</h2><span class="pm">2 min</span></summary>
+<h3 id="apps-and-sales-channels-what-they-are">Apps and sales channels: what they are</h3>
+<ul>
+<li><strong>The Apps item</strong> is at the bottom of the left navigation menu <span class="ex">(the list of links on the left side of the screen)</span>. It lists every app already installed and shows recommendations for further apps.</li>
+<li>Shopify Settings has a <strong>combined page for apps and sales channels</strong>, reached from the Apps page via its app and sales channel settings.</li>
+<li>Apps add features to the store. Sales channels are platforms <span class="ex">(places where you sell, such as a social media site)</span>. Both are managed from the same Shopify account.</li>
+<li><strong>The Online Store is the default sales channel</strong>, because it is where orders are accepted. Add other sales channels only when the store needs to sell somewhere else.</li>
+<li>Most sales channels used in practice are native to Shopify <span class="ex">(built into Shopify)</span> and <strong>free to activate</strong>. Only some third-party channels <span class="ex">(made by another company)</span> or add-ons carry a cost.</li>
+<li>When this was written, the sales channels available included TikTok, Etsy, the Shopify Marketplace and multi-feeds for Google Shopping <span class="ex">(product lists sent to shopping sites)</span>. <strong>Check Shopify's current sales channel list</strong> before relying on them.</li>
+<li>Shopify sales channels connect the store to traffic platforms <span class="ex">(places that send visitors)</span> such as Facebook, Instagram and Google <strong>from within the same account</strong>.</li>
+</ul>
+<h3 id="starting-point">Starting point</h3>
+<ul>
+<li>Settings &gt; Sales channels: <strong>keep only the Online Store active</strong> at the foundation stage.</li>
+<li>Open the Online Store channel and <strong>confirm</strong> it shows the store name and the primary domain <span class="ex">(the main web address of your store)</span> before adding any other sales channel.</li>
+<li>If Point of Sale appears, click the three dots next to it and <strong>choose Uninstall</strong>, because this business model does not use it.</li>
+<li><strong>Keep Online store and Email.</strong> Add sales channels such as Facebook, Instagram or Google later as the store grows.</li>
+<li>Shop (Shopify's own app for shoppers) is an optional sales channel that <strong>can stay enabled</strong>. Point of sale is not needed and can be removed under Settings &gt; Apps and sales channels.</li>
+<li><strong>Do not connect</strong> sales channels such as Facebook, Shopify Chat <span class="ex">(a built-in chat tool)</span> or Wholesale <span class="ex">(selling in bulk to other businesses)</span> before the store is launched and selling products. Add them later under Sales channels.</li>
+<li>Sales channels <strong>vary by country</strong>. Facebook is free to add (Facebook fees may apply), and the Wholesale channel is unavailable in some setups.</li>
+<li>Among Shopify's sales channels, <strong>Google is generally a poor choice</strong> for a new store, while Messenger (Facebook's chat app) is a better alternative. eBay can be connected in Australia.</li>
+<li>Conflict: Source B 2021-22 calls Google a poor first choice and Messenger better, while Source A's setup adds Google later as the store grows. <strong>Treat the Source B advice as older.</strong></li>
+</ul>
+<h3 id="removing-apps-and-channels">Removing apps and channels</h3>
+<ul>
+<li>To remove a sales channel or app: go to Settings <span class="ex">(gear icon, bottom left)</span> &gt; Apps and sales channels, hover over the item <span class="ex">(move the mouse over it)</span> and <strong>click Uninstall</strong>.</li>
+<li><strong>Remove international markets</strong> under Settings &gt; Markets <span class="ex">(the countries and regions you sell to)</span>.</li>
+</ul>
+<h3 id="domains">Domains</h3>
+<ul>
+<li>Settings &gt; Domains shows the Shopify domain and the custom domain <span class="ex">(your own web address)</span>. <strong>Both are already configured</strong> and need no further action.</li>
+<li><strong>Check that the purchased domain is primary.</strong></li>
+</ul>
+</details><details class="part" id="activity-log"><summary><h2>Activity log</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Settings &gt; Store activity log: <strong>a running list of all store changes</strong>. It is useful when sales rise or fall, to find what was changed.</li>
+</ul>
+</details><details class="part" id="setup-order-for-a-supplier-ready-store"><summary><h2>Setup order for a supplier-ready store</h2><span class="pm">2 min</span></summary>
+<p>A supplier-ready store is one ready to send orders to suppliers.</p>
+<ul>
+<li>Procedure: Shopify Settings configuration order for a supplier-ready store <span class="ex">(in order)</span>:
+<ol type="1">
+<li>Store details: <strong>set the store name</strong>; keep phone, email and billing address until a business phone, email and address exist.</li>
+<li>Billing, currency, time zone, units, <strong>order ID format</strong> (how order numbers look).</li>
+<li>Plan and billing: check the <strong>trial and billing dates</strong> (the free test period and payment dates).</li>
+<li>Users and permissions <span class="ex">(who can log into the store)</span>: <strong>add staff</strong> if needed.</li>
+<li>Payments: <strong>activate Shopify Payments</strong> (Shopify's own card payment service), complete PayPal setup <span class="ex">(an online payment service)</span>, set payment capture to manual <span class="ex">(you decide when to take the money)</span>.</li>
+<li>Checkout: customer contact by email, Shop app link on, <strong>customer login off</strong>, last name only or first and last name, company name off, phone number not included for shipping, email marketing on, tipping off, shipping address as billing on, order processing option 3, archive fulfilled orders on <span class="ex">(move completed orders out of the main list)</span>.</li>
+<li>Customer accounts <span class="ex">(customer logins)</span>: <strong>keep hidden</strong>, enable Shop Pay (Shopify's fast checkout) after payments are set up.</li>
+<li>Shipping: delete default rates, <strong>create Custom flat rate Free shipping at $0</strong>, delete the International zone.</li>
+<li>Taxes and duties: <strong>no changes</strong> at this stage.</li>
+<li>Locations: <strong>keep default location</strong>; remove point of sale if installed.</li>
+<li>Gift cards: <strong>set an expiration date</strong>.</li>
+<li>Markets: <strong>keep only the primary market active</strong>.</li>
+<li>Apps and sales channels: <strong>uninstall point of sale</strong>.</li>
+<li>Domains: <strong>check the purchased domain is primary</strong>.</li>
+<li>Brand, notifications, languages, policies: <strong>revisit</strong> after logo, colors and business email are set.</li>
+</ol></li>
+<li>Source D 2026 foundation order: <strong>first open the account with the business email</strong>, then work through Settings &gt; General, Payments, Shipping and delivery, Apps, Domains, Customer privacy and Policies before any sales channel is opened. These steps are the foundation. Advanced settings come after them.</li>
+<li>At the initial setup stage, <strong>most Shopify settings should stay at their defaults</strong> (the starting settings Shopify provides). The goal is to learn where settings are located, not to configure heavily.</li>
+<li>The general store settings are preset. <strong>Other default options do not need changes</strong> at launch <span class="ex">(the day the store opens to customers)</span>.</li>
+<li>At launch, the recommended default options in Settings &gt; Checkout <strong>can be left unchanged</strong>, apart from the customer contact method, the order tracking link, and the required-field <span class="ex">(boxes the customer must fill in)</span> and sign-in settings. Later checkout changes are made in the same section.</li>
+<li>At the foundation stage, <strong>keep Shopify's defaults</strong> for advanced settings such as metafields <span class="ex">(extra custom data fields)</span>, customer events <span class="ex">(tracked actions such as page views)</span>, post-purchase <span class="ex">(the page after payment)</span> and marketing pixels <span class="ex">(tracking code that reports sales to ad platforms)</span>. Do not spend time on them until the store is scaling <span class="ex">(growing sales)</span>. The reasoning is to build a stable base first.</li>
+</ul>
+</details><details class="part" id="more-rules-worth-knowing"><summary><h2>More rules worth knowing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>By default, Shopify does not send orders to suppliers.</strong> Orders must be forwarded to the supplier separately.</li>
+<li>In Online Store &gt; Preferences, <strong>turn off Google reCAPTCHA</strong> (a "prove you are not a robot" check) on contact forms <span class="ex">(the form where customers write to you)</span> and on login, create-account and password recovery pages. Enable it only if you get spam <span class="ex">(unwanted junk messages)</span>, because it can require customers to complete a reCAPTCHA task.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/04-store-build-and-shopify/04-core-admin-settings-general-checkout-payments-and-orders/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../04-store-build-and-shopify/03-business-email-phone-number-and-contact-identity/"><span class="k">&larr; Previous</span><span class="v">Business email, phone number and contact identity</span></a><a class="nx" href="../../04-store-build-and-shopify/05-shipping-taxes-markets-currency-and-international-selling/"><span class="k">Next &rarr;</span><span class="v">Shipping, taxes, markets, currency and international selling</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

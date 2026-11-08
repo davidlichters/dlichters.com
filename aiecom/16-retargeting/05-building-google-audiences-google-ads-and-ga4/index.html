@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Building Google audiences (Google Ads and GA4) | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.5: Building Google audiences (Google Ads and GA4).">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/05-building-google-audiences-google-ads-and-ga4/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Building Google audiences (Google Ads and GA4) | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.5: Building Google audiences (Google Ads and GA4)."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/05-building-google-audiences-google-ads-and-ga4/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/05-building-google-audiences-google-ads-and-ga4/">Plain version</a></div><h1>16.5 Building Google audiences (Google Ads and GA4)</h1><article><h2 id="account-structure-and-setup-order">Account structure and setup order</h2>
+<ul>
+<li>Google Ads and GA4 must be linked before remarketing audiences can be built from website data. Setup order: (1) link Google Ads to Google Analytics, (2) set up data settings in Google Analytics, (3) update data retention in Google Analytics, (4) create remarketing audiences. [L0165.001]</li>
+<li>Create remarketing audiences early, even before any remarketing campaign is running, because they keep filling with users over time. An audience created later starts empty. [L1520.008]</li>
+<li>Google Ads Audience manager builds remarketing audiences from site visitors, app users, YouTube users and customer lists, and shows where each audience can be applied. Google also auto-creates some audiences there. [L1242.008]</li>
+</ul>
+<h2 id="google-ads-data-segments-in-audience-manager">Google Ads: data segments in Audience manager</h2>
+<h3 id="concepts">Concepts</h3>
+<ul>
+<li>A data segment is a group of people who completed an action on the website, such as visiting a page or buying. Saving them as segments lets you target each group separately later. [L0420.006]</li>
+<li>A newly created audience does not show its size immediately. It can take several hours to populate. Only then does Google Ads show how many people it contains and can be targeted with remarketing ads. [L0420.005]</li>
+<li>The segment name is only for the account owner to recognise the audience later. It does not need to be perfect; choose a clear name that shows what the segment contains. [L0420.012]</li>
+</ul>
+<h3 id="naming">Naming</h3>
+<ul>
+<li>Name the website visitor segment so it identifies the store, the audience and the time window, for example "Store name, visitors 30 days". [L0420.003, L0420.013]</li>
+<li>Name the buyer segment in the same pattern, for example "Store name, purchase 30 days". [L0420.013]</li>
+<li>Use names that show the lookback window and the purpose, for example "540 day retargeting list for search". [L1242.005]</li>
+</ul>
+<h3 id="step-by-step-create-the-two-data-segments">Step-by-step: create the two data segments</h3>
+<ol type="1">
+<li>Sign in to Google Ads. [L0420.013]</li>
+<li>Open <strong>Tools</strong> from the left-hand menu. [L0420.013]</li>
+<li>Select <strong>Shared library</strong>, then <strong>Audience manager</strong>. If Shared library is collapsed, expand it with the caret beside it. [L0420.013]</li>
+<li>Under <strong>Data segments</strong>, press the plus icon to start a new remarketing list. [L0420.002, L0420.013]</li>
+<li>Choose <strong>Website visitors</strong>. [L0420.002, L0420.013]</li>
+<li>Type a name for the visitor audience, such as "Store name, visitors 30 days". [L0420.013]</li>
+<li>Leave <strong>Segment members</strong> set to <em>anyone who viewed a webpage in the last 30 days</em>. [L0420.003, L0420.013]</li>
+<li>Keep the pre-fill option switched on, which adds people who visited in the past 30 days, so the segment starts with existing visitors. [L0420.004, L0420.013]</li>
+<li>Click <strong>Create segment</strong> and allow several hours for the audience to fill. [L0420.004, L0420.005, L0420.013]</li>
+<li>Press the plus icon again and select <strong>Website visitors</strong>. [L0420.013]</li>
+<li>Name the buyer audience, for example "Store name, purchase 30 days". [L0420.013]</li>
+<li>Change <strong>Segment members</strong> from <em>Visitors of webpages</em> to <em>Visitors of a page with specific tags</em>. [L0420.007, L0420.013]</li>
+<li>Search for <strong>Google Shopping</strong> and confirm that <em>add to cart</em>, <em>begin checkout</em> and <em>purchase</em> are all listed. These events are installed through the Google Shopping feed app. [L0420.007, L0420.013]</li>
+<li>Select the purchase event labelled <strong>"purchase in category"</strong>. [L0420.013]</li>
+<li>Set the membership duration to <strong>30 days</strong>. [L0420.010, L0420.013]</li>
+<li>Click <strong>Create segment</strong>. [L0420.010, L0420.013]</li>
+<li>Check that both data segments appear in the list. [L0420.013]</li>
+</ol>
+<h3 id="finding-the-audience">Finding the audience</h3>
+<ul>
+<li>To find the remarketing audience under Audience segments, search for the customer exclusion audience name, then scroll to the bottom of the list. The three most recently created audiences appear there, and the 30-day website visitor audience is the middle one of the three. [L0733.026]</li>
+</ul>
+<h2 id="google-ads-website-visitor-audiences-by-url-rule">Google Ads: website visitor audiences by URL rule</h2>
+<h3 id="create-the-audience">Create the audience</h3>
+<ol type="1">
+<li>Open Audience manager by typing "audience manager" into the search bar at the top right of Google Ads. [L1242.002]</li>
+<li>The Remarketing tab opens by default. Click the plus sign. [L1242.002, L1242.003]</li>
+<li>Select <strong>Website visitors</strong>. The other options are app users, YouTube users and customer list. [L1242.002]</li>
+<li>Enter an audience name. [L1242.002]</li>
+<li>Choose a visitor rule: [L1242.002]</li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Visitor rule</th>
+<th>Restriction options</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visitors of a page</td>
+<td>URL match type only</td>
+</tr>
+<tr>
+<td>Visitors of a page who also visited another page</td>
+<td>Can be restricted to specific dates or tags</td>
+</tr>
+<tr>
+<td>Visitors of a page who did not visit another page</td>
+<td>Can be restricted to specific dates or tags</td>
+</tr>
+</tbody>
+</table></div>
+<ol start="6" type="1">
+<li>For "Visitors of a page", pick the URL match type and enter the URL. The options are Contains, Equals, Starts with and Does not contain. [L1242.002, L1242.003]</li>
+<li>Turn on the option to include people from the previous 30 days. [L1242.002, L1242.003]</li>
+<li>Set the membership duration to <strong>540 days</strong>. [L1242.002, L1242.003]</li>
+<li>Add a description. Copying the audience name works. [L1242.002]</li>
+<li>Create the audience. [L1242.002]</li>
+</ol>
+<h3 id="rule-warning">Rule warning</h3>
+<ul>
+<li>A single slash (/) as the URL rule matches all visitors to the site. Use it only when a broad audience is intended, and use specific URLs for narrower audiences. [L1242.004]</li>
+</ul>
+<h2 id="ga4-audiences-for-non-purchasers-and-exclusions">GA4: audiences for non-purchasers and exclusions</h2>
+<h3 id="concepts-1">Concepts</h3>
+<ul>
+<li>GA4 creates two default audiences, <strong>All users</strong> and <strong>Purchasers</strong>. They can stay in place and do not need to be deleted to create new audiences. [L1520.009]</li>
+<li>Audiences in Google Analytics are segments of website users defined by past behaviour, such as visitors in the last 30 days or buyers in the last 7 days. They are created and managed in GA4 and later used to show remarketing ads. [L1520.007]</li>
+<li>Include and exclude settings are now combined in one GA4 audience. No separate exclusion setting is needed: edit the audience and set include (website visitors) and exclude (customers) together. [L0274.027]</li>
+</ul>
+<h3 id="step-by-step-create-the-three-non-purchaser-audiences">Step-by-step: create the three non-purchaser audiences</h3>
+<ol type="1">
+<li>Open Audiences from the left-hand navigation, or via Admin (gear icon, bottom left) and then Audiences in the property column. [L1520.011]</li>
+<li>Click the blue <strong>New audience</strong> button. [L1520.011]</li>
+<li>Choose <strong>Non-purchasers (users that have not made a purchase)</strong> as the audience basis. [L1520.011]</li>
+<li>Rename the audience, for example <strong>Website visitors exclude customers 7 days</strong>. The default name is "Non-purchasers". [L1520.011]</li>
+<li>Set the <strong>Membership duration</strong> to <strong>7 days</strong>. The form defaults to 30 days. [L1520.011]</li>
+<li>Review the exclusions, which include anyone who has made a purchase, and the estimated audience size. [L1520.011]</li>
+<li>Click <strong>Save</strong>. [L1520.011]</li>
+<li>Click <strong>New audience</strong> again, choose Non-purchasers, rename it <strong>Website visitors exclude customers 30 days</strong> and keep the Membership duration at 30 days. Click <strong>Save</strong>. [L1520.011]</li>
+<li>Click <strong>New audience</strong> again, choose Non-purchasers, rename it <strong>Website visitors exclude customers 180 days</strong> and change the Membership duration from 30 to 180 days. Click <strong>Save</strong>. [L1520.011]</li>
+</ol>
+<h3 id="reference-names-and-durations">Reference: names and durations</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Audience name</th>
+<th>Membership duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Website visitors exclude customers 7 days</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>Website visitors exclude customers 30 days</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td>Website visitors exclude customers 180 days</td>
+<td>180 days</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1520.012]</p>
+<h3 id="form-layout">Form layout</h3>
+<ul>
+<li>In the GA4 new audience form, the Membership duration field, the audience name field and the Save button are all at the top of the form. [L1520.017]</li>
+<li>For each of the three non-purchaser audiences, only the name and the Membership duration change. All other settings stay as they are. [L1520.017]</li>
+</ul>
+<h3 id="how-membership-duration-works-7-day-example">How membership duration works (7-day example)</h3>
+<ul>
+<li>A user who visited without buying stays in the audience for 7 days. They drop out on day 8 if they do not return. [L1520.013]</li>
+<li>A new visit restarts the 7-day count. [L1520.013]</li>
+<li>A purchase removes the user from the audience. [L1520.013]</li>
+</ul>
+<h2 id="ga4-purchasers-exclusion-audience">GA4: purchasers exclusion audience</h2>
+<h3 id="step-by-step-exclude-existing-customers-from-a-30-day-visitor-audience">Step-by-step: exclude existing customers from a 30-day visitor audience</h3>
+<ol type="1">
+<li>In GA4, go to the Audiences list. [L0274.025]</li>
+<li>Click the three dots on the audience, for example <strong>30 Day Website Visitors</strong>. [L0274.025]</li>
+<li>Click <strong>Edit</strong>. [L0274.025]</li>
+<li>Set the membership duration to <strong>30 days</strong>. [L0274.025]</li>
+<li>Click <strong>Include</strong> and choose <strong>website visitors, 30 days</strong>. [L0274.025]</li>
+<li>Click <strong>Exclude</strong> and choose <strong>users with purchase</strong>. [L0274.025]</li>
+<li>Click <strong>Save</strong>. [L0274.025]</li>
+</ol>
+<ul>
+<li>Excluding purchasers prevents wasting spend on existing customers. [L0274.025]</li>
+</ul>
+<h2 id="data-sources-for-audience-building">Data sources for audience building</h2>
+<h3 id="google-analytics-page-conditions-source-b-2021-2022-older-advice">Google Analytics page conditions (Source B, 2021-2022, older advice)</h3>
+<ul>
+<li>Google Analytics page conditions in the Audience Builder offer the operators <em>contains</em>, <em>exactly matches</em>, <em>starts with</em> and <em>ends with</em>. [L1390.045]</li>
+<li>Facebook website URL rules offer <em>contains</em>, <em>equals</em>, <em>doesn't contain</em> and <em>at least one contains</em>. [L1390.045]</li>
+<li>Use <em>contains</em> with a short URL fragment unless you need one exact page. [L1390.045]</li>
+<li>Audiences built in Google Analytics can also be used with Google Optimize 360 to target users who return to the site. This is an additional use beyond Google Ads and Display remarketing. [L1390.048]</li>
+</ul>
+</article><nav class="pn"><a href="../../16-retargeting/04-planning-audiences-funnel-stages-segmentation-and-windows/"><span class="k">&larr; Previous</span><span class="v">Planning audiences: funnel stages, segmentation and windows</span></a><a class="nx" href="../../16-retargeting/06-building-meta-youtube-and-other-platform-audiences/"><span class="k">Next &rarr;</span><span class="v">Building Meta, YouTube and other platform audiences</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

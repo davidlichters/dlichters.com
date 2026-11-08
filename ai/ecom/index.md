@@ -1,0 +1,60 @@
+# E-commerce knowledge
+
+> The rules, numbers, steps, FAQ, checklists and templates from many paid dropshipping courses, rewritten in our own words and focused on a Shopify store with Meta ads in 2026.
+
+## How to use
+
+Open only the one page that fits the question, not all of them. Where courses disagree, the page says so and puts the newer 2026 advice first.
+
+Every page below is the short version. The full technical reference (all 22 chapters, every number, setting and step, about 12 MB) is at https://dlichters.com/ai/ecom/deep/index.md and each page links its own chapter.
+
+Our own rules from running real stores (budget ladder, kill rules, prices, shop building, legal answers): https://dlichters.com/ai/ourrules/index.md
+
+## Pages, from start to scaling
+
+1. Business model: https://dlichters.com/ai/ecom/business-model.md
+   Dropshipping is a marketing business, and your ads, store and service decide if you make money.
+2. Mindset and planning: https://dlichters.com/ai/ecom/mindset.md
+   Planning the weeks and keeping going after bad days.
+3. Niche and winning products: https://dlichters.com/ai/ecom/niche-and-products.md
+   How to find and test products with enough margin, about one or two tests a week.
+4. Suppliers and fulfillment: https://dlichters.com/ai/ecom/suppliers.md
+   Agents, shipping times, samples, a backup supplier and checking invoices.
+5. Shopify store: https://dlichters.com/ai/ecom/shopify-store.md
+   Building a simple, trustworthy store with the pages and settings that matter.
+6. Apps and tools: https://dlichters.com/ai/ecom/apps-and-tools.md
+   Which apps and tools are worth paying for and which to skip.
+7. Brand and positioning: https://dlichters.com/ai/ecom/brand.md
+   Turning a product into a brand people remember and trust.
+8. Offers, pricing and bundles: https://dlichters.com/ai/ecom/offers-and-pricing.md
+   Prices, margins and buy 1, 2 or 3 bundles that raise the order value.
+9. Conversion rate: https://dlichters.com/ai/ecom/conversion.md
+   A simple, clear store, and one change at a time with a real test.
+10. Ad creatives and copy: https://dlichters.com/ai/ecom/creatives.md
+    How many creatives to make, which hooks work and how to read hook rates.
+11. Meta ads: https://dlichters.com/ai/ecom/meta-ads.md
+    Account setup, testing, budgets and when to kill or scale an ad.
+12. TikTok and short video: https://dlichters.com/ai/ecom/tiktok.md
+    Short video for reach, mostly from Reels and TikTok lessons.
+13. Influencers and UGC: https://dlichters.com/ai/ecom/influencers-ugc.md
+    Gifting, briefs, usage rights and reusing creator videos honestly.
+14. Retargeting: https://dlichters.com/ai/ecom/retargeting.md
+    One warm campaign with cheap image ads for people who already visited.
+15. Email and SMS: https://dlichters.com/ai/ecom/email-sms.md
+    Collect contacts, build automated flows first, then send short campaigns.
+16. Google Ads and Shopping: https://dlichters.com/ai/ecom/google-ads.md
+    Catching people who already search for your product, after Meta works.
+17. SEO and content: https://dlichters.com/ai/ecom/seo.md
+    Slow, free traffic from search and useful content.
+18. Customer service and chargebacks: https://dlichters.com/ai/ecom/customer-service.md
+    Answering fast, handling returns and keeping chargebacks under 1%.
+19. Selling by phone: https://dlichters.com/ai/ecom/phone-sales.md
+    Short, honest calls to suppliers and happy customers.
+20. Key numbers and tracking: https://dlichters.com/ai/ecom/numbers.md
+    Break-even, ROAS, margins and the numbers to check every day.
+21. Legal, taxes and payments: https://dlichters.com/ai/ecom/legal-money.md
+    Separate money, honest policies, slow payouts and an accountant early.
+22. Scaling, team and processes: https://dlichters.com/ai/ecom/scaling.md
+    Scale only what works, write a process first and hand off service first.
+
+Our own story with dropshipping: https://dlichters.com/ai/dropshipping.md

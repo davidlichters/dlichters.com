@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Product testing playbook and kill rules | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.12: Product testing playbook and kill rules.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/12-product-testing-playbook-and-kill-rules/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Product testing playbook and kill rules | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.12: Product testing playbook and kill rules."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/12-product-testing-playbook-and-kill-rules/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/12-product-testing-playbook-and-kill-rules/">Plain version</a></div><h1>9.12 Product testing playbook and kill rules</h1><article><h2 id="test-budget-and-total-spend">Test budget and total spend</h2>
+<ul>
+<li>Validate a product with a total test budget of $150, which is faster than smaller tests. The lowest test budget mentioned for this purpose is $50. [L1193.010]</li>
+<li>Budget about $1,500 per month for Facebook testing, with roughly $300 to $400 per product, aiming to test one to five products per month. [L0519.024]</li>
+<li>A per-product test budget of $300 to $400 covers changing landing pages, creatives, countries and offers. [L1184.029]</li>
+<li>Spend at least about $50 per campaign before judging its metrics, because Meta needs enough spend and data to learn which audience to target. [L0874.002]</li>
+<li>A test budget of only $20 to $40 per campaign is too small to produce enough purchases to read a result. Fund a test so that several purchases can realistically happen before the decision. [L1124.005]</li>
+<li>Spend at least about $100 to test a new product, split across five ad sets of about $20 each. This is the minimum needed to read CTR and decide whether the product or creative deserves more budget. [L0562.002]</li>
+<li>For each country, spend at least $50 in total, with at least $10 on each of five ad sets, before judging a product. This gives enough data to read CTR. [L0661.035]</li>
+<li>Set a fixed spend cap per product test. Stop the product when the cap is reached without a sale. Running one product for a full month across carousel, image and video creatives with no sale wastes far more budget than the EUR 50 kill threshold used in EU general-store testing. [L0660.046]</li>
+<li>For a product test that spends about 225 AUD (around 150 USD) with zero or one sale and a low CTR, review the ad rather than funding it further. [L1212.005]</li>
+<li>Test budget per product: around 200 to 300 USD when CTR is good, and stop earlier, around 100 USD, when CTR is poor. If there are still no sales after 200 to 300 USD, stop testing the product. [L0774.033]</li>
+<li>Daily testing budgets ranged from $50 to $150, and sometimes reached $200 while many interests were being tested. [L0549.045]</li>
+<li>A daily budget of $50 suits early testing because it runs over a full week and gives roughly four weeks of data, rather than spending everything in three days. Increase the budget only when cash flow allows it. [L1225.057]</li>
+<li>Use a daily ad budget of about $100 or more only with daily checks on creative, audience and trend. CBO campaigns at $100 or more per day need this; testing ad sets at $5 to $10 per day is fine for the early phase. [L1345.074]</li>
+<li>Interest test ad sets run as ABO at 10 EUR per day, with 50 EUR as the overall test budget. [L0693.031]</li>
+<li>A single country with four ads needs at least about $10 per day for a useful test over several days. Five dollars per ad set per day is likely too little for five ads in five countries. [L1315.048]</li>
+<li>Example budget: $8 per day per interest (about $10 USD), split across multiple interests, with a total daily spend limit of $50. [L0067.011]</li>
+<li>Spreading a small budget across many ad sets leaves too few clicks and conversions per market to judge. For example, five sets at about 10 EUR each for roughly 200 EUR in total is too thin. [L0694.003]</li>
+<li>Reframe ad spend as buying data, not losing money. The early ad budget is for learning what converts and whether the page can turn traffic into sales. [L1016.054]</li>
+<li>Set a minimum spend threshold at the ad set level: spend at least your break-even cost per purchase. At the ad level, spend more to confirm the ad itself is profitable. [L0067.010]</li>
+</ul>
+<h2 id="campaign-and-ad-set-structure">Campaign and ad set structure</h2>
+<h3 id="standard-abo-product-test-procedure">Standard ABO product test (procedure)</h3>
+<ol type="1">
+<li>Create and connect the Meta pixel before choosing the objective, because a new account has no pixel yet. [L0648.001]</li>
+<li>Create an ABO testing campaign. Name it with the product name, ABO or CBO, the objective and, for long runs, the start date. [L0648.001]</li>
+<li>Choose Website as conversion location and Purchase as the only objective. Leave Dynamic creative off at the start. [L0648.001]</li>
+<li>Set the ad set budget to $10 for the US, Canada, Australia and UK (5 to 10 USD range), or $5 to $7 for European and Gulf countries. Schedule the start for the next day at 12:00 AM in the ad account time zone. [L0648.001]</li>
+<li>Target one single interest per ad set, with all genders, age 20+ or 21+, and a broad audience size (for large countries about 5 million or more). Use all languages unless the store and ads are in another language. [L0648.001]</li>
+<li>Keep placements on Advantage+ placements. [L0648.001]</li>
+<li>Add 3 to 5 creatives with ad copy, and set the destination to the product page or landing page with UTM parameters. [L0648.001]</li>
+<li>Duplicate the ad set and replace only the interest until the campaign has 5 to 10 ad sets (normally 6 to 10). [L0648.001]</li>
+</ol>
+<h3 id="ad-set-count-and-structure-rules">Ad set count and structure rules</h3>
+<ul>
+<li>Structure each product test as one ABO testing campaign with 5 to 10 ad sets (normally 6 to 10), each holding a single interest. All other settings stay identical, so the interest is the only variable. Start with 5 to 6 ad sets when budget is tight. [L0648.002]</li>
+<li>Test structure in the testing phase: about five interest audiences and three creatives per ad set. [L0690.014]</li>
+<li>Procedure for a five-ad-set product test on Meta: the first ad set is broad with no interests selected; the other four each use one specific interest. Use the Business Manager pixel for tracking. [L0691.021]</li>
+<li>Starting test structure: five ad sets with three ads each, a daily budget of about $5 per ad set, run for two to four days before analysing the data. [L0774.034]</li>
+<li>Test budget structure for a new product: start with $5 per ad set and run 5 to 6 ad sets, so spend is about $25 to $30 per day. Let each ad set run for at least 4 days. [L1184.028]</li>
+<li>Test structure for a new product (procedure): 1. Run one campaign with five ad sets at $5 each. 2. Send the traffic to the advertorial. 3. Analyse CTR, CPM and CPC per ad set after the test period. 4. Keep the best-performing creative and continue testing offers before judging the product. [L1131.019]</li>
+<li>Creatives: each test ad set contains 3 to 5 different creatives, and the same set of creatives is duplicated across all test ad sets. [L0375.002]</li>
+<li>The same 3 to 5 creatives are duplicated into every test ad set. This keeps the creative constant, so the interest is the only variable compared between ad sets. [L0376.034]</li>
+<li>For a first launch, build separate ad sets that each target one interest, and place 3 creatives in each ad set. Compare results per interest and creative before drawing conclusions. [L0639.003]</li>
+<li>Source D 2026 test structure: CBO with three ad sets, all creatives placed in each ad set, and a $100 daily budget. A CBO test can later be followed by an ABO version. [L1124.003]</li>
+<li>Source D 2026 Phase 5 initial ad test (procedure): 1. Create one CBO campaign with a $50 daily budget. 2. Split the campaign into 3 ad sets. 3. Assign 4 to 5 creative variations to each ad set. 4. Run the ads for 48 to 72 hours. 5. After the evaluation window, assess performance on CTR, CPM, ATC and conversion rate. 6. Pause underperforming combinations and optimise based on data. [L0199.011]</li>
+<li>Keep the same interests and audiences within one product's ad assets. Separate each product into its own campaign so results stay comparable. [L1194.011]</li>
+<li>Run one ad campaign per platform, per store, per time period. Mixing traffic from several platforms makes the conversion rate in Shopify impossible to analyse. [L1184.031]</li>
+<li>Test one pixel per product. Each product should have its own product page and website URL in its own ad. [L0348.020]</li>
+<li>Run ads to a collection page instead of a single product page, so the customer can choose a product. Test which products win, then manually move winning products to the top of the collection. [L0642.025]</li>
+<li>Facebook test structure for a product (procedure): first, a control ad with the existing setup. Second, a single change tested as a separate ad in the same ad set, or a new ad set with identical interest, copy and hook. Third, compare the lift in sales and metrics between the two. [L0640.031]</li>
+<li>Test a new product with interest targeting first. Once it reaches roughly 10 to 20 to 30 sales, add an Advantage+ broad campaign alongside it. [L1161.023]</li>
+<li>Results differ by product and account: one product flopped on Advantage+ from the start, another worked alongside interest targeting, and a broad campaign with 20 ad sets gave only okay results while interest targeting performed better. Test both approaches with the budget you have. [L1161.024]</li>
+</ul>
+<h3 id="marketing-angle-tests">Marketing angle tests</h3>
+<ul>
+<li>Targeting test with marketing angles (procedure): pick 5 different marketing angles, choose 10 interests for each angle, and create one ad set per interest, which gives 50 ad sets. Write a separate ad copy and headline for each angle, and reuse the same video if the angle is covered in it. This 500 campaign setup needs a total budget of about $200 to $250 per day. [L1218.010]</li>
+<li>For a smaller budget, test 5 to 10 to 15 different interests on Facebook and place all marketing angles on the landing page, so visitors who relate to one angle get an emotional trigger there. [L1218.011]</li>
+<li>Split test marketing angles for one product (procedure): 1. Identify several marketing angles for the same product. 2. Create one campaign per angle, each with interests that match that audience. 3. Duplicate the product page once per angle and change images, description and matching reviews. 4. Link each campaign to its matching page and run them at the same time. 5. Compare results, close the weaker pages and continue with the strongest angle. [L1219.034]</li>
+</ul>
+<h2 id="interest-and-audience-testing">Interest and audience testing</h2>
+<ul>
+<li>Test around 20 to 30 interests in ad sets to find the few winners. Each ad set is given roughly $20 to $30 of spend. If it brings no sales after that, close it and replace it with a new interest. [L0642.006]</li>
+<li>Test at least 12 to 15 different interests before judging a product. If you have not found 2 to 3 profitable audiences after 12 to 15 tests, change the creatives and test 3 to 5 more interests. If the product still fails, switch to another product. [L0648.037]</li>
+<li>Testing 10 to 15 audiences gives a product enough chance, since audience, landing page, videos or creators and the product itself all affect results. Judging after one audience is unreliable. [L1213.038]</li>
+<li>Each interest needs roughly one to two break-even spends before there is enough data to judge it. Testing five or six interests one after the other can take weeks, which is why faster budget choices help. [L0361.021]</li>
+<li>Interest testing workflow (procedure): 1. Before starting, set your own rules for when an interest counts as a winner, for example a number of sales and profitability. 2. Start each interest at a daily budget of about $5 for products under about $30, or higher if you want data faster. 3. Let each interest run without budget increases until it reaches your sales threshold. 4. Once an interest reaches the threshold and is profitable, increase its budget to scale it. 5. Shut down interests that do not reach the threshold. [L0361.023]</li>
+<li>Do not increase the budget of an interest while it is still being tested. Scale an interest only after it reaches the sales threshold you set in advance, for example six to seven sales, and is profitable. [L0361.022]</li>
+<li>Once 2 to 3 ad sets are profitable, find similar winning audiences by testing related interests, including interests Facebook suggests. [L0375.012]</li>
+<li>Test rule for interests: Do not assume that a method working in one ad account will work in another, because every ad account differs. Test everything in your own account before scaling. [L0375.031]</li>
+<li>Split test interests, mobile, desktop, operating system, gender and age brackets as much as you can, because the winning combination is not predictable. Use a split test tool when you spend around $2,000 a month or more on Facebook. [L0643.050]</li>
+<li>Split test toggle: it appears only when creating a new campaign. Choose creative as the variable, upload the two creatives, and Meta shows the budget and days needed to declare a winner. [L0649.027]</li>
+</ul>
+<h2 id="budget-per-ad-set">Budget per ad set</h2>
+<h3 id="minimum-and-standard-ad-set-budgets">Minimum and standard ad set budgets</h3>
+<ul>
+<li>Give each test ad set at least $10 per day and let it spend for 3 days or until it reaches its break-even cost per purchase (BECPP). For mid-high ticket products priced at $90 or more, start each ad set at $15 per day instead. [L0375.003, L0376.002]</li>
+<li>Start testing with a budget of $5 to $10 per ad set, then check the break-even ROAS. Products are not given a fixed budget in advance: if a product is not profitable, switch to the next product. [L0440.033]</li>
+<li>Start Facebook ads with about $5 to $10 per ad set. Scale spend only after results show that the audience responds. [L0492.048]</li>
+<li>Test budgets at about $5 per day per ad set during the testing phase. Move an ad set into scaling only after it has produced around four purchases. [L0524.035]</li>
+<li>A new product should start with a small test budget per ad set. [L0999.027]</li>
+<li>Starting ad set budget per day: $10 for the US, Canada, Australia and UK, where CPCs are higher. Use $5 (or $5 to $7) for European countries and Gulf countries, where clicks are cheaper. [L0648.005]</li>
+<li>A $5 budget may need 3 to 5 days to gather enough pixel data, while $10 gathers it faster. In cheaper countries such as Germany or France, $5 to $7 can still gather enough data. [L0648.012]</li>
+<li>Daily budget per ad set during testing, based on selling price: under $30 = $5; $30 to $60 = $10; $60 or above = $15. Higher-priced products have a higher cost per acquisition, so each ad set needs more budget to win one customer. [L0647.005]</li>
+<li>Example: a product priced at $34.99 falls in the $10 tier. Five ad sets at $10 per day means the testing campaign spends at most $50 per day. [L0647.006]</li>
+<li>For audience testing of products priced under about $30, start each interest with a daily budget of about $5. This is a guideline, not a strict rule. [L0361.019]</li>
+<li>A higher daily budget such as $10 to $15 gets data faster, which is the main goal of interest testing. For cheap products, $5 per day may still be preferable, because it spreads data over several days and avoids judging a product on one unusually bad day. [L0361.020]</li>
+<li>Testing ad sets at $5 to $10 per day is fine for the early phase. [L1345.074]</li>
+</ul>
+<h3 id="why-budgets-are-sized-this-way">Why budgets are sized this way</h3>
+<ul>
+<li>A higher ad set budget sends more data to a new pixel, which can produce early sales and a faster read on whether an audience works. [L0375.004]</li>
+<li>A higher ad set budget feeds more data to a new pixel, which can produce early sales sooner. This makes the early read on an ad set more reliable. [L0376.003]</li>
+<li>Higher-priced products need more audience reach and more spend to produce one sale, so the daily budget should be sized to the product price. To test fast, set each ad set's daily budget at the BECPP or slightly above it, so some ad sets can produce an early sale as a positive signal. [L0376.004]</li>
+<li>For higher-priced products that need more reach to convert, setting the daily ad set budget at the BECPP or slightly above it speeds up testing, and an early sale is a good sign. [L0375.004]</li>
+<li>Starting with a high daily budget on a new Meta campaign spends money before the pixel and audience have enough data to optimise. Begin with a low daily budget per campaign and raise it only after results show which audiences perform. [L0649.071]</li>
+<li>Daily test spend equals the number of ad sets multiplied by the daily budget per ad set. For example, 5 ad sets at $5 each means $25 per day, and running them for 2 to 4 days gives enough data to decide. [L0774.052]</li>
+<li>Low-budget product testing (procedure): 1. Launch the new product with a low daily budget, for example about $10 per day. 2. Check whether the ads gain traction. 3. If they do not, move to the next product. 4. If they do, test different offers before deciding to scale. [L1185.017]</li>
+<li>To find a winning Facebook ad with a small budget (procedure): 1. Start each new ad with a small daily budget, for example from 5 pounds per day. 2. Increase budget in small steps while watching which creative gets results quickly. 3. Scale only the creative that performs, and stop the rest early. [L0561.059]</li>
+</ul>
+<h2 id="break-even-rules-and-formulas">Break-even rules and formulas</h2>
+<h3 id="break-even-cost-per-purchase-becpp">Break-even cost per purchase (BECPP)</h3>
+<ul>
+<li>Break-even cost per purchase is the threshold for an ad set: spend at least that amount before judging it. [L0067.010]</li>
+<li>Let an ad spend up to the break-even cost per purchase, for example the full profit per sale such as 17 USD, before judging it. [L0502.038]</li>
+<li>Spend up to the profit margin per ad before deciding. If an ad is still unprofitable at three times the target cost per acquisition, shut it off. [L0524.036]</li>
+<li>Kill an ad set in testing once it has spent the break-even cost per purchase without a single sale. [L0646.015]</li>
+<li>Testing budget per ad set from the desired CPA: spend three times the desired CPA on each ad before deciding to turn it off or scale it. In the example, a product costing $15 that sells for $45 targets a CPA of about $15, so each ad is tested with $45 spend. Daily ad budgets for testing in the example ranged from $10 to $50 per ad. [L0999.011]</li>
+<li>Testing budget per ad set = 3 x desired CPA. Desired CPA is roughly the amount the business can afford to pay for one customer, based on the margin: with a product cost of $15 and sale price of $45, the margin supports a CPA of about $15. Example: $15 CPA x 3 = $45 spend per ad before judging it. [L0999.012]</li>
+<li>Before deciding to switch off an ad, let it spend up to the target cost per acquisition. For example, if the desired CPA is 15 units and ROAS shows 30 percent margin, spend about three times that before deciding. Then shut the ad off if it does not work. [L0646.035]</li>
+<li>Set the target cost per acquisition at about half the profit margin per order. Example: with a $30 margin, aim for $15 per customer, and cut unprofitable ads once they reach about $45 spent. [L0524.037]</li>
+<li>Check the ad-level spend: if an ad has spent around $8 to $10 or more, or about 1,000 to 1,500 impressions, and shows poor CPC and CTR, it is taking budget from other ads and should be turned off. [L0646.037]</li>
+</ul>
+<h3 id="break-even-roas">Break-even ROAS</h3>
+<ul>
+<li>Break-even ROAS = selling price divided by gross profit per sale, where gross profit = selling price minus cost of goods sold (COGS) and fulfilment costs. Example from the lesson: a $30 flower pot with $11 COGS and a price of $29.9 gives a break-even ROAS of 1.6. [L0642.016]</li>
+<li>The break-even ROAS for a given product is set by its margin. A product with a $6 cost sold at about $7 allowed a break-even of about 1.1, while another brand's break-even was 1.5. Calculate break-even ROAS before deciding whether an ad with a given ROAS is profitable. [L0999.058]</li>
+<li>Break-even ROAS and the scaling conversion goal: a conversion goal for a new interest or ad set is at least four to five sales within the next couple of days, with the return on ad spend at the break-even ROAS plus 1. [L0650.008]</li>
+</ul>
+<h2 id="kill-and-keep-rules">Kill and keep rules</h2>
+<h3 id="when-to-kill-an-ad-set-or-interest">When to kill an ad set or interest</h3>
+<ul>
+<li>Cut an ad set that has not produced a sale after spending its break-even amount. If the ad set shows promising add-to-carts or initiate checkouts, or a good CTR, let it run one more day before deciding. [L0645.003]</li>
+<li>Use this procedure to decide when to turn off an ad set: 1. Let the ad set spend an amount equal to the cost of goods of the product (for example, $20 for a product costing $20). 2. Analyse the CTR of the ad set. 3. Check whether it brought a sale and whether the return on ad spend (ROAS) is good. 4. If the sale exists and the ROAS is good, keep the ad set running. 5. If not, turn it off and replace it with another interest or audience. [L0562.014]</li>
+<li>After a test in which ABO has lost money, test a new interest in CBO with a $100 budget. Cut it if it has no add to cart after about $15 to $20 spent (for a $40 product with a $25 margin), or if it has no sale after $40 spent. [L0645.045]</li>
+<li>Judge an ad set after roughly $20 to $30 of spend. Pausing it earlier is premature impatience. Once it has passed that spend and still performs poorly, pause it and duplicate the best performing ad set instead. [L0650.002]</li>
+<li>Spend roughly $20 to $30 on an ad set before judging it, because that amount shows whether the cost per acquisition is affordable against the break-even point. Pausing an ad set before it reaches that spend usually means judging it too early. [L0650.055]</li>
+<li>Another operator used a stricter cut-off of about $10 to $15 of spend for a new ad that had not converted, and paused it at that point. This is a faster test than the $20 to $30 guideline and fits a tight starting budget. [L0650.056]</li>
+<li>Wait about four days after publishing, so each ad set spends around $20, then analyse the results. Keep ad sets running only if they meet the thresholds for CTR and cost. [L0642.011]</li>
+<li>Close an ad set in a test if it has spent $10 and its CTR is below 1.5%. If an ad has spent only around $0.30, leave it running because there is too little data. [L0642.012]</li>
+<li>An ad with a CTR around 1% after more than $10 of spend is a weak signal and can be paused. An ad with a clearly higher CTR and low spend (around $4) can be kept running because the spend is still too small for a verdict. [L0650.003]</li>
+<li>Ads with spend of $20 to $30 and no sales can be closed. If all ads produce sales, keep them running together in the same ad set. [L0773.037]</li>
+<li>Remove a creative only when it performs badly in a consistent way across all ad sets. If results are mixed, keep it and retest it before deleting it. [L0692.017]</li>
+<li>Ads that show sales stay in place. [L0773.037]</li>
+<li>Keep ad sets that are profitable, close ad sets that are not, and test a different interest. [L0440.033]</li>
+<li>Profitability cannot be expected immediately. Finding the right audience, the right ad and the right offer on the website usually takes time before an ad set becomes profitable. [L0440.034]</li>
+<li>If CTR stays at or below 0.3 to 0.5 after about $100 in spend, replace the creative. If CTR stays very low after replacing it, stop the product earlier. [L1184.030]</li>
+<li>A winning product shows initial traction within the first week of running Facebook ads. Early positive signals include audience engagement with the creative, website visits, and user actions such as adding to cart or saving to wishlist. These indicators that the audience resonates with the product justify continuing to test that product-audience combination. [L0229.017]</li>
+<li>Dropshipping is about testing rather than overthinking: launch the product, gather data and decide based on the results. If the data shows good CTR and low CPC, the product is worth more investment. If not, move on. [L1172.037]</li>
+</ul>
+<h3 id="kill-when-no-add-to-cart-or-no-sale-combined-with-rules-1-to-4">Kill when no add to cart or no sale (combined with rules 1 to 4)</h3>
+<ul>
+<li>Kill an ad set if it has made no sale after testing, but apply Rules 1 to 4 first. Details are in the Rules section below. [L0229.005]</li>
+<li>Test procedure step: after spending another BECPP, check whether ROAS is above BE-ROAS. If yes, let it run. If no, kill it. [L0375.011, L0376.012]</li>
+</ul>
+<h3 id="kill-and-reset-rules-for-ads-and-products">Kill and reset rules for ads and products</h3>
+<ul>
+<li>Judging a new product's ads after a day or two is premature and wastes money on losing ads. Cutting an ad that has spent beyond its profit margin without a sale is the usual decision, but the margin must be checked first. [L0999.013]</li>
+<li>Judging an ad as a failure after $10 to $15 spend with no add-to-carts is premature. First check whether the offer and product page are attractive enough, and test different offers and bundles before turning ads off. [L1220.008]</li>
+<li>Judging a new ad after a few hours on a $5 daily budget is premature, since small budgets need a day or more before the data shows what works. Facebook normally spends well, so give it time before cutting. [L0645.043]</li>
+<li>Do not judge a Facebook ad or ad set before it has spent roughly $20 to $30. [L0650.002]</li>
+<li>Remove an ad set in testing when it spends beyond break-even without a sale, unless it shows add-to-carts or CTR signals. [L0645.003]</li>
+<li>Pushing a product at audiences who do not respond to it leads ad platforms to penalise the advertiser's content. Founders who rely on their own intuition that a product is great, instead of letting the market react, often run into this. [L0760.027]</li>
+<li>Running ads in a market with strong competition is normal: some advertisers scale a product in a market while others run only a single ad for it. A single ad in a market does not prove the product fails there. [L0691.012]</li>
+<li>Cutting ad creatives and age groups too quickly after a few good sales can cause CTR and sales to drop sharply, so changes to a working test need careful evaluation rather than sudden large cuts. [L0690.018]</li>
+<li>Test a product for at least the spend set out in its budget before deciding, and do not replace a product after one bad day. [L1124.007]</li>
+</ul>
+<h2 id="rules-1-to-4-and-safety-rule">Rules 1 to 4 and safety rule</h2>
+<p>Source C decision rules for an ad set after launch. Apply them in order.</p>
+<ol type="1">
+<li><strong>Rule 1:</strong> Allow each ad set to spend its break-even cost per purchase before making optimisation decisions, OR let it run for three days, whichever comes later. For products with margins under $20, prioritise the three-day minimum to accumulate sufficient data. [L0229.001]</li>
+<li><strong>Rule 2:</strong> After Rule 1 is complete, check whether the ad set generated at least one sale.
+<ul>
+<li>If yes, let it continue spending another full break-even cost per purchase amount.</li>
+<li>If no sale occurred, check the CPC. If CPC is below $1.50, extend the ad set for one additional day. If CPC is $1.50 or above, deactivate the ad set and replace it with a new interest. [L0229.005]</li>
+</ul></li>
+<li><strong>Replacement procedure:</strong> To replace an underperforming ad set while testing new interests:
+<ol type="1">
+<li>Identify the ad set that achieved at least one sale (the winning ad set).</li>
+<li>Duplicate that winning ad set.</li>
+<li>Open the Audience section and click the "Suggested" button to see interest recommendations based on the current audience.</li>
+<li>Select a new suggested interest (e.g., if current is "Carpet," try "Living Room" or related suggestions).</li>
+<li>Verify the audience size is reasonable (e.g., 100+ million for broad targeting).</li>
+<li>Click Publish to launch the new ad set.</li>
+<li>Deactivate the old underperforming ad set.</li>
+<li>Apply all rules starting from Rule 1 to this newly created ad set. [L0229.006]</li>
+</ol></li>
+<li><strong>Rule 3:</strong> If an ad set survived Rule 2 by receiving a one-day extension but made no sale within that 24-hour period, deactivate it and replace it using the same duplication and interest-suggestion method described in Rule 2, starting the new ad set through Rule 1 again. [L0229.007]</li>
+<li><strong>Rule 4:</strong> Once an ad set clears Rules 2 and 3, allow it to spend an additional amount equal to double the break-even cost per purchase (not double the total, but double the initial threshold). By the time this additional amount is spent, the ad set must achieve a return on ad spend (ROAS) equal to or higher than its break-even ROAS. If it falls below break-even ROAS at that point, deactivate and replace it. [L0229.008]</li>
+</ol>
+<p><strong>Safety rule:</strong> If after running ads for three to four days your entire campaign shows zero sales across all ad sets, stop the campaign immediately. Do not continue spending in hopes of organic improvement. Proceed to troubleshooting instead. [L0229.010]</p>
+<p><strong>Safety rule for a campaign with no sales:</strong> Pause a campaign immediately if no sale occurs within the first $50 of spend. [L0298.006]</p>
+<p><strong>Reduce, do not kill outright:</strong> Reduce budget if results are consistently poor for the last 4 days. Test a reduced version before completely pausing. [L0298.015]</p>
+<p><strong>First-day rule for high-budget campaigns:</strong> Pause the campaign for the day if it spends twice the break-even cost per purchase without producing a sale. For example, with a break-even CPA of $30 and a $100 launch budget, turn it off once it has spent $60 without a purchase. [L1335.032]</p>
+<p><strong>Sources disagree on the first-day stop.</strong> The Source D 2026 course says not to cut a product after a single day or after only $50 without sales, because Meta needs time to test segments. [L0037.007] The Source C safety rule stops a campaign with no sale within $50 of spend. [L0298.006] The first applies to deciding whether to cut a product. The second applies to a campaign running with no sales. For a high-budget campaign, the 2x break-even stop at [L1335.032] applies. The Source D case in which day one looked like failure and became profitable on day three shows why a day-one cut can be wrong. [L1124.017]</p>
+<p><strong>Patience against day-one panic.</strong> A new Meta test with a high cost per purchase on day one should not be switched off right away, because one day of spend and a single sale is too little data to judge a product. [L1124.001] Cutting a test after the first day with a high CPA and moving on to the next product, a habit known as paper handing, often kills products that would have become profitable. Judging a product on the first day alone is the main reason good tests get lost. [L1124.002]</p>
+<h2 id="scaling-thresholds">Scaling thresholds</h2>
+<ul>
+<li>Scale an ad set once it has produced around four purchases. [L0524.035]</li>
+<li>Scale an interest only after it reaches the sales threshold set in advance (for example six to seven sales) and is profitable. [L0361.022]</li>
+<li>If any running ad set brings 4 or more profitable sales, scale it. [L0375.012, L0376.012]</li>
+<li>Once a sale comes in, spend up to the break-even cost per purchase again. [L0502.038]</li>
+<li>Example of a scaling outcome: a new product runs five ad sets at about $12 each. Three are switched off for weak performance, and the other two keep running until they reach seven profitable sales, which can take about one to one and a half weeks. [L1107.029]</li>
+<li>When scaling into CBO, look for at least three purchases on the ad set before trusting the result. [L0645.008]</li>
+<li>Test a new product with interest targeting first. Once it reaches roughly 10 to 20 to 30 sales, add an Advantage+ broad campaign alongside it. [L1161.023]</li>
+<li>Once a sale starts, the ads work: find the winning interest, country and offer. [L1161.020]</li>
+<li>Keep ad sets with sales running, and put the budget behind the country that performs best rather than spreading it evenly. [L1220.004]</li>
+<li>Scale only the creative that performs, and stop the rest early. [L0561.059]</li>
+</ul>
+<h2 id="decision-benchmarks-ctr-cpc-and-cpm">Decision benchmarks: CTR, CPC and CPM</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric or threshold</th>
+<th>Value in source</th>
+<th>Applies to</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Industry CPC range</td>
+<td>$1.00 to $1.50</td>
+<td>Benchmark for whether an underperforming ad set shows promise or should be replaced</td>
+<td>L0229.004</td>
+</tr>
+<tr>
+<td>Rule 2 CPC cut</td>
+<td>Below $1.50 = extend one day; $1.50 or above = replace</td>
+<td>Source C Rules 1 to 4 path</td>
+<td>L0229.005</td>
+</tr>
+<tr>
+<td>Test benchmark</td>
+<td>CTR above 2% and CPC below $1</td>
+<td>Benchmark; if not reached, improve creative or offer before scaling spend</td>
+<td>L1219.014</td>
+</tr>
+<tr>
+<td>Interest test decision</td>
+<td>CPC below $1 and CTR above 2% = one more day</td>
+<td>Interest-test decision procedure (see below)</td>
+<td>L0375.011, L0376.012</td>
+</tr>
+<tr>
+<td>Close ad set</td>
+<td>Spent $10 and CTR below 1.5%</td>
+<td>Ad set in a test</td>
+<td>L0642.012</td>
+</tr>
+<tr>
+<td>Weak ad signal</td>
+<td>CTR around 1% after more than $10</td>
+<td>Can be paused</td>
+<td>L0650.003</td>
+</tr>
+<tr>
+<td>Creative replacement</td>
+<td>CTR at or below 0.3 to 0.5 after about $100</td>
+<td>Replace creative</td>
+<td>L1184.030</td>
+</tr>
+<tr>
+<td>Judge ad</td>
+<td>Spend about $8 to $10 and 1,000 to 3,000 impressions</td>
+<td>Individual ad; $1 to $3 is not reliable</td>
+<td>L1345.076</td>
+</tr>
+<tr>
+<td>Poor ad level</td>
+<td>About $8 to $10 spend or 1,000 to 1,500 impressions, poor CPC and CTR</td>
+<td>Turn off</td>
+<td>L0646.037</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Sources disagree on the CPC and CTR thresholds.</strong> The Source C Rule 2 uses a CPC of $1.50 as the replace line. [L0229.005] The interest-test decision uses CPC below $1 and CTR above 2% as the keep-one-more-day line. [L0375.011, L0376.012] The $1.50 line applies within Rules 1 to 4. The $1 and 2% line applies to the interest-test decision after BECPP. Both are given as stated.</li>
+<li><strong>Check CPC, CTR and CPM together.</strong> If the CPC is too high, the CTR too low and the CPM too high, and there are no sales, remove that ad set and replace it. [L0502.038]</li>
+<li><strong>Read metrics per country.</strong> Compare CTR, CPC, CPM and conversion rate per country. Narrow the test to the countries with the best results. [L1185.022]</li>
+<li><strong>Judge on CTR and CPC first.</strong> Judge the ads by CTR and CPC first. If the ad metrics are good but there are no sales, change the store. If there are no add-to-carts, first test the offer and bundles before concluding the ads fail. [L1220.007]</li>
+<li><strong>CTR as an interest signal.</strong> A good CTR means the product audience is interested and the product can continue. A bad CTR means the targeted audience does not care, so switch to another product. [L1184.037]</li>
+<li><strong>Check the store data after the first $100.</strong> If ad metrics are good but there are no sales or add-to-carts, the problem is the store. [L1161.020]</li>
+<li>Add-to-carts are a useful early indicator that an ad is performing. [L0999.027]</li>
+<li>Use the Source D 2026 check of CPM, CTR and CPC after the first $100, then read add-to-carts and sales. [L1161.020]</li>
+<li>Facebook ad results are inconsistent, including at large budgets. Expect good and bad days, and judge performance over longer periods rather than reacting to single-day results. [L0690.015]</li>
+<li>The break-even ROAS and ROAS checks for scaling are in the break-even section. [L0645.008, L0650.008, L0646.035]</li>
+</ul>
+<h2 id="timing-and-test-duration">Timing and test duration</h2>
+<h3 id="minimum-duration-by-source">Minimum duration by source</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Duration</th>
+<th>Context</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 to 4 days minimum before cutting</td>
+<td>Source D 2026 minimum; exception: if day 1 and day 2 are both poor and coaches advise cutting, that overrides the minimum</td>
+<td>L0037.006</td>
+</tr>
+<tr>
+<td>3 days minimum</td>
+<td>Source C procedure, at break-even cost per purchase spend</td>
+<td>L0067.012</td>
+</tr>
+<tr>
+<td>2 to 3 days</td>
+<td>Let a newly tested audience run instead of judging after one day</td>
+<td>L0692.001</td>
+</tr>
+<tr>
+<td>2 to 3 days (usually)</td>
+<td>Each ad set spends at least BECPP</td>
+<td>L0375.011, L0376.012</td>
+</tr>
+<tr>
+<td>3 to 4 days</td>
+<td>Look at 3 to 4 days of ROAS data before deciding</td>
+<td>L0645.008</td>
+</tr>
+<tr>
+<td>About 4 days</td>
+<td>Wait until each ad set has spent around $20</td>
+<td>L0642.011, L1220.005</td>
+</tr>
+<tr>
+<td>4 days or more</td>
+<td>Each ad set runs at least 4 days</td>
+<td>L1184.028</td>
+</tr>
+<tr>
+<td>2 to 4 days</td>
+<td>Run five ad sets before analysing data</td>
+<td>L0774.034</td>
+</tr>
+<tr>
+<td>7 days</td>
+<td>Evergreen Facebook campaign, before judging or cutting</td>
+<td>L1016.056, L1016.054</td>
+</tr>
+<tr>
+<td>48 to 72 hours</td>
+<td>Phase 5 initial test, evaluation window</td>
+<td>L0199.011</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Do not decide to scale or kill an ad set after only three days, because that is too early. [L0693.031]</li>
+<li>Let each ad set spend at least BECPP, usually over 2 to 3 days. [L0375.011, L0376.012]</li>
+<li>Let an evergreen Facebook campaign run for about 7 days before judging it or cutting the budget, because shorter windows do not show reliable results. [L1016.056]</li>
+<li>Let an evergreen campaign run for about 7 days before judging it. Shorter windows do not show reliable results. [L1016.054]</li>
+<li>Leave the test running for several days and read the trend before deciding. [L1124.001]</li>
+<li>Let each ad set spend the amount set out above before judging it; when the amount cannot be reached quickly, extend the test. [L0642.011]</li>
+<li>Phase 5 (Days 60-75) of the Source D course prioritises analytics data over profit. The goal is to determine whether a product is worth running, to identify whether issues stem from ad or funnel, and to build operational knowledge for scaling. [L0199.010]</li>
+</ul>
+<h3 id="day-of-week-and-schedule">Day-of-week and schedule</h3>
+<ul>
+<li>Product-testing campaigns are commonly run from Thursday to Sunday. Running them on Monday to Wednesday is acceptable too, as long as the data is broken down by country, age group and gender (if several genders are tested) afterwards. [L1220.003]</li>
+<li>Do not assume that weekends or Thursday to Sunday are always the best days to test audiences. Day-of-week patterns differed strongly between months and products, so check your own data over a longer period before using them. [L0692.002]</li>
+<li>Spread a test budget across every day of the week rather than a short burst. A three-day run misses buyers who are paid on a particular day, such as Thursday, and gives weaker data. [L1225.093]</li>
+<li>Schedule the start for the next day at 12:00 AM in the ad account time zone. [L0648.001]</li>
+</ul>
+<h3 id="editing-during-the-test-window">Editing during the test window</h3>
+<ul>
+<li>Once a test campaign is running and the store, creatives and product page are ready, do not edit the campaign during the test window. In the example, leaving every setting untouched for two days brought CPA down sharply on its own. [L1124.004]</li>
+<li>Source D day checks (procedure): 1. Launch a CBO test with three ad sets at a $100 daily budget, with all creatives placed in each ad set. 2. Make no edits to the campaign for three days. 3. Compare each day's CPA against the break-even CPA for the product. 4. Once the campaign produces purchases below break-even, scale it (the scaling method was not covered in the lesson). [L1124.006]</li>
+<li>CBO test rhythm: let the test run for two days, check the metrics and P&amp;L on days 1 and 2, and on day 3 scale only if the product is green and the margins are good. Keep the same CBO and duplicate it with new creatives on day 3 instead of restarting. [L0348.011]</li>
+<li>Changing audience, placement or other ad set settings during a product test muddles the results. Keep default settings unless a legal or practical constraint requires a change. [L1193.016]</li>
+<li>Keep ad sets under review by checking daily data on creative, audience and trend when a CBO runs at $100 or more per day. [L1345.074]</li>
+</ul>
+<h3 id="product-rhythm">Product rhythm</h3>
+<ul>
+<li>Run product tests in a repeating loop: test a product, give it enough time and budget to read the result, and only then move on to the next product. Do not replace a product after one bad day. [L1124.007]</li>
+<li>Testing a product: products are not given a fixed budget in advance. If a product is not profitable, switch to the next product. [L0440.033]</li>
+<li>If no ad set brings any sale after testing at least 10 interests, switch to the next product. [L0375.011, L0376.012]</li>
+</ul>
+<h2 id="store-versus-ad-diagnosis">Store versus ad diagnosis</h2>
+<ul>
+<li>The job of the ads is to drive traffic, and the job of the store is to make the sale. If traffic arrives but there are no sales, change the store (design, offer, bundle, pricing or copy) before changing the ads. [L1220.006]</li>
+<li>Before launching a test, make sure the store has a branded product page and updated, good-looking creatives. A weak store or old creatives make the test result less reliable. [L1124.008]</li>
+<li>Testing procedure with checkpoints (procedure): 1. Set a test budget of $300 per product and split it into blocks of $100. 2. Spend the first $100, then check CPM, CTR and CPC in Ads Manager. 3. Check the store data after the first $100: if ad metrics are good but there are no sales or add-to-carts, the problem is the store. Change the theme, price, offer or copywriting and spend another $100. 4. If the ads have no good metrics, change the audience or the creatives and test again with the next $100. 5. Once sales start, the ads work: find the winning interest, country and offer. 6. If the store is changed and there are still no sales after the tweaks, and the offer seems good, move on to the next product. [L1161.020]</li>
+<li>Spending the full $300 on a product in one go, without a checkpoint, makes it impossible to tell whether the ads or the store are failing. Split the budget into $100 blocks and check the data after each block. [L1161.021]</li>
+<li>Ad account and payment check (procedure): 1. Check the ad account and payment setup after buying an existing Facebook account, especially if it had a restriction. 2. If spend stays far below the budget, duplicate the campaign and run it again. 3. Let each ad set run about 4 days until it has about $20 spent. 4. Judge the ads by CTR and CPC first. 5. If the ad metrics are good but there are no sales, change the store. 6. If there are no add-to-carts, first test the offer and bundles before concluding the ads fail. [L1220.007]</li>
+<li>Debugging weak results in new international markets (procedure): 1. Check the market settings and shipping settings for each market. 2. Place a test order through the checkout using two random addresses from each country to confirm it works end to end. 3. Break down the ad results by country in the ads dashboard (age and gender are also possible breakdowns). 4. Find the country that received most of the spend but produced no sales, and pause it. 5. Test the remaining countries, ideally one at a time, and check the results again. 6. Check the store for broken buttons and wrong language text. 7. Review the full funnel, including add to cart and checkout steps, to find where visitors drop off. [L0694.004]</li>
+<li>A market that looks dead after a small spend may just lack data, so split tests by country in a way that gives each one enough spend. [L0694.003]</li>
+<li>Troubleshoot a campaign with zero clicks before building broader audiences. Do not start top-of-funnel Facebook ads while a campaign is getting zero clicks. Troubleshoot that campaign first, or turn it off and restart. (Source A, 2020, older advice.) [L0852.057]</li>
+<li>Ad campaign with no clicks: a case in which a campaign targeting Australia spent 143 USD in total. [L0361.051]</li>
+<li>Dropshipping rests on the funnel: a case in which ads showed CTR of 3.1 to 5.45 percent, but zero add-to-carts and zero Shopify analytics. [L0361.051]</li>
+<li>Check the store and the offer after strong CTR without sales, using the funnel review step. [L0361.051]</li>
+</ul>
+<h3 id="case-cheap-clicks-no-add-to-cart-complete">Case: cheap clicks, no add to cart (complete)</h3>
+<p>Case: a student ran a Meta campaign targeting Australia only and spent 143 USD in total. CTR ranged from 3.1 to 5.45 percent across the assets, and CPC ranged from 0.60 to 1.15 USD with an average of 0.67 USD. The campaign produced zero add-to-carts, and Shopify analytics also showed zero, so the pixel alone was not the likely cause. The advice was to stop the campaign, review the funnel with the mentor, and look for a new product, because cheap clicks without add-to-carts show weak interest in the product or offer. [L0361.051]</p>
+<h3 id="case-dominant-creative-and-suspected-tracking-fault-complete">Case: dominant creative and suspected tracking fault (complete)</h3>
+<p>Case: a student ran a Meta campaign for three days, spending 150 EUR across five ad sets until the spend reached break-even. Most of the budget went to one video creative, and Meta kept sending the spend to it. The store's general conversion rate was about 1 to 1.1 percent. The campaign produced 91 clicks at a CPC of 1.76 EUR and a CTR of 1.08 percent, but only one add-to-cart. The student stopped the ads and cut the dominant creative from the ad sets. The mentor suspected a tracking fault, a funnel problem, or an outdated product, and noted that influencer traffic had produced more add-to-carts and at least one purchase. [L0361.050]</p>
+<h3 id="case-day-one-failure-that-became-profitable-complete">Case: day one failure that became profitable (complete)</h3>
+<p>Starting point: a new dropshipping product was tested with a campaign set up as CBO, with three ad sets, all creatives placed in each ad set, a $100 daily budget, and a branded product page with updated creatives. Day 1: the campaign spent about $104.49 and produced one purchase, giving a CPA of $104.49, which would normally lead to switching it off. Day 2: nothing was edited and CPA fell to about a quarter of day one (around $26). Day 3: nothing was edited again, and the campaign produced about $1,000 in revenue at about $15 CPA, with more purchases than Facebook reported. Day 4 morning: CPA started at about $4. Break-even CPA was around $20 to $21 with a $30 selling price and a $10 product cost. Result: the test looked like a failure on day one but became profitable by leaving it running, and the winning campaign was then scaled. The speaker estimated roughly $200 profit on day three. These figures are as stated in the lesson. [L1124.017]</p>
+<h2 id="testing-variables-and-order">Testing variables and order</h2>
+<ul>
+<li>When testing, fix the variables in this order: 1) the offer and the website at the end of the funnel, 2) the audience, and only then 3) vary the creative. Otherwise a weak result cannot be traced to a single cause. [L0646.061]</li>
+<li>Facebook test structure (procedure): see the standard ABO product test above; all settings identical except the interest. [L0648.002]</li>
+<li>Isolation rule for ads: when Facebook favours one ad over others in an ad set, initially trust Facebook's choice. If you want to test underperforming ads, isolate them in a separate ad set and force spend into them for 3 days to see if they perform better in isolation. [L0067.024]</li>
+<li>Ad testing procedure in an ad set (procedure): 1. Create 3 ads in one interest ad set. 2. Run for 3 days minimum at break-even cost per purchase spend level. 3. Review which ad Facebook favours by looking at spend and CTR. 4. If one ad significantly underperforms but other metrics are promising, isolate it in a separate ad set and force spend into it to test further. 5. If metrics across the ad set look good overall (good attention and interest), proceed to creative review and hypothesis testing. 6. Do 2 to 3 rounds of testing iterations minimum before killing a product. [L0067.012]</li>
+<li>Ad testing with an isolated ad: a per-ad test with high spend in one set needs a separate ad set to read the ad itself. [L0067.024]</li>
+<li>Split test interests, mobile, desktop, operating system, gender and age brackets as much as you can. [L0643.050]</li>
+<li>Start new campaigns with a low budget and split test one variable at a time, choosing creative as the variable when creating the test. [L0649.027]</li>
+<li>Test at least 3 to 5 ad sets per product before judging. [L0375.002]</li>
+<li>Keep the same creatives across ad sets so the interest is the only variable. [L0376.034]</li>
+<li>Do not test many variables at once. Change one thing per ad, keep copy and hook identical, and compare the lift. [L0640.031]</li>
+<li>Source D 2026 product rule: test one pixel per product; if a product in the test fails several times in a row, move the successful ad set to a CBO and turn off the failing ad set. [L0348.020]</li>
+</ul>
+<h2 id="country-and-market-tests">Country and market tests</h2>
+<ul>
+<li>Multi-country market testing (procedure): 1) Launch the product in about five countries, including the countries where the competitor runs ads. 2) Break down ad results by country. 3) Compare CTR, CPC, CPM and conversion rate per country. 4) Narrow the test to the countries with the best results. [L1185.022]</li>
+<li>For each country, spend at least $50 in total, with at least $10 on each of five ad sets, before judging a product. This gives enough data to read CTR. [L0661.035]</li>
+<li>Put the budget behind the country that performs best, rather than spreading it evenly. [L1220.004]</li>
+<li>Split test by country, age group and gender after a test campaign has run. [L1220.004]</li>
+</ul>
+<h2 id="testing-pitfalls">Testing pitfalls</h2>
+<ul>
+<li>Do not cut a product after a single day or after spending only $50 without sales. Meta requires time to test different audience segments and show results. [L0037.007]</li>
+<li>Judging a new ad after a few hours on a $5 daily budget is premature. [L0645.043]</li>
+<li>Cutting ad creatives and age groups too quickly after a few good sales can cause CTR and sales to drop sharply. [L0690.018]</li>
+<li>Assuming weekends are always the best days to test. [L0692.002]</li>
+<li>Removing a creative after mixed results, rather than retesting it. [L0692.017]</li>
+<li>Running a product for a full month across carousel, image and video creatives with no sale, rather than setting a fixed cap. [L0660.046]</li>
+<li>Spreading a small budget across many ad sets. [L0694.003]</li>
+<li>Pushing a product at audiences who do not respond. [L0760.027]</li>
+<li>Spending the full $300 on a product in one go, without a checkpoint. [L1161.021]</li>
+<li>Changing audience, placement or ad set settings during a product test. [L1193.016]</li>
+<li>Assuming a method working in one ad account works in another. [L0375.031]</li>
+<li>Judging an ad as a failure after $10 to $15 spend with no add-to-carts. [L1220.008]</li>
+<li>Cutting a test after the first day with a high CPA (paper handing). [L1124.002]</li>
+<li>Judging a product on the first day alone. [L1124.002]</li>
+<li>Judging a product after one bad day, and not giving a product the spend to read its result. [L1124.007]</li>
+<li>Judging an interest, ad or ad set before its break-even spend. [L0645.003, L0646.015]</li>
+<li>Reacting to single-day results. [L0690.015]</li>
+<li>Running ads with no measurable goal, for example mixing multiple platforms into one store. [L1184.031]</li>
+<li>Under-funding a test with $20 to $40 per campaign. [L1124.005]</li>
+<li>Scaling before the threshold of sales is reached. [L0361.022]</li>
+<li>A mixed approach where results are judged before the ad has spent enough to read a result, while also not stopping when the spend passes break-even with no promising signal. [L0640.051]</li>
+<li>Judging a new product's ads after a day or two, which wastes money on losing ads. [L0999.013]</li>
+<li>Using a product's ads as proof that the product fails in a market when only one ad was run there. [L0691.012]</li>
+</ul>
+<h2 id="product-level-testing-principles">Product-level testing principles</h2>
+<ul>
+<li>Dropshipping is about testing rather than overthinking. Launch the product, gather data and decide based on the results. [L1172.037]</li>
+<li>Profitability cannot be expected immediately. [L0440.034]</li>
+<li>Test a product for enough spend before moving on, and keep a product whose metrics show that its audience responds. [L0229.017, L1124.007]</li>
+<li>Products are not given a fixed budget in advance. [L0440.033]</li>
+<li>Results from a test can be read by country, age and gender once spend is split. [L1220.004]</li>
+</ul>
+<h2 id="before-you-spend-store-and-supplier-checks">Before you spend: store and supplier checks</h2>
+<ul>
+<li>The landing page must deliver what the Facebook ad promises. If a visitor clicks an ad for one product and the homepage shows unrelated products, the visitor loses trust and leaves. [L1346.030]</li>
+<li>Cut ad spend on products from a supplier who does not process orders at once. Spending to acquire customers for products you cannot ship only wastes budget. [L1407.012]</li>
+</ul>
+<h2 id="diagnosis-order-ad-metrics-before-store-conversion">Diagnosis order: ad metrics before store conversion</h2>
+<ul>
+<li>When checking Meta ads, judge CTR, CPC, and CPM first, and only then the store conversion. [L1345.082]</li>
+<li>Record results daily, including trends and patterns by day of week and time of day, even when sales are flat. [L1345.082]</li>
+</ul>
+<h2 id="killing-underperforming-creatives-ad-level">Killing underperforming creatives (ad level)</h2>
+<ol type="1">
+<li>Compare each ad's CPC and CTR with your account averages (example: average CPC $0.90, average CTR 1.3%). [L1345.077]</li>
+<li>Wait until the ad has spent about $8 or more. [L1345.077]</li>
+<li>If the ad shows clearly worse data, such as a CPC of about $3 and a CTR of 0.3% to 0.5%, turn it off. [L1345.077]</li>
+<li>Keep the other creatives in the ad set running so they get budget. [L1345.077]</li>
+</ol>
+<h2 id="killing-underperforming-ad-sets">Killing underperforming ad sets</h2>
+<ul>
+<li>Cut an ad set after two days if it has spent more than the breakeven cost per purchase without a sale, and replace it with a new audience. [L1345.078]</li>
+</ul>
+<h2 id="testing-pitfalls-1">Testing pitfalls</h2>
+<ul>
+<li>A typical beginner mistake is launching ads to an unreviewed store and spending money, such as $200 with no sales, before knowing whether the product page, offer or checkout is the cause. [L1452.007]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>The testing phase is built to find winners quickly while not wasting much money or time forcing an ad set to work. Clear kill rules, applied on schedule, are the main protection against overspending on weak audiences or creatives. [L0376.035]</li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/11-audience-strategy-interests-broad-targeting-countries-and-de/"><span class="k">&larr; Previous</span><span class="v">Audience strategy: interests, broad targeting, countries and demographics</span></a><a class="nx" href="../../09-meta-and-facebook-ads/13-ad-creative-copy-and-placement-formats/"><span class="k">Next &rarr;</span><span class="v">Ad creative, copy and placement formats</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

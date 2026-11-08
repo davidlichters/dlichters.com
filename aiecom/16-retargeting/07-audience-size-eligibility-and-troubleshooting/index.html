@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Audience size, eligibility and troubleshooting | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.7: Audience size, eligibility and troubleshooting.">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/07-audience-size-eligibility-and-troubleshooting/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Audience size, eligibility and troubleshooting | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.7: Audience size, eligibility and troubleshooting."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/07-audience-size-eligibility-and-troubleshooting/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/07-audience-size-eligibility-and-troubleshooting/">Plain version</a></div><h1>16.7 Audience size, eligibility and troubleshooting</h1><article><h2 id="minimum-audience-sizes-per-platform">Minimum Audience Sizes per Platform</h2>
+<p>Ad platforms won't serve ads to an audience until it reaches a minimum size. The thresholds differ by platform, ad type and source, so check the figure that applies to your setup.</p>
+<h3 id="google-ads-and-the-display-network">Google Ads and the Display Network</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Source</th>
+<th>Applies to</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100 unique visitors within the time window</td>
+<td>Source A</td>
+<td>Below this, ads won't show even if the audience is set up correctly</td>
+<td>[L0733.013]</td>
+</tr>
+<tr>
+<td>100 active users in the last 30 days</td>
+<td>Source A, 2024</td>
+<td>Display remarketing; ads can run only at this level</td>
+<td>[L1285.058]</td>
+</tr>
+<tr>
+<td>100 people</td>
+<td>Source B, 2021-22 (older)</td>
+<td>Custom audiences on the Google Display Network</td>
+<td>[L0563.026]</td>
+</tr>
+<tr>
+<td>1,000 active members in a network</td>
+<td>Source A, 2023</td>
+<td>Remarketing audience; the source specifies the network</td>
+<td>[L0804.065]</td>
+</tr>
+<tr>
+<td>1,000 unique visitors</td>
+<td>Source A, 2019 (older)</td>
+<td>Audience error means the list is too small</td>
+<td>[L1068.065]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The roughly 100-person minimum for a 7-day audience applies only to some Google Ads ad types, not to every Google option. Check the audience size for each ad type before you choose step-by-step sequencing. [L1241.013]</li>
+</ul>
+<h3 id="facebook-meta">Facebook (Meta)</h3>
+<ul>
+<li>Facebook remarketing audiences need at least about 100 unique people before ads can serve. Facebook counts fewer visitors than Google Analytics, so ads usually start reliably at around 150 to 200 visitors. (Source A, 2021, older) [L1279.069]</li>
+<li>The roughly 1,000-person minimum for a 7-day Facebook audience is a general guideline, not an exact threshold. Newer stores often reach it only with the all-product-viewers audience, while single-product audiences stay below it. (Source B, 2021-22, older) [L1241.014]</li>
+<li>Facebook's minimum is considerably higher than Google's 100-person minimum for custom audiences. (Source B, 2021-22, older) [L0563.026]</li>
+</ul>
+<h3 id="general-principles-for-small-audiences">General principles for small audiences</h3>
+<ul>
+<li>Audiences have minimum size thresholds on most networks. If a segment is too small, keep it set up anyway, since it will fill as traffic grows. Start with the largest segment that is still big enough, such as 14 days upward. (Source B, 2021-22, older) [L0719.037]</li>
+<li>A retargeting audience of around 50 people who visited over two weeks is too small to run alone. Combine several related audiences, such as video viewers, engagers and page visitors, into one larger audience. (Source C) [L0640.055]</li>
+</ul>
+<h2 id="lookback-windows">Lookback Windows</h2>
+<h3 id="lengthening-a-small-audience">Lengthening a small audience</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Starting window</th>
+<th>Extended window</th>
+<th>Source</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>30 days</td>
+<td>60 days</td>
+<td>Source A, 2023</td>
+<td>[L0251.047]</td>
+</tr>
+<tr>
+<td>7 or 30 days</td>
+<td>45 or 60 days</td>
+<td>Source A, 2023</td>
+<td>[L1094.050]</td>
+</tr>
+<tr>
+<td>14 days</td>
+<td>Up to 180 days</td>
+<td>Source A, 2021 (older)</td>
+<td>[L0853.076]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>If a remarketing audience is too small, lengthen its window so more people fall into it. A larger audience makes remarketing more effective. (Source A, 2021, older) [L0853.076]</li>
+<li>If a remarketing audience is too small, lengthen its window, for example from 7 or 30 days to 45 or 60 days, so more people fall into the audience. (Source A, 2023) [L1094.050]</li>
+<li>If a remarketing audience shows as Not Eligible because it is too small, expand the lookback window from 30 days to 60 days to reach sufficient audience size for ad serving. (Source A, 2023) [L0251.047]</li>
+<li>Check both the audience size and the membership time frame in days for each remarketing audience. If the audience is too small or the window is too short, it will not fill up with enough people to show ads. (Source A, 2023) [L0470.011]</li>
+</ul>
+<h3 id="choosing-the-starting-window">Choosing the starting window</h3>
+<ul>
+<li>Create the audience with the longest lookback window, 540 days, and pre-fill it with the past 30 days of visitors. Google remarketing needs at least 1,000 active members in a network. (Source A, 2023) [L0804.065]</li>
+<li>Use a 30-day audience for display remarketing, because a 7-day audience usually has too few people to serve ads. A larger audience is needed for impressions to start. (Source A, 2025) [L0972.066]</li>
+<li>A new store's 7-day website visitor audience usually contains about 30 to 90 people, which is often below the 100 unique visitor minimum.
+<ol type="1">
+<li>Use a 30-day audience to start. A new store can usually build more than 100 unique visitors within 30 days.</li>
+<li>Create the 7-day audience anyway so it builds in the background. (Source A) [L0733.014]</li>
+</ol></li>
+</ul>
+<h2 id="checking-audience-size-in-google-ads">Checking Audience Size in Google Ads</h2>
+<h3 id="where-to-look">Where to look</h3>
+<ul>
+<li>To check whether remarketing audiences are big enough in Google Ads, go to Tools, then Shared Library, then Audience Manager (the Shared Audience Manager). Audiences that are too small show the message "too small to advertise to". Wait until they grow. (Source A, 2022) [L0429.051]</li>
+<li>Navigation labels differ between sources. The 2019 path was Tools, then Audiences. (Source A, 2019, older) [L1068.066]</li>
+</ul>
+<h3 id="checking-audience-sizes">Checking audience sizes</h3>
+<ol type="1">
+<li>In Google Ads, open Shared library.</li>
+<li>Open Audiences.</li>
+<li>Click an audience to see the total number of people and how many are eligible to be remarketed to on each Google platform.</li>
+</ol>
+<p>(Source A, 2023) [L1094.049]</p>
+<ul>
+<li>Audiences built from GA4 and linked to Google Ads can show a smaller eligible count than the total audience, because Google can only match some visitors. This gap is normal and cannot be fixed. (Source A, 2023) [L1094.048]</li>
+</ul>
+<h3 id="estimated-sizes-in-the-audience-form">Estimated sizes in the audience form</h3>
+<ul>
+<li>The estimated audience size shown in the audience form is based on past data. It is not always accurate and changes over time. It becomes more reliable as tracking history builds up and data retention is extended. (Source A) [L1520.014]</li>
+<li>Newly created audiences often show fewer than 10 users at first, which is normal. They grow as site traffic increases and the audience has time to fill with data. (Source A) [L1520.015]</li>
+</ul>
+<h2 id="not-eligible-status">Not Eligible Status</h2>
+<ul>
+<li>A remarketing audience that shows as not eligible because it is too small is normal early in a store's life. Wait for more traffic and check the audience size before expecting impressions. (Source A, 2025) [L0807.027]</li>
+<li>If remarketing ads do not serve and there are no errors, the audience is most likely too small. Create a larger audience, such as 60-day website visitors, and add it to the remarketing campaign. (Source A, 2023) [L1094.051]</li>
+<li>Google can flag an audience as too small to target on the Display Network, for example a 30-day product viewer list. Check the audience status before launching. A flagged audience cannot be used for display targeting until it is large enough. (Source B, 2021-22, older) [L1342.007]</li>
+</ul>
+<h2 id="audience-counts-that-differ-from-analytics">Audience Counts That Differ from Analytics</h2>
+<ul>
+<li>Drop-off between GA4 or Universal Analytics counts and the audience counts in Google and Meta is normal, and iOS opt-out settings add to it. Keep all tracking and data-sharing settings maximized to get the largest audience possible. (Source A, 2024) [L0965.048]</li>
+<li>A retargeting audience includes all visitors to the website, not only traffic from Google Ads. Organic visitors therefore count toward audience size. (Source B, 2021-22, older) [L0719.038]</li>
+</ul>
+<h2 id="no-impressions-and-identical-counts">No Impressions and Identical Counts</h2>
+<h3 id="first-checks">First checks</h3>
+<ul>
+<li>If the remarketing campaign shows no impressions, check that the audience size is enough for each platform under the audience tools, then recreate the campaign. If it gets a few hundred impressions but no clicks over a month, raise the bids. (Source A, 2023) [L0804.066]</li>
+<li>If Google remarketing campaigns serve no impressions and audience counts look identical, check the audiences' creation dates and settings against the process before recreating them. Recreating audiences or campaigns alone may not fix the issue. (Source A, 2025) [L0667.086]</li>
+</ul>
+<h3 id="when-display-remarketing-still-shows-zero-impressions">When display remarketing still shows zero impressions</h3>
+<ol type="1">
+<li>Confirm the audience is a 30-day audience.</li>
+<li>Confirm there are enough visitors in the audience, such as the thousands of clicks seen over several months.</li>
+<li>If it still shows zero impressions, delete the remarketing campaign and recreate it from scratch.</li>
+</ol>
+<p>(Source A, 2025) [L0972.067]</p>
+<h2 id="policy-flags">Policy Flags</h2>
+<ul>
+<li>Google remarketing can run despite a policy-violation warning, but reach is limited until the flagged content is fixed. (Source A, 2023) [L0855.156]</li>
+</ul>
+<h2 id="shrinking-audiences-after-pauses">Shrinking Audiences After Pauses</h2>
+<ul>
+<li>Remarketing audiences shrink when ads are paused, so restarting ads can produce very few impressions. Recovery can take two to four weeks before remarketing returns to profitability. (Source A, 2025) [L0972.068]</li>
+</ul>
+<h2 id="fixing-a-failing-pixel-setup">Fixing a Failing Pixel Setup</h2>
+<h3 id="checking-for-an-empty-audience">Checking for an empty audience</h3>
+<ul>
+<li>If a remarketing audience is empty or shows zero, the tracking pixel or code is not firing and must be reinstalled. (Source A, 2019, older) [L1068.066]</li>
+</ul>
+<h3 id="google-ads-pixel-procedure">Google Ads pixel procedure</h3>
+<ol type="1">
+<li>Repeat the setup steps in the lesson exactly, one more time.</li>
+<li>Note the exact error message each time it appears.</li>
+<li>If the same error keeps appearing, contact Google Ads live chat and share the error message.</li>
+</ol>
+<p>(Source A, 2023) [L0970.130]</p>
+</article><nav class="pn"><a href="../../16-retargeting/06-building-meta-youtube-and-other-platform-audiences/"><span class="k">&larr; Previous</span><span class="v">Building Meta, YouTube and other platform audiences</span></a><a class="nx" href="../../16-retargeting/08-exclusions-and-targeting-controls/"><span class="k">Next &rarr;</span><span class="v">Exclusions and targeting controls</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

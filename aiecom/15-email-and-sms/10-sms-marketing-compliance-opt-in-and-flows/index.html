@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SMS marketing: compliance, opt-in and flows | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.10: SMS marketing: compliance, opt-in and flows.">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/10-sms-marketing-compliance-opt-in-and-flows/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="SMS marketing: compliance, opt-in and flows | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.10: SMS marketing: compliance, opt-in and flows."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/10-sms-marketing-compliance-opt-in-and-flows/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/10-sms-marketing-compliance-opt-in-and-flows/">Plain version</a></div><h1>15.10 SMS marketing: compliance, opt-in and flows</h1><article><h2 id="when-and-how-much-to-use-sms">When and How Much to Use SMS</h2>
+<ul>
+<li>Use SMS sparingly. Subscribers receive fewer marketing texts than emails, and frequent promotions quickly annoy them. Too many texts lead to opt-outs faster than too many emails do. [L0949.040] (older, 2021-22)</li>
+<li>Use SMS mainly for valuable messages, such as order updates, which customers want and can opt into on Shopify. Save promotional texts for rare, genuinely valuable offers. [L0949.041] (older, 2021-22)</li>
+<li>Asking for SMS consent at checkout is fine if you might use text marketing later, but ask very sparingly. Frequent discount texts can damage the customer relationship more than they help. [L1090.113] (older, 2021)</li>
+<li>Email is worth more in the long run than an SMS phone number, because it allows remarketing to website visitors. SMS works well when it is targeted and sent to the right person at the right time, but it should be used sparingly. [L1112.029] (older, 2021)</li>
+<li>Do not run ads that send traffic to an SMS sign-up page instead of your website. SMS sign-ups from paid traffic are not a recommended default. [L1112.030] (older, 2021)</li>
+<li>Audience matters. Younger customers tend to accept text marketing more readily, while older customers may find frequent texts annoying. Test SMS with your audience before scaling it. [L0949.043] (older, 2021-22)</li>
+<li>Collect a phone number from every customer, so SMS is available when it is valuable. Phone numbers are an asset for order updates and occasional offers. [L0949.042] (older, 2021-22)</li>
+<li>Every SMS campaign should be an automated sequence set up early, with A/B testing built in. Never send one-off texts. Automation captures volume even before you have large subscriber lists. [L0041.014]</li>
+<li>Source conflict on one-off sends: L0041.014 says never send one-off texts, while L1470.006 describes a one-off SMS offer update as a single setting inside a Klaviyo flow step. Treat the one-off setting as a step inside a flow, not a standalone blast. [L0041.014, L1470.006]</li>
+</ul>
+<h3 id="results-figures">Results figures</h3>
+<p>Sources disagree on SMS open rates. Use each figure only in the context named.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Value</th>
+<th>Source</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open rate</td>
+<td>about 80%</td>
+<td>L0363.073</td>
+<td>Typical result cited in Source C</td>
+</tr>
+<tr>
+<td>Click rate</td>
+<td>about 40%</td>
+<td>L0363.073</td>
+<td>Typical result cited in Source C</td>
+</tr>
+<tr>
+<td>Purchase rate</td>
+<td>about 6-7%</td>
+<td>L0363.073</td>
+<td>Typical result cited in Source C</td>
+</tr>
+<tr>
+<td>Open rate</td>
+<td>80% or higher, usually above email</td>
+<td>L0949.039 (older, 2021-22)</td>
+<td>Older benchmark for time-sensitive messages</td>
+</tr>
+<tr>
+<td>Open rate</td>
+<td>40% to 50% for SMS, while 2% to 3% for email is considered good</td>
+<td>L1213.058</td>
+<td>Speaker's comparison</td>
+</tr>
+<tr>
+<td>Return on investment</td>
+<td>about 10x compared with other channels</td>
+<td>L1213.058</td>
+<td>Reported by the speaker, not verified</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>SMS is preferred over email because notifications are seen more reliably than promotion-tab emails. [L0363.073]</li>
+<li>SMS is a strong channel for time-sensitive messages, though its use is still less common than email. [L0949.039] (older, 2021-22)</li>
+</ul>
+<h2 id="consent-and-compliance">Consent and Compliance</h2>
+<h3 id="legal-baseline-by-market">Legal baseline by market</h3>
+<ul>
+<li>In the US, marketing SMS sent to customers generally needs prior express written consent under the TCPA. Every message must include a clear way to opt out. Confirm consent is captured at sign-up before running SMS flows in the US. [L0476.025]</li>
+<li>Before building an SMS opt-in, verify the required consent wording for your jurisdiction. In the US, TCPA compliance applies. [L0418.001]</li>
+<li>Check the SMS rules and GDPR compliance of every target country before sending texts. Phone consent is stricter than email consent. [L1213.060]</li>
+<li>Use an SMS app with built-in compliance features, such as GDPR settings and quiet hours, and make sure messages are sent only at permitted times. [L0363.075]</li>
+<li>Every SMS campaign must include an unsubscribe option. [L0363.072]</li>
+<li>Avoid SMS providers that use shared sender numbers, because your messages may come from a number shared with unrelated companies. Choose a provider with a dedicated number for your store. [L0949.045] (older, 2021-22)</li>
+</ul>
+<h3 id="opt-out-in-every-message">Opt-out in every message</h3>
+<ul>
+<li>Include opt-out instructions in every SMS. Sending without them exposes the store to legal and carrier complaints. [L0476.026]</li>
+<li>Every marketing SMS sent through SMS Bump should include opt-out instructions, such as a reply STOP line. Leaving them out creates compliance risk and hurts customer trust. [L0634.035]</li>
+<li>In SMS Pump, always include opt-out instructions and keep them turned on in the flow. [L0477.025]</li>
+<li>Opt-out and discount fields in SMS Pump: the discount code field must be filled in before a message is saved, and the opt-out text must have room. [L1297.027, L1297.024]</li>
+</ul>
+<h3 id="opt-in-disclosure">Opt-in disclosure</h3>
+<p>Place the disclosure directly under the phone number submit button. It must state that the visitor agrees to receive marketing texts, the message frequency per month, that message and data rates may apply, and that consent is not a condition of purchase. [L0418.001]</p>
+<p>Adapted from a public compliant SMS opt-in text:</p>
+<pre><code>By submitting this form, you agree to receive recurring automated marketing text messages (e.g. promotions and cart reminders) from [Brand Name] at the phone number provided. Consent is not a condition of purchase. Message frequency varies (about 3 to 4 messages per month). Message and data rates may apply. Reply HELP for help or STOP to cancel.</code></pre>
+<p>[L0418.004]</p>
+<p>Prompt for drafting and checking opt-in language:</p>
+<pre><code>You are an expert in marketing and SMS law. Help me write opt-in language for a form at the bottom of a submit button on a website. The form requires detailed opt-in language that includes marketing messages sent via SMS, about 3 to 4 messages per month, and automated messages. When crafting the opt-in, be transparent and compliant: ask for consent, state that consent is not a condition of purchase, state the number of messages per month, and state that message and data rates may apply. Then check my draft against the SMS disclosure language published by a major email/SMS platform and tell me where it differs.</code></pre>
+<p>[L0418.005]</p>
+<ul>
+<li>Postscript's list growth tools (Acquisitions &gt; List growth tools &gt; Convert your email list) show ready-made mobile opt-in code with TCPA-style consent language. Use it as a wording reference and check it against your own SMS provider's requirements instead of copying from a live client account. [L0418.032]</li>
+</ul>
+<h2 id="opt-in-capture-and-phone-collection">Opt-in Capture and Phone Collection</h2>
+<ul>
+<li>Collect phone numbers from abandoned checkouts and purchases rather than through cold pop-ups, because phone numbers are personal. An incentive, such as an extra 5% off, can encourage the visitor to give the number. [L0363.074]</li>
+<li>Collect phone numbers at checkout, where buyers already enter them. Add a second pop-up step after email signup that offers an extra 5% VIP discount in exchange for a phone number. [L1213.063]</li>
+<li>The phone number field's placeholder should encourage the visitor to enter their real number, because the discount code is sent there. A fake number means the visitor never receives the code and the subscriber is lost. [L0418.034]</li>
+<li>Name every page in an Optimonk campaign before setting up navigation rules, such as the form, the email thank-you page, the SMS upgrade page and the SMS thank-you page. Clear names keep the Next-page dropdowns unambiguous when a flow has several steps. [L0418.033]</li>
+<li>The Klaviyo SMS opt-in flow depends on the welcome flow already being live. It is complete once the SMS opt-in flow is live. [L1361.027]</li>
+</ul>
+<h2 id="email-to-sms-escalation-trojan-horse">Email-to-SMS Escalation (Trojan Horse)</h2>
+<h3 id="structure">Structure</h3>
+<ul>
+<li>Trojan-horse structure: first collect the email with a discount reveal, then escalate to an SMS upgrade with a higher discount, so each signup leads to a bigger offer. [L0418.022]</li>
+<li>Set the SMS upgrade offer to 15% (upgraded from the 10% email code) and make the upgrade the main action. Keep a 10% "No thanks" option as the alternative. [L0418.021]</li>
+</ul>
+<h3 id="procedure-email-pop-up-with-reveal-code-optimonk">Procedure: Email pop-up with Reveal code (Optimonk)</h3>
+<ol type="1">
+<li>Create a new campaign from scratch with the relevant domain, using a blank canvas. [L0418.002]</li>
+<li>Cut out a lifestyle product image with a background-removal tool, export it as PNG, and resize it in batch. Use about 500 px wide for a standard floating image, or about 1000 px if it needs to look larger; keep PNG format. This reduces the file from roughly 2.3 MB to about 54 KB. [L0418.002]</li>
+<li>Add a Floating image element and drop in the resized PNG so it overlaps the top edge of the pop-up. [L0418.002]</li>
+<li>Remove the default column background (Column &gt; Style &gt; Solid color &gt; None) so the large container box does not show, and handle layering with z-index. [L0418.002]</li>
+<li>Add a headline "Congratulations" (font size 50, reduced to 40 if too big, black weight) and a subheadline "You've unlocked a mystery discount" (font size 30, semi-bold, with the key word in black). [L0418.002]</li>
+<li>Add an Input element of type email with placeholder "Email", set as required, with the error message "This field is required". Set display to manual, width 400 px, height 50 px, and a top margin of 25 px. [L0418.002]</li>
+<li>Add a text line "Ready to see what you got?" (font size 18, line height about 1.5) and a second line "Enter your best email below..." beneath it. [L0418.002]</li>
+<li>Add a Button element labeled "Reveal code" (font size 24, black, display manual, width 400 px, height 60 px, top margin 10 to 15 px). Match its solid background color to the brand's button color, picked with a color-picker browser extension. [L0418.002]</li>
+<li>Set the column horizontal padding to 0, and adjust top and bottom padding (for example 50/50 or 100 px) so spacing is even on all sides. [L0418.002]</li>
+<li>Set the background as a solid color or a generated hero image (resized to about 1200 px wide, JPEG, quality reduced to about 40 to 50 KB). Apply a light-to-medium text shadow to the text for readability. [L0418.002]</li>
+<li>Add a close button in white and a "No thanks, I hate discounts" secondary button (font size 12, no background, no shadow) to close the pop-up. [L0418.002]</li>
+<li>Check the design in mobile view. Set the floating image and column so the layout fits: width 400 px, button height 70 px, button font size around 150, and overlay width at 95% of the screen. [L0418.002]</li>
+<li>Set the z-index of the input fields and the Reveal Code button higher than the floating image (inputs about 10, image about 1), so clicks go to the form and not to the image. [L0418.002]</li>
+<li>Check the campaign's Next-page settings: Conversion closed, campaign goal reached, Smart sync on. [L0418.002]</li>
+<li>Test the pop-up live by enabling the Optimonk app embed in the Shopify theme (app embeds). The preview may not show it on some themes, so turn it live briefly if needed. [L0418.002]</li>
+</ol>
+<h3 id="procedure-sms-upgrade-stage-optimonk">Procedure: SMS upgrade stage (Optimonk)</h3>
+<ol type="1">
+<li>Insert an SMS upgrade stage right after the email signup. [L0418.003]</li>
+<li>Copy the email pop-up page. [L0418.003]</li>
+<li>Place a Survey element called "SMS club invite" that offers two choices: "Upgrade to 15%" and "No thanks, 10% is enough". [L0418.003]</li>
+</ol>
+<p>Confirmation message after the visitor opts in:</p>
+<pre><code>You&#39;re in. Your text with your [15]% discount code is on its way and should arrive any second now. Once the message arrives, tap the link inside and the discount will apply automatically at checkout.</code></pre>
+<p>[L0418.036]</p>
+<h2 id="setting-up-sms-bump">Setting Up SMS Bump</h2>
+<ul>
+<li>SMS Bump is the SMS-only app used here for abandoned checkout texts, post-purchase upsell texts and win-back texts. It can create discount codes automatically inside the SMS messages. [L0476.017]</li>
+</ul>
+<h3 id="procedure-install-and-set-up">Procedure: Install and set up</h3>
+<ol type="1">
+<li>Install SMS Bump from the Shopify App Store (Apps &gt; All recommended apps &gt; Shopify app store, search "sms bump"), click Get started, and create an account. [L0476.018, L0634.016]</li>
+<li>When asked, choose SMS only, not email and SMS. [L0476.018, L0634.016]</li>
+<li>Enter your business information and continue. [L0476.018]</li>
+<li>On the setup page, keep the abandoned checkout flow, post-purchase upsell flow and customer win-back flow switched on, then click Next. [L0476.018, L0634.016]</li>
+<li>Finish the setup. Leave the subscription pop-up customization for later if Clavio already runs one. [L0476.018, L0634.016]</li>
+</ol>
+<h2 id="sms-bump-abandoned-checkout-flow">SMS Bump: Abandoned Checkout Flow</h2>
+<h3 id="procedure">Procedure</h3>
+<ol type="1">
+<li>Open Flows, scroll to Abandoned checkout, and click Edit. [L0476.019, L0634.017]</li>
+<li>Edit SMS 1 and change the delay from 30 minutes to 15 minutes. Paste the first SMS template, which contains a checkout button and a reply option for questions. [L0476.019, L0634.017]</li>
+<li>Add SMS 2 with a delay of 2 hours. Paste the SMS 2 template. Click the discount code field, let SMS Bump create the code automatically, and set the value to 10. Add the abandoned checkout URL and save. [L0476.019, L0634.017]</li>
+<li>Click Add step, then Add delay, and choose 20 hours. Add SMS 3 with a 20% discount code created the same way, paste the template text and save. [L0476.019]</li>
+<li>Note on placement: if needed, remove the step and place the 20-hour delay above the SMS 2 position, then add SMS 3 with a 20 discount code. [L0634.017]</li>
+<li>Click save. [L0634.017]</li>
+</ol>
+<h3 id="templates">Templates</h3>
+<p>SMS 1 (15 minutes after checkout abandonment):</p>
+<pre><code>Hey [first name], it looks like you left something in your cart. Do not miss out, it is going fast. Click here to finish your purchase: [checkout link]. If you have any questions or need help, just reply to this message and we will be happy to assist.</code></pre>
+<p>[L0634.018]</p>
+<p>SMS 2 (2 hours after abandonment, with 10% code):</p>
+<pre><code>Hi [first name], we noticed a few items still sitting in your cart, and we would hate for you to lose them. Tap here to finish your order and pick up [product] with a 10 percent discount code [auto-generated code]: [abandoned checkout URL]. Questions? Just reply to this text and we will gladly help.</code></pre>
+<p>[L0634.019]</p>
+<p>SMS 3 (20 hours after abandonment, with 20% code):</p>
+<pre><code>Hi [first name], it looks like some items are still waiting in your cart, and we want you to have them. Tap here to complete your purchase and get [product] with a 20 discount using code [auto-generated code]: [abandoned checkout URL]. Need help? Reply to this message and we will be glad to answer.</code></pre>
+<p>[L0634.020]</p>
+<h2 id="sms-pump-setup">SMS Pump: Setup</h2>
+<h3 id="procedure-as-taught-two-lessons">Procedure (as taught, two lessons)</h3>
+<ol type="1">
+<li>Install SMS Pump from the Shopify App Store, click Add app, then Add sales channel. [L1297.023]</li>
+<li>Click Get started, then Set up SMS only. [L1297.023]</li>
+<li>Enter the company name, phone number, optional additional address and industry. [L0477.021, L1297.023]</li>
+<li>Keep the template welcome message or edit it, then click Finish. [L0477.021, L1297.023]</li>
+<li>Delete the preset flows and build all flows from scratch under Flows, using Explore more flows and Create new flow. [L0477.021, L1297.023]</li>
+<li>Keep the balance at least $20 so SMS can send. [L0477.021, L1297.027]</li>
+</ol>
+<p>Alternative route, as taught in another lesson:</p>
+<ol type="1">
+<li>Open SMS Pump from the App Store and click Install. [L0635.021]</li>
+<li>Click Add sales channel, then Get started. [L0635.021]</li>
+<li>Create the basic account. [L0635.021]</li>
+<li>Set up flows and campaigns inside SMS Pump. [L0635.021]</li>
+</ol>
+<p>Balance rule: SMS Pump only sends messages if the account has a balance of at least $20. [L1297.027]</p>
+<h2 id="sms-pump-abandoned-checkout-flow">SMS Pump: Abandoned Checkout Flow</h2>
+<h3 id="procedure-1">Procedure</h3>
+<ol type="1">
+<li>Name the flow "abandoned checkout" and choose the abandoned checkout trigger. [L1297.024]</li>
+<li>Trigger: Abandoned checkout. Add a delay of 15 minutes, then an SMS action with the prepared text, filling in the product name in the brackets. [L0477.022, L1297.024]</li>
+<li>Add a condition: customer made an order after flow started is true. If true, end the flow; if not, continue. [L0477.022, L1297.024]</li>
+<li>Add a delay of 2 hours and a second SMS with a 10% discount code created in SMS Pump. [L0477.022, L1297.024]</li>
+<li>Add the same condition again, then a delay of 20 hours and a third SMS offering 20% off with an automatically generated code. [L0477.022, L1297.024]</li>
+<li>Make sure the discount code field is applied. If the discount amount shows red, fix it. If the opt-out text shows red, make space for it. [L0477.022, L1297.024]</li>
+<li>Click Save and confirm the flow is live. [L1297.024]</li>
+</ol>
+<p>Template for the third-stage retargeting message:</p>
+<pre><code>Hey, {product name} is still waiting in your cart, and the offer is going fast. Finish your purchase now with 20% off using the code that SMS Pump generates automatically for you: {checkout link}. Reply STOP to opt out.</code></pre>
+<p>[L0477.042]</p>
+<h3 id="timing-conflict-to-check">Timing conflict to check</h3>
+<ul>
+<li>The 15-minute, 2-hour, 20-hour schedule (SMS Bump and SMS Pump) puts three texts within about 22 hours of abandonment. [L0476.019, L0477.022, L1297.024]</li>
+<li>Source E sets the first abandoned-cart SMS within 24 hours and says only one abandoned-cart text per customer may be sent within the first 24 hours. Treat this as a legal limit and check the SMS marketing rules that apply in your market. [L1208.008]</li>
+<li>Before running the schedule, confirm it fits the rules in your market. [L1208.008, L1213.060]</li>
+</ul>
+<h2 id="abandoned-checkout-message-design">Abandoned Checkout Message Design</h2>
+<h3 id="shape-and-length">Shape and length</h3>
+<ul>
+<li>Abandoned checkout SMS should be short, three to four lines, using the customer's first name as a dynamic field. Include the offer (10-20% off), a sense of urgency and the deal end. Leave out reviews and extra content, since SMS must stay small and crisp. [L0605.021]</li>
+<li>Put the offer and the discount in the first line of every SMS, since readers skim and rarely read the full message. Keep messages short and direct. [L1213.061]</li>
+<li>Put the offer and event in the first one or two lines so they show in the notification. [L0363.072]</li>
+</ul>
+<h3 id="formula-abandoned-checkout-sms-bump">Formula: abandoned checkout (SMS Bump)</h3>
+<p>A short greeting with the first name, a reminder that items are still in the cart with a note of urgency, a single checkout button, and a reply line for help. Later messages add a discount code created in the SMS app and keep the same checkout link.</p>
+<ul>
+<li>Example 1: "Hi Sam, your order is still waiting. Tap here to finish checkout before your size sells out. Reply here for help."</li>
+<li>Example 2: "Hi Lee, your basket is saved. Here is 10% off with the code BACK10 at checkout: link. Reply STOP to opt out." [L0476.022]</li>
+</ul>
+<h3 id="formula-sms-retargeting-sms-pump">Formula: SMS retargeting (SMS Pump)</h3>
+<p>One formula: a short reminder with the product name, a discount code that grows with each message, a link straight to checkout, and an opt-out line. The delay grows over time (15 minutes, 2 hours, 20 hours), and each message offers a bigger discount than the one before.</p>
+<ul>
+<li>Example A: "Hi, your [product] is still in your cart. Use code SAVE10 for 10% off, link below. Reply STOP to opt out."</li>
+<li>Example B: "Last chance: your [product] is waiting. Take 20% off with code SAVE20 before it sells out. Reply STOP to opt out." [L1297.028]</li>
+</ul>
+<h3 id="formula-first-abandoned-cart-sms-source-e">Formula: first abandoned-cart SMS (Source E)</h3>
+<p>Open with a non-blaming line saying checkout hit a snag and the order is saved, then add three short proof or policy points, such as customer count, return window and free shipping threshold. It reassures without implying carelessness and gives concrete reasons to return.</p>
+<ul>
+<li>Example A: "Hiccup at checkout, don't worry, your cart is saved. 12,000 happy customers, 30-day free returns, free shipping over $75."</li>
+<li>Example B: "Looks like checkout didn't finish, but your order is still waiting. 5,000 five-star reviews, easy 60-day exchanges, free delivery from $100." [L1208.009]</li>
+</ul>
+<h3 id="split-test-in-klaviyo">Split test in Klaviyo</h3>
+<ol type="1">
+<li>Add a conditional split based on cart value. [L1208.010]</li>
+<li>If the cart value is over $100, send the variant that mentions free shipping. [L1208.010]</li>
+<li>If not, send the variant that leads with a different value proposition, such as customer count or free returns. [L1208.010]</li>
+</ol>
+<h3 id="channel-mix">Channel mix</h3>
+<ul>
+<li>Abandoned checkout SMS flows work well. Use SMS and email together and compare their performance across campaigns. [L1213.062]</li>
+</ul>
+<h2 id="post-purchase-upsell">Post-Purchase Upsell</h2>
+<h3 id="sms-bump-procedure">SMS Bump procedure</h3>
+<ol type="1">
+<li>Open Flows, click Edit on the post-purchase upsell flow, and open the first SMS. [L0476.020]</li>
+<li>Paste the template that thanks the buyer for the order and suggests a complementary product. Insert the product name of a related item, add its product page link, and include a short link version. [L0476.020]</li>
+<li>Save the first SMS. [L0476.020]</li>
+<li>Add a step with a delay of 12 hours, then add a second SMS. Mention the recommended product, add an optional discount code (example: 10% extra at checkout), add the checkout and product links, and a reply line for questions. [L0476.020]</li>
+<li>Always include opt-out instructions in each message, then save. [L0476.020]</li>
+</ol>
+<p>SMS 1 (immediately after purchase):</p>
+<pre><code>Hey [first name], thank you for your recent purchase of [purchased product]. We hope you are enjoying it. We think you might also be interested in [alternative product, e.g. a ring or a necklace], which is a great complement to [purchased product] and we think you will love it. Click here to check it out: [product page link]. If you have any questions, just reply to this message and we will be happy to help.</code></pre>
+<p>[L0634.021]</p>
+<p>SMS 2 (12 hours after purchase):</p>
+<pre><code>Hey [first name], just wanted to remind you about the great deal we are currently offering on [recommended product]. It is a perfect complement to your product that you already purchased, and we think you will love it. Plus, use code [discount code] at checkout to save an extra 10 percent on your purchase. Click here to check it out: [recommended product link]. If you have any questions, just reply to this message and we will be happy to help. Always include the opt-out instructions.</code></pre>
+<p>[L0634.022]</p>
+<h3 id="sms-pump-procedure">SMS Pump procedure</h3>
+<ol type="1">
+<li>Create a new flow, choose the post-purchase upsell trigger, and add a delay of 1 hour. [L1297.025, L0477.023]</li>
+<li>Add an SMS that thanks the customer for the purchase and recommends another store product as a complement, with the recommended product URL added automatically, a checkout link and reply-to-message support. [L1297.025, L0477.023]</li>
+<li>Add the condition: customer made an order after flow started. If true, end the flow. [L1297.025, L0477.023]</li>
+<li>If not, add a delay of 12 hours and a second SMS reminding them of the deal, with a fixed $10 discount using the "plus use code" field. The code must be applied at checkout. [L1297.025, L0477.023]</li>
+<li>Make sure opt-out instructions are on, then save the flow as "product upsell sequence". [L1297.025, L0477.023]</li>
+</ol>
+<h3 id="formula-and-template">Formula and template</h3>
+<p>Formula: thank the buyer, name the purchased item, suggest one complementary product that fits with it, give the product link, and add a short reply option. Keep the message brief and useful. Send the second reminder only after a delay so it does not feel like spam.</p>
+<ul>
+<li>Example 1: "Thanks for ordering the hoodie, Ana. Many buyers add the matching beanie. See it here: link."</li>
+<li>Example 2: "Hi Max, your speaker is on its way. Pair it with a carrying case at 10% off with code CASE10: link." [L0476.023]</li>
+</ul>
+<p>Template for SMS Pump:</p>
+<pre><code>Hey [first name], thanks for your recent purchase of [your product name]. We hope you are enjoying it. We noticed you might also be interested in [recommended product name]. It is a great complement to [your product name] and we think you will love it. Click here to check it out: [recommended product URL]. If you have any questions, just reply to this message and we will be happy to help. Reply STOP to opt out.</code></pre>
+<p>[L1297.040]</p>
+<ul>
+<li>Discount difference: SMS Bump uses an optional 10% code in the second message, while SMS Pump uses a fixed $10 code. Use the one that matches the tool you run. [L0634.022, L1297.025]</li>
+</ul>
+<h2 id="win-back">Win-Back</h2>
+<h3 id="sms-bump-procedure-1">SMS Bump procedure</h3>
+<p>Trigger: Days without order, set to 30. The source describes two routes to the same setting.</p>
+<p>Route A:</p>
+<ol type="1">
+<li>Click Edit on the customer win-back flow. [L0476.021]</li>
+<li>Remove any extra delay step, so the trigger alone controls timing. [L0476.021]</li>
+<li>Set the trigger to Days without order and enter 30. [L0476.021]</li>
+<li>Edit the SMS: paste the template, create a discount code with the desired amount (example: 15% on the next purchase), add the homepage link and an opt-out instruction. [L0476.021]</li>
+<li>Click save. [L0476.021]</li>
+</ol>
+<p>Route B (adds a delay, then removes it):</p>
+<ol type="1">
+<li>Click edit on the Customer win-back flow. [L0634.023]</li>
+<li>Add a step with a delay in days set to 30. [L0634.023]</li>
+<li>Edit the SMS with the win-back template and create a discount code with the chosen amount. [L0634.023]</li>
+<li>Click save. [L0634.023]</li>
+<li>Remove the extra delay step, set Customer win-back with days without order to 30, then save. [L0634.023]</li>
+</ol>
+<p>Template:</p>
+<pre><code>Hey [first name], we noticed that it has been a while since you made a purchase from our store. We miss you. To show how much we value you, we are offering a special deal just for you: use code [discount code] at checkout to save 15 percent on your next purchase. Click here to check out what is new: [home page link]. Hope to see you back soon. Reply STOP to opt out.</code></pre>
+<p>[L0634.024]</p>
+<h3 id="sms-pump-procedure-1">SMS Pump procedure</h3>
+<ol type="1">
+<li>Create a new flow, choose the order created trigger, and add a delay of 10 days. [L1297.026, L0477.024]</li>
+<li>Add an SMS action with the win-back text and a $15 discount code, then add the website URL (replace with store URL). [L1297.026, L0477.024]</li>
+<li>Save and name the flow "customer win back sequence". [L1297.026, L0477.024]</li>
+<li>Add a delay of 30 days and a second SMS with a $15 discount or more, a new arrivals message and a store link. [L1297.026, L0477.024]</li>
+<li>Include the message "we hope to see you back soon." [L0477.024]</li>
+</ol>
+<p>Template:</p>
+<pre><code>Hey [first name], we noticed it has been a while since your last purchase from [store name]. We miss you. To show how much we value you, here is a special deal just for you: use code [discount code] to save $15 on your next order. Click here to see what is new: [store URL]. We hope to see you back soon. Reply STOP to opt out.</code></pre>
+<p>[L1297.041]</p>
+<h3 id="formula">Formula</h3>
+<p>Note the time since the last order, express that you miss the customer, offer a discount for the next purchase, link to new products and include an opt-out line. Keep the offer modest and specific.</p>
+<ul>
+<li><p>Example 1: "Hi Jo, it has been a while since your last order. Here is 15% off your next order with code COMEBACK15: link. Reply STOP to opt out."</p></li>
+<li><p>Example 2: "We have new arrivals you may like, Mia. Use code WELCOMEBACK for 15% off at checkout: link. Reply STOP to unsubscribe." [L0476.024]</p></li>
+<li><p>Trigger difference: SMS Bump uses days without order (30), while SMS Pump uses the order-created trigger with a 10-day first delay. Both put the second message at 30 days. [L0476.021, L0634.023, L1297.026, L0477.024]</p></li>
+<li><p>Discount difference: SMS Bump uses a percentage (15%), while SMS Pump uses $15. [L0634.024, L1297.041]</p></li>
+</ul>
+<h2 id="vip-and-loyalty-sms">VIP and Loyalty SMS</h2>
+<p>Confirmation for a VIP upgrade:</p>
+<pre><code>You made it into the VIP group! Here&#39;s your bumped-up 15% discount code as promised. Tap this link to unlock it and start shopping: {DISCOUNT_LINK} *Applied automatically at checkout. Reply STOP if you&#39;d like to unsubscribe.</code></pre>
+<p>[L1470.008]</p>
+<ul>
+<li>The VIP phone-number step offers an extra 5% in exchange for a phone number after email signup. [L1213.063]</li>
+</ul>
+<h2 id="message-formatting-and-character-limits">Message Formatting and Character Limits</h2>
+<h3 id="sender-and-layout">Sender and layout</h3>
+<ul>
+<li>Start each SMS with the brand name followed by a colon, so the recipient knows the sender before reading the offer. Keep the brand name short, so it leaves room for the offer and the link within the character limit. [L1470.025]</li>
+<li>In the Klaviyo SMS editor, turn on "Automatically shorten links" and add a blank line before the final sentence so the message does not look cramped. [L1470.010]</li>
+</ul>
+<h3 id="character-counting">Character counting</h3>
+<ul>
+<li>Klaviyo's SMS editor counts characters against 160 for a single message. Longer messages are sent as multiple parts, and the counter then shows a 306-character limit for two parts. Shorten the text where possible, so the message stays within one 160-character part. [L1470.026]</li>
+<li>A draft with a link read 190 of 306, which splits the message. Check the counter before saving. [L1470.010, L1470.026]</li>
+</ul>
+<h3 id="reply-line-and-help">Reply line and help</h3>
+<ul>
+<li>Include a reply line for questions in each message, such as "If you have any questions, just reply to this message and we will be happy to help." [L0634.018, L0634.021, L0634.022]</li>
+<li>For personal tone, a phone number is personal, so write as one person who is ready to answer, not as a broadcast. [L0363.074, L0634.019]</li>
+</ul>
+<h2 id="campaign-settings-and-tool-checks">Campaign Settings and Tool Checks</h2>
+<ul>
+<li>For a one-off SMS offer update in Klaviyo, turn off Smart Sending and Quiet Hours in the SMS step. The message then sends at its scheduled point in the flow instead of being held. [L1470.006]</li>
+<li>Source conflict: L0363.075 requires quiet hours and permitted send times, while L1470.006 turns Quiet Hours off for a one-off offer update. Check the permitted send times in your market before turning Quiet Hours off. [L0363.075, L1470.006]</li>
+<li>Check the Optimonk Next-page settings: Conversion closed, campaign goal reached, Smart sync on. [L0418.002]</li>
+<li>Name every Optimonk page before setting up navigation. [L0418.033]</li>
+</ul>
+<h2 id="testing-sms-against-email">Testing SMS Against Email</h2>
+<h3 id="procedure-2">Procedure</h3>
+<ol type="1">
+<li>Set up an SMS message on the abandoned-cart flow first. [L0949.044] (older, 2021-22)</li>
+<li>Compare open rate, click-through rate and purchases from SMS against the same flow in email. [L0949.044] (older, 2021-22)</li>
+<li>Expand SMS only if it performs better or adds value your email cannot. [L0949.044] (older, 2021-22)</li>
+</ol>
+<h3 id="practice">Practice</h3>
+<ul>
+<li>Use SMS and email together and compare their performance across campaigns. [L1213.062]</li>
+<li>Build SMS and email flows as automated sequences, with A/B testing built in from the start. [L0041.014]</li>
+<li>Test the Optimonk pop-up live before relying on it, enabling the app embed in the Shopify theme. [L0418.002]</li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>SMS Bump and Postscript are Shopify SMS tools that are broadly similar, so the way you use SMS matters more than which tool you pick. Drip and some email autoresponders also offer SMS features. [L0949.046] (older, 2021-22)</li>
+<li>TxtCart is an SMS cart recovery app. It is easy to set up, and the author reported a 50x ROAS during the free trial. The author said that result was strong enough that other SMS recovery apps were no longer needed. This is a single reported trial result, not a benchmark. [L1299.019]</li>
+</ul>
+<h2 id="summary-flow-timing-and-discounts">Summary: Flow Timing and Discounts</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Flow</th>
+<th>Tool</th>
+<th>Trigger and timing</th>
+<th>Discount</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abandoned checkout, SMS 1</td>
+<td>SMS Bump</td>
+<td>15 minutes</td>
+<td>None</td>
+<td>L0476.019, L0634.017, L0634.018</td>
+</tr>
+<tr>
+<td>Abandoned checkout, SMS 2</td>
+<td>SMS Bump</td>
+<td>2 hours</td>
+<td>10% (auto-generated)</td>
+<td>L0476.019, L0634.019</td>
+</tr>
+<tr>
+<td>Abandoned checkout, SMS 3</td>
+<td>SMS Bump</td>
+<td>20 hours</td>
+<td>20% (auto-generated)</td>
+<td>L0476.019, L0634.020</td>
+</tr>
+<tr>
+<td>Abandoned checkout</td>
+<td>SMS Pump</td>
+<td>15 min, 2 h, 20 h</td>
+<td>10%, then 20%</td>
+<td>L0477.022, L1297.024</td>
+</tr>
+<tr>
+<td>Post-purchase upsell, SMS 1</td>
+<td>SMS Bump</td>
+<td>Immediately</td>
+<td>None</td>
+<td>L0476.020, L0634.021</td>
+</tr>
+<tr>
+<td>Post-purchase upsell, SMS 2</td>
+<td>SMS Bump</td>
+<td>12 hours</td>
+<td>Optional 10%</td>
+<td>L0476.020, L0634.022</td>
+</tr>
+<tr>
+<td>Post-purchase upsell</td>
+<td>SMS Pump</td>
+<td>1 hour, then 12 hours</td>
+<td>Fixed $10</td>
+<td>L0477.023, L1297.025</td>
+</tr>
+<tr>
+<td>Win-back</td>
+<td>SMS Bump</td>
+<td>Days without order: 30</td>
+<td>15%</td>
+<td>L0476.021, L0634.023, L0634.024</td>
+</tr>
+<tr>
+<td>Win-back</td>
+<td>SMS Pump</td>
+<td>Order created, then 10 days; second at 30 days</td>
+<td>$15, then $15 or more</td>
+<td>L0477.024, L1297.026, L1297.041</td>
+</tr>
+</tbody>
+</table></div>
+</article><nav class="pn"><a href="../../15-email-and-sms/09-post-purchase-transactional-and-retention-flows/"><span class="k">&larr; Previous</span><span class="v">Post-Purchase, transactional and retention flows</span></a><a class="nx" href="../../15-email-and-sms/11-subject-lines-preview-text-and-sender-name/"><span class="k">Next &rarr;</span><span class="v">Subject lines, preview text and sender name</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

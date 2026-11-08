@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>Privacy Policy for Coinclock</title>
+<style>
+:root{color-scheme:light;--bg:#fff;--bar:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;
+--link:#0071e3;--chev:#aeaeb2;--ring:rgba(0,0,0,.1);--press:#f5f5f7;
+--grad:linear-gradient(96deg,#0071e3 0%,#5e5ce6 52%,#9b3fd6 100%);
+--fbg:#f1f1f1;--fcopy:#4c4c4c;--fline:#e5e5e5;--flogo:#9292a1;--flink:#0066cc;--fog:255,255,255}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text",
+"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;
+display:flex;flex-direction:column;min-height:100vh}
+body>main{flex:1 0 auto;width:100%}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:6px}
+p,li{overflow-wrap:break-word}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.nb{position:-webkit-sticky;position:sticky;top:0;z-index:7;display:flex;align-items:center;justify-content:center;
+height:54px}
+.nb a{position:absolute;left:16px;top:5px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;
+border-radius:50%;color:#000;-webkit-tap-highlight-color:transparent}
+.nb a:hover{text-decoration:none}.nb a:active{opacity:.6}
+.nb i{flex:none;width:11px;height:19px;margin-left:-3px;background:currentColor;-webkit-mask:var(--back) center/11px 19px no-repeat;
+mask:var(--back) center/11px 19px no-repeat}
+.nb b{max-width:calc(100% - 136px);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#000;
+font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.navfx{position:fixed;top:0;left:0;right:0;z-index:6;height:104px;pointer-events:none;opacity:0;transition:opacity .2s}
+.navfx::before,.navfx::after{content:"";position:absolute;inset:0}
+.navfx::before{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+-webkit-mask-image:linear-gradient(#000 67%,transparent 88%);mask-image:linear-gradient(#000 67%,transparent 88%)}
+.navfx::after{background:linear-gradient(rgba(var(--fog),.85) 56%,rgba(var(--fog),0))}
+.navfx.on{opacity:1}
+main.wrap{padding-top:16px;padding-bottom:64px}
+h1{margin:0;font-weight:700;font-size:clamp(34px,8.6vw,48px);line-height:1.08;letter-spacing:-.028em}
+h2{font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.018em}
+.hero h1{font-size:clamp(40px,10.6vw,64px);line-height:1.05}
+.grad{color:var(--link)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){.grad{background:var(--grad);
+-webkit-background-clip:text;background-clip:text;color:transparent}}
+.lead{margin:18px 0 0;font-size:21px;line-height:1.38;color:var(--muted);letter-spacing:-.02em}
+.lead.second{margin-top:10px;font-size:17px;line-height:1.47;letter-spacing:-.01em}
+.sec{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:52px 0 20px;padding-bottom:8px;
+border-bottom:1px solid var(--line)}
+.sec h2{margin:0;font-size:28px;line-height:1.14;letter-spacing:-.022em}
+.sec a{display:inline-flex;align-items:center;min-height:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:20px 0}
+.card h2{margin:0 0 10px}
+.card p{margin:0 0 14px}.card>:last-child{margin-bottom:0}
+.list{padding:0;overflow:hidden}
+.row{position:relative;display:flex;align-items:center;gap:16px;min-height:52px;padding:12px 44px 12px 16px;
+color:var(--text)}
+.row:hover{text-decoration:none}.row:active{background:var(--press)}
+@media (hover:hover){.row:hover{background:var(--press)}}
+.row::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-5px;
+border:solid var(--chev);border-width:2px 2px 0 0;transform:rotate(45deg)}
+.row+.row::before{content:"";position:absolute;top:0;right:0;left:92px;border-top:1px solid var(--line)}
+.row img{flex:none;width:60px;height:60px;border-radius:13.5px;box-shadow:0 0 0 1px var(--ring)}
+.row .t{display:flex;flex-direction:column;min-width:0}
+.row strong{font-weight:600;line-height:1.3}
+.row .t span{margin-top:2px;color:var(--muted);font-size:15px;line-height:1.35;letter-spacing:-.005em}
+.links .row+.row::before{left:16px}
+.checks{margin:0;padding:4px 20px;list-style:none}
+.checks li{display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.checks li+li{border-top:1px solid var(--line)}
+.checks svg{flex:none;width:22px;height:22px;margin-top:1px;color:var(--link)}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:980px;
+font-size:17px;line-height:1.2;background:#0071e3;color:#fff}
+.btn:hover{text-decoration:none}.btn:active{opacity:.85}
+.btn.ghost{background:transparent;color:var(--link);box-shadow:inset 0 0 0 1px currentColor}
+.app-hero .icon{display:block;width:112px;height:112px;border-radius:25px;margin:0 0 24px;
+box-shadow:0 0 0 1px var(--ring),0 4px 16px rgba(0,0,0,.12)}
+.app-hero h1 span{display:block;margin-top:8px;color:var(--muted);font-size:22px;font-weight:600;line-height:1.25;
+letter-spacing:-.018em}
+.app-hero .lead{color:var(--text);font-weight:600;font-size:19px;letter-spacing:-.015em;margin-top:16px}
+.app-hero .promo{margin:12px 0 0;color:var(--muted)}
+.app-hero+.card,.app-hero+.feat{margin-top:36px}
+.feat h2{margin:0 0 12px}.feat .card{margin:0}
+.legal{max-width:680px}
+.legal h1{font-size:clamp(32px,8.2vw,44px)}
+.legal h1+p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.legal h2{margin:40px 0 10px}.legal h3{font-size:17px;margin:24px 0 6px}
+.legal p{margin:0 0 14px}.legal ul{margin:0 0 14px;padding-left:22px}.legal li{margin:8px 0}
+.legal .card{margin:28px 0}.legal .card h2{margin-top:0}
+.legal a.url{overflow-wrap:anywhere;-webkit-hyphens:none;hyphens:none}
+.legal .group{padding:0}.legal .group section{padding:20px}
+.legal .group section+section{border-top:1px solid var(--line)}
+.legal .group h2{margin:0 0 8px;font-size:19px}.legal .group p:last-child{margin-bottom:0}
+.legal section:not(.card)+.card,.legal h1+p+.card{margin-top:32px}
+.foot{display:flex;justify-content:center;background:var(--fbg);padding:0 0 8px;color:var(--fcopy);
+font:300 13px/20px -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+letter-spacing:-.208px}
+.foot nav{display:flex;flex-direction:column;width:100%;max-width:800px;padding:12px 40px 0}
+.foot .logo{display:block;align-self:center;height:18px;margin:12px 0 8px;color:var(--flogo)}
+.foot .logo svg{display:block;width:18px;height:18px}
+.foot p,.foot .fl{display:block;margin:0;padding:8px 20px;text-align:center;border-bottom:1px solid var(--fline)}
+.foot .fl{color:var(--flink)}.foot .fl:last-child{border-bottom:0}
+
+body:has(.ios){background:#f2f2f7;--fog:242,242,247}
+main:has(.ios){max-width:none;padding:0}
+.ios{max-width:600px;margin:0 auto;color:#000;letter-spacing:normal;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+.ios a{color:#000;text-decoration:none}.ios a:hover{text-decoration:none}
+.ios h1{margin:0 0 7.67px;padding:13.33px 16px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.ios .grp{margin:0 16px;background:#fff;border-radius:26px;overflow:hidden}
+.ios .grp+.grp,.ios #apps{margin-top:35px}
+.ios .me{position:relative;display:flex;align-items:center;height:90px;padding:0 16px}
+.ios .av{flex:none;width:60px;height:60px;border-radius:50%;background:linear-gradient(#b7b7b7,#323232);color:#fff;
+font:900 28px/60px ui-rounded,-apple-system,BlinkMacSystemFont,"SF Pro Rounded",sans-serif;text-align:center;letter-spacing:0}
+.ios .tx{display:flex;flex-direction:column;margin-left:8px;padding-top:.38px;min-width:0}
+.ios .tx strong{font:600 20px/24px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;letter-spacing:0}
+.ios .tx span{margin-top:1.66px;color:#7f7f7f;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .rw{position:relative;display:flex;align-items:center;height:52px;padding-left:13.67px}
+.ios .rw img:not(.chev){flex:none;width:28.67px;height:28.67px;border-radius:7px;margin-right:13.66px;
+box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
+.ios .rw span{position:relative;top:.33px;font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:48px}
+.ios .rw:not(:last-child)::after{content:"";position:absolute;left:56px;right:16px;bottom:0;height:1px;background:#e7e7e8}
+.ios .rw[hidden]{display:none}
+.ios .chev{position:absolute;right:18.33px;top:50%;width:7px;height:12px;margin-top:-6px}
+.ios a,.ios button{-webkit-tap-highlight-color:transparent}
+.ios .sbw{position:-webkit-sticky;position:sticky;bottom:28px;z-index:5;margin:35px 28px 28px}
+.ios .sbw::before{content:"";position:absolute;left:50%;width:100vw;margin-left:-50vw;top:-24px;bottom:-28px;
+pointer-events:none;background:linear-gradient(rgba(242,242,247,0),rgba(242,242,247,.25) 21%,rgba(242,242,247,.6) 48%,
+rgba(242,242,247,.77) 74%)}
+.ios .sb{position:relative;display:flex;align-items:center;gap:10.67px;height:48px;padding:0 22.66px 0 19.33px;
+border-radius:24px}
+.glass{background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
+backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
+box-shadow:inset 0 0 0 .67px rgba(255,255,255,.95),inset 1.5px 1.5px 1px -1px rgba(255,255,255,1),
+inset -1.5px -1.5px 1px -1px rgba(255,255,255,.8),inset 0 0 14px rgba(255,255,255,.6),0 0 0 .33px rgba(0,0,0,.06),
+0 12px 40px rgba(0,0,0,.12)}
+/* App-Seite wie die Einstellungen-Seite „Accessibility“ (Davids Bild, 26.10.2026, 3 px je pt gemessen): Karte 22,67 pt
+   unter der Leiste, Symbol 60 pt, Name 22 pt fett, Beschreibung 17/22 pt in #7f7f7f; Abschnittstitel 17 pt halbfett
+   #85858a bei x 32, 27,5 pt unter der Karte und 6 pt über der nächsten */
+.ios .hd{margin-top:22.67px;padding:16.33px 16px 14.8px}
+.ios .ai{display:block;width:60px;height:60px;border-radius:13.5px;box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
+.ios .an{margin:13.3px 0 0;padding:0;color:#000;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.ios .ad{margin:2.9px 0 0;color:#7f7f7f;font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .sh{margin:0;padding:27.5px 32px 6.17px;color:#85858a;font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;
+letter-spacing:0}
+.ios .sf{margin:0;padding:7px 32px 0;color:#7f7f7f;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .sf a{color:#0088ff}
+.ios .ft{height:auto;min-height:52px;padding-top:14px;padding-bottom:14px}
+.ios .ft span{white-space:normal;padding-right:16px}
+.ios .app{padding-bottom:40px}
+.sugg{display:none}.ios .xb{display:none}
+/* Suchansicht wie in den iOS-Einstellungen (Davids Bild 26.10.2026, 3 px je pt gemessen): weißer Grund, oben
+   „Suggestions“ 17 pt halbfett #8a8a8d bei x 17, Zeilen 61 pt ohne Karte, Symbol bei x 16, Text bei x 57, Linie von
+   57 bis 376,67 auch unter der letzten Zeile, keine Pfeile; Suchleiste von x 12 bis 321, daneben runder X-Knopf 48 pt
+   (SF Symbol xmark, mittel, Maßstab groß, 17 pt), beide 14 pt über der Tastatur */
+html.srch body{background:#fff}
+html.srch .navfx,html.srch .foot,html.srch .ios h1,html.srch .ios #me{display:none}
+html.srch .ios .sugg{display:block;margin:0;padding:35px 17px 9px;color:#8a8a8d;
+font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+html.srch .ios .sugg.q{display:none}
+html.srch .ios #apps{margin:0;border-radius:0;background:transparent}
+html.srch .ios .rw{height:61px;padding-left:16px}
+html.srch .ios .rw img:not(.chev){margin-right:12.33px;box-shadow:none}
+html.srch .ios .rw::after{content:"";position:absolute;left:57px;right:16.33px;bottom:0;height:1px;background:#e7e7e8}
+html.srch .ios .chev{display:none}
+html.srch main:has(.ios){padding-bottom:130px}
+html.srch .ios .sbw{position:fixed;left:12px;right:72px;bottom:calc(14px + var(--kb,0px));margin:0}
+html.srch .ios .sbw::before{right:-72px;background:linear-gradient(rgba(255,255,255,0),rgba(250,250,250,.92) 55%)}
+html.srch .ios .xb{position:fixed;right:12px;bottom:calc(14px + var(--kb,0px));z-index:6;display:flex;align-items:center;
+justify-content:center;width:48px;height:48px;margin:0;padding:0;border:0;border-radius:50%;cursor:pointer}
+.ios .xb img{display:block}
+.ios .sb img{flex:none;display:block}
+.ios .sb img:last-child{position:relative;top:-.67px}
+.ios .sb input{flex:1;min-width:0;height:44px;margin:0;padding:0;border:0;background:transparent;color:#000;
+font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;outline:0;
+-webkit-appearance:none;appearance:none}
+.ios .sb input::placeholder{color:#707073;opacity:1}
+.ios .sb input::-webkit-search-cancel-button{-webkit-appearance:none}
+:root{--back:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAA5CAYAAAC4YUKZAAACWUlEQVR42sXZS4hPcRQH8I8Z4/0OERYUyiywkIWIKCVKiFCKDVZkpWwkhWwkC0nZIIqFsCE1XnmMjIQyCiVRQh7jbcbmTk0TM+df94xTv92t36df/e4933OrdW1NwjJMxlt86MrNu2EPmtFSrB/Y3JWAQ202b79mVScDqnEE6zp4piUT0B0nOjiB1nWmexKgB05iceDZhgxAL5wPnEALXmJo2YA+uBgEvEJt2YD+uBwEvMD4sgEDcSMIeIqxZQOG4E4Q8BijywYMx/0g4AFGlA0YiUdBwN2MWzAGT4KAmxhUNmAcngUBV4pbU2pNKK5XBHCxeG+UWrXFCyYCOIeeZQOm4E0QcAo1ZQOm4V0QcLT4fJdaM4oWLAI4jKqyAXPwOQg4UHRQpdZ8fAkC9mb0A4vwLQjYkQFYVnTBEcDWDMBq/AoCNmUA1uJ3YPNmrM8AzAmewC+syWrNrwUAP7E8Mx98DSBWZMe01wHEJfTNROwP3oirGJCFGFBBn3gLg7Mgw3AvCGnI6Bfbtu71QcjDjM65bYi5HoQ0ZmSI1uqHuiDkWUaaaq3euFBBrpyQBemJs/8zYbdWDU4HIW8wNXPsczwIeY/pWZCqYgAWgXzEzMxR4MEgpAlzM781+4KQr1iQCdkdhHzHkkzI9iDkJ1ZmQrYGIb+LPjatNgchzdiYCdnQboLf0dqSCYnGhhZsy4SsqiBA7cyELK0gSu7KhCysIFTPy/rp0ojbRcDubHTUnJ1pZuNTJydxpioZUVcMXD528Ey9Lqp/Dd+eZ+aYv9XEYr7ZVDQ/xzAK/gAQcR7593xSwAAAAABJRU5ErkJggg==)}
+</style></head>
+<body>
+<div class="navfx" id="fx" aria-hidden="true"></div>
+<header class="nb"><a class="glass" href="../" aria-label="Back to Coinclock"><i aria-hidden="true"></i></a><b>Privacy Policy for Coinclock</b></header>
+<main class="wrap">
+<article class="legal"><h1>Privacy Policy for Coinclock</h1>
+<p>Last updated: October 2026</p>
+<section class="card"><h2>Controller</h2>
+<p>David Lichters<br>Maurenbrecherstraße 16<br>47803 Krefeld<br>Email: <a href="mailto:support@lichtersapps.com">support@lichtersapps.com</a></p></section>
+<section><h2>In short</h2>
+<p>Coinclock works without an account and without our own server. Everything you enter stays on your device. We do not collect usage data and use no tracking, advertising or analytics.</p></section>
+<section><h2>Data processed by the app</h2>
+<p>In Coinclock you enter your jobs or clients (name, optionally employer/client, hourly rate, premium, overtime and break rules), your working times (start, end, breaks, public holiday flag, notes), optionally your name for timesheets, as well as goals and an earnings limit of your choice. For the “Forgot to clock out?” reminder the app uses local iOS notifications: they are scheduled on your device, not sent through a server. Timesheets (PDF/CSV) and the backup of all your data (JSON file) are created on your device and only shared when you share them yourself. The app does not use iCloud sync.</p>
+<p>This data is stored only locally in the app’s protected storage on your device. It is not transmitted to us or to third parties. Depending on your device settings it is part of your device backup (iCloud or computer), which Apple or you manage.</p></section>
+<section><h2>Sharing</h2>
+<p>When you send a document by email, message or the share menu, this happens through the app you choose. You decide on recipients and content. You are responsible for sharing data of third parties (e.g. your customers).</p></section>
+<section><h2>Permissions</h2>
+<p>The app only asks for permission to send notifications: the first time you clock in while the reminder is switched on. You can revoke it anytime in iOS Settings. Coinclock uses no other permissions (camera, photos, location, contacts).</p></section>
+<section><h2>Purchases and subscriptions</h2>
+<p>The basic features of Coinclock are free. You can unlock Pro with a subscription (yearly or monthly) or with a one-time purchase (Lifetime). All purchases are handled entirely through your Apple Account and the App Store; Apple’s terms apply, in particular the Standard License Agreement (EULA): <a class="url" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">https://www.apple.com/legal/internet-services/itunes/dev/stdeula/</a>. We receive no payment or personal data, only the purchase confirmation signed by Apple, which the app checks on your device to unlock Pro. Apple’s privacy policy applies: <a class="url" href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></p>
+<ul><li><strong>Auto-renewal:</strong> Subscriptions renew automatically for the chosen period at the price shown unless you cancel at least 24 hours before the end of the current period. Payment is charged to your Apple Account.</li><li><strong>Cancellation:</strong> anytime in your Apple Account settings under “Subscriptions” (in the app also via “Manage subscriptions”). Pro stays active until the end of the paid period; after that the free version applies again and your data is kept.</li><li><strong>Free trial:</strong> For new subscribers, the yearly subscription starts with a free trial of 7 days. If you cancel at least 24 hours before it ends, you won’t be charged; otherwise it automatically converts into the paid yearly subscription. The trial is available once per Apple Account.</li><li><strong>Lifetime:</strong> a one-time purchase with no renewal and no further costs.</li><li><strong>Refunds</strong> are handled by Apple only (<a class="url" href="https://reportaproblem.apple.com">https://reportaproblem.apple.com</a>).</li></ul></section>
+<section><h2>Email support</h2>
+<p>If you email us, we process your address and message only to answer your request (Art. 6(1)(b) and (f) GDPR) and delete them when no longer needed.</p></section>
+<section><h2>Your rights</h2>
+<p>You have the right to access, rectification, erasure, restriction, data portability and objection (Art. 15-21 GDPR) and the right to lodge a complaint with a supervisory authority. Since your app data stays on your device, you can change, export or delete it there at any time.</p></section>
+<section><h2>Changes</h2>
+<p>We update this policy when the app or the legal situation changes. The version shown in the app applies.</p></section></article>
+</main>
+<footer class="foot"><nav aria-label="Legal"><p>Copyright © 2026 Lichters Apps. All rights reserved.</p><a class="fl" href="../../terms/">Terms of Service</a><a class="fl" href="../privacy/">Privacy Policy</a><a class="fl" href="../../imprint/">Imprint</a></nav></footer>
+<script>(function(){var fx=document.getElementById("fx");function u(){fx.classList.toggle("on",(window.scrollY||0)>2)}
+addEventListener("scroll",u,{passive:true});u()})()</script>
+</body></html>

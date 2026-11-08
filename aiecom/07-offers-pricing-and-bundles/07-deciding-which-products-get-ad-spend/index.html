@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Deciding which products get ad spend | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 7.7: Deciding which products get ad spend.">
+<link rel="canonical" href="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/07-deciding-which-products-get-ad-spend/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Deciding which products get ad spend | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 7.7: Deciding which products get ad spend."><meta property="og:url" content="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/07-deciding-which-products-get-ad-spend/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">7. Offers, pricing and bundles</a> &rsaquo; <a href="../../../ecom/07-offers-pricing-and-bundles/07-deciding-which-products-get-ad-spend/">Plain version</a></div><h1>7.7 Deciding which products get ad spend</h1><article><h2 id="margin-gate-before-any-ad-spend">Margin gate before any ad spend</h2>
+<ul>
+<li>Paid traffic goes only to products where enough money remains after supplier cost. The core test is that cost of goods must be no more than half of MAP, so at least 50 percent of MAP is left after cost. [L0359.064]</li>
+<li>MAP must be at least 2X wholesale before a product is advertised. Older advice (2022): below that, sell the product only through free traffic, and give ads only to products with enough margin to cover ad spend. [L0963.065, L0429.045]</li>
+<li>Older advice (2021): if the gap between MAP and cost of goods is only about 30 percent, the product is usually not worth listing. Ask the supplier for a higher margin first, and expect to pass if the supplier refuses. [L0247.040]</li>
+<li>Older advice (2019): if the gap between wholesale and MAP is about 20 percent or less, keep the product on the site but run no paid traffic, because paid traffic makes profit almost impossible at that margin. [L0663.056]</li>
+<li>Older advice (2019): if margins after shipping are only about 10 to 15 percent, keep the product listed but stop advertising it. If competitors seem to advertise it profitably, ask your supplier for a different price sheet. [L0663.057]</li>
+<li>Products with margins under 10 percent, or below your goal (for example under 25 percent), do not need to stay on the store. Remove them, apply a higher markup (knowing they will likely not sell), or keep only the high-margin variants from that supplier. [L0253.039]</li>
+<li>Healthy margins are 25 to 30 percent or higher. [L0255.048]</li>
+<li>Check the spread before adding a product. If the gap between wholesale cost and MAP is too narrow to cover heavy-item freight and advertising, do not list it. [L0667.069]</li>
+<li>If the spread between MAP and wholesale is too small to cover shipping and ads, run no paid ads on that product. Rely on free traffic for it, or negotiate better wholesale prices first. [L0966.046]</li>
+<li>Older advice (2022): use the after-shipping spread of each product to decide where ad money goes. Push products with the most money left after shipping, and reduce spend on thin-margin products. [L0854.030]</li>
+</ul>
+<p><strong>Quick reference</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Action</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAP at least 2X wholesale (cost at or below 50% of MAP)</td>
+<td>Eligible for paid ads. Below this, free traffic only.</td>
+<td>L0359.064, L0963.065, L0429.045</td>
+</tr>
+<tr>
+<td>Gap of about 30% between MAP and cost</td>
+<td>Usually not worth listing. Ask for a higher margin; pass if refused.</td>
+<td>L0247.040</td>
+</tr>
+<tr>
+<td>Gap of about 20% or less</td>
+<td>Keep on site, no paid traffic</td>
+<td>L0663.056</td>
+</tr>
+<tr>
+<td>10 to 15% after shipping</td>
+<td>Keep listed, stop advertising</td>
+<td>L0663.057</td>
+</tr>
+<tr>
+<td>Under 10%, or below a 25% goal</td>
+<td>Remove, raise price, or keep only high-margin variants</td>
+<td>L0253.039</td>
+</tr>
+<tr>
+<td>About 9% after product cost and merchant fees</td>
+<td>Remove or raise price; no room for ads</td>
+<td>L1281.034, L1281.035</td>
+</tr>
+<tr>
+<td>25 to 30% or higher</td>
+<td>Healthy; prioritise ad budget by gross margin dollars</td>
+<td>L0255.048</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The sources disagree on the 30 percent and 20 percent gaps. The 2021 advice would pass on a 30 percent gap when deciding whether to list a new product. The 2019 advice keeps a 20 percent gap product on the site. Both agree that the product gets no paid traffic. Read the 2021 rule as the test for new listings and the 2019 rule as the treatment for products already on the store. [L0247.040, L0663.056]</li>
+<li>Both the 30 percent gap and the 20 percent gap sit below the 50 percent line in the core test, so neither qualifies for ads. [L0359.064, L0247.040, L0663.056]</li>
+</ul>
+<h2 id="price-and-profit-floors-for-paid-traffic">Price and profit floors for paid traffic</h2>
+<ul>
+<li>Older advice (2020): do not list products below a minimum profit of $200, even from brands from suppliers you already have approved. Focus selling only on the products from those suppliers that meet the profit threshold. [L0245.069]</li>
+<li>Do not spend on ads for products priced under $200. Exclude them from ad campaigns and use them only as upsells or cross-sells. [L0359.066]</li>
+<li>Filter products by net profit per sale, not by revenue or percentage margin alone. Products with a low dollar profit should be excluded from ad campaigns even if they sell well. [L0856.041]</li>
+<li>Choosing a minimum net profit threshold is a business decision. Use a fixed dollar amount of net profit per sale (for example $200 or $300) rather than a percentage, and base it on supplier margins and historical sales. The threshold is not universal. [L0856.040]</li>
+<li>A low-priced product (for example $100) with a moderate percentage margin still yields little profit per sale. Consider excluding products under a set price point from paid campaigns, unless they are add-ons. [L0856.042]</li>
+<li>Products priced below a set point (for example under $1,000) can be excluded from alpha and beta campaigns, so the budget goes to higher-value items. [L0856.043]</li>
+<li>Products priced between $3,000 and $5,000 are still eligible for paid ads when their margins meet the criteria. Measure conversion rates for these products on their own. [L0970.109]</li>
+<li>Older advice (2019): do not pay for traffic to low-price products that are too small to earn back ad costs. Keep them on a high-priced store as free bonuses instead. [L1002.035]</li>
+<li>Facebook scaling depends on profit per sale. Tests of offers, price, upsells and average order value raise profit. The product must earn enough margin that return on ad spend stays profitable even when it drops. [L0995.014]</li>
+<li>How to read the dollar figures: $200 is the floor in the sources, both as minimum profit for products from approved brands (older) and as the minimum price for ads. $300 and $1,000 are examples of stricter cut-offs for a store that has its own sales history. Set your own figure from supplier margins and past sales. [L0245.069, L0359.066, L0856.040, L0856.043]</li>
+</ul>
+<h2 id="ad-spend-cap-as-a-share-of-map">Ad spend cap as a share of MAP</h2>
+<ul>
+<li>Spend up to 10 percent of MAP on paid ads per sale. For a $1,000 MAP, the maximum is $100 in ads per sale. [L0359.065]</li>
+<li>Older advice (2020): ad spend per sale should be capped at about 10 percent of MAP. For example, the spend limit on a $600 sale is $60. Anything higher leaves too little margin for operating costs. [L0967.071]</li>
+<li>Check the required return before scaling. With a 30 to 35 percent supplier discount and shipping still paid, reaching 20 percent profit required a ROAS of about 12 to 14, which is unrealistic for most stores. Fix margins in pricing or supplier terms before scaling paid traffic. [L0807.016]</li>
+</ul>
+<h2 id="organic-only-products">Organic-only products</h2>
+<ul>
+<li>Products priced around $100 to $150, with a net profit of about $50, can go on an organic-only collection. Promote them through email and social promotions for events such as Black Friday or the 4th of July, instead of paid traffic. [L0359.067]</li>
+<li>Older advice (2020): a supplier promotion of 30 percent off is tricky for dropshipping, because little profit remains after shipping and ad costs. Sell such products through organic traffic, not paid ads. [L0551.055]</li>
+<li>Selling above MAP is reasonable only for products that receive organic traffic only. Never put paid ads behind products sold above MAP. (Older advice, 2021; this statement merges two identical units.) [L0671.050, L0671.189]</li>
+<li>For discounts on products that cannot be matched on price, do not advertise them. Keep them on the site only if they support the store, and spend the budget on products you can compete on. (Older advice, 2021.) [L0968.084]</li>
+<li>Exclude low-margin products from discounts, coupons and free-shipping promotions, and do not spend paid traffic on them. Rely on free traffic for those sales, and put the paid budget toward products with more profit. (Older advice, 2021.) [L0968.077]</li>
+<li>For low-margin products that are not profitable to advertise, follow this procedure:
+<ol type="1">
+<li>Still list the product on the store.</li>
+<li>Do not spend money on paid advertising for them.</li>
+<li>Rely on organic and free traffic.</li>
+<li>If someone finds and purchases organically, margin is still captured. [L0255.049]</li>
+</ol></li>
+</ul>
+<h2 id="google-shopping-rules-for-low-ticket-and-add-on-items">Google Shopping rules for low-ticket and add-on items</h2>
+<ul>
+<li>Older advice (2022): for low-ticket items, do not spend money on Google Shopping campaigns. Include them in Google free product listings to get organic visibility without ad spend. [L0249.037]</li>
+<li>Older advice (2022): accessories sold individually should be removed from Google Shopping ad campaigns but kept in Google Merchant Center for free product listings. Charge shipping for items under a certain threshold (for example $100), rather than offering free shipping. [L0249.038]</li>
+<li>Older advice (2022): accessories priced above $200 can be tested in Google Shopping campaigns. Monitor them so they do not consume the budget meant for the more expensive core products, and lower cost-per-click for them if needed. [L0665.061]</li>
+<li>Read the two 2022 accessory rules together. Individually sold accessories come out of Shopping (L0249.038). The exception is accessories above $200, which may be tested under monitoring (L0665.061). [L0249.038, L0665.061]</li>
+<li>Older advice (2022): if a product's margins become too thin after paid ad costs, remove it from your Google Shopping product feed to avoid wasting budget. Keep it in your catalog for free organic traffic (Google organic search and non-paid Google Product Listings). [L0272.025]</li>
+<li>If competitor listings are priced differently across product tiers, first check whether the higher tier gets impressions, clicks and sales. If it does not, raise the CPC for that tier, or give each tier its own alpha and beta campaign with its own feed. [L0470.091]</li>
+<li>For the lowest-margin supplier's products, raise prices by 20 percent. Exclude those products from Shopping ads, so ad spend does not compete against sellers charging 20 percent less. Keep them on the store, where they add credibility and still sell if customers find them. [L1097.030]</li>
+</ul>
+<h2 id="campaign-budgets-and-bids">Campaign budgets and bids</h2>
+<ul>
+<li>Older advice (2022): start new Google ad campaigns at $10 to $30 per day, not $50 to $100. Raise the budget step by step (for example $30 to $50, then $80 or $100) only when return on ad spend stays well above the target of at least 10x. [L0665.058]</li>
+<li>Older advice (2022): per-day Google ad budgets should follow profitability. A store on $70 per day should first prove profitability at $30, then at $50, then at $70. [L0665.059]</li>
+<li>If high-price products get no impressions while low-price products get heavy traffic, test lowering CPC on the cheap products (for example from 50 cents to 35 cents). Budget then reallocates naturally to the higher-price products. Alternatively, increase CPC on the high-price products. [L0274.020]</li>
+<li>Each product in a Google Shopping campaign should start with the same bid, for example $0.50 CPC. Change bids for each product individually once data shows which products have the best margins and sales. Do not change bids for all products at once. [L1114.050]</li>
+<li>Low-margin products that take heavy ad spend should get a lower CPC, such as $0.30. High-margin products that get clicks but not enough traffic should get a higher CPC, such as $0.75. This is an ongoing process of adjusting bids to find the most profitable level. [L1114.051]</li>
+<li>With healthy margins of 25 to 30 percent or higher, prioritise the paid advertising budget on products with the highest gross margin in dollar amounts, not just percentages, to maximise return on ad spend. [L0255.048]</li>
+</ul>
+<h2 id="excluding-thin-margin-products">Excluding thin-margin products</h2>
+<ul>
+<li>Upload only the products you want to sell from a supplier catalog. Skip those with too little margin, even if the supplier lists them. (Older advice, 2021.) [L0962.107]</li>
+<li>Do not list products that competitors sell at a loss, and do not list products whose margin is negative at MSRP. They are not worth the time. (Older advice, 2021; this statement merges two identical units.) [L0671.044, L0671.183]</li>
+<li>If a supplier requires an inquire-only button and no cart, do not list its products. Google Shopping ads need products that can be bought directly. (Older advice, 2021.) [L0671.196]</li>
+<li>Products whose competitor price is only slightly above wholesale cost, leaving no real profit, should not receive Google ad spend. (Older advice, 2019.) [L1069.048]</li>
+<li>Do not price-match a supplier's MAP products when the margin will not cover it. If ads cannot be afforded at that margin, rely on free traffic sources instead of cutting prices to break-even. (Older advice, 2021.) [L0853.034]</li>
+<li>Older advice (2021-22, Source B): when an order's net margin is very thin, you can raise the product price, start charging for shipping, slow down ad spend on that product, or remove the product from the store. Shipping costs can sometimes almost equal the product cost, so this situation is expected to appear from time to time. [L1201.012]</li>
+</ul>
+<h2 id="map-enforcement-and-non-map-suppliers">MAP enforcement and non-MAP suppliers</h2>
+<ul>
+<li>MAP enforcement by suppliers matters more than the margin figure alone. Products from MAP suppliers can be given ad budget. Non-MAP products should rely on organic traffic. (Older advice, 2022.) [L0429.079]</li>
+<li>Some brands set different MAP prices for stocking and non-stocking dealers. If you cannot match the required price, keep those products on the site without paid ads, and do not spend budget trying to compete on price. (Older advice, 2021.) [L0968.111]</li>
+<li>For suppliers without MAP enforcement, follow this procedure (older advice, 2022):
+<ol type="1">
+<li>Remove products that show only about 9 percent margin after product cost and fees, or raise their price until the margin is acceptable.</li>
+<li>Products with about 20 percent or more margin that you match against competitors can stay listed for organic and free Google traffic, but remove them from paid Shopping campaigns.</li>
+<li>Include in paid Shopping campaigns only the products with strong margins. [L1281.034]</li>
+</ol></li>
+<li>After product cost and merchant fees, the margin must still leave room for an ad budget. A product with a margin of about 9 percent has no room for ads at all. (Older advice, 2022.) [L1281.035]</li>
+</ul>
+<h2 id="negotiating-supplier-terms-to-improve-margins">Negotiating supplier terms to improve margins</h2>
+<ul>
+<li>Negotiating cost of goods with a supplier is a direct way to increase margins when a product's numbers do not work at the current price. [L0855.048]</li>
+<li>Wholesale pricing often has tiered structures based on sales volume. When contacting suppliers, ask whether they have different pricing tiers where you save on wholesale cost based on units sold or annual volume. This opens the negotiation without requiring you to commit or prove yourself first. [L0251.018]</li>
+<li>When you need a better price, ask for the exact price you want. Suppliers often do not expect the request and will frequently comply. Phrase any cancellation threat in a friendly, non-threatening way, since most suppliers also want to keep a profit. [L1472.025]</li>
+<li>Before offering discounts on products with thin margins, renegotiate the supplier pricing first. Discounting a product with a small margin does not fix the margin problem. (Older advice, 2019.) [L0960.036]</li>
+<li>Skip a supplier that offers only about a 10 percent discount after a minimum purchase, because that leaves too little margin for drop-shipping. (Older advice, 2021.) [L0469.074]</li>
+<li>For low-margin products that cannot carry an ad budget, follow this procedure:
+<ol type="1">
+<li>Ask the supplier for tiered or incentive wholesale pricing, framed as a request for better pricing on specific products rather than a complaint.</li>
+<li>Keep products with some margin in the store and list them in free Google product listings.</li>
+<li>Run ads only for products whose margin supports the ad cost. [L0470.075]</li>
+</ol></li>
+</ul>
+</article><nav class="pn"><a href="../../07-offers-pricing-and-bundles/06-pricing-products-from-suppliers-without-map/"><span class="k">&larr; Previous</span><span class="v">Pricing products from suppliers without MAP</span></a><a class="nx" href="../../07-offers-pricing-and-bundles/08-price-testing-and-price-changes/"><span class="k">Next &rarr;</span><span class="v">Price testing and price changes</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

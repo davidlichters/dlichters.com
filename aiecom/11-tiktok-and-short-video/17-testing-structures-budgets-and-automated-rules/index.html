@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Testing structures, budgets and automated rules | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 11.17: Testing structures, budgets and automated rules.">
+<link rel="canonical" href="https://dlichters.com/aiecom/11-tiktok-and-short-video/17-testing-structures-budgets-and-automated-rules/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Testing structures, budgets and automated rules | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 11.17: Testing structures, budgets and automated rules."><meta property="og:url" content="https://dlichters.com/aiecom/11-tiktok-and-short-video/17-testing-structures-budgets-and-automated-rules/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">11. TikTok and short video</a> &rsaquo; <a href="../../../ecom/11-tiktok-and-short-video/17-testing-structures-budgets-and-automated-rules/">Plain version</a></div><h1>11.17 Testing structures, budgets and automated rules</h1><article><h2 id="campaign-budget-type">Campaign budget type</h2>
+<ul>
+<li>Set the TikTok ad budget type to <strong>Daily</strong>, not <strong>Lifetime</strong>. Lifetime budgets cause spending delays and inconsistent algorithm behavior, especially in high-competition periods such as Q4. [L0309.030]</li>
+</ul>
+<h2 id="campaign-structure-abo-versus-cbo">Campaign structure: ABO versus CBO</h2>
+<p>The sources use two budget structures. They differ in where the budget is set, not in what they measure.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Where the budget is set</th>
+<th>Values in the sources</th>
+<th>ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABO (ad group budget)</td>
+<td>Each ad group gets a fixed amount</td>
+<td>$20 per ad group in a 7-15 video test; $20 per ad set on a product with a $10 margin</td>
+<td>L1376.003, L1440.029</td>
+</tr>
+<tr>
+<td>CBO (campaign budget)</td>
+<td>One budget at campaign level, divided by TikTok across the ad groups</td>
+<td>$50 per day split across five ads or ad groups; about 50 pounds or 50 Euro per day split across five ads</td>
+<td>L1375.001, L0552.025, L1378.017</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>ABO assigns a fixed budget to each ad set. CBO sets one budget at campaign level, and TikTok divides it across the ad sets. The lesson recommends CBO for the five-ad testing structure. [L1378.016]</li>
+<li>The sources imply a split by test design. Where each video needs a fixed, equal share of spend (7-15 videos at $20 each), use ABO. Where one campaign tests five ads and TikTok should divide the total, use CBO. [L1376.003, L1375.001, L0552.025, L1378.016]</li>
+<li>The five-ad CBO structure is one campaign with five ads, a daily budget of about 50 pounds or 50 Euro split between the five ads, and the same campaign run consistently. [L0552.025, L1375.001] (merged: both sources describe the same structure)</li>
+</ul>
+<p><strong>Setting up CBO</strong></p>
+<ol type="1">
+<li>Go to the campaign level, turn on Campaign budget optimization, and set the budget. The example uses a campaign budget of $50 (50 Swiss francs in the Swiss account), spread across all ad sets. [L1378.017]</li>
+<li>After the campaign is published, a duplicate button appears on the ad group. Click it four times to create five ad groups in total. [L1378.025]</li>
+</ol>
+<h2 id="budget-trick-low-campaign-cap-high-ad-set-budgets">Budget trick: low campaign cap, high ad-set budgets</h2>
+<p><strong>Procedure (use with the warning below)</strong></p>
+<ol type="1">
+<li>Create a TikTok Ads campaign and set a campaign budget limit (e.g., $100 for daily spend). [L0309.029]</li>
+<li>Inside that campaign, create ad sets and set each ad set's budget to $2000-$5000. [L0309.029]</li>
+<li>The algorithm believes each ad set has more budget than the campaign allows, forcing faster spend. [L0309.029]</li>
+<li>The campaign-level cap ensures you never exceed your intended daily spend. [L0309.029]</li>
+<li>To increase overall spend, gradually raise the campaign-level limit in increments (e.g., +$50 at a time). [L0309.029]</li>
+</ol>
+<p><strong>What the trick does and does not do</strong></p>
+<ul>
+<li>The budget trick compresses the timeline for deciding whether a product is viable. It does not improve results or ROAS. Fast spending answers the question sooner; it does not change the outcome. [L0309.042]</li>
+<li>The result is the same whether you spend $500 gradually over five days or in rapid bursts. Only the timeline changes. [L0309.042]</li>
+</ul>
+<h2 id="warm-up-spend">Warm-up spend</h2>
+<ul>
+<li>TikTok ad accounts often need a daily budget of around 50 pounds or dollars to warm up the pixel. [L0552.024]</li>
+<li>Turning the campaign off early can damage its learning. Keep the same budget running for several days without increasing or decreasing it. [L0552.024]</li>
+</ul>
+<h2 id="creative-testing">Creative testing</h2>
+<p><strong>Keep everything except the video identical</strong></p>
+<ul>
+<li>When testing several creatives, keep the offer, ad copy and audience identical across all ads, so that only the video differs. Otherwise a difference in results cannot be traced to the creative. [L1436.087]</li>
+</ul>
+<p><strong>Creative-led structure (newer approach)</strong></p>
+<ul>
+<li>With a fully broad audience, the platform finds a pocket of buyers for each creative, so the creative is the variable to test. [L1194.016]</li>
+<li>The older setup (per source) used five ad sets, each with three to five videos and two to three ad copies, duplicated five times with the same creatives. It spread spend across shared assets, so it did not show which single creative was the winner. [L1194.055, L1194.016]</li>
+<li>The newer setup uses 10 ad sets with one unique video each on a fully broad audience. [L1194.055]</li>
+<li>The reset procedure that uses this setup is under "Resetting accounts and pixels". [L1194.015]</li>
+</ul>
+<p><strong>Video and ad-copy test (ABO)</strong></p>
+<ol type="1">
+<li>Start with 7 to 15 different videos. [L1376.003]</li>
+<li>Create one campaign using ad group budgets (ABO, ad-group level budget). [L1376.003]</li>
+<li>Set the budget at $20 per ad group. [L1376.003]</li>
+<li>Use only the TikTok placement. [L1376.003]</li>
+<li>Set age to 25+ (adjust by product and gender). [L1376.003]</li>
+<li>Use no interest targeting: completely broad targeting. [L1376.003]</li>
+<li>Place one different video in each ad group. [L1376.003]</li>
+<li>Use an ad copy built from a short customer-language phrase (four or five words) naming the main benefit, and test several of them. [L1376.003]</li>
+</ol>
+<p><strong>Product test with a budget limit</strong></p>
+<ol type="1">
+<li>Choose 4 to 5 interests that correlate with the product, and narrow the targeting further when the product is niche. [L1440.029]</li>
+<li>Set about $20 per ad set on a product with a $10 profit margin. [L1440.029]</li>
+<li>When the spend reaches twice the cost per acquisition without a profitable result, switch that interest off and cycle it out. [L1440.029, L0298.041]</li>
+<li>Spend about $200 to $300 per product with a well-made creative. If nothing works by then, the product is unlikely to take off. [L1440.029]</li>
+<li>If the product still shows promise, try new creatives or a different marketing angle. [L1440.029]</li>
+<li>Scale horizontally or vertically once the test works. [L1440.029]</li>
+</ol>
+<h2 id="evaluation-window-and-daily-noise">Evaluation window and daily noise</h2>
+<ul>
+<li>Judge TikTok ad performance over a seven-day period rather than day by day. Daily results on low budgets fluctuate and can average out. Short-term swings do not necessarily mean a fault or a glitch. [L0552.022]</li>
+<li>Example: a test with a $50 or 50 Euro daily budget produced five to six sales on the first day, with seven add-to-carts and five checkouts (about 71% from add-to-cart to checkout). On the following day it produced zero sales despite four or five checkouts and add-to-carts. The speaker attributed this to random daily variation. [L0552.023]</li>
+</ul>
+<h2 id="day-of-week-effects">Day-of-week effects</h2>
+<ul>
+<li>TikTok performance varies by day of week. Monday-Wednesday typically underperform, and Thursday-Sunday perform better. Adjust expectations and automation rules accordingly. [L0298.040]</li>
+</ul>
+<h2 id="automated-rules">Automated rules</h2>
+<p><strong>Setting up rules in Ads Manager</strong></p>
+<ol type="1">
+<li>Go to Automated Rules in TikTok Ads Manager (top right). [L0309.031]</li>
+<li>Select "Manage Rules" or "Create New Rule." [L0309.031]</li>
+<li>For beginners, use two pre-built rule types: [L0309.031]
+<ul>
+<li>(a) Control Budget: set a threshold (e.g., "total cost in last 3 days &gt; $X") and an action (turn off campaign or notify). [L0309.031]</li>
+<li>(b) Enhance Performance: if CTR &gt; 2-3% AND CPC &lt; $1, increase daily budget by $50. [L0309.031]</li>
+</ul></li>
+<li>Learn the interface before deploying, as wrong settings can disable profitable campaigns. [L0309.031]</li>
+</ol>
+<p><strong>Kill rules based on break-even</strong></p>
+<ol type="1">
+<li>Rule 1: If spend equals 2x break-even cost per purchase with zero sales, pause immediately. [L0298.041]</li>
+<li>Rule 2: If spend exceeds $80 and ROAS falls below break-even ROAS, pause the ad set. [L0298.041]</li>
+</ol>
+<h2 id="hour-level-waste-and-bidding">Hour-level waste and bidding</h2>
+<ul>
+<li>TikTok can spend budget in low-converting hours, unlike Facebook's delivery algorithm. Check spend by hour when TikTok campaigns run. [L0363.053]</li>
+<li>Manual bidding is not needed on TikTok in most cases. The exception is dayparting blasts later on. [L1440.029]</li>
+</ul>
+<h2 id="resetting-accounts-and-pixels">Resetting accounts and pixels</h2>
+<p><strong>When a reset is justified</strong></p>
+<ul>
+<li>A reset to a new ad account with a new pixel is a fast fix when CPM and CPC stay far outside benchmarks. A new account showed better CPM and CPC after only $6.60 in spend. [L1194.014]</li>
+<li>This conflicts with the rule not to create a new account for each test. Reset only when CPM and CPC stay far outside benchmarks. Do not reset as routine practice between tests. [L1194.014, L0552.025]</li>
+</ul>
+<p><strong>Reset procedure</strong></p>
+<ol type="1">
+<li>Create a new ad account with a new pixel. [L1194.015]</li>
+<li>Launch 10 ad sets, each with one unique video (or one unique image) and a fully broad audience. [L1194.015]</li>
+<li>Let them spend, then switch off the underperforming ad sets. [L1194.015]</li>
+<li>When a winning creative appears, move it into its own campaign and duplicate that same creative into several ad sets. [L1194.015]</li>
+</ol>
+</article><nav class="pn"><a href="../../11-tiktok-and-short-video/16-ad-creative-and-copy-for-tiktok-ads/"><span class="k">&larr; Previous</span><span class="v">Ad creative and copy for TikTok ads</span></a><a class="nx" href="../../11-tiktok-and-short-video/18-benchmarks-diagnosis-and-scaling-tiktok-ads/"><span class="k">Next &rarr;</span><span class="v">Benchmarks, diagnosis and scaling TikTok ads</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

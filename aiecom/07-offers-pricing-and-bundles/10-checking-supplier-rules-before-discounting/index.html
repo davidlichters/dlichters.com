@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Checking supplier rules before discounting | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 7.10: Checking supplier rules before discounting.">
+<link rel="canonical" href="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/10-checking-supplier-rules-before-discounting/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Checking supplier rules before discounting | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 7.10: Checking supplier rules before discounting."><meta property="og:url" content="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/10-checking-supplier-rules-before-discounting/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">7. Offers, pricing and bundles</a> &rsaquo; <a href="../../../ecom/07-offers-pricing-and-bundles/10-checking-supplier-rules-before-discounting/">Plain version</a></div><h1>7.10 Checking supplier rules before discounting</h1><article><h2 id="read-the-supplier-agreement-before-any-discount">Read the supplier agreement before any discount</h2>
+<p>Before creating any discount code or running any promotion, work through each supplier's reseller agreement:</p>
+<ol type="1">
+<li>Review each supplier's reseller agreement.</li>
+<li>Document which suppliers:
+<ul>
+<li>prohibit discounts entirely,</li>
+<li>allow coupon-code-based discounts (applied after a code is entered),</li>
+<li>allow no restrictions.</li>
+</ul></li>
+<li>Apply only permitted discounts to products from each supplier. [L0251.060]</li>
+</ol>
+<ul>
+<li>Read each supplier's MAP policy carefully and follow its specific rules before creating store-wide discount codes. Some suppliers explicitly prohibit all discount codes in their MAP policy. [L0276.002]</li>
+<li>Check the MAP policy before offering coupons. Many MAP suppliers allow coupons, but some do not, so adjust the exit-intent offer for those products. <em>(Older advice, 2021.)</em> [L0247.042]</li>
+<li>Whether a discount such as a coupon on a MAP-priced item is allowed depends on each supplier's policy, so read the MAP policy you agreed to with every supplier. <em>(Older advice, 2019.)</em> [L0356.034]</li>
+<li>Check each brand's MAP agreement before offering coupons or special discounts. If the agreement forbids coupon codes or special offers on a product, leave those offers off that product. If it is silent, a discount is usually allowed, but confirm with the supplier because they may later object. <em>(Older advice, 2020.)</em> [L0358.012]</li>
+<li>Check the policies you signed during approval before running any coupon. <em>(Older advice, 2021.)</em> [L0853.084]</li>
+<li>Check the MAP clause in the supplier agreement before offering coupon codes, because the agreement states whether coupons are forbidden. [L1094.074]</li>
+<li>Most suppliers allow discounts on MAP products. Confirm this in the authorized retailer agreement, because some suppliers forbid discounts in writing. [L0857.020]</li>
+<li>Some supplier agreements forbid coupon codes or discounts entirely, so check the agreement before offering them. [L1113.074]</li>
+<li>Coupon codes are not allowed for a product if the supplier agreement explicitly forbids discounts on it. Check the agreement before offering any discount. <em>(Older advice, 2022.)</em> [L0963.063]</li>
+<li>Check each supplier agreement for discount restrictions. Coupon codes must be entered manually by customers (see the section on advertising below). [L0251.020]</li>
+<li>Costs such as the supplier's MAP policy must be checked before any bonus or discount is launched on a supplier's products. [L0855.054]</li>
+</ul>
+<h2 id="how-common-discount-restrictions-are">How common discount restrictions are</h2>
+<p>Sources give different rough shares. They come from different years and are estimates, so for any single brand the agreement decides.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Share of suppliers</th>
+<th>Meaning</th>
+<th>Source year</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>About 90% or more allow discount codes</td>
+<td>Most MAP suppliers allow codes. <em>(Older advice, 2021.)</em></td>
+<td>2021</td>
+<td>L0671.049, L0671.188</td>
+</tr>
+<tr>
+<td>About 95% allow discount codes the customer enters at checkout</td>
+<td>Only while the advertised price stays at or above MAP. Some agreements forbid codes entirely. <em>(Older advice, 2022.)</em></td>
+<td>2022</td>
+<td>L1113.087</td>
+</tr>
+<tr>
+<td>Most allow; roughly 5% or fewer forbid codes</td>
+<td>For suppliers that forbid codes, leave their products out of the sale. <em>(Older advice, 2021.)</em></td>
+<td>2021</td>
+<td>L1279.052</td>
+</tr>
+<tr>
+<td>A small number forbid any discount on their brand, even at checkout</td>
+<td>Check each brand's MAP policy and skip discounts for brands that forbid them.</td>
+<td>2025</td>
+<td>L0972.038</td>
+</tr>
+<tr>
+<td>Rarely, some forbid coupon codes</td>
+<td>Exclude those supplier products from coupon offers. <em>(Older advice, 2019.)</em></td>
+<td>2019</td>
+<td>L1110.012</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="coupon-codes-what-is-normally-allowed">Coupon codes: what is normally allowed</h2>
+<ul>
+<li>Discount codes can be offered to customers unless the supplier agreement specifically forbids them. The discount must not be applied to the advertised price on the website. List the product at MAP and apply the discount only through a code at checkout. [L0278.029]</li>
+<li>Discount codes are normally permitted under MAP, for example a 10 percent off code at checkout that lowers the price after the discount is applied. This is allowed unless the supplier's MAP agreement says no discounts. In that case, exclude those products from coupons. [L0667.064]</li>
+<li>A coupon applied at checkout is generally fine under MAP, because the advertised price stays at MAP. A few supplier agreements prohibit any discount below MAP, and those products must not be discounted. [L0966.040]</li>
+<li>Most suppliers' MAP policies forbid advertising or displaying a product below MAP. A coupon code that lowers the price at checkout does not break this rule, because the advertised price stays at MAP. [L0972.037]</li>
+<li>Discount codes can take the checkout price below MAP unless the supplier prohibits discounts. The advertised price on the product page and in Google Shopping must stay at MAP. [L1281.032]</li>
+<li>Use promo codes instead of marked-down prices, so that the listed price stays at MAP. A coupon discounts the price at checkout unless the supplier agreement specifically forbids coupon codes. [L1094.073]</li>
+<li>MAP (minimum advertised price) is set by the supplier and limits the lowest price at which the product may be advertised. A discount code that lowers the final price is generally not a violation because the advertised price stays at or above MAP, but each supplier's agreement must be read because a few forbid codes. <em>(Older advice, 2019.)</em> [L1069.041]</li>
+<li>For a MAP product, a sale must be run through a coupon code rather than by lowering the displayed price on the product. <em>(Older advice, 2019.)</em> [L1069.042]</li>
+<li>Usually you cannot offer discounts such as 10 to 15 percent off MAP products. Some supplier MAP agreements forbid coupon codes, which is rare; if the agreement does, exclude those supplier products from your coupon offers. <em>(Older advice, 2019.)</em> [L1110.012]</li>
+<li>Discounts that are not advertised are generally allowed under MAP pricing unless the supplier explicitly forbids them. Advertising a price below MAP is a separate issue and can violate the supplier's policy. <em>(Older advice, 2021.)</em> [L0801.046]</li>
+</ul>
+<p><strong>Conflict on 10-15 percent discounts.</strong> The 2019 unit (L1110.012) says you usually cannot offer 10 to 15 percent off MAP products. Units from 2021 to 2025 (L0667.064, L0966.040, L0972.037) say discount codes are normally permitted as long as the advertised price stays at MAP. Use the later view for checkout codes. The 2019 caution applies only to a supplier whose agreement forbids discounts.</p>
+<h2 id="keep-the-advertised-price-at-map">Keep the advertised price at MAP</h2>
+<p><strong>Principle.</strong> Sell at MAP and treat any extra offer as a discount off MAP. Do not inflate the MAP price to create room for a discount. <em>(Older advice, 2021.)</em> [L0247.037]</p>
+<ul>
+<li>List products at MAP and fund discounts from the margin you can afford. Do not list above MAP, because products above MAP lose traction on Google Shopping. If a discount is too large, reduce the discount rather than raising the list price. <em>(Older advice, 2021.)</em> [L0968.075]</li>
+<li>If the margin cannot cover discounts, list the product at MAP without discount codes for that supplier. Listing a higher price lowers clicks in Google Shopping because the product appears at the highest price. [L1283.076]</li>
+<li>If you must choose between pricing above MAP while offering discounts and pricing at MAP without discounts, the MAP-without-discounts option keeps your prices in line with other sellers on Google Shopping and avoids looking more expensive. <em>(Older advice, 2021.)</em> [L0801.047]</li>
+<li>If MAP is the minimum advertised price, discount codes can take the checkout price below MAP. List the product at MAP and apply discount codes to the MAP price, rather than inflating the price and then offering a discount. [L1283.075]</li>
+<li>Under MAP pricing, keep everyday prices at the MAP level and run promotions as a percentage off that price, such as 5% or 10%. Raising a price and then discounting it back to MAP is an alternative, but it changes the displayed price. <em>(Older advice, 2021.)</em> [L0853.015]</li>
+</ul>
+<p><strong>Conflict on inflating the price.</strong> L0853.015 describes raising the price and discounting back to MAP as an alternative. L0247.037, L0968.075 and L1283.075 advise against inflating. Default to listing at MAP. Use the alternative only if you accept that the displayed price changes.</p>
+<h3 id="worked-examples-what-the-customer-sees">Worked examples: what the customer sees</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Price on product page and in ads</th>
+<th>Price after code at checkout</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MAP $1,000, $50 code</td>
+<td>$1,000</td>
+<td>$950</td>
+<td>L0276.003, L1281.032</td>
+</tr>
+<tr>
+<td>MAP $1,000, $50 code for orders over $1,000</td>
+<td>$1,000 (may not be advertised at $950)</td>
+<td>$950, as the code is entered</td>
+<td>L0857.021</td>
+</tr>
+<tr>
+<td>MAP $1,000, $100 code</td>
+<td>$1,000</td>
+<td>$900</td>
+<td>L0963.062</td>
+</tr>
+<tr>
+<td>$1,000 item, $50 coupon</td>
+<td>$1,000. Showing $950 would break MAP.</td>
+<td>$950</td>
+<td>L1094.075</td>
+</tr>
+<tr>
+<td>MAP $1,000, $900 after coupon</td>
+<td>Cannot be advertised at $900 in ads or emails</td>
+<td>$900</td>
+<td>L0964.018</td>
+</tr>
+<tr>
+<td>MAP $1,000, 10% off code</td>
+<td>$1,000 until the code is entered</td>
+<td>Discounted price after code</td>
+<td>L1279.053</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A product with a MAP of $1,000 must show $1,000 on the product page. A $50 code for orders over $1,000 may lower the checkout total to $950, but the store cannot advertise the product at $950 without the code. [L0857.021]</li>
+<li>Lowering the displayed price to $950 on a $1,000 item with a $50 coupon would break MAP. The product remains advertised at $1,000 and the coupon is applied at checkout. [L1094.075]</li>
+</ul>
+<h2 id="where-prices-may-appear">Where prices may appear</h2>
+<ul>
+<li>Google ads, Facebook ads and strikethrough pricing may not show a product below its MAP. Most brands allow discount codes the customer enters at checkout, but these must not be auto-applied or advertised as the lower price. <em>(Older advice, 2022.)</em> [L1113.073]</li>
+<li>Coupon codes must be entered manually by customers. Do not auto-apply discounts at checkout. [L0251.020]</li>
+<li>When a coupon code is allowed, show the full price on the product page and reveal the discounted price only after the code is entered. <em>(Older advice, 2021.)</em> [L1279.053]</li>
+<li>Offer discounts and coupon codes on product pages only where the supplier's MAP agreement permits it. If the supplier forbids discounting below MAP, do not discount those product pages. <em>(Older advice, 2020.)</em> [L0852.051]</li>
+<li>For special supplier pricing during a sale, put the discounted products on a separate bundle page rather than changing the price on existing product pages. [L1094.077]</li>
+</ul>
+<h2 id="brand-level-exclusions">Brand-level exclusions</h2>
+<ul>
+<li>Some suppliers forbid coupon codes that push the price below MAP. If a supplier's agreement says so, exclude that supplier's products from any coupon code that lowers the price. <em>(Older advice, 2020.)</em> [L0961.003]</li>
+<li>Do not discount below MAP if the supplier's policy forbids it. <em>(Older advice, 2021.)</em> [L0853.084]</li>
+<li>If a supplier forbids discounts or coupons, exclude its products from coupon offers and offer a bonus gift instead, so the deal stays attractive without breaking the policy. <em>(Older advice, 2022.)</em> [L0665.063]</li>
+<li>Before offering discount codes on a supplier's products, read its MAP agreement. If it forbids discounts, do not discount that supplier's products. Most suppliers, about 90% or more, allow discount codes. <em>(Older advice, 2021.)</em> [L0671.049, L0671.188]</li>
+</ul>
+<h2 id="store-wide-and-multi-brand-sales">Store-wide and multi-brand sales</h2>
+<ul>
+<li>For a store-wide sale, include only brands that agreed to join the promotion. Use the announcement bar's advanced targeting to hide it on pages of vendors that are not part of the sale. <em>(Older advice, 2021.)</em> [L0671.052, L0671.191]</li>
+<li>Use notification bar promotions only for vendors that agreed to the promotion. Show promotions based on conditional rules, not as blanket offers. <em>(Older advice, 2021.)</em> [L0671.057]</li>
+<li>To run promotions across brands with different discount levels: <em>(Older advice, 2021.)</em> [L0853.083]
+<ol type="1">
+<li>Change the promotion banner on each product page to show the offer relevant to that product's brand or collection.</li>
+<li>Create a separate coupon code for a brand only if it needs one.</li>
+<li>Check the supplier's policy first, and exclude any brand that forbids coupon discounts from the promotion.</li>
+</ol></li>
+</ul>
+<h2 id="adding-value-without-changing-the-price">Adding value without changing the price</h2>
+<p><strong>Principle.</strong> When price discounts are not possible, add value through bonus gifts, extended warranties or expedited shipping. A bonus gift can carry more perceived value to the customer than its cost, and extended warranties can cost little or nothing when arranged with the supplier. <em>(Older advice, 2020.)</em> [L0852.052]</p>
+<p><strong>Principle.</strong> Discounts on products that suppliers do not allow to be discounted can be replaced with other value, such as expedited shipping, free white glove delivery or a small bonus gift. Check each option's margin before offering it. [L0804.090]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Changes the product price?</th>
+<th>Notes</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free expedited shipping</td>
+<td>No</td>
+<td>Can be run as a spend threshold, for example once the customer spends over $500, $1,000 or $2,000</td>
+<td>L0837.034, L0852.052</td>
+</tr>
+<tr>
+<td>Upgraded shipping, such as white glove delivery</td>
+<td>No</td>
+<td>Check each supplier's MAP agreement, because a brand can have separate rules outside MAP</td>
+<td>L0961.002, L0804.090</td>
+</tr>
+<tr>
+<td>Bonus gift from a third party</td>
+<td>No</td>
+<td>Gifts, free shipping and upgraded shipping do not change the price, so they do not violate MAP <em>(older advice, 2020)</em></td>
+<td>L0961.002, L0852.052</td>
+</tr>
+<tr>
+<td>Free bonus product from the same supplier</td>
+<td>Can violate MAP</td>
+<td>Get written approval from the supplier before running the promotion</td>
+<td>L0855.049</td>
+</tr>
+<tr>
+<td>Extended warranty</td>
+<td>No</td>
+<td>Can cost little or nothing when arranged with the supplier</td>
+<td>L0852.052</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>If a supplier's MAP policy forbids discount codes, run promotions that do not change the price, such as free expedited shipping or a free bonus gift once a customer spends over $500, $1,000 or $2,000. [L0837.034]</li>
+<li>Bonus gifts, free shipping and upgraded shipping such as white glove delivery do not change the product price, so they do not violate MAP. A brand can still have separate rules outside MAP, so check each supplier's agreement. <em>(Older advice, 2020.)</em> [L0961.002]</li>
+<li>A free bonus product from the same supplier can violate MAP. Get written approval from the supplier before running the promotion. [L0855.049]</li>
+<li>For a supplier that forbids discounts, a bonus gift instead of a discount makes the deal more attractive without breaking the policy. <em>(Older advice, 2022.)</em> [L0665.063]</li>
+</ul>
+<h2 id="check-margins-before-offering-a-discount">Check margins before offering a discount</h2>
+<ul>
+<li>Do not sell at MAP with a 10 percent discount. Net margins around 15 percent are too low unless the order value is thousands of dollars. Try a 5 percent discount, a smaller discount, or a bonus gift that costs less than the discount would. [L0806.054]</li>
+<li>Check the margin of each option before offering it. [L0804.090]</li>
+<li>A coupon is paid by the retailer, not the supplier. The discount comes out of the retailer's profit, not the wholesale price. The supplier still receives the wholesale price. [L0667.065]</li>
+<li>If the margin cannot cover discounts, list the product at MAP without discount codes for that supplier. [L1283.076]</li>
+</ul>
+<h2 id="negotiate-supplier-funded-promotions">Negotiate supplier-funded promotions</h2>
+<p><strong>Principle.</strong> If product margins are insufficient for discounts or coupons, negotiate with suppliers for promotional support. Propose a promotion where the supplier includes a free item of value, worth $20 to $50 depending on the product price, with customer purchases. <em>(Older advice, 2020.)</em> [L0245.050]</p>
+<p><strong>Rule.</strong> When product pricing is fixed and margins are low, build tighter relationships with suppliers to access co-promotional opportunities. The supplier includes a free premium, upgraded shipping or a discount, instead of you absorbing promotional costs yourself. <em>(Older advice, 2020.)</em> [L0245.051]</p>
+<p><strong>Example.</strong> Buy-one-get-one offers were easier to source when suppliers had excess inventory. Today they are mainly worth offering on stock that is overstocked or being discontinued, as described in the supplier procedure. [L1204.027]</p>
+<p><strong>Procedure.</strong> Sourcing a supplier-funded deal, such as buy-one-get-one or a deep discount:</p>
+<ol type="1">
+<li>Review supplier inventory lists regularly and look for SKUs with very high stock that are not moving.</li>
+<li>Watch for supplier emails announcing that a SKU is being discontinued.</li>
+<li>Ask the supplier which promotional price they can give, for example a buy-one-get-one price, a 30 to 50 percent discount on the SKU, or a temporary waiver of the MAP restriction for the promotion.</li>
+<li>Run the offer only if the numbers show it is profitable for your store.</li>
+</ol>
+<p>[L1204.028]</p>
+<p><strong>Competitor offers.</strong> Competitor holiday offers can be checked with the supplier before you copy them. Send the supplier a screenshot of the competitor's offer and ask whether it violates policy or whether the same promotion is available to you. [L1283.077]</p>
+</article><nav class="pn"><a href="../../07-offers-pricing-and-bundles/09-discounts-and-coupon-codes/"><span class="k">&larr; Previous</span><span class="v">Discounts and coupon codes</span></a><a class="nx" href="../../07-offers-pricing-and-bundles/11-free-shipping-shipping-fees-and-delivery-upgrades/"><span class="k">Next &rarr;</span><span class="v">Free shipping, shipping fees and delivery upgrades</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Brand guidelines and AI brand kit | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 8.11: Brand guidelines and AI brand kit.">
+<link rel="canonical" href="https://dlichters.com/aiecom/08-brand-and-positioning/11-brand-guidelines-and-ai-brand-kit/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Brand guidelines and AI brand kit | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 8.11: Brand guidelines and AI brand kit."><meta property="og:url" content="https://dlichters.com/aiecom/08-brand-and-positioning/11-brand-guidelines-and-ai-brand-kit/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">8. Brand and positioning</a> &rsaquo; <a href="../../../ecom/08-brand-and-positioning/11-brand-guidelines-and-ai-brand-kit/">Plain version</a></div><h1>8.11 Brand guidelines and AI brand kit</h1><article><h2 id="brand-system-and-consistency">Brand system and consistency</h2>
+<ul>
+<li>A brand encompasses far more than a logo. A complete brand system includes a color palette, typography, visual patterns, textures, and consistent messaging across all touchpoints. This consistency builds consumer trust and makes the business appear professional and cohesive. [L0317.001]</li>
+<li>Keep colours, shapes, typography and layout consistent across all brand visuals so customers link each element to the brand over time. A recognisable visual set makes the brand look more professional and makes it easy to recall. [L0755.002]</li>
+<li>Keep the tone, personality and visual identity of the brand consistent across all ads, because regular readers recognize and trust a stable identity. Change only when a test shows a different approach is needed. [L1261.113]</li>
+<li>After the logo is finished, build a branding deck that defines colors, typography, shapes and textures. This keeps all future graphics and marketing materials consistent with the logo. [L1047.038]</li>
+</ul>
+<h2 id="brand-guidelines-file-contents-and-export">Brand guidelines file: contents and export</h2>
+<ul>
+<li>A brand guidelines document is a PDF containing all brand information: logo files in multiple formats and colors, exact color codes (hex and RGB), font names and pairing rules, visual patterns and textures, and brand voice guidelines. Share this with graphic designers, video editors, web developers, and team members to ensure they create consistent brand work. [L0317.008]</li>
+<li>A brand guidelines file should hold the brand photography, a moodboard, tone and style notes, brand use rules, the project color palette, typography and a logo panel. Keep the templates in the same file so every asset is built from the same source. [L0992.005]</li>
+<li>A brand guidelines file with defined colors, fonts, logo, photography and brand voice works as a plug-and-play base. Once it exists, a new template or ad can be assembled in minutes by dropping in those elements. The time goes into building the photography and voice first, not into each design. [L0992.001]</li>
+<li>Update the brand guidelines file whenever the brand changes, such as a new palette, font or voice, so that every new template is built from current rules. Treat the file as a living document rather than a fixed one. [L0992.028]</li>
+<li>Logo rule: the company logo comes in three versions that can be used interchangeably and resized as needed, but the logo must never be altered. Use only the official files from the shared brand folder. [L1467.001]</li>
+<li>Older advice (2021-22): keep the company logo as a PDF in a shared files section so any team member can send it to a vendor or customer who asks for it. Store it alongside the quote and invoice templates, so staff do not have to ask the owner each time. [L1396.067]</li>
+</ul>
+<p><strong>Exporting the guidelines for the team and freelancers</strong></p>
+<ol type="1">
+<li>Open the completed brand guidelines document in Kittl.</li>
+<li>Click the Download button.</li>
+<li>Change the file format to PDF.</li>
+<li>Select the "Combine into one file" option.</li>
+<li>Download and share the PDF with all designers, video editors, developers, and team members. [L0317.022]</li>
+</ol>
+<h2 id="textures-and-patterns">Textures and patterns</h2>
+<p><strong>Creating textures and patterns for the brand guidelines</strong></p>
+<ol type="1">
+<li>Open your logo in Kittl.</li>
+<li>Duplicate it and move the duplicate to a new "Textures" artboard.</li>
+<li>Adjust the duplicate by changing opacity, adding colors, creating gradients, or layering elements.</li>
+<li>Create 2-3 different texture variations.</li>
+<li>Include these in the brand guidelines document so designers can use them for backgrounds, borders, and decorative elements across materials. [L0317.010]</li>
+</ol>
+<h2 id="brandfetch-workflow">Brandfetch workflow</h2>
+<ul>
+<li>Get API access from the right page: do not click "Get started" on the brandfetch.com homepage. Always click "Are you a developer? Get API keys" to access the developer dashboard and MCP setup. [L0322.011]</li>
+<li>The brand context step runs one Brandfetch call on the brand's domain to pull voice, colors and fonts. The result is saved as a brand-kit.json file and a separate voice file, and every later skill uses these as input. [L1361.020]</li>
+<li>Do not skip the transformation stage (stage 3), where you convert the Brandfetch raw data into a structured brand-kit.json and voice.md. This step is critical to avoiding generic AI outputs. [L0318.006]</li>
+<li>Converting raw Brandfetch API responses into structured JSON and Markdown files keeps later AI-generated emails, copy, and templates brand-specific (correct colors, voice attributes, and positioning) rather than generic. [L0318.016]</li>
+</ul>
+<p><strong>Brandfetch run in one project</strong></p>
+<ol type="1">
+<li>Create a new folder in Claude Cowork and set it as your working folder.</li>
+<li>Create a new project in Claude Cowork with a descriptive name (e.g., "email mastery course with AI").</li>
+<li>In the project chat, invoke the Brand Fetch MCP using a prompt like "Using the Brandfetch MCP, research <a href="http://www.example.com.au">www.example.com.au</a>".</li>
+<li>Let the MCP fetch and display visual identity (logos, colors, fonts, social links) and brand context (tagline, mission, target audiences, voice attributes, style).</li>
+<li>Review the output for contradictions between longDescription and actual product range, and note any data quality issues.</li>
+<li>In the same project, use a mapping prompt to transform both Brandfetch responses into brand kit.json and voice.md files using the field mappings provided.</li>
+<li>Save both files to your project folder.</li>
+<li>Optionally, visit the brand's website directly with Claude in Chrome to verify fonts, currency, and positioning details. [L0318.008]</li>
+</ol>
+<p><strong>Field mapping for brand kit.json</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Field in brand kit.json</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>brand.description</td>
+<td>get_brand_context.identity.description</td>
+</tr>
+<tr>
+<td>brand.tagline</td>
+<td>get_brand_context.identity.tagline</td>
+</tr>
+<tr>
+<td>brand.mission</td>
+<td>get_brand_context.identity.mission</td>
+</tr>
+<tr>
+<td>brand.tags</td>
+<td>get_brand_context.identity.tags</td>
+</tr>
+<tr>
+<td>positioning.value_proposition</td>
+<td>get_brand_context.positioning.value_proposition</td>
+</tr>
+<tr>
+<td>positioning.target_audience</td>
+<td>get_brand_context.positioning.target_audience</td>
+</tr>
+<tr>
+<td>positioning.products_and_services</td>
+<td>get_brand_context.positioning.products_and_services</td>
+</tr>
+<tr>
+<td>visual.logos, colors, fonts</td>
+<td>get_brand.logos, colors, fonts</td>
+</tr>
+<tr>
+<td>voice.summary, attributes, avoid</td>
+<td>get_brand_context.brand.voice.*</td>
+</tr>
+<tr>
+<td>style.summary, attributes</td>
+<td>get_brand_context.brand.style.*</td>
+</tr>
+<tr>
+<td>links.website, links.social</td>
+<td>your domain, get_brand.links</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0318.009]</p>
+<ul>
+<li>Use get_brand_context.identity.description, not get_brand.longDescription. The latter is generic and may contradict your actual product range and positioning. [L0318.003]</li>
+</ul>
+<h2 id="data-quality-checks">Data quality checks</h2>
+<ul>
+<li>When Brandfetch returns an unclaimed profile (which is normal for most brands), treat colors and fonts as scraped estimates, not authoritative brand standards. Verify the actual typefaces and design details by visiting the site directly with Claude in a browser. [L0318.004]</li>
+<li>Using Brandfetch data as fully authoritative when the profile is unclaimed leads to inaccurate colors, fonts, and category descriptions. Always cross-reference with the actual website and live product listings. [L0318.012]</li>
+<li>Always validate that Brandfetch data, especially currency and product categories, matches your actual business. Example: if Brandfetch returns USD pricing but your domain is.com.au, verify whether you actually sell in AUD and correct the data. [L0318.005]</li>
+<li>Data quality score: the Silk The Label unclaimed profile scored 0.28. This is relatively low and indicates that colors and fonts were scraped rather than verified by the brand owner. [L0318.015]</li>
+<li>Worked example, Silk The Label: primary #5f021f (deep burgundy/oxblood), accent #ffffff (white). Fonts: Helvetica (title), custom body font (exposed as Shopify CSS variable --font-body-family, not directly readable). Logo available as PNG (820x96, transparent) and SVG. [L0318.014]</li>
+<li>If Brandfetch returns incomplete data (new or very small brand), ask the user directly for details rather than letting Claude guess or invent brand information. Do not allow Claude to invent missing brand data. If Brandfetch cannot detect a field (e.g., heading font) or returns incomplete information, request the data from the user instead of generating a value. Always verify colours, fonts, and links with the user before finalizing the JSON file. [L0322.009, L0322.012]</li>
+</ul>
+<h2 id="brand-kit-json-and-voice-file">Brand kit JSON and voice file</h2>
+<p><strong>Prompt for the brand kit and voice file</strong> (verbatim)</p>
+<pre><code>Develop your brand identity and communication style for email marketing through a structured workflow, saving all outputs to your brand folder. Begin by using Brandfetch to retrieve your website&#39;s branding data: logo, color values in hexadecimal format, typeface selections, and social media connections. If Brandfetch returns limited information-which is typical for recently launched businesses-ask directly for the details rather than assuming. Never guess at brand attributes or rely on outdated cache; always verify by asking when uncertain. Create a JSON file called brand-kit.json in the brand folder using this exact structure: a brand object containing name, domain, tagline, and description; a positioning object with value proposition; a visual object with logos, three hex colors (primary, secondary, accent), and font details split by type (title, body); a meta object listing the URL and social platform accounts such as Facebook and Instagram; an industries field; and a location object with city and country. Verify the extracted colors directly against your live website, paying special attention to the primary hex code that styles your primary buttons, and confirm that both fonts and all shop and social links are current. Remove any inaccuracies. Determine your brand voice by asking how your organization should be perceived (options ranging from friendly to formal, or playful to premium), collecting 2-3 email or product description samples you consider successful, then drafting voice.md in the brand folder that documents a concise voice statement, 4-6 defining voice characteristics, representative language patterns your team uses, and a brief list of communication practices to avoid.</code></pre>
+<p>[L0322.006]</p>
+<ul>
+<li>Worked example, Silk the Label (<a href="http://www.silkthelabel.com.au">www.silkthelabel.com.au</a>): Brandfetch returned the logo, primary colour #5f021f (deep burgundy), location (Brisbane, Australia), and Instagram/Facebook links. The user confirmed the hex code matched their main button colour and provided 2-3 email examples. Claude then drafted voice.md with tone attributes matching those examples. [L0322.007]</li>
+<li>Both output files are mandatory before proceeding to the next course module. Email generation and product descriptions cannot be on-brand without both files. [L0322.010]</li>
+<li>File naming varies across sources: "brand-kit.json" is the name used in the template, "brandkit.json" appears in the mandatory-files rule, and "brand kit.json" appears in the transformation rule and mapping table. Use brand-kit.json, as named in the template. [L0322.006, L0322.010, L0318.006, L0318.009]</li>
+</ul>
+<p><strong>voice.md contents</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voice summary</td>
+<td>One-line statement of how the brand sounds (e.g., "Playful, premium, eco-focused")</td>
+<td>User input</td>
+</tr>
+<tr>
+<td>Voice attributes</td>
+<td>4-6 defining traits (friendly/formal, authoritative/approachable, minimal/warm)</td>
+<td>From 2-3 brand email or product examples</td>
+</tr>
+<tr>
+<td>Language we use</td>
+<td>Specific words, phrases, tone patterns, punctuation style</td>
+<td>Extracted from provided examples</td>
+</tr>
+<tr>
+<td>Never do this</td>
+<td>Guardrails: tone and language to avoid (e.g., "never use slang", "never make unverified claims")</td>
+<td>User guidance + example analysis</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0322.014]</p>
+<ul>
+<li>Converting the mapped data into a brand kit and voice file ensures the brand's voice, colors and positioning carry into everything written from it. [L0318.016]</li>
+</ul>
+<h2 id="keeping-work-inside-one-project">Keeping work inside one project</h2>
+<ul>
+<li>Keep all brand kit work (prompt, Brandfetch data, JSON, voice file revisions) inside one Claude Project so the model maintains full context. Splitting work across separate chats breaks context continuity and triggers hallucination. [L0322.008]</li>
+</ul>
+<h2 id="applying-guidelines-to-templates-and-assets">Applying guidelines to templates and assets</h2>
+<ul>
+<li>Keep every template in the brand palette. Pick each color from the document's brand colors rather than the template defaults. Apply the same color system across all formats so social, email and web assets look like one brand. [L0992.002]</li>
+<li>Brand guidelines are a guide, not a rulebook. Small deviations from the palette are acceptable when they improve fit, for example shifting a pink accent toward a purple already in the brand. Check that the change still reads as the brand. [L0992.004]</li>
+<li>The brand's main colour must appear in every rebranded layout, and that colour should stay consistent across the batch. If the brand uses a different colour from the reference, ask Claude to rewrite the instruction so it uses your colour. [L0794.024]</li>
+<li>A logo or brand name on a generated ad is optional. Leaving it off gives more room for the product message. Remove any brand line that repeats the headline or crowds the layout. [L0794.025]</li>
+</ul>
+<p><strong>Setting up email template branding in Shopify Email</strong></p>
+<ol type="1">
+<li>Open the Shopify Email settings and scroll to the template branding section at the bottom.</li>
+<li>Click Customize.</li>
+<li>Upload the store logo in the logo field.</li>
+<li>Enter the store name in the store name field.</li>
+<li>Choose the same font used in the Shopify theme settings in the typography field.</li>
+<li>Set the colors to match the theme settings: the text color, the button and link color, and the color for labels and outlines.</li>
+<li>Save all settings. [L1307.012]</li>
+</ol>
+<ul>
+<li>Email template branding should match the store's website: same logo, colors, and fonts. Once it is set in the template branding, all future email automations and campaigns use it by default, so it only needs to be configured once. [L1307.013]</li>
+</ul>
+<p><strong>Reference style set (Source A, a different brand, as an example of the format)</strong></p>
+<ul>
+<li>Brand fonts: body text and tagline use Gotham Book, with Montserrat Light as the free alternative. The website font is Proxima Nova, and the logo font is Jenna Sue. [L1467.002]</li>
+<li>Brand colours: logo Red #e91e47 and logo Yellow #f7e100. Body text is dark grey #484341 instead of black. Buttons and links use Light Blue #17dbe1. The wordmark is True Black #000000. [L1467.003]</li>
+</ul>
+</article><nav class="pn"><a href="../../08-brand-and-positioning/10-typography/"><span class="k">&larr; Previous</span><span class="v">Typography</span></a><a class="nx" href="../../08-brand-and-positioning/12-brand-voice-and-messaging/"><span class="k">Next &rarr;</span><span class="v">Brand voice and messaging</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Responding to chargebacks and payment disputes | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 17.15: Responding to chargebacks and payment disputes.">
+<link rel="canonical" href="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/15-responding-to-chargebacks-and-payment-disputes/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Responding to chargebacks and payment disputes | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 17.15: Responding to chargebacks and payment disputes."><meta property="og:url" content="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/15-responding-to-chargebacks-and-payment-disputes/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">17. Customer service, returns and chargebacks</a> &rsaquo; <a href="../../../ecom/17-customer-service-returns-and-chargebacks/15-responding-to-chargebacks-and-payment-disputes/">Plain version</a></div><h1>17.15 Responding to chargebacks and payment disputes</h1><article><h2 id="core-principles-for-every-dispute">Core principles for every dispute</h2>
+<ul>
+<li>Submit far more evidence than seems necessary, such as courier proof of delivery, email threads, order pages, packing slips and the website's policies. The aim is to persuade the payment provider to decide in your favour. [L0350.001]</li>
+<li>Never accept a chargeback. One seller who contested every dispute with delivery evidence reported winning far more disputes than losing them, even with a high chargeback rate. [L1381.060, L1381.051]</li>
+<li>Save the responses from past cases that worked, because they show which evidence to submit and which wording is persuasive. Reuse them as a guide for similar disputes. [L0350.004]</li>
+<li>Answer every customer message, and prepare response templates for each situation. A chargeback is usually lost when a customer messaged and received no reply, because no action was taken. [L1219.053]</li>
+<li>Customer service for chargebacks should not follow a fixed template. First stop the shipment, then decide the next step based on whether the customer responds and whether the chargeback was intentional. [L0856.085]</li>
+<li>Chargebacks can still be lost even with proof of delivery, a customer signature, order emails and shop messages. The case may still be lost if the card was stolen. [L0472.051]</li>
+<li>Chargebacks are relatively rare. With proof of delivery (a tracking number showing delivery), a store is typically in a good position to dispute a claim that the product was not received. [L0971.021]</li>
+<li>Contested chargebacks were won in roughly 50 to 60 percent of cases when the seller had clear policies and responded well. Winning depends heavily on documentation and prompt replies. [L0352.019]</li>
+</ul>
+<h2 id="ownership-and-first-customer-contact">Ownership and first customer contact</h2>
+<ul>
+<li>Assign all chargebacks and payment disputes to one dedicated support team, which also handles high-risk customers in the lesson's setup. That team owns each case from the first customer contact through to the final evidence submission. [L0350.025]</li>
+<li>Check email regularly and respond quickly to any customer who raises a problem or threatens a chargeback. [L0639.038]</li>
+<li>Ask what went wrong and offer a fix first, such as a replacement or a resend. [L0639.038]</li>
+<li>Contact the customer in ways that can be documented, such as email, not only by phone. [L0466.060] <em>(older: 2018)</em></li>
+<li>Keep records of every contact attempt, including unanswered calls and voicemails. [L0466.060] <em>(older: 2018)</em></li>
+<li>On PayPal, if the case has not yet become a chargeback, first try to settle the customer's problem directly, for example with a replacement order or a partial refund. Customers who are satisfied with that outcome often close the case themselves. [L0350.003]</li>
+<li>When a customer stops answering about an incomplete order after a partial shipment, treat it as a warning sign and do not assume the chargeback is lost. Submit proof of delivery such as tracking, and keep all outreach documented. [L0466.071] <em>(older: 2018)</em></li>
+</ul>
+<h2 id="identify-the-dispute-before-you-respond">Identify the dispute before you respond</h2>
+<ul>
+<li>Chargebacks usually come from three claims: the customer says the order was fraudulent, never arrived, or arrived broken. Each claim needs different evidence, so answer the specific complaint rather than a generic one. [L1381.059]</li>
+<li>Non-receipt disputes differ from fraud claims, where a card was stolen. Identify which kind of chargeback you face before deciding how to respond. [L0466.061] <em>(older: 2018)</em></li>
+<li>The dispute reason shown in the customer's message tells you what evidence to submit. [L0350.024]</li>
+<li>A delivery status can mislead, for example when a parcel is delivered back to the sender. Read the tracking carefully before responding. [L0350.024]</li>
+<li>A sudden cluster of PayPal disputes, such as six in one day shortly after a supplier change, signals that the product or fulfilment being shipped does not match the listing. Check what is actually being delivered before handling the disputes one by one. [L0694.047]</li>
+</ul>
+<h2 id="matching-the-ticket-and-the-order">Matching the ticket and the order</h2>
+<ul>
+<li>A customer can have several tickets. Check that the ticket you attach to a chargeback response matches the disputed order before you submit it. [L0350.017]</li>
+<li>Use the customer's details to find their ticket and related correspondence in Gorgias or your email platform. [L0350.015, L0350.005, L0350.018]</li>
+<li>For a ClearPay/AfterPay dispute, the view shows the customer's message, a dispute ID, the merchant order number, the order amount and the dispute amount. Match these against the order in Shopify before you prepare the response, to confirm you are answering the right dispute. [L0350.028]</li>
+<li>In Shopify, the home dashboard counters, such as '1 chargeback to review' and '3 high risk orders to review', are the starting point for finding open chargebacks that still need a response. [L0350.026]</li>
+</ul>
+<h2 id="evidence-and-file-rules">Evidence and file rules</h2>
+<p><strong>Shopify files</strong></p>
+<ul>
+<li>Shopify accepts only files in.png,.jpg or.pdf format, each smaller than 2 MB. [L0350.009]</li>
+<li>'More actions' &gt; 'Print packing slips' produces the packing slip PDF. [L0350.007]</li>
+<li>'More actions' &gt; 'Print order page' produces the order page PDF with customer details, shipping and billing addresses, order total and payment information. Both are used as evidence. [L0350.007]</li>
+<li>Leave the packing slip file name as it is. [L0350.005]</li>
+</ul>
+<p><strong>Response section labels in Shopify</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Section label</th>
+<th>What to upload or write</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>'Add a screenshot of customer interactions'</td>
+<td>PDF of the Gorgias ticket</td>
+<td>L0350.008</td>
+</tr>
+<tr>
+<td>Shipping section</td>
+<td>Packing slip</td>
+<td>L0350.008</td>
+</tr>
+<tr>
+<td>'Add an additional document that supports your case'</td>
+<td>Order page PDF, tracking or other proof</td>
+<td>L0350.008</td>
+</tr>
+<tr>
+<td>'Explain why you feel this order was not fraudulent'</td>
+<td>Written investigation findings</td>
+<td>L0350.008</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>ClearPay, AfterPay and Klarna files</strong></p>
+<ul>
+<li>Everything entered in a ClearPay, AfterPay or Klarna dispute, including attachments, is shared with both the merchant and the consumer. Write the note and choose the files with that in mind. [L0350.022]</li>
+<li>Shipping fields (transport carrier, tracking number and shipping date) are used by the platform to verify that the package was sent. Enter them exactly as they appear in Shopify and the 3PL records. [L0350.030]</li>
+<li>Upload supporting documents such as order pages, packing slips, tracking information and email correspondence. [L0350.021]</li>
+</ul>
+<p><strong>PayPal files</strong></p>
+<ul>
+<li>Attach all evidence under the 'Attach a file' section, such as previous customer interactions, the order page and tracking information. [L0350.018]</li>
+</ul>
+<p><strong>Record keeping</strong></p>
+<ul>
+<li>Keep clear records of the policy so it can be shown in a dispute. [L0664.071] <em>(older: 2020)</em></li>
+<li>Keep a record of every refund and its reason. [L1128.030]</li>
+</ul>
+<h2 id="shopify-chargeback-response">Shopify chargeback response</h2>
+<p><strong>Deadlines and set-up</strong></p>
+<ul>
+<li>Every Shopify chargeback shows a response deadline. If you do not respond, Shopify submits the evidence it holds to the customer's bank on your behalf on that deadline date. [L0350.010]</li>
+<li>Example: a Shopify chargeback for $462.00 showed a deadline of 27 May 2023 at 9:00 am to submit evidence and dispute it. Missing that date means the bank receives only what Shopify has on file. [L0350.011]</li>
+<li>Shopify gives roughly one to two months to contest a chargeback. Example: a 74.81 dollar chargeback had a deadline of November 16 at 3:30 p.m., after which Shopify sends available evidence to the bank automatically. [L1381.050]</li>
+<li>To find chargebacks needing action, go to 'Chargebacks to review' in the middle menu and change the right-hand drop-down to 'Needs Response'. [L0350.006, L0350.005]</li>
+</ul>
+<p><strong>Full procedure (detailed version)</strong></p>
+<ol type="1">
+<li>Log into your Shopify account. [L0350.005]</li>
+<li>Click 'Chargebacks to review' in the middle menu and change the filter in the right-hand drop-down to 'Needs Response'. [L0350.005]</li>
+<li>Select the order on the chargeback order page. [L0350.005]</li>
+<li>Find the customer in Gorgias or your email platform, using the customer details. [L0350.005]</li>
+<li>Read the customer's emails, if they wrote in, to see where the order stands. Confirm the ticket relates to this specific order, because a customer can have several tickets. [L0350.005]</li>
+<li>If the customer did not write in, create an email chain with them. Use the subject line 'URGENT: [Brand] - Order #[order number]' and the macro 'CHARGEBACK - No Ticket', amending the wording where needed. [L0350.005, L0350.015]</li>
+<li>Add the tag 'chargeback' to the ticket. [L0350.005, L0350.015]</li>
+<li>Send and close the ticket. [L0350.005]</li>
+<li>Print the ticket and save it as a PDF to submit as evidence. [L0350.005]</li>
+<li>On the Shopify order page, click 'More actions' and select 'Print packing slips'. [L0350.005]</li>
+<li>Save the packing slip as a PDF and leave the file name as it is. [L0350.005]</li>
+<li>Go back to the Shopify order page, click 'More actions' and select 'Print order page'. Save it as a PDF. [L0350.005]</li>
+<li>Click 'Submit response' on the order page to start the dispute. [L0350.005]</li>
+<li>In 'Add a screenshot of customer interactions', upload the PDF of the Gorgias ticket. [L0350.005]</li>
+<li>Upload the packing slip in the shipping details section. [L0350.005]</li>
+<li>In 'Add an additional document that supports your case', upload the order page PDF and any other proof, such as tracking information. [L0350.005]</li>
+<li>In 'Explain why you feel this order was not fraudulent', write the findings of your investigation. [L0350.005]</li>
+<li>Read through all uploaded documentation to check the correct information is included. [L0350.005]</li>
+<li>Click 'Submit response'. Shopify then sends all evidence and shows a purple-blue status box while the bank decides. [L0350.005]</li>
+</ol>
+<p><strong>Short procedure (alternative version, delivery-status based)</strong></p>
+<p>When the order was delivered or is still in transit, a shorter response can work:</p>
+<ol type="1">
+<li>Never accept the chargeback. [L1381.051]</li>
+<li>Open the chargeback and click Submit response. [L1381.051]</li>
+<li>Read the customer's complaint carefully. [L1381.051]</li>
+<li>If the order was delivered, upload a screenshot of the delivered status to the customer's address. [L1381.051]</li>
+<li>If the order is still in transit, upload a screenshot of the tracking status and copy the tracking number, then state the date the customer is expected to receive it. [L1381.051]</li>
+<li>Write half a paragraph to a paragraph saying you did not commit fraud, shipped the order and that the customer received it or is expected to. [L1381.051]</li>
+<li>Attach the screenshot and tracking number as an additional document. [L1381.051]</li>
+</ol>
+<p><em>Note: L0350.005 (full, with Gorgias ticket and packing slip) and L1381.051 (short, delivery screenshot) are two versions from different sources. Use the full version for fraud claims, where the bank asks whether the order was genuine, and the short version for quick non-receipt or in-transit cases. [L0350.005, L1381.051, L1381.059]</em></p>
+<p><strong>Written explanation (Shopify)</strong></p>
+<ul>
+<li>The written explanation should prove the order was not fraudulent. Include that shipping and billing addresses match, that there was only one payment attempt, the date the fulfilment centre dispatched the order, the delivery date, and that the customer never contacted you before the chargeback if that is the case. [L0350.012]</li>
+<li>Write the explanation with the findings of your investigation, stating what you are currently doing to resolve the situation. [L0350.005, L1381.051]</li>
+</ul>
+<p><strong>Decision timeline</strong></p>
+<ul>
+<li>After a Shopify response is submitted, the bank takes about 75 days to reach a decision on the chargeback. [L0350.013]</li>
+</ul>
+<h2 id="paypal-dispute-response">PayPal dispute response</h2>
+<p><strong>Navigation</strong></p>
+<ul>
+<li>The menu item 'Response required' lists all disputes that need an answer. Cases sit in three subcategories depending on status: 'Response required', 'Under review' and 'Awaiting other party's response'. [L0350.018, L0350.020]</li>
+<li>Open a case, click 'Respond', then use the paperclip icon to reach the messaging tab, where the message box and the 'Attach a file' section are used. [L0350.020]</li>
+</ul>
+<p><strong>Procedure</strong></p>
+<ol type="1">
+<li>Log into your PayPal account. [L0350.018]</li>
+<li>Click 'Response required' in the menu. Cases sit in three subcategories depending on status: 'Response required', 'Under review' and 'Awaiting other party's response'. [L0350.018]</li>
+<li>Select the case and click 'Respond'. [L0350.018]</li>
+<li>Use the customer's details to search for them in Gorgias or your email platform. [L0350.018]</li>
+<li>Read the customer's email correspondence, if they wrote in, to see where the order stands. [L0350.018]</li>
+<li>If the customer did not write in, create a new ticket in Gorgias with the subject line '[Brand] - Order #[order number], following up on your PayPal dispute'. Follow up on their issue (delayed order, lost in transit or faulty item) and ask why they opened the dispute and how you can help resolve it. [L0350.018]</li>
+<li>Depending on the case, either snooze the ticket or close it, then wait for the customer's reply. [L0350.018]</li>
+<li>Print the ticket using the three dots at the top right and save it as a PDF, leaving the file name as it is. [L0350.018]</li>
+<li>Go back to the PayPal portal, click 'Respond' to open the inquiry and read the issue shown. [L0350.018]</li>
+<li>Click the paperclip icon to open the messaging tab. [L0350.018]</li>
+<li>Write your message in the box, address it to the customer (not PayPal) and sign it with your company name, in email style. [L0350.018]</li>
+<li>Attach all evidence under the 'Attach a file' section, such as previous customer interactions, the order page and tracking information. [L0350.018]</li>
+<li>Proofread the message to confirm it includes all relevant information, then send it with the attachments. [L0350.018]</li>
+<li>The case now waits for the customer. When they reply, it reappears under 'needs your attention' and you must respond again. [L0350.018]</li>
+</ol>
+<p><strong>PayPal message template</strong></p>
+<p>Use this as the message to the customer in the PayPal messaging tab. [L0350.019]</p>
+<pre><code>Hello [Customer name],
+
+I&#39;m sorry to hear you believe an unauthorized charge was made on your order. Going through our records, I can&#39;t find any messages from you about this matter. We therefore handled your order within our usual shipping window. The tracking details confirm it arrived on [delivery date]. The order lists the same address for shipping and billing, and only one payment attempt was made. I&#39;ve attached all the relevant documents for your reference. If any of this doesn&#39;t match your own records, please tell us and we&#39;ll look into it right away.
+
+Thank you,
+[Brand name]</code></pre>
+<p>[L0350.019]</p>
+<h2 id="clearpay-afterpay-and-klarna-dispute-response">ClearPay, AfterPay and Klarna dispute response</h2>
+<p><strong>Navigation and procedure</strong> <em>(Klarna disputes follow a very similar process)</em></p>
+<ol type="1">
+<li>Sign into your ClearPay or AfterPay account. [L0350.021]</li>
+<li>Click 'Disputes' in the left-hand menu. [L0350.021]</li>
+<li>In the right-hand drop-down, select 'needs response' to list all open disputes that need an answer. [L0350.021]</li>
+<li>Click 'Review Detail' to look at the order in depth. [L0350.021]</li>
+<li>Read the customer's message at the top of the dispute description and note their name. The message states the reason for the dispute, for example 'PRODUCT_NOT_RECEIVED'. [L0350.021]</li>
+<li>Search for the customer's details in your email platform to find any related correspondence. [L0350.021]</li>
+<li>Investigate the complaint to find where the issue is and what stage the resolution is at. [L0350.021]</li>
+<li>Click the dispute, click 'Challenges Dispute' on the ClearPay/AfterPay/Klarna page, then click 'Next'. [L0350.021]</li>
+<li>Fill in the shipping information: 'Transport Carrier', 'Tracking Number' and 'Shipping Date', found in Shopify and the 3PL. Upload supporting documents with 'Browse File' or 'Update Case Document', such as order pages, packing slips, tracking information and email correspondence. [L0350.021]</li>
+<li>Fill in the note section with what the investigation found, explaining how you will resolve the issue and where the order or problem currently stands, then press submit. [L0350.021]</li>
+</ol>
+<p><strong>Worked example</strong></p>
+<ul>
+<li>Example: a ClearPay dispute for a 45 GBP order claimed 'PRODUCT_NOT_RECEIVED'. The parcel had been returned to sender because of an incorrect address, and the tracking 'delivered' status referred to the return. The response should explain this and attach the tracking confirmation. [L0350.023]</li>
+</ul>
+<p><strong>After submission</strong></p>
+<ul>
+<li>After a ClearPay or AfterPay challenge is submitted, the platform runs its own internal investigation and then notifies the merchant of the outcome. The merchant does not decide the result directly, so the evidence submitted is what the platform reviews. [L0350.029]</li>
+</ul>
+<h2 id="follow-up-emails-to-customers">Follow-up emails to customers</h2>
+<p><strong>When the customer did not write in first</strong></p>
+<ul>
+<li>The questions in the follow-up email are meant to find out why they disputed the payment. Ask whether they had any contact about the order, whether all items arrived, and for photos of any problem on arrival. Their answers give you the reason to build your evidence around. [L0350.027]</li>
+<li>Use this email when the customer has not reached out first. Subject line: 'URGENT: [Brand] - Order #[Order number]'. Adjust the wording to fit the situation before sending. [L0350.014]</li>
+</ul>
+<pre><code>Hello [Customer first name],
+
+I&#39;m getting in touch because I see you&#39;ve opened a chargeback on your [Brand] order and told your bank the transaction was fraudulent. Customer care and satisfaction are very important to us, and we&#39;d like to understand what happened and fix it.
+
+We have no record of any contact from you about this, so could you help me clear up a few points? Here&#39;s what I&#39;d like to ask:
+
+- Have you been in touch with [Brand] about a problem with your order?
+- Were all of your items delivered safely, as the tracking number shows [if relevant: to your local post office on [date]]? [Tracking link]
+- If anything was wrong when the order arrived, could you send photos of the problem?
+
+I look forward to hearing from you so I can help resolve this.
+
+Best regards,
+[Agent name]
+[Brand]</code></pre>
+<p>[L0350.014]</p>
+<p><strong>Offering a fix before money</strong></p>
+<ul>
+<li>If the customer still wants money back after a fix is offered, offer a partial refund of about 20%, or up to 50%. [L0639.038]</li>
+<li>Offer a full refund only if the customer escalates publicly on social media or another platform, where a dispute can cause more harm. [L0639.038]</li>
+</ul>
+<h2 id="cost-of-losing-a-dispute">Cost of losing a dispute</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount reversed</td>
+<td>Full order amount, including taxes and shipping</td>
+<td>L1381.049</td>
+</tr>
+<tr>
+<td>Fee on top of order amount</td>
+<td>Platform deducts a fee on top of the full order amount, so a lost case costs more than the order value</td>
+<td>L0350.002</td>
+</tr>
+<tr>
+<td>Bank fee passed to store</td>
+<td>$15 per chargeback</td>
+<td>L1381.049</td>
+</tr>
+<tr>
+<td>Shopify response window</td>
+<td>Roughly one to two months</td>
+<td>L1381.050</td>
+</tr>
+<tr>
+<td>Bank decision after response</td>
+<td>About 75 days</td>
+<td>L0350.013</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Note: the sources give different fee figures. L0350.002 describes a fee on top of the full order amount without a fixed value, while L1381.049 gives a fixed $15 per chargeback. Check the fee shown on your own platform statement, and use the $15 figure only where it matches what you see. [L0350.002, L1381.049]</em></p>
+<ul>
+<li>A lost case costs more than the order value, because the platform deducts a fee on top of the full order amount. [L0350.002]</li>
+<li>A chargeback reverses the full order amount including taxes and shipping, and the bank passes a fee of 15 dollars to the store per chargeback. [L1381.049]</li>
+</ul>
+<h2 id="when-to-refund-instead-of-fighting">When to refund instead of fighting</h2>
+<p><strong>Refund when you were at fault</strong></p>
+<ul>
+<li>Refund the order instead of fighting a chargeback when the customer was left without a response or shipment. The chargeback may be handled as a refund when you were at fault. [L0804.092]</li>
+<li>Refund a customer rather than let them file a chargeback, because a bank dispute is harder to recover from. A refund keeps the customer and the account in better standing. [L1141.027]</li>
+<li>Refund customers who threaten a chargeback with a valid reason, because chargebacks can lead to holds and blocks on your payout account. [L1219.056]</li>
+</ul>
+<p><strong>Fight when the request has no valid reason</strong></p>
+<ul>
+<li>Fight chargebacks from customers who ask for a refund without a valid reason. [L1219.056]</li>
+<li>Submit everything for every chargeback, even fraud claims, since many are won. [L0804.091]</li>
+</ul>
+<p><strong>Procedure: fight a chargeback that is not your fault</strong></p>
+<ol type="1">
+<li>Gather the Shopify receipt. [L0804.091] <em>(2023)</em></li>
+<li>Gather the supplier invoice. [L0804.091] <em>(2023)</em></li>
+<li>Gather the tracking number and proof it was delivered to the address. [L0804.091] <em>(2023)</em></li>
+<li>Submit everything for every chargeback, even fraud claims, since many are won. [L0804.091] <em>(2023)</em></li>
+</ol>
+<p><strong>Procedure: non-returnable item (older)</strong></p>
+<p>Responding to a customer demanding a refund for a non-returnable item: [L0664.071] <em>(older: 2020)</em></p>
+<ol type="1">
+<li>Confirm the item is marked as non-returnable on the product page. [L0664.071] <em>(older: 2020)</em></li>
+<li>Send the product page screenshot and the order details to the customer or the bank. [L0664.071] <em>(older: 2020)</em></li>
+<li>Keep clear records of the policy so it can be shown in a dispute. [L0664.071] <em>(older: 2020)</em></li>
+</ol>
+<p><strong>Limits of recovery</strong></p>
+<ul>
+<li>If a customer used their own card, received the product, and then filed a chargeback, the dispute is hard to win through the bank. Small claims court is a possible but limited option for recovering the money. [L1112.037] <em>(older: 2021)</em></li>
+<li>A buyer who already received a refund from the seller can still open a platform dispute and get a second refund, with the amount pulled from the seller's account. Check whether a platform dispute is open before refunding, and keep a record of every refund and its reason. [L1128.030]</li>
+</ul>
+<p><strong>Policies and terms as evidence</strong></p>
+<ul>
+<li>Attach screenshots of the terms of service, shipping policy and refund policy that show the customer agreed to them. [L0352.020]</li>
+<li>Shopify forwards chargeback evidence to the bank, but whether you win depends on what you did before the dispute. A chargeback can be contested on Stripe or PayPal if you replied to the customer and have evidence. [L1219.052]</li>
+</ul>
+<h2 id="non-delivery-claims-and-older-guidance">Non-delivery claims and older guidance</h2>
+<p><strong>Procedure: contest a non-delivery chargeback (older)</strong></p>
+<ul>
+<li>A chargeback claiming non-delivery can usually be won with tracking that shows the item was delivered, so submit the shipping information and tracking proof to the bank. [L0466.059] <em>(older: 2018)</em></li>
+<li>To contest a non-delivery chargeback, upload evidence such as a tracking number that shows the order was delivered. The bank or card network then decides whether the merchant keeps the money or the customer is refunded. [L1086.063] <em>(older: 2019)</em></li>
+</ul>
+<p><strong>Procedure: non-delivery and partial shipment (older)</strong></p>
+<ol type="1">
+<li>Submit all documentation to the bank or card company, including shipping information and tracking showing delivery. [L0466.060] <em>(older: 2018)</em></li>
+<li>Contact the customer in ways that can be documented, such as email, not only by phone. [L0466.060] <em>(older: 2018)</em></li>
+<li>Email the customer about any outstanding item, with its status and options such as shipping it later or a partial refund. [L0466.060] <em>(older: 2018)</em></li>
+<li>Keep records of every contact attempt, including unanswered calls and voicemails. [L0466.060] <em>(older: 2018)</em></li>
+</ol>
+<p><strong>Procedure: contest a chargeback (Source C)</strong></p>
+<p>To contest a chargeback: [L0352.020]</p>
+<ol type="1">
+<li>Check whether the customer already emailed and answer those messages if possible. [L0352.020]</li>
+<li>Open the dispute form that Shopify provides. [L0352.020]</li>
+<li>Submit proof that the order shipped, including tracking. [L0352.020]</li>
+<li>Attach screenshots of the terms of service, shipping policy and refund policy that show the customer agreed to them. [L0352.020]</li>
+<li>For damage claims, state that items are quality checked and shipped in good condition. [L0352.020]</li>
+</ol>
+<p><strong>Procedure: Source C response flow</strong></p>
+<ol type="1">
+<li>Check email regularly and respond quickly to any customer who raises a problem or threatens a chargeback. [L0639.038]</li>
+<li>Ask what went wrong and offer a fix first, such as a replacement or a resend. [L0639.038]</li>
+<li>If the customer still wants money back, offer a partial refund of about 20%, or up to 50%. [L0639.038]</li>
+<li>Only offer a full refund if the customer escalates publicly on social media or another platform, where a dispute can cause more harm. [L0639.038]</li>
+<li>If a chargeback is filed, submit the shipping details, a tracking number, an order screenshot, the refund and return policy, and email chats showing that the transaction was approved and the customer was contacted. [L0639.038]</li>
+<li>In the chargeback response, state the evidence and explain what you are currently doing to resolve the situation. [L0639.038]</li>
+</ol>
+</article><nav class="pn"><a href="../../17-customer-service-returns-and-chargebacks/14-preventing-chargebacks-and-protecting-the-payment-account/"><span class="k">&larr; Previous</span><span class="v">Preventing chargebacks and protecting the payment account</span></a><a class="nx" href="../../17-customer-service-returns-and-chargebacks/16-automation-help-desk-and-self-service-tools/"><span class="k">Next &rarr;</span><span class="v">Automation, help desk and self-service tools</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

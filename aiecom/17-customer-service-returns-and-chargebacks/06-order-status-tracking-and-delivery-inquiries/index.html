@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Order status, tracking and delivery inquiries | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 17.6: Order status, tracking and delivery inquiries.">
+<link rel="canonical" href="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/06-order-status-tracking-and-delivery-inquiries/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Order status, tracking and delivery inquiries | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 17.6: Order status, tracking and delivery inquiries."><meta property="og:url" content="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/06-order-status-tracking-and-delivery-inquiries/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">17. Customer service, returns and chargebacks</a> &rsaquo; <a href="../../../ecom/17-customer-service-returns-and-chargebacks/06-order-status-tracking-and-delivery-inquiries/">Plain version</a></div><h1>17.6 Order status, tracking and delivery inquiries</h1><article><h2 id="why-tracking-and-order-status-matter">Why tracking and order status matter</h2>
+<ul>
+<li>Order tracking systems prevent orders from disappearing due to supplier delays, lost emails in inbox, or operational oversights. This becomes critical as transaction volume grows and when working with new suppliers whose reliability is unproven. [L0292.001]</li>
+<li>Tracking questions are the most frequent support request, so prepare standard replies for the common cases: order not shipped yet, order shipped, shipped but not received, and shipped with an angry customer. [L0405.001]</li>
+<li>Most customer calls are about legitimacy, order status and stock. Detailed product pages, an FAQ and automated tracking emails remove most of these questions. (2021, older advice) [L1112.033]</li>
+<li>An order tracking tool can send tracking information to customers automatically after shipment, which reduces "where is my order" contacts. (2021, older advice) [L1112.034]</li>
+<li>Automatic shipment updates sent through a tracking app reduce customer inquiries about order status. [L0966.093]</li>
+</ul>
+<h2 id="order-status-check-before-every-reply">Order status check before every reply</h2>
+<ol type="1">
+<li>Look up the order status in the store admin and fulfillment system before replying to any tracking question. [L0405.033]</li>
+<li>If the order is not shipped yet, send the not-shipped reply: it is being processed, a tracking email follows once it ships, and orders take about 10-20 days after shipping. [L0405.033]</li>
+<li>If the order is shipped and the customer is asking about tracking, send the shipped reply with the shipping date, the 3-5 business day tracking delay, the tracking link and a screenshot of the current status. [L0405.033]</li>
+<li>If the order is shipped and the customer says they got no confirmation emails, send the junk/spam version of the shipped reply and ask them to check junk and spam first. [L0405.033]</li>
+<li>If the order is shipped but the customer is angry, send the angry reply with the current status, take responsibility for delivery and promise a free reship or full refund if the parcel is lost in transit. [L0405.033]</li>
+<li>If the parcel is delivered and the customer wants a refund, offer a free reship first unless they ask for a refund on first contact, in which case process the refund without pushing a reship. [L0405.033]</li>
+<li>If the tracking cannot be found at all and the parcel appears lost, send the lost-order refund reply and confirm the refund is already initiated. [L0405.033]</li>
+</ol>
+<h2 id="delivery-times-processing-and-transit">Delivery times: processing and transit</h2>
+<p>Sources give different values for the same stages. Each value applies to the case listed.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Value</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dispatch of in-stock orders from the warehouse</td>
+<td>Within 5 business days from the order date</td>
+<td>Warehouse with in-stock items</td>
+<td>[L0145.009]</td>
+</tr>
+<tr>
+<td>Processing before a dropshipped order ships</td>
+<td>About 4 to 7 days</td>
+<td>Dropshipping store, order not yet shipped; the value to quote in the AI responder and in the not-shipped replies</td>
+<td>[L0477.009, L0477.040, L1297.039]</td>
+</tr>
+<tr>
+<td>Processing example</td>
+<td>About 3 days before shipment (Illinois to Philadelphia example)</td>
+<td>Single supplier case used to show processing and transit must be separated</td>
+<td>[L1472.064]</td>
+</tr>
+<tr>
+<td>Physical product shipping for dropshipping</td>
+<td>5 to 14 days</td>
+<td>General shipping range for physical dropshipped products</td>
+<td>[L0911.001]</td>
+</tr>
+<tr>
+<td>International transit</td>
+<td>10-20 days after shipping (calendar basis)</td>
+<td>Used in the not-shipped and shipped templates that say "after shipping"</td>
+<td>[L0405.002, L0405.008, L0405.021, L0911.005]</td>
+</tr>
+<tr>
+<td>International transit</td>
+<td>10-20 business days after processing</td>
+<td>Used in the shipped templates that say "after processing"</td>
+<td>[L0405.009, L0405.022, L0911.006]</td>
+</tr>
+<tr>
+<td>Transit to final address</td>
+<td>10 to 20 days from the shipping date</td>
+<td>Used in the not-shipped reply that cites the shipping date</td>
+<td>[L0911.005]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Use one basis for transit time in every template, preferably business days, so customers do not receive conflicting estimates. [L0405.035]</li>
+<li>Present delivery timelines as estimates, and separate supplier processing time from carrier transit time, so a deadline is not promised that cannot be met. When processing takes about 3 days before a shipment from Illinois to Philadelphia, a 5-business-day deadline cannot be guaranteed, so say that upfront. [L1472.064]</li>
+<li>Set expectations with the customer before they become frustrated. [L0911.007]</li>
+<li>Give customers a rough delivery window once a sale is made, such as one to two weeks, based on the parcel's position in the shipping process (for example, cleared customs and on its way), and update it when possible. [L1315.007]</li>
+</ul>
+<h2 id="tracking-numbers-and-tracking-updates">Tracking numbers and tracking updates</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Value</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First tracking information appears</td>
+<td>Within 24 hours of shipment, sent to the checkout email</td>
+<td>Store that sends tracking itself at dispatch</td>
+<td>[L0145.009]</td>
+</tr>
+<tr>
+<td>First tracking information appears</td>
+<td>Within 3-5 business days of shipping</td>
+<td>Standard Source C replies, shipped and junk/spam versions</td>
+<td>[L0405.002, L0405.009, L0405.010, L0405.022, L0405.023]</td>
+</tr>
+<tr>
+<td>First tracking information appears</td>
+<td>3 to 5 days after shipping (no business-day qualifier)</td>
+<td>Shipped reply variant</td>
+<td>[L0911.006, L0911.007]</td>
+</tr>
+<tr>
+<td>Tracking escalation</td>
+<td>If no tracking after six business days, contact the support address</td>
+<td>Escalation rule in the in-stock template</td>
+<td>[L0145.009]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Tracking numbers often do not update until the parcel is close to its destination, so customers should be warned not to panic when the status stays unchanged for a while. [L0405.003]</li>
+<li>The tracking number does not show precise updates until the parcel is close to its destination; state this in every shipped reply. [L0405.009, L0405.010, L0405.022, L0911.006]</li>
+<li>Check the status yourself on a public tracking website first, then send the customer a screenshot of the page. [L0911.008]</li>
+<li>Give customers the tracking number when they ask for it, because PayPal and other payment providers may ask for it as proof of shipment. [L1347.034]</li>
+</ul>
+<h3 id="tracking-tools-and-apps">Tracking tools and apps</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Notes</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify built-in shipping notifications</td>
+<td>Sends tracking numbers entered directly in Shopify to customers</td>
+<td>Can replace AfterShip to save its monthly cost (2024)</td>
+<td>[L0666.013]</td>
+</tr>
+<tr>
+<td>AfterShip</td>
+<td>Sends automatic updates at each carrier status change (in transit to a city, arriving soon, out for delivery, delivery attempt missed)</td>
+<td>Enter a tracking number once; prevents many support contacts; more customization than built-in notifications</td>
+<td>[L0666.013, L1515.035]</td>
+</tr>
+<tr>
+<td>Track123</td>
+<td>Order tracking page app</td>
+<td>Every store should have a tracking page</td>
+<td>[L1299.024]</td>
+</tr>
+<tr>
+<td>Track123 configuration</td>
+<td>Updates order emails automatically and links the tracking page in the store menu</td>
+<td>Lets customers check their order at any time</td>
+<td>[L1299.025]</td>
+</tr>
+<tr>
+<td>CJ Dropshipping app</td>
+<td>Linked to Shopify, sends an email with tracking information once a tracking number is generated</td>
+<td>Automatic customer email at tracking generation</td>
+<td>[L1347.033]</td>
+</tr>
+<tr>
+<td>Public tracking website (e.g. 17track)</td>
+<td>Customer enters tracking number to see package location</td>
+<td>Used as the source for screenshots and tracking links</td>
+<td>[L0911.008, L0405.022, L0405.023]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A tracking page serves existing customers who want to follow their parcel. It also gives prospects a sign that the business provides real tracking numbers, which adds credibility before they buy. [L1130.010]</li>
+</ul>
+<h2 id="confirmation-emails-and-spam-checks">Confirmation emails and spam checks</h2>
+<ul>
+<li>Confirmation emails for order, shipping and delivery can land in the junk or spam folder, so when a customer says they received nothing, ask them to check those folders first. [L0405.004]</li>
+<li>Automated emails sent by a store or its platform can land in the spam folder. Before reporting a missing confirmation or account email, search both the main inbox and the spam folder for the sender's name. (2025) [L0807.052]</li>
+<li>If support emails seem missing, check the spam folder first, since replies may land there. If you are in the mentor program, also post in the member Slack channel to get attention faster. [L0941.085]</li>
+</ul>
+<h2 id="replies-for-orders-not-yet-shipped">Replies for orders not yet shipped</h2>
+<pre><code>Hello [NAME],
+
+Thanks for reaching out, I&#39;m glad to help.
+
+I reviewed your order and it is still in processing. Dispatch should happen soon. Once it has been sent, you will receive a confirmation email containing a tracking link so you can follow the parcel.
+
+Delivery to the final destination usually takes 10-20 days after shipping. I hope this clears things up! If anything else comes up, just write back.
+
+Best wishes,
+[AGENT NAME]
+[STORE NAME] Customer Support Representative</code></pre>
+<p>[L0405.021]</p>
+<pre><code>Write a reply to a customer whose tracking shows the order has not shipped yet, using this structure: thank them for the message and say you are happy to help; explain the order is being processed and will ship shortly; state that a shipping confirmation with a tracking link will be emailed once shipped; mention that orders typically take 10-20 days to arrive after shipping; invite any further questions; sign off with the agent name and store name as Customer Support Representative. Do not invent a shipping date.</code></pre>
+<p>[L0405.008]</p>
+<pre><code>Hi [customer name], thanks for reaching out, glad to assist. Our team reviewed your order: it&#39;s in processing now and will leave our warehouse soon. After dispatch, you&#39;ll get an email with a tracking link so you can follow its progress. Typically, delivery to the final address takes 10 to 20 days from the shipping date. Hopefully that clears things up. If anything else comes up, just write back. Best wishes, [agent name], [store name] Customer Support Representative</code></pre>
+<p>[L0911.005]</p>
+<pre><code>Hello, thank you for reaching out. We try our best to ship every item as fast as we can. Please allow four to seven days of processing time for your order to ship out. If you have any further questions about your order, email us at [your email address] and we will send you all the information you need. Thank you for your patience.</code></pre>
+<p>[L0477.040]</p>
+<pre><code>Hello, thank you for reaching out. We try our best to ship every order as fast as we can, but please allow 4 to 7 days of processing time before your order leaves our supplier. Once it ships, you will receive a tracking number by email. If you have any other questions in the meantime, write to us at [your support email address] and we will send you all the information you need.</code></pre>
+<p>[L1297.039]</p>
+<ul>
+<li>Shipping time message for a dropshipping store: tell customers processing takes about four to seven days before the order ships, and give a contact email for order questions. Use this in the AI responder for "where is my order" type messages. [L0477.009]</li>
+</ul>
+<h2 id="replies-for-shipped-orders">Replies for shipped orders</h2>
+<pre><code>Hello [NAME],
+
+Thank you for getting in touch, I&#39;m happy to assist.
+
+I checked your tracking details and they show that your order was shipped on [DATE]. Keep in mind that standard international shipping takes 10-20 business days after processing.
+
+Tracking information generally appears within 3-5 business days of dispatch. You can follow the shipment on a tracking site such as 17track using your tracking number: [TRACKING LINK]
+
+You can also view the latest status here: [SCREENSHOT]
+
+Please be aware that the tracking number does not show precise updates until the parcel is close to its destination.
+
+I&#39;m sorry for the slow delivery, since waiting this long is frustrating. Every package is covered by our guarantee: if it is lost in the mail or never arrives, you can choose a full refund or a reship, and with a reship we will also add a complimentary store credit on top.
+
+Thank you for your patience and understanding! Please let me know if there is anything else I can do for you.
+
+Best wishes,
+[AGENT NAME]
+[STORE NAME] Customer Support Representative</code></pre>
+<p>[L0405.022]</p>
+<pre><code>Write a reply to a customer whose order has shipped, using this structure: thank them and say you are happy to help; give the shipping date [DATE] and note that standard international shipping takes 10-20 business days after processing; explain that tracking information appears within 3-5 business days of shipping and give the tracking link; include a screenshot of the current tracking status; note that the tracking number does not update until the parcel nears its destination; apologize for slow delivery and show empathy; restate the guarantee that lost packages can be refunded or reshipped with a store credit on top; thank them for their patience and offer further help; sign off as the store customer support representative.</code></pre>
+<p>[L0405.009]</p>
+<pre><code>Hey [customer name], thank you for your message, happy to help. I have checked your tracking information, and it states that your order was shipped out on [shipping date]. Please note that our standard international shipping takes 10 to 20 business days after processing. Tracking information becomes available within 3 to 5 days after your order has been shipped. To stay updated, you can check the shipment progress on [tracking website] by entering your tracking number there, and I have attached a screenshot of the current tracking information for you. Please note that the tracking number does not update precisely until the package gets close to its destination. I hope this helps. Please let me know if you have any other questions or concerns. Warm regards, [agent name], [store name] Customer Support Representative</code></pre>
+<p>[L0911.006]</p>
+<pre><code>Write a reply to a customer who says a shipped order never arrived and no confirmation emails were received, using this structure: thank them and say you are happy to help; explain that confirmation emails are sent at order, shipping and delivery and may be in the junk or spam folder; give the tracking information timing of 3-5 business days after shipping and the tracking link; include a screenshot of the current tracking status; note that tracking does not update precisely until near the destination; apologize for slow delivery and show empathy; restate the guarantee that a lost package can be refunded or reshipped with a store credit on top; thank them for their patience and offer further help; sign off as the store customer support representative.</code></pre>
+<p>[L0405.010]</p>
+<pre><code>Hello [NAME],
+
+Thanks for writing in, I&#39;m happy to help.
+
+We send confirmation emails when an order is placed, when it ships, and when it is delivered. If you have not seen them, first check your junk or spam folder.
+
+Tracking information usually shows up within 3-5 business days after dispatch. You can follow the shipment on a tracking site such as 17track using your tracking number: [TRACKING LINK]
+
+Here is the most recent tracking status: [SCREENSHOT]
+
+Note that the tracking number only gives exact updates once the parcel nears its destination.
+
+I&#39;m sorry for the slow delivery, as a long wait is frustrating. All packages are protected by our guarantee: if one is lost in the mail or fails to arrive, you can pick a full refund or a reship, and a reship also comes with a complimentary store credit on top.
+
+Thank you for your patience and understanding! Let us know if we can help with anything else.
+
+Best wishes,
+[AGENT NAME]
+[STORE NAME] Customer Support Representative</code></pre>
+<p>[L0405.023]</p>
+<h2 id="replies-for-angry-customers-and-parcels-not-arrived">Replies for angry customers and parcels not arrived</h2>
+<pre><code>Write a reply to an angry customer whose shipped order has not arrived, using this structure: thank them and say you are happy to help; apologize that the package has not arrived; say that although every order is processed and shipped on time, delays sometimes occur; state the current order status [STATUS]; take full responsibility for delivery and promise a free reship or full refund if the package is lost in transit; apologize for the inconvenience and thank them for their patience while the issue is resolved; invite further questions; sign off as the store customer support representative.</code></pre>
+<p>[L0405.011]</p>
+<pre><code>Hello [NAME],
+
+Thank you for reaching out, I&#39;m glad to help.
+
+I&#39;m sorry your package has not arrived yet. We work to process and ship every order on time, but delays can still happen. Your order currently reads: [STATUS].
+
+That said, we take full responsibility for getting our packages delivered. If a parcel is lost in transit, we will offer you either a free reship or a full refund.
+
+I apologize for the trouble this has caused and appreciate your patience while we work through it.
+
+I hope this helps! Reply anytime if you have other questions or concerns.
+
+Best wishes,
+[AGENT NAME]
+[STORE NAME] Customer Support Representative</code></pre>
+<p>[L0405.024]</p>
+<pre><code>Hey [customer name], thank you for your message, happy to help. I am sorry to hear that you have not yet received your package. Although we do our best to ensure every order is processed and shipped in a timely fashion, unexpected delays can sometimes occur. Taking a look at your order, it appears that it is currently [current status and location]. That being said, we take full responsibility for the delivery of our packages, and if the package is lost in transit, we will offer you a free reship or a full refund. I apologize for any inconvenience you may have experienced, and thank you for your patience while we sort things out. I hope this helps. Please let me know if you have any other questions or concerns. Warm regards, [agent name], [store name] Customer Support Representative</code></pre>
+<p>[L0911.009]</p>
+<ul>
+<li>The standard response to a delivery complaint takes responsibility for the shipment, apologizes for the inconvenience, and then offers a free reship or full refund if the package is lost in transit. [L0405.006]</li>
+<li>For a package lost in transit, offer the customer either a free replacement shipment or a full refund. Make this offer explicitly in the reply to an impatient customer whose order is still moving. [L0911.010]</li>
+</ul>
+<h2 id="guarantees-and-refund-policy">Guarantees and refund policy</h2>
+<ul>
+<li>A guarantee covering every package should be stated to customers: if a parcel is lost in transit, they may choose a full refund or a free reship, and the store can add a store credit on top of the reship. [L0405.005]</li>
+<li>The default refund policy is that a customer can get either a free reship or a full refund. The preferred first offer is a free reship, but if the customer asks for a refund on first contact, give the refund without pushing a reship. [L0405.007]</li>
+</ul>
+<h2 id="lost-parcels-and-refunds">Lost parcels and refunds</h2>
+<ul>
+<li>For lost shipments, send the tracking information that shows the item was lost, then keep the customer updated on replacements, when they ship and when they arrive. Most customers only panic when they are not kept informed. (2020, older advice) [L0852.109, L0852.125]</li>
+<li>If the fulfillment platform can no longer track an order and the package is considered lost, issue a full refund and tell the customer it has already been initiated. Do not wait for the customer to ask for a replacement before refunding. [L0911.017]</li>
+</ul>
+<pre><code>Write a reply for a lost order where the tracking has gone missing, using this structure: explain that the package appears to have disappeared from the system and that the reason the tracking cannot be found is unknown; state that a full refund is being provided and has already been initiated, with an email notification to follow; apologize for the inconvenience and thank the customer for their patience; sign off as the store customer support representative.</code></pre>
+<p>[L0405.019]</p>
+<pre><code>Hello [NAME],
+
+Unfortunately, your package seems to be missing from our system, and we cannot tell why we are unable to track it. Because of this, we are issuing a full refund. The process has already begun, and you should receive an email about it.
+
+I&#39;m sorry for any trouble this has caused, and thank you for your patience while we resolve this.
+
+Thanks,
+[AGENT NAME]
+[STORE NAME] Customer Support Representative</code></pre>
+<p>[L0405.031]</p>
+<pre><code>Hey [customer name], unfortunately, it seems as though your package has gone missing from our system, and we are unsure why we cannot track your order. In light of this, we are providing a full refund. It has already been initiated, and you should receive an email notifying you of this. We apologize for any inconvenience and appreciate your patience during this issue. Thanks, [agent name], [store name] Customer Support Representative</code></pre>
+<p>[L0911.016]</p>
+<h2 id="late-delivery-and-delay-responses">Late delivery and delay responses</h2>
+<ul>
+<li>When a customer complains about a late delivery, first find the cause before deciding on a remedy. Possible causes are outdated product page delivery times, slow order submission, or a supplier that took longer than usual, and each has a different fix. (2021, older advice) [L0853.018]</li>
+<li>If a supplier never ships a paid order and the customer becomes upset, a partial refund such as 5% combined with a firm delivery date can settle the situation. The exact remedy depends on what went wrong. (2021, older advice) [L0853.019]</li>
+<li>For delivery questions, promise only what the supplier and carrier can deliver. Contact the store team when a customer needs a quote instead of guessing a price. (2022, older advice) [L1281.118]</li>
+</ul>
+<pre><code>Hi [Customer name], thank you for your message and for your patience. Your order is on its way, but delivery is taking a little longer than usual. We are sorry for the delay and will keep you updated until it arrives. [Store name] Customer Support</code></pre>
+<p>[L0661.051]</p>
+<pre><code>Use a reply to customers who ask why an order takes so long, adjusted to your own situation: I apologize for this. Due to shipping, customs or Covid we will do our best to get your order to you on time. In the meantime, since you are patiently waiting, here is a discount code for your next purchase: [CODE].</code></pre>
+<p>[L0820.032]</p>
+<pre><code>Hi [CUSTOMER NAME], thank you for your patience, and I am sorry your order is taking longer than expected. It is not something you did; the delay comes from [shipping times / customs / Covid-19 delays], and we are doing our best to get your order to you on time. While you wait, here is a [DISCOUNT %] discount code for your next purchase: [CODE]. If you have any questions, reply to this email at any time and I will keep you updated on your order. Best regards, [YOUR NAME]</code></pre>
+<p>[L0820.050]</p>
+<h2 id="delivery-promises-and-christmas">Delivery promises and Christmas</h2>
+<ul>
+<li>Setting delivery times that are too short for the real transit time is over-promising. Shorter estimates may raise conversion, but customers who receive the parcel later than promised lead to complaints and chargebacks. Set the estimate to what the fulfillment center can reliably meet and improve it as the setup matures. [L1327.026]</li>
+</ul>
+<pre><code>Write a Christmas guarantee message for a shipment expected before the holiday: greet the customer by name; say the order is on its way and is promised to arrive before Christmas; state that if delivery takes longer, a full refund will be given; sign off with the agent name and store customer support representative title.</code></pre>
+<p>[L0405.020]</p>
+<pre><code>Hi [NAME],
+
+Your order is currently on its way to you, and we promise it will arrive before Christmas. If it takes any longer than that, we will happily provide a full refund.
+
+Warm regards,
+[AGENT NAME]
+[STORE NAME] Customer Support Representative</code></pre>
+<p>[L0405.032]</p>
+<h2 id="origin-and-trust-after-purchase">Origin and trust after purchase</h2>
+<ul>
+<li>Customers who do not know their parcel is shipping from China become more anxious when they discover it later, so hiding origin on tracking and emails protects trust after the purchase. [L1315.006]</li>
+</ul>
+<h2 id="tracking-from-day-one">Tracking from day one</h2>
+<ul>
+<li>For dropshipping with physical products, shipping can take 5 to 14 days, so customers will often ask where their order is. Plan customer service for these tracking questions from the start. [L0911.001]</li>
+</ul>
+</article><nav class="pn"><a href="../../17-customer-service-returns-and-chargebacks/05-reply-templates-and-scripts-for-pre-purchase-questions/"><span class="k">&larr; Previous</span><span class="v">Reply templates and scripts for pre-purchase questions</span></a><a class="nx" href="../../17-customer-service-returns-and-chargebacks/07-order-changes-cancellations-and-out-of-stock-handling/"><span class="k">Next &rarr;</span><span class="v">Order changes, cancellations and out-of-stock handling</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

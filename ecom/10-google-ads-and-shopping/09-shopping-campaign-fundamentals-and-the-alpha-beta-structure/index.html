@@ -1,0 +1,1259 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Shopping campaign fundamentals and the alpha-Beta structure | Ecommerce Playbook</title>
+<meta name="description" content="- Shopping ads show your product photo, price and store name. You do not pick keywords. Google reads your product list and chooses the searches. - Use Standard Shopping. Skip Performance Max and Smart Shopping, because they give you little control ...">
+<link rel="canonical" href="https://dlichters.com/ecom/10-google-ads-and-shopping/09-shopping-campaign-fundamentals-and-the-alpha-beta-structure/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Shopping campaign fundamentals and the alpha-Beta structure | Ecommerce Playbook"><meta property="og:description" content="- Shopping ads show your product photo, price and store name. You do not pick keywords. Google reads your product list and chooses the searches. - Use Standard Shopping. Skip Performance Max and Smart Shopping, because they give you little control ..."><meta property="og:url" content="https://dlichters.com/ecom/10-google-ads-and-shopping/09-shopping-campaign-fundamentals-and-the-alpha-beta-structure/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../10-google-ads-and-shopping/">10. Google Ads and Shopping</a></div><h1>Shopping campaign fundamentals and the alpha-Beta structure</h1><p class="meta">Section 10.9 &middot; 9 of 23 in this chapter &middot; 52 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Shopping ads show your product photo, price and store name. You do not pick keywords. Google reads your product list and chooses the searches.</li>
+<li>Use <strong>Standard Shopping</strong>. Skip Performance Max and Smart Shopping, because they give you little control.</li>
+<li>Set the <strong>shared daily budget</strong> to $5 to $10 in total. Start Alpha at <strong>$0.40 per click</strong> and Beta at <strong>$0.20 per click</strong>.</li>
+<li>Turn off <strong>Search Partners</strong>. Add <strong>negative keywords</strong> to block searches that never buy.</li>
+<li>Some older advice in this text disagrees with the newer advice. Check the newest number first.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li><strong>Google checks your campaigns in priority order:</strong> high first, then medium, then low. This order only applies between your own campaigns.</li>
+<li><strong>Set Beta to High and Alpha to Low.</strong> This sounds backwards, but it sends weak searches to Beta first and lets strong searches fall through to Alpha.</li>
+<li><strong>Alpha is for your strongest searches,</strong> such as brand names and exact product codes. Beta is for weaker, broader searches. Put strong search words in Beta as blocked words so they move to Alpha.</li>
+<li><strong>Turn on the Item ID split</strong> so each product can get its own bid. Do not skip this step.</li>
+<li><strong>Do not move keywords by hand.</strong> Change the bid instead.</li>
+<li>Turn on Google Shopping ads <strong>only after Google approves your products.</strong></li>
+<li>Judge ads by <strong>two numbers together</strong>: how often visitors buy, and how much money comes back per dollar spent.</li>
+<li>Run <strong>two campaigns</strong>: Alpha for strong searches with higher prices per click, Beta for broad searches with lower prices.</li>
+<li>Use <strong>negative keywords</strong> (blocked search words) to keep each search in the right campaign.</li>
+<li>Give approval time: it can take <strong>30 minutes to a few days.</strong></li>
+<li>Shopping ads are made from your product name, price and store name. You do not need to write ad text.</li>
+<li>Start with two campaigns: alpha and beta. Alpha blocks weak searches, and beta receives them.</li>
+<li>Launch with all your products. Split them one by one only after you have data.</li>
+<li>Wait for data before you change bids or block many searches.</li>
+<li>If Google Shopping sells better than Google Search, scale Shopping first.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 44 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="how-shopping-ads-work"><summary><h2>How Shopping Ads Work</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>Shopping ads are <strong>paid ads</strong>. They show the product image, price and store name.</li>
+<li>They appear on Google's front page and at the top of Shopping results.</li>
+<li>Shopping ads give <strong>more control</strong> over traffic volume and scaling than any other Google traffic method.</li>
+<li>Once you create and get approval for them, Shopping ads show your products at the top of Google Search results.</li>
+<li>Paid Shopping ads appear in <strong>two places</strong>:
+<ul>
+<li>The top carousel <span class="ex">(a row of product boxes)</span> on the main results page, marked Sponsored</li>
+<li>The top section of the Google Shopping tab, marked Sponsored</li>
+</ul></li>
+<li>Anything marked <strong>Sponsored</strong> is a paid ad.</li>
+<li>Below the paid ads are <strong>free listings</strong> that are not sponsored. They come from Google Merchant Center, Google's tool that holds your product data.</li>
+<li>Shopping campaigns have <strong>no keyword bidding</strong>. A campaign is one group of ads with its own settings and budget.</li>
+<li>You improve results in the Google Merchant Center product feed. A feed is your product list file, with one row per product.</li>
+<li>The only text control in Google Ads is <strong>negative keywords</strong>. These are words that stop your ad from showing.</li>
+<li>Titles, attributes <span class="ex">(product details like size or colour)</span> and images belong in Merchant Center.</li>
+<li>Shopping ads show for product names, SKU numbers <span class="ex">(a stock code for one product)</span> and brand names from the feed. They also show the image, store name and price.</li>
+<li>Searchers already know what they want, so these clicks carry <strong>strong buying intent</strong>. Intent means how close someone is to buying. This works only if negative keywords are set up correctly.</li>
+</ul>
+<h3 id="feed-driven-matching">Feed-Driven Matching</h3>
+<ul>
+<li>The advertiser does <strong>not choose keywords</strong>.</li>
+<li>All products go to Google Merchant Center. Google reads the product data <span class="ex">(titles, descriptions, brand, product names, SKUs)</span> to decide which searches show your ad.</li>
+<li>Accurate product page data therefore <strong>drives matching</strong>.</li>
+<li>Google does not allow you to choose keywords by hand. Matching search terms come from the product feed automatically. So bid control has to come from <strong>campaign structure and negative keywords</strong>.</li>
+<li>Google matches products to searches using feed data and its own algorithms <span class="ex">(automatic rules)</span>. You control only two things: the <strong>product data</strong> and the <strong>exclusions</strong>.</li>
+<li>Google picks the triggering searches from your product data. This saves time on writing ads and choosing keywords.</li>
+<li>But Google often shows products for weakly related searches. It does not judge search intent reliably. So you have to manage this yourself.</li>
+<li>** Google Shopping has no direct keyword targeting.</li>
+<li>** The only controls are the search terms that trigger ads and the <strong>negative keywords</strong> you add.</li>
+<li>** Searches that are too vague or broad usually produce <strong>few clicks</strong>.</li>
+<li>Shopping campaigns do not use keywords you choose, the way Search campaigns do.</li>
+<li>Titles, descriptions, brand, product names and SKUs from your Shopify store are matched through Merchant Center. Shopify is a store-building platform.</li>
+<li>Google picks the search terms itself. So <strong>one campaign cannot bid higher on good terms and lower on weak terms</strong>.</li>
+</ul>
+<h3 id="why-product-listing-ads-work">Why Product Listing Ads Work</h3>
+<ul>
+<li>Product Listing Ads (PLAs) are Shopping ads with products, images and prices. They take up a <strong>very large share</strong> of the results page for buying searches. This gives them strong visibility.</li>
+<li>PLAs show products visually in the results. Images, prices and seller information appear directly.</li>
+<li>PLAs work because they reach people who are <strong>ready to buy</strong> a specific product. These people are in buy mode, not just researching or browsing.</li>
+<li>PLA campaigns need <strong>no manual keyword research</strong>. Google's product feed system matches products to buying searches using the product data.</li>
+<li>Google likes PLAs for buying searches. They give a good experience: relevant products, clear prices and good images.</li>
+</ul>
+</details><details class="part" id="campaign-type-standard-smart-and-performance-max"><summary><h2>Campaign Type: Standard, Smart and Performance Max</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign type</th>
+<th>Use</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Shopping</td>
+<td>Default for the Alpha-Beta structure. Full keyword-free control through negatives and priority</td>
+<td></td>
+</tr>
+<tr>
+<td>Smart Shopping</td>
+<td>Not suitable for the funnel. No control over keywords or negatives. Unsuitable for high-ticket</td>
+<td></td>
+</tr>
+<tr>
+<td>Performance Max</td>
+<td>Not used. Many clicks but very low conversions</td>
+<td></td>
+</tr>
+<tr>
+<td>Goal-optimized</td>
+<td>Not used. Removes customization and runs across Search, Display, YouTube and Gmail</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Google promotes Smart Campaigns to <strong>spend more money fast</strong>. It is not focused on performance. Google earns from ad volume, so the ROI <span class="ex">(profit return)</span> of each campaign matters less to it.</li>
+<li>To beat competitors, use <strong>manual campaigns</strong>. You control strategy, targeting and bids. Simplified automated campaigns do not allow this.</li>
+<li>For a new store with few orders, choose <strong>Standard Shopping</strong>, not Smart. The authors were still testing Smart when this was written.</li>
+<li>Smart Shopping gives no control over keywords or negative keywords. It cannot build the funnel <span class="ex">(the step-by-step path buyers take through your campaigns)</span>.</li>
+<li>Its spend can overshoot or undershoot. This makes it unsuitable for high-ticket products <span class="ex">(expensive items)</span>. **</li>
+<li>** Automated types such as Smart Shopping rarely work for <strong>high-ticket dropshipping</strong>. Dropshipping means you sell without holding stock; the supplier ships.</li>
+<li>** These types can still work for other physical products.</li>
+<li>** Keep high-ticket Shopping budgets for the shopping funnel structure.</li>
+<li>Do not use "smart" bidding settings that <strong>remove control</strong> over campaign parameters.</li>
+<li>Those modes stop you from splitting high-converting and low-converting terms into campaigns with different bid strategies. A conversion is a counted sale or action.</li>
+<li>When creating a campaign, select <strong>Standard</strong>, not goal-optimized. This keeps control over each setting.</li>
+<li>Do <strong>not use Performance Max</strong>.</li>
+<li>At the subtype step, choose <strong>Standard Shopping</strong>. You cannot change the subtype later.</li>
+</ul>
+</details><details class="part" id="campaign-creation-without-guidance"><summary><h2>Campaign Creation Without Guidance</h2><span class="pm">6 min</span></summary>
+<h3 id="choosing-the-setup-path">Choosing the Setup Path</h3>
+<ul>
+<li>About <strong>90% or more</strong> of campaigns are created without goals guidance. This gives more bid strategy options and more manual control.</li>
+<li>Google's guided setup pushes one campaign type. To build an Alpha-Beta structure, choose <strong>create a campaign without goals guidance</strong>.</li>
+<li>The Alpha-Beta structure uses two campaigns at two price levels. Alpha is the main one and pays more per click. Beta pays less.</li>
+<li>Choose <strong>Create a campaign without goals guidance</strong> for a new campaign.</li>
+<li>Campaign goals only help once the store and Google account have enough sales data. This guide puts that at <strong>six figures or more per month</strong>, or several hundred thousand dollars in sales.</li>
+<li>In Google Ads, go to <strong>Campaigns</strong>, then <strong>All campaigns</strong>. Filter to Shopping campaigns.</li>
+<li>The "Go to" button at the top lets you type "campaign" to jump to creation or viewing.</li>
+</ul>
+<h3 id="conversion-goals">Conversion Goals</h3>
+<ul>
+<li>A conversion goal is an action Google counts, such as a sale.</li>
+<li>Keep <strong>all conversion goals</strong> under "Use these conversion goals for campaign performance optimization" switched on.</li>
+<li>The conversions must already be set up in Google Ads beforehand.</li>
+<li>Leave <strong>all conversion goals enabled</strong>.</li>
+</ul>
+<h3 id="alpha-campaign-build-standard-shopping">Alpha Campaign Build (Standard Shopping)</h3>
+<ol type="1">
+<li>In Google Ads, click <strong>Campaigns</strong>.</li>
+<li>Click <strong>New Campaign</strong>.</li>
+<li>Choose <strong>Create a campaign without guidance</strong>.</li>
+<li>Select campaign type: <strong>Shopping</strong>.</li>
+<li>Leave <strong>all conversion goals enabled</strong>.</li>
+<li>Select your connected <strong>Google Merchant Center</strong> account.</li>
+<li>Choose <strong>Standard Shopping</strong>, not Performance Max.</li>
+<li>Name it <code>Alpha, [Store Name]</code>.</li>
+<li>Set an initial daily budget. Start at <strong>$5-$10 per day</strong> total across both campaigns. The maximum early spend is about <strong>$30 per day</strong>.</li>
+<li>Set bid strategy: <strong>Manual CPC</strong>. CPC means cost per click. Manual CPC means you set the price per click yourself.</li>
+<li>Leave <strong>Customer acquisition</strong> on default. This bids equally for new and existing customers.</li>
+<li>Set Alpha campaign priority: <strong>Low</strong>. Priority decides which campaign gets money first.</li>
+<li>Find the <strong>Networks</strong> setting. It may be under "More settings." Turn <strong>OFF</strong> Include Google Search Partners. Search Partners are other websites that show Google ads. Conversion rates are best on Google itself. This step is very important.</li>
+<li>Create <strong>one ad group</strong> named <code>Alpha</code>. An ad group is a folder of ads inside a campaign.</li>
+<li>Set the CPC bid to <strong>$0.40</strong> as a starting point.</li>
+<li>Keep Products set to <strong>All products included</strong>.</li>
+<li>Click <strong>Publish campaign</strong>.</li>
+<li>After publishing, split products by <strong>Item ID</strong> (product code) inside the Alpha ad group. This lets you control bids per product later. It is optional but recommended. Splitting is called subdivision.</li>
+</ol>
+<h3 id="beta-campaign-build-standard-shopping">Beta Campaign Build (Standard Shopping)</h3>
+<ol type="1">
+<li>Repeat the campaign creation steps. Choose <strong>create without guidance</strong>, select <strong>Shopping</strong>, select your Merchant Center account, and choose <strong>Standard Shopping</strong>.</li>
+<li>Name it <code>Beta, [Store Name]</code>.</li>
+<li>Set bid strategy: <strong>Manual CPC</strong>.</li>
+<li>Set the CPC bid to <strong>$0.20</strong> as a starting point. This is about half of Alpha.</li>
+<li>Set Beta campaign priority: <strong>High</strong>.</li>
+<li>Find the Networks setting. Turn <strong>OFF</strong> Include Google Search Partners.</li>
+<li>Create <strong>one ad group</strong> named <code>Beta</code>.</li>
+<li>Keep Products set to <strong>All products included</strong>.</li>
+<li>Click <strong>Publish campaign</strong>.</li>
+</ol>
+<h3 id="alternative-campaign-builds">Alternative Campaign Builds</h3>
+<p><em>(No year given)</em> Alpha build with a starting product shopping bid:</p>
+<ol type="1">
+<li>Go to Campaigns and click <strong>add new campaign</strong>.</li>
+<li>Select <strong>Shopping</strong> and your Merchant Center account.</li>
+<li>Select <strong>Standard</strong> (not goal-optimized).</li>
+<li>Name it <code>Alpha Shopping [Category] [TargetROAS]</code>.</li>
+<li>Set bidding strategy to <strong>Manual CPC</strong>.</li>
+<li>Set daily budget (e.g., <strong>$25</strong>).</li>
+<li>Set campaign priority to <strong>Low</strong>.</li>
+<li>Leave <strong>Google search partners ON</strong>.</li>
+<li>Select country <span class="ex">(e.g., United States)</span>.</li>
+<li>Set devices to <strong>All devices</strong>.</li>
+<li>Create a Product Shopping ad group with starting bid (<strong>$0.50</strong>).</li>
+<li>Add <strong>universal negative keywords</strong>. These are negatives used in every campaign.</li>
+<li>Save the campaign.</li>
+</ol>
+<p><em>(No year given)</em> Beta build:</p>
+<ol type="1">
+<li>Repeat steps 1-3 from the alpha campaign creation.</li>
+<li>Name it <code>Beta Shopping [Category] [LowerROAS]</code>.</li>
+<li>Set bidding strategy to <strong>Manual CPC</strong>.</li>
+<li>Set campaign priority to <strong>High</strong> (opposite of Alpha).</li>
+<li>Set starting bid to <strong>$0.20</strong> (lower than Alpha).</li>
+<li>Set target ROAS lower than Alpha (e.g., <strong>2.5x</strong> vs 3.3x). ROAS means sales earned per dollar of ad spend. Target ROAS is the return you aim for.</li>
+<li>Add negative keywords for branded terms <span class="ex">(e.g., "lifestyles" as phrase match)</span>. Branded terms are searches with your brand name. Phrase match blocks the words in that order. This sends those searches to Alpha instead.</li>
+<li>Add <strong>universal negative keywords</strong>.</li>
+<li>Save the campaign.</li>
+</ol>
+<p>** Full build in the order used in this guide, Alpha and Beta:</p>
+<ol type="1">
+<li>In Google Ads, go to Campaigns and click the blue <strong>New campaign</strong> button.</li>
+<li>Select <strong>Create a campaign without goals guidance</strong>, then select <strong>Shopping</strong>.</li>
+<li>Select the linked Merchant Center account and the <strong>one country</strong> you sell to <span class="ex">(for a US store, United States)</span>.</li>
+<li>Select <strong>Standard Shopping campaign</strong> and click <strong>Continue</strong>.</li>
+<li>Name the Beta campaign (for example <code>beta all products shopping</code>). Leave Additional settings at their defaults.</li>
+<li>Under Bidding and budget, select <strong>Manual CPC</strong> and <strong>uncheck Enhanced CPC</strong>. Enhanced CPC lets Google change your bid automatically.</li>
+<li>Enter the daily budget. Use the same amount for both campaigns, for example <strong>$15</strong> or about $20.</li>
+<li>Set Campaign priority to <strong>High</strong> for Beta.</li>
+<li>Under Targeting, keep the Google search network. <strong>Uncheck</strong> Include search partners, YouTube, Gmail and Discover. Set the location to the single country.</li>
+<li>Set the start date to <strong>as soon as possible</strong>. Leave the end date empty. Click <strong>Save and continue</strong>.</li>
+<li>Keep the ad group type on <strong>Product shopping</strong>. Name the ad group <code>beta all products</code>.</li>
+<li>Enter the bid per click for Beta, for example <strong>$0.20</strong>.</li>
+<li>Click <strong>Save</strong>. On the ad group page, click the plus next to Add subdivision. Choose <strong>Item ID</strong>. Tick the box to select all products. Click <strong>Continue to edit bids</strong>, then <strong>Save</strong>.</li>
+<li>Create the Alpha campaign the same way. Name it <code>alpha all products shopping</code>. Use <strong>Manual CPC</strong> with Enhanced CPC unchecked. Use the same daily budget. Set Campaign priority to <strong>Low</strong>. Use the same targeting, location and dates.</li>
+<li>For the Alpha ad group, name it <code>alpha all products</code>. Enter a bid of <strong>$0.40 per click</strong>, which is double Beta's bid. Click <strong>Save</strong>, then subdivide by Item ID the same way.</li>
+<li>In the Alpha campaign, open <strong>Keywords</strong> in the sidebar. Click the plus next to Negative keywords. Add <strong>only universal negatives</strong>, terms that should never match. For a merchandise store, an example is "course" and "videos." Then save.</li>
+<li>In the Beta campaign, open <strong>Keywords</strong>. Click the plus next to Negative keywords. Add brand names, SKU numbers, popular product names, the strong product-name variants and the same universal negatives. Then save.</li>
+<li>Wait about <strong>one day</strong> for approval. Then open <strong>Ads and extensions</strong> to check the approval status. Impressions <span class="ex">(times your ad was shown)</span> and clicks can take a few days to start.</li>
+</ol>
+<h3 id="setup-order-summary">Setup Order Summary</h3>
+<ol type="1">
+<li>Create the Alpha campaign. Use: campaign without guidance, Shopping, Standard Shopping, a name like <code>alpha... Source A merch</code>, <strong>Low</strong> priority, Manual CPC, <strong>$0.40</strong> CPC, Search Partners <strong>off</strong>, and Item ID subdivision <strong>on</strong>.</li>
+<li>Create the Beta campaign the same way. Use the same conversion goals, Standard Shopping, <strong>High</strong> priority, Manual CPC, <strong>$0.20</strong> CPC, Search Partners <strong>off</strong>, and country and locations as needed.</li>
+<li>Create a shared budget under <strong>Tools &gt; Budgets and bidding &gt; Shared budgets</strong>. Add both campaigns. Set the daily budget to <strong>$5 to $10</strong>. Save. A shared budget is one daily money limit for several campaigns.</li>
+<li>Add <strong>negative keywords</strong> to the Beta campaign.</li>
+<li>Wait for the campaigns to be approved.</li>
+</ol>
+</details><details class="part" id="bidding-strategy-and-starting-bids"><summary><h2>Bidding Strategy and Starting Bids</h2><span class="pm">2 min</span></summary>
+<h3 id="bid-strategy">Bid Strategy</h3>
+<ul>
+<li>Manual CPC is the bid strategy in the Alpha and Beta build steps.</li>
+<li>Alpha is also described with the <strong>Maximize Revenue</strong> bid strategy. This means Google tries to make the most sales. It uses aggressive bids, Low priority, negative keywords that block weak-converting terms, and universal negatives. This differs from the Manual CPC steps above.</li>
+<li>Do <strong>not use Enhanced CPC</strong>. Uncheck it under Bidding and budget.</li>
+</ul>
+<h3 id="starting-bids">Starting Bids</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Starting bid</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha</td>
+<td><strong>$0.40</strong> per click</td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha <span class="ex">(product shopping ad group)</span></td>
+<td><strong>$0.50</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Beta</td>
+<td><strong>$0.20</strong> per click <span class="ex">(about half of Alpha)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Beta <span class="ex">(lower than Alpha)</span></td>
+<td><strong>$0.20</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The starting manual CPC for Alpha is <strong>$0.40</strong> (40 cents). Adjust it over time.</li>
+<li>The starting CPC for Beta is <strong>half of Alpha</strong>: $0.20 (20 cents).</li>
+<li>The Beta bid is <strong>always the lower</strong> of the two.</li>
+<li>Alpha gets the higher bid because Alpha traffic is worth more. It is acceptable to pay more for it.</li>
+<li>Give every product group the <strong>same starting bid</strong>.</li>
+<li>Change bids only after performance data builds up. Bids set on guesses before data exists tend to be wrong.</li>
+<li>The ad group bid starts at the campaign's starting CPC.</li>
+</ul>
+<h3 id="target-roas">Target ROAS</h3>
+<ul>
+<li><strong>Alpha example:</strong> typically produces ROAS around <strong>15x</strong>. So start with a CPC bid of $0.40.</li>
+<li><strong>Beta example:</strong> typically produces ROAS around <strong>8x</strong>. So start with a CPC bid of $0.20.</li>
+<li>Target ROAS in alternative builds: Alpha <strong>3.3x</strong>, Beta <strong>2.5x</strong> (lower than Alpha).</li>
+<li>Target ROAS example in naming: <strong>3.6</strong> for a shopping campaign for cold traffic in the USA. Cold traffic means people who do not know your store yet.</li>
+</ul>
+<h3 id="customer-acquisition-and-local-settings">Customer Acquisition and Local Settings</h3>
+<ul>
+<li>Leave <strong>Customer acquisition</strong> on the default. It bids equally for new and existing customers.</li>
+<li>Keep the default "bid equally for new and existing customers" setting. Returning customers who search for products are bid on equally.</li>
+<li>Leave <strong>local products off</strong> unless the business has a physical retail location.</li>
+<li>Leave <strong>EU political ads off</strong> when they do not apply. These are ads about politics in Europe.</li>
+</ul>
+<h3 id="why-two-bid-levels">Why Two Bid Levels</h3>
+<ul>
+<li>One budget and one campaign for all keywords means equal bids for weak and strong terms. This lowers profit.</li>
+<li>Splitting into two campaigns lets <strong>most of the budget</strong> go to the higher-converting terms.</li>
+<li>With a limited budget, spend goes first to the campaign with the <strong>highest return per dollar</strong>. That is Alpha.</li>
+<li>Beta should still be profitable. It gets less money because its traffic is less valuable.</li>
+<li>Shopping's main limit is that you cannot pick keywords or set keyword-level bids.</li>
+<li>The Alpha-Beta structure works around this. You split campaigns and use negatives to funnel searches. This creates high-bid and low-bid groups, even though Google picks which searches trigger your ads.</li>
+</ul>
+</details><details class="part" id="budgets-and-shared-budgets"><summary><h2>Budgets and Shared Budgets</h2><span class="pm">2 min</span></summary>
+<h3 id="shared-budget-procedure">Shared Budget Procedure</h3>
+<p>To unify spending across the Alpha and Beta campaigns:</p>
+<ol type="1">
+<li>Go to <strong>Tools</strong>, open <strong>Budgets &amp; bidding options</strong>, and select <strong>Shared budgets</strong>.</li>
+<li>Set up a <strong>new shared budget</strong> by adding both campaigns to it.</li>
+<li>Set your <strong>daily cap</strong>. Start with <strong>$5-$10 per day</strong>, as recommended.</li>
+<li>One budget limit then manages spending across both campaigns.</li>
+</ol>
+<h3 id="daily-budget-values">Daily Budget Values</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Daily budget</th>
+<th>When it applies</th>
+<th>Source ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starting point for both campaigns together</td>
+<td><strong>$5-$10</strong> per day total. Maximum early spend about $30 per day</td>
+<td>First launch, shared budget</td>
+<td></td>
+</tr>
+<tr>
+<td>Shared budget example</td>
+<td><strong>$5-$10</strong> per day</td>
+<td>Shared budget across both campaigns</td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha, example</td>
+<td><strong>$25</strong> per day</td>
+<td>Standard setup example</td>
+<td></td>
+</tr>
+<tr>
+<td>Same for both campaigns</td>
+<td><strong>$15</strong> or about $20 per day each</td>
+<td>Build with Alpha and Beta at equal budget</td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha and Beta, each</td>
+<td><strong>$20</strong> per day each</td>
+<td>Narrow starter feed of about 20 products</td>
+<td></td>
+</tr>
+<tr>
+<td>Each campaign</td>
+<td><strong>$10-$30</strong> per day</td>
+<td>New store with 500+ products, two-week data window</td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha, 2019</td>
+<td><strong>$30</strong> per day</td>
+<td>Older setup</td>
+<td></td>
+</tr>
+<tr>
+<td>Beta, 2019</td>
+<td><strong>$17</strong> per day</td>
+<td>Older setup</td>
+<td></td>
+</tr>
+<tr>
+<td>Example of imbalanced spend</td>
+<td>Alpha <strong>$100/day</strong>, Beta $8/day</td>
+<td>Shared budget with proper priority to allocate spend</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>** Set Alpha to a higher daily budget (e.g., <strong>$30</strong>). Set Beta lower (e.g., <strong>$17</strong>).</li>
+<li>** Alpha: set the budget higher. Beta: set it lower.</li>
+<li>** Let all campaigns run with <strong>$10-$30 per day</strong>.</li>
+<li>** With a daily budget of <strong>20 USD</strong> for each Alpha and Beta campaign, start with a narrow feed of about <strong>20 products</strong>. Do not start with a large catalog of around 1,000.</li>
+<li>** If Alpha spends $100 a day and Beta spends $8 a day, set up a shared budget with the correct priority (Alpha high, Beta low). This example reverses the priority of the standard Alpha-Beta setup.</li>
+</ul>
+<h3 id="shared-budget-pairs">Shared Budget Pairs</h3>
+<ul>
+<li>** One shared budget is linked to two campaigns: Alpha and Beta bestsellers.</li>
+<li>** A second shared budget is linked to the Alpha and Beta everything-else campaigns.</li>
+<li>** Build Shopping campaigns as <strong>pairs</strong>: an Alpha and a Beta campaign for each product group, such as Alpha bestsellers and Beta bestsellers.</li>
+<li>** Attach each pair to <strong>one shared budget</strong>. Set up separate pairs for each country or region you sell to.</li>
+</ul>
+</details><details class="part" id="networks-location-and-dates"><summary><h2>Networks, Location and Dates</h2><span class="pm">2 min</span></summary>
+<h3 id="networks">Networks</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Recommendation</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Search Partners</td>
+<td><strong>Off</strong>. Conversion rates are better on Google itself. The Networks field should read "no networks targeted"</td>
+<td></td>
+</tr>
+<tr>
+<td>Google Search Partners</td>
+<td>On by default in one section. This conflicts with the rest of the text <span class="ex">(no date given)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>YouTube, Gmail, Discover</td>
+<td>Include</td>
+<td></td>
+</tr>
+<tr>
+<td>YouTube, Gmail, Discover</td>
+<td><strong>Uncheck</strong>. Ads run only on google.com, where the campaign is meant to show</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Turn <strong>off Google Search Partners</strong> under the Networks setting.</li>
+<li>Search Partners are on by default. Their placements convert much worse.</li>
+<li>The Networks field should then read "<strong>no networks targeted</strong>."</li>
+<li>Find the Networks setting <span class="ex">(very important; it may be under "More settings")</span>. Turn <strong>Include Google Search Partners off</strong>.</li>
+<li>Conversion rates on Google Shopping are best on Google itself, not on Search Partners.</li>
+<li><em>(No year given; this conflicts with the advice to turn Search Partners off)</em> Leave <strong>Google search partners on</strong> by default. These include Google Maps and websites with search boxes.</li>
+<li>You can analyze their performance separately later. They generally perform similarly to Google Search.</li>
+<li>** Keep the Search Network. <strong>Do not include</strong> Google search partners. Their performance cannot be tracked, sites cannot be excluded, and search terms are not visible.</li>
+<li>** <strong>Include</strong> YouTube, Gmail and Discover (Google's suggested-content feed on phones). Shopping ads perform well there, with strong evidence.</li>
+<li>For Shopping campaigns, keep the Google search network. <strong>Uncheck</strong> Include search partners, YouTube, Gmail and Discover.</li>
+<li>With these unchecked, ads run <strong>only on google.com</strong>. Set the location to <strong>one country per campaign</strong>.</li>
+</ul>
+<h3 id="location">Location</h3>
+<ul>
+<li>Location targeting defaults to the country of the Merchant Center feed and the Google Ads account.</li>
+<li>For selling in several countries, use <strong>separate feeds per country</strong>.</li>
+<li>Prices must be shown in the <strong>local currency</strong>. This is a Merchant Center requirement. **</li>
+<li>The location step asks for each country where ads should show.</li>
+<li>Europe-wide ads require selecting <strong>every EU country</strong> in the list.</li>
+<li>You can also choose countries one by one, such as only Spain and Italy.</li>
+<li>The same location settings appear when setting up Meta campaigns. Meta means Facebook and Instagram ads. **</li>
+<li>For the broad Beta campaign, leave the location on the <strong>country where the business sells</strong>. In this setup, that was the United States.</li>
+<li>Select the country (e.g., <strong>United States</strong>) and set devices to <strong>All devices</strong>.</li>
+<li>Set the location to <strong>one country per campaign</strong>.</li>
+</ul>
+<h3 id="dates-and-ad-group-type">Dates and Ad Group Type</h3>
+<ul>
+<li><strong>Start date:</strong> the date the campaign is created. No end date is set. **</li>
+<li>Set the start date to <strong>as soon as possible</strong>. Leave the end date <strong>empty</strong>, so the campaign runs without an end.</li>
+<li>Keep the ad group type on <strong>Product shopping</strong>, which is the default.</li>
+<li>Do <strong>not</strong> use Showcase shopping. Showcase shopping shows a group of products together.</li>
+<li>For the first ad group, choose <strong>Product Shopping</strong> with <strong>Create single product ads</strong>.</li>
+<li>Product Shopping ads show the product image and send the shopper straight to that product to buy it. **</li>
+</ul>
+</details><details class="part" id="campaign-priority-and-the-alpha-beta-logic"><summary><h2>Campaign Priority and the Alpha-Beta Logic</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="priority-rules"><summary><h2>Priority Rules</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Campaign priority</strong> (the order in which Google checks your campaigns) has three levels: high, medium and low. It only applies between your own campaigns, not against competitors.</li>
+<li>Google checks <strong>high priority first</strong>, then medium, then low, for each search query across your account.</li>
+<li>Google checks higher-priority campaigns first. <strong>Beta is set to High</strong> so that broad searches are checked first.</li>
+<li><strong>Alpha is set to Low</strong> so that searches not blocked by Beta fall through to it.</li>
+<li>This is counterintuitive, because Beta is the less valuable campaign.</li>
+<li>Set the Beta campaign to <strong>High priority</strong> and keep Alpha on <strong>Low</strong> (the default).</li>
+<li>In a new Shopping campaign <span class="ex">(an ad type that shows your products on Google)</span>, the Campaign priority field defaults to <strong>Low</strong>.</li>
+<li>Beta must be changed to <strong>High</strong>, while Alpha stays at <strong>Low</strong>, so the intended order of checking takes effect.</li>
+<li>Set the alpha campaign to <strong>low priority</strong> so Google checks it second.</li>
+<li>Set the beta campaign to <strong>high priority</strong> so Google checks it first.</li>
+<li>When a search matches negatives <span class="ex">(blocked words, explained below)</span> in the high-priority beta campaign, it funnels to the low-priority alpha campaign.</li>
+<li>Set your alpha campaign priority to <strong>low</strong> and your beta campaign priority to <strong>high</strong>.</li>
+<li>This counterintuitive setting ensures beta <span class="ex">(low-converting)</span> terms are checked first. A "low-converting" term is one that rarely turns into a sale.</li>
+<li>When blocked by negatives, traffic funnels to alpha <span class="ex">(high-converting)</span> terms at the correct priority level. A "high-converting" term is one that often turns into a sale.</li>
+<li>** Set the campaign priority to <strong>Low for Alpha and High for Beta.</strong></li>
+<li>** Google checks the High-priority campaign first for matching searches.</li>
+</ul>
+</details><details class="part" id="alpha-beta-logic"><summary><h2>Alpha-Beta Logic</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>** When a search query matches both campaigns, Google checks <strong>Beta first</strong>, because it has higher priority.</li>
+<li>** If the query is blocked as a negative in Beta, Google moves to Alpha.</li>
+<li>** If the query matches Alpha and is not blocked there, the ad shows with <strong>Alpha's higher bid</strong>. A bid is the most you pay for one click.</li>
+<li>** This prevents budget waste on weak keywords by reserving high-bid spend for strong keywords. A keyword is a word or phrase that triggers your ad.</li>
+<li><strong>Negative keywords</strong> (words that block your ad from showing for a search) in Beta push searches for high-converting terms into Alpha.</li>
+<li>Beta is checked first as high priority and blocks the negatives.</li>
+<li>Alpha, on low priority, picks up the same searches at its <strong>higher bid</strong>.</li>
+<li>Negative keywords in the Beta campaign act as a filter.</li>
+<li>When a search matches one of them, Google skips Beta and passes the search to the lower-priority Alpha campaign.</li>
+<li>Beta negatives should be the terms most relevant to the store's own products: <strong>brand names, SKU numbers and popular product names</strong>.</li>
+<li>A SKU <span class="ex">(stock keeping unit)</span> is a store code for one exact product.</li>
+<li>These are the searches Alpha should win.</li>
+<li>The inverted priority structure forces budget toward high-converting searches.</li>
+<li>This blocks those searches in the high-priority Beta campaign, so Google routes them to Alpha, where you <strong>bid higher</strong>.</li>
+<li>Priority of the alpha-beta structure: <strong>Beta, High, checked first</strong>; <strong>Alpha, Low, checked second</strong>.</li>
+<li>Alpha holds the high-traffic campaigns.</li>
+<li>Alpha blocks weak search terms with negative keywords.</li>
+<li>Beta holds the keywords that still convert but are weaker.</li>
+<li>Always keep a <strong>separate alpha and beta split</strong> in Shopping campaigns.</li>
+<li>If only an "all brands" beta campaign exists with no alpha campaign, the setup is incorrect and must be configured properly.</li>
+<li>Every product not explicitly filtered is caught by a <strong>catch-all product group</strong> at each level. A product group is a set of products you bid on together.</li>
+<li>Check your product group inheritance structure carefully. Inheritance means lower groups pick up the settings of the groups above them.</li>
+<li>Products you intended to separate must not be grouped together by accident.</li>
+</ul>
+</details><details class="part" id="campaign-roles-alpha-and-beta"><summary><h2>Campaign Roles: Alpha and Beta</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="alpha"><summary><h2>Alpha</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Alpha campaigns target <strong>high-converting, branded or commercial terms</strong>, with aggressive bidding to maximize revenue and visibility.</li>
+<li>A "branded" term is a search for your brand name. A "commercial" term is a search from someone ready to buy.</li>
+<li>Use negative keywords to block weak or generic terms from appearing in alpha campaigns. A "generic" term is a broad word such as "umbrella".</li>
+<li>Alpha targets high-intent searches: brand names, product names, and SKU/MPN numbers. High intent means the shopper is close to buying.</li>
+<li>An MPN <span class="ex">(manufacturer part number)</span> is the code the product's maker gives it.</li>
+<li>Alpha campaigns hold the high-traffic campaigns.</li>
+<li>For Campaign Alpha, targeting high-converting terms: set bid strategy to <strong>Maximize Revenue</strong> (Google tries to get the most sales value for your budget).</li>
+<li>For Campaign Alpha, targeting high-converting terms: apply <strong>high bids</strong>.</li>
+<li>For Campaign Alpha, targeting high-converting terms: set Shopping Campaign Priority to <strong>Low</strong>.</li>
+<li>For Campaign Alpha, targeting high-converting terms: add negative keywords to block low-converting terms and universal negatives. Universal negatives are words that should never match, in any campaign.</li>
+<li>Alpha's Shopping campaign contains the full product set.</li>
+<li>** Alpha campaign setup:
+<ol type="1">
+<li><strong>Set campaign priority to Low.</strong></li>
+<li><strong>Set daily budget to a higher amount</strong> (e.g., $30).</li>
+<li><strong>Set cost-per-click bids to a higher amount.</strong> Cost per click (CPC) is what you pay each time someone clicks.</li>
+<li><strong>Populate the campaign with only high-converting, long-tail keywords.</strong> Long-tail keywords are long, specific phrases, such as specific product model numbers or brand plus descriptor keywords.</li>
+<li><strong>Add weak and generic terms as negative keywords</strong> to prevent budget waste.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="beta"><summary><h2>Beta</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Beta campaigns target <strong>low-converting, generic or informational search terms</strong>, with low bidding to capture the remaining relevant traffic economically.</li>
+<li>Use negative keywords to block high-converting branded terms so they funnel to the alpha campaign instead.</li>
+<li>Beta targets broader, lower-intent searches. Lower intent means the shopper is still browsing.</li>
+<li>For example, general niche terms such as <code>surfboards</code>.</li>
+<li>Beta holds the keywords that still convert but are weaker.</li>
+<li>For Campaign Beta, targeting low-converting terms: apply <strong>low bids</strong> (lower than Campaign Alpha).</li>
+<li>For Campaign Beta, targeting low-converting terms: set Shopping Campaign Priority to <strong>High</strong>.</li>
+<li>For Campaign Beta, targeting low-converting terms: add negative keywords to block high-converting terms from Campaign Alpha and universal negatives.</li>
+<li>** Beta setup:
+<ol type="1">
+<li><strong>Set campaign priority to High</strong> (Google checks this campaign first for matching searches).</li>
+<li><strong>Set daily budget to a lower amount</strong> (e.g., $17).</li>
+<li><strong>Set cost-per-click bids to lower amounts.</strong></li>
+<li><strong>Include weak but still relevant keywords that might convert</strong> (e.g., broader product category keywords, variations).</li>
+<li><strong>Add strong and high-converting keywords as negative keywords</strong> so they are captured by the Alpha campaign instead.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="worked-example-2019"><summary><h2>Worked Example (2019)</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>** For standup desks, <code>Hampton blue umbrella SKU 123</code> is a strong keyword (Alpha).</li>
+<li>** The generic <code>umbrella</code> is <strong>blocked in Alpha</strong> as a negative keyword.</li>
+<li>** In Beta, the generic term is allowed with a <strong>low bid</strong>.</li>
+<li>** If someone searches <code>umbrella</code>, Beta captures it at low cost-per-click.</li>
+<li>** If they search the exact <code>Hampton blue umbrella SKU 123</code>, it is <strong>blocked in Beta</strong> and goes to Alpha with the high bid.</li>
+</ul>
+</details><details class="part" id="alpha-beta-procedure-2020"><summary><h2>Alpha-Beta Procedure (2020)</h2><span class="pm">1 min</span></summary>
+<p>**</p>
+<ol type="1">
+<li><strong>Create an alpha campaign</strong> with your broad product feed. A product feed is the file listing your products that you send to Google.</li>
+<li><strong>Create a separate beta campaign</strong> with high-priority, high-intent keywords.</li>
+<li><strong>Set negative keywords at the ad group level</strong> (not the campaign level) to eliminate irrelevant searches from the alpha. An ad group is a folder inside a campaign that holds products and bids.</li>
+<li><strong>Beta is checked first</strong> by Google before alpha routes traffic.</li>
+<li><strong>Refine the alpha over time</strong> as you identify underperforming keywords.</li>
+</ol>
+</details><details class="part" id="splitting-proven-and-untested-products-2020"><summary><h2>Splitting Proven and Untested Products (2020)</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>** Use alpha campaigns for <strong>products that already sell</strong> and beta campaigns for testing.</li>
+<li>** <strong>Exclude the proven products from beta</strong> so new products get their own budget.</li>
+<li>Split Shopping campaigns into an <strong>alpha campaign for proven products and search terms that convert well</strong>, and a beta campaign for weaker or untested segments.</li>
+<li><strong>Bid higher in the alpha campaign</strong> and <strong>lower in the beta campaign</strong>.</li>
+</ul>
+</details><details class="part" id="negative-keywords-and-routing"><summary><h2>Negative Keywords and Routing</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="routing-rules"><summary><h2>Routing Rules</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Do not manually move keywords</strong> between alpha and beta campaigns.</li>
+<li>Instead, <strong>adjust bid amounts upward in the beta campaign</strong>.</li>
+<li>Keyword routing happens automatically, based on your negative keyword setup and campaign priority settings. Routing means deciding which campaign a search goes to.</li>
+<li>** This is the advice for that year.</li>
+<li>Bidding control in Shopping works by adding negative keywords.</li>
+<li>High-converting terms are added as <strong>negatives to the Beta campaign</strong> so they are blocked there and fall through to Alpha, where bids are higher.</li>
+<li>For a multi-brand store <span class="ex">(one that sells several brands)</span>, the Beta campaign's negative list contains <strong>each brand name, each SKU number and each bestselling product name</strong>.</li>
+<li>Those searches then go to Alpha.</li>
+<li>Broad, unbranded searches such as a generic product description are then left for Beta.</li>
+<li>Do not skip the <strong>Item ID subdivision</strong> step in either ad group. An Item ID is the code for one product.</li>
+</ul>
+</details><details class="part" id="negatives-in-each-campaign"><summary><h2>Negatives in Each Campaign</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Negatives</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha</td>
+<td>Block low-converting terms and universal negatives</td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Universal negatives only</td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha</td>
+<td>Weak and generic terms</td>
+<td></td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>High-intent terms: brand names you sell, product names you sell, SKU/MPN numbers</td>
+<td></td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>Brand names, SKU numbers, popular product names, strong product-name variants, and universal negatives</td>
+<td></td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>Branded terms as phrase match, for example <code>lifestyles</code>, plus universal negatives</td>
+<td></td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>Strong and high-converting keywords</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Add all high-intent search terms</strong> (brand names you sell, product names you sell, SKU/MPN numbers) as negative keywords in Beta.</li>
+<li>In the Alpha campaign, <strong>add only universal negatives</strong>: terms that should never match.</li>
+<li>For example, course and videos for a merchandise store.</li>
+<li><em>(No year given)</em> <strong>Add universal negative keywords in both campaigns.</strong></li>
+<li><em>(No year given)</em> <strong>Negative keyword for branded terms in beta</strong>, for example "lifestyles" as <strong>phrase match</strong> (the search must contain that phrase), to block them from beta and funnel to alpha.</li>
+<li><em>(No year given)</em> Negative keywords in the alpha campaign block weak or generic terms.</li>
+<li>** Negative keywords are added to the Alpha campaign to block weak and generic terms.</li>
+<li>** <strong>Negative keywords belong at the ad group level</strong>, not the campaign level.</li>
+<li><strong>Campaign-level negatives:</strong> Alpha and Beta negatives are set at campaign level in the build procedures.</li>
+</ul>
+</details><details class="part" id="negative-keyword-push-sculpting"><summary><h2>Negative Keyword Push (Sculpting)</h2><span class="pm">1 min</span></summary>
+<p>Sculpting means shaping traffic by blocking some searches and moving others. A search term is the exact words a shopper typed.</p>
+<ol type="1">
+<li><strong>Compare cost per click and conversion rate</strong> in the alpha and beta campaigns. Conversion rate is the share of clicks that become sales.</li>
+<li>Example figures: beta CPC $0.45 with a conversion rate of 0.64%, alpha CPC $1.93 with a conversion rate of 2.39%.</li>
+<li>ROAS <span class="ex">(return on ad spend, the sales value divided by the cost)</span> was <strong>3.48 in alpha</strong> and <strong>4.96 in beta</strong>.</li>
+<li><strong>Open the beta campaign</strong>, go to Keywords, then Search terms, and show the terms that converted.</li>
+<li><strong>Add every converting search term to the beta campaign as a negative exact keyword.</strong> An exact match means the search must be those exact words.</li>
+<li>Optionally move terms with strong click-through rate from beta to alpha as well. Click-through rate (CTR) is the share of people who see your ad and click it.</li>
+<li>Result: <strong>converting terms are funneled into alpha</strong>, where bids are more aggressive for high-converting terms.</li>
+</ol>
+</details><details class="part" id="campaign-and-ad-group-naming"><summary><h2>Campaign and Ad Group Naming</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="naming-formats"><summary><h2>Naming Formats</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Example</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha, [Store Name] / Beta, [Store Name]</td>
+<td>Standard campaign names</td>
+<td></td>
+</tr>
+<tr>
+<td>Campaign type, product category, target ROAS</td>
+<td><code>Alpha Shopping Infrared Sauna 3.3x</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Alpha Shopping [Category] [TargetROAS]</td>
+<td>Alpha campaign template</td>
+<td></td>
+</tr>
+<tr>
+<td>Beta Shopping [Category] [LowerROAS]</td>
+<td>Beta campaign template</td>
+<td></td>
+</tr>
+<tr>
+<td>Product name, campaign type, traffic source, country, target ROAS</td>
+<td><code>infrared saunas, shopping campaigns, cold traffic, USA, 3.6</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Priority and bid level</td>
+<td><code>Shopping - All Products - US - High Priority</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Course style</td>
+<td><code>alpha... Source A merch</code></td>
+<td></td>
+</tr>
+<tr>
+<td>Course build</td>
+<td><code>alpha all products shopping</code>, <code>beta all products shopping</code></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Name each shopping campaign with three elements:</strong> campaign type (Alpha Shopping or Beta Shopping), product category <span class="ex">(e.g., Infrared Sauna)</span>, and target ROAS <span class="ex">(e.g., 3.3x)</span>.</li>
+<li>Example: <code>Alpha Shopping Infrared Sauna 3.3x</code>.</li>
+<li>This makes the campaign's purpose immediately clear when you review performance.</li>
+<li><strong>Include target ROAS in campaign names</strong> for quick reference and decision-making. Target ROAS is the return you aim for.</li>
+<li>Format: [Product name], [Campaign type], [Traffic source], [Country], [Target ROAS number].</li>
+<li>This allows instant verification when reviewing performance.</li>
+<li>** <strong>Give each funnel campaign a name that shows its priority and bid level</strong>, for example <code>Shopping - All Products - US - High Priority</code> for the lowest-bid campaign.</li>
+<li>Identical copies are otherwise hard to tell apart.</li>
+<li>The name has <strong>no effect</strong> on how ads are served.</li>
+<li><strong>Name each ad group after its campaign</strong>, for example <code>alpha</code> for the Alpha campaign and <code>beta</code> for the Beta campaign.</li>
+<li><strong>Keep one ad group per Shopping campaign</strong> at the start.</li>
+<li>Ad group names in the course build: <code>alpha all products</code> and <code>beta all products</code>.</li>
+<li>Campaign naming for the Standard build: <code>Alpha, [Store Name]</code> and <code>Beta, [Store Name]</code>.</li>
+<li>** When you copy a campaign, the copy's name gets a <code>#2</code> suffix.</li>
+</ul>
+</details><details class="part" id="product-groups-and-item-id-subdivision"><summary><h2>Product Groups and Item ID Subdivision</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="the-waterfall-structure"><summary><h2>The Waterfall Structure</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A new Google Shopping campaign starts with <strong>all products in one group at the same bid</strong>.</li>
+<li>This is a problem once the catalog <span class="ex">(your full product list)</span> holds many products, so the group should be split.</li>
+<li>The waterfall keeps the structure in layers: <strong>all products, then brand, then item ID</strong>.</li>
+<li>Each lower layer can receive its own bid once enough data exists for that product.</li>
+<li>So bidding can be tuned down to the <strong>individual SKU</strong>.</li>
+</ul>
+</details><details class="part" id="waterfall-procedure"><summary><h2>Waterfall Procedure</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Open the shopping campaign</strong>, where all products sit in one group with the same bid.</li>
+<li><strong>Click the plus sign</strong> to add a subdivision. A subdivision splits a product group into smaller groups.</li>
+<li><strong>Choose the split dimension</strong>: product category, brand, item ID or custom label. A custom label is a tag you add yourself to a product.</li>
+<li><strong>Split by brand first</strong>, selecting the brands you want, and then split further by item ID if needed.</li>
+<li><strong>Set the same starting bid</strong> for every group.</li>
+<li><strong>Open each brand group, add a subdivision, and drag in all of its item IDs</strong>, so every SKU becomes its own group.</li>
+<li><strong>As data arrives for each product, adjust the bid per SKU.</strong></li>
+</ol>
+</details><details class="part" id="split-options-and-store-types"><summary><h2>Split Options and Store Types</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>In the Google Ads shopping campaign, the subdivision is added with the <strong>plus sign</strong> on the product group.</li>
+<li>The available split options are Product category, Brand, Item ID and Custom label.</li>
+<li>The Item ID option lists every individual product.</li>
+<li>Custom labels can be <strong>left out</strong> when a shopping campaign is first launched, because they are rarely needed at that stage.</li>
+<li>Brand and item ID splits cover most early segmentation. Segmentation means dividing products into groups.</li>
+<li>In a multi-brand store, <strong>select several brands</strong> in the brand split and then subdivide the selection by item ID.</li>
+<li>This narrows the groups down to individual products while keeping the brand structure.</li>
+<li>For a store that sells <strong>only one brand</strong>, bids can be edited directly for each product group after the split.</li>
+<li>There is <strong>no need for a brand level</strong>.</li>
+<li>Example: a multi-brand store started with <strong>318 products</strong> in one group.</li>
+<li>After splitting by brand, each brand received its own bid, with <strong>$1 per brand</strong> used as the starting bid in the demo.</li>
+</ul>
+</details><details class="part" id="brand-to-sku-procedure"><summary><h2>Brand-to-SKU Procedure</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Open a brand group.</strong></li>
+<li><strong>Add a subdivision.</strong></li>
+<li><strong>Drag in all item IDs for that brand.</strong></li>
+<li><strong>Repeat for every brand</strong> so each product ID can be bid separately.</li>
+</ol>
+</details><details class="part" id="item-id-subdivision-alpha-and-beta"><summary><h2>Item ID Subdivision (Alpha and Beta)</h2><span class="pm">2 min</span></summary>
+<ol type="1">
+<li><strong>Inside the Alpha campaign, find the product group labelled All products.</strong></li>
+<li><strong>Click + (Add subdivision).</strong></li>
+<li><strong>Select Item ID.</strong></li>
+<li><strong>Select all items and save without editing any individual product bids</strong> at this stage.</li>
+<li>This gives you the future ability to adjust bids at the product level.</li>
+</ol>
+<ul>
+<li><strong>Enable the Item ID subdivision in the ad group.</strong></li>
+<li>Click the plus icon next to All products, choose Add subdivision, set the dimension to Item ID, select all items, and <strong>click Save without editing bids</strong> so each product can receive its own CPC.</li>
+<li>Do this in the Alpha campaign <strong>as early as possible</strong>.</li>
+<li><strong>Subdivide by Item ID on the ad group page:</strong> click the plus next to Add subdivision, choose Item ID, tick the box to select all products, click Continue to edit bids, then Save.</li>
+<li>This gives per-product reporting and lets you adjust bids individually.</li>
+<li><strong>Do not skip the Item ID subdivision step</strong> in either ad group.</li>
+<li>It is easy to miss, but without it you cannot see or control results per product.</li>
+<li>In a Google Shopping campaign, <strong>set product groups to individual products</strong> so that spend, clicks and sales can be tracked and bid per product.</li>
+<li><strong>Check every product group for the catch-all "Everything else in" group.</strong></li>
+<li>After each subdivision, make sure it <strong>contains no products <span class="ex">(exclude it)</span></strong>.</li>
+<li>Otherwise those products cannot receive individual bids and their performance cannot be seen.</li>
+<li>** This applies to this older setup too.</li>
+<li>** For products added to Shopify after alpha-beta setup: they appear in the everything-else or all-products section. Shopify is the online store software.</li>
+<li>** <strong>Create individual product campaigns for the newly added products</strong>, and they will no longer be grouped under everything-else.</li>
+<li><strong>Product group filter:</strong> in the ad group step, the product group can be filtered to show only selected products.</li>
+<li>As a starting point, <strong>leave it on All products in both campaigns</strong>, so every product is eligible in each.</li>
+<li><strong>Start with one ad group</strong> that includes all products in both the Alpha and Beta campaigns.</li>
+<li>Set the ad group bid to the campaign's starting CPC.</li>
+</ul>
+</details><details class="part" id="launch-with-all-products"><summary><h2>Launch with All Products</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="single-campaign-at-launch"><summary><h2>Single Campaign at Launch</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Keep all products in one Google Shopping campaign.</strong></li>
+<li>A separate campaign for bestsellers only is usually <strong>not recommended</strong>.</li>
+<li><strong>Start with all products</strong> in the Shopping campaign so every product gets impressions. An impression is one time your ad is shown.</li>
+<li><strong>Do not add manual keywords</strong> at the start of a Shopping campaign.</li>
+<li>Google reads the catalog and decides which searches to show products for.</li>
+<li>** This is the advice for that year.</li>
+<li>** A new store with <strong>about 200 products</strong> from approved suppliers should begin with <strong>one single Google Shopping campaign</strong>.</li>
+<li>** Its goal is data on impressions, clicks, sales, and clicks without sales.</li>
+<li>** Segmentation by brand or category should wait until that data is available.</li>
+<li>** Procedure for the single launch campaign:
+<ol type="1">
+<li><strong>Launch a single Google Shopping campaign</strong> that includes all products.</li>
+<li><strong>Review the dashboards</strong> for impressions, clicks, sales, search terms, and which products get clicks but no sales.</li>
+<li><strong>Remove negative keywords</strong> that bring irrelevant traffic.</li>
+<li><strong>Split the campaign into two campaigns, Alpha and Beta,</strong> using the data.</li>
+<li><strong>Analyze the data every two weeks</strong>, and segment further by brand, category, bestsellers or price tier as the data supports.</li>
+</ol></li>
+<li>** Procedure for initial Shopping data:
+<ol type="1">
+<li><strong>Start with all products</strong> in the Shopping campaign so every product gets impressions.</li>
+<li><strong>Review the search terms</strong> that trigger clicks and sales after the ads start running.</li>
+<li><strong>Add irrelevant search terms as negative keywords.</strong></li>
+<li><strong>Increase budget on the products and keywords</strong> that produce clicks and sales.</li>
+<li><strong>Check the numbers in Google Ads</strong> so that growth stays profitable.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="large-catalog-launch"><summary><h2>Large Catalog Launch</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>** <strong>Upload the full available product catalog before increasing ad spend.</strong></li>
+<li>** A larger catalog gives Google more products to test and optimize.</li>
+<li>** Launch procedure for a new store with <strong>500+ products</strong>:
+<ol type="1">
+<li><strong>Create an alpha campaign</strong> with all products.</li>
+<li><strong>Create a beta campaign</strong> with all products.</li>
+<li><strong>Create a shopping campaign</strong> with all products.</li>
+<li><strong>Let all campaigns run with $10-30 per day</strong> budget.</li>
+<li><strong>Use performance data over 2 weeks</strong> to identify which specific products perform well.</li>
+<li><strong>Lower cost-per-click on underperformers and raise it on strong products.</strong></li>
+<li><strong>Never exclude products initially</strong>; let data guide allocation.</li>
+</ol></li>
+<li>** Launch a large catalog this way:
+<ol type="1">
+<li><strong>Create one ad group named <code>All Products</code></strong> that contains every product.</li>
+<li><strong>Track performance by product.</strong></li>
+<li><strong>Raise bids on products with a strong return on ad spend</strong> and lower bids on weak ones.</li>
+</ol></li>
+<li>** Start with a narrow feed of <strong>about the top 20 products</strong> instead of a large catalog of around 1,000.</li>
+<li>** Use a <strong>daily budget of 20 USD</strong> for each alpha and beta campaign.</li>
+<li>** Choose the products by potential profit or by the best-selling products on future competitor stores.</li>
+<li>** <strong>Do not create hundreds of ad groups with one product each.</strong> This gives very detailed reports, but it limits what Google's algorithm can learn, unless the budget is very large.</li>
+<li>** Single-keyword ad groups per product are outdated and should not be used for small budgets.</li>
+</ul>
+</details><details class="part" id="structure-by-catalog-type"><summary><h2>Structure by Catalog Type</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The alpha-beta structure with all products is the <strong>standard launch for a store that sells several brands</strong>.</li>
+<li>The two campaigns both contain the <strong>full product set</strong>.</li>
+<li><strong>Products are not split between them.</strong> Only the search terms each campaign catches differ, and negative keywords enforce that split.</li>
+<li>A store that sells <strong>only its own brand</strong> does not really need the Alpha and Beta split, because all searches are for the same brand.</li>
+<li>The structure is still worth learning, and the same negative keyword logic applies to any store that sells several brands.</li>
+<li>Alpha and beta product structuring is an <strong>advanced</strong> Google Shopping setup.</li>
+<li><strong>Learn it after basic Shopping campaigns are running.</strong></li>
+<li>** A typical setup with a split by sub-niche: structure Google Shopping campaigns as <strong>Alpha <span class="ex">(testing)</span> and Beta <span class="ex">(optimized)</span></strong>. A sub-niche is a smaller slice of a market.</li>
+<li>** Start with one of each, then break them up by sub-niche, product type or supplier, <strong>based on incoming data and not assumptions</strong>.</li>
+<li>A typical e-commerce Google Shopping funnel runs from the Shopify product feed into Google Merchant Center (Google's hub for product data), then into Alpha and Beta shopping campaigns, then to product pages.</li>
+<li>A two- or three-campaign structure separates branded, generic and specific SKU-level keywords.</li>
+</ul>
+</details><details class="part" id="approval-activation-and-timing"><summary><h2>Approval, Activation and Timing</h2><span class="pm">2 min</span></summary>
+<h3 id="before-launch">Before Launch</h3>
+<ul>
+<li>Create Google Shopping campaigns <span class="ex">(ads that show your product pictures and prices on Google)</span> <strong>only after all products are fully approved</strong> in Google Merchant Center <span class="ex">(the Google account that holds your product list)</span>. If a product is not approved yet, or Google asks for changes, fix the problem first. Wait for full approval before you go on.</li>
+<li>Most products should be approved <strong>before you turn on the campaigns.</strong> Not every product needs approval. Products that are not approved simply do not show. **</li>
+<li>Your Google Ads account <span class="ex">(where you run ads)</span> and your Merchant Center account are <strong>already linked</strong>. So the product feed <span class="ex">(the file that lists your products)</span> loads by itself. **</li>
+<li>If several feeds exist, for example <strong>one per country</strong>, select the correct one. **</li>
+<li>The country of sale <strong>defaults to the country of your Google Ads account.</strong> **</li>
+<li>Merchant Center holds the product feed that Shopping campaigns use. It must be <strong>linked to your Google Ads account.</strong></li>
+<li>When you create each Shopping campaign, <strong>select the correct Merchant Center account.</strong></li>
+<li>Only <strong>one funnel</strong> (a set of campaigns that work together to catch buyers step by step) should run at a time. Pause older or duplicate Shopping campaigns before you run the new structure. Two funnels in one account confuse Google. **</li>
+</ul>
+<h3 id="pausing-and-enabling">Pausing and Enabling</h3>
+<ol type="1">
+<li><strong>Pause</strong> all funnel campaigns while you set up settings, bids <span class="ex">(the price you pay per click)</span> and negative keyword lists <span class="ex">(lists of search words that block your ads)</span>. This stops ads from running with incomplete settings. **</li>
+<li>After products are approved in Merchant Center, <strong>enable</strong> the paused campaigns. Ads begin delivering <span class="ex">(start showing)</span> over the next few hours. **</li>
+<li>Enable the campaigns <strong>only once the funnel is fully set up.</strong> **</li>
+</ol>
+<h3 id="copying-a-campaign">Copying a Campaign</h3>
+<p>Copying means making a duplicate of a campaign. **</p>
+<ol type="1">
+<li>Click <strong>Edit, then Copy, then Paste</strong> to duplicate a campaign. The copy keeps its ad groups <span class="ex">(sets of ads inside a campaign)</span>, product groups, bids, priority <span class="ex">(which campaign wins first when two overlap)</span> and negative keyword assignments.</li>
+<li>The copy's name gets a <strong><code>#2</code></strong> suffix.</li>
+<li>The paste dialog can <strong>pause</strong> the new campaigns.</li>
+<li>Copying a large campaign can take <strong>several minutes</strong>, so wait for the progress bar to finish.</li>
+</ol>
+<h3 id="approval-timing">Approval Timing</h3>
+<ul>
+<li>Campaigns may show ads <strong>under review</strong> (waiting for Google to check them). Approval usually takes <strong>around 30 minutes</strong>, but it can take up to a few days. Once approved, impressions <span class="ex">(how many times your ad is shown)</span> and clicks should start. Purchases follow as optimization <span class="ex">(improving the campaign over time)</span> continues.</li>
+<li>Wait <strong>about one day</strong> for approval. Then open Ads and extensions to check the approval status. Impressions and clicks can take a few days to start arriving.</li>
+<li>Wait for the campaigns to be approved <strong>before you continue.</strong></li>
+<li>Ads begin delivering <strong>within a few hours</strong> of enabling. **</li>
+</ul>
+</details><details class="part" id="optimization-and-judging-performance"><summary><h2>Optimization and Judging Performance</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Judge Alpha and Beta <strong>together</strong>, by conversion rate <span class="ex">(the share of visitors who buy)</span> and ROAS <span class="ex">(sales earned per dollar spent on ads)</span>. Do not use ROAS alone.</li>
+<li>Beta can show a higher ROAS from very cheap clicks. But it converts far less often.</li>
+<li>Example: Beta has <strong>$0.45 CPC</strong> (cost per click) and a 0.64% conversion rate. Alpha has $1.93 CPC and a 2.39% conversion rate.</li>
+<li>In the same example, ROAS is <strong>4.96 in Beta</strong> and 3.48 in Alpha.</li>
+<li>Converting search terms <span class="ex">(words that led to sales)</span> should be moved into <strong>Alpha.</strong></li>
+<li>Alpha and Beta are reviewed and optimized <strong>together during the weekly audit</strong> (a check you do every week).</li>
+<li>Compare <strong>cost per click</strong> and conversion rate in the Alpha and Beta campaigns. Then run the negative keyword push above.</li>
+<li>Analyze the data <strong>every two weeks.</strong> Segment <span class="ex">(split)</span> it further by brand, category, bestsellers or price tier, as the data supports. **</li>
+<li>Do not move keywords by hand between campaigns. Instead, <strong>raise the bid amount</strong> in the Beta campaign. **</li>
+<li>Read impressions, clicks and sales <strong>per product</strong> once the Item ID subdivision <span class="ex">(splitting by your product's ID number)</span> is in place.</li>
+</ul>
+</details><details class="part" id="the-google-shopping-funnel-overview"><summary><h2>The Google Shopping Funnel: Overview</h2><span class="pm">2 min</span></summary>
+<h3 id="what-the-funnel-is">What the Funnel Is</h3>
+<ul>
+<li>For high-ticket products <span class="ex">(expensive items)</span>, the only Google Shopping structure described as consistently effective is <strong>search query level bidding.</strong> This is also called the shopping funnel. It means setting bids on the actual words people type. **</li>
+<li>Other Shopping approaches are generally built for <strong>lower-ticket</strong> (cheaper) products. **</li>
+<li>Search query level bidding also goes by the names <strong>alpha beta</strong> and <strong>inverted funnel.</strong> These are informal labels for the same strategy. **</li>
+<li>Use the <strong>official name</strong> when you search for or compare sources. **</li>
+<li>Standard Google Shopping ads promote <strong>one product at a time.</strong> **</li>
+<li>So broad searches at the top of the funnel <span class="ex">(people still exploring)</span> are rarely ready to consider a single product. **</li>
+<li>Standard Shopping ads suit <strong>only middle and bottom of funnel</strong> searches <span class="ex">(people closer to buying)</span>. **</li>
+<li>The alpha-beta structure is the answer to Shopping's main limit. You <strong>cannot pick keywords or set keyword-level bids.</strong></li>
+<li>By splitting campaigns and using negatives to steer searches, you create high-bid and low-bid keyword groups. Google still picks which searches trigger your ads.</li>
+<li>Use <strong>two Shopping campaigns.</strong></li>
+<li>Alpha is for high-converting terms: brand names, product names, and <strong>SKU numbers</strong> (your product's own stock code).</li>
+<li>Beta is for broad, generic, lower-converting terms.</li>
+<li>So you can set bids <strong>differently</strong> for each group of keywords.</li>
+<li>Use two Shopping campaigns that <strong>both contain the full product set.</strong></li>
+<li>Alpha catches the highest-converting searches: brand names, product names, SKU numbers. Beta catches broader, lower-converting searches.</li>
+<li><strong>Products are not split between them.</strong></li>
+<li>Only the search terms each campaign catches differ. <strong>Negative keywords enforce that split.</strong></li>
+<li>Create two campaigns, Alpha and Beta.</li>
+<li>Google Shopping ads use <strong>product feed data</strong> (titles, descriptions and site content), not positive keywords <span class="ex">(words you choose to trigger your ads)</span>.</li>
+<li>Google decides which searches show your ads.</li>
+<li>The two-campaign structure lets you control bids <strong>indirectly</strong>, with negative keywords.</li>
+<li>High-intent searches <span class="ex">(people ready to buy)</span> go into <strong>Alpha, with higher bids.</strong></li>
+<li>Broad searches go into <strong>Beta, with lower bids.</strong></li>
+<li>Shopping campaigns are split into <strong>two parts</strong> to separate high and low bids.</li>
+<li>This is the core of the funnel.</li>
+</ul>
+<h3 id="the-funnel-in-sequence">The Funnel in Sequence</h3>
+<ol type="1">
+<li>Google reads the product feed sent through Merchant Center.</li>
+<li><strong>Beta (High priority)</strong> is checked first. It blocks searches that match its negatives.</li>
+<li>Searches blocked by Beta <strong>fall through to Alpha</strong> (Low priority), where the higher bid applies.</li>
+<li>Searches that match neither negative stay in Beta at the <strong>lower bid.</strong></li>
+<li>Converting search terms are moved into Alpha by <strong>negative exact keywords</strong> (negative keywords that block one exact phrase).</li>
+<li>Judge each campaign on conversion rate and ROAS <strong>together.</strong></li>
+</ol>
+<h3 id="alpha-beta-example">Alpha-Beta Example</h3>
+<ul>
+<li><strong>Alpha example:</strong> high-intent searches <span class="ex">(brand names, product names, SKU/MPN numbers)</span> produce ROAS around <strong>15x.</strong> MPN means manufacturer part number, the brand's own product code.</li>
+<li>So start Alpha with a CPC bid of <strong>$0.40.</strong></li>
+<li><strong>Beta example:</strong> broader, lower-intent searches (general niche terms such as <code>surfboards</code>) produce ROAS around <strong>8x.</strong></li>
+<li>So start Beta with a CPC bid of <strong>$0.20</strong>, about half of Alpha.</li>
+<li>Beta negatives push high-intent terms <strong>to Alpha.</strong></li>
+<li>Example: a store that sells several brands lists each brand name, SKU number and bestselling product name as <strong>Beta negatives.</strong></li>
+</ul>
+</details><details class="part" id="how-shopping-ads-work-1"><summary><h2>How Shopping Ads Work</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Shopping campaigns offer <strong>no direct keyword targeting.</strong> You cannot give Google a list of search terms your ads should show for.</li>
+<li>Your only direct control is <strong>excluding terms</strong> with negative keywords.</li>
+<li>Google matches Shopping ads to searches by reading the product data you supply. This is usually accurate but not always.</li>
+<li>Google does not judge search intent or value the way a merchant does. So you <strong>steer it with negative keywords.</strong></li>
+<li>Google picks the search terms from the <strong>product titles and descriptions</strong> in the feed. So those fields matter most.</li>
+<li>Feed quality, especially titles and attributes <span class="ex">(product details such as color or size)</span>, controls which searches your products appear for.</li>
+<li>The matching keywords come from the product pages in Merchant Center.</li>
+<li>The only keywords you add are <strong>negative keywords</strong> for searches you do not want.</li>
+<li>Shopping does not use keywords the way search ads do.</li>
+<li>Relevance depends on <strong>product titles, data and category.</strong></li>
+<li>To change which search terms trigger a product, <strong>edit its product page content</strong> to include those keywords.</li>
+<li>Then let the feed update.</li>
+<li>Shopping listings are ranked by search term and product data.</li>
+<li>A niche with few brand searches is not a problem by itself.</li>
+<li>Focus on the <strong>generic product keyword</strong>, and keep the same alpha/beta structure.</li>
+<li>Product listing ads (Shopping ads that show a product picture and price) mostly target <strong>long-tail keywords</strong> (long, specific search phrases). <em>Older advice (2018).</em></li>
+<li>Ranking in Shopping is a different challenge from organic search <span class="ex">(free, unpaid results)</span>. It is generally <strong>easier.</strong> <em>Older advice (2018).</em></li>
+<li>Shopping ads need <strong>no copywriting</strong> (no written ad text). <em>Older advice (2019).</em></li>
+<li>Once the store is connected to Google Ads, the ads are generated automatically from the <strong>product name, price and store name.</strong> <em>Older advice (2019).</em></li>
+<li>Alpha and Beta Shopping campaigns need <strong>no manually entered keywords</strong>, because keywords are pulled from the product feed. <em>Older advice (2023).</em></li>
+<li>Brand and search text campaigns are the only places where you type keywords by hand. <em>Older advice (2023).</em></li>
+<li>In Google Ads, Shopping is usually the <strong>largest and most used</strong> campaign type for dropshipping stores <span class="ex">(online stores that ship products from suppliers)</span>. <em>Older advice (2021-22).</em></li>
+<li>So it deserves the <strong>most attention</strong> when you optimize. <em>Older advice (2021-22).</em></li>
+</ul>
+</details><details class="part" id="choosing-the-campaign-type"><summary><h2>Choosing the Campaign Type</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Status and use</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Shopping</td>
+<td>Core structure for product campaigns. Per-product reporting <span class="ex">(numbers for each product)</span> is possible.</td>
+<td></td>
+</tr>
+<tr>
+<td>Smart Shopping</td>
+<td>Phased out by Google. Do not use.</td>
+<td></td>
+</tr>
+<tr>
+<td>Smart campaigns <span class="ex">(goal-based)</span></td>
+<td>Suit beginners who will not spend time optimizing and want to launch in a few minutes. You give up some control in return for more visibility and a fast launch.</td>
+<td></td>
+</tr>
+<tr>
+<td>Custom campaigns</td>
+<td>For advanced advertisers who want full customization and maximum profitability. Every setting stays under the advertiser's control.</td>
+<td></td>
+</tr>
+<tr>
+<td>Performance Max (Google's automatic campaign type)</td>
+<td>Does not show product-level data.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Google Ads shows <strong>predefined smart goals</strong> (ready-made goals Google suggests) every time a new campaign is created.</li>
+<li>This is not only during the first account setup. Advertisers must go through this selection step <strong>each time.</strong></li>
+<li>The campaign goal screen offers <strong>Sales, Leads and Website traffic</strong> as smart goal options.</li>
+<li>A fourth option, <strong>create a campaign without a goal</strong>, is at the bottom of the screen.</li>
+<li>Google Shopping ad types for product campaigns are <strong>Normal, Dynamic Ads, and YouTube Shopping and Gmail Shopping.</strong></li>
+<li>Choose by goal: standard product ads, <strong>retargeting</strong> (showing ads again to people who visited before), or placements on video and email.</li>
+<li><strong>Per-product bid control</strong> is not the default in Google Ads. <em>Older advice (2023).</em></li>
+<li>It needs Shopping campaigns built in the specific structure described in this section. Existing campaigns may need to be rebuilt. <em>Older advice (2023).</em></li>
+<li>Interface changes <span class="ex">(changes to how screens and buttons look)</span> in Google Ads do <strong>not change the campaign structure or the bid strategies.</strong> <em>Older advice (2025).</em></li>
+</ul>
+</details><details class="part" id="campaign-creation-and-settings"><summary><h2>Campaign Creation and Settings</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>When Google Ads or Shopping shows <strong>Continue</strong> instead of Enabled during setup, <strong>click Continue.</strong> <em>Older advice (2023).</em></li>
+<li>Then check the status again. <em>Older advice (2023).</em></li>
+<li>Ads that are already running may show Enabled afterward. <em>Older advice (2023).</em></li>
+<li>Search partners are non-Google websites in the search network that show Google ads.</li>
+<li>To keep Shopping ads running <strong>only on google.com</strong>, exclude search partners along with YouTube, Gmail and Discover (Google's news-style feed).</li>
+<li>The language setting in a Google Ads campaign controls which user language preferences see the ads. <em>Older advice (2021-22).</em></li>
+<li>It does <strong>not</strong> change the language of the website. <em>Older advice (2021-22).</em></li>
+<li>For a non-English market, <strong>select that language.</strong> <em>Older advice (2021-22).</em></li>
+<li>Write the ad text and keywords in that language too. <em>Older advice (2021-22).</em></li>
+<li>Google Shopping ads must be <strong>either already live or still pending approval</strong> before the launch date.</li>
+<li>Once approved, they start generating impressions and sales.</li>
+</ul>
+</details><details class="part" id="choosing-the-structure-alpha-and-beta"><summary><h2>Choosing the Structure: Alpha and Beta</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>The two-tier principle: Alpha targets strong search terms with <strong>higher bids.</strong></li>
+<li>Beta picks up weaker, more general terms with <strong>low bids.</strong></li>
+<li>You accept a lower CTR <span class="ex">(click-through rate, the share of people who see the ad and click)</span> and a lower conversion rate on Beta.</li>
+<li>Shopping campaigns are split into Alpha and Beta, each with its own <strong>Return on Ad Spend (ROAS) target.</strong></li>
+<li>Alpha is the core product-level campaign. Beta is the <strong>testing campaign.</strong></li>
+<li>Split the Shopping setup into separate Alpha and Beta campaigns, each with its own <strong>bid and budget.</strong></li>
+<li>This lets you compare them.</li>
+<li>A <strong>high-priority</strong> Alpha campaign captures brand, product name and SKU searches.</li>
+<li>A Beta campaign captures general terms.</li>
+<li>Negative keywords in Beta keep specific searches out of it.</li>
+<li>Alpha and Beta both receive impressions and clicks. <em>Older advice (2019).</em></li>
+<li>They split keywords by quality, and each campaign has its own report. <em>Older advice (2019).</em></li>
+<li>Alpha and Beta keep the <strong>same structure</strong> even when Alpha has few keywords. <em>Older advice (2021).</em></li>
+<li>Use a <strong>shared budget</strong> rather than changing the structure. <em>Older advice (2021).</em></li>
+<li>Use the Alpha Beta campaign structure for Google Shopping. <em>Older advice (2025).</em></li>
+<li>Use an alpha and beta structure in Google Ads. <em>Older advice (2020).</em></li>
+<li>Keep Alpha for targeted searches and Beta for broader searches. <em>Older advice (2020).</em></li>
+<li>Add negative keywords to <strong>both.</strong> <em>Older advice (2020).</em></li>
+<li>A simplified single Google Ads campaign that lets Google decide where to spend the budget is <strong>not the best approach.</strong> <em>Older advice (2020).</em></li>
+<li>Turn it off and rebuild the account using the alpha and beta structure. <em>Older advice (2020).</em></li>
+<li>A standard Shopping setup in Google Ads uses three campaign types: <strong>Generic, Brand and SKU.</strong></li>
+<li>Alpha and Beta Shopping campaigns should follow this structure as the <strong>default.</strong></li>
+<li>A basic starting setup has <strong>four campaigns:</strong> Google Shopping Alpha, Google Shopping Beta, Google remarketing and Meta remarketing. <em>Older advice (2025).</em></li>
+<li>Avoid testing many other formats at the start, such as <strong>cold</strong> display or cold Meta ads <span class="ex">(ads aimed at people who do not know your store yet)</span>. <em>Older advice (2025).</em></li>
+</ul>
+<h3 id="launch-structure">Launch Structure</h3>
+<ul>
+<li>At launch, put <strong>all products</strong> into both the Alpha and Beta Shopping campaigns.</li>
+<li>Alpha and Beta form a two-tier structure.</li>
+<li>A three-tier structure also works, but <strong>two tiers is the default setup.</strong></li>
+<li>Start Shopping with two campaigns, Alpha and Beta, that both include all products. <em>Older advice (2025).</em></li>
+<li><strong>Do not split</strong> Shopping campaigns by product category at the start. <em>Older advice (2025).</em></li>
+<li>Start with one Alpha and one Beta campaign covering all products in one feed. <em>Older advice (2022).</em></li>
+<li>Optimize them over time. Do not split products into one campaign each. <em>Older advice (2022).</em></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Alpha</th>
+<th>Beta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Strong terms, brand, product name, SKU</td>
+<td>General terms, testing</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>High</td>
+<td>Lower</td>
+</tr>
+<tr>
+<td>Bid</td>
+<td>Higher</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Negative keywords</td>
+<td>Blocks lower-converting terms</td>
+<td>Receives blocked terms; specific searches excluded</td>
+</tr>
+<tr>
+<td>Source</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Alpha and Beta should <strong>share one budget,</strong> so one campaign cannot use the whole budget. <em>Older advice (2023).</em></li>
+<li>Set campaign priority correctly during setup. <em>Older advice (2023).</em></li>
+<li>Mismatched priorities let <strong>one campaign eat the budget.</strong> <em>Older advice (2023).</em></li>
+<li>Keep Alpha and Beta from competing and driving up cost per click. <em>Older advice (2022).</em></li>
+<li>Use <strong>negative keywords and campaign priority levels</strong> to do this. <em>Older advice (2022).</em></li>
+<li>Without them, the campaigns <strong>bid against each other.</strong> <em>Older advice (2022).</em></li>
+<li>No fixed minimum budget is required to start a Shopping campaign.</li>
+<li>A larger budget produces data <strong>faster.</strong></li>
+<li>Each new campaign must be tested under its own conditions and product set, even for advertisers who already run other accounts.</li>
+<li>A small share of search terms, <strong>around 5%</strong>, appearing in Alpha when they should be in Beta under a shared budget is not a reason to restructure. <em>Older advice (2021).</em></li>
+<li>A leak that small is not enough data to find a cause. <em>Older advice (2021).</em></li>
+<li>Budget differences would usually cause a much larger share. <em>Older advice (2021).</em></li>
+<li>Keep the structure, keep adding negative keywords, and <strong>reassess later.</strong> <em>Older advice (2021).</em></li>
+</ul>
+</details><details class="part" id="negative-keywords"><summary><h2>Negative Keywords</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Use negative keywords in <strong>both</strong> Alpha and Beta campaigns to block searches that belong elsewhere. <em>Older advice (2020).</em></li>
+<li>Blocking many cheaper or lower-value searches with negative keywords can <strong>hurt more than help.</strong></li>
+<li>It may block searches that would have converted <span class="ex">(led to sales)</span>.</li>
+<li>Add negative keywords and ad group bid adjustments <span class="ex">(changes to bids for a group of ads)</span> <strong>after the store has data.</strong> <em>Older advice (2020).</em></li>
+<li>Do not add them at the start. <em>Older advice (2020).</em></li>
+<li>Negative keywords are <strong>the only keywords</strong> to add to Shopping campaigns.</li>
+<li>Add them <strong>only for searches you do not want.</strong></li>
+</ul>
+</details><details class="part" id="bids-and-starting-cpc"><summary><h2>Bids and Starting CPC</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Example starting bids are <strong>$1.00 for Alpha</strong> and <strong>$0.50 for Beta.</strong></li>
+<li>The starting point is about <strong>$0.50 to $1.00 CPC.</strong></li>
+<li>The launch phase is about <strong>buying data,</strong> not expecting profit.</li>
+<li>Keyword and product research cannot predict the actual cost per click or the real conversion rate.</li>
+<li>So the account must be launched and tested to learn these values.</li>
+<li>High bids that produce <strong>no clicks</strong> signal that competitors bid more aggressively.</li>
+<li>Market data reveals both bid competitiveness and conversion rate competitiveness.</li>
+<li>The campaign must be tested to find out.</li>
+<li>For standard Shopping, keep ad rotation <span class="ex">(how Google chooses which ad to show)</span> set to <strong>optimize for best performing ads.</strong> <em>Older advice (2024).</em></li>
+<li>Lower the cost per click for a product group when it takes <strong>too much of the budget.</strong> <em>Older advice (2020).</em></li>
+<li>Set bids per product. <em>Older advice (2020).</em></li>
+<li>For example, raise a cost per click from <strong>0.20 USD to 0.25 USD</strong> on a product that needs more impressions. <em>Older advice (2020).</em></li>
+<li>To change bids per product, split the catalog into <strong>product groups</strong> (sets of products) so each product or brand can get its own cost per click. <em>Older advice (2021).</em></li>
+<li>Raise the bid <strong>only</strong> on products that get impressions but too few clicks, or that have low visibility. <em>Older advice (2021).</em></li>
+<li>A product with <strong>no impressions</strong> should be checked for search demand, relevance and competition before its bid is raised.</li>
+</ul>
+</details><details class="part" id="product-groups-and-item-id-subdivision-1"><summary><h2>Product Groups and Item ID Subdivision</h2><span class="pm">1 min</span></summary>
+<h3 id="subdivision-options">Subdivision Options</h3>
+<ul>
+<li>When you add a subdivision <span class="ex">(splitting a group into smaller parts)</span> to a Shopping ad group, the options are <strong>product type, category, brand and Item ID.</strong></li>
+<li>Choose <strong>Item ID</strong> (your product's own ID number) to break the ad group down by individual product.</li>
+<li>Each product then gets its own reporting row and its own bid.</li>
+<li>In Google Shopping campaigns, <strong>each product group corresponds to one product.</strong> <em>Older advice (2020).</em></li>
+<li>In standard Shopping campaigns, place <strong>each product in its own product group</strong> so impressions, clicks and sales are visible per product. <em>Older advice (2022).</em></li>
+<li>Performance Max does not show product-level data. <em>Older advice (2022).</em></li>
+<li>Split product groups by individual product so spend and return are visible per product in Google Ads. <em>Older advice (2020).</em></li>
+</ul>
+<h3 id="the-everything-else-node">The Everything Else Node</h3>
+<ul>
+<li>When a Shopping product group is subdivided, Google Ads adds an <strong>Everything else</strong> node <span class="ex">(an extra catch-all box)</span>. <em>Older advice (2021-22).</em></li>
+<li>It is set to <strong>Excluded</strong> and carries no bid. <em>Older advice (2021-22).</em></li>
+<li>Products that match none of the named subdivisions fall into this node. <em>Older advice (2021-22).</em></li>
+<li>They <strong>do not show.</strong> <em>Older advice (2021-22).</em></li>
+<li>So place <strong>every product in a labelled group.</strong> <em>Older advice (2021-22).</em></li>
+<li>Check the product count in the Everything Else group inside All Products. <em>Older advice (2024).</em></li>
+<li>If all products are split out at product level, <strong>that group should be empty.</strong> <em>Older advice (2024).</em></li>
+<li>Check whether an <strong>All products</strong> product group sits next to individually listed products in the same ad group. <em>Older advice (2020).</em></li>
+<li>If it does, <strong>pause the All products group,</strong> so products are not counted twice. <em>Older advice (2020).</em></li>
+</ul>
+</details><details class="part" id="launch"><summary><h2>Launch</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Launch campaigns with the <strong>full product catalog</strong> (your complete product list) in one Alpha and one Beta campaign.</li>
+<li>Then remove products based on data as clicks and conversions come in.</li>
+<li>Do not pre-select products before there is data.</li>
+<li>Start Google Shopping campaigns with the full product catalog as soon as the products are uploaded and the feed is set up. <em>Older advice (2020).</em></li>
+<li>Driving traffic to the homepage with broad keywords is expensive and brings the <strong>least qualified buyers.</strong> <em>Older advice (2020).</em></li>
+<li>Keep ad structure simple at the start, with all products in the Alpha and Beta campaigns. <em>Older advice (2020).</em></li>
+<li>Negative keywords and ad group bid adjustments can be added <strong>after the store has data.</strong> <em>Older advice (2020).</em></li>
+<li>Launch <strong>three core campaigns</strong> on Google Ads first, before any social traffic: product listing ads (PLAs), search text ads <span class="ex">(text ads on Google search results)</span> on profitable terms, and search audience campaigns with retargeting. <em>Older advice (2019 onward, undated source).</em></li>
+<li>Once they work on Google, copy them over to <strong>Bing Ads</strong> (Microsoft's ad platform). <em>Older advice (2019 onward, undated source).</em></li>
+</ul>
+</details><details class="part" id="google-shopping-funnel-and-process-overview"><summary><h2>Google Shopping Funnel and Process Overview</h2><span class="pm">2 min</span></summary>
+<ol type="1">
+<li><strong>Connect</strong> your store to Google Ads (Google's paid ad tool). Shopping ads <span class="ex">(product ads with a photo and price)</span> are then made automatically. They use your product name, price and store name. No copywriting <span class="ex">(writing ad text)</span> is needed.</li>
+<li><strong>Submit</strong> the feed <span class="ex">(your product data file that Google reads)</span>. Google reads product titles, descriptions and attributes <span class="ex">(product details such as color or size)</span>. It uses them to decide which searches your products match. Searches are matched by keywords <span class="ex">(the words people type)</span>. It uses the Merchant Center product pages (Google's product data tool) for matching keywords.</li>
+<li><strong>Launch</strong> the full catalog <span class="ex">(all your products)</span> in one alpha and one beta campaign. Alpha and beta are two campaigns, each a set of ads with its own rules. Set the shared budget <span class="ex">(one money pool both campaigns use)</span> and the priority <span class="ex">(which campaign is chosen first when two match the same search)</span> correctly.</li>
+<li><strong>Build</strong> the PLA <span class="ex">(product listing ads, Shopping ads with a product photo and price)</span> alpha/beta pattern. Run two campaigns per PLA setup. The alpha campaign uses negative keywords <span class="ex">(search words that block your ads)</span> to block lower-converting search terms <span class="ex">(searches that rarely lead to a sale)</span>. The beta campaign receives those terms. Every PLA campaign is typically duplicated this way.</li>
+<li><strong>Compare</strong> channels <span class="ex">(the places where you advertise)</span>. In the owner's Google campaigns, Shopping converted much better than Search <span class="ex">(text ads on Google's results page)</span>. "Converted" means the visitor bought. Conversion rate is the share of visitors who buy. Shopping had a strong conversion rate. For a store running both, Google Shopping is the channel to scale first, which means grow its budget first.</li>
+<li><strong>Optimize</strong> with data <span class="ex">(your real results)</span>. Remove products that do not perform. Split product groups <span class="ex">(sets of products grouped together)</span> by Item ID <span class="ex">(the unique number of each product)</span>. Adjust bids <span class="ex">(the price you pay per click)</span> on products that need impressions <span class="ex">(how often your ad is shown)</span>. Add negative keywords for unwanted searches.</li>
+<li><strong>Copy</strong> proven campaigns to Bing Ads (Microsoft's ad tool) after they work on Google.</li>
+</ol>
+<p>Each PLA setup also follows the long-tail principle <span class="ex">(aiming at longer, more specific search phrases)</span>. Product listing ads mostly target long-tail keywords, and the alpha and beta structure applies.</p>
+</details><details class="part" id="where-sources-disagree"><summary><h2>Where Sources Disagree</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Full catalog at launch or product-level split <span class="ex">(one group per product)</span> from the start:
+<ul>
+<li><strong>Launch</strong> with the full catalog in alpha and beta. Then split products by individual product once data arrives.</li>
+<li>Older 2020 advice gives a per-product bid split from the outset.</li>
+<li>Apply the full-catalog launch first.</li>
+<li>Apply the per-product split when there is data to justify each product's bid.</li>
+</ul></li>
+<li>Brand split or product split:
+<ul>
+<li>Source B's older default splits Shopping campaigns by brand within three priority levels <span class="ex">(high, medium and low)</span>. Split by price, margin <span class="ex">(profit per sale)</span> or product type only when there is a specific reason for that product group.</li>
+<li>Source A's guidance splits standard Shopping by individual product so that performance is visible per product.</li>
+<li>A brand split is also named as a valid option for bid control.</li>
+<li><strong>Use</strong> the brand split where the three-priority-level structure is in use.</li>
+<li><strong>Use</strong> the per-product split for standard Shopping.</li>
+</ul></li>
+<li>Number of campaign tiers <span class="ex">(levels)</span>:
+<ul>
+<li>The default is two tiers, alpha and beta. A three-tier structure also works.</li>
+<li>The standard Shopping setup is named as Generic, Brand and SKU <span class="ex">(a stock code for each single product)</span>.</li>
+<li>The three priority levels named by Source B are also an option.</li>
+<li>The basic starting setup of four campaigns adds remarketing campaigns <span class="ex">(ads shown again to people who already visited)</span> on Google and Meta <span class="ex">(the company behind Facebook and Instagram)</span>.</li>
+<li><strong>Start</strong> with two tiers. Add the others as the account needs them.</li>
+</ul></li>
+<li>Negative keywords:
+<ul>
+<li>Negative keywords are added to both campaigns from the start.</li>
+<li>Adding many negative keywords can block searches that would have converted, so they should be used with care.</li>
+<li>Negative keywords and bid adjustments can <strong>wait until there is data</strong>.</li>
+</ul></li>
+<li>Smart Shopping or smart campaigns:
+<ul>
+<li>Smart Shopping <span class="ex">(an older automatic campaign type)</span> is phased out and <strong>should not be used</strong>.</li>
+<li>Smart campaigns, offered on the goal screen <span class="ex">(the first setup page where you choose a goal)</span>, are described as suitable for beginners.</li>
+<li>Advanced advertisers should use custom campaigns <span class="ex">(campaigns where you set every option yourself)</span>.</li>
+</ul></li>
+<li>Starting bid examples:
+<ul>
+<li>The 2026 example uses $1.00 for alpha and $0.50 for beta. Its starting range is <strong>$0.50 to $1.00</strong> CPC <span class="ex">(cost per click, what you pay each time someone clicks your ad)</span>.</li>
+<li>The 2020 example raises one product's cost per click from 0.20 USD to 0.25 USD.</li>
+<li>These are examples for different situations. Neither is a fixed rule.</li>
+</ul></li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/10-google-ads-and-shopping/09-shopping-campaign-fundamentals-and-the-alpha-beta-structure/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../10-google-ads-and-shopping/08-merchant-center-diagnostics-disapprovals-and-free-listings/"><span class="k">&larr; Previous</span><span class="v">Merchant center diagnostics, disapprovals and free listings</span></a><a class="nx" href="../../10-google-ads-and-shopping/10-search-intent-shopping-funnel-low-medium-high-value-campaign/"><span class="k">Next &rarr;</span><span class="v">Search-Intent shopping funnel (Low/Medium/High value campaigns)</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lists, segments, exclusions and list hygiene | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.5: Lists, segments, exclusions and list hygiene.">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/05-lists-segments-exclusions-and-list-hygiene/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Lists, segments, exclusions and list hygiene | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.5: Lists, segments, exclusions and list hygiene."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/05-lists-segments-exclusions-and-list-hygiene/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/05-lists-segments-exclusions-and-list-hygiene/">Plain version</a></div><h1>15.5 Lists, segments, exclusions and list hygiene</h1><article><h2 id="list-vs-segment-logic">List vs segment logic</h2>
+<ul>
+<li><p>A list is a data source. It shows where a subscriber came from. [L0264.004]</p></li>
+<li><p>A segment is a rule-based profile. It defines who meets specific engagement criteria. [L0264.004]</p></li>
+<li><p>A list is a group of profiles that opted in, such as the Newsletter list. A segment is a group of profiles filtered by conditions, such as past orders or behavior. Both are found under Audience, then Lists and segments. [L0607.041]</p></li>
+<li><p>Klaviyo provides pre-built lists such as Newsletter. Custom segments are created with Create list or segment under Audience &gt; Lists and segments. [L0573.030]</p></li>
+<li><p>Klaviyo can read order history from Shopify or another connected store platform. This allows automatic segmentation by number of purchases and by products or product types bought. Segments are used for customers, while separate lists based on opt-in source are often used for prospects. [L0603.018]</p></li>
+<li><p><em>Older advice (2021):</em> In Klaviyo, the only list to create for this setup is the broadcast list. Default segments that appear in new accounts are not needed because automations do not use them. [L0469.102]</p></li>
+<li><p>The broadcast list contains every subscriber who has not opted out, whatever the source: abandoned cart, purchase, footer signup or exit-intent signup. These contacts receive all monthly promotions. [L1204.015]</p></li>
+<li><p>Split audiences into two kinds of lists:</p>
+<ul>
+<li>Communication lists: email lists that receive your messages.</li>
+<li>Invisible lists: used only for ad targeting and never receive email.</li>
+</ul>
+<p>Keeping these apart keeps targeting precise. [L0757.007]</p></li>
+</ul>
+<h2 id="engagement-recency-segments">Engagement-recency segments</h2>
+<p>Build overlapping recency segments (7-day, 14-day, 0-30, 31-60, 61-90, 90+) so you can test audiences and rotate them across different engagement windows. [L0264.013]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Condition</th>
+<th>Use</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7-Day Hyper-Engaged</td>
+<td>(Opened Email at least 3 times in last 7 days) OR (Clicked Email at least 2 times in last 7 days)</td>
+<td>Rebuilding deliverability. Typical usage: 2 weeks. Send 3-7 emails within 7 days to this segment.</td>
+<td>L0264.006</td>
+</tr>
+<tr>
+<td>14-Day Super-Engaged</td>
+<td>(Opened Email at least 3 times in last 14 days) OR (Clicked Email at least 3 times in last 14 days)</td>
+<td>Deliverability rebuilding. If open rates reach 60-80%, continue for 3-4 sends, then expand to wider segments.</td>
+<td>L0264.007</td>
+</tr>
+<tr>
+<td>0-30 Days Engaged</td>
+<td>(Opened Email at least 1 time in 0-30 days) OR (Clicked Email at least 1 time in 0-30 days)</td>
+<td>Core segment for the regular sending strategy.</td>
+<td>L0264.008</td>
+</tr>
+<tr>
+<td>31-60 Days Engaged</td>
+<td>(Opened Email at least 1 time in 31-60 days) OR (Clicked Email at least 1 time in 31-60 days)</td>
+<td>Regular sending rotation.</td>
+<td>L0264.009</td>
+</tr>
+<tr>
+<td>61-90 Days and 90+ Days Engaged</td>
+<td>Same threshold: at least 1 open or click in the respective window</td>
+<td>Build matching segments for these windows.</td>
+<td>L0264.009</td>
+</tr>
+<tr>
+<td>All Active</td>
+<td>(Subscribed at least once over all time) OR (Received Email AND Can receive email marketing)</td>
+<td>Includes all active subscribers except suppressed addresses.</td>
+<td>L0264.010</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Target open rate is above 30%. When open rates fall below this, move to a more recent engagement window to rebuild deliverability. [L0264.002]</li>
+<li>Email sending works like driving: gradually expand your audience until open rates drop, then revert to a tighter engagement window. Find the sweet spot where volume and deliverability stay balanced by monitoring performance and adjusting audience size. [L0264.001]</li>
+<li>Continuing to email contacts who have not engaged is only justified while deliverability stays good. If deliverability weakens, stop mailing these contacts. [L0494.017]</li>
+</ul>
+<h2 id="behavior-purchase-count-and-vip-segments">Behavior, purchase-count and VIP segments</h2>
+<ul>
+<li><p>Segmentation divides the list into groups based on behavior, such as pages viewed, time spent on the site, purchase history, and how the person joined the list. Relevant messages to each group generally produce better results, so more segmentation usually means more valuable messages sent more often. <em>(Older advice, 2021-22.)</em> [L0603.015]</p></li>
+<li><p>Email segmentation uses the same logic as retargeting audiences: group people by their actions and interests so each group gets a message suited to where it is in the buying journey. <em>(Older advice, 2021-22.)</em> [L0603.016]</p></li>
+<li><p>Minimum segments to set up in the email software <em>(older advice, 2021-22)</em>: [L0603.017]</p>
+<ol type="1">
+<li>Customer segments by purchase count: customers who bought once, customers who bought twice, and customers who bought three or more times.</li>
+<li>A segment of all customers who have bought.</li>
+<li>Product-based segments for best-selling products or products with a clear upsell or repurchase cycle, such as items that wear out or have a limited shelf life.</li>
+<li>Customer segments by product type if the store sells several product types.</li>
+<li>Prospect lists by opt-in source: one list per specific content opt-in, one per product page opt-in, and one per collection page or product type opt-in.</li>
+<li>Add new segments or lists each time a new opt-in is added to the website.</li>
+</ol></li>
+<li><p>Set up audience segments in Klaviyo: buyers, non-buyers and VIP customers, where VIP means a customer who has bought more than once. Exclude buyers from offer launches for products they already bought. [L0605.025]</p></li>
+<li><p>Example VIP segment: customers whose Placed order count is greater than one (two or more orders). Use it to target loyal buyers with product launches or early access. [L0573.031]</p></li>
+<li><p>VIP segment setup:</p>
+<ol type="1">
+<li>Under Audience, then Lists and segments, click Create list or segment and create a segment.</li>
+<li>Set the condition to the Placed Order metric with a count greater than 1, meaning two or more orders.</li>
+</ol>
+<p>[L0607.042]</p></li>
+<li><p>A VIP customer is defined here as a customer with two or more orders (Placed Order count greater than 1). [L0607.043]</p></li>
+<li><p>Create Klaviyo segments for shoppers who bought Checkout Plus and for those who did not, then target them differently. The integration does not come out of the box, but it can be built. [L0955.046]</p></li>
+<li><p>After identifying high-performing engagement segments (30%+ open rates), layer on product-specific conditions to increase targeting precision: "viewed products with [attribute]", "looked at [collection]", or "purchased from [collection]". Example: add "AND viewed products containing protein" to the 0-30 Days Engaged segment to target engaged subscribers interested in protein. [L0264.015]</p></li>
+<li><p>Audience segmentation produces 8 to 10 segments deployed in Klaviyo, built from existing subscriber data without any extra tool. [L1361.025]</p></li>
+<li><p>Add a checklist of product interests and a request for name and address to every reply card, so each response also reveals what the buyer wants. Use these answers to build segments for later mailings. A list built from stated interests produces more relevant follow-ups than a general list. [L1369.121]</p></li>
+<li><p><em>Older advice (2021-22):</em> Email follow-up covers both pre-purchase and post-purchase contacts. Lists should be segmented and built before purchase, and different emails should be sent to prospects versus buyers to keep them engaged and raise the chance of completing a transaction. [L1497.005]</p></li>
+</ul>
+<h2 id="naming-conventions">Naming conventions</h2>
+<ul>
+<li>Use the naming convention brand name + double slash + segment name (e.g., "e2 // 0-30 Days Engaged"). Apply this consistently across all segments. [L0264.014]</li>
+<li>Prefix all exclude segments with an asterisk (*) so they are instantly recognizable when searching for exclusions to apply in campaigns (example: *e2 // Purchased Last 7 Days). [L0279.001]</li>
+<li>Name a new list after the campaign and its offers (for example, the campaign name plus "10% and 15%"), so that separate lists can be created later for split tests. In Klaviyo, go to Lists &amp; segments &gt; Create list and give the list a name. [L1138.007]</li>
+</ul>
+<h2 id="core-exclude-segments">Core exclude segments</h2>
+<p>Apply these five core exclude segments to every email campaign: Purchased Last 7 Days (minimum; consider 14 days), Soft Bounce (3+ bounces), Spam Trap, and Spam Keywords. This approach protects deliverability and maintains sender reputation. [L0279.010]</p>
+<p>With proper list management and the five core exclude segments applied consistently, a well-maintained email list should achieve over 30% open rate. [L0279.011]</p>
+<p>Focus email marketing on deciding whom NOT to send to rather than whom to send to. Proper exclusions for bounces, inactive profiles, and suspicious keywords ensure messages reach engaged audiences and protect your sender reputation. [L0279.009]</p>
+<h3 id="purchased-last-7-days-and-purchased-last-14-days">Purchased Last 7 Days and Purchased Last 14 Days</h3>
+<ul>
+<li>Do not send marketing emails to customers within 5-14 days of purchase. This period is perceived as triggering and annoying. Customers need time to receive and be satisfied with their order before you resume marketing to them. [L0279.004]</li>
+<li>Create a Purchased Last 7 Days exclude segment with the condition: placed order at least once in the last 7 days. Adjust timing based on shipping speed. Purpose: prevent triggering customers with marketing immediately after purchase. [L0279.002]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Shipping speed</th>
+<th>Exclude window</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customers receive products within 3 days</td>
+<td>5 days</td>
+<td>L0279.002</td>
+</tr>
+<tr>
+<td>Standard shipping</td>
+<td>7 days</td>
+<td>L0279.002</td>
+</tr>
+<tr>
+<td>Maximum aggressive purchase exclusion (minimal marketing contact with recent purchasers)</td>
+<td>14 days (Purchased Last 14 Days: placed order at least once in the last 14 days)</td>
+<td>L0279.003</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Discount-driven segment: when you want minimal marketing contact with recent purchasers, use the 14-day segment. [L0279.003]</li>
+<li>Check flow structures for suppressions and exclusions, such as customers who have already purchased or who are already in another flow. Blueprints list these as key points that are easy to miss. [L0588.006]</li>
+</ul>
+<h3 id="soft-bounce">Soft Bounce</h3>
+<ul>
+<li>Create a Soft Bounce exclude segment for email addresses that have bounced at least 3 times, as soft bounces significantly hurt deliverability. In Klaviyo, the condition is "bounced at least three times overall time." [L0279.005]</li>
+<li>Always exclude profiles that have bounced twice or more, using a segment such as *Bounced x2 or more in the Don't send to field. In the example this excluded 62 profiles. This is a stricter campaign-level exclusion than the 3-bounce core segment. [L0864.007]</li>
+</ul>
+<h3 id="spam-trap">Spam Trap</h3>
+<ul>
+<li><p>Spam traps are email addresses that Internet Service Providers (Google, Yahoo, Outlook) use to monitor sender reputation. ISPs take over dormant accounts inactive for 5-10 years, sign them up to mailing lists, and watch whether senders continue emailing them without engagement. Senders who keep sending to spam traps get blacklisted. [L0279.007]</p></li>
+<li><p>Create a Spam Trap exclude segment with these AND conditions together:</p>
+<ul>
+<li>Viewed Product = zero times</li>
+<li>Checkout Started = zero times</li>
+<li>Placed Order = zero times</li>
+<li>Opened Email = zero times</li>
+<li>Clicked Email = zero times</li>
+<li>Cannot Receive Marketing = true</li>
+</ul>
+<p>Optional: add "subscribed more than 14 days ago" to exclude brand-new inactive profiles and focus on established bot/fake accounts. Profiles automatically exit this segment upon any engagement action. [L0279.006]</p></li>
+<li><p>Do not use "active on site" conditions in the spam trap segment, as bots and fraudulent accounts can appear active on site even without genuine engagement. Base spam trap detection on actual engagement behavior: zero emails opened AND zero emails clicked AND zero products viewed AND zero checkouts started AND cannot receive marketing. [L0279.012]</p></li>
+</ul>
+<h3 id="spam-keywords">Spam Keywords</h3>
+<p>Exclude emails containing these keywords by creating a segment with "Email contains [keyword]" conditions joined by OR. These patterns indicate non-personal or system accounts that should never receive marketing. [L0279.008]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Keyword group</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>support, help@, reply@, nobody, admin, marketing, server, test, spam, subscribe, unsub, job, billing, promotion, careers, contact, service, customer, editor, finance, ftp, info, helpdesk, news, media, relations, investor</td>
+<td>L0279.008</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="purchase-exclusions-for-overlapping-segments">Purchase exclusions for overlapping segments</h3>
+<ul>
+<li>Without exclusions, one person can appear in several overlapping segments and receive conflicting or repeated messages. For example, when emailing customers who bought once, exclude customers who bought twice from that audience. <em>(Older advice, 2021-22.)</em> [L0603.021]</li>
+</ul>
+<h2 id="cleaning-fake-and-unengaged-subscribers">Cleaning fake and unengaged subscribers</h2>
+<ul>
+<li>Invalid or misspelled email addresses trigger a self-correction: each send attempt bounces, and after 3 or more soft bounces, your soft bounce segment excludes them from future campaigns. This automatic removal continuously improves list hygiene and sender reputation without requiring manual cleaning. [L0279.013]</li>
+<li>Clean fake newsletter subscribers in Klaviyo without double opt-in (double opt-in would drop most real subscribers): [L0971.037]
+<ol type="1">
+<li>Once a week, delete obviously fake contacts.</li>
+<li>Once a month, run a report in Klaviyo for contacts who have not engaged with emails in the past 30 or 60 days.</li>
+<li>Delete those contacts.</li>
+</ol></li>
+<li>Build an exclusion segment for unengaged profiles at one struggling provider: [L0864.005]
+<ol type="1">
+<li>Go to Audience &gt; Lists &amp; segments and click Create segment.</li>
+<li>Name it with a single asterisk at the start, for example *Yahoo Unengaged, and avoid multiple asterisks.</li>
+<li>Under Definition, choose What someone has done (or not done).</li>
+<li>Set Person has &gt; Opened Email zero times between 15 and 365 days ago, and add the same condition for Clicked Email, so the profile has neither opened nor clicked in that window.</li>
+<li>Add an AND filter on the profile property email that contains yahoo.</li>
+<li>Check the number under Preview details before saving (the example preview showed about 2,446 profiles).</li>
+<li>Click Create segment to save it.</li>
+</ol></li>
+<li>In Klaviyo's Create segment screen, the Segment builder offers a Define with AI option next to the manual Definition builder. The manual route starts with the Definition field, where you choose a condition such as What someone has done (or not done) and then add Person has filters. [L0864.023]</li>
+<li>In a campaign's Recipients step, the Don't send to (optional) field takes exclusion segments, and the Estimated recipients count updates after you add them. The Skip recently emailed profiles option uses Smart Sending, which skips profiles emailed in the past 16 hours by default; this window can be changed in Account Settings. [L0864.006]</li>
+<li>Check the Estimated recipients count in the campaign's Recipients step after adding each exclusion, because it shows how many profiles remain after include and exclude segments. In the example the count was about 2,012 after excluding the bounced and Yahoo unengaged segments. [L0864.028]</li>
+<li>Put the exclusion segment into the Don't send to field of every new campaign, and share it with the team so every email uses it automatically. This keeps the fix in place without needing a manual check each time. [L0864.022]</li>
+</ul>
+<h2 id="send-to-engaged-strategy">Send-to-engaged strategy</h2>
+<ul>
+<li><p>Three-part sending strategy:</p>
+<ol type="1">
+<li>Send to engaged subscribers first.</li>
+<li>Tailor segments by product or behavior interests.</li>
+<li>Exclude unengaged audiences. Most important is knowing who not to send to.</li>
+</ol>
+<p>[L0264.011]</p></li>
+<li><p>Segment by date range to control costs. Create audience segments by date range (for example, July-August cohort, August-September cohort). Send the same email campaigns to each segment separately. Klaviyo charges per unique recipient per campaign, so segmented sends cost less than one large campaign. This keeps you on the $150/month plan instead of scaling to $5,000/month. Once scaled up to high-volume pricing, it is difficult to scale back down, so plan segmentation from the start. [L0263.041]</p></li>
+</ul>
+<h2 id="avoiding-overlap-and-conflicting-messages">Avoiding overlap and conflicting messages</h2>
+<ul>
+<li>Split the customer list into segments so that different customer groups receive different emails. Segmenting lets one email account serve several audiences without sending the same message to everyone. [L0337.042]</li>
+<li><em>Older advice (2021-22):</em> Do not send all subscribers the same messages from one large list. Split the total list into targeted segments that each receive their own email flow based on actions taken on the site, such as which product was bought or which content page the person opted in on. [L0493.010]</li>
+<li><em>Older advice (2021-22):</em> Emails sent to a segment should be highly relevant to the opt-in point or purchase that placed the subscriber there. Contextual, targeted flows are where the strongest email returns come from. [L0493.011]</li>
+<li>Before sending a segmented message: [L0603.022]
+<ol type="1">
+<li>Define the exact group the message is for.</li>
+<li>Check whether that group overlaps with another segment.</li>
+<li>If it does, add an exclusion for the overlapping segment.</li>
+<li>Confirm that the audience now matches the intended message.</li>
+</ol></li>
+</ul>
+<h2 id="audience-sync-to-ads">Audience sync to ads</h2>
+<ul>
+<li>In Klaviyo, sync an email list or segment to a Facebook custom audience. Subscribers are then shown ads even when they do not open email. [L1204.018]</li>
+<li>Use invisible lists, which are never sent email, only for ad targeting. Keeping them apart from communication lists keeps targeting precise. [L0757.007]</li>
+</ul>
+</article><nav class="pn"><a href="../../15-email-and-sms/04-list-building-and-opt-in-capture/"><span class="k">&larr; Previous</span><span class="v">List building and opt-in capture</span></a><a class="nx" href="../../15-email-and-sms/06-welcome-series-and-new-subscriber-nurture/"><span class="k">Next &rarr;</span><span class="v">Welcome series and new subscriber nurture</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

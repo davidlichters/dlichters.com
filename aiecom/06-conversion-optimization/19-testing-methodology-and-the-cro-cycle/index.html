@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Testing methodology and the CRO cycle | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 6.19: Testing methodology and the CRO cycle.">
+<link rel="canonical" href="https://dlichters.com/aiecom/06-conversion-optimization/19-testing-methodology-and-the-cro-cycle/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Testing methodology and the CRO cycle | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 6.19: Testing methodology and the CRO cycle."><meta property="og:url" content="https://dlichters.com/aiecom/06-conversion-optimization/19-testing-methodology-and-the-cro-cycle/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">6. Conversion optimization</a> &rsaquo; <a href="../../../ecom/06-conversion-optimization/19-testing-methodology-and-the-cro-cycle/">Plain version</a></div><h1>6.19 Testing methodology and the CRO cycle</h1><article><h2 id="when-to-test-and-what-to-expect">When to test and what to expect</h2>
+<ul>
+<li>Do not recommend A/B testing by default when the brand likely lacks enough traffic. Label obvious, low-risk changes as a "fix" rather than a "test" [L0886.007].</li>
+<li>In the first audit output, hero positioning, risk reversal and comparison modules should each be labeled a test only when traffic supports it. Otherwise, label them fixes [L0886.021].</li>
+<li>Low-traffic stores can run fewer tests at once [L0572.012].</li>
+<li>Do not run A/B tests with very small traffic. Splitting 20 sales into 10 and 10 gives results that are not statistically reliable. Beginners should skip formal testing at this stage and fix obvious problems first [L0390.012].</li>
+<li>Results from low-traffic stores have low statistical significance and should be treated with caution. Large platforms such as Amazon test nearly everything, but a small store should test as often as its traffic allows and should not overread small differences [L1077.052].</li>
+<li>Conversion rate optimization tests need enough traffic for a statistically reliable sample. With low traffic, such as outside peak season, a clear winner can still appear, but small differences are not trustworthy and should not be acted on [L0999.021].</li>
+<li>A large change, such as 40 percent, can be acted on even with limited data. A 2 percent change is too small to trust [L0999.022].</li>
+<li>Low daily spend produces unreliable A/B results. With low traffic, duplicate the product page and product, then send separate traffic to each [L0524.043].</li>
+<li>Social proof and other conversion tactics should be tested once steady traffic arrives, so the page can be measured accurately [L1077.042].</li>
+<li>Avoid site-wide changes such as theme swaps during the first two to four weeks of running ads (Source A 2022, older). Wait until a product page has a few hundred unique visitors before optimizing it, so you can tell what caused a change in conversion rate [L0803.053].</li>
+<li>Do not change a checkout that still produces a good return on ad spend. If a test is needed, change one element at a time [L0963.058] (Source A 2022, older).</li>
+<li>Conversion testing is a long-term process that needs time and learning, not a single app install. A small gain, such as moving from about 3% to 3.5% conversion, can represent a meaningful amount of money [L0390.014].</li>
+<li>A realistic yield is about 8 tests per year. Of those, typically around 3 are confirmed as improvements. In the other cases, the current version was already the best option [L0390.010, L0390.011, L0423.014].</li>
+<li>Best practices such as button color are not universal. The right choice depends on the business, audience and website, so test the option in your own store rather than copying others [L0390.007].</li>
+<li>Conversion tests on real results can show gains of about 0.5 to 1 percent across more than 50 test variations [L1218.018].</li>
+</ul>
+<h2 id="research-and-hypotheses">Research and hypotheses</h2>
+<ul>
+<li>Good hypotheses come from real signals, such as customer feedback about something missing on a page, or a comparison of your unique selling proposition against competitors. Each hypothesis should name the exact problem it addresses [L1364.007].</li>
+<li>Each hypothesis should be based on data or customer feedback collected so far [L0390.006].</li>
+<li>Test a specific hypothesis about one change, for example "a bigger add-to-cart button will increase sales", instead of a broad goal such as "more sales" [L0390.006].</li>
+<li>Use this template to write each hypothesis:</li>
+</ul>
+<pre><code>Hypothesis: If I change [specific element on a specific page], then [named metric, such as conversion rate or add-to-cart clicks] will [increase or decrease] because [customer reason based on feedback or data]. Write it down before the test starts so it can be checked against the result afterwards.</code></pre>
+<p>[L1364.006]</p>
+<ul>
+<li>Each test needs a reason, so do not test changes without a basis. If you already have the lowest price in your market, testing a further price cut has little reason. Testing a price increase that keeps conversion stable can be worthwhile [L1364.028].</li>
+<li>Research step before a test (Source B 2021-22, older):
+<ol type="1">
+<li>Collect the customer feedback behind the hypothesis.</li>
+<li>List the options for fixing the gap.</li>
+<li>Pull the current performance of the page for the same time period the test will run.</li>
+<li>Break that data down by traffic type, device type and demographics in Google Analytics. [L1364.008]</li>
+</ol></li>
+<li>Session recordings (Lucky Orange or similar) show where customers drop off and what changes are needed [L0321.011].</li>
+<li>Turn every insight from a page review into a conversion test. Change the flagged element, run the test and check whether results improve. Keep the six-factor checklist next to the workspace and run it for each page reviewed (Source B 2021-22, older) [L0473.030].</li>
+</ul>
+<h2 id="the-cro-cycle">The CRO cycle</h2>
+<ul>
+<li>Run the CRO cycle in this order (Source B 2021-22, older) [L1364.005]:
+<ol type="1">
+<li>Form a hypothesis.</li>
+<li>Research it using customer feedback and current performance data.</li>
+<li>Document the planned test.</li>
+<li>Run the test.</li>
+<li>Document the results using the same metrics as the baseline.</li>
+<li>Analyze the results and write down the insight.</li>
+<li>Use the insight to form the next hypothesis and repeat the cycle. [L1364.005]</li>
+</ol></li>
+<li>Write down ideas for future conversion tests in a tracking system before running any test. This keeps testing organized and makes clear what is planned, running and finished (Source B 2021-22, older) [L0399.005].</li>
+</ul>
+<h2 id="choosing-the-test-type">Choosing the test type</h2>
+<ul>
+<li><strong>A/B test:</strong> Change one element and split traffic 50/50 between version A and version B, then implement the better version [L0390.008].</li>
+<li><strong>Split test:</strong> Compares two fundamentally different designs or page structures instead of one small detail [L0390.008].</li>
+<li><strong>Split test for solutions:</strong> Compares two distinct solutions, such as two brand or product options, to see which performs better [L423.008].</li>
+<li><strong>A/B testing (concept):</strong> Tests one element with two versions to check one specific hypothesis. Example: whether moving the add-to-cart button higher on the product page increases conversions [L423.007].</li>
+<li><strong>ABC test:</strong> Checks one hypothesis against three potential solutions, with traffic split across all variants. Example: which of three positions for a call-to-action button converts best [L390.009, L423.009].</li>
+<li><strong>Multivariate test:</strong> Combines several elements, such as 3 button sizes and 3 copy options, which gives 9 combinations and requires a much larger sample size. It is the most complicated method [L390.009, L423.010].</li>
+<li>Note on the multivariate example: the unit's own example gives 9 combinations for 3 options and 2 variants. The stated rule (options multiplied by variants) gives 6 for those numbers. Check the count before using it [L423.010].</li>
+<li><strong>Simultaneous split (A/B), preferred:</strong> Show both versions at the same time to split traffic evenly. Comparing a page before and after a change can give false conclusions because of differences in weekday mix and traffic sources (Source B 2021-22, older) [L1364.014].</li>
+<li><strong>Consecutive test:</strong> Compares a fixed period before a change with a period after it, such as two four-week blocks. It is simpler to run but more exposed to other changes, so it is weaker than a split test, though still better than no testing (Source B 2021-22, older) [L1364.015].</li>
+<li><strong>Consecutive procedure (Source A 2019, older):</strong>
+<ol type="1">
+<li>Pick one element to test, such as a bonus offer or the button text.</li>
+<li>Run version A for one week with enough traffic.</li>
+<li>Run version B the following week and compare the results. Use this only when enough visitors come in, because time-based testing is less reliable [L356.042].</li>
+</ol></li>
+<li><strong>Page-builder split test (Source A 2019, older):</strong> Changes the content on the same URL and shows each variation to about 50 percent of visitors, instead of splitting URLs. Typical test items are offers, bonus items and button text [L356.043].</li>
+<li>Setting up a simultaneous A/B test (Source B 2021-22, older) [L1364.016]:
+<ol type="1">
+<li>Create two identical versions of the page.</li>
+<li>Make only the planned change in one version.</li>
+<li>Use a tool that alternates visitors evenly between the two versions.</li>
+<li>Collect and compare the results for both versions at the end.</li>
+</ol></li>
+<li>Use the tool to test a new Shopify theme against the current one before all traffic switches over. This shows whether the new theme converts better or worse first (Source B 2021-22, older) [L1364.049].</li>
+</ul>
+<h2 id="keeping-variables-isolated">Keeping variables isolated</h2>
+<ul>
+<li>Test one single change at a time on a page, so any difference in results can be traced to that change. Testing several changes together makes results confusing (Source B 2021-22, older) [L1364.017].</li>
+<li>Test one variable at a time. For example, test an offer by keeping the same creative and audience, then compare the conversion rate to the existing one [L1315.044].</li>
+<li>When the target audience and angle are known, test one page element at a time. For example, test the headline first for about five days, then the product pictures, then the brag bar. Changing several elements at once makes results hard to attribute [L387.014].</li>
+<li>Test several different marketing angles together only when the audiences and angles are truly different. Example: gaming, home decor and a therapeutic angle for the same product, to show which audience converts best without separate ads [L387.013, L387.014].</li>
+<li>Group small changes into one concept when they belong to the same part of a page, such as the area around the add-to-cart button. Testing every combination of small elements one by one can take six months or more, which is too slow (Source B 2021-22, older) [L1364.018].</li>
+<li>Example: If a product page has four elements around the add-to-cart button that may distract buyers, remove them together as one concept test. If the concept wins, refine it later rather than testing each element alone (Source B 2021-22, older) [L1364.019].</li>
+<li>Never run two concept tests on the same page at the same time, for example a change to the add-to-cart area and a change to the product description. Concepts can run in parallel on different pages (Source B 2021-22, older) [L1364.020].</li>
+<li>Stores with many product pages can run many tests at once, one per page. Stores selling one or two products have fewer pages to test in parallel, so testing is slower (Source B 2021-22, older) [L1364.021].</li>
+<li>Verify that each variant is delivered correctly before reading the data. Split testing is technically demanding, and setup errors can easily invalidate results [L423.013].</li>
+<li>Changing the price of the live store in Shopify is less reliable than split testing, because it compares two periods rather than two groups at the same time. Use split testing for prices [L999.067].</li>
+</ul>
+<h2 id="setting-up-split-tests-and-tools">Setting up split tests and tools</h2>
+<ul>
+<li><strong>Google Optimize, how it works:</strong> Turns one landing page URL into a single link that distributes visitors across several landing page variants according to set weights. Google reports how each variant performs [L387.010].</li>
+<li><strong>Weights:</strong> With three variants use 33 percent each. With two variants use 50 percent each. Any uneven split can be set to favor one variant [L387.011].</li>
+<li><strong>Google Optimize setup procedure (historic; the method still works with another tool):</strong>
+<ol type="1">
+<li>Create the page variants, one per angle or version you want to test.</li>
+<li>Open Google Optimize and set up a split test (A/B test).</li>
+<li>Add the variants and set the traffic weights (e.g., 33/33/33 for three variants, 50/50 for two).</li>
+<li>Copy the generated link and use it in ads, bio or organic posts.</li>
+<li>Read the performance data per variant to see which one converts best. [L387.012]</li>
+</ol></li>
+<li>Google Optimize was shut down in September 2023, so it can no longer be used for weighted landing page split tests. The method still works with another split-testing tool: one link distributes visitors across several page variants by set weights, and results are compared per variant [L387.032].</li>
+<li>Current tool: since Google Optimize was discontinued in 2023, use a current A/B testing tool for this procedure [L1260.067]:
+<ol type="1">
+<li>After optimizing the landing page, collect another 200 to 300 visitors and measure the funnel again.</li>
+<li>For a split test, send traffic 50/50 to two page versions, or 33/33/33 to three versions.</li>
+<li>Use a current A/B testing tool for this, since Google Optimize was discontinued in 2023. [L1260.067]</li>
+</ol></li>
+<li>Historic procedure: Google Optimize (historic tool) can divert traffic 50/50 or 33/33/33 across three landing page variants. Check results after another 200 to 300 visitors [L1259.047].</li>
+</ul>
+<p><strong>Tools overview</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Status and notes</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Optimize</td>
+<td>Shut down September 2023. Recommended as an A/B tool connected to Google Analytics in 2021-22 (older advice)</td>
+<td>L0387.010, L0387.032, L0399.020</td>
+</tr>
+<tr>
+<td>Neat A/B testing (Shopify)</td>
+<td>Alternative to Google Optimize on Shopify (older advice, 2021-22). Can run alongside another tool and compare, or pick one</td>
+<td>L0399.020</td>
+</tr>
+<tr>
+<td>VWO (Visual Website Optimizer)</td>
+<td>Reported at about 5,000 USD per year after an acquisition (2019, older). Pays off only at high sales volume. Check app store alternatives first</td>
+<td>L0356.041</td>
+</tr>
+<tr>
+<td>Google Optimize on Shopify (PageFly)</td>
+<td>Install the Google Optimize snippet after the PageFly page builder loader so it can replace page elements for testing. Used to test headlines on an advertorial page</td>
+<td>L0999.020</td>
+</tr>
+<tr>
+<td>GrowthBook</td>
+<td>Open-source A/B testing tool, presented as an option since Google Optimize is being discontinued</td>
+<td>L0709.029</td>
+</tr>
+<tr>
+<td>Kaching Cart</td>
+<td>"Create A/B test" section in the left menu for cart variants. Analytics compare variants by visitors, AOV, added revenue (Add. rev), total revenue and revenue per visitor (Rev/visitor). Finished tests are kept in an A/B test archive</td>
+<td>L0560.037</td>
+</tr>
+<tr>
+<td>Visually</td>
+<td>Test names must include device, scope, element and change (see documentation section)</td>
+<td>L0389.026</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Any split test approach: the tool is not the test. Testing is the way to measure which page changes improve results [L709.029].</li>
+</ul>
+<h2 id="sample-size-duration-and-significance">Sample size, duration and significance</h2>
+<p><strong>Sample thresholds (sources disagree; each applies in its own context)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>Value</th>
+<th>When it applies</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Benchmark per version</td>
+<td>About 10 samples per version. Results from smaller samples are unreliable</td>
+<td>General benchmark (Source A)</td>
+<td>L423.012</td>
+</tr>
+<tr>
+<td>Meaningful A/B result</td>
+<td>At least 1,000 samples per variant. In a 50/50 split this is 2,000 total recipients or visitors in the funnel, not 500 per variant</td>
+<td>Source E 2025-26</td>
+<td>L570.001</td>
+</tr>
+<tr>
+<td>Start testing offers and page elements</td>
+<td>150 to 200 unique sessions, with session recordings to find drop-offs</td>
+<td>Source C</td>
+<td>L321.011</td>
+</tr>
+<tr>
+<td>Judge a landing page change</td>
+<td>About 200 landing page visitors, judged by add-to-cart rate</td>
+<td>Source C; ads are judged by CTR and CPC instead</td>
+<td>L871.028</td>
+</tr>
+<tr>
+<td>Measure after a landing page change</td>
+<td>Another 200 to 300 visitors</td>
+<td>Source C</td>
+<td>L1345.011, L1259.047, L1260.067</td>
+</tr>
+<tr>
+<td>Conversions in a test</td>
+<td>One or two conversions are not a valid result. More are always better</td>
+<td>Source B 2021-22 (older)</td>
+<td>L1364.023</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Sample at 1,000 per variant: a result can reverse once more data arrives. Small samples produce unstable winners, and the confidence score rises as the sample grows [L570.002].</li>
+<li>Declaring a winner after only 1,000 samples per variant risks choosing a version that loses once more data is collected. Wait for a larger sample before acting [L570.012].</li>
+<li>Low-traffic tests must run longer to collect enough conversions [L1364.023].</li>
+<li>Judge a test by whether the result is statistically significant, not by a rough impression. If there is no significant increase, the element may not have been a real problem. Keep the current version or test a different option (Source B 2021-22, older) [L1364.013].</li>
+<li>A/B tests need a large amount of traffic to reach statistical significance [L524.043].</li>
+</ul>
+<p><strong>Duration (sources disagree; each applies in its own context)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Value</th>
+<th>When it applies</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum test length</td>
+<td>At least four weeks, longer if traffic is low</td>
+<td>Source B 2021-22 (older)</td>
+<td>L1364.022</td>
+</tr>
+<tr>
+<td>Typical conversion test</td>
+<td>Four to six weeks</td>
+<td>Most online store tests (Source B 2021-22, older)</td>
+<td>L1364.047</td>
+</tr>
+<tr>
+<td>Low-traffic or no-history products</td>
+<td>About eight weeks</td>
+<td>Products with little traffic or no sales history (Source B 2021-22, older)</td>
+<td>L1364.022, L1364.047</td>
+</tr>
+<tr>
+<td>Idea to statistically relevant A/B result</td>
+<td>About 6 weeks, so about 8 tests per year</td>
+<td>Source A</td>
+<td>L390.010</td>
+</tr>
+<tr>
+<td>Realistic pace per test</td>
+<td>About 1.5 months, so about 8 hypotheses per year</td>
+<td>Source A</td>
+<td>L423.014</td>
+</tr>
+<tr>
+<td>Fixed period per change</td>
+<td>Two weeks</td>
+<td>Source A; pre-purchase return option test uses about two weeks</td>
+<td>L410.011, L955.054</td>
+</tr>
+<tr>
+<td>Two landing pages for different buyer intents</td>
+<td>About 10 days, then pick the winning page</td>
+<td>Source E 2025-26</td>
+<td>L1225.045</td>
+</tr>
+<tr>
+<td>Consecutive test (older)</td>
+<td>One week per version</td>
+<td>Source A 2019</td>
+<td>L356.042</td>
+</tr>
+<tr>
+<td>Campaign-level test</td>
+<td>About three days of normal conversion campaign</td>
+<td>Source C</td>
+<td>L1217.051</td>
+</tr>
+<tr>
+<td>Ad campaigns</td>
+<td>Do not turn off after 1 or 2 days unless performance is extremely poor. Analyze around day 3, because early data is incomplete</td>
+<td>Source C</td>
+<td>L280.015</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Stop a test that shows no result after four weeks. Record it as not working and move to the next test idea. Do not keep it running indefinitely without signs of a result [L1364.024].</li>
+<li>Products with little traffic or no sales history can need about eight weeks [L1364.047].</li>
+</ul>
+<p><strong>Significance and what counts as a win</strong></p>
+<ul>
+<li>A test counts as winning if it shows a positive improvement toward the stated hypothesis. A test with no change or a result going backwards counts as failed or inconclusive [L1364.043].</li>
+<li>Use both checks: a winning test shows a positive improvement toward the hypothesis [L1364.043], and the result must be statistically significant to be trusted [L1364.013].</li>
+<li>A test that shows no gain or a loss still has value, because it shows the hypothesis was wrong or incomplete [L1364.012].</li>
+<li>A small change of about 1 to 2 percent is too small to trust [L999.022].</li>
+</ul>
+<p><strong>Traffic changes during a test</strong></p>
+<ul>
+<li>During a CRO test, avoid big changes to traffic, such as launching several new Google Shopping campaigns that send new traffic to the tested pages. Traffic changes make results useless because the conversion change can no longer be attributed to the page change (Source B 2021-22, older) [L1364.025].</li>
+<li>Traffic targeting is cited as a large share of conversion outcomes, roughly 40% in the course framework. Natural shifts, such as growing organic search traffic and small pay-per-click adjustments, can be accepted without stopping the test (Source B 2021-22, older) [L1364.026].</li>
+</ul>
+<h2 id="testing-ads-offers-and-landing-pages">Testing ads, offers and landing pages</h2>
+<p><strong>Ad creatives</strong></p>
+<ul>
+<li>Test at least 3 different ad creatives for each product. Do not test fewer than 3 [L0280.013].</li>
+<li>Allocate a minimum of $5 per day per creative. The ideal budget is $5 to $10 per day per creative, so $15 to $30 daily for 3 creatives [L0280.014].</li>
+<li>Judge the landing page by its add-to-cart rate and judge creatives by CTR and CPC, so each asset is optimized on the metric that matches it [L871.028].</li>
+<li>Testing optimization priority (Source C):
+<ol type="1">
+<li>Find the creative with a high CTR (1%+ on Facebook, high engagement rate on TikTok). This proves the ad is getting attention.</li>
+<li>Once the creative is locked, test offer variations (discount level, bundle structure, bundle price) to find the highest converter. Do not optimize both at the same time. Isolate variables [L307.028].</li>
+</ol></li>
+</ul>
+<p><strong>Offers</strong></p>
+<ul>
+<li>If testing different offers, maintain consistency first. Do not increase price mid-campaign because sales slowed. Lower the price back to the consistency baseline. Test one variable at a time. Kill offers that do not work. Keep and duplicate what works [L308.030].</li>
+<li>Test campaign-level variants (Source C) [L1217.051]:
+<ol type="1">
+<li>Run a normal conversion campaign for about three days.</li>
+<li>Send one group of traffic to a collection page where each variant has its own listing.</li>
+<li>Send the other group of traffic to a single listing that holds all variants.</li>
+<li>Compare the results and keep the setup that performs better.</li>
+<li>Use a total test budget of about 20-50 USD. [L1217.051]</li>
+</ol></li>
+</ul>
+<p><strong>Landing pages</strong></p>
+<ul>
+<li>Build two landing pages for different buyer intents, such as a pre-selected starter kit and a full build-out. Send the campaigns to both pages. After about 10 days, see which page converts. Lean into the winning angle before testing gender-based angles [L1225.045].</li>
+<li>Test the five first-view elements (Source C) [L916.023]:
+<ol type="1">
+<li>Create a version of the page with three features or elements in the first view.</li>
+<li>Create a second version with five features or elements in the first view.</li>
+<li>Run both versions in an A/B test and measure the conversion rate of each version.</li>
+<li>Keep the version with the higher conversion rate. [L916.023]</li>
+</ol></li>
+<li>Test a GIF against a static image on the product page. The GIF may not convert better, so test it instead of assuming it works [L1194.026].</li>
+</ul>
+<h2 id="test-ideas-list">Test ideas list</h2>
+<p><strong>Standing list</strong></p>
+<ul>
+<li>Build a standing list of test ideas covering offers, page structure and product page content. Add ideas as they come up. Start tracking tests from the beginning rather than postponing it (Source B 2021-22, older) [L1364.029].</li>
+</ul>
+<p><strong>Product page</strong></p>
+<ul>
+<li>Headlines: Run split tests on different headlines for the same product and compare time on page and conversion rate. Other copy elements can be tested the same way. Headlines should not be written once and never revisited (Source B 2021-22, older) [L0416.011].</li>
+<li>Advertorial headlines: A headline test can show which headline grabs the most attention, for example a "10 reasons why" headline on a list-style advertorial followed by a sales page [L0999.068].</li>
+<li>Testable page elements include product descriptions, product titles, product images, opt-in forms, product prices where pricing can be changed, collection page content, blog page layout, homepage layout and entire theme versions (Source B 2021-22, older) [L1364.027].</li>
+<li>Product image emphasis: The three elements with the largest effect on conversion to test are images, headlines and colors. Focus tests on these before smaller changes [L570.008].</li>
+<li>Customer reviews moved directly above the add-to-cart button: a testable concept. A suitable hypothesis is that this raises add-to-cart clicks and conversion rate, because shoppers see social proof at the moment they decide to buy (Source B 2021-22, older) [L1364.048].</li>
+<li>Product page USP: A product page USP test can run for one month. Record the baseline beforehand and run no other test on that page during that month. If the new USP shows no significant gain, or converts worse than the original USP on the same page, the original is judged stronger, and the result is still recorded as an insight (Source B 2021-22, older) [L1364.050].</li>
+<li>Button placement: Testing a button higher on the page is an example of A/B testing one element [L423.007].</li>
+<li>Button color: Not universal; test in your own store [L390.007].</li>
+<li>Product page layouts: Measure conversion rate after each layout change to see whether the new layout works [L1164.047].</li>
+<li>Ebook cover designs: Test several cover designs for the same product to see which converts best, instead of committing to the first cover. Change only the cover between tests [L513.042].</li>
+<li>Trust elements such as star ratings: Test one position at a time, for example lower on the page, directly under the product name, or next to the price. Keep the placement that converts best, because differences from a single element can be measurable [L1218.037].</li>
+<li>Social proof and page improvements: test once steady traffic arrives [L1077.042].</li>
+</ul>
+<p><strong>Homepage and first view</strong></p>
+<ul>
+<li>Testing ideas for the first audit output: hero positioning, risk reversal and comparison modules. Label each as a test only when traffic supports it, otherwise as a fix [L886.021].</li>
+<li>Five first-view elements: see the procedure in the section on ads, offers and landing pages [L916.023].</li>
+</ul>
+<p><strong>Offers, pricing and pop-ups</strong></p>
+<ul>
+<li>Discount values: A 5% discount is only a starting point. Edit the expiring coupon section over time and compare results, since 5% is not a proven best value [L1192.020].</li>
+<li>Opt-in pop-up offers: Compare a pop-up offering 15% off the first order with one offering a free set of examples. The winning version is the one that earns more money, which can differ from the one with more sign-ups [L572.011].</li>
+<li>Price changes: Testing a price increase that keeps conversion stable can be worthwhile. Testing a further price cut has little reason if you already have the lowest price in your market [L1364.028].</li>
+<li>Pre-purchase return option (procedure) [L955.054]:
+<ol type="1">
+<li>Split incoming shoppers 50/50 and show the pre-purchase return option to only one group.</li>
+<li>Keep the other group on a normal cart and checkout with no return option.</li>
+<li>Run the test for about two weeks, recording checkout conversion, cart abandonment and AOV for both groups.</li>
+<li>If the option group does not lose conversion and AOV rises, test two fee levels such as $2.99 and $3.99 and compare uptake.</li>
+<li>Roll out the fee that gives the best uptake without a drop in conversion. [L955.054]</li>
+</ol></li>
+<li>Postage-paid reply cards or envelopes: Test with and without them before you commit. The author found they rarely improve response enough to justify the cost [L1370.094].</li>
+</ul>
+<p><strong>Cart and checkout</strong></p>
+<ul>
+<li>Do not change a checkout that still produces a good return on ad spend [L963.058] (Source A 2022, older).</li>
+<li>Exit-intent offer: Example of a candidate test to log as an idea. Replace an exit-intent offer of a percent-off discount code with a short product-finder quiz that routes visitors to the product type that suits them. Writing the idea into the changelog before testing it means it can be found again later, so it is not forgotten or retested blindly [L410.013].</li>
+</ul>
+<p><strong>Price testing</strong></p>
+<ul>
+<li>Use split testing for prices, not live price changes in Shopify [L999.067].</li>
+</ul>
+<h2 id="analysis-and-deciding-the-winner">Analysis and deciding the winner</h2>
+<ul>
+<li>Analysis after a test (Source B 2021-22, older) [L1364.011]:
+<ol type="1">
+<li>Record the outcomes for the test period using the same metrics as the original baseline.</li>
+<li>Ask what changed and what it means.</li>
+<li>Ask what the result implies for the rest of the business and for future tests.</li>
+<li>Decide the next step: a new test, a refined version of the winner, or a move to another page element. [L1364.011]</li>
+</ol></li>
+<li>Customer feedback that appears during the test is part of the result and can form a new hypothesis, such as the idea being right but the execution being wrong (Source B 2021-22, older) [L1364.012].</li>
+<li>Decisions should wait for more data where possible, because the confidence score rises as the sample grows [L570.002].</li>
+<li>For sales-based tests, the winner is the variant that earns more money, which can differ from the one with more sign-ups [L572.011].</li>
+<li>Expected outcome: changing landing page elements based on testing produced conversion differences of about 0.5 to 1 percent across more than 50 test variations [L1218.018].</li>
+</ul>
+<h2 id="documentation-changelogs-and-naming">Documentation, changelogs and naming</h2>
+<ul>
+<li><p>Making unrecorded site changes on impulse makes it impossible to tell later whether a change helped, hurt or did nothing. Every change should be planned, recorded before it goes live and measured (Source B 2021-22, older) [L1364.001].</p></li>
+<li><p>Document each test before it starts, covering (Source B 2021-22, older) [L1364.009]:</p>
+<ul>
+<li>what is being tested,</li>
+<li>the details of the change,</li>
+<li>how the test will be implemented,</li>
+<li>the baseline performance,</li>
+<li>the planned start and end dates,</li>
+<li>the duration.</li>
+</ul>
+<p>Keep the record in the same place as the results. [L1364.009]</p></li>
+<li><p>Store every test record for as long as the business runs, not only until the test ends. Old records prevent repeating a failed test and can later inspire a modified test with new insight (Source B 2021-22, older) [L1364.010].</p></li>
+<li><p>Changelog: Change tests every one to two weeks is a typical rhythm for active store owners, so a changelog becomes necessary early on. Log each change with its date and platform so that the many simultaneous tweaks can be separated later [L410.012].</p></li>
+<li><p>Test naming: Name every Visually test with its device, scope, element and change, for example "mobile, site-wide, promo bar, text color" or "mobile BDP social proof". Clear names make the test report readable when several experiments run at the same time [L389.026].</p></li>
+</ul>
+<h2 id="ongoing-cadence">Ongoing cadence</h2>
+<ul>
+<li>After a win is achieved and deployed, keep testing. Continue testing different recommendation ranking logic, design variations and customer segments to find further improvements beyond the initial test [L197.024].</li>
+<li>Test conversion changes one at a time and expect a result over a fixed period, such as two weeks. Run each change long enough to measure a clear result before adding the next change, so the cause of any sales movement is identifiable [L410.011].</li>
+<li>Change tests every one to two weeks is a typical rhythm for active store owners [L410.012].</li>
+<li>Plan testing as a long-term effort. A realistic pace is about 1.5 months per test, which allows roughly 8 hypotheses over one year [L423.014].</li>
+<li>Of about 8 hypotheses tested per year, typically around 3 are confirmed as improvements [L390.011].</li>
+<li>Stores with many product pages can run many tests at once, one per page (Source B 2021-22, older) [L1364.021].</li>
+<li>Never run two concept tests on the same page at the same time [L1364.020].</li>
+<li>Do not change traffic sources during a test. Accept natural shifts only [L1364.025, L1364.026].</li>
+<li>Do not run A/B tests with very small traffic. Focus on fixing obvious problems first [L390.012].</li>
+<li>Keep a standing list of test ideas and add to it as they come up [L1364.029].</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>A/B testing should be iterative and ongoing: after a win is achieved and deployed, continue testing different recommendation ranking logic, design variations, and customer segments to identify further improvements beyond the initial test. [L0197.024]</p></li>
+<li><p>Do not turn off ad campaigns after 1 or 2 days unless performance is extremely poor; analyze performance around day 3, not before, because early data is incomplete. [L0280.015]</p></li>
+<li><p>Testing optimization priority: (1) Find creative with high CTR (1%+ on Facebook, high engagement rate on TikTok), this proves ad is getting attention. (2) Once creative is locked, test offer variations (discount level, bundle structure, bundle price) to find highest converter. Don't optimize both simultaneously, isolate variables. [L0307.028]</p></li>
+<li><p>If testing different offers, maintain consistency first. Don't increase price mid-campaign because sales slowed-lower the price back to consistency baseline. Test one variable at a time. Kill offers that don't work; keep and duplicate what works. [L0308.030]</p></li>
+<li><ol type="1">
+<li>Pick one element to test, such as a bonus offer or the button text. 2. Run version A for one week with enough traffic. 3. Run version B the following week and compare the results. Use this only when enough visitors come in, because time-based testing is less reliable. [L0356.042]</li>
+</ol></li>
+<li><p>Page-builder based split testing changes the content on the same URL and shows each variation to about 50 percent of visitors, instead of splitting URLs. Typical test items are offers, bonus items, and button text. [L0356.043]</p></li>
+<li><p>In Google Optimize, the weights of the variants determine the share of traffic each receives. With three variants use 33 percent each; with two variants use 50 percent each; any uneven split can be set to favor one variant. [L0387.011]</p></li>
+</ul>
+<p>Set up a split test in Google Optimize:</p>
+<ol type="1">
+<li>Create the page variants, one per angle or version you want to test.</li>
+<li>Open Google Optimize and set up a split test (A/B test).</li>
+<li>Add the variants and set the traffic weights (e.g., 33/33/33 for three variants, 50/50 for two).</li>
+<li>Copy the generated link and use it in ads, bio, or organic posts.</li>
+<li>Read the performance data per variant to see which one converts best. [L0387.012]</li>
+</ol>
+<ul>
+<li><p>Testing completely different marketing angles in one split test (for example gaming, home decor, and a therapeutic angle for the same product) shows which audience converts best, without needing separate ads for each angle. [L0387.013]</p></li>
+<li><p>When the target audience and angle are already known, test one element of the landing page at a time (for example the headline first for about five days, then the product pictures, then the brag bar), because changing several elements at once makes results hard to attribute. Only test multiple different angles together when the audiences and angles are truly different. [L0387.014]</p></li>
+<li><p>ABC testing adds a third or further variant of the same element, for example three possible positions for the add-to-cart button, with traffic split across all variants. Multivariate testing combines several elements, such as 3 button sizes and 3 copy options, which means 9 combinations and a much larger sample size. [L0390.009]</p></li>
+<li><p>Test conversion changes one at a time and expect a result over a fixed period, such as two weeks. Run changes long enough to measure a clear result before adding the next change, so the cause of any sales movement is identifiable. [L0410.011]</p></li>
+<li><p>Change tests every one to two weeks is a typical rhythm for active store owners, so a changelog becomes necessary early on. Log each change with its date and platform so that the many simultaneous tweaks can be separated later. [L0410.012]</p></li>
+<li><p>A candidate test worth logging as an idea is replacing an exit-intent offer of a percent-off discount code with a short product-finder quiz that routes visitors to the product type that suits them. Writing the idea into the changelog before testing it means it can be found again later, so it is not forgotten or retested blindly. [L0410.013]</p></li>
+<li><p>A/B testing compares two versions of one element to check one specific hypothesis. For example, you could test whether moving the add-to-cart button higher on the product page increases conversions. [L0423.007]</p></li>
+<li><p>Split testing compares two distinct solutions against each other to see which performs better. For example, two different brand or product options can be shown to visitors to find the stronger one. [L0423.008]</p></li>
+<li><p>A/B/C testing checks one hypothesis against three potential solutions. For example, it can show which of three positions for a call-to-action button converts best. [L0423.009]</p></li>
+<li><p>Multivariate testing examines a complex hypothesis that combines several variables, which makes it the most complicated method. The number of combinations equals options multiplied by variants: 3 options for 2 variants gives 9 combinations, and 3 size options with 3 copy options gives 9 combinations for one call-to-action. [L0423.010]</p></li>
+<li><p>Each version in a test needs a sufficient sample, with the benchmark being about 10 samples per version. Results from smaller samples are unreliable. [L0423.012]</p></li>
+<li><p>Running split tests is technically demanding, so setup errors can easily invalidate results. Verify that each variant is delivered correctly before reading the data. [L0423.013]</p></li>
+<li><p>Test several ebook cover designs for the same product to see which one converts best, instead of committing to the first cover. Change only the cover between tests so the result shows which design performs. [L0513.042]</p></li>
+<li><p>For an A/B test, aim for at least 1,000 samples per variant before treating the result as meaningful. In a 50/50 split this means 2,000 total recipients or visitors in the funnel, not 500 per variant. [L0570.001]</p></li>
+<li><p>A result at 1,000 samples per variant can reverse once more data arrives, because small samples produce unstable winners. The confidence score rises as the sample grows, so decisions should wait for more data where possible. [L0570.002]</p></li>
+<li><p>The three elements with the largest effect on conversion to test are images, headlines and colors. Focus tests on these before smaller changes. [L0570.008]</p></li>
+<li><p>Declaring a winner after only 1,000 samples per variant risks choosing a version that loses once more data is collected. Wait for a larger sample before acting on a result. [L0570.012]</p></li>
+<li><p>Split testing compares two versions of one element, such as an opt-in pop-up offering 15% off the first order versus one offering a free set of examples. The winning version is the one that earns more money, which can differ from the one with more sign-ups. [L0572.011]</p></li>
+<li><p>Judge the landing page by its add-to-cart rate and judge creatives by CTR and CPC, so each asset is optimized on the metric that matches it. Use a sample of about 200 landing page visitors before judging a change. [L0871.028]</p></li>
+</ul>
+<p>Test the five first-view elements:</p>
+<ol type="1">
+<li>Create a version of the page with three features or elements in the first view.</li>
+<li>Create a second version with five features or elements in the first view.</li>
+<li>Run both versions in an A/B test and measure the conversion rate of each version.</li>
+<li>Keep the version with the higher conversion rate. [L0916.023]</li>
+</ol>
+<ul>
+<li><ol type="1">
+<li>Split incoming shoppers 50/50 and show the pre-purchase return option to only one group. 2. Keep the other group on a normal cart and checkout with no return option. 3. Run the test for about two weeks, recording checkout conversion, cart abandonment and AOV for both groups. 4. If the option group does not lose conversion and AOV rises, test two fee levels such as $2.99 and $3.99 and compare uptake. 5. Roll out the fee that gives the best uptake without a drop in conversion. [L0955.054]</li>
+</ol></li>
+<li><p>Price testing in Shopify by changing the price of the live store is less reliable than split testing, because it compares two periods rather than two groups at the same time. Use split testing for prices. [L0999.067]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../06-conversion-optimization/18-site-speed-mobile-and-technical-hygiene/"><span class="k">&larr; Previous</span><span class="v">Site speed, mobile and technical hygiene</span></a><a class="nx" href="../../06-conversion-optimization/20-prioritizing-and-running-the-optimization-plan/"><span class="k">Next &rarr;</span><span class="v">Prioritizing and running the optimization plan</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,30 @@
+# Ecommerce Playbook for AI
+
+> Technical version of the Ecommerce Playbook, written for AI assistants and power users: every number, setting, threshold and step, with unit identifiers in brackets such as [L0012.003]. Sources are named Source A to F. Older advice is marked with its year.
+
+- [Whole playbook, one file](https://dlichters.com/aiecom/ecommerce-playbook.md)
+
+## Chapters
+
+- [1. Business model and strategy](https://dlichters.com/aiecom/01-business-model-and-strategy.md)
+- [2. Niche and product research](https://dlichters.com/aiecom/02-niche-and-product-research.md)
+- [3. Suppliers and fulfillment](https://dlichters.com/aiecom/03-suppliers-and-fulfillment.md)
+- [4. Store build and Shopify](https://dlichters.com/aiecom/04-store-build-and-shopify.md)
+- [5. Apps and tools](https://dlichters.com/aiecom/05-apps-and-tools.md)
+- [6. Conversion optimization](https://dlichters.com/aiecom/06-conversion-optimization.md)
+- [7. Offers, pricing and bundles](https://dlichters.com/aiecom/07-offers-pricing-and-bundles.md)
+- [8. Brand and positioning](https://dlichters.com/aiecom/08-brand-and-positioning.md)
+- [9. Meta and Facebook ads](https://dlichters.com/aiecom/09-meta-and-facebook-ads.md)
+- [10. Google Ads and Shopping](https://dlichters.com/aiecom/10-google-ads-and-shopping.md)
+- [11. TikTok and short video](https://dlichters.com/aiecom/11-tiktok-and-short-video.md)
+- [12. Creatives and ad copy](https://dlichters.com/aiecom/12-creatives-and-ad-copy.md)
+- [13. Influencers and UGC](https://dlichters.com/aiecom/13-influencers-and-ugc.md)
+- [14. SEO and content](https://dlichters.com/aiecom/14-seo-and-content.md)
+- [15. Email and SMS](https://dlichters.com/aiecom/15-email-and-sms.md)
+- [16. Retargeting](https://dlichters.com/aiecom/16-retargeting.md)
+- [17. Customer service, returns and chargebacks](https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks.md)
+- [18. Legal, tax, banking and payments](https://dlichters.com/aiecom/18-legal-tax-banking-and-payments.md)
+- [19. Metrics, finance and tracking](https://dlichters.com/aiecom/19-metrics-finance-and-tracking.md)
+- [20. Scaling, team and processes](https://dlichters.com/aiecom/20-scaling-team-and-processes.md)
+- [21. Phone sales](https://dlichters.com/aiecom/21-phone-sales.md)
+- [22. Mindset and planning](https://dlichters.com/aiecom/22-mindset-and-planning.md)

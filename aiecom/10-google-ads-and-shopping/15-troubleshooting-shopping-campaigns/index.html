@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Troubleshooting shopping campaigns | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.15: Troubleshooting shopping campaigns.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/15-troubleshooting-shopping-campaigns/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Troubleshooting shopping campaigns | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.15: Troubleshooting shopping campaigns."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/15-troubleshooting-shopping-campaigns/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/15-troubleshooting-shopping-campaigns/">Plain version</a></div><h1>10.15 Troubleshooting shopping campaigns</h1><article><h2 id="diagnostic-order-and-working-principles">Diagnostic order and working principles</h2>
+<ol type="1">
+<li>Check whether the full daily budget is being spent. If it is not, continue with the following steps. [L1254.020]</li>
+<li>Check the CPCs against the budget to rule out bids that are too low. [L1254.020]</li>
+<li>Check which search terms and keywords the products appear for, and whether they match the searches buyers actually make. [L1254.020]</li>
+<li>Check the bounce rate and average time on site to confirm that the traffic reaching the store is the right audience. [L1254.020]</li>
+<li>Compare the campaign settings with the intended setup and correct any mismatch. [L1254.020]</li>
+<li>Apply product page SEO to all product pages so that products appear for their relevant searches. [L1254.020]</li>
+<li>Allow 2 to 3 days for Google Merchant Center to process the changes, then 2 to 3 days of relearning in Google Ads. [L1254.020, L1254.014]</li>
+<li>Once the budget spends and enough clicks have accumulated, measure the conversion rate against 2.5 sales per 100 qualified clicks. [L1254.020]</li>
+<li>Only then start conversion optimization of the product pages. [L1254.020]</li>
+</ol>
+<ul>
+<li>The first goal for a campaign is to spend the full daily budget every day, for example $10 per day. Do this before optimizing ads, pages or anything else, because a budget that does not spend gives no usable data. [L1254.010]</li>
+<li>When a daily budget does not spend, check the CPC first. If the CPCs are reasonable for the budget, the most likely cause is that products do not appear for the search terms buyers actually use, not that the bids are too low. [L1254.011]</li>
+<li>Fix the root setting in the account before pursuing advanced Google Ads courses or granular optimizations. When the root setting is corrected, downstream symptoms such as low conversions and high bounce rates often resolve as well. [L0837.027]</li>
+<li>Low performance should be checked in the ad account first (CTR, CPC, clicks, conversion rate, ROAS below 10x) before investigating competitors on Google Shopping for MAP violations, which are not checked by default. (Older advice, 2024, from a source that treats 10x as the ROAS threshold.) [L0805.019]</li>
+<li>Spending on Google Ads without any sales in the first week signals a conversion problem on the store. Fix the store's conversion before raising the budget. (Older advice, 2019.) [L0663.008]</li>
+<li>A daily budget is not the problem if it is not fully spent. Check that the campaign type and budget setting (for example the "spend all money" option) match the blueprint's Google Shopping module before changing budgets or bids. (Older advice, 2021.) [L0834.062]</li>
+<li>If the budget is not being spent, review the campaign for weaknesses that stop spending and check that the traffic reaching the store is the right kind of audience. (Older advice, 2019.) [L0356.049]</li>
+<li>Before blaming the website or the ads for weak conversions, confirm that traffic targeting reaches the right buyer. If the targeting is wrong, the conversion rate will stay low no matter how good the site is, so check the audience and search matches first. (Older advice, Source B 2021-22.) [L1228.013]</li>
+</ul>
+<h2 id="account-health-feed-and-merchant-center">Account health, feed and Merchant Center</h2>
+<ul>
+<li>Google Merchant Center holds the product feed that Google reads for Shopping ads. Errors or unclear product data in the feed are a common cause of irrelevant search matches. [L0715.020]</li>
+<li>Changes to product titles and product information only reach Google Ads after Merchant Center has processed them. [L1254.013]</li>
+<li>After updating product information, expect 2 to 3 days for Google Merchant Center to process the changes, followed by another 2 to 3 days of relearning in Google Ads. Do not judge the results of a change before this window has passed. [L1254.014]</li>
+<li>If traffic falls without any change in the account, check Merchant Center for product errors or warnings. A drop should not be explained by seasonality alone. (Older advice, 2023.) [L0934.068]</li>
+<li>An account alert (the question mark or exclamation icon at the top right of Google Ads, which turns red for a verification request or an empty account balance) must be checked first. (Older advice, 2019.) [L0357.029]</li>
+<li>Unapproved products, warnings or missing required fields in Google Merchant Center or Microsoft Merchant Center stop products from showing. Clean up the feed and resubmit. (Older advice, 2022.) [L0272.058]</li>
+<li>Feed and product-page data must be complete before any other change. For a product group with no clicks or few clicks, first check the keywords it is shown for, then check the Merchant Center feed for errors or missing data. (Older advice, 2024.) [L0836.023]</li>
+<li>If many products do not show ads in Google Shopping while competitors do, Google may be failing to match your products. Check product page data and Google Merchant Center information so Google can match your products to queries. (Older advice, 2021.) [L0834.063]</li>
+<li>Missing identifiers limit display. Fill in SKU or MPN values from the supplier and judge performance only after traffic increases. (Older advice, 2020, from a case of 124 impressions and one click with Merchant Center warnings for missing identifiers.) [L1088.050]</li>
+<li>If a Shopping product gets almost no impressions even with a high bid, Google may be misreading the product. Check that the title starts with the product name, that GTIN or MPN and brand are correct, and that the product page is optimized. Then search in an incognito window to see where it appears. (Older advice, 2024.) [L0806.066]</li>
+<li>A product with high bids but almost no impressions may be misidentified by Google. Check whether the product page carries identifiers such as GTIN, SKU or MPN that help Google match it to the right search results, and compare with competitor pages. (Older advice, 2024.) [L0856.005]</li>
+<li>If a Google Shopping campaign spends about one cent with no errors, raise the default CPC by 5 cents and check the result (see the budget section). Also check Merchant Center for product errors and make sure all products show green. (Older advice, 2021.) [L1112.016]</li>
+</ul>
+<h2 id="zero-impressions">Zero impressions</h2>
+<p><strong>Procedures</strong></p>
+<p>Zero impressions in a Shopping campaign (older advice, 2021):</p>
+<ol type="1">
+<li>Open Google Merchant Center and check that the product feed is all green; fix any errors. [L0247.052]</li>
+<li>In Google Ads, check that products in each product group are approved. [L0247.052]</li>
+<li>If both are approved, wait a couple of days for the products to enter rotation. [L0247.052]</li>
+<li>If there are still no impressions, raise the maximum cost per click in steps of about 0.05. [L0247.052]</li>
+</ol>
+<p>Zero impressions after launch (older advice, 2020):</p>
+<ol type="1">
+<li>Confirm the products are approved and eligible in the Google Ads account. [L0468.111]</li>
+<li>Check the account for errors. [L0468.111]</li>
+<li>Raise the maximum cost per click, for example from $0.25 to $0.35, and leave it for a few days. [L0468.111]</li>
+<li>If impressions stay at zero, contact Google through live chat and ask them to check for a misconfiguration. [L0468.111]</li>
+</ol>
+<p>Zero impressions in a feed-based Shopping campaign (older advice, 2021):</p>
+<ol type="1">
+<li>Open Google Merchant Center and confirm the product feed shows as approved with no errors. [L0801.063]</li>
+<li>If the feed was approved recently, wait, since feeds can take two to three days before Google starts displaying products. [L0801.063]</li>
+<li>If several days have passed, check the campaign settings, since a setting usually needs to be fixed. [L0801.063]</li>
+<li>Try raising the cost per click to generate more volume while you check. [L0801.063]</li>
+</ol>
+<p>Zero impressions in Alpha or Beta campaigns (undated):</p>
+<ol type="1">
+<li>Do not just switch the old campaigns back on; recreate both campaigns from scratch using the standard setup process. [L1015.005]</li>
+<li>Once submitted, confirm that all products are approved. [L1015.005]</li>
+<li>If any products show errors, diagnose them in Merchant Center under feed diagnostics and fix them in Symprosis. [L1015.005]</li>
+<li>Expect impressions, clicks and ideally sales within two to three days after the errors are resolved. [L1015.005]</li>
+</ol>
+<p>Diagnosing Alpha/Beta shopping campaigns with no clicks or conversions (2024):</p>
+<ol type="1">
+<li>Check whether the campaign gets any impressions at all. [L0805.013]</li>
+<li>Check impression share (add it via Columns &gt; Customize columns). [L0805.013]</li>
+<li>If impressions are very low or zero, the budget is probably not being spent; slowly increase the target cost per click. [L0805.013]</li>
+<li>Do not turn back on a general website traffic campaign, since Google will send traffic regardless of whether it is qualified to buy. [L0805.013]</li>
+</ol>
+<p>Zero or near-zero impressions in a Google Ads campaign with no error (older advice, 2021, for a campaign that stops spending after a pause):</p>
+<ol type="1">
+<li>Open two windows side by side: the current period since the ads were turned back on, and the same number of days from when they last ran. [L1112.018]</li>
+<li>Compare impressions and spend per product to find where the drop starts. [L1112.018]</li>
+<li>If the cause is still unclear, duplicate both campaigns, turn off the old ones, restart the new ones with a small budget, and raise the budget step by step again as before. [L1112.018]</li>
+</ol>
+<p>Alpha campaign stops getting impressions and clicks (older advice, 2021):</p>
+<ol type="1">
+<li>Step 1: check the change history in the sidebar of the Google campaign to see if a change was made on the day it stopped, and click revert if you find a harmful change. [L1090.100]</li>
+<li>Step 2: if there was no change, check Merchant Center for errors. [L1090.100]</li>
+<li>Step 3: check the Google Ads account for other errors or blocks. [L1090.100]</li>
+</ol>
+<p>Product-level visibility, undated and 2025 sources:</p>
+<ul>
+<li>Confirm that all items in the Google ad account are approved. [L0966.074]</li>
+<li>If spend is far below budget, raise the default CPC by 5 cents, for example from 30 cents to 35 cents. [L0966.074]</li>
+<li>Wait a few days so Google can relearn the bid and check whether spend and impressions increase. [L0966.074]</li>
+<li>Check the negative keywords for blocked terms and correct any broad match negatives. [L0966.074]</li>
+<li>Google Shopping products appear at the default CPC, which applies to all products. If that bid is too low to win the auction against other sellers, the ads will not show. [L0966.075]</li>
+<li>If the Beta campaign gets no impressions or clicks, check its negative keywords for over-blocking and review its cost per click. Beta still brings traffic and sales for general terms even with campaign priority in place. [L0966.082]</li>
+</ul>
+<p><strong>Rules and principles</strong></p>
+<ul>
+<li>Zero impressions after launch signal an error or a missing setup, while low but non-zero impressions are normal early on. Raise the bid before you assume the product is wrong. (Older advice, 2020.) [L0468.112]</li>
+<li>Zero impressions after two weeks in Alpha or Beta campaigns usually points to an error in the feed submission, the campaign setup, or the negative keyword list, not to a bid that is too low. Even a very low default cost per click should still generate some impressions. [L1015.004]</li>
+<li>A new campaign can take days to be approved. If a toggle shows paused, switch it to active. If the campaign is still not approved after a few days, email support or ask in the community group. (Older advice, 2021.) [L0469.088]</li>
+<li>If the Google Shopping results do not appear for you, the search itself may be affected by your browser. (Older advice, 2021; procedure is listed in the no-clicks section.) [L0671.087, L0671.224]</li>
+<li>If ads get zero clicks no matter how high the cost per click is, the problem is usually missing impressions rather than the bid. Audit the ad account first. If the audit is clean, the brands may lack search demand, so switch to brands with stronger brand awareness. (Older advice, 2022.) [L1113.086]</li>
+</ul>
+<h2 id="impressions-without-clicks-low-ctr">Impressions without clicks (low CTR)</h2>
+<p><strong>Procedures</strong></p>
+<p>Diagnosing a Shopping campaign with no clicks (older advice, 2019):</p>
+<ol type="1">
+<li>Check account health: in Google Ads, look at the question mark or exclamation icon in the top right, which turns red when there is an account alert such as a verification request or an empty account balance. [L0357.029]</li>
+<li>If there is no alert, check Google Merchant Center for product feed errors, corrupt data, or errors that stop products from being sent. [L0357.029]</li>
+<li>If the feed is fine, check the campaign budgets, since Google recommendations can move budget between campaigns without intent. [L0357.029]</li>
+<li>Check impressions for the Shopping campaign. Zero impressions points to a bigger problem. [L0357.029]</li>
+<li>If impressions exist, find the products with the most impressions and search for them on Google to compare competitor prices, promotions, images and positions. [L0357.029]</li>
+<li>Check the search terms that trigger your ads and add irrelevant or overly broad ones as negative keywords. [L0357.029]</li>
+</ol>
+<p>Checking a Shopping campaign that gets too few clicks (undated):</p>
+<ol type="1">
+<li>Review impressions, clicks, cost, average CPC and the benchmark max CPC, which is the average CPC of competitors. [L0745.030]</li>
+<li>If clicks are low while your CPC sits below that benchmark, raise bids toward the benchmark (example: moving toward about $0.91). [L0745.030]</li>
+<li>If impressions stay low at high bids, search the main terms in Google Shopping, sort by review score, and compare product titles and images with the top competitors. [L0745.030]</li>
+</ol>
+<p>Optimizing a product with impressions but few clicks (undated):</p>
+<ul>
+<li>If a product has low impressions while bids are already high, check whether the product is well optimized for the search terms. Search the target term in Google Shopping, sort by review score, and compare product titles, product images and descriptions with the top competitors. [L0745.003]</li>
+<li>If a product gets impressions but no clicks, search for it in Google Shopping and compare its photos, price and promotions with competitors. If it gets almost no impressions, the cause is low visibility, so raise the cost per click for that product. (Older advice, 2021.) [L1112.007]</li>
+<li>Before changing your store, compare your Shopping listings with competitors' listings for the same product: photos, prices and promotions. Those differences explain most clicks lost on a product. (Older advice, 2021.) [L1112.006]</li>
+<li>A large gap between impressions and clicks means something is causing shoppers to choose competitors. Search the same keywords in an incognito window in Google Chrome to see why, such as a lower price, a MAP violation, a better promotion, a better main image, or a higher ad position. (Older advice, 2019.) [L0357.031]</li>
+<li>If the account gets no clicks, raising the budget is usually the worst response, because extra spend goes to broad keywords or to competitors violating policies. Diagnose the cause from the account data first. (Older advice, 2019.) [L0357.030]</li>
+</ul>
+<p>Product gets impressions with a low search impression share (2024):</p>
+<ul>
+<li>Low impressions with a low search impression share mean the product is under-shown. In that case raise the CPC and optimize the product page, not the daily budget. Raising the budget alone does not fix low impression share. [L0856.006]</li>
+<li>A low click-through rate in Shopping can come from low ranking in the results. Products that match the search loosely appear lower on the page, where shoppers rarely scroll, so the ad gets fewer clicks. [L1254.012]</li>
+</ul>
+<p>Ad with high impression share but few clicks (2022):</p>
+<ul>
+<li>When Google Shopping shows high search impression share (90%+) but only a few clicks and low spend despite budget available, the issue is not budget. It is unapproved items or errors in your product feed. Check Merchant Center for unapproved products, warnings or missing required fields, then clean up the feed and resubmit. [L0272.058]</li>
+</ul>
+<p>Very cheap clicks or low CTR from the wrong audience:</p>
+<ul>
+<li>Very cheap clicks with high traffic volume but almost no engagement are not a success. Check the campaign settings and the search terms that trigger the ads, because the campaign is likely attracting the wrong type of shopper. (Older advice? Undated.) [L1254.006]</li>
+<li>A campaign with under 1,000 impressions per day, a 0.5% CTR and a $33 daily budget per campaign was not spending its budget. The fix starts with the impression data, not with a higher budget. (Older advice, 2018, from a call.) [L1109.051]</li>
+<li>A new Google Shopping campaign for a B2B niche produced about 2,000 impressions and only 2 clicks, a CTR of about 0.1 percent. The advice was to wait a couple of weeks before deciding anything, but to check right away which search terms triggered the ads. Irrelevant or overly broad search terms should be added as negative keywords, because impressions from unrelated searches are wasted. Once the terms were relevant, the next step was comparing competitor listings in incognito search to improve the click-through rate, since 0.1 percent is far below the 1 percent minimum. (Older advice, 2020.) [L0551.049]</li>
+</ul>
+<p><strong>Search-result visibility</strong></p>
+<p>If Google Shopping results do not appear for you (older advice, 2021, listed twice in the source with identical steps):</p>
+<ol type="1">
+<li>Clear your browser cache. [L0671.087, L0671.224]</li>
+<li>Enable cookies. [L0671.087, L0671.224]</li>
+<li>Search in an incognito window. [L0671.087, L0671.224]</li>
+<li>Try a VPN. [L0671.087, L0671.224]</li>
+</ol>
+<p>If products are not appearing in Google Shopping (older advice, 2022):</p>
+<ol type="1">
+<li>Open the campaign in Google Ads and check whether products receive impressions. Do not search for product names on Google Shopping. [L0429.011]</li>
+<li>If there are no impressions, open Google Merchant Center and confirm every product is approved with no warnings. [L0429.011]</li>
+<li>Resolve all listed warnings so the products get approved and begin showing. [L0429.011]</li>
+<li>Only then move on to SEO work. [L0429.011]</li>
+</ol>
+<p>If a search ad seems not to show for a keyword (older advice, Source B 2021-22):</p>
+<ol type="1">
+<li>Check whether the ad is actually running, because a low-volume warning does not always mean the ad is blocked. [L0719.011]</li>
+<li>Record the search term and check for impressions. [L0719.011]</li>
+<li>Search the exact term in Google several times, since one search may not show your ad. [L0719.011]</li>
+<li>If your ad does not appear, broaden the targeted search terms for that product. [L0719.011]</li>
+</ol>
+<p><strong>Bid level for visibility (2025)</strong></p>
+<ul>
+<li>To appear in Google Shopping results, bids must be competitive. If products don't appear when searching for them in Google Shopping, increase bids by 5 cents and monitor for a week to see impressions increase. [L0278.014]</li>
+</ul>
+<h2 id="clicks-without-sales-conversion">Clicks without sales (conversion)</h2>
+<p><strong>Benchmarks and checks</strong></p>
+<ul>
+<li>The working conversion target is 2.5 sales per 100 qualified clicks. [L1254.020, L0626.016]</li>
+<li>Case: 52,000 impressions, 280 clicks, $100 spend over 4 days, 0 sales. At a 2.5% conversion rate, 300 clicks should yield 6-7 sales minimum. It is too early to judge; wait the 1-5 day conversion window before optimizing. (Older advice, 2023.) [L0274.011]</li>
+<li>A product that gets over 100 unique visitors per month from Google Ads and does not convert is quality traffic that should be converting. Its product page is the first place to look for problems. (Older advice, 2022.) [L1092.065]</li>
+<li>A store had 2,444 visits and one sale of $599 after 30 days, a conversion rate of 0.04%, far below the 2.5% target for Google Shopping. Ads were above 1% CTR, and six suppliers had been reduced to 12 advertised products from two of them, because the other four did not offer MAP pricing. The advice was to check the Shopify sales funnel, separate bot and organic traffic, measure the Google Shopping conversion rate on its own, then review the keyword report and compare the top products with competitors. [L0626.016]</li>
+<li>A store with about 180 visitors per day, $1,200 per month on Google product listing ads and $50 to $100 per month on Facebook retargeting made one or two sales per day, but mostly low-priced add-on items instead of the high-ticket products the niche was built on. The fix was to split the Google Shopping campaigns by price band, then clean up keywords and improve product pages. (Older advice, 2019.) [L1086.014]</li>
+<li>If Shopping traffic is not converting, first check the keyword triggers and the product pages, not the visitor count. About 180 targeted visitors per day should produce one or two sales per day, and unique visitors without purchases point to conversion problems. (Older advice, 2019.) [L1086.015]</li>
+<li>A Google Shopping campaign produced 233,000 impressions over 45 days, a 0.69 percent click-through rate, and only two sales. A follow-up count showed about 1,300 unique visits, which lowered the click-through rate further. The advice was to raise click-through rate first with negative keywords and campaign segmentation, then check product and cart pages for errors by running a test purchase. (Older advice, 2020.) [L1088.051]</li>
+<li>A store that had launched a month earlier ran Google ads for four weeks with no sales, 124 impressions and one click. (See the account-health section for the identifier fix.) [L1088.050]</li>
+<li>Spending thousands of dollars on Google Ads without a single conversion typically results from opening with budgets that are too large or leaving campaigns running without optimization. (Older advice, 2024.) [L0666.038]</li>
+<li>Price changes can briefly lower click-through rate, especially when a price moves above the price most competitors charge. Make pricing changes when necessary, not constantly, because each change makes Google learn again. (Older advice, 2024.) [L0856.025]</li>
+<li>Do not raise prices just because conversion is low. First analyze the campaign data, such as impressions, clicks and sales per search term and product, to find the real cause. (Older advice, 2021.) [L0671.228]</li>
+<li>A sudden drop in conversions with steady traffic: the likely causes are new keywords bringing lower-quality traffic, or traffic going to product pages that convert poorly. Comparing product-level clicks and sales across two date ranges usually shows which one it is. (2025.) [L1097.034]</li>
+</ul>
+<p><strong>Procedures for clicks without sales</strong></p>
+<p>Troubleshooting campaigns with no conversions (2024):</p>
+<ol type="1">
+<li>Set the date range to your first 3 weeks when sales occurred. [L0276.024]</li>
+<li>Check alpha and beta campaigns to see which products generated sales. [L0276.024]</li>
+<li>Review ad spend distribution, impressions, clicks, and CTR in those first 3 weeks. [L0276.024]</li>
+<li>Compare these metrics to the most recent 5 weeks with no sales. [L0276.024]</li>
+<li>Identify which products changed in performance. [L0276.024]</li>
+<li>Check which keywords drove impressions in the successful period vs now. [L0276.024]</li>
+<li>Look at top-performing competitor product pages to spot positioning or messaging changes. [L0276.024]</li>
+<li>Add non-converting search terms and competitor terms as negative keywords. [L0276.024]</li>
+<li>Lower cost-per-click bids on products showing no conversions. [L0276.024]</li>
+</ol>
+<p>Troubleshooting a product with clicks but no sales (2024):</p>
+<ol type="1">
+<li>In Google Ads reporting, check which search terms/keywords triggered the clicks for that product. [L0666.002]</li>
+<li>If the triggering keywords are irrelevant, add them as negative keywords; if they are relevant, leave them as is. [L0666.002]</li>
+<li>Search the product name in Google Shopping as a customer and note the listing and the 1-3 competitor listings. [L0666.002]</li>
+<li>Compare competitor product pages for features that could drive buying and improve your own product page accordingly. [L0666.002]</li>
+</ol>
+<p>If a Shopping product has no profitable sales yet, optimize before removing it (2024):</p>
+<ol type="1">
+<li>Check which search terms and keywords produced the clicks and add irrelevant ones as negative keywords. [L0856.002]</li>
+<li>Compare the product page against the top two to three competing stores for that product and close gaps in content and presentation. [L0856.002]</li>
+<li>Optimize the product page against the on-page setup of the store. [L0856.002]</li>
+<li>Let about 100 more clicks run. [L0856.002]</li>
+<li>If there are still no sales after about 200 to 300 clicks on fully optimized campaigns and pages, lower the CPC sharply or remove the product. The first roughly 100 clicks are a learning phase. [L0856.002]</li>
+</ol>
+<p>Investigating weak conversions from ads (2021):</p>
+<ol type="1">
+<li>Confirm the site works and that customers can complete a purchase. [L0853.055]</li>
+<li>Break down Google Ads performance by keyword and see which searches generate impressions and clicks. [L0853.055]</li>
+<li>Add non-buying keywords as negative keywords. [L0853.055]</li>
+<li>Lower the default cost per click for the least profitable products, so budget shifts toward products that earn more. [L0853.055]</li>
+<li>Use the cleaned-up data as the benchmark, not a generic industry number. [L0853.055]</li>
+</ol>
+<p>Auditing an account with high traffic but few sales (2022):</p>
+<ol type="1">
+<li>Check which keywords and ads produced the sales. [L0854.054]</li>
+<li>Find which keywords produced many clicks and few conversions. [L0854.054]</li>
+<li>Turn off the wasteful campaigns and reduce spend on the low-quality ones. [L0854.054]</li>
+<li>Focus the budget on the campaigns and keywords that produced the sales. [L0854.054]</li>
+</ol>
+<ul>
+<li>If a site receives many visitors from a small ad budget, check whether the spend reached the right keywords. Many visitors with few sales point to low-quality traffic. (Older advice, 2022.) [L0854.055]</li>
+</ul>
+<p>Optimizing a Google Shopping campaign that is not converting after about three weeks (2021):</p>
+<ol type="1">
+<li>Review the analytics for keywords generating impressions and clicks, and the product pages those clicks land on. [L0834.061]</li>
+<li>Add negative keywords for the terms that do not work. [L0834.061]</li>
+<li>For products with many impressions but no clicks, search Google Shopping for those products and compare your competitor's price, product name, and default image. [L0834.061]</li>
+<li>Optimize those product pages. [L0834.061]</li>
+<li>For clicks that come from buyer-intent keywords (product name, brand name, SKU), optimize the landing product pages. [L0834.061]</li>
+<li>Do not change the budget yet; move spend to the best-performing places. [L0834.061]</li>
+</ol>
+<p>Auditing a Google Shopping campaign that spends without sales (2021):</p>
+<ol type="1">
+<li>Review the search terms that triggered your ads over the past month. [L0968.054]</li>
+<li>Add negative keywords for anything too broad or irrelevant. [L0968.054]</li>
+<li>Check the product groups for impressions and clicks. [L0968.054]</li>
+<li>For products with many impressions but few clicks, compare images and prices with competitors. [L0968.054]</li>
+<li>For products with clicks but no sales, compare the product page with competitors in split screen and improve it. [L0968.054]</li>
+<li>Check for MAP violations. [L0968.054]</li>
+<li>Lower the budget on products that make no sense and optimize product pages for those that do. [L0968.054]</li>
+</ol>
+<p>Side-by-side competitor analysis for a non-converting product (2022):</p>
+<ol type="1">
+<li>Open your product page in a small window on the desktop. [L1092.066]</li>
+<li>Open the same product page on the top two competitor sites. [L1092.066]</li>
+<li>Compare them from a customer's point of view and ask why they would buy from the competitor instead of you. [L1092.066]</li>
+<li>Change your page to make people more likely to choose you. [L1092.066]</li>
+</ol>
+<p>Non-converting clicks and search terms:</p>
+<ul>
+<li>If clicks come in but there are no sales, look at the search terms triggering the clicks and judge their buying intent. Add irrelevant broad terms as negative keywords and increase the cost per click on terms that convert. (Older advice, 2021.) [L1112.013]</li>
+<li>Very low conversion with clicks on buyer-intent terms: for clicks from buyer-intent keywords (product name, brand name, SKU), optimize the landing product pages before changing bids. [L0834.061]</li>
+<li>A product with 100 clicks, 80% search impression share and no conversions should first have its store page checked for conversion elements. If it still does not convert, its max CPC should be lowered so it stops taking budget. (2024.) [L0750.018]</li>
+<li>Raising the max CPC on a product that gets clicks but no conversions wastes budget. Check the store page and conversion elements first, then reduce the CPC if it still does not sell. [L0750.019]</li>
+<li>Spend on a product should be reduced if it gets clicks but no conversions, unless the store page and conversion elements are fixed first. [L0750.018, L0750.019]</li>
+<li>Check abandoned carts in Shopify and call those customers to learn what stopped them. Then audit the ad account to make sure money goes to products that convert. (Older advice, 2021.) [L0801.065]</li>
+<li>Traffic bouncing with an average session of 0 seconds on Google Ads is most likely bot activity from Google checking the store against the Merchant Center feed. Verify by checking which keywords triggered the clicks in Google Ads campaigns, and add negative keywords if the clicks come from irrelevant search terms. (2024.) [L0971.011]</li>
+</ul>
+<p><strong>Product page checks (conversion)</strong></p>
+<ul>
+<li>Watch visitor recordings in Lucky Orange to see where people click, whether they bounce and whether anything looks broken. Check the bounce rate in Google Analytics. Browse your own store as a buyer, add an item to the cart and check every step for problems. (Older advice, 2018.) [L1085.055]</li>
+<li>To review a stalled Alpha campaign for conversions, the store page must be checked first. [L0837.027]</li>
+</ul>
+<h2 id="sudden-drops-and-change-history">Sudden drops and change history</h2>
+<p><strong>Procedures</strong></p>
+<p>Diagnosing sudden drops in Google Ads performance (older advice, 2021; two versions of the same procedure, merged here):</p>
+<ol type="1">
+<li>Go to your campaign within Google Ads. [L0270.033, L0270.052]</li>
+<li>Click "More" in the left navigation, then "Change History". [L0270.033, L0270.052]</li>
+<li>Review all changes made to that campaign in the date range before performance dropped. [L0270.033, L0270.052]</li>
+<li>Identify which change caused the drop. [L0270.033, L0270.052]</li>
+<li>Revert that change directly through Change History without rebuilding the campaign. [L0270.033, L0270.052]</li>
+</ol>
+<p>Checking change history after an unexplained traffic jump (2024):</p>
+<ol type="1">
+<li>Open a campaign and set the date range to start at the change window (for example from April or May until today). [L0856.011]</li>
+<li>Click Change history at the bottom left. [L0856.011]</li>
+<li>Review every change made in that range. [L0856.011]</li>
+<li>Revert changes that should not have been applied. [L0856.011]</li>
+</ol>
+<p>Checking a sudden traffic drop in Google Ads (2023):</p>
+<ol type="1">
+<li>Open Google Ads and go to Change history. [L0934.067]</li>
+<li>Choose All campaigns. [L0934.067]</li>
+<li>Set the date range from when traffic was normal until today. [L0934.067]</li>
+<li>Compare the performance graph with the logged changes. [L0934.067]</li>
+<li>If a change matches the drop, click Undo on it. [L0934.067]</li>
+</ol>
+<p>Troubleshooting a drop in Google Ads conversions (2025):</p>
+<ol type="1">
+<li>In Google Ads, open the alpha and beta Shopping campaigns. [L1097.033]</li>
+<li>Set the date range in the top right to a period when sales were strong. [L1097.033]</li>
+<li>Note which products received clicks and which products sold. [L1097.033]</li>
+<li>Change the date range to the recent period when traffic is still coming in but sales have dropped. [L1097.033]</li>
+<li>Compare which products received impressions and clicks then versus now. [L1097.033]</li>
+<li>Adjust bids so traffic returns to the product pages that converted before. [L1097.033]</li>
+</ol>
+<p>Diagnosing a performance drop in an underperforming alpha campaign (older advice, 2021, from the same source as the review procedure below):</p>
+<ol type="1">
+<li>Review the change history for every modification made during the period before performance dropped. [L0270.033]</li>
+<li>Identify negative changes. [L0270.033]</li>
+<li>Revert problematic changes directly through Change History without rebuilding campaigns. [L0270.033]</li>
+</ol>
+<p><strong>Rules and principles</strong></p>
+<ul>
+<li>Fix the root setting first. When an account changes sharply, a rebuild or advanced optimization is less useful than finding the change that caused it. (Older advice, 2025.) [L0837.027]</li>
+<li>Pause the existing campaigns while investigating a suspected settings problem, so they stop spending on unqualified traffic. (2025.) [L0837.025]</li>
+<li>Recreate the Alpha and Beta campaigns step by step, following the Google Shopping setup lesson and checking each setting as you go. Confirm that each setting matches the reference, including location targeting. (2025.) [L0837.025]</li>
+<li>If the same pattern of many clicks and little return appears in the first four to five days after launch, do not wait out the full learning period. Look for the root cause instead. (2025.) [L0837.025]</li>
+<li>A traffic jump caused by a change: Google's Invalid Click Analysis and third-party click fraud tools differ in accuracy. A monthly invalid click share of about 10 percent after a sudden traffic jump calls for an account-change audit first. Avoid auto-applied recommendations from Google's AI suggestion panel and calls from Google "ad specialists", as they tend to increase spend. (2024.) [L0856.012]</li>
+<li>If a campaign's ROAS falls while spend rises, it does not prove the country is maxed out. First fix negative keywords, segment campaigns so best sellers get their own budget, and improve conversion before concluding the budget is saturated. (Older advice, 2021.) [L0968.060]</li>
+</ul>
+<h2 id="budget-not-spending-and-bid-levels">Budget not spending and bid levels</h2>
+<p><strong>Why the budget does not spend</strong></p>
+<ul>
+<li>Two budget factors must be evaluated together: the daily budget amount and the cost-per-click bid. A large daily budget with a very low CPC bid spends far less than the budget allows, because available traffic at that price point is limited. (Older advice, 2019.) [L0243.006]</li>
+<li>Example: if the daily budget is $1 million USD but the CPC bid is $0.001, the campaign only spends approximately $100 per day, because sufficient search traffic does not exist at that price point, regardless of budget size. (Older advice, 2019.) [L0243.007]</li>
+<li>A low CPC with a high daily budget will not spend because the bid is below market competition. Increasing CPC lets the full daily budget spend. For example, a $10 daily budget with $0.01 CPC spends $0; raising CPC to $0.15 lets the full $10 spend. (Older advice, 2022.) [L0249.056]</li>
+<li>Cut ad spend for products that are typically backordered for about three weeks or more, and move the budget to products that can ship. (Older advice, 2022.) [L0803.029]</li>
+</ul>
+<p><strong>Procedure for underspending (older advice, 2019)</strong></p>
+<ol type="1">
+<li>Verify the daily budget amount is an insufficient reason. [L0243.008]</li>
+<li>Increase the cost-per-click bid incrementally (the "inch up" method). [L0243.008]</li>
+<li>Monitor spend to confirm the budget now depletes. [L0243.008]</li>
+<li>Simultaneously implement negative keywords to improve relevance and CTR of remaining spend. [L0243.008]</li>
+</ol>
+<p><strong>Procedure for a budget that is not fully spent (older advice, 2022)</strong></p>
+<ol type="1">
+<li>Check whether the campaign is spending its full daily budget. [L1092.060]</li>
+<li>If not, raise the cost per click for the product or campaign in steps, for example from 25 cents to 40 cents, then to 60 cents, until traffic rises. [L1092.060]</li>
+<li>If the full budget is spent but clicks are too few, either increase the daily budget or lower the target cost per click. [L1092.060]</li>
+</ol>
+<p><strong>Procedure for a campaign that spends about one cent (older advice, 2021)</strong></p>
+<ul>
+<li>Raise the default CPC by 5 cents, wait a few days, and check the result. If spend still does not change, raise it another 5 cents and repeat. [L1112.016]</li>
+</ul>
+<p><strong>Optimization order for an underperforming Shopping campaign (undated, a $10 daily budget case)</strong></p>
+<ol type="1">
+<li>Exclude all products under $200 from campaigns, either with the feed app's product inclusions and exclusions or by setting their max CPC to $0 or $0.01 in the product groups. [L0748.010]</li>
+<li>Optimize the product page title and meta tags with better keywords, which is the second priority and takes less urgency than step 1. [L0748.010]</li>
+<li>Keep the ads running for two weeks with the optimized products and the cheap products excluded, and do not change the max CPC during this time. [L0748.010]</li>
+<li>If the $10 daily budget still does not spend after two weeks, raise max CPC from $0.50 to $0.55 and let it run for one week. [L0748.010]</li>
+<li>If the budget still does not spend, raise max CPC to $0.60 and let it run for one week. [L0748.010]</li>
+<li>If the budget still does not spend, raise max CPC to $0.65, and keep increasing slowly until the budget spends at a profitable level. [L0748.010]</li>
+</ol>
+<ul>
+<li>Raising max CPC is a later lever. When the product mix sends budget to low-price items, a higher bid only buys more unprofitable clicks. Fix which products are being advertised before increasing bids. [L0748.012]</li>
+<li>Raising max CPC early, while cheap products are still in the campaign, spends more money on sales that cannot reach the target ROAS. This is the common error when a campaign seems to underspend and the store owner assumes the bid is the problem. [L0748.013]</li>
+<li>Case: a store ran Google Shopping campaigns for three months, named alpha and beta, with a $10 daily budget that never spent in full. Results: 3 sales in total, 2 from alpha and 1 from beta. Spend: alpha $152, beta $54, total $206, about $69 per month. Cost per sale was $74 for alpha and $52 for beta. The store owner had stopped raising max CPC at $0.50 and was adding weekly negative keywords. The sold products were priced at $67, $197 and $247, average about $170, far below the $740 needed for alpha's cost per sale and the $520 needed for beta's cost per sale to reach a 10x ROAS. Recommended actions: exclude all products under $200, optimize titles and meta tags second, run for two weeks with cheap products excluded, then raise max CPC gradually from $0.50 to $0.55, $0.60 and $0.65, one week each, until the budget spends. The lesson does not report the final outcome. [L0748.016]</li>
+<li>Raising the budget alone does not fix low impression share; raise the CPC and optimize the product page. [L0856.006]</li>
+<li>Do not change the budget yet while many campaigns are still learning; move spend to the best-performing places. [L0834.061]</li>
+<li>Spend stop on a specific supplier: go to the Alpha and Beta campaigns, find all products from that supplier, and set their Cost per click (CPC) to 0 cents. Google then does not spend money on them, so they stop showing. (Undated.) [L1015.008]</li>
+</ul>
+<p><strong>Bid starting points in the sources (they conflict; each applies to a different setup)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source (year)</th>
+<th>Starting value</th>
+<th>Step</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0249.056 (2022)</td>
+<td>$0.01 to $0.15 CPC for a $10/day budget</td>
+<td>Raise to a level that spends the full budget</td>
+<td>Low CPC relative to competition</td>
+</tr>
+<tr>
+<td>L0468.111 (2020)</td>
+<td>$0.25 to $0.35 max CPC</td>
+<td>Few days, then Google live chat</td>
+<td>Zero impressions after launch</td>
+</tr>
+<tr>
+<td>L0966.074 (2025)</td>
+<td>30 cents to 35 cents default CPC</td>
+<td>+5 cents, wait a few days</td>
+<td>Spend far below budget, all items approved</td>
+</tr>
+<tr>
+<td>L0748.010 (undated)</td>
+<td>$0.50 to $0.55 to $0.60 to $0.65 max CPC</td>
+<td>One week per step, after two weeks of excluding cheap products</td>
+<td>$10/day budget not spending, cheap products in campaign</td>
+</tr>
+<tr>
+<td>L1092.060 (2022)</td>
+<td>25 cents to 40 cents to 60 cents</td>
+<td>Steps until traffic rises</td>
+<td>Budget not fully spent</td>
+</tr>
+<tr>
+<td>L0247.052 (2021)</td>
+<td>+0.05 steps</td>
+<td>After a couple of days wait</td>
+<td>Zero impressions with approved items</td>
+</tr>
+<tr>
+<td>L0278.014 (2025)</td>
+<td>+5 cents</td>
+<td>One week of monitoring</td>
+<td>Products do not appear when searched</td>
+</tr>
+<tr>
+<td>L0671.090 (2021)</td>
+<td>Lower from $0.40 to $0.20</td>
+<td>Lower the CPC on products that consume budget without sales</td>
+<td>Opposite direction: cost too high, not spend too low</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Lower the CPC when a product or campaign takes budget without sales. Raise it when impressions are missing. [L0470.046, L0671.090, L0671.227, L0856.006]</li>
+</ul>
+<h2 id="irrelevant-traffic-and-search-terms">Irrelevant traffic and search terms</h2>
+<ul>
+<li>If unwanted search terms appear in the medium or low priority campaigns, the cause is one of two things: the high priority campaign is not working correctly, or its budget is "Limited by budget". Fix the budget status first, then recheck the setup for negative keywords that were not applied across all campaigns. (Older advice, Source B 2021-22.) [L0744.024]</li>
+<li>When the funnel is set up correctly, the negative keyword strategy is close to foolproof, and failures almost always trace back to setup errors. Recheck the list and the setup before blaming the system. (Older advice, Source B 2021-22.) [L0744.025]</li>
+<li>Check the search terms that trigger your ads and add irrelevant or overly broad ones as negative keywords. (Older advice, 2019.) [L0357.029]</li>
+<li>To optimize Shopping campaigns, open the Google Ads account and find the keywords that triggered impressions or clicks. Then check which product pages those searches landed on. Optimize those product pages first, because they already receive traffic. (2025.) [L0667.004]</li>
+<li>Check your ad location settings: if traffic from unwanted countries appears, select only the United States (or only the intended country) in campaign settings to stop paid traffic from there. (Older advice, 2022.) [L0665.081]</li>
+<li>Add broad or irrelevant terms that take most of the spend and bring visitors who do not buy as negative keywords. Find the keywords and products that generate sales, move them into a separate campaign with its own higher budget, and build a layered campaign structure. (Older advice, 2019.) [L1086.013]</li>
+<li>Do not spend on products that are sold below MAP by others. Monitor the Google product listings as well, because they overlap heavily with the ad auction. (2024.) [L0806.071]</li>
+<li>A campaign that gets clicks from a non-English search term when you serve only the US market: check Locations and set it to "United States Only" rather than "All territories and countries." (Older advice, 2023.) [L0251.052]</li>
+</ul>
+<p><strong>Negative keyword rules</strong></p>
+<ul>
+<li>Negative keywords for irrelevant searches: a shopper searching for a brown leather chair when you sell grey fabric sectionals is wasted spend, so add such terms as negative keywords. [L0551.049]</li>
+<li>Add non-converting search terms and competitor terms as negative keywords. [L0276.024]</li>
+<li>If you see many clicks from non-buying keywords, check the negative keyword list for over-blocking and correct broad match negatives. [L0966.074, L0966.082]</li>
+</ul>
+<h2 id="location-and-wrong-country-traffic">Location and wrong-country traffic</h2>
+<p>Google changed the default location target for Shopping, Search and Display campaigns to "Presence or interest" (older advice, Source B 2021-22). The two options conflict in effect:</p>
+<ul>
+<li>Google default: "Presence or interest" reaches people who live in, regularly are in, or have shown interest in the targeted locations, which suits local businesses reaching commuters. [L0719.001, L0719.003, L0719.004]</li>
+<li>Recommended for a national advertiser that ships to one country: "Presence" (reaches people in or regularly in the targeted locations). [L0719.001, L0719.002]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Who it reaches</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Presence or interest</td>
+<td>People in, regularly in, or who have shown interest in the targeted locations</td>
+<td>Local businesses that want to reach commuters into a city</td>
+</tr>
+<tr>
+<td>Presence</td>
+<td>People in or regularly in the targeted locations</td>
+<td>National advertisers limited to one country (recommended)</td>
+</tr>
+<tr>
+<td>Search interest</td>
+<td>People searching for the targeted locations</td>
+<td>Not recommended for national sales</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0719.003]</p>
+<ul>
+<li>For a national advertiser that ships to one country only, paid clicks from shoppers who cannot buy are waste, so the location target should be set to Presence. [L0719.001]</li>
+<li>Open the campaign, go to Settings &gt; Locations, expand Location options, and set Target to Presence. Under Exclude, keep Presence (recommended). [L0719.002]</li>
+<li>"Presence or interest" exists for local advertisers who want to capture people who live outside a city but commute into it. A business that ships nationally has no use for that reach and should not keep it. [L0719.004]</li>
+</ul>
+<p><strong>Procedure for every campaign (older advice, Source B 2021-22)</strong></p>
+<ol type="1">
+<li>Open every campaign in the account, including Search, Shopping and Display. [L0719.005]</li>
+<li>Go to Settings &gt; Locations for each campaign. [L0719.005]</li>
+<li>Expand Location options. [L0719.005]</li>
+<li>Set Target to Presence. [L0719.005]</li>
+<li>Set Exclude to Presence (recommended). [L0719.005]</li>
+<li>Save and repeat for every new campaign you create. [L0719.005]</li>
+</ol>
+<ul>
+<li>Google changed this setting retroactively on campaigns built years earlier, and it does not send any notice. Check every existing campaign, including Search text campaigns, and do not assume an older account is unaffected. [L0719.006]</li>
+<li>Shopping campaigns targeted to one country can receive clicks from abroad, such as Europe or Asia, when the location setting is "Presence or interest". In one Australian account, this traffic reached a volume where paid clicks were costing real money. [L0719.007]</li>
+<li>Case: a US-based Shopping account targeted US states and showed clicks from countries it does not ship to. The location target was "Presence or interest", which Google applied by default to campaigns created before the setting existed. Every campaign was switched to "Presence" for the target and "Presence (recommended)" for exclusions. No further clicks from non-sale countries were expected, and wasted ad spend stopped, though the exact figure was not measured. [L0719.008]</li>
+<li>The same default change also appears in Display network campaigns, most often there. Check the location target on Display campaigns as well as Search and Shopping campaigns. [L0719.042]</li>
+<li>Shopping campaign settings show a separate "Country of sale" field, set to United States in the example, above the location targeting. Confirm that Country of sale matches the one country you ship to, then set the location target under Settings &gt; Locations. [L0719.043]</li>
+</ul>
+<h2 id="supplier-map-and-stock-problems">Supplier, MAP and stock problems</h2>
+<p><strong>Procedures</strong></p>
+<p>Handling MAP violations in ads (2024):</p>
+<ol type="1">
+<li>Pause the ads of SKUs that are sold below MAP. [L0806.069]</li>
+<li>Resume them when the issue is fixed. [L0806.069]</li>
+<li>Find the repeat offenders among suppliers or competitors. [L0806.069]</li>
+<li>Report the supplier if it does not enforce its MAP policy. [L0806.069]</li>
+<li>Move repeat offenders into separate campaigns with lower bids, or keep small budgets if the competitor has bad reviews. [L0806.069]</li>
+</ol>
+<p>Protecting margins when a competitor sells a supplier's product far below MAP (2026):</p>
+<ol type="1">
+<li>Exclude that supplier's products from your Google Shopping campaigns right away, so no budget goes to them. [L0808.017]</li>
+<li>Lower the daily budget, for example from $40 to $20, while you work toward the first sale and Google learns. [L0808.017]</li>
+<li>Re-add the supplier once prices return to normal. [L0808.017]</li>
+</ol>
+<ul>
+<li>Also tell the supplier, since a MAP violation can be serious for them. [L0808.017]</li>
+</ul>
+<p><strong>Principles and cases</strong></p>
+<ul>
+<li>Pick the root cause of recurring MAP violations (one supplier or a few competitors) and remove it, instead of monitoring endlessly. Competitors with bad reviews can still send you customers, so a small ad budget can stay on. (2024.) [L0806.070]</li>
+<li>A store ran Google Shopping ads for two weeks with alpha and beta campaigns: $330 for 34,000 impressions, 430 clicks, a 1.29% CTR, and an average CPC of $0.77 (bids raised to $1.00 alpha, $0.50 beta), with a $1,800 average product price and no sales. A competitor sold the same supplier's products at 40% off. The recommended response was to exclude that supplier from ads, lower the daily budget to $20, and re-add the supplier once prices normalized. (2026.) [L0808.037]</li>
+<li>A store had been running Google Ads for about three weeks with a priority campaign for 300 to 400 top products on a shared budget of $40, and a separate secondary campaign with a max CPC of $3. After 3 weeks it had spent about $189, received about 13,000 impressions and 583 clicks, and no sales. The advice was to clean up irrelevant search terms first, leave bids and budgets unchanged for the moment, and add negatives before building Meta remarketing. The outcome was not reported. (2025.) [L0807.023]</li>
+<li>Low performance in Google Ads should be checked in the ad account first before investigating competitors on Google Shopping for MAP violations, which are not checked by default. (2024.) [L0805.019]</li>
+</ul>
+<h2 id="tracking-and-site-checks">Tracking and site checks</h2>
+<ul>
+<li>Confirm the site works and that customers can complete a purchase before judging ads. (Older advice, 2021.) [L0853.055]</li>
+<li>Check the bounce rate in Google Analytics and whether anything looks broken on the store. (Older advice, 2018.) [L1085.055]</li>
+<li>Run a test purchase to check every step of the product and cart pages for errors. (Older advice, 2020.) [L1088.051]</li>
+<li>The product should be checked in Google Shopping for identifiers that match competitor pages. [L0856.005]</li>
+<li>Check the store with the ads: site and checkout must work before paid traffic is judged. (Older advice, 2021.) [L0853.055]</li>
+</ul>
+<h2 id="product-level-decisions">Product-level decisions</h2>
+<ul>
+<li>If a product gets no impressions, raise its CPC first so it can get impressions. If it gets many clicks but no sales, first optimize the product page to lift conversion rate. If the page is well optimized and the product still is not profitable, decide between removing it from paid campaigns or keeping it with a lower CPC and no active focus. (2023.) [L0470.046]</li>
+<li>Use the cleaned-up data as the benchmark for the least profitable products, so budget shifts toward products that earn more. (Older advice, 2021.) [L0853.055]</li>
+<li>If many products do not show ads while competitors do, check product page data and Merchant Center information first (see the account-health section). [L0834.063]</li>
+<li>Products with a 1% CTR or above that still do not sell need a store check before any budget change, because a store can carry sound ad metrics while conversion is weak. [L0626.016]</li>
+</ul>
+<h2 id="procedures-for-common-questions-stepwise">Procedures for common questions (stepwise)</h2>
+<p><strong>Google Shopping campaign with no clicks, in order</strong> (see the no-clicks section for steps). [L0357.029]</p>
+<p><strong>Raising CPC, the order of checks</strong></p>
+<ol type="1">
+<li>Confirm all products are approved. [L0966.074]</li>
+<li>Raise the default CPC by 5 cents if spend is far below budget. [L0966.074]</li>
+<li>Wait a few days for relearning. [L0966.074]</li>
+<li>Check negative keywords for blocked terms. [L0966.074]</li>
+</ol>
+<p><strong>Lowering CPC, the order of checks</strong></p>
+<ol type="1">
+<li>Review the search terms that triggered the ads and add irrelevant ones as negatives. [L0671.090, L0671.227]</li>
+<li>For products with impressions and clicks but no sales, compare the product page with competitors and optimize it. [L0671.090, L0671.227]</li>
+<li>For products that consume a large share of budget without enough sales, lower the cost per click, for example from $0.40 to $0.20. [L0671.090, L0671.227]</li>
+</ol>
+<p><strong>Stop spend on a supplier quickly.</strong> Set CPC to 0 cents for that supplier's products in Alpha and Beta, then re-add when prices normalize. [L1015.008, L0808.017]</p>
+<h2 id="diagnostic-order">Diagnostic Order</h2>
+<ol type="1">
+<li>Review the data before judging the ads. [L1254.023]</li>
+<li>Review the campaign setup and strategy. [L1494.004]</li>
+<li>Check whether the budget is being spent. [L1274.059]</li>
+<li>Check visibility and location. [L1275.050]</li>
+<li>Check search terms and competitors. [L1274.086]</li>
+<li>Identify the underperformance pattern. [L1456.038]</li>
+</ol>
+<h2 id="step-1-review-the-data">Step 1: Review the Data</h2>
+<ul>
+<li>When someone asks how to improve their ads, first review 30 days of spend, clicks and traffic data for each platform before judging the ad copy. [L1254.023]</li>
+<li>If you cannot access the account, screenshots of spend, click counts, bounce rate and average time on site are enough for a first diagnosis. [L1254.023]</li>
+</ul>
+<h2 id="step-2-review-the-campaign-setup">Step 2: Review the Campaign Setup</h2>
+<ul>
+<li>If Google Ads campaigns underperform, reviewing the campaign setup from scratch and the underlying strategy is a sensible first step, since platform changes may have altered how things work since the original setup. [L1494.004] <em>(Source 2021-22, older advice.)</em></li>
+</ul>
+<h2 id="step-3-check-budget-delivery">Step 3: Check Budget Delivery</h2>
+<ul>
+<li>Check first whether the daily budget is actually being spent before changing anything else. [L1274.059]</li>
+<li>Example discussed: a $33 daily budget with 1.3% CTR and 50% impression share on an alpha campaign. [L1274.059] <em>(Source 2018, older advice.)</em></li>
+</ul>
+<h2 id="step-4-check-visibility-and-location">Step 4: Check Visibility and Location</h2>
+<ul>
+<li>If you cannot see Google ads for a product, nobody may be advertising it, or your location may not match the target market. [L1275.050] <em>(Source 2019, older advice.)</em></li>
+<li>A VPN can simulate another location for checking results. [L1275.050] <em>(Source 2019, older advice.)</em></li>
+</ul>
+<h2 id="step-5-check-search-terms-and-competitors">Step 5: Check Search Terms and Competitors</h2>
+<ul>
+<li>Search terms that combine a supplier name, product name or SKU are the highest-intent keywords in a Google Ads account. [L1274.086] <em>(Source 2018, older advice.)</em></li>
+<li>If these terms show impressions but no sales, search them in an incognito window to see whether competitors are breaking MAP or running stronger promo text. [L1274.086] <em>(Source 2018, older advice.)</em></li>
+</ul>
+<h2 id="step-6-identify-the-underperformance-pattern">Step 6: Identify the Underperformance Pattern</h2>
+<p>In roughly seven out of ten high-ticket dropshipping Google Ads accounts that underperform, one of two patterns appears. [L1456.038] <em>(Source 2021-22, older advice.)</em></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>What the data shows</th>
+<th>Action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A: Generic top-of-funnel spend</td>
+<td>Too much spend goes to generic terms that rarely convert.</td>
+<td>Exclude those terms from Shopping and reach them another way. [L1456.038]</td>
+<td>2021-22, older</td>
+</tr>
+<tr>
+<td>B: Specific traffic, no conversion</td>
+<td>Traffic is very specific to individual products or brands but still does not convert, which points to competitors winning the sale.</td>
+<td>Review the competitor comparison and the website. [L1456.038]</td>
+<td>2021-22, older</td>
+</tr>
+</tbody>
+</table></div>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/14-learning-phase-reporting-and-weekly-optimization-routine/"><span class="k">&larr; Previous</span><span class="v">Learning phase, reporting and weekly optimization routine</span></a><a class="nx" href="../../10-google-ads-and-shopping/16-search-text-ads-and-keyword-strategy/"><span class="k">Next &rarr;</span><span class="v">Search text ads and keyword strategy</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

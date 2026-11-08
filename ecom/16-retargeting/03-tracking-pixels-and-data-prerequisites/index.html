@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tracking, pixels and data prerequisites | Ecommerce Playbook</title>
+<meta name="description" content="- Put tracking codes on every content page, and install each one only once. - Check that the codes really record visits. - Ad blockers hide part of your visitors, so your audiences are smaller than your clicks. - Most ad platforms need a minimum ...">
+<link rel="canonical" href="https://dlichters.com/ecom/16-retargeting/03-tracking-pixels-and-data-prerequisites/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Tracking, pixels and data prerequisites | Ecommerce Playbook"><meta property="og:description" content="- Put tracking codes on every content page, and install each one only once. - Check that the codes really record visits. - Ad blockers hide part of your visitors, so your audiences are smaller than your clicks. - Most ad platforms need a minimum ..."><meta property="og:url" content="https://dlichters.com/ecom/16-retargeting/03-tracking-pixels-and-data-prerequisites/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../16-retargeting/">16. Retargeting</a></div><h1>Tracking, pixels and data prerequisites</h1><p class="meta">Section 16.3 &middot; 3 of 24 in this chapter &middot; 4 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Put tracking codes on every content page, and install each one only once.</li>
+<li>Check that the codes really record visits.</li>
+<li>Ad blockers hide part of your visitors, so your audiences are smaller than your clicks.</li>
+<li>Most ad platforms need a minimum number of visitors before an audience can be used. Quick leavers can be kept out of it with a 30-second delay or a minimum visit length.</li>
+</ul>
+</div><nav class="toc"><p class="lab">On this page</p><ol><li><a href="#prerequisites-for-tracking-and-data">Prerequisites for Tracking and Data</a></li><li><a href="#setting-up-pixels-and-tags">Setting Up Pixels and Tags</a></li><li><a href="#avoiding-duplicate-installs">Avoiding Duplicate Installs</a></li><li><a href="#verifying-firing">Verifying Firing</a></li><li><a href="#data-sharing-settings">Data Sharing Settings</a></li><li><a href="#privacy-and-ad-blocker-losses">Privacy and Ad-Blocker Losses</a></li><li><a href="#traffic-minimums">Traffic Minimums</a></li><li><a href="#filtering-low-quality-visits">Filtering Low-Quality Visits</a></li></ol></nav><article><h2 id="prerequisites-for-tracking-and-data">Prerequisites for Tracking and Data</h2>
+<h2 id="setting-up-pixels-and-tags">Setting Up Pixels and Tags</h2>
+<ul>
+<li>A pixel is a tiny piece of code that records who visits a page. A tag is a small piece of code that sends visitor data to a tool.</li>
+<li>Install retargeting pixels and tracking codes from Google Ads, Facebook and Google Analytics on <strong>all content pages</strong> of the site. Content pages are the pages visitors read. Retargeting means showing ads again to people who already visited your site.</li>
+<li>Retargeting only works after tracking is set up on <strong>each</strong> ad network you plan to use. An ad network is an advertising platform, such as Google or Facebook.</li>
+<li>Cookies are small files a browser saves to remember a visitor. The cookies placed on people who view pages or take actions on your site become the basis for your audiences. An audience is a saved group of people you show ads to.</li>
+<li>The Google Ads retargeting pixel must be <strong>installed</strong> on the Shopify store before a website visitor audience can fill with visitors. Shopify is the software that runs your online store.</li>
+<li>Without the pixel, the audience <strong>stays empty</strong>.</li>
+<li>Add the remarketing tag through the Feeds for Google Shopping app <strong>before launch</strong>, so visitors are tracked from their first visit.</li>
+<li>The remarketing campaigns themselves are set up <strong>after the store goes live</strong>. Going live means the store is open to real visitors.</li>
+<li>Put a pixel on <strong>every store you own</strong>, so you can retarget visitors later on Facebook and Google.</li>
+<li>You control the code of your own stores, so they can carry the pixel.</li>
+<li>You <strong>cannot</strong> track visitors who come through affiliate links. An affiliate link is a link from a partner site that sends visitors to you.</li>
+</ul>
+<h2 id="avoiding-duplicate-installs">Avoiding Duplicate Installs</h2>
+<ul>
+<li>Install each tag or pixel <strong>only once</strong>. Duplicate installs of the same tag make your tracking numbers wrong.</li>
+<li>Installing the Google Shopping feed app's tracking events twice creates <strong>duplicate events</strong> with the same names in the tag list. An event is one recorded action, such as a purchase.</li>
+<li>Choose the one labeled 'purchase in category'. Keep <strong>only one copy</strong> of each event in the account.</li>
+</ul>
+<h2 id="verifying-firing">Verifying Firing</h2>
+<ul>
+<li>Firing means a tag sends its data when it should.</li>
+<li>Pixels and tracking codes often exist in an existing store but are set up incorrectly or not firing. <strong>Verify</strong> that they register site visits.</li>
+</ul>
+<h2 id="data-sharing-settings">Data Sharing Settings</h2>
+<ul>
+<li>Since 2023, GA4 remarketing audiences require <strong>data sharing settings</strong> to be enabled. GA4 is the newest version of Google Analytics, Google's visitor-tracking tool.</li>
+<li>Without these settings, audiences show a 'not eligible' status. This means they cannot be used yet.</li>
+<li><strong>Enable</strong> the following settings:
+<ol type="1">
+<li>Granular location and device data</li>
+<li>Google insights</li>
+<li>Ads personalization</li>
+<li>Acknowledgement of user data collection</li>
+</ol></li>
+</ul>
+<h2 id="privacy-and-ad-blocker-losses">Privacy and Ad-Blocker Losses</h2>
+<ul>
+<li>A remarketing audience can show <strong>zero impressions</strong> even with daily clicks. An impression is one showing of an ad.</li>
+<li>The cause is ad blockers <span class="ex">(software that hides ads)</span> and browser privacy <span class="ex">(built-in limits on tracking)</span>. Together they stop tracking part of your visitors.</li>
+<li><strong>Estimate</strong> the trackable share first. For example, about 40 of 50 daily clicks may be trackable.</li>
+<li>Visitors who block tracking in their browser are excluded from Google and Meta remarketing audiences. Meta is the company behind Facebook.</li>
+<li>Repeat visits from the same person count <strong>only once</strong>.</li>
+<li>Remarketing audiences built on advanced privacy blocking <span class="ex">(stronger hiding of visitor data)</span> still work. They use platform-owned data, such as link clicks, comments and shares. Platform-owned data is data the ad platform already holds.</li>
+<li>Platforms with their own data, such as Google-owned YouTube, can still target viewers.</li>
+</ul>
+<h2 id="traffic-minimums">Traffic Minimums</h2>
+<ul>
+<li>Each advertising platform requires a <strong>minimum amount of traffic</strong> before a retargeting audience can be built and activated. Traffic means visitors to your site.</li>
+<li>The minimum usually counts within a <strong>30-day window</strong>, a set period of time.</li>
+<li>A low-traffic store can keep its audiences below the <strong>100-person minimum</strong> for weeks.</li>
+<li>Check the audience size <strong>before</strong> changing bids or budgets. A bid is the price you offer for an ad click. A budget is the money you set aside for ads.</li>
+<li>A new store with low traffic can still create audiences in Google Ads and Facebook <strong>ahead of time</strong>.</li>
+<li>Such an audience stays inactive until enough visitors fill the pool, meaning the group of collected visitors.</li>
+<li>Then it can be used <strong>straight away</strong>, and ads can run on it automatically.</li>
+</ul>
+<h2 id="filtering-low-quality-visits">Filtering Low-Quality Visits</h2>
+<ul>
+<li>Add a <strong>minimum session duration</strong> rule to each audience. A session is one visit, and the duration is how long it lasts.</li>
+<li>Or delay pixel firing with a trigger rule in Google Tag Manager. Google Tag Manager is a tool that manages tracking codes in one place. A trigger rule tells a tag when to fire.</li>
+<li>Set the delay to <strong>30 seconds</strong> so bouncing visitors stay out of the cookie pool. Bouncing visitors leave a page right away.</li>
+</ul>
+</article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/16-retargeting/03-tracking-pixels-and-data-prerequisites/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../16-retargeting/02-when-to-start-and-how-much-to-spend/"><span class="k">&larr; Previous</span><span class="v">When to start and how much to spend</span></a><a class="nx" href="../../16-retargeting/04-planning-audiences-funnel-stages-segmentation-and-windows/"><span class="k">Next &rarr;</span><span class="v">Planning audiences: funnel stages, segmentation and windows</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

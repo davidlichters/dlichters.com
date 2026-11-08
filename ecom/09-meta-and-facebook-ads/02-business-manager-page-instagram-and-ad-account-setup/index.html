@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Business manager, page, Instagram and ad account setup | Ecommerce Playbook</title>
+<meta name="description" content="- Set up in this order before any ad: a Business Manager (Meta&#x27;s admin panel for your business), an ad account, a Facebook Page, your store with its own web address, then Instagram. - Keep each business in its own Business Manager and ad account. Do ...">
+<link rel="canonical" href="https://dlichters.com/ecom/09-meta-and-facebook-ads/02-business-manager-page-instagram-and-ad-account-setup/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Business manager, page, Instagram and ad account setup | Ecommerce Playbook"><meta property="og:description" content="- Set up in this order before any ad: a Business Manager (Meta&#x27;s admin panel for your business), an ad account, a Facebook Page, your store with its own web address, then Instagram. - Keep each business in its own Business Manager and ad account. Do ..."><meta property="og:url" content="https://dlichters.com/ecom/09-meta-and-facebook-ads/02-business-manager-page-instagram-and-ad-account-setup/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../09-meta-and-facebook-ads/">9. Meta and Facebook ads</a></div><h1>Business manager, page, Instagram and ad account setup</h1><p class="meta">Section 9.2 &middot; 2 of 22 in this chapter &middot; 27 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Set up in this order before any ad: a Business Manager (Meta's admin panel for your business), an ad account, a Facebook Page, your store with its own web address, then Instagram.</li>
+<li>Keep each business in its own Business Manager and ad account. Do not mix stores.</li>
+<li>Use a payment card that works. A declined card stops all ads.</li>
+<li>Add a second trusted person as admin, so you can still get in if your personal profile is lost.</li>
+<li>Wait about <strong>6 hours</strong> after you get a Meta invitation link before you join.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>If you do not know the business on the invitation, <strong>decline</strong> it. Accepting adds you to its portfolio.</li>
+<li>Prove you own your website with <strong>one</strong> DNS TXT record. You only need to do this once per domain.</li>
+<li>Turn on <strong>two-factor authentication</strong>, a second login check such as a code on your phone.</li>
+<li>Ad tax rules depend on the country, so check them with a <strong>tax professional</strong>.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 29 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="prerequisites-and-account-structure"><summary><h2>Prerequisites and account structure</h2><span class="pm">3 min</span></summary>
+<p><strong>Five things</strong> must be ready before you run Meta ads. Meta is the company behind Facebook and Instagram.</p>
+<ol type="1">
+<li><strong>A warmed-up personal Facebook profile</strong>, meaning a profile that already has normal use. It shows Meta a real person, not a bot <span class="ex">(an automatic program)</span>.</li>
+<li><strong>A Business Manager</strong>, which is Meta's admin panel for your business. It is the control centre for your ads.</li>
+<li><strong>An ad account</strong> inside the Business Manager. The ads run here.</li>
+<li><strong>A finished Shopify store with its own domain.</strong> Shopify is the software that runs your online shop. The domain is your web address. The ads send people there.</li>
+<li><strong>A warmed-up Facebook Page</strong>, which is the face of the brand. It makes people trust it more.</li>
+</ol>
+<p><strong>Incomplete setup</strong> causes most failed launches, not the ad itself.</p>
+<p>Beginners who skip the prerequisites and backend setup <span class="ex">(the work behind the scenes)</span> often see:</p>
+<ul>
+<li><strong>An ad that does not spend</strong>, meaning it does not use its budget.</li>
+<li><strong>No data</strong> in reports.</li>
+<li><strong>Errors</strong> in the account.</li>
+</ul>
+<p>Meta's ad algorithm <span class="ex">(the system that picks who sees your ad)</span> can find suitable buyers consistently. It needs a pixel. A pixel is a small tracking code on your store that sends purchase data to Meta.</p>
+<p><strong>Set up the account cleanly from the start.</strong> This avoids problems later.</p>
+<p>Meta's setup order:</p>
+<ol type="1">
+<li><strong>Create the Facebook ad account.</strong></li>
+<li><strong>Create the Facebook page.</strong></li>
+<li><strong>Set up the pixel.</strong> This means: connect the domain, verify the domain <span class="ex">(prove you own it)</span>, integrate the Shopify conversion API <span class="ex">(a second way to send sales data from Shopify to Meta)</span>, and turn on the data switches <span class="ex">(the settings that turn tracking on)</span>.</li>
+<li><strong>Connect Facebook to Shopify.</strong></li>
+<li><strong>Connect Instagram</strong> and fill it with images.</li>
+</ol>
+<p>A 2024 procedure for the store's account starts with the same core steps:</p>
+<ol type="1">
+<li><strong>Create the Business Manager account separately</strong> from your personal Facebook account.</li>
+<li><strong>Create the ad account</strong> inside Business Manager.</li>
+<li><strong>Create the store's Facebook page</strong> inside Business Manager, with you as admin <span class="ex">(the person who controls it)</span>.</li>
+<li><strong>If the account gets restricted</strong> (Meta limits it), contact support through facebook.com/business/help and choose Get support.</li>
+</ol>
+<p><strong>Account hierarchy</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What it is</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business Manager</td>
+<td>Top-level hub. All business assets sit under it: Facebook page, Instagram account, ad accounts, pixels and people access. It is where the business account is managed.</td>
+<td></td>
+</tr>
+<tr>
+<td>Ad accounts</td>
+<td>Ads Manager (Meta's screen for ads) manages all ad accounts. An ad account is where campaigns <span class="ex">(the top layer of an ad project)</span>, ad sets <span class="ex">(the audience and budget layer inside a campaign)</span> and ads are created and analysed. A fresh Business Manager should start with one ad account.</td>
+<td></td>
+</tr>
+<tr>
+<td>Pages and Instagram</td>
+<td>Linked to the Business Manager so ads can run on them.</td>
+<td>,</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Use a separate Business Manager for each business you run.</strong> Do not reuse one from another business.</p>
+<p><strong>Run ads through a separate Meta Business Manager</strong>, not a personal ad account. This separation helps protect the ad account. It lowers the chance Meta flags or restricts it.</p>
+<p><strong>Keep ad accounts and Business Managers separate.</strong> Use one Business Manager for ads, and another for each business if needed.</p>
+<p><strong>Avoid combining multiple stores in a single ad account.</strong> It becomes hard to organise.</p>
+<p><strong>Add several pages, Instagram accounts and ad accounts to one admin only</strong> when you need to share data between them, such as pixel data for cross-promotion.</p>
+<p><strong>Unrelated stores should get their own admin.</strong></p>
+<p><strong>Add a second trusted person as an admin</strong> on Meta Business Manager accounts.</p>
+<p>This keeps access if the personal profile is restricted or lost.</p>
+<p>A personal profile is needed to create a new Business Manager. Losing it can block recovery <span class="ex">(getting back into the account)</span>.</p>
+</details><details class="part" id="creating-the-business-manager"><summary><h2>Creating the Business Manager</h2><span class="pm">1 min</span></summary>
+<p>A Business Manager is <strong>free to create</strong> at business.facebook.com. **</p>
+<p><strong>Meta's Business Manager is needed to run ads.</strong> **</p>
+<p>Creating a Business Manager for a new store (Source C method):</p>
+<ol type="1">
+<li><strong>Go to business.facebook.com</strong> while logged in with your personal Facebook account.</li>
+<li><strong>Click Create an account.</strong></li>
+<li><strong>Enter the business name.</strong> Use your registered business name <span class="ex">(the name on your official papers)</span>. If you have none, use your Shopify store name.</li>
+<li><strong>Enter your name and a business email address.</strong> A regular email you check often is acceptable. Avoid using only the Shopify email.</li>
+<li><strong>Click Submit</strong> to create the Business Manager.</li>
+</ol>
+<p>Creating a Business Manager for a new store (Source A method):</p>
+<ol type="1">
+<li><strong>Open business.facebook.com</strong> in a new tab or browser.</li>
+<li><strong>If you have no Business Manager yet, click Create a new account.</strong> If you already have one, open the account dropdown <span class="ex">(a menu that opens from a list)</span> in the left navigation. Click <strong>Create</strong> at the top of the list to make a new one for this business.</li>
+<li><strong>Name the Business Manager after your store.</strong> Enter your business email, preferably the same email as your Google account.</li>
+<li><strong>Log in.</strong> The top shows your business name. The middle section is empty until you add assets <span class="ex">(things like pages and ad accounts)</span>.</li>
+</ol>
+<p>Naming and email rules:</p>
+<ul>
+<li><strong>Name the Business Manager after the store.</strong></li>
+<li><strong>Enter a business email address</strong> when creating it.</li>
+<li><strong>Use the same email as your Google account</strong>, so access stays consistent across platforms.</li>
+</ul>
+<p><strong>Do not submit a second Business Manager for the same business.</strong> If Meta reports that your business may already have one, continue with the existing account. Each business should have only one.</p>
+</details><details class="part" id="business-manager-limits"><summary><h2>Business Manager limits</h2><span class="pm">1 min</span></summary>
+<p>The number of ad accounts a Business Manager allows <strong>goes up with successful payment transactions</strong>. The sequence is 1, then 2, then 5, 7, 8 and finally 12 accounts.</p>
+<p>If the Business Manager limit blocks creating another ad account, <strong>open a new Business Manager</strong> at business.facebook.com/create.</p>
+<p>Before creating a new ad account, <strong>check the current ad account limit</strong> in Business Settings:</p>
+<ul>
+<li>If the limit is not reached, create the new ad account there and add payment details.</li>
+<li>If the limit is reached, open a new Business Manager at business.facebook.com/create.</li>
+</ul>
+<p><strong>By default, Facebook allows only one Business Manager per personal account.</strong> To create one, use business.facebook.com/create. If it is blocked, check the business details in Business settings and complete them. The account should look like a real business.</p>
+<p>Business info also contains an <strong>Ad account creation limit</strong> field. It caps how many ad accounts the portfolio <span class="ex">(the set of your business assets)</span> can create. <strong>Check this value</strong> before planning to add more ad accounts under the same business. [L651.022]</p>
+</details><details class="part" id="navigating-business-settings"><summary><h2>Navigating Business settings</h2><span class="pm">1 min</span></summary>
+<p>Meta has renamed Facebook Business Manager to <strong>Meta Business Manager</strong>. The tools and interface remain largely the same. Menu and screen labels may differ from older guides. The setup steps stay the same.</p>
+<p>Navigation in Business Manager:</p>
+<ul>
+<li><strong>The hamburger menu</strong> (three lines, top left) expands all tools. Business settings is listed at the top under Shortcuts.</li>
+<li><strong>In Business settings, expand the sidebar sections</strong> (the menu on the left). Accounts and Brand safety are collapsed by default, meaning closed when you first open them. Expand them before their sub-items appear: Pages, Instagram accounts, Ad accounts and Domains.</li>
+</ul>
+<p><strong>Meta Business Suite</strong> (Meta's app for managing ads and pages) is used to check the status of ad accounts. Its Home screen shows Ad account performance, alerts and a prompt to go to Business settings if you lack permission to an ad account. [L651.015]</p>
+</details><details class="part" id="finishing-the-business-basics"><summary><h2>Finishing the business basics</h2><span class="pm">1 min</span></summary>
+<p>Finish the Business Manager basics in this order:</p>
+<ol type="1">
+<li><strong>Open Settings</strong> and go to Business settings.</li>
+<li><strong>Open Business info</strong> and fill in the business details: legal name <span class="ex">(the official registered name)</span>, address, phone, website, and tax ID <span class="ex">(the business tax number)</span> if available.</li>
+<li><strong>Start verification</strong> via View details. Verification is Meta's check that the business is real.</li>
+<li><strong>Scroll down and turn on two-factor authentication</strong> (a second login check, such as a code).</li>
+<li><strong>Submit the business information.</strong></li>
+</ol>
+<p><strong>Enter the legal business name, address, business phone number, website and, if available, the tax ID</strong> in Business info. Then use View details to start business verification.</p>
+<p><strong>Enter the business address</strong> in your Facebook business account settings.</p>
+<p><strong>Business email:</strong> open Business info, scroll down to the Business email field and replace it with your own email address. Notifications about the business portfolio are sent to this address. [L651.007]</p>
+<p>Business info also contains a <strong>Primary business location</strong> field. You can edit it. [L651.007]</p>
+</details><details class="part" id="business-notifications"><summary><h2>Business notifications</h2><span class="pm">1 min</span></summary>
+<p>In Business settings &gt; Business options, the <strong>Pages and notifications toggle</strong> (an on/off switch) decides whether people in the portfolio see Page notifications on Facebook as well as in business tools. When it is off, notifications appear only in business tools. [L651.021]</p>
+<p>A separate <strong>Business notifications on Facebook toggle</strong> (an on/off switch) controls notifications about the portfolio's Pages on Facebook. [L651.021]</p>
+</details><details class="part" id="why-a-page-is-required"><summary><h2>Why a Page is required</h2><span class="pm">1 min</span></summary>
+<p><strong>Make sure a Facebook Page exists</strong> before publishing a warm-up or test ad <span class="ex">(a first ad to test the account)</span> in a new Meta ad account.</p>
+<p>If there is no page, <strong>create one</strong>. Then select it along with the matching Instagram account. <strong>The ad cannot run without a page.</strong></p>
+<p>Before an ad account can publish ads, Ads Manager asks for a <strong>verified phone number</strong> and a <strong>confirmed Facebook Page</strong>.</p>
+<p><strong>Create at least a basic Facebook page</strong> from the beginning, even though it is not required for the first sales. **</p>
+<p><strong>One post per week is enough</strong> to show customers that the store is real. **</p>
+<p><strong>A test page can use a placeholder name</strong> (a temporary name) while the brand is still being tested. [L487.069]</p>
+<p>Use a placeholder name for a test page:</p>
+<ul>
+<li><strong>A Facebook business page can be created in about five minutes.</strong></li>
+<li><strong>Set up a matching Instagram account</strong> alongside it before posting content for early engagement <span class="ex">(the first likes, comments and follows)</span>.</li>
+</ul>
+</details><details class="part" id="creating-the-page"><summary><h2>Creating the page</h2><span class="pm">2 min</span></summary>
+<p><strong>There are three routes.</strong> The right one depends on your situation.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profile switcher, personal profile</td>
+<td>Public page created from your personal profile through the profile switcher <span class="ex">(the menu that switches between profiles)</span>.</td>
+<td>L651.001 (steps 7 to 8),</td>
+</tr>
+<tr>
+<td>Inside Business Manager</td>
+<td>When you create the page from inside Business Manager with you as admin. <em>(Older method, 2020.)</em></td>
+<td>L551.034, L806.060</td>
+</tr>
+<tr>
+<td>Personal account fallback</td>
+<td>When the page category Brand blocks creation from Business Manager.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Route 1, creating a public Facebook Page from your personal profile:</p>
+<ol type="1">
+<li><strong>Open your Facebook account</strong> and click See all profiles.</li>
+<li><strong>Click See all pages.</strong></li>
+<li><strong>Click Create new page.</strong></li>
+<li><strong>Name the page after the store.</strong></li>
+<li><strong>Choose a category</strong> that fits the niche <span class="ex">(the product area of the store)</span>, for example Beauty shop or Clothing brand. If no fitting option exists, use Discount shop.</li>
+<li><strong>Write a one- to two-line bio</strong> that describes the brand. It shows under the page name.</li>
+<li><strong>Click Create page</strong>, then fill in the rest: Shopify store or website link, phone number, store email, business address.</li>
+<li><strong>Upload a profile picture and a background image.</strong></li>
+</ol>
+<p>Route 1, Source D method: [L651.001]</p>
+<ul>
+<li><strong>Create a public Facebook Page</strong> through the profile switcher by choosing See all profiles and then Create Page. [L651.001]</li>
+<li><strong>Upload a profile picture and banner</strong> (the wide top image). Add a short store description and a website link. [L651.001]</li>
+</ul>
+<p>Route 2, creating inside Business Manager (2020 method): [L551.034]</p>
+<ol type="1">
+<li><strong>Open Facebook Business Manager</strong> at business.facebook.com. [L551.034]</li>
+<li><strong>To create a new page,</strong> use the search box at the top right. Search for create a page and create it inside Business Manager. [L551.034]</li>
+<li><strong>To use a page you already own,</strong> search for the page inside Business Manager so Facebook confirms ownership. [L551.034]</li>
+<li><strong>Assign the page to your Business Manager account,</strong> then log in to Business Manager to run ads on it. [L551.034]</li>
+<li><strong>Do not delete an existing page</strong> to fix setup problems. [L551.034]</li>
+</ol>
+<p>Route 3, personal account fallback: <strong>if the page category Brand blocks creation</strong> from Business Manager, create the page from your <strong>personal Facebook account</strong> instead.</p>
+<p>The category has little impact. An unrelated one can be used, as long as the page is connected to your Business Manager and appears when campaigns are created.</p>
+</details><details class="part" id="connecting-the-page-to-business-manager"><summary><h2>Connecting the page to Business Manager</h2><span class="pm">1 min</span></summary>
+<p>A Facebook page created from a personal profile is first owned by that profile. <strong>It must be claimed into the Business Manager.</strong></p>
+<p>Once linked, the page appears in the left navigation. Ads run from that page.</p>
+<p>Linking an existing page:</p>
+<ol type="1">
+<li><strong>In Business settings, expand Accounts</strong> and click Pages.</li>
+<li><strong>Click Add</strong> at the top and choose Add a page. Choose this option when your business already owns the page. The other two options are for requesting access or creating a new page.</li>
+<li><strong>Paste the link or ID of the page</strong> (its web address or number). Select the page when it appears, and click Add page.</li>
+</ol>
+<p><strong>Check the result.</strong> The new Page should appear under Business settings &gt; Pages, owned by the business portfolio. Your own user should be assigned at Full control <span class="ex">(the highest access level)</span>. [L651.013]</p>
+<p><strong>A Page not connected to the portfolio cannot be managed from it.</strong> [L651.013]</p>
+</details><details class="part" id="page-health"><summary><h2>Page health</h2><span class="pm">1 min</span></summary>
+<p><strong>Filling in the full page information</strong> (website link, phone, email, address) raises the page health status <strong>from fair to good</strong>.</p>
+<p>A healthier page supports smoother ad delivery <span class="ex">(how Meta shows your ads)</span>.</p>
+<p><strong>Finish the page with the checklist</strong> shown on a new Facebook Page. It lists: Category, Personal details, Details, Links, Services, Bio, About you, Pinned details <span class="ex">(fixed info at the top of the page)</span>, Book, Offers, Work and Education. [L651.026]</p>
+<p>Filling these in makes the page look complete to visitors. [L651.026]</p>
+<p><strong>Start with Category and Links.</strong> They were required or are used most in the setup. [L651.026]</p>
+</details><details class="part" id="when-to-connect-instagram"><summary><h2>When to connect Instagram</h2><span class="pm">1 min</span></summary>
+<p>The timing depends on the stage of the brand:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Testing products</td>
+<td><strong>Do not connect an Instagram account.</strong> Ads still appear on Instagram, and clicking the profile sends the user straight to the website.</td>
+<td></td>
+</tr>
+<tr>
+<td>Building a brand</td>
+<td><strong>Connect an Instagram account.</strong> Buyers check recent posts, follower count <span class="ex">(the number of followers)</span> and active stories <span class="ex">(short temporary posts)</span>. A weak profile makes the store look unserious.</td>
+<td></td>
+</tr>
+<tr>
+<td>Early engagement</td>
+<td><strong>Set up a matching Instagram account</strong> alongside the page before posting content.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</details><details class="part" id="connecting-the-account"><summary><h2>Connecting the account</h2><span class="pm">1 min</span></summary>
+<p><strong>Connecting it to the Business Manager lets ads run on Instagram as well as Facebook.</strong></p>
+<p>Instagram linking, Source A method:</p>
+<ol type="1">
+<li><strong>In Business settings, expand Accounts,</strong> click Instagram accounts, click Add and then Connect to Instagram account.</li>
+<li><strong>Log in with the business Instagram account,</strong> not a personal one.</li>
+<li><strong>Meta then asks for permission</strong> to create content, see messages and comments, create ads and see insights <span class="ex">(the statistics)</span>.</li>
+</ol>
+<p>Instagram linking, Source C method:</p>
+<ol type="1">
+<li><strong>In Business settings &gt; Accounts &gt; Instagram accounts,</strong> click Add and then Connect your Instagram account.</li>
+<li><strong>Log in to the business Instagram account</strong> in the login window that opens. The username should ideally match the store name.</li>
+</ol>
+<p>Source A procedure, short form:</p>
+<ol type="1">
+<li><strong>Expand Accounts,</strong> click Instagram accounts, click Add, then click Connect to Instagram account. Log in with the business Instagram login.</li>
+</ol>
+<p><strong>Do not link your personal Instagram account</strong> to the Business Manager.</p>
+<p><strong>Connect only the business Instagram account</strong> that was set up for the store.</p>
+</details><details class="part" id="creating-the-ad-account"><summary><h2>Creating the ad account</h2><span class="pm">1 min</span></summary>
+<p><strong>Create the ad account in Business settings.</strong> The path is: Accounts, then Ad accounts, then Add, then Create a new ad account.</p>
+<p>Source C procedure:</p>
+<ol type="1">
+<li><strong>Enter the ad account name.</strong></li>
+<li><strong>Select the time zone</strong> (the local time area) and <strong>currency</strong> (the money type, such as USD).</li>
+<li><strong>Click Next.</strong></li>
+<li><strong>Choose the business</strong> (your own business) and <strong>click Create.</strong></li>
+</ol>
+<p>Source A form fields:</p>
+<ul>
+<li><strong>Advertising on behalf of</strong> your business name.</li>
+<li><strong>Payment method,</strong> which is how you will pay Meta once ads run.</li>
+<li><strong>Currency.</strong></li>
+<li><strong>Ad account name.</strong></li>
+<li><strong>Time zone.</strong></li>
+</ul>
+<p>Then <strong>click Create ad account.</strong></p>
+<p>Source A 2020 field summary, for reference: fill in Advertising on behalf of <span class="ex">(business name)</span>, Payment method, Currency, Ad account name <span class="ex">(your store name)</span> and Time zone <span class="ex">(the zone you operate in)</span>. Then click Create ad account.</p>
+<p><strong>Create a new ad account for each new store,</strong> even if an existing one is available. This gives the store fresh data and a unique account.</p>
+<p>When adding an ad account you can <strong>claim an existing one</strong>, <strong>request access</strong> to someone else's, or <strong>create a new one</strong>.</p>
+</details><details class="part" id="naming-and-time-zone"><summary><h2>Naming and time zone</h2><span class="pm">1 min</span></summary>
+<p><strong>Name the ad account after your store</strong> so it is easy to identify.</p>
+<p><strong>Set the time zone</strong> to the zone where you are based and do business. It is used later when creating promotions.</p>
+</details><details class="part" id="assigning-yourself-access"><summary><h2>Assigning yourself access</h2><span class="pm">1 min</span></summary>
+<p>After creating the ad account, <strong>assign yourself</strong>. Select your own name in the people list and grant the <strong>Manage ad account</strong> permission. This gives you full access to the account.</p>
+<p>To give yourself access to an ad account: open Business settings, go to the Ad accounts section in the left sidebar, open the ad account, choose Add people, select your own name and set permissions. [L651.006]</p>
+<p>In Business settings &gt; People &gt; Add people, <strong>enter the email address</strong> of a partner or team member and assign access.</p>
+<p><strong>The person who created the account is added automatically</strong> by default.</p>
+</details><details class="part" id="verifying-the-account-before-launch"><summary><h2>Verifying the account before launch</h2><span class="pm">1 min</span></summary>
+<p><strong>Before launching, check the ad account name.</strong> It is shown after you open Ads Manager from Business settings &gt; All tools.</p>
+<p><strong>If the name is different, you may be advertising from a personal ad account.</strong></p>
+<p><strong>Always confirm that it is the business ad account.</strong></p>
+<p><strong>Check the ad account in Meta Business Suite</strong> and confirm it is active, with you assigned to it. [L651.014]</p>
+<p>In Business settings &gt; Ad accounts, each ad account row offers Assign people, Create ad, Assign partner and Open in Ads Manager. [L651.023]</p>
+<p>When you select the ad account, its <strong>ad account ID</strong> (its unique number) and owning business appear. Connected assets on that screen list the Pages and other assets linked to the ad account. [L651.023]</p>
+<p><strong>Before creating ads in Ads Manager,</strong> a notice asks you to review Meta's non-discrimination policy (Meta's rule against unfair treatment in ads). Then click <strong>I accept</strong>. [L651.018]</p>
+<p>The policy prohibits ads that deny opportunities to individuals or groups based on protected characteristics such as race, religion, age, sex or disability. [L651.018]</p>
+<p>Ads Manager is where campaigns, ad sets and ads are created and reviewed. [L651.019]</p>
+<p>A new ad account shows no campaigns. It shows the message that no ads have been created yet, with a <strong>Create</strong> button to start. [L651.019]</p>
+</details><details class="part" id="currency"><summary><h2>Currency</h2><span class="pm">1 min</span></summary>
+<p><strong>Use ad accounts in USD</strong> (US dollars) if possible. [L690.019]</p>
+<p>Meta charges at the same rate for each currency. But USD is the cheapest of USD, EUR <span class="ex">(euros)</span> and GBP (British pounds), and Meta prefers spending in USD. [L690.019]</p>
+<p><strong>Set the ad account currency to USD</strong> in Business Manager or the ad account settings. Do not set it via the credit card. [L690.019]</p>
+<p>The currency setting in the ad account: [L690.021]</p>
+<ul>
+<li><strong>Business Manager or ad account settings &gt; currency &gt; USD.</strong> [L690.021]</li>
+<li><strong>The card can stay in another currency,</strong> but the bank may charge a foreign conversion fee <span class="ex">(an extra bank charge for changing money)</span>. [L690.021]</li>
+</ul>
+<p><strong>Changing an ad account's currency after creating it does not lose the Meta pixel.</strong> [L690.020]</p>
+<p>The pixel can be attached to any ad account, regardless of currency. [L690.020]</p>
+<p>In Billing &amp; payments <span class="ex">(where you pay and see bills)</span> for the ad account, the example showed <strong>US Dollars (USD)</strong> by default. [L651.016]</p>
+<p><strong>Set the currency and country to match the business.</strong> [L651.016]</p>
+</details><details class="part" id="payment-methods"><summary><h2>Payment methods</h2><span class="pm">1 min</span></summary>
+<p><strong>Add a payment method</strong> under Billing &amp; payments. The currency and country must match the business. [L651.001]</p>
+<p>To add one: open Billing &amp; payments for the ad account, open Payment methods and <strong>choose Add payment method.</strong> [L651.016]</p>
+<p>Billing details include business name, address and currency. [L651.016]</p>
+<p><strong>A payment method can be skipped at first.</strong> But Meta may ask for it when the first ad is published.</p>
+<p><strong>A declined or missing card blocks all ad spend.</strong> If the payment card fails, ads stop running.</p>
+<p><strong>Check the card before launch.</strong> An inactive card is a common reason ads do not spend.</p>
+</details><details class="part" id="portfolio-invitations-and-people-access"><summary><h2>Portfolio invitations and people access</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="joining-a-business-portfolio"><summary><h2>Joining a business portfolio</h2><span class="pm">2 min</span></summary>
+<p>A business portfolio is the shared Meta account that holds your Facebook Pages and ad accounts. Meta's main hub for it is called <strong>Business Manager</strong>.</p>
+<p>Set up access to a Meta business portfolio in this order: [L651.001]</p>
+<ol type="1">
+<li>Wait about <strong>6 hours</strong> after receiving the business portfolio invitation link before joining. [L651.001, L651.002]</li>
+<li>Open the invitation link through the <strong>proxy</strong> assigned to the account. A proxy is a separate internet connection used for this account. [L651.001, L651.003]</li>
+<li>Log in with Facebook. If asked, enter the <strong>verification code</strong> from the email. This is a one-time code sent to your email address. [L651.001, L651.003]</li>
+<li>Enter your name as it should appear in the business portfolio. [L651.001]</li>
+<li>Continue and <strong>accept</strong> the invitation. [L651.001]</li>
+<li>Open <strong>Business settings</strong>, the control panel of Business Manager. Check the ad accounts listed. An ad account is the account that pays for and runs ads. The example portfolio had <strong>three</strong>. [L651.001]</li>
+<li>Open one ad account. Add yourself under <strong>Add people</strong>. [L651.001]</li>
+<li>Assign permissions to yourself. [L651.001]</li>
+<li>In <strong>Business info</strong>, replace the business email with your own email address. [L651.001, L651.007]</li>
+<li>Create a public Facebook Page through the <strong>profile switcher</strong>, the menu for switching between profiles. [L651.001]</li>
+<li>Upload a profile picture and banner. [L651.001]</li>
+<li>Add a short store description and a website link. [L651.001]</li>
+<li>Confirm the Page is connected under <strong>Business settings &gt; Pages</strong>. [L651.001]</li>
+<li>Confirm the ad account shows as <strong>active</strong> in <strong>Meta Business Suite</strong>, Meta's dashboard for pages and ads. [L651.001]</li>
+<li>Add a payment method under <strong>Billing &amp; payments</strong>, with currency and country matching the business. [L651.001]</li>
+</ol>
+<p>Wait about <strong>6 hours</strong> after receiving the Meta business portfolio invitation link before trying to join it. [L651.002]</p>
+<p>Open the invitation link through the proxy assigned to the account and log in with Facebook. If a verification code is requested, it is sent to the email address, so get it there. [L651.003]</p>
+<p>When you open an invitation link while logged out, the Meta business login page offers four choices: Log in with Facebook, Log in with Instagram, Create new account and Log in with a managed Meta account. A managed Meta account is an account a company creates and controls. To join a business portfolio with a personal Facebook profile, use the <strong>Facebook</strong> option. [L651.020]</p>
+</details><details class="part" id="checking-an-invitation-before-accepting"><summary><h2>Checking an invitation before accepting</h2><span class="pm">1 min</span></summary>
+<p>Before you accept a business portfolio invitation, check these four things on the review screen:</p>
+<ul>
+<li>The business name.</li>
+<li>The country.</li>
+<li>The website.</li>
+<li>The business verification status, which shows whether Meta has confirmed the business is real. [L651.004]</li>
+</ul>
+<p><strong>Decline</strong> the invitation if you do not know the business. Accepting adds you to its portfolio. [L651.004]</p>
+<p>Once you accept an invitation, other people who manage the portfolio can see your name, email, profile picture and the actions you took for the business. [L651.005]</p>
+<p>Actions taken on behalf of the business are <strong>not</strong> shared to your personal profile. [L651.005]</p>
+</details><details class="part" id="permission-levels"><summary><h2>Permission levels</h2><span class="pm">1 min</span></summary>
+<p>For an ad account, the two permission levels differ as follows: [L651.006, L651.025]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What it offers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Partial access</td>
+<td>Manage campaigns <span class="ex">(ads)</span>, View performance and Manage Creative Hub mockups. [L651.006]</td>
+</tr>
+<tr>
+<td>Full control</td>
+<td>Manage ad accounts, which covers ad account settings, finances and permissions. [L651.006]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Full control on an ad account is broader. It includes ad account settings, finances and permissions. [L651.025]</p>
+<p>Full control on a Facebook Page means everything <strong>except</strong> sensitive actions. Sensitive actions are restricted tasks. A person with Full control can manage the Page but cannot perform these restricted actions. [L651.025]</p>
+<p>Assign ad account access with this difference in mind. [L651.025]</p>
+<p>To give yourself access to an ad account, follow these steps:</p>
+<ul>
+<li>Open <strong>Business settings</strong>.</li>
+<li>Go to the <strong>Ad accounts</strong> section in the left sidebar.</li>
+<li>Open the ad account.</li>
+<li>Choose <strong>Add people</strong>.</li>
+<li>Select your own name.</li>
+<li>Set permissions.</li>
+</ul>
+<p><strong>Partial access</strong> offers Manage campaigns <span class="ex">(ads)</span>, View performance and Manage Creative Hub mockups. Creative Hub is the place where ad mockups, or draft previews, are made.</p>
+<p><strong>Full control</strong> offers Manage ad accounts, which covers ad account settings, finances and permissions.</p>
+</details><details class="part" id="domain-verification"><summary><h2>Domain verification</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="why-verify"><summary><h2>Why verify</h2><span class="pm">1 min</span></summary>
+<p>Domain verification shows Meta that you own the website that sends traffic and conversion data. Conversion data records purchases and sign-ups from your site. Data is shared between your site and Meta. This ownership check lets that data pass through.</p>
+<p>A domain only needs to be verified <strong>once</strong>. The example account had several verified domains because it ran ads through several domains. An agency model would add domains differently.</p>
+<p>Meta offers three domain verification options. The example used <strong>DNS verification</strong>. DNS is the system that tells the internet where your domain points. This option gives you a <strong>TXT record</strong> value. A TXT record is a short text note added to your domain's DNS settings. It must be added to the domain's DNS configuration.</p>
+</details><details class="part" id="procedure"><summary><h2>Procedure</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>Expand <strong>Brand safety</strong> in Business settings and click <strong>Domains</strong>.</li>
+<li>Click <strong>Add</strong>, choose <strong>Create a new domain</strong>, type the store URL starting with https, and click <strong>Add</strong>.</li>
+<li>Choose the <strong>DNS verification</strong> option and copy the text value shown.</li>
+<li>Open the domain settings of your store.
+<ul>
+<li>For a domain bought through Shopify, go to <strong>Sales channels &gt; Online store &gt; Domains</strong>.</li>
+<li>Otherwise, go to the site where the domain is hosted.</li>
+<li>Select the <strong>main domain</strong>, not the myshopify.com address. Myshopify.com is Shopify's default store address.</li>
+<li>Then click <strong>Manage</strong> and open <strong>DNS settings</strong>.</li>
+</ul></li>
+<li>Click <strong>Add custom record</strong>, choose <strong>TXT</strong>, leave the Name as <strong>@</strong>, paste the copied value into the text value field and click <strong>Confirm</strong>. The @ symbol means the main domain.</li>
+<li>Return to Business Manager. Make sure you are still in the DNS verification section, and click <strong>Verify</strong>. If it shows a mismatch, wait a few minutes and try again.</li>
+<li>After it verifies, <strong>refresh</strong> the page to confirm the domain shows as verified.</li>
+</ol>
+</details><details class="part" id="common-errors-and-timing"><summary><h2>Common errors and timing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Adding the DNS TXT record in the wrong place is a common error. Enter the <strong>main domain</strong>, not the myshopify.com address, or the record will not be found.</li>
+<li>After adding the record, go back to the <strong>DNS verification</strong> option before clicking Verify. Verifying from the meta tag section fails. A meta tag is a hidden line of code in a website's header.</li>
+<li>After adding a DNS TXT record, Meta may report a <strong>mismatch</strong> on the first Verify attempt.</li>
+<li>Meta's documentation says DNS changes can take up to <strong>72 hours</strong> to spread across the internet. In practice, it can take only a few minutes. In one setup, verification went through after about <strong>2 minutes</strong>.</li>
+</ul>
+</details><details class="part" id="business-manager-security-and-recovery"><summary><h2>Business Manager security and recovery</h2><span class="pm">1 min</span></summary>
+<p>Turn on <strong>two-factor authentication</strong> when you finish the Business Manager basics. This adds a second login check, such as a code on your phone.</p>
+<p>Add a <strong>second trusted person</strong> as an admin. An admin is a person with full control of the business. If your personal profile is restricted or lost, the business keeps access.</p>
+<p>If the account gets restricted, contact support through <strong>facebook.com/business/help</strong> and choose <strong>Get support</strong>. [L806.060]</p>
+</details><details class="part" id="tax-on-advertising"><summary><h2>Tax on advertising</h2><span class="pm">1 min</span></summary>
+<p>Meta applies a <strong>tax</strong> to advertising when the ad account is registered in the UK or in EU countries. The rate depends on each country. [L552.019]</p>
+<p>Ad account country settings were discussed as a way to avoid this tax. The speaker warned that this should be <strong>verified with a tax professional</strong>, because tax and legal rules are complex. [L552.019]</p>
+</details><details class="part" id="further-details"><summary><h2>Further details</h2><span class="pm">6 min</span></summary>
+<h3 id="facebook-traffic-setup">Facebook traffic setup</h3>
+<p>Traffic setup on Facebook, in order:</p>
+<ol type="1">
+<li>Sign up for Facebook Business Manager.</li>
+<li>Create your first Facebook <strong>remarketing</strong> campaign. Remarketing means showing ads again to people who already visited your store.</li>
+</ol>
+<p>Facebook Business Manager is the account hub for Facebook and Instagram ads. It must exist before you create the first Facebook remarketing campaign. Facebook and Instagram business pages are created during store setup.</p>
+<p>Traffic setup on Facebook:</p>
+<ol type="1">
+<li>Sign up for Facebook Business Manager.</li>
+<li>Create the first Facebook remarketing campaign.</li>
+</ol>
+<p>Facebook Business Manager is the account hub for managing Facebook and Instagram pages, ad accounts and campaigns.</p>
+<h3 id="creating-or-reusing-a-page-in-business-manager">Creating or reusing a page in Business Manager</h3>
+<ol type="1">
+<li>Open Facebook Business Manager at <strong>business.facebook.com</strong>.</li>
+<li>To create a new page, use the <strong>search box</strong> at the top right. Search for "create a page" and create it inside Business Manager.</li>
+<li>To use a page you already own, search for the page inside Business Manager. Facebook then confirms ownership.</li>
+<li>Assign the page to your Business Manager account. Then log in to Business Manager to run ads on it.</li>
+<li><strong>Do not delete</strong> an existing page to fix setup problems.</li>
+</ol>
+<h3 id="tax-details">Tax details</h3>
+<ul>
+<li>Meta applies a tax to advertising when the ad account is registered in the UK or in EU countries, depending on the rate in each country. Ad account country settings were discussed as a way to avoid this. The speaker warned this should be verified with a tax professional, as the rules are legal and tax questions.</li>
+</ul>
+<h3 id="full-setup-checklist-portfolio-and-page">Full setup checklist <span class="ex">(portfolio and Page)</span></h3>
+<ul>
+<li>Set up a Meta Business Manager account in this order:
+<ol type="1">
+<li>Wait about <strong>6 hours</strong> after receiving the business portfolio invitation link before joining.</li>
+<li>Open the invitation link through the <strong>proxy</strong> assigned to the account, log in with Facebook, and enter the verification code from the email if asked.</li>
+<li>Enter your name as it should appear in the business portfolio, continue, and <strong>accept</strong> the invitation.</li>
+<li>Open Business settings and check the ad accounts listed. The example portfolio had <strong>three</strong>.</li>
+<li>Open one ad account, add yourself under <strong>Add people</strong>, and assign permissions.</li>
+<li>In Business info, replace the business email with your own email address.</li>
+<li>Create a public Facebook Page through the profile switcher by choosing <strong>See all profiles</strong> and then <strong>Create Page</strong>.</li>
+<li>Upload a profile picture and banner, add a short store description and a website link.</li>
+<li>Confirm the Page is connected under <strong>Business settings &gt; Pages</strong>.</li>
+<li>Confirm the ad account shows as <strong>active</strong> in Meta Business Suite.</li>
+<li>Add a payment method under <strong>Billing &amp; payments</strong>, with currency and country matching the business.</li>
+</ol></li>
+</ul>
+<h3 id="invitation-and-access-details">Invitation and access details</h3>
+<ul>
+<li>Wait about <strong>6 hours</strong> after receiving the Meta business portfolio invitation link before trying to join it.</li>
+<li>Open the invitation link through the <strong>proxy</strong> assigned to the account and log in with Facebook. If a verification code is requested, it is sent to the email address, so get it there.</li>
+<li>Before you accept a business portfolio invitation, check the business name, country, website and business verification status on the review screen. <strong>Decline</strong> the invitation if you do not know the business, because accepting adds you to its portfolio.</li>
+<li>Once you accept a business portfolio invitation, your name, email, profile picture and actions taken for the business are visible to other people managing that portfolio. Actions taken on behalf of the business are <strong>not</strong> shared to your personal profile.</li>
+<li>In Business settings &gt; Business info, scroll down to the <strong>Business email</strong> field and replace it with your own email address. Notifications about the business portfolio are sent to this address. Business info also has a Primary business location field that you can edit.</li>
+<li>Check that the new Page appears under <strong>Business settings &gt; Pages</strong>. It should be owned by the business portfolio, with your own user assigned at <strong>Full control</strong>. A Page that is not connected to the portfolio cannot be managed from it.</li>
+<li>Check the ad account in Meta Business Suite and confirm it is <strong>active</strong>, with you assigned to it.</li>
+<li>Meta Business Suite is used to check the status of ad accounts. Its Home screen shows Ad account performance, alerts, and a prompt to go to Business settings if you lack permission to an ad account.</li>
+<li>In <strong>Billing &amp; payments</strong> for the ad account, open <strong>Payment methods</strong> and choose <strong>Add payment method</strong>. Billing details include business name, address and currency. The example showed <strong>US Dollars (USD)</strong> by default. Set the currency and country to match the business.</li>
+<li>Before you create ads in Ads Manager, a notice asks you to review Meta's non-discrimination policy and click <strong>I accept</strong>. The policy prohibits ads that deny opportunities to individuals or groups based on protected characteristics such as race, religion, age, sex or disability.</li>
+<li>Ads Manager is where campaigns, ad sets and ads are created and reviewed. A new ad account shows no campaigns and the message that no ads have been created yet, with a <strong>Create</strong> button to start.</li>
+<li>When you open an invitation link while logged out, the Meta business login page offers Log in with Facebook, Log in with Instagram, Create new account, and Log in with a managed Meta account. Use the <strong>Facebook</strong> option to join a business portfolio with a personal Facebook profile.</li>
+<li>In Business settings &gt; Business options, the <strong>Pages and notifications</strong> toggle decides whether people in the portfolio see Page notifications on Facebook as well as in business tools. When it is off, notifications appear only in business tools. A separate <strong>Business notifications on Facebook</strong> toggle controls notifications about the portfolio's Pages on Facebook.</li>
+<li>In Business settings &gt; Business info, the Account section has an <strong>Ad account creation limit</strong> field. It caps how many ad accounts the portfolio can create. Check this value before you plan to add more ad accounts under the same business.</li>
+<li>In Business settings &gt; Ad accounts, each ad account row offers <strong>Assign people</strong>, <strong>Create ad</strong>, <strong>Assign partner</strong> and <strong>Open in Ads Manager</strong>. When you select an ad account, its ad account ID and owning business appear. Connected assets on that screen list the Pages and other assets linked to the ad account.</li>
+<li><strong>Full control</strong> on a Facebook Page means everything except sensitive actions. A person with Full control can manage the Page but cannot perform the restricted sensitive actions.</li>
+<li><strong>Full control</strong> on an ad account is broader. It includes ad account settings, finances and permissions. Assign ad account access with this difference in mind.</li>
+<li>The "Finish setting up your Page" checklist on a new Facebook Page lists these sections: Category, Personal details, Details, Links, Services, Bio, About you, Pinned details, Book, Offers, Work and Education. Filling them in makes the Page look complete to visitors. Start with <strong>Category</strong> and <strong>Links</strong>, since those were required or are used most in the setup.</li>
+<li>Use ad accounts in <strong>USD</strong> if possible. Meta charges at the same rate for each currency, but USD is the cheapest of USD, EUR and GBP, and Meta prefers spending in USD. Set the ad account currency to USD in Business Manager or the ad account settings, not via the credit card.</li>
+<li>Changing an ad account's currency after creating it does not lose the <strong>Meta pixel</strong>. A pixel is a small tracking code that records visits and purchases on your site. The pixel can be attached to any ad account, regardless of currency.</li>
+<li>Settings for Meta ad account currency: Business Manager or ad account settings &gt; currency &gt; <strong>USD</strong>. The card can stay in another currency, but your bank may charge a <strong>foreign conversion fee</strong>. A "<strong>business limit reached</strong>" message when you create a new ad account can come from many pages linked to one business. Removing pages from Business Manager is one option to avoid deleting them. The speaker had not tested this option.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/09-meta-and-facebook-ads/02-business-manager-page-instagram-and-ad-account-setup/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../09-meta-and-facebook-ads/01-why-meta-platform-basics-and-when-to-start/"><span class="k">&larr; Previous</span><span class="v">Why Meta, platform basics and when to start</span></a><a class="nx" href="../../09-meta-and-facebook-ads/03-account-trust-warm-up-and-ban-prevention/"><span class="k">Next &rarr;</span><span class="v">Account trust, warm-up and ban prevention</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

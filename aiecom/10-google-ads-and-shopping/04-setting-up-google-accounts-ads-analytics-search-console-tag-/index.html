@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Setting up Google accounts: ads, analytics, search console, tag tracking | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.4: Setting up Google accounts: ads, analytics, search console, tag tracking.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/04-setting-up-google-accounts-ads-analytics-search-console-tag-/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Setting up Google accounts: ads, analytics, search console, tag tracking | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.4: Setting up Google accounts: ads, analytics, search console, tag tracking."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/04-setting-up-google-accounts-ads-analytics-search-console-tag-/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/04-setting-up-google-accounts-ads-analytics-search-console-tag-/">Plain version</a></div><h1>10.4 Setting up Google accounts: ads, analytics, search console, tag tracking</h1><article><h2 id="setup-order-and-measurement-first">Setup Order and Measurement First</h2>
+<ul>
+<li>Build the measurement infrastructure before spending on Google Ads. Sales can only be attributed to specific campaigns, and performance can only be optimised, if that infrastructure exists [L0032.001].</li>
+<li>Complete this setup before spending on Google Ads [L0032.002]:
+<ol type="1">
+<li>Link your Google Ads account to Google Analytics.</li>
+<li>Configure basic retargeting audiences and verify they are capturing visitor data.</li>
+<li>Activate conversion tracking and confirm it is recording purchase transactions. [L0032.002]</li>
+</ol></li>
+<li>Set up Google Ads, Google Shopping, Google Analytics and Google Merchant Center together from the first day of the store [L0715.021].</li>
+<li>Three components are required before running Google Ads in this approach. All three accounts are free to set up [L0714.010]:
+<ol type="1">
+<li>Google Analytics, to track website activity and build audiences of visitors who interacted in certain ways, for remarketing.</li>
+<li>Google Merchant Center, where all products are submitted to Google.</li>
+<li>Google Ads account, where the actual ad campaigns are created. [L0714.010]</li>
+</ol></li>
+<li>The same Google Analytics, Merchant Center and Google Ads accounts that enable paid campaigns also provide free Google traffic, so correct setup supports both paid and free Google visibility [L0714.012].</li>
+<li>Google traffic setup, in order [L0393.012]:
+<ol type="1">
+<li>Sign up for Google Ads, Google Search Console and Google Merchant Center.</li>
+<li>Create your first Google Shopping campaign and your first Google remarketing campaign. [L0393.012]</li>
+</ol></li>
+<li>Google Search Console and Google Merchant Center are set up alongside Google Ads. Merchant Center supplies the product feed that Google Shopping campaigns use [L0393.013]. Merchant Center feeds product data to Google Shopping campaigns, while Search Console covers search visibility of the store site [L0532.017].</li>
+<li>Traffic setup on Google and Bing, in order (Bing steps are not covered in these units) [L0532.016]:
+<ol type="1">
+<li>Sign up for Google Ads, Google Search Console and Google Merchant Center.</li>
+<li>Create the first Google Shopping and remarketing campaigns.</li>
+<li>Sign up for Bing Ads, Bing Webmaster Tools and Microsoft Merchant Center.</li>
+<li>Create the first Bing Shopping campaign. [L0532.016]</li>
+</ol></li>
+<li>Account count, with a conflict in the sources:
+<ul>
+<li>A new store typically needs four Google accounts: Google Ads, Google Merchant Center, Google Search Console and Google Analytics [L0857.018].</li>
+<li>A Shopify store launched with Google Shopping is described as needing four accounts or connections, but the unit lists three: Shopify with Google Analytics, Google Merchant Center and Google Ads. The Google Ads account is the first marketing channel and is focused on Google Shopping [L1065.004].</li>
+</ul></li>
+<li>Use the build-phase module on Google Ads setup even for an established business if existing campaigns are not performing as expected, so the account setup can be checked and corrected [L1495.003].</li>
+</ul>
+<h2 id="one-google-identity-and-one-email">One Google Identity and One Email</h2>
+<ul>
+<li>Create a dedicated business Google account email, not your personal primary Gmail [L0358.009].</li>
+<li>Use that same email for Gmail, Google Analytics, Google Search Console (formerly Webmaster Tools), Google Merchant Center and Google Ads, so the properties can link and share data [L0358.009].</li>
+<li>Using the same email for Google Ads, Google Analytics and Google Merchant Center lets the accounts detect each other, which removes manual permissions and reduces setup errors [L0184.006].</li>
+<li>Google links the accounts with one click only when they share one owner email [L0714.011].</li>
+<li>Use the same email for all three accounts (Analytics, Merchant Center, Google Ads) when setting them up in this order [L0714.013]:
+<ol type="1">
+<li>Create a Google Analytics account to track website activity and to build visitor audiences for remarketing.</li>
+<li>Create a Google Merchant Center account and submit all store products to it.</li>
+<li>Create a Google Ads account to build the ad campaigns. Use the same email address for all three accounts so Google can link them with one click and let data pass between them. [L0714.013]</li>
+</ol></li>
+<li>Use the same email for Google Ads, Merchant Center and Google Analytics, because Data Manager then lists the matching accounts automatically when you connect products [L0718.006].</li>
+<li>Use the same Google Workspace email for Merchant Center, Google Analytics and Google Search Console so the platforms can connect. Domain verification is then completed through Search Console automatically [L0729.015].</li>
+<li>Log in to Google Ads with the same Google email used for Search Console and Analytics, so all Google properties stay under one identity [L0717.007]. Using a different address splits the properties across separate identities and makes the setup inconsistent [L0717.016].</li>
+<li>The Google Ads Linked accounts screen and the Analytics Google Ad Links screen only list Google Ads accounts tied to the same Google email as the Analytics account. Use one email for Google Analytics, Search Console and Google Ads [L1520.002].</li>
+<li>Create the Google Ads account by logging in with your Google Workspace email address [L0184.001].</li>
+<li>Create the Merchant Center and Google Ads accounts with the owner's company email as admin, while customer-facing contact details use the store's customer service email [L1088.047].</li>
+<li>If the Google Ads account is created with a different email than Google Analytics, either create a new Google Analytics account or create a new Google Ads account using the Analytics email, depending on how much setup is already done [L0358.011].</li>
+<li>The main email of an existing Google Ads account cannot be changed. You can add another user as admin with full access [L0358.011].</li>
+</ul>
+<h2 id="creating-the-google-ads-account-in-expert-mode">Creating the Google Ads Account in Expert Mode</h2>
+<ul>
+<li>Create the account at ads.google.com [L0027.001].</li>
+<li>Create the Google Ads account first, without building any campaign. Campaign creation comes later, after the account is configured [L0717.001].</li>
+<li>Enter the business name and website, click Next, select Skip wherever possible, and choose Leave campaign creation to avoid Google's forced campaign setup attempt [L0184.003].</li>
+<li>Use the standard sign-up, not AdWords Express, if you plan to optimise campaigns. Express removes most manual control features [L0716.001, L0716.010].</li>
+<li>Google has renamed AdWords to Google Ads and changes its sign-up flow often, so screens may differ. Follow the logic (standard sign-up, control over settings, billing setup) rather than exact button positions [L0716.002]. Both names refer to the same product today [L0726.003].</li>
+<li>Avoid the automated goal-based options offered during sign-up, because they reduce manual control over targeting and websites [L0716.003].</li>
+<li>Do not let the wizard generate AI ads or accept automated AI features during setup. Generated ads are low quality and the automation tends to consume budget quickly [L0718.004].</li>
+<li>Skip the AI-generated ad questions, skip linking additional accounts, skip the goal selection, and choose the option to leave campaign creation [L0718.001].</li>
+<li>Do not build any campaign at account creation. Google will keep prompting you to create a campaign after the account exists. Ignore these prompts until your planning, research and campaign setup are ready [L0716.011, L0716.004].</li>
+<li>Do not use the simple guided Google Ads setup for a high-ticket dropshipping business. Google earns most of its money from ads, so its recommendations may favour Google over your margins. Goals such as getting more calls do not reflect a sound business objective [L0726.018].</li>
+<li>Enter the business address in the Google account used for Google Ads [L0696.015].</li>
+<li>Create a separate Google Ads account for each business. If the login already shows an existing account, choose Create new Google Ads account [L0717.008].</li>
+<li>A new business needs a new Google Ads account. An old account can be left alone or have its campaigns deleted, and the historical data stays [L1092.074].</li>
+<li>If you already have a working Google Ads account, do not repeat the account setup. The account only needs to be created once per business [L0716.012].</li>
+<li>After submitting business information, Google shows a completion message and opens an account with no campaigns. This empty state is expected, and campaigns are added later [L0717.018].</li>
+<li>Once the account is created, leave it without a campaign and mark the setup as complete [L0717.015].</li>
+<li>Log in and start from the Expert Mode wizard. Click Switch to expert mode instead of continuing in easy mode, which asks about the main advertising goal. Then click Create an account without a campaign [L0717.009].</li>
+<li>Standard account creation, step by step [L0716.010]:
+<ol type="1">
+<li>Search for Google Ads (or AdWords) and open the sign-up page.</li>
+<li>Select the standard sign-up, not AdWords Express.</li>
+<li>Skip the first campaign by choosing the option to create a campaign later.</li>
+<li>Enter the billing information and select the currency, which cannot be changed later.</li>
+<li>Enter the customer info: Individual or Business, and for a business the business name and address.</li>
+<li>Choose automatic payments and enter the credit card details.</li>
+<li>Submit the payment details.</li>
+<li>If the page is stuck on start reaching people, refresh the page and continue the billing setup.</li>
+<li>Open the billing settings and confirm that the account, the payment method and the billing details are saved. [L0716.010]</li>
+</ol></li>
+<li>Expert-mode account creation with the coupon, as one run [L0717.012]:
+<ol type="1">
+<li>Go to ads.google.com and open the coupon page for your country.</li>
+<li>Enter your email and click Get the offer code. Wait for the code by email (up to one minute).</li>
+<li>Sign in to Google Ads with the same email used for Google Search Console and Google Analytics.</li>
+<li>Click Switch to expert mode in the setup wizard.</li>
+<li>Click Create an account without a campaign.</li>
+<li>Enter the billing country, time zone (keep it consistent with other Google properties) and currency.</li>
+<li>Click Submit and confirm the account setup is complete.</li>
+<li>Later, to redeem the coupon: click the wrench icon (Tools and settings), open Billing and payments, add a payment method, then open Manage promotional codes and enter the code. [L0717.012]</li>
+</ol></li>
+<li>Full wizard run for a new store before Google Shopping ads [L0718.001]:
+<ol type="1">
+<li>Open the account sign-up page via the link provided with the lesson and check which promotional offer is shown, as offers change over time.</li>
+<li>Pick the offer that requires the smallest spend (offer A, which gives $500 credit after $500 spend in 60 days) and claim it. If the spend threshold is not reached, nothing is lost apart from the missing credit.</li>
+<li>Sign in with the Google Workspace account that will be used for the whole setup.</li>
+<li>Enter the business name and the store URL in the wizard and continue.</li>
+<li>Skip the AI-generated ad questions, skip linking additional accounts, skip the goal selection, and choose the option to leave campaign creation so no campaign is created.</li>
+<li>Confirm billing country, time zone and currency and continue.</li>
+<li>Set up the payments profile: choose Individual (or Organization if a company exists, or a proprietor name for sole traders) and add a payment method. A temporary $50 authorisation appears on the card and is usually released within a week or sooner.</li>
+<li>Answer no to the offer of personalised guidance from a Google Ads account strategist, then submit to create the account. [L0718.001]</li>
+</ol></li>
+<li>Account sign-up forces a first campaign. Do not use it. Skipping through the wizard and leaving campaign creation avoids an unwanted campaign that would otherwise have to be switched off [L0718.003].</li>
+<li>After payment, the new interface may stay stuck on a start reaching people screen with an error. Refresh the page and open billing settings to check whether the account and payment method were created, because the account can exist despite the error [L0716.009].</li>
+<li>Verify in billing settings that the account, payment method and billing details are saved [L0716.010].</li>
+</ul>
+<h2 id="campaign-prompt-during-sign-up-three-routes">Campaign Prompt During Sign-Up: Three Routes</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>What you do</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. Skip the campaign (current recommendation in these units)</td>
+<td>Leave campaign creation, use Expert Mode, and choose Create an account without a campaign</td>
+<td>Default for a new store; avoids an unwanted campaign</td>
+<td>[L0717.009, L0184.003, L0718.001, L0718.003]</td>
+</tr>
+<tr>
+<td>B. Enter a keyword and pause immediately</td>
+<td>On first opening, enter any keyword, then pause that campaign at once</td>
+<td>Described as the first-open prompt; the unit does not give a date</td>
+<td>[L0027.001]</td>
+</tr>
+<tr>
+<td>C. Set up a campaign, pause it, and activate after approval (older advice, 2019)</td>
+<td>Create the first campaign with a budget, pause it, wait for approval, then activate it when ready to spend</td>
+<td>Older approach; also used to read the Google Keyword Tool</td>
+<td>[L1068.061, L0243.009]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Route C, the older 2019 approach, in full [L1068.061]:
+<ol type="1">
+<li>Create the first campaign, which requires setting a budget.</li>
+<li>Pause the campaign immediately.</li>
+<li>Wait for approval while the account is pending.</li>
+<li>Once approved, the paused campaign can be activated when ready to spend. [L1068.061]</li>
+</ol></li>
+<li>Older 2019 advice on early-stage stores: create the account before the first supplier approval (timing is flexible), set up at least one campaign, turn it off immediately to prevent spending, and use the live account to read keyword search volume and cost-per-click estimates in the Google Keyword Tool without ad spend [L0243.009].</li>
+<li>Do not opt into the personalised guidance from a Google Ads account strategist offered during payment setup. These reps are sales staff who push automated features and higher spend, so answer no [L0718.005].</li>
+</ul>
+<h2 id="time-zone-currency-and-billing-country">Time Zone, Currency and Billing Country</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Can it be changed later?</th>
+<th>Guidance</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Billing country</td>
+<td>No</td>
+<td>Must be the country the business operates in. The coupon page is chosen for the country where the billing address is located.</td>
+<td>[L0726.019, L0726.017, L0717.002]</td>
+</tr>
+<tr>
+<td>Time zone</td>
+<td>No</td>
+<td>Two guidelines apply together: (a) it determines when your ads run, so choose it based on the hours and region where you want campaigns active; (b) keep it consistent with Search Console and Analytics (for example Eastern), because mismatched time zones make cross-tool reporting harder</td>
+<td>[L0027.002, L0027.003, L0717.010, L0717.011]</td>
+</tr>
+<tr>
+<td>Currency</td>
+<td>No</td>
+<td>Pick the currency you will pay in. Confirm it is the currency the Shopify store takes payments in</td>
+<td>[L0027.002, L0717.010, L0726.017]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Time zone and currency are set at account creation and cannot be modified later [L0027.002].</li>
+<li>In the business information step, set the billing country, time zone and currency, then click Submit [L0717.010].</li>
+<li>Billing country, time zone and currency in a new account cannot be changed later. Confirm them carefully before submitting [L0726.019].</li>
+<li>Billing country, time zone and currency must be checked for correctness before continuing, because they are set at account creation [L0718.008].</li>
+</ul>
+<h2 id="coupons-and-promotional-offers">Coupons and Promotional Offers</h2>
+<ul>
+<li>Use the official coupon page Google publishes for promotional offers. Select the coupon page for the country where the billing address is located [L0717.002].</li>
+<li>Outside the US, search google.com for Google Ads Voucher plus the country name, then open the link that leads to the Google Ads page for that country [L0717.005].</li>
+<li>The coupon page shows offers for the country the visitor is located in. A US visitor sees the US offer. Visitors outside the US should search for Google Ads Voucher plus their country name [L0717.019].</li>
+<li>Enter an email address on the coupon page and click Get the offer code. The code is sent by email within one minute. You can apply it after the account has started [L0717.006].</li>
+<li>To redeem a coupon, click the wrench icon at the top (Tools and settings), then Billing and payments. Set up a payment method first, because the promotional code can only be entered after that. Manage promotional codes appears under the payment setup [L0717.013].</li>
+<li>The coupon can only be applied to the Google Ads account that is linked to the payment method [L0717.014].</li>
+<li>Do not add billing information to an account you will never use, because it only creates unnecessary setup [L0717.014].</li>
+<li>Pick the smallest-spend offer when several are shown (offer A in the source gives $500 credit after $500 spend in 60 days). Offers change, so check the sign-up page each time [L0718.001].</li>
+</ul>
+<h2 id="payment-method-and-first-charges">Payment Method and First Charges</h2>
+<ul>
+<li>No money is spent during account setup. The account is created and connected so Google Shopping ads can start once products are approved in free listings. The payment method is only charged after ads run [L0718.009].</li>
+<li>Choose automatic payments and enter the card details [L0716.010].</li>
+<li>A temporary $50 authorisation appears on the card during payment setup and is usually released within a week or sooner [L0718.001].</li>
+<li>In a new Google Ads account, Data Manager only becomes available after a payment method has been entered. Until then the connected-products list is empty, which is normal for a brand-new account [L0718.014].</li>
+</ul>
+<h2 id="account-approval-and-billing-threshold-older-advice-2019">Account Approval and Billing Threshold (Older Advice, 2019)</h2>
+<ul>
+<li>Google Ads usually bills once the account reaches its billing threshold, which is set in the Google Ads settings and was stated as $500 by default in 2019. Accounts can differ, so check the threshold [L1068.060].</li>
+<li>Approval for a new account usually takes 1 to 3 days. It can sometimes take 24 hours, and occasionally longer [L1068.062].</li>
+<li>Google's sign-up and the first campaign build are described in the Route C steps above, which were written in 2019 [L1068.061].</li>
+</ul>
+<h2 id="linking-google-analytics-ga4-to-google-ads">Linking Google Analytics (GA4) to Google Ads</h2>
+<ul>
+<li>Linking Google Ads to a GA4 property lets the two platforms share data, including audiences. Once linked, audiences built in Google Analytics can be used for Google Ads campaigns [L1520.001].</li>
+<li>Link Google Ads to Google Analytics (GA4) [L1520.003]:
+<ol type="1">
+<li>Log in to Google Analytics.</li>
+<li>Click the gear icon in the bottom left corner to open Admin.</li>
+<li>In the right-hand column, scroll down to Product links and click Google Ad Links.</li>
+<li>Click Link.</li>
+<li>Select the Google Ads account that is listed (it must use the same email address).</li>
+<li>Click Link again.</li>
+<li>Check the new link: it shows the Google Ads account name, the account ID, whether personalised advertising is enabled, and who created the link. [L1520.003]</li>
+</ol></li>
+<li>Older Universal Analytics route (2021-22 source, labelled UA): in Google Ads, open Tools and settings, go to Linked accounts, click Google Analytics (UA), turn Auto-tagging on by clicking Enable, check the Analytics property shown, click Link and switch the toggles to green, then click Save [L0726.021].</li>
+<li>Before linking, make sure the login email in Analytics matches the login email in Google Ads, and that user has Edit access to the property. Otherwise no Analytics property appears for linking [L0726.023].</li>
+<li>An audience built in Google Analytics does not reach Google Ads unless the Google Ads account is selected as an audience destination before saving [L1390.028].</li>
+<li>After linking, data only flows between the two platforms once ads have actually been running. A newly linked account shows little or no shared data until the first campaigns go live [L0726.027].</li>
+</ul>
+<h2 id="auto-tagging">Auto-Tagging</h2>
+<ul>
+<li>Turn on auto-tagging in Google Ads before linking to Analytics. It makes click data flow into Google Analytics with better detail about ad performance [L0726.022, L0726.021].</li>
+<li>Auto-tagging is switched on with the Enable button in the Google Analytics linked-accounts section of Google Ads (2021-22 Universal Analytics route) [L0726.021].</li>
+</ul>
+<h2 id="data-manager-and-merchant-center-link">Data Manager and Merchant Center Link</h2>
+<ul>
+<li>Connect Google Analytics and Merchant Center in Google Ads [L0184.005]:
+<ol type="1">
+<li>In Google Ads, navigate to Tools, then Data Manager.</li>
+<li>Click Connect product.</li>
+<li>Select your existing Google Analytics account and Google Merchant Center account.</li>
+<li>Confirm both display as Linked when complete.</li>
+</ol></li>
+<li>Navigation path: Google Ads, Tools (left navigation), Data Manager, Connect product (blue button), then select Google Analytics and Google Merchant Center. Both must show as linked before moving on [L0718.007].</li>
+<li>Before the Google Ads setup counts as finished, Data Manager must list Google Analytics and Merchant Center as connected, both showing linked. Accounts signed in with the same email appear as selectable options [L0718.015].</li>
+<li>Data Manager is empty in a new account until a payment method is entered [L0718.014].</li>
+<li>Three-step foundation summary before running Google Shopping ads [L0718.013]:
+<ol type="1">
+<li>Create the Google Ads account.</li>
+<li>Connect Google Analytics and Google Merchant Center to Google Ads via Data Manager, both showing as linked.</li>
+<li>In the Shopping feed app, open Tracking Tags, choose Google dynamic remarketing and conversion tracking, link the Google Ads account, and let the app create all tags. [L0718.013]</li>
+</ol></li>
+</ul>
+<h2 id="conversion-tracking-and-tags-via-the-google-shopping-feed-app">Conversion Tracking and Tags via the Google Shopping Feed App</h2>
+<ul>
+<li>The app named Symprosis in L0184.007 and L0187.003 is spelled Simprosys in L0718.013. The same app is meant in each case.</li>
+<li>Set up Google tracking for Shopping via the feed app [L0184.007]:
+<ol type="1">
+<li>Open the Symprosis Google Shopping Feed app in Shopify.</li>
+<li>Hover over Tracking Tags.</li>
+<li>Click Google Dynamic Remarketing and Conversion Tracking.</li>
+<li>Connect your newly created Google Ads account and approve permissions.</li>
+<li>Enable Conversion tracking and Dynamic remarketing.</li>
+<li>The app automatically creates, installs and configures tracking tags and Google Ads events. [L0184.007]</li>
+</ol></li>
+<li>In the Shopify product feed app, open tracking tags, hover over it, then click Google dynamic remarketing and conversion tracking. If the setup was made years ago, an update is probably needed because tracking has changed [L0472.015].</li>
+<li>A Merchant Center message about a conversion measurement problem usually means conversion tracking is missing or outdated. Check the tracking tags in the product feed app and re-run the Google setup before changing campaigns [L0472.016].</li>
+<li>Tracking events (Add to cart, Begin checkout, Purchase) must be pre-installed via the feed app. The Purchase event may appear as Purchase or Purchase in category. Duplicate tags from reinstalling are normal, so select the correct one instead of excluding them [L0187.003].</li>
+<li>Use the Google Shopping feed app (the one used to set up the Google integration) to create conversion tracking events automatically. Do not install a separate Google Ads pixel app [L0964.053, 2023].</li>
+<li>Conversion tags are created through the feed app. Disconnect any tags added by someone else through Google Tag Manager before creating new campaigns [L1116.029].</li>
+<li>If a previous third party paused old campaigns, re-enable them after the correct tags are reinstalled. If they were deleted, rebuild from scratch [L1116.028].</li>
+<li>Only one purchase conversion tag should be primary, and the rest should be secondary. If the purchase tag set up by the feed app is in use, keep it primary, set the others secondary, and avoid running two conflicting tag sets from different apps [L1287.041].</li>
+<li>Conversion tracking for Google is set up through the store's Google sales channel process. A separate tracking tag is not needed if that process already sends conversions [L0855.024, 2023].</li>
+<li>Feed-app tracking tags may initially display as Unverified after setup. This is normal, and they become active once traffic and purchases occur [L0184.008].</li>
+<li>Google's removal of third-party cookies and iOS tracking limits changes how tracking is set up, not whether Google Ads works. Expect the setup to change but Google Ads to keep working [L1090.108, 2021].</li>
+</ul>
+<h2 id="shopify-without-the-feed-app-conversion-pixel-route">Shopify Without the Feed App: Conversion Pixel Route</h2>
+<p>Two routes exist in the sources. Use the pixel app route only when no feed app handles the tags. L0964.053 (2023) advises against installing a separate pixel app when the feed app is used.</p>
+<ul>
+<li>Conversion tracking on Shopify no longer requires editing theme code. A conversion-pixel app from the Shopify App Store installs the latest Google Ads pixel automatically. Coding the pixel manually by editing Liquid files is an advanced, optional route that is harder to maintain [L0391.001].</li>
+<li>Install Google Ads conversion tracking on Shopify without code [L0391.002]:
+<ol type="1">
+<li>Open the Shopify App Store and search for Google Ads conversion pixel (listed under apps.shopify.com).</li>
+<li>Install the app and log in to it.</li>
+<li>Link your Google Ads account inside the app. This takes a minute or two.</li>
+<li>Confirm in Google Ads under Settings, Measurement, Conversions that a conversion action for the store (purchases) has been created automatically.</li>
+<li>Expect the status unverified until the first real conversion arrives. The status then changes to active. [L0391.002]</li>
+</ol></li>
+<li>In Google Ads, under Settings, Measurement, Conversions, the automatically created Shopify conversion action shows status unverified until the first real purchase is tracked. After that it becomes active and tracks each conversion with a 30-day click-through conversion window [L0391.003].</li>
+<li>The default conversion window is 30 days. A click on day 1 still counts if the purchase happens within the following 30 days, and the conversion is attributed to the original click date [L0391.004].</li>
+<li>A Shopify store without a developer can get Google Ads conversion tracking, the Google Analytics link, enhanced ecommerce and remarketing tags working in roughly 10 minutes using the app and Shopify integration instead of manual code [L0391.015].</li>
+</ul>
+<h2 id="verifying-tags">Verifying Tags</h2>
+<ul>
+<li>Verify Google Ads and Google Analytics tracking on a Shopify store with Google Tag Assistant [L0391.016]:
+<ol type="1">
+<li>Install the Google Tag Assistant browser tool.</li>
+<li>Open the live Shopify store in the browser.</li>
+<li>Check that the Google Ads remarketing tag is active on the site.</li>
+<li>Check that the global site tag is live.</li>
+<li>Refresh the page and confirm that the Google Analytics code loads.</li>
+<li>If any tag is missing, go back to the app or Shopify Google Analytics settings and recheck the linked IDs before relying on the data. [L0391.016]</li>
+</ol></li>
+<li>Check tracking status in Google Ads and optionally use Google Tag Assistant to confirm tracking is working [L0234.013].</li>
+</ul>
+<h2 id="purchase-only-conversion-signal">Purchase-Only Conversion Signal</h2>
+<ul>
+<li>Keep only Purchases as the conversion signal in Google Ads. Remove page views, lead form submissions and all other actions, so Google optimises for buying, not browsing [L0210.003].</li>
+</ul>
+<h2 id="search-console-and-indexing">Search Console and Indexing</h2>
+<ul>
+<li>Google Search Console is free to set up. It shows impressions, clicks and keywords for your store, so add the store there to see detailed search data [L0801.066, 2021].</li>
+<li>Google Search Central (formerly Google Webmaster Tools) gives detailed reporting on impressions, clicks and keywords. Link your store there to see which search terms bring traffic [L0801.067, 2021].</li>
+<li>Search Console shows whether your website and product pages are indexed in Google organic results, and flags errors that stop Google from reading the site [L0852.069, 2020].</li>
+<li>After setup and verification, Search Console lets products rank organically in Google Search results and brings buyer-intent traffic that grows over time [L0168.001].</li>
+<li>Google Webmaster Tools (older naming, 2020) instructs Google to crawl the website regularly and detect new content, including star reviews. Configure this so rich snippets (star ratings) appear in search results once products receive reviews [L0245.023, 2020].</li>
+<li>Request indexing of new product pages and blog pages in Search Console for faster crawling and indexing [L0249.063, 2022].</li>
+<li>Indexing check, with two numbers in the source [L0274.053, 2023]:
+<ul>
+<li>If Merchant Center shows 2,000+ non-indexed pages with odd URLs while about 250 indexed pages are normal, the non-indexed pages are variants or images.</li>
+<li>If 250 normal URLs are indexed, the store is fine. No action is needed.</li>
+</ul></li>
+<li>Use the same Google Workspace email for Search Console, Merchant Center and Google Analytics. Domain verification is then completed through Search Console automatically [L0729.015].</li>
+</ul>
+<h2 id="call-tracking">Call Tracking</h2>
+<ul>
+<li>Google Ads provides free call tracking limited to AdWords traffic. Paid solutions (CallRail, PhoneWagon, Call Tracking Metrics) track calls from all traffic sources, integrate with Google Analytics and offer more complete attribution at a cost [L0234.004].</li>
+<li>The global site tag (Google's universal tracking code) must be installed on your website for call conversion tracking to work. If Google Analytics or other Google conversion tracking is already set up, the tag is present and no new code is needed [L0234.010].</li>
+<li>If you enter your actual website phone number during setup, Google scans your website and replaces all instances with the forwarding number. If you skip this step, you must update the HTML code manually [L0234.012].</li>
+<li>Set up call conversion tracking [L0234.013]:
+<ol type="1">
+<li>In Google Ads, navigate to Conversions (search for conversions in the top menu).</li>
+<li>Click New Conversion.</li>
+<li>Select Track phone calls, then choose Calls on website (not call extensions or call-only ads).</li>
+<li>Enter a conversion name such as Lead.</li>
+<li>Optionally set a revenue value. Leaving this blank is acceptable.</li>
+<li>Choose whether multiple calls from the same person count as 1 conversion or multiple conversions (typically 1 total).</li>
+<li>Set the minimum call duration to count as a conversion. 20 seconds is standard.</li>
+<li>Confirm the lookback window is set to 30 days.</li>
+<li>Confirm the attribution model is set to Last click.</li>
+<li>For the conversion tracking tag, confirm or select Global site tag if Google Analytics or other conversions are already set up.</li>
+<li>Enter your current website phone number in the phone number field.</li>
+<li>Google will automatically find and replace this number with a forwarding number on your website.</li>
+<li>Click Next to complete setup.</li>
+<li>Verify tracking is working by checking the tracking status and optionally using Google Tag Assistant. [L0234.013]</li>
+</ol></li>
+</ul>
+<h2 id="account-separation-per-store">Account Separation per Store</h2>
+<ul>
+<li>Each store should have its own separate Google accounts and its own email address on all Google properties. This makes it easier to sell one store later, because its data and ad history are not mixed with the others [L0358.010, 2020].</li>
+<li>Use a separate Google Ads account for each business [L0717.008].</li>
+<li>Each business needs its own separate set of Google accounts. Do not send product feeds from multiple businesses into one Merchant Center account, and do not run ads for multiple businesses from one Google Ads account [L0727.011, 2021-22].</li>
+<li>Each unrelated store needs its own Google Ads account. Stores in the same network that can cross-promote to each other's customers, such as a bounce house store, a trampoline store and a swing set store, can share one account [L0837.045, 2025].</li>
+<li>Do not run two separate Google Ads accounts for the same store, because they compete with each other. Splitting the data across accounts also slows the learning of each account [L0962.055, 2021].</li>
+<li>Ads for the same store from two accounts are only less harmful if one account runs video ads and the other runs Shopping ads on non-overlapping products. Even then this setup is not recommended, because both accounts learn slowly [L0962.056, 2021].</li>
+<li>Google and Facebook ad systems learn from data concentrated in a single account. Spreading data across several accounts makes each one learn more slowly [L0962.057, 2021].</li>
+<li>Two stores in the same market selling the same products can compete against each other in Google Ads. If you run two stores in one market, keep their product ranges different [L0905.023, 2021-22].</li>
+<li>Multiple Google Ads accounts under different business entities, with different email addresses and billing information, are allowed. Each account is managed separately, and issues with one do not typically affect the others [L0278.039, 2025].</li>
+<li>For a new business, create a new Google Ads account [L1092.074, 2022].</li>
+</ul>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/03-pre-launch-compliance-and-store-readiness/"><span class="k">&larr; Previous</span><span class="v">Pre-Launch compliance and store readiness</span></a><a class="nx" href="../../10-google-ads-and-shopping/05-google-merchant-center-setup-and-verification/"><span class="k">Next &rarr;</span><span class="v">Google merchant center setup and verification</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dynamic product retargeting on Google | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.9: Dynamic product retargeting on Google.">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/09-dynamic-product-retargeting-on-google/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Dynamic product retargeting on Google | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.9: Dynamic product retargeting on Google."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/09-dynamic-product-retargeting-on-google/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/09-dynamic-product-retargeting-on-google/">Plain version</a></div><h1>16.9 Dynamic product retargeting on Google</h1><article><h2 id="concept-and-scope">Concept and Scope</h2>
+<ul>
+<li>Dynamic remarketing on Google targets people who viewed products on your store but did not buy. The ads show those exact products and link to the same product pages [L0163.009, L0168.004, L0586.011].</li>
+<li>Dynamic ads are the most important form of Google retargeting because they perform best. Standard display and YouTube remarketing are also possible, but test them for profitability first [L1357.015].</li>
+<li>Dynamic ads are the fifth element of the Power Five and drive dynamic remarketing [L0649.014].</li>
+<li>Dynamic ads are the form of Google remarketing to use with Shopping ads so customers see the products they viewed [L0964.128].</li>
+<li>Dynamic ads pull images and links from the product feed, so each viewer sees their own products. Each image links to its own product page. A static display ad shows the same image and destination to everyone [L0733.002].</li>
+<li>Dynamic ads pull products from the Merchant Center feed based on each visitor's views. Clicking an ad opens the exact product, so no product-level setup is needed in the ad itself [L0734.022].</li>
+<li>Dynamic display retargeting follows visitors across the Google Display Network, including when they browse other websites [L0558.001].</li>
+<li>Dynamic ads automatically show products the visitor already looked at, including items added to cart [L0276.008].</li>
+<li>Google remarketing ads also appear on any website monetised by Google AdSense, including eBay, without special configuration. <em>(Older advice, 2021. The unit heading names Facebook, but its rule describes Google remarketing.)</em> [L0270.032]</li>
+</ul>
+<h2 id="feed-and-product-requirements">Feed and Product Requirements</h2>
+<ul>
+<li>Dynamic ads show products from your product feed. A new store with an empty feed shows no products, so the feed must contain your products before the ads are useful [L0558.010].</li>
+<li>Google Display remarketing campaigns update automatically when the product feed changes in Merchant Center [L0189.014].</li>
+<li>Products used in dynamic display ads must pass Shopping ads policy review. Until they pass, they may show as disapproved or invalid for that destination. <em>(Older advice, 2021-22.)</em> [L1170.044]</li>
+</ul>
+<h2 id="visitor-tagging-and-tracking">Visitor Tagging and Tracking</h2>
+<ul>
+<li>Dynamic retargeting requires each visitor to be tagged with the products they viewed. This is what makes product-specific ads possible [L0558.002].</li>
+<li>Custom code for this tagging often breaks after Shopify platform updates. For non-developers, a maintained app is the lower-risk option [L0558.002].</li>
+</ul>
+<h2 id="roi-hunter-setup">ROI Hunter Setup</h2>
+<p>Use ROI Hunter as the standard route for non-developers. Installation and sync take a couple of minutes, and no custom code is required [L0558.013].</p>
+<ol type="1">
+<li>Search the Shopify App Store for ROI Hunter and open the app by ROI Hunter [L0558.004].</li>
+<li>Click Get to install the app [L0558.004].</li>
+<li>Run the quick sync. It asks for your starting budget and other initial settings [L0558.004].</li>
+<li>Optionally preview the ads and upload your logo [L0558.004].</li>
+<li>Confirm that the three display campaigns and their audiences were created automatically [L0558.004].</li>
+<li>Manage all further campaign changes in Google Ads, not inside Shopify [L0558.004].</li>
+</ol>
+<h2 id="roi-hunter-campaigns-and-audiences">ROI Hunter Campaigns and Audiences</h2>
+<ul>
+<li>ROI Hunter creates three separate display campaigns [L0558.006]:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Audience it targets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dynamic Remarketing for Product Viewers</td>
+<td>Product Viewers</td>
+</tr>
+<tr>
+<td>Dynamic Remarketing for Category Viewers</td>
+<td>Category Viewers</td>
+</tr>
+<tr>
+<td>Dynamic Remarketing for Cart Abandoners</td>
+<td>Cart Abandoners</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>ROI Hunter creates these smart audiences automatically in Google Ads. The default lookback window is 7 days [L0558.007]:
+<ul>
+<li>Cart Abandoners (past 7 days) [L0558.007]</li>
+<li>Category Viewers (past 7 days) [L0558.007]</li>
+<li>Product Viewers (past 7 days) [L0558.007]</li>
+</ul></li>
+<li>At first launch, keep the default audience conditions instead of editing them [L0558.008].</li>
+<li>Editing conditions is optional and only worth doing once you have data to test against [L0558.008].</li>
+<li>To edit conditions, open the audience in Google Ads Audience Manager and use the edit list option. The audiences appear under their names, for example Cart Abandoners, Category Viewers and Product Viewers [L0558.009].</li>
+</ul>
+<h2 id="management-and-optimisation">Management and Optimisation</h2>
+<ul>
+<li>The only ongoing adjustment is increasing the daily budget as the store scales [L0189.014].</li>
+<li>You do not optimise dynamic ads directly. Improvement comes from increasing the volume of qualified visitors to your store [L0276.008].</li>
+</ul>
+<h2 id="expected-clicks-conversions-and-cost">Expected Clicks, Conversions and Cost</h2>
+<ul>
+<li>Dynamic retargeting on the Display Network usually produces cheaper clicks and higher conversion rates than standard retargeting, because the ads show the products the visitor already looked at [L0558.011].</li>
+</ul>
+</article><nav class="pn"><a href="../../16-retargeting/08-exclusions-and-targeting-controls/"><span class="k">&larr; Previous</span><span class="v">Exclusions and targeting controls</span></a><a class="nx" href="../../16-retargeting/10-dynamic-product-ads-on-meta/"><span class="k">Next &rarr;</span><span class="v">Dynamic product ads on Meta</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

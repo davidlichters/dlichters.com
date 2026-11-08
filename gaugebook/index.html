@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<title>Gaugebook: Support</title><meta name="description" content="Gas mileage, fuel &amp; EV costs">
+<style>
+:root{color-scheme:light;--bg:#fff;--bar:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;
+--link:#0071e3;--chev:#aeaeb2;--ring:rgba(0,0,0,.1);--press:#f5f5f7;
+--grad:linear-gradient(96deg,#0071e3 0%,#5e5ce6 52%,#9b3fd6 100%);
+--fbg:#f1f1f1;--fcopy:#4c4c4c;--fline:#e5e5e5;--flogo:#9292a1;--flink:#0066cc;--fog:255,255,255}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text",
+"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;
+display:flex;flex-direction:column;min-height:100vh}
+body>main{flex:1 0 auto;width:100%}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:6px}
+p,li{overflow-wrap:break-word}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.nb{position:-webkit-sticky;position:sticky;top:0;z-index:7;display:flex;align-items:center;justify-content:center;
+height:54px}
+.nb a{position:absolute;left:16px;top:5px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;
+border-radius:50%;color:#000;-webkit-tap-highlight-color:transparent}
+.nb a:hover{text-decoration:none}.nb a:active{opacity:.6}
+.nb i{flex:none;width:11px;height:19px;margin-left:-3px;background:currentColor;-webkit-mask:var(--back) center/11px 19px no-repeat;
+mask:var(--back) center/11px 19px no-repeat}
+.nb b{max-width:calc(100% - 136px);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:#000;
+font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.navfx{position:fixed;top:0;left:0;right:0;z-index:6;height:104px;pointer-events:none;opacity:0;transition:opacity .2s}
+.navfx::before,.navfx::after{content:"";position:absolute;inset:0}
+.navfx::before{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
+-webkit-mask-image:linear-gradient(#000 67%,transparent 88%);mask-image:linear-gradient(#000 67%,transparent 88%)}
+.navfx::after{background:linear-gradient(rgba(var(--fog),.85) 56%,rgba(var(--fog),0))}
+.navfx.on{opacity:1}
+main.wrap{padding-top:16px;padding-bottom:64px}
+h1{margin:0;font-weight:700;font-size:clamp(34px,8.6vw,48px);line-height:1.08;letter-spacing:-.028em}
+h2{font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.018em}
+.hero h1{font-size:clamp(40px,10.6vw,64px);line-height:1.05}
+.grad{color:var(--link)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){.grad{background:var(--grad);
+-webkit-background-clip:text;background-clip:text;color:transparent}}
+.lead{margin:18px 0 0;font-size:21px;line-height:1.38;color:var(--muted);letter-spacing:-.02em}
+.lead.second{margin-top:10px;font-size:17px;line-height:1.47;letter-spacing:-.01em}
+.sec{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:52px 0 20px;padding-bottom:8px;
+border-bottom:1px solid var(--line)}
+.sec h2{margin:0;font-size:28px;line-height:1.14;letter-spacing:-.022em}
+.sec a{display:inline-flex;align-items:center;min-height:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:20px 0}
+.card h2{margin:0 0 10px}
+.card p{margin:0 0 14px}.card>:last-child{margin-bottom:0}
+.list{padding:0;overflow:hidden}
+.row{position:relative;display:flex;align-items:center;gap:16px;min-height:52px;padding:12px 44px 12px 16px;
+color:var(--text)}
+.row:hover{text-decoration:none}.row:active{background:var(--press)}
+@media (hover:hover){.row:hover{background:var(--press)}}
+.row::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-5px;
+border:solid var(--chev);border-width:2px 2px 0 0;transform:rotate(45deg)}
+.row+.row::before{content:"";position:absolute;top:0;right:0;left:92px;border-top:1px solid var(--line)}
+.row img{flex:none;width:60px;height:60px;border-radius:13.5px;box-shadow:0 0 0 1px var(--ring)}
+.row .t{display:flex;flex-direction:column;min-width:0}
+.row strong{font-weight:600;line-height:1.3}
+.row .t span{margin-top:2px;color:var(--muted);font-size:15px;line-height:1.35;letter-spacing:-.005em}
+.links .row+.row::before{left:16px}
+.checks{margin:0;padding:4px 20px;list-style:none}
+.checks li{display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.checks li+li{border-top:1px solid var(--line)}
+.checks svg{flex:none;width:22px;height:22px;margin-top:1px;color:var(--link)}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:980px;
+font-size:17px;line-height:1.2;background:#0071e3;color:#fff}
+.btn:hover{text-decoration:none}.btn:active{opacity:.85}
+.btn.ghost{background:transparent;color:var(--link);box-shadow:inset 0 0 0 1px currentColor}
+.app-hero .icon{display:block;width:112px;height:112px;border-radius:25px;margin:0 0 24px;
+box-shadow:0 0 0 1px var(--ring),0 4px 16px rgba(0,0,0,.12)}
+.app-hero h1 span{display:block;margin-top:8px;color:var(--muted);font-size:22px;font-weight:600;line-height:1.25;
+letter-spacing:-.018em}
+.app-hero .lead{color:var(--text);font-weight:600;font-size:19px;letter-spacing:-.015em;margin-top:16px}
+.app-hero .promo{margin:12px 0 0;color:var(--muted)}
+.app-hero+.card,.app-hero+.feat{margin-top:36px}
+.feat h2{margin:0 0 12px}.feat .card{margin:0}
+.legal{max-width:680px}
+.legal h1{font-size:clamp(32px,8.2vw,44px)}
+.legal h1+p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.legal h2{margin:40px 0 10px}.legal h3{font-size:17px;margin:24px 0 6px}
+.legal p{margin:0 0 14px}.legal ul{margin:0 0 14px;padding-left:22px}.legal li{margin:8px 0}
+.legal .card{margin:28px 0}.legal .card h2{margin-top:0}
+.legal a.url{overflow-wrap:anywhere;-webkit-hyphens:none;hyphens:none}
+.legal .group{padding:0}.legal .group section{padding:20px}
+.legal .group section+section{border-top:1px solid var(--line)}
+.legal .group h2{margin:0 0 8px;font-size:19px}.legal .group p:last-child{margin-bottom:0}
+.legal section:not(.card)+.card,.legal h1+p+.card{margin-top:32px}
+.foot{display:flex;justify-content:center;background:var(--fbg);padding:0 0 8px;color:var(--fcopy);
+font:300 13px/20px -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
+letter-spacing:-.208px}
+.foot nav{display:flex;flex-direction:column;width:100%;max-width:800px;padding:12px 40px 0}
+.foot .logo{display:block;align-self:center;height:18px;margin:12px 0 8px;color:var(--flogo)}
+.foot .logo svg{display:block;width:18px;height:18px}
+.foot p,.foot .fl{display:block;margin:0;padding:8px 20px;text-align:center;border-bottom:1px solid var(--fline)}
+.foot .fl{color:var(--flink)}.foot .fl:last-child{border-bottom:0}
+
+body:has(.ios){background:#f2f2f7;--fog:242,242,247}
+main:has(.ios){max-width:none;padding:0}
+.ios{max-width:600px;margin:0 auto;color:#000;letter-spacing:normal;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+.ios a{color:#000;text-decoration:none}.ios a:hover{text-decoration:none}
+.ios h1{margin:0 0 7.67px;padding:13.33px 16px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.ios .grp{margin:0 16px;background:#fff;border-radius:26px;overflow:hidden}
+.ios .grp+.grp,.ios #apps{margin-top:35px}
+.ios .me{position:relative;display:flex;align-items:center;height:90px;padding:0 16px}
+.ios .av{flex:none;width:60px;height:60px;border-radius:50%;background:linear-gradient(#b7b7b7,#323232);color:#fff;
+font:900 28px/60px ui-rounded,-apple-system,BlinkMacSystemFont,"SF Pro Rounded",sans-serif;text-align:center;letter-spacing:0}
+.ios .tx{display:flex;flex-direction:column;margin-left:8px;padding-top:.38px;min-width:0}
+.ios .tx strong{font:600 20px/24px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;letter-spacing:0}
+.ios .tx span{margin-top:1.66px;color:#7f7f7f;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .rw{position:relative;display:flex;align-items:center;height:52px;padding-left:13.67px}
+.ios .rw img:not(.chev){flex:none;width:28.67px;height:28.67px;border-radius:7px;margin-right:13.66px;
+box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
+.ios .rw span{position:relative;top:.33px;font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:48px}
+.ios .rw:not(:last-child)::after{content:"";position:absolute;left:56px;right:16px;bottom:0;height:1px;background:#e7e7e8}
+.ios .rw[hidden]{display:none}
+.ios .chev{position:absolute;right:18.33px;top:50%;width:7px;height:12px;margin-top:-6px}
+.ios a,.ios button{-webkit-tap-highlight-color:transparent}
+.ios .sbw{position:-webkit-sticky;position:sticky;bottom:28px;z-index:5;margin:35px 28px 28px}
+.ios .sbw::before{content:"";position:absolute;left:50%;width:100vw;margin-left:-50vw;top:-24px;bottom:-28px;
+pointer-events:none;background:linear-gradient(rgba(242,242,247,0),rgba(242,242,247,.25) 21%,rgba(242,242,247,.6) 48%,
+rgba(242,242,247,.77) 74%)}
+.ios .sb{position:relative;display:flex;align-items:center;gap:10.67px;height:48px;padding:0 22.66px 0 19.33px;
+border-radius:24px}
+.glass{background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
+backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
+box-shadow:inset 0 0 0 .67px rgba(255,255,255,.95),inset 1.5px 1.5px 1px -1px rgba(255,255,255,1),
+inset -1.5px -1.5px 1px -1px rgba(255,255,255,.8),inset 0 0 14px rgba(255,255,255,.6),0 0 0 .33px rgba(0,0,0,.06),
+0 12px 40px rgba(0,0,0,.12)}
+/* App-Seite wie die Einstellungen-Seite „Accessibility“ (Davids Bild, 26.10.2026, 3 px je pt gemessen): Karte 22,67 pt
+   unter der Leiste, Symbol 60 pt, Name 22 pt fett, Beschreibung 17/22 pt in #7f7f7f; Abschnittstitel 17 pt halbfett
+   #85858a bei x 32, 27,5 pt unter der Karte und 6 pt über der nächsten */
+.ios .hd{margin-top:22.67px;padding:16.33px 16px 14.8px}
+.ios .ai{display:block;width:60px;height:60px;border-radius:13.5px;box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
+.ios .an{margin:13.3px 0 0;padding:0;color:#000;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.ios .ad{margin:2.9px 0 0;color:#7f7f7f;font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .sh{margin:0;padding:27.5px 32px 6.17px;color:#85858a;font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;
+letter-spacing:0}
+.ios .sf{margin:0;padding:7px 32px 0;color:#7f7f7f;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .sf a{color:#0088ff}
+.ios .ft{height:auto;min-height:52px;padding-top:14px;padding-bottom:14px}
+.ios .ft span{white-space:normal;padding-right:16px}
+.ios .app{padding-bottom:40px}
+.sugg{display:none}.ios .xb{display:none}
+/* Suchansicht wie in den iOS-Einstellungen (Davids Bild 26.10.2026, 3 px je pt gemessen): weißer Grund, oben
+   „Suggestions“ 17 pt halbfett #8a8a8d bei x 17, Zeilen 61 pt ohne Karte, Symbol bei x 16, Text bei x 57, Linie von
+   57 bis 376,67 auch unter der letzten Zeile, keine Pfeile; Suchleiste von x 12 bis 321, daneben runder X-Knopf 48 pt
+   (SF Symbol xmark, mittel, Maßstab groß, 17 pt), beide 14 pt über der Tastatur */
+html.srch body{background:#fff}
+html.srch .navfx,html.srch .foot,html.srch .ios h1,html.srch .ios #me{display:none}
+html.srch .ios .sugg{display:block;margin:0;padding:35px 17px 9px;color:#8a8a8d;
+font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+html.srch .ios .sugg.q{display:none}
+html.srch .ios #apps{margin:0;border-radius:0;background:transparent}
+html.srch .ios .rw{height:61px;padding-left:16px}
+html.srch .ios .rw img:not(.chev){margin-right:12.33px;box-shadow:none}
+html.srch .ios .rw::after{content:"";position:absolute;left:57px;right:16.33px;bottom:0;height:1px;background:#e7e7e8}
+html.srch .ios .chev{display:none}
+html.srch main:has(.ios){padding-bottom:130px}
+html.srch .ios .sbw{position:fixed;left:12px;right:72px;bottom:calc(14px + var(--kb,0px));margin:0}
+html.srch .ios .sbw::before{right:-72px;background:linear-gradient(rgba(255,255,255,0),rgba(250,250,250,.92) 55%)}
+html.srch .ios .xb{position:fixed;right:12px;bottom:calc(14px + var(--kb,0px));z-index:6;display:flex;align-items:center;
+justify-content:center;width:48px;height:48px;margin:0;padding:0;border:0;border-radius:50%;cursor:pointer}
+.ios .xb img{display:block}
+.ios .sb img{flex:none;display:block}
+.ios .sb img:last-child{position:relative;top:-.67px}
+.ios .sb input{flex:1;min-width:0;height:44px;margin:0;padding:0;border:0;background:transparent;color:#000;
+font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;outline:0;
+-webkit-appearance:none;appearance:none}
+.ios .sb input::placeholder{color:#707073;opacity:1}
+.ios .sb input::-webkit-search-cancel-button{-webkit-appearance:none}
+:root{--back:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAA5CAYAAAC4YUKZAAACWUlEQVR42sXZS4hPcRQH8I8Z4/0OERYUyiywkIWIKCVKiFCKDVZkpWwkhWwkC0nZIIqFsCE1XnmMjIQyCiVRQh7jbcbmTk0TM+df94xTv92t36df/e4933OrdW1NwjJMxlt86MrNu2EPmtFSrB/Y3JWAQ202b79mVScDqnEE6zp4piUT0B0nOjiB1nWmexKgB05iceDZhgxAL5wPnEALXmJo2YA+uBgEvEJt2YD+uBwEvMD4sgEDcSMIeIqxZQOG4E4Q8BijywYMx/0g4AFGlA0YiUdBwN2MWzAGT4KAmxhUNmAcngUBV4pbU2pNKK5XBHCxeG+UWrXFCyYCOIeeZQOm4E0QcAo1ZQOm4V0QcLT4fJdaM4oWLAI4jKqyAXPwOQg4UHRQpdZ8fAkC9mb0A4vwLQjYkQFYVnTBEcDWDMBq/AoCNmUA1uJ3YPNmrM8AzAmewC+syWrNrwUAP7E8Mx98DSBWZMe01wHEJfTNROwP3oirGJCFGFBBn3gLg7Mgw3AvCGnI6Bfbtu71QcjDjM65bYi5HoQ0ZmSI1uqHuiDkWUaaaq3euFBBrpyQBemJs/8zYbdWDU4HIW8wNXPsczwIeY/pWZCqYgAWgXzEzMxR4MEgpAlzM781+4KQr1iQCdkdhHzHkkzI9iDkJ1ZmQrYGIb+LPjatNgchzdiYCdnQboLf0dqSCYnGhhZsy4SsqiBA7cyELK0gSu7KhCysIFTPy/rp0ojbRcDubHTUnJ1pZuNTJydxpioZUVcMXD528Ey9Lqp/Dd+eZ+aYv9XEYr7ZVDQ/xzAK/gAQcR7593xSwAAAAABJRU5ErkJggg==)}
+</style></head>
+<body>
+<div class="navfx" id="fx" aria-hidden="true"></div>
+<header class="nb"><a class="glass" href="../" aria-label="Back to Apps"><i aria-hidden="true"></i></a><b>Gaugebook</b></header>
+<main class="wrap">
+<div class="ios app">
+<div class="grp hd"><img class="ai" src="icon.png" alt="" width="60" height="60"><h1 class="an">Gaugebook</h1>
+<p class="ad">Log fill-ups, charging and services: precise mpg and cost per mile, one vehicle free. Reminders and more vehicles with Pro. No account, no ads.</p></div>
+<p class="sh">Support</p>
+<nav class="grp" aria-label="Support">
+<a class="rw" href="mailto:support@lichtersapps.com?subject=Gaugebook"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>Contact Support</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
+<a class="rw" href="privacy/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABWCAYAAABVVmH3AAAEpUlEQVR4nO2df2hVVRzAP/dtbhN9Yxr+Spo6SpiiaWVqYtsqKqSaMzApC0LUPwqLSKzMf18JgSEFUlMCC5KgCc3lH/3wB0OdCRphc2CufEPwyeasXG5txuUu3t579233/Tjn3Hfu+cBg99z77rn78H1n53zPufda5IN3bt9GJyKWlespsj+BbjLzLDnzDwVFaI6CvR8cVKFZCg55OchIzdzF6PaN0KyjN33EGqljM4ojd7FGqnfSuPLWxhoyJlWsidbMcXGWKNZIzZ4kd6YpEERcrInW3Bnh0ESsIByxJlrzx7BL30fsneVQWUHB4WuxHz8DXdvg963w+VoI5ZwllYflh2agogxuDkD/YLysYR58/ULicRuboPEnCgKlETuxBA6uh54dENsOz98b31czJ/X42ioKBqVid9RBfbXze3kp7FsDsyc52+OKUo8fN+JqJ42H9x6HTxtgxSx8R7HKyp+4J3G7tBhq58BnPaN/zj6udTNUT3G2X74PHtsHRy7hG5RGbGmxt7JkVlfHpdoUheDNlfgKX/cK0jEj7K1MJQUp1iqAbldBii0EpIidWQ7rFsLC6QQG4b2Ch2dD80sQLgV7KPL6Idh9Au0RHrG7n3Kk/t827nwSJo9He4SLXZD09S8rhrvvQHuEiw25/Ae3+526E4A/UQ1GrCCMWEEYsYIwYgVhxArCiBVEYMRWlDmzFLLQXmxRCD5ZDd3vOnNre+rl1Ku92O21sHGJk6ewR4GbH4S6Ks3nvNxYUQnTJrrP0trpR/vHK9PD8HZNannVZPjxN4Il9sXF6ffZs7HRbdDd5+1cry5zkj7JdI4xWVnQTcEjVdnPU3lJO9qTkpuWpJb/OwRtUYSjJGJ3rYKld4mt47kFMGVCavmpy/DnLfSM2KWCpdpsWe5e3tKBFLTsFSyvhPtnuu9ruSDnGrQUuyVNtEZ74ewVOdegndgZYXh2vtpmQCuxJcOL6F5Z5r6gTmYz4Mt+bLbMmwqNDbB+kft+e+3t9xeRhjZiQxZseCD9/uOd8Fe/xOshIDSdl1ufcLFDyhfiOytwDuom9uYAyjkVha4bmont/QflHPhZfp3Cxf5xHaUMDMIX5zQU23ENpXzTDrG/NRR7ugul7D2jpl7hYn+Q2ClP5sI1+FbiMFaq2F9j6pqD9486XS0VhHT9OrbHYP9ZlCFFbONpuCEhaz+SrYdhcAi9xXb3wc5jSOO7i9DcjlKk5Qo+OA7nJCSZ7QHJpiaUI01s/yCsOwDXBY/E7FvvL0mY3vZVdqs9BvX7xaXv3miBr37BF0hPGx7rhEf35jcpYq8VeK0ZdrXiG5TkY9uisPgj+DIPyRH7a1/X6L+b8pQ/uuShSnirBlbNzew2JVvoh62wpy3xkSd+wbkLywfPhZk6AZ6uhpWzYP4050kb4RJnyqX3FvT0wfmrzvT14Q44eRn/ErEs34jViohlBWbOSzahfD333zDMsEsTsYKIizVRmzsjHJqIFUSiWBO12ZPkLjVijdzMcXFmmgJBuIs1UeudNK7SR6yROzajOPImzwx5Mw46b22sid6MXZgXpSl/UVpQBUdkvdovCJIjuTd9/wHntSDzg+hq6QAAAABJRU5ErkJggg==" width="29" height="29" alt=""><span>Privacy Policy</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
+<a class="rw" href="imprint/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABWCAYAAABVVmH3AAAEOklEQVR4nO2dS08TURiG35Zy0dDWolG5lBZqrQiNMSQYdGE0akAoCC5ckLhx7YYf4sb/4MKFiVuN0ZDUIiEqEgKoSIwUBRe2cpEW0jFnEhruTNtzpjNzvmc1i/ZAnr79er4zM2ds4MCjR48VWIjBwYe2QsfIewCryeQtOec3ySK0UMGaXyyr0HwF27W8iKTm7uJA+yQ0//Tum1iSejgHOdpTLEnVzn6uNNVYInd2iaW05s5ezraJJan5s9MdlQJBZMVSWgtnq0NKrCBUsZRWfmy6pMQKgsQKwqZXGfB66+D11sLlcqG8vBx2u7bPNBZ7h1+/FtRjl8sJp9OJeHweRsch+g/U1tbgxo1rqKry5PX+sbHx7LHH40F/fw++fJnBixevkE6nIaVYv9+H3t4uzenUSjAYUNP77NlzrK2lIFWNLSsrQ2fnTe5SNzl16iT6+3vVsiKV2JaWJlRUVEAkTO7du0xuGaQR6/P5oAdMbl9fj/oNkULsiRPHoRfV1afR1xdBaWkpLC+2QnAZ2ElNTbWh5AoT63CUQG/Y1O7OnW44HMJnkfJ1XnV1tYaQazmxm11eT09XUb41lhbL8Pm8iES6UFJSHLmWFcvw++sRiXQWRa6lxTIaGvzo7u4Q1gFKK5bR2Nigu1wpxDICgUbcvn0LNlvBl75qQhqxjGDwjLqEqQemEqsomYLHaGk5j1DoLERT/BblELbORRcXf2NhYRFutxuFEA6fx/T0Z0gt1uM5lj1mi9pPnjyFGTB8KTh3LqT7VIkHhv+Pq6o86Oi4qftqmeVLASMUCiIQaFDr68rKKjKZwn/EotEY/v5dgtRiGWy1ii0L8mJ09D2AJXlLgVkhsYIgsYIgsYIgsVacFaTTaXz4MIalpWUu47FrCy5cCMPtdkFqsdHoMD5+/MR1zB8/5jAwcA9Sl4KNjQ1TjGm6xF650q6ej1pe5lcKWlsvArKLPXr0CK5fvworQrMCQZBYQZBYQZBYK/54JRJJvHkzxLVBaG9vQ329F1KLHR4ewezsd65jvnz5Gg8e3IfUpaCyspL7mE4n/zFNl9jLly+pZ2F5NghNTSFAdrF2ux3NzU2wIsJKQYbDCT+RZDKKOcWmUsa9HZORSq2ZU2wymYRRWV9fx+rqP3OKnZuLw6jMz/8UXqqEiR0fn4CiGHPjjq13lJtObCKRxMjIKIzG16/fMDMza+7pViw2ou5L2dbWqtuV1AcxNTWtdmZ6IFSsoih4+3YYk5NTCIeb1Zvb2Ik+diu8HqJTqZTafMTjPzExMZndqcMyDcKfPwkMDUUhE3YeG30T22FOaT1WECRWpFgqB/zYdEmJFURWLKW2cLY6pMQKYptYSm3+7HS3K7EkN3f2ckalQBB7iqXUamc/V/smluQezkGONMmjraZzD52mGkvpzd0FPSit2A9Kk1XwoF6P9pNB8iCH0vcfSMk98Wdmz3cAAAAASUVORK5CYII=" width="29" height="29" alt=""><span>Imprint</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
+</nav>
+<p class="sf">Questions or a problem? Write to <a href="mailto:support@lichtersapps.com?subject=Gaugebook">support@lichtersapps.com</a>. We usually answer within two days.
+Purchases are restored in the app under Settings, subscriptions are managed in the iPhone Settings under your name.</p>
+<p class="sh">Features</p>
+<div class="grp">
+<div class="rw ft"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>Full-to-full calculation: partial fill-ups are counted correctly</span></div>
+<div class="rw ft"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>Cost per mile or kilometer, costs this year, monthly charts</span></div>
+<div class="rw ft"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABWCAYAAABVVmH3AAAFrklEQVR4nO2df0yUdRzH33f8BpEfCspvDKhk2rRpjVmZrZW5QrMckg6o7Bep/VjOlatp65exTNMV6YSyGC3LsjKbW5Npyho4WSwnEB4HByhcBxwcx3HcXXueBePHPd977rjv89w9fF//MO77eZ7nu9fz2Yfn+Xyfh1PBCyyrzndAQdTmVKqmuw+Pd6A0md6W7PZGM0XodAWLDp6pQj0VrBYTxKS674Jonwn1PHsFM5ZJdQ3JkVOxTKp4hFyJqrEM95kilmWr+zhzNkEsk+o5k92xUkCJMbEsW6fPeIcsYynBi2XZ6j1GXbKMpQQTSwkVKwN0YBlLCSaWEkwsJZhYSgRC4aSEzsPrN23BkshbYLWP4FzPJezTfoUeq5HqcRUtdnZgBEqz30R8cCz/e1BAIFbPXYGM8BQU1O/CiMNG7diKLgXbUzeNSR1PVngqVsYso3psxYrNnpWB3PiVguM3R6RRPb4ixaqgwo70Qv6nEIM2M9U5KFLsw3H3YNGsTGJMdd9fVOegOLERAWHYmrqRGFNlqEGjSUt1HooT+2zyY4gNihIcH7Jb+Mst2ihK7IKwJOTNf5AYc1T3AzoteupzUZTYHemFCFAFCI63mDtQ0fmrJHNRjNj7Yu/A8qhFxJgPNeWwOkYkmY8ixIaog/Fy2mZizG/6C6gx/i3ZnBQhtigxFwkhcwXHTTYzDmgrJJ2T34tNCIlDQeIjxJjStuPQW3shJX4v9tW0zQhWBwmONw1q8e2NM5AavxZ7Z9Ri3Bu7XHDcAQfe15TB7rBDavxWbKAqAK+lFxJjTnZVob6/CXLgt2I3zl+N9LBEwfG+kQEcaq2EXFAXG6oOQWZ4CvE2013mBEVjS/J6YgwnlZMrF1RXEJ5MWounkx7lrzO5enfWUIM9zaUYtA1Na7/bUvP5ZosQ9QP/8GVATqhl7Lr4VShOyeOlcnC9Ue7u6L2s7cQ+qSsWR2ZhTdxdguPcH6q9mjL+RCpSbH7CQ04/XxG9BIVJuR7tU803sIuIJ4a7tGowtUBuqIlNDU0QHHsheQOWRt7q9j7Xxq/CwogFguP/Wnvxedt38AWoie0d6Rc+qEqNd7O2Ijow0q0V1+LUPGLMfm0FBmyDULTYM/qLxPG44Fi8nfmi6Hr7XPIG4om4ZLzCN1p8BWpiD+u+R7ulixiTE32bqHrLLVc/Pu9+wXHu+YC9mnL4EtTEmmxm7Gzcj2G7lRgnpt5yd1hc+RCCa15rzO3wJajeIDSYWlDS8gV5Av/X25ig2U7HH5iTg9tnLxTc/rpFj6O6E/A1qN95/dh1Fr90n3NZb/dkFE+pt2HqELyUtom47UfaYzDbLfA1JOkVfKApQ9Ngq8t6WzSp3j6VtM7pI0KjXOitQ5WhFr6IJGIt9mHsbPyYr7sknh9Xb7mnBJ9IWCMYy9XuEg25zMiJZN2ttqEb2N1cKqLebuPr7StpBcQGdnnHSZdXHXIiaduwylCDrztPEWPigmNwOPst3B2zlHiSjnX8DF9G8n7sodZvUNffQIwh9Vk5SlrKXV7GzTixNocNbzR9AoO1z6Ptfzf8iepeug+0+e0KQvdwD3Y1HXR7LYrr4+5rof/clV8vzdQar+Az3XG3tjmiO4GuYQP8AVnXvL5s/wnney6Lir1m1qHy+mn4C7KKdcCB3c2fosPSLeomg6vP/oLsq7TGEZPLZs2p7vO4bLwKf0J2sRxXTRq8c+2I03WqTku3JA8KK/Y9r9P6P/hVh2eS1vNvtHCNlYu9dTiorYRRxmVsT2Gv1Su5FCgRJpYSTCwlmFhKqL3xj74ZE+GcsoylBBNLUywrB95j1CXLWEqMiWVZO33GO2QZS4kJYlnWes5kd1Mylsl1H2fOWCmghFOxLGvFI+RKMGOZXNeQHImSx5rh7iedqBrLstd9F+yL0uT+orSZKrhWqq/2mwmSa71Q+v4DQDjjHAtqNsAAAAAASUVORK5CYII=" width="29" height="29" alt=""><span>Intervals by mileage or months, whichever comes first</span></div>
+<div class="rw ft"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>CSV export and a clean PDF vehicle report, handy when you sell the vehicle</span></div>
+<div class="rw ft"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>No account, no ads, no tracking</span></div>
+</div>
+</div>
+</main>
+<footer class="foot"><nav aria-label="Legal"><p>Copyright © 2026 Lichters Apps. All rights reserved.</p><a class="fl" href="../terms/">Terms of Service</a><a class="fl" href="privacy/">Privacy Policy</a><a class="fl" href="../imprint/">Imprint</a></nav></footer>
+<script>(function(){var fx=document.getElementById("fx");function u(){fx.classList.toggle("on",(window.scrollY||0)>2)}
+addEventListener("scroll",u,{passive:true});u()})()</script>
+</body></html>

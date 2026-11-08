@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Product feed setup and feed apps | Ecommerce Playbook</title>
+<meta name="description" content="- Start with one product feed. Use several feeds only when the store is growing. - Never run two Google product feeds at the same time. - If a supplier gives a barcode number, use it. If not, use the MPN (the manufacturer&#x27;s part number). - Products ...">
+<link rel="canonical" href="https://dlichters.com/ecom/10-google-ads-and-shopping/06-product-feed-setup-and-feed-apps/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Product feed setup and feed apps | Ecommerce Playbook"><meta property="og:description" content="- Start with one product feed. Use several feeds only when the store is growing. - Never run two Google product feeds at the same time. - If a supplier gives a barcode number, use it. If not, use the MPN (the manufacturer&#x27;s part number). - Products ..."><meta property="og:url" content="https://dlichters.com/ecom/10-google-ads-and-shopping/06-product-feed-setup-and-feed-apps/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../10-google-ads-and-shopping/">10. Google Ads and Shopping</a></div><h1>Product feed setup and feed apps</h1><p class="meta">Section 10.6 &middot; 6 of 23 in this chapter &middot; 32 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Start with <strong>one</strong> product feed. Use several feeds only when the store is growing.</li>
+<li>Never run <strong>two</strong> Google product feeds at the same time.</li>
+<li>If a supplier gives a barcode number, use it. If not, use the <strong>MPN</strong> (the manufacturer's part number).</li>
+<li>Products update every <strong>24 hours</strong>. Use the manual update button only for urgent changes.</li>
+<li>If Google says a product has no barcode number (GTIN), <strong>enter its manufacturer part number (MPN)</strong> instead.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>Never <strong>make up a SKU</strong> to fill a barcode field.</li>
+<li>Never <strong>use the same number</strong> for two different products.</li>
+<li>Never <strong>change a product ID</strong> after approval or once ads are running.</li>
+<li>For most products, <strong>set gender to unisex</strong>, age group to adult and condition to new.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 27 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="choosing-a-feed-route"><summary><h2>Choosing a Feed Route</h2><span class="pm">4 min</span></summary>
+<ul>
+<li>Google's official Shopify app manages your <strong>product feed</strong> (the list of products Google reads) for <strong>Google Merchant Center</strong> (Google's account that holds your products) and syncs your store with it automatically.</li>
+<li>In the Google Shopify app, sync either <strong>all products</strong> or only products from a specific collection <span class="ex">(a group of products you pick in Shopify)</span>.</li>
+<li>The Google Shopify app shows each product as <strong>published</strong> (synced successfully) or <strong>warning</strong> (has sync problems). This helps you find and fix feed problems.</li>
+<li>Symprosis Google Shopping Feed is a Shopify app that starts at <strong>$4.99/month</strong>, with a free trial. It gives granular control <span class="ex">(detailed, fine-grained control)</span> over the product data sent to Google. This is far more than Shopify's free Google &amp; YouTube app.</li>
+<li>Choose Symprosis when you are <strong>scaling</strong> a store <span class="ex">(growing it with more products and ads)</span>.</li>
+<li>Do not use Shopify's free Google &amp; YouTube app for the product feed if you plan to scale. It offers limited manual control and restricted feed customization <span class="ex">(changing what the feed contains)</span>. It suits only beginners who will not optimize or grow beyond their first listings.</li>
+<li>The built-in Google &amp; YouTube app is free, but it gives less manual control over the feed.</li>
+<li>Once a store grows and needs frequent feed edits, a dedicated feed app such as Symprosis is the better choice.</li>
+<li>As of 2026, the built-in app was judged <strong>far less advanced</strong> for this purpose.</li>
+<li>Free plugins <span class="ex">(small add-on programs)</span> that push a feed to Merchant Center are a starting point.</li>
+<li>Feed tools go further. They aim for more traffic through optimized titles, distribution to secondary and tertiary channels <span class="ex">(sales places after Google)</span>, and product-level performance views across platforms.</li>
+<li>A Google Shopping feed app gives far more control over feed fields <span class="ex">(the individual data boxes in the feed)</span> than the default Shopify sales channels.</li>
+<li>With a feed app, you can change titles, images and other feed data <strong>without editing each product page</strong>.</li>
+<li>A free Google Sheets feed <span class="ex">(a spreadsheet used as the feed)</span> is <strong>static</strong>, meaning it does not update itself. You update it by hand for every new product.</li>
+<li>A Google Sheets feed suits only a small catalogue that rarely changes. Otherwise, new suppliers and products would never reach the feed.</li>
+</ul>
+<h3 id="single-feed-or-several-feeds">Single feed or several feeds</h3>
+<ul>
+<li>Starting setup: keep <strong>one</strong> feed.</li>
+<li>Do not run two Google product feeds at once, such as the Shopify Google channel and the Feed for Google Shopping app.</li>
+<li>Disconnect the Shopify Google channel and keep only one feed.</li>
+<li>Starting setup: use <strong>one</strong> product feed and <strong>one</strong> Shopping campaign setup. A Shopping campaign is a paid Google ad that shows product pictures and prices.</li>
+<li>Make sure product titles, brands and SKUs are complete, because the feed decides what Google displays. A SKU is the store's internal product code.</li>
+<li>Scaling setup: you can run <strong>several</strong> feeds at once.</li>
+<li>Example: one free-listings feed with all products, and one paid feed with only the most profitable products. Free listings are free product results shown in Google.</li>
+<li>Link the paid feed to the paid campaigns, and link the free feed to free listings.</li>
+<li>The single-feed rule applies to the <strong>initial setup</strong>.</li>
+<li>The multi-feed setup applies once a store is <strong>scaling</strong> and separates products by profitability <span class="ex">(how much money each product makes)</span>.</li>
+<li>Create a <strong>separate feed for each channel</strong>, such as Instagram Shops.</li>
+<li>This lets you limit or customize product descriptions for each platform. Do not send identical content everywhere.</li>
+</ul>
+<h3 id="google--youtube-app-versus-dedicated-feed-app">Google &amp; YouTube app versus dedicated feed app</h3>
+<ul>
+<li>Install the Google &amp; YouTube app to connect <strong>GA4</strong> (Google Analytics 4, the tool that counts visitors and sales) and Google Ads conversion tracking. Google Ads is Google's paid ad tool.</li>
+<li>Submit the product feed through a <strong>separate, dedicated app</strong>.</li>
+<li>In Shopify, Apps &gt; Google &amp; YouTube is used <strong>only</strong> to connect GA4 and, optionally, to track sales.</li>
+<li>Disconnect Merchant Center feed submission there.</li>
+<li>Set up the feed through a separate Merchant Center feed app.</li>
+<li>If the Google &amp; YouTube app is connected to Merchant Center, it submits a <strong>second feed</strong> next to the Google Shopping feed app.</li>
+<li>This causes <strong>daily</strong> "please review your file format" emails, even when all products are accepted.</li>
+<li>Do not activate Shopify's built-in Google sales channel for Shopping. It lacks features and gives weaker results.</li>
+<li>If you set it live after the feed setup, it <strong>duplicates</strong> the product feed.</li>
+<li>Do not tick the box that submits products to Merchant Center through the Google sales channel. Ticking it duplicates the feed from the feed app.</li>
+<li>Keep the Google sales channel installed, but leave the product submission option <strong>unchecked</strong>.</li>
+</ul>
+<h4 id="procedure-remove-a-duplicate-feed">Procedure: Remove a duplicate feed</h4>
+<ol type="1">
+<li>Open the Google &amp; YouTube app in Shopify.</li>
+<li>Go to Settings.</li>
+<li>If it shows it is connected to Merchant Center, click <strong>Disconnect</strong>.</li>
+<li>Keep the Google Shopping feed app as the <strong>only</strong> product feed sent to Merchant Center.</li>
+<li>Keep the Google &amp; YouTube app installed, because it connects Shopify to Google Analytics.</li>
+</ol>
+</details><details class="part" id="connecting-shopify-to-merchant-center"><summary><h2>Connecting Shopify to Merchant Center</h2><span class="pm">5 min</span></summary>
+<h3 id="before-connecting">Before connecting</h3>
+<ul>
+<li>The Google Merchant Center account must <strong>already exist</strong> before the Symprosis setup wizard <span class="ex">(the step-by-step setup screens)</span> can link it.</li>
+<li>Create the Google Merchant Center account <strong>first</strong>. The app's setup wizard links only to an existing account.</li>
+<li>Do not submit <strong>demo or test products</strong> to a live Merchant Center account. They create product warnings.</li>
+<li>For demonstrations, use a store that is already linked to a real Merchant Center account.</li>
+<li>The tax and shipping details in Merchant Center must <strong>exactly match</strong> your Shopify settings.</li>
+</ul>
+<h4 id="setting-shopping-ads-setup-in-merchant-center">Setting: Shopping ads setup in Merchant Center</h4>
+<ul>
+<li>Adult content: <strong>disabled</strong>.</li>
+<li>Country of sale and language: select the country and <strong>English</strong>.</li>
+<li>Destinations: <strong>Free listings</strong> and <strong>Shopping ads</strong>.</li>
+<li>Name the feed <span class="ex">(for example, "shopify feed")</span> and click <strong>Create feed</strong>.</li>
+</ul>
+<h3 id="setup-with-the-google-shopping-feed-app">Setup with the Google Shopping feed app</h3>
+<h4 id="procedure-symprosis-setup-short-version">Procedure: Symprosis setup, short version</h4>
+<ol type="1">
+<li>In Shopify Admin, go to Apps.</li>
+<li>Search for "Symprosis Google Shopping Feed".</li>
+<li>Click <strong>Install</strong>.</li>
+<li>Access the app from your Apps list.</li>
+<li>Follow the guided setup wizard.</li>
+<li>Connect your Google Merchant Center account <span class="ex">(select the account from the previous step)</span>.</li>
+<li>The app automatically pulls in all Shopify products.</li>
+<li>Products initially show as <strong>Pending</strong>, which is normal.</li>
+</ol>
+<h4 id="procedure-symprosis-setup-detailed-version">Procedure: Symprosis setup, detailed version</h4>
+<ol type="1">
+<li>Create the Google Merchant Center account <strong>first</strong>, because the app's setup wizard links to an existing account.</li>
+<li>Install Symprosis Google Shopping Feed on the Shopify store. Search its name and click <strong>Install</strong>. It then appears in the store's Shopify apps.</li>
+<li>Open the app and follow its setup wizard.</li>
+<li>In the wizard, choose the Merchant Center account that was created. Use the Google login that is already active.</li>
+<li>Let the app pull in <strong>all products</strong> automatically.</li>
+<li>Check the <strong>Google product category</strong> of each product and correct any that are wrong.</li>
+<li>The category is set inside the product view of the app.</li>
+<li>Fill in <strong>custom attributes</strong> (extra product details) or detailed product characteristics <strong>only where needed</strong>.</li>
+<li>Detailed characteristics are mainly used for apparel <span class="ex">(clothing)</span>.</li>
+<li>Leave <strong>custom labels</strong> (your own tags for grouping products) <strong>empty</strong> for now.</li>
+<li>Wait <strong>2 to 4 days</strong>, up to about four, until every product changes from Pending to <strong>approved</strong> with a green check.</li>
+<li>Only <strong>after approval</strong>, move on to setting up Google Ads.</li>
+</ol>
+<h3 id="data-the-app-submits">Data the app submits</h3>
+<ul>
+<li>The default fields Symprosis sends to Google are <strong>Brand name</strong>, <strong>MPN</strong>, and <strong>GTIN/SKU number</strong>.</li>
+<li>MPN means Manufacturer Part Number. GTIN is a Global Trade Item Number, a barcode number.</li>
+<li>These are the standard values. Check them again if you change settings later.</li>
+<li>Symprosis submits these attributes <span class="ex">(product details)</span> to Google Merchant Center:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand name</td>
+<td>From product data</td>
+</tr>
+<tr>
+<td>MPN</td>
+<td>Manufacturer Part Number</td>
+</tr>
+<tr>
+<td>GTIN</td>
+<td>Global Trade Item Number, if available</td>
+</tr>
+<tr>
+<td>SKU</td>
+<td>Stock Keeping Unit</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Symprosis automatically creates a <strong>Content API feed</strong> and sends it to Merchant Center. The Content API is a direct data connection between the app and Google.</li>
+<li>Because of this, the store's products appear under <strong>"Provided by you"</strong>.</li>
+<li>The feed label usually matches the store name.</li>
+</ul>
+<h3 id="setup-with-the-google-shopify-app">Setup with the Google Shopify app</h3>
+<ul>
+<li>Review the app's feed settings: the sync options <span class="ex">(which products to sync)</span> and the title and description formats.</li>
+<li>Most stores can keep the <strong>defaults</strong>.</li>
+<li>For products whose variants use different images, enable <strong>"Submit additional image"</strong>. Variants are versions of one product, such as different sizes or colors.</li>
+<li>Then click <strong>sync</strong> to generate the feed. Sync means copying the data so both sides match.</li>
+<li>Clicking sync pulls <strong>all products</strong> from Shopify into the feed app.</li>
+<li>For a small store this can take only moments. One example store had 27 products.</li>
+<li>You can then edit products inside the app, including the <strong>Google product category</strong> and promotions.</li>
+<li>After the app is connected, Google Merchant Center creates a feed named <strong>"Content API"</strong> automatically.</li>
+<li>You do <strong>not</strong> need to add or edit this feed manually.</li>
+<li>Once the feed app is connected, Merchant Center checks the <strong>domain</strong> (your website address) and shipping setup automatically.</li>
+<li>Both should show as <strong>verified</strong>.</li>
+<li>Run the product sync <strong>only after these checks pass</strong>.</li>
+</ul>
+<h4 id="procedure-publishing-a-product-through-the-feed-app">Procedure: Publishing a product through the feed app</h4>
+<p>**</p>
+<ol type="1">
+<li>Open the product in the Shopify admin.</li>
+<li>Under product availability, tick the box for <strong>Google Shopping</strong>.</li>
+<li>Use the Shopify Google Shopping app so the product is published to the Merchant Center.</li>
+</ol>
+<h4 id="procedure-connecting-the-google-sales-channel-and-feed-app-2023">Procedure: Connecting the Google sales channel and feed app (2023)</h4>
+<ol type="1">
+<li>In the Google sales channel, connect your Google account.</li>
+<li>Set emails from Google to <strong>off</strong>.</li>
+<li>Set up only the link. Do <strong>not</strong> click the Google Merchant Center listing option in the Google sales channel.</li>
+<li>Install the <strong>feed for Google shopping</strong> app.</li>
+<li>Use the app to connect to Merchant Center and submit your product feed.</li>
+<li>Set the feed to pull and update products from your store <strong>every 24 hours</strong>, so changes appear in Google within that window.</li>
+<li>Set the variant submission preference to <strong>all variants</strong> if each variant should be its own listing.</li>
+<li>Keep only <strong>one</strong> product feed in Merchant Center when starting.</li>
+</ol>
+<h3 id="google-sheets-feed-free-manual">Google Sheets feed <span class="ex">(free, manual)</span></h3>
+<ul>
+<li>Google Sheets feeds suit only a <strong>small, rarely changing</strong> catalogue.</li>
+<li>Manual spreadsheet uploads are <strong>not updated in real time</strong>. They drift away from the store.</li>
+<li>Connect the store through the <strong>API</strong> (a direct connection between two programs) instead.</li>
+</ul>
+<h4 id="procedure-building-a-free-feed-from-a-google-sheets-template">Procedure: Building a free feed from a Google Sheets template</h4>
+<ol type="1">
+<li>Click <strong>add product data</strong>.</li>
+<li>Open <strong>primary feeds</strong> and click the <strong>plus</strong> button.</li>
+<li>Turn off <strong>Shopping actions</strong> if you do not plan to use them.</li>
+<li>Click <strong>continue</strong>.</li>
+<li>Choose to make the product feed from Google Sheets, give it a name and click <strong>continue</strong>.</li>
+<li>Generate a new Google spreadsheet from the template, click <strong>create</strong> and grant the requested permissions.</li>
+<li>Click <strong>open</strong> to edit the spreadsheet.</li>
+</ol>
+<h4 id="template-columns">Template columns</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product ID</td>
+<td>Unique identifier of each product</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Product name</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Product description</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>URL of the product page</td>
+</tr>
+<tr>
+<td>Condition</td>
+<td>Product condition</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Product price</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>Stock status</td>
+</tr>
+<tr>
+<td>Image link</td>
+<td>URL of the product image</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Fill in the template <strong>by hand</strong>.</li>
+<li>Or paste a product <strong>CSV</strong> (a plain spreadsheet file exported from the Shopify store) into the matching columns.</li>
+<li>The template includes <strong>example rows</strong> and instructions. They show how a completed sheet should look.</li>
+</ul>
+</details><details class="part" id="sync-frequency-and-updates"><summary><h2>Sync Frequency and Updates</h2><span class="pm">3 min</span></summary>
+<h3 id="refresh-intervals">Refresh intervals</h3>
+<p>Sources agree on a <strong>24-hour</strong> cycle. Use the manual update button only when a change must go live immediately.</p>
+<ul>
+<li>Google Merchant Center syncs products from Shopify <strong>once every 24 hours</strong>.</li>
+<li>Pricing changes are also synced <strong>every 24 hours</strong>.</li>
+<li>The Google Shopping feed refreshes <strong>automatically every 24 hours</strong> with current product information from the Shopify store.</li>
+<li>Products sold through the feed app should update automatically <strong>every 24 hours</strong>.</li>
+<li>So changes to descriptions or new products appear in Google <strong>within 24 hours</strong>.</li>
+<li>In the feed app, set the update frequency (for example, <strong>every 24 hours</strong>).</li>
+<li>Use the <strong>manual update button</strong> when you need changes live.</li>
+<li>The refresh schedule controls how often products are resubmitted to Merchant Center, often <strong>every 24 hours</strong>.</li>
+<li>Find it in the app's sync or Google Shopping settings and change it there.</li>
+<li>Connect the product feed through an app that refreshes it <strong>every 24 hours</strong>.</li>
+<li>Do <strong>not</strong> rely on manual Excel exports. A price change not updated in the feed causes mismatches.</li>
+<li>In Google Merchant Center, set the product feed to <strong>auto-update</strong>, so price and stock changes on the store sync automatically.</li>
+<li>Feeds connected through the Content API update automatically, so the <strong>last upload date</strong> stays current.</li>
+<li>Use the <strong>Merchant Center feeds section</strong> to confirm updates are running.</li>
+<li>Any edit made to a product inside the Symprosis app is <strong>automatically submitted</strong> to Google Merchant Center.</li>
+<li>After changing categories or attributes, <strong>no manual upload is needed</strong>.</li>
+<li>Manual Excel or spreadsheet product feeds are <strong>no longer needed</strong> for Merchant Center.</li>
+<li>Use an <strong>automated feed solution</strong>, usually an app connected to the store.</li>
+<li>Manually maintained feeds were a major problem. They often missed Google's requirements.</li>
+<li>Price changes on the website were <strong>not reflected</strong> in the listings, because every update had to be copied into the feed by hand.</li>
+<li>Do <strong>not</strong> upload product data to Merchant Center by hand through spreadsheets. Those files are never updated in real time and will drift from the store.</li>
+<li>Connect the store through the <strong>API</strong>.</li>
+<li>Connect the feed from Shopify to Merchant Center using the Feed for Google Shopping app, through the <strong>API connection</strong>.</li>
+</ul>
+<h3 id="settings-checklist-for-the-feed-for-google-shopping-app">Settings checklist for the Feed for Google Shopping app</h3>
+<ul>
+<li>Feed refreshes <strong>every 24 hours</strong>.</li>
+<li>Brand field is mapped to the Shopify brand data.</li>
+<li>Old or broken product URLs are <strong>removed</strong>.</li>
+</ul>
+<h3 id="meta-fields-changed-outside-shopify">Meta fields changed outside Shopify</h3>
+<ul>
+<li>The Feed for Google Shopping app does <strong>not</strong> pick up custom label changes made in Shopify automatically.</li>
+<li>Its meta fields <span class="ex">(extra product data fields)</span> must be synced <strong>manually</strong> from <strong>Settings &gt; Sync Settings From Shopify</strong>. Do this after any custom label update.</li>
+<li>The same applies to other meta fields, such as <strong>SEO title</strong>, <strong>SEO description</strong>, <strong>age group</strong> and <strong>gender</strong>, when they are changed via CSV.</li>
+</ul>
+<h3 id="timing-after-a-fix">Timing after a fix</h3>
+<ul>
+<li>Shopify product data syncs to Merchant Center <strong>automatically every 24 hours</strong>.</li>
+<li>Allow <strong>24 to 48 hours</strong> for changes to go through.</li>
+<li>After the first sync, Merchant Center can take <strong>up to 10 hours</strong> to show products for Google.</li>
+<li>For Facebook, it can take <strong>up to 4 hours</strong>.</li>
+<li>The product section shows <strong>"no data"</strong> during this time.</li>
+<li>Wait until <strong>active items</strong> appear before setting up campaigns.</li>
+</ul>
+<h3 id="standard-flow">Standard flow</h3>
+<ul>
+<li>Under the standard setup, new products and changes to existing products flow automatically from Shopify to Google Merchant Center, and then to Google Ads.</li>
+<li>These changes include <strong>price</strong>, <strong>description</strong> and <strong>variants</strong>.</li>
+<li>If campaigns are split by brand or price, check that <strong>each product is present</strong> in the campaigns.</li>
+<li>The feed decides the data Google reads for each product: <strong>price</strong>, <strong>photo</strong>, <strong>product link</strong>, <strong>description</strong> and <strong>title</strong>.</li>
+<li>Google uses this data to understand what you sell and to show products in Shopping ads.</li>
+<li>Shopping ad elements come from the Merchant Center feed, <strong>not from Google Ads</strong>.</li>
+<li>These elements are the product image, title, price, sale price, compare-at price <span class="ex">(the crossed-out original price)</span>, seller name, shipping cost and tax information.</li>
+<li>Merchant Center data must be set up <strong>correctly before any Shopping campaign</strong> can work.</li>
+</ul>
+</details><details class="part" id="product-identifiers"><summary><h2>Product Identifiers</h2><span class="pm">6 min</span></summary>
+<p>An identifier is a code that tells Google exactly which product you sell.</p>
+<h3 id="priority-which-identifier-to-submit">Priority: which identifier to submit</h3>
+<p>Sources differ by year and by emphasis. Use the supplier's <strong>GTIN or UPC</strong> when one exists. Use the <strong>MPN</strong> when none exists. Use a <strong>self-made MPN</strong> only when the supplier provides neither.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Identifier to submit</th>
+<th>Source and status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supplier provides a GTIN, UPC or EAN</td>
+<td>Supplier's barcode</td>
+<td>Current advice</td>
+</tr>
+<tr>
+<td>Supplier provides no barcode, but has an MPN</td>
+<td>MPN</td>
+<td>Current advice</td>
+</tr>
+<tr>
+<td>Supplier has no SKU, GTIN or MPN</td>
+<td>Self-made MPN</td>
+<td>Current advice</td>
+</tr>
+<tr>
+<td>MPN preferred over GTIN for fewer approval issues</td>
+<td>MPN</td>
+<td>**</td>
+</tr>
+<tr>
+<td>MPN used instead of UPC</td>
+<td>MPN</td>
+<td>**</td>
+</tr>
+<tr>
+<td>GTIN is not required; MPN is sufficient</td>
+<td>MPN</td>
+<td>**</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Use the <strong>GTIN</strong> when a supplier provides one. Google uses it to match the product to other listings.</li>
+<li>If no GTIN exists, use the <strong>MPN</strong> from the manufacturer.</li>
+<li>A <strong>SKU</strong> is an internal stock code.</li>
+<li>An <strong>ISBN</strong> applies <strong>only to books</strong>.</li>
+<li>A <strong>UPC</strong> is one common product code format.</li>
+<li>Use the supplier's <strong>UPC</strong> as the product identifier when it has one. It helps Shopify and Google Merchant Center match your product with identical products.</li>
+<li>If there is no UPC, use the <strong>MPN</strong> instead.</li>
+<li>For Google Shopping, <strong>UPC codes give an advantage</strong> if the supplier has them.</li>
+<li>If not, use the <strong>manufacturer part number (MPN)</strong> instead.</li>
+<li>For Merchant Center product identifiers, use the supplier-provided <strong>GTIN</strong> if available.</li>
+<li>If no GTIN exists, use the <strong>MPN</strong> instead.</li>
+<li>If the supplier provides neither, create your own identifier and use the <strong>SKU as the MPN</strong>.</li>
+<li>Google Shopping supports <strong>GTIN or SKU</strong>.</li>
+<li>A store does <strong>not need both</strong>. Either identifier is enough for listing products.</li>
+<li>Merchant Center accepts the <strong>manufacturer part number (MPN)</strong> as a product identifier.</li>
+<li>The MPN matters most when a product has <strong>no GTIN</strong>.</li>
+<li>Provide the <strong>brand and MPN</strong> for products that lack a GTIN, following Google's guidance.</li>
+<li>In Google Merchant Center, an MPN is used as a product identifier when a product has <strong>no GTIN</strong>.</li>
+<li>So enter the MPN for <strong>branded products</strong> that lack a GTIN.</li>
+<li>MPN identifiers are valid when suppliers have <strong>no SKU or GTIN</strong>, because Google documents when MPN is used.</li>
+<li>Before creating your own identifier, <strong>check competitors' Google Shopping listings</strong> to see which identifiers they use.</li>
+<li>Use an <strong>MPN</strong> when a GTIN is not available.</li>
+<li>MPNs can be used alongside or instead of GTINs in Google Merchant Center.</li>
+<li>An internal code such as <strong>AB1 or AB2</strong> can serve as the MPN for tracking.</li>
+<li>Products that have <strong>no GTIN</strong> can be listed with their MPN. Google does not penalize this.</li>
+<li>Check Google's MPN documentation to see the situations in which an MPN should be used.</li>
+<li>Missing or incorrect GTINs in the feed cause a <strong>low quality score</strong> and <strong>lower ad rank</strong> (your ad's position).</li>
+<li><strong>Add GTINs where available.</strong></li>
+<li>If not available, use <strong>UPC, EAN or ISBN</strong> equivalents. EAN is the European barcode format.</li>
+<li>Complete product identifiers in the feed help Google match your product to the right searches and to competitor listings.</li>
+<li>These identifiers are <strong>brand</strong>, <strong>GTIN <span class="ex">(barcode number)</span></strong> and <strong>manufacturer part number</strong>.</li>
+<li>Missing identifiers <strong>weaken that matching</strong>.</li>
+<li>Some products require a <strong>GTIN</strong>, a unique product identifier such as a barcode.</li>
+<li>Products without a valid GTIN can be <strong>disapproved</strong> (rejected by Google). Ask your feed app provider how to add GTINs to your products.</li>
+<li>Provide identifiers in the feed for <strong>paid advertising</strong>.</li>
+<li>Enter barcodes <strong>whenever a supplier provides them</strong>.</li>
+<li>A missing barcode is not a problem if the supplier does not provide one.</li>
+<li>Google Merchant Center approval can be <strong>delayed</strong> when product identifiers are missing from the feed.</li>
+<li>Submit an <strong>MPN for every product</strong>, and check the feed if a review drags on.</li>
+<li>**</li>
+</ul>
+<h3 id="barcodes-and-suspension-risk">Barcodes and suspension risk</h3>
+<ul>
+<li>Products that have a barcode (UPC, GTIN or EAN, depending on the country) must include that <strong>barcode number</strong> in the product feed.</li>
+<li>If the supplier provides no barcodes, the product does not need one and should not cause suspension.</li>
+<li>Missing barcodes on products that have them can lead to <strong>product suspension</strong> (the product is blocked) or <strong>full account suspension</strong>.</li>
+<li>If a product has a barcode and it is missing from the feed, Google may find it and <strong>suspend the product</strong> until the barcode is added.</li>
+<li>Supplying barcodes where they exist tends to <strong>increase impressions</strong> (how often your ad is shown). It can also improve ranking.</li>
+<li>Barcodes are registered in central databases that Google can query. Each barcode links to product information.</li>
+<li>A valid barcode helps Google match the product more accurately. It also lets Google use the product's <strong>historical performance data</strong> (its past sales results).</li>
+<li><strong>UPC</strong> is the common term in the US. <strong>EAN</strong> is the term in Europe. <strong>GTIN</strong> is the general term.</li>
+<li>All three describe the same barcode number.</li>
+<li>Supply a barcode <strong>only if the product actually has one</strong>.</li>
+<li><strong>Never buy UPC codes.</strong></li>
+<li>If a product has no UPC or SKU, use the <strong>MPN identifier</strong> in Google Merchant Center.</li>
+<li>**</li>
+<li>If a supplier does not provide a barcode, a competitor's listing or an online barcode search can reveal the product's GTIN.</li>
+<li>Use this as a <strong>fallback</strong> when the supplier does not respond.</li>
+</ul>
+<h4 id="procedure-fixing-missing-barcodes">Procedure: Fixing missing barcodes</h4>
+<ol type="1">
+<li>Check the <strong>Merchant Center product data diagnostics</strong> for missing or invalid GTIN issues.</li>
+<li>Contact the supplier. Ask whether they have barcode numbers for the products, and request them.</li>
+<li>Enter the barcode in Shopify and make sure the supplier information matches.</li>
+<li>Let the feed update Merchant Center <strong>automatically</strong>.</li>
+</ol>
+<h3 id="custom-products">Custom products</h3>
+<ul>
+<li>Mark a product as <strong>custom</strong> only if it truly has no identifiers. Examples: a self-made product, a unique bundle, or a product you are the only seller of.</li>
+<li>Marking a product as custom <strong>to avoid competition is not a valid reason</strong>.</li>
+<li>Marking a product as custom <strong>while a barcode exists reduces its impressions</strong>.</li>
+<li>Google then ranks it below competitors who supply identifiers, so it rarely helps.</li>
+<li>Create <strong>product bundles</strong> (several items sold together as one) as custom products when you sell a combination no other seller offers.</li>
+<li>This is the <strong>main valid use case</strong> for custom submission.</li>
+<li>For a self-made bundle or custom product, Google does <strong>not require a barcode</strong>.</li>
+<li>In the Shopping feed you can mark it as a custom product.</li>
+<li>Bundles built from the same base product still compete for the same clicks. So the cost per click for the same search stays the same.</li>
+<li>A product with <strong>no unique identifiers</strong> is submitted with <strong>identifier_exists set to FALSE</strong>. This is a yes/no field that tells Google the product has no unique code.</li>
+<li>See the options table below.</li>
+</ul>
+<h4 id="product-identifier-management-options-in-the-feed-app">Product identifier management options in the feed app</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What is submitted</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Submit Brand Name, MPN (SKU) and GTIN (Barcode)</td>
+<td>All three identifiers; any missing value is not submitted</td>
+<td>Products have correct, unique identifiers that match other merchants for the same product or variant</td>
+</tr>
+<tr>
+<td>Submit Brand Name and MPN (SKU)</td>
+<td>Brand and MPN only; GTIN is ignored</td>
+<td>No valid barcode exists; this may limit performance</td>
+</tr>
+<tr>
+<td>Submit Product as Custom Product</td>
+<td>No unique identifiers; identifier_exists set to FALSE</td>
+<td>You are the only advertiser of the product, e.g. a self-made bundle</td>
+</tr>
+<tr>
+<td>Check "Adult-oriented"</td>
+<td>Flags the product as adult-oriented</td>
+<td>The product contains adult merchandise or sexually explicit content</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The identifier setting in the Google Shopping feed app controls how <strong>brand, MPN, SKU and GTIN</strong> are submitted.</li>
+<li>Keep the option that sends brand name, MPN, SKU and GTIN <strong>enabled</strong>.</li>
+<li>With this option on, a product without a GTIN falls back to its MPN or SKU.</li>
+<li>Check this setting <strong>before troubleshooting</strong> missing identifier warnings.</li>
+<li>The app's settings control how product identifiers are submitted to Google.</li>
+<li>Check these settings <strong>when GTIN codes are missing</strong>.</li>
+<li>If the supplier provides no identifiers, the product can be set up to submit identifiers from the feed app's <strong>default identifier option</strong>.</li>
+</ul>
+<h4 id="procedure-setting-default-product-identifiers-in-the-feed-app">Procedure: Setting default product identifiers in the feed app</h4>
+<ol type="1">
+<li>Open the <strong>default product identifier management</strong> option.</li>
+<li>Choose the option that submits <strong>brand name, MPN (SKU number) and GTIN <span class="ex">(barcode)</span></strong> together.</li>
+<li>If some identifiers are missing, the feed still works. It submits the ones available.</li>
+<li>Click <strong>save</strong>, then confirm with <strong>yes, save</strong>.</li>
+<li>Click <strong>sync</strong> again so the feed modifiers <span class="ex">(rules that change feed data)</span> link to the products from the store.</li>
+</ol>
+<p>An identifier is a code that names a product. A fallback is a backup choice you use when the first choice fails.</p>
+</details><details class="part" id="identifier-fallbacks-and-errors"><summary><h2>Identifier Fallbacks and Errors</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="resolving-a-gtin-barcode-number-error"><summary><h2>Resolving a GTIN <span class="ex">(barcode number)</span> error</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A GTIN is a barcode number for a product (Global Trade Item Number).</li>
+<li>If a product gets a GTIN error, <strong>enter the manufacturer part number (MPN)</strong> in the MPN column instead. The MPN is the code the maker gives the product.</li>
+<li>MPN values are usually approved more easily than GTINs. **</li>
+<li>If a product has no GTIN, <strong>use an MPN instead</strong>.</li>
+<li>Google Merchant Center (Google's tool that receives your product list) can accept MPNs in place of GTINs. **</li>
+<li>Use the MPN as the backup identifier when Merchant Center reports a <strong>missing GTIN</strong> error.</li>
+<li>A product flagged for missing GTIN should be listed with an MPN instead.</li>
+<li>Leave the GTIN field <strong>empty</strong>.</li>
+<li>Google documentation explains the required fields when the MPN is flagged as not one of a kind <span class="ex">(not unique)</span>.</li>
+<li>To fix invalid GTIN errors in Merchant Center, <strong>correct the product page</strong> on Shopify <span class="ex">(the online store software you use)</span>.</li>
+<li>You can also <strong>disable GTIN</strong> in the product feed settings.</li>
+<li>If Google says a GTIN has too few digits, <strong>add leading zeros</strong> in front of it. Leading zeros are zeros placed before the first digit.</li>
+<li>Keep adding zeros until the GTIN reaches the full required length.</li>
+<li>This is the fix Google itself suggests.</li>
+<li>GTINs must be <strong>unique</strong> for each product. Unique means no other product uses the same number.</li>
+<li><strong>Do not use the same value</strong> for several products, such as the brand name.</li>
+<li>Product variations that are multipacks of one item cannot share the same GTIN.</li>
+<li>Give each variation a <strong>unique identifier</strong>.</li>
+<li>Or sell the item <strong>only as bundles</strong> (sets sold together).</li>
+</ul>
+</details><details class="part" id="procedure-resolving-merchant-center-gtin-errors"><summary><h2>Procedure: Resolving Merchant Center GTIN errors</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Remove the barcode</strong> if it duplicates the SKU <span class="ex">(the store's own product code, short for stock keeping unit)</span>. Keep only the SKU value.</li>
+<li><strong>Resubmit the product feed</strong> (the product list you send to Google) and check whether the errors clear.</li>
+<li>If the SKU does not fix the error, <strong>use the MPN</strong> instead.</li>
+</ol>
+<ul>
+<li>You do not need every product identifier.</li>
+<li>Using the same value in several fields, such as SKU and barcode, can cause a <strong>duplicate-value error</strong> in Merchant Center.</li>
+</ul>
+</details><details class="part" id="fixing-missing-identifiers"><summary><h2>Fixing missing identifiers</h2><span class="pm">1 min</span></summary>
+<p>**</p>
+</details><details class="part" id="procedure-fixing-missing-product-identifiers-in-merchant-center"><summary><h2>Procedure: Fixing missing product identifiers in Merchant Center</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Check Merchant Center</strong> for products flagged with missing values. They can be limited.</li>
+<li><strong>Ask the supplier</strong> for SKU numbers first. Or find them on the price sheets they sent.</li>
+<li>If no SKU exists, <strong>use the MPN</strong>.</li>
+<li>If neither exists, <strong>create your own</strong> consistent naming and numbering convention.</li>
+<li>After the fix, <strong>confirm impressions rise</strong> before raising the budget. Impressions are how many times your ad was shown.</li>
+</ol>
+</details><details class="part" id="creating-your-own-identifiers-mpn"><summary><h2>Creating your own identifiers (MPN)</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Create your own MPNs <strong>only</strong> for suppliers <span class="ex">(the companies that make or ship your products)</span> that lack SKUs, UPCs and MPNs.</li>
+<li>You can also create them when private labeling. Private labeling means putting your own brand on a supplier's product.</li>
+<li>A UPC is a 12-digit barcode number used in the US.</li>
+<li>When private labeling, <strong>create your own identifier</strong>, such as a brand name plus a number.</li>
+<li>Use it as the MPN instead of the supplier's SKU.</li>
+<li>This stops Google from matching your products with the supplier's other listings. **</li>
+<li>To make MPNs, <strong>make up a consistent code</strong> from the brand's name.</li>
+<li>For example, use the brand initial, then the product letters, then a sequence number <span class="ex">(a number that counts up: 1, 2, 3)</span>.</li>
+<li>Use the same logic for <strong>every product</strong>. **</li>
+<li>Use a <strong>consistent MPN format per supplier</strong>.</li>
+<li>Take the supplier's product reference number or SKU.</li>
+<li>Create a prefix <span class="ex">(a short code placed in front)</span> from the brand name, such as the first letters of the brand.</li>
+<li>Join them with an underscore, as in FOV_12345.</li>
+<li>Apply the <strong>same format</strong> to every product from that supplier. **</li>
+<li>Around <strong>99%</strong> of suppliers have no UPC. This is based on nearly 1,000 suppliers worked with. **</li>
+<li>If a supplier does provide a UPC, GTIN or its own MPN, <strong>use the supplier's identifier</strong> instead.</li>
+<li>When a product has no GTIN, <strong>use the MPN field</strong> in Google Merchant Center.</li>
+<li>If the supplier has no MPN either, create one from the brand initials plus a sequence number.</li>
+<li>For example: AP-1 and AP-2.</li>
+<li>A custom identifier can be built from brand initials plus a product descriptor <span class="ex">(a short word for the product)</span>.</li>
+<li>For example: AS-blue-one for a blue surfboard.</li>
+<li>This ensures uniqueness without relying on supplier identifiers. **</li>
+<li>Use <strong>MPN (Manufacturer Part Number)</strong> as a unique product identifier when UPC numbers are unavailable or do not exist.</li>
+<li>You may <strong>create MPN numbers</strong> if the supplier does not provide them. **</li>
+<li><strong>Never invent a SKU</strong> to fill the identifier field.</li>
+<li>SKUs are specific to your own store. They are not universal product identifiers.</li>
+<li>Use a UPC or MPN from the supplier instead.</li>
+</ul>
+</details><details class="part" id="sku-rules"><summary><h2>SKU Rules</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Do not invent SKUs.</strong></li>
+<li>If a brand's products already have SKUs and you sell under that brand, <strong>use the supplier's SKU</strong>. **</li>
+<li><strong>Keep SKUs in the product feed</strong> as best practice.</li>
+<li>This is true even if they cause products to appear among competitors in Google Shopping (Google's product ads and price comparison area).</li>
+<li>Removing them is <strong>not the recommended fix</strong>.</li>
+<li>Product SKU numbers from the feed can match buyer searches.</li>
+<li>So you <strong>compete</strong> with other sellers on those SKUs in the Google auction <span class="ex">(the system where ads bid for each spot)</span>.</li>
+<li>Treat SKUs as part of your competitive exposure. **</li>
+<li>Listing a product's SKU and barcode in the same identifier fields can trigger <strong>duplicate-value errors</strong>.</li>
+<li>See the duplicate-value rule above.</li>
+<li>The Shopify SKU field <span class="ex">(the product code box on a Shopify product page)</span> is for your own management.</li>
+<li>It has <strong>no effect</strong> on Google Shopping.</li>
+<li>Google uses the MPN and UPC instead.</li>
+<li>These can only be set through a shopping feed app <span class="ex">(a tool that builds your product list)</span> or a CSV upload <span class="ex">(a spreadsheet file)</span>.</li>
+<li>They cannot be set on the Shopify product page. **</li>
+</ul>
+</details><details class="part" id="variants"><summary><h2>Variants</h2><span class="pm">1 min</span></summary>
+<p>A variant is another version of one product, such as another color or size.</p>
+<ul>
+<li><strong>Sync</strong> (copy the data across) all variants in the Shopping feed when variants differ in color or similar attributes.</li>
+<li><strong>Sync only the first variant</strong> when variants do not need separate listings. **</li>
+<li>When each variant should appear as its own product in Google, <strong>set variant submission preference to all variants</strong> in the feed app.</li>
+<li>Choose "first variants only" only if you want one listing per product.</li>
+<li>Set variant submission preference to <strong>all variants</strong> if each variant should be its own listing.</li>
+<li>Upload <strong>every product and every variant</strong> to Google Merchant Center as its own item.</li>
+<li>Each variant can match a different specific search term, such as material or size. **</li>
+<li>Product variants set up in Shopify, such as colors, are picked up by the feed if all variants are included.</li>
+<li>Each variant can then appear for searches that include its attribute, such as a particular color.</li>
+<li>For clothing with several sizes or colors, each variant is normally a <strong>separate row</strong> (one line in the list) in the Google feed.</li>
+<li>Use the <strong>item group ID</strong> column <span class="ex">(a code that ties variants of one product together)</span>.</li>
+<li>This groups the variants under one product, so Google can show color filters on Google Shopping.</li>
+</ul>
+</details><details class="part" id="google-product-category-and-shopping-attributes"><summary><h2>Google Product Category and Shopping Attributes</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="setting-the-category"><summary><h2>Setting the category</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Set the <strong>Google product category</strong> (the type label Google files the product under) for <strong>every product</strong> in the feed.</li>
+<li>A default can be set for the whole feed. A default is a setting that applies unless you change it.</li>
+<li>Per-product assignment is better when the store carries several product types.</li>
+<li>Google Product Category must be <strong>set manually for each product</strong> in the feed app.</li>
+<li>Choose the most specific and closest match from Google's fixed category list, called the taxonomy.</li>
+<li>Example: Hardware &gt; Plumbing &gt; Plumbing Fixtures &gt; Shower Stalls &amp; Kits.</li>
+<li>The category also influences US tax calculation and campaign targeting <span class="ex">(which searches and places your ads reach)</span>.</li>
+<li><strong>Set a default</strong> in the feed app settings.</li>
+<li>Choose a top-level category <span class="ex">(the broadest group)</span> that matches your main niche <span class="ex">(your product area)</span>.</li>
+<li>For example, for an apparel <span class="ex">(clothing)</span> store, choose a top-level clothing category.</li>
+<li>This default applies to products <strong>without a more specific category</strong>.</li>
+<li>Product categories and other attributes <span class="ex">(product details)</span> can be set <strong>in bulk</strong> by category.</li>
+<li>This saves time when a catalogue <span class="ex">(your full product list)</span> has many products.</li>
+<li>You do not have to edit each product separately.</li>
+<li>More product data, such as categories, age group and gender, helps Google match products to more relevant searches.</li>
+<li>Filling in every detail is <strong>not necessary</strong>.</li>
+<li>Titles, descriptions and the keywords shoppers type are the priority.</li>
+<li>The Shopping tab lets shoppers filter results by price range, category, brand, type and capacity.</li>
+<li>Which filters a product can appear in depends on the product data sent to Google.</li>
+<li>So complete and accurate attributes matter. **</li>
+</ul>
+</details><details class="part" id="custom-attributes"><summary><h2>Custom attributes</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The feed app's Custom Attributes section lets you enter <strong>Color, Size, Material, Pattern and COGS</strong>.</li>
+<li>COGS means cost of goods sold, which is what you pay for the product.</li>
+<li>These values are submitted to connected channels <span class="ex">(sales platforms you link)</span>.</li>
+<li>They do <strong>not write back to Shopify</strong>, so your Shopify store does not change.</li>
+<li>They apply <strong>only when</strong> the same attribute is not already defined in Shopify.</li>
+<li>For clothing, <strong>size and color must be entered</strong> in the feed.</li>
+<li>Ads cannot run without them.</li>
+<li>Standardized size values matter, because customers compare products on size.</li>
+<li>For non-clothing products, the Size field means a <strong>size category</strong> such as small, medium or large, not dimensions.</li>
+<li>Consistent size values help customers compare products.</li>
+<li>This is true even though variant setups differ across stores.</li>
+<li>Custom attributes are usually <strong>not required</strong> for high-ticket products <span class="ex">(expensive items)</span>, unlike clothing.</li>
+</ul>
+</details><details class="part" id="detailed-product-characteristics"><summary><h2>Detailed product characteristics</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Set Condition to New</strong> for all high-ticket dropshipping products.</li>
+<li>Dropshipping means you sell the product, and the supplier ships it to the buyer.</li>
+<li>Condition means whether the product is new or used.</li>
+<li><strong>Set Age Group to Adult</strong> unless the product is for children.</li>
+<li>For children, use Kids, Infant, Toddler or Newborn as appropriate. **</li>
+</ul>
+</details><details class="part" id="age-gender-and-adult-attributes"><summary><h2>Age, Gender and Adult Attributes</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>For most high-ticket products, <strong>set gender to unisex</strong> (for all genders), age group to adult and condition to new. **</li>
+<li>For unisex products, where any age is not an option, <strong>select Adults</strong> in the age group setting.</li>
+<li>Do this per product in the feed app.</li>
+<li>Age group describes <strong>who the product is for</strong>.</li>
+<li>The Adult-oriented checkbox is different. It is only for adult content.</li>
+<li>Do not confuse the two. **</li>
+<li>Set Gender <strong>only</strong> when the product is made specifically for one gender.</li>
+<li>Examples: men's apparel, footwear, fashion items or gender-specific makeup.</li>
+<li>For most products, including those used mainly by one gender, <strong>choose Unisex</strong>. **</li>
+<li><strong>Check the Adult-oriented box</strong> only when the product contains adult merchandise <span class="ex">(adult products)</span> or sexually explicit content.</li>
+<li>Examples include nudity, sexually suggestive content, or products intended to enhance sexual activity. **</li>
+</ul>
+</details><details class="part" id="custom-labels-shipping-labels-and-feed-modifiers"><summary><h2>Custom Labels, Shipping Labels and Feed Modifiers</h2><span class="pm">1 min</span></summary>
+<p>Feed modifiers are rules that change product data in the feed.</p>
+<ul>
+<li>Ads Label and Ads Grouping have <strong>no real use</strong> in current Google Ads (Google's paid ad system). **</li>
+<li>Custom Labels <span class="ex">(tags that group products)</span> structure your campaigns.</li>
+<li>The Shipping Label links a product to a <strong>specific shipping rate</strong> in Merchant Center.</li>
+<li>Google Shopping product tags can be generated by the Google Shopping feed app.</li>
+<li>When using it, <strong>take tag problems to the app developer</strong>.</li>
+<li>The Google Ads Shopping feed must include <strong>each product's price</strong>.</li>
+<li>Google Ads does not require a separate price field for shipping costs.</li>
+<li>This is when the cost is already included in the product price.</li>
+</ul>
+</details><details class="part" id="procedure-setting-product-level-shipping-costs-in-shopping-feeds"><summary><h2>Procedure: Setting product-level shipping costs in Shopping feeds</h2><span class="pm">1 min</span></summary>
+<p>**</p>
+<ol type="1">
+<li><strong>Create a shipping label</strong> in Merchant Center for each rate you charge. Example: a flat 20 USD rate <span class="ex">(one fixed price)</span>.</li>
+<li>Enter that <strong>exact label</strong> in the Shipping Label field of each product that uses the rate.</li>
+<li><strong>Confirm</strong> that the shipping rates charged on the site match the rates advertised in the feed.</li>
+</ol>
+</details><details class="part" id="which-products-to-include"><summary><h2>Which Products to Include</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="inclusion-and-exclusion"><summary><h2>Inclusion and exclusion</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The feed app's product inclusions and exclusions let you choose which products are in or out.</li>
+<li>You can select products <strong>under $200</strong> and remove them from campaigns.</li>
+<li>Removed products receive <strong>no spend</strong> (no ad money).</li>
+<li>Setup takes about <strong>10 to 15 minutes</strong>.</li>
+<li>In Google Merchant Center, you can set the feed to sync only the products from a specific collection <span class="ex">(a group of products)</span>.</li>
+<li>Exclude unwanted categories, such as accessories, by <strong>manually removing them</strong> from your product feed or campaign product selection.</li>
+<li>Do not use negative keywords for this. Negative keywords are search words that block ads.</li>
+<li>Shopping campaigns do not respond to negative keywords the same way Search does. Search means Google's text ads on search results. **</li>
+<li>Products must have a <strong>live product page</strong> (a page customers can visit now).</li>
+<li>Products must also have a valid URL <span class="ex">(web address)</span>.</li>
+<li><strong>Remove old or broken product URLs</strong> from the feed.</li>
+</ul>
+</details><details class="part" id="products-that-must-be-in-stock"><summary><h2>Products that must be in stock</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Listing products you do not have in stock can lead to a <strong>suspended</strong> Google Merchant Center account. Suspended means blocked.</li>
+<li>A student reported this after selling a product that was not in stock.</li>
+<li><strong>Keep product availability accurate</strong> before running Google Shopping.</li>
+</ul>
+</details><details class="part" id="feed-preparation-before-the-first-sync"><summary><h2>Feed preparation before the first sync</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Optimize</strong> the product titles in your Shopify store.</li>
+<li>Titles should contain the core keywords and the real search terms customers use and convert with <span class="ex">(turn into buyers)</span>.</li>
+<li>Then <strong>set up Merchant Center</strong>.</li>
+<li><strong>Install a product feed app</strong> for Google Ads.</li>
+<li><strong>Connect the app</strong> to your store.</li>
+<li>Let the app update the feed <strong>daily</strong>, so stock, prices, images and titles stay current.</li>
+<li><strong>Click sync</strong> to pull all products into the feed app.</li>
+<li>Products can then be edited inside the app.</li>
+<li>Enable <strong>"Submit additional image"</strong> for products whose variants use different images.</li>
+<li>Then click sync to generate the feed.</li>
+<li><strong>Recheck the feed</strong> when identifiers are missing or products are flagged.</li>
+<li>Do this instead of launching new feeds.</li>
+<li>Google Shopping's standard reach <span class="ex">(how many people see your ads)</span> is only as good as the feed.</li>
+<li>A product feed is the list of product data Google reads.</li>
+<li>It contains the price, photo, product link, description and title for each product.</li>
+<li><strong>Fill in custom attributes or detailed product characteristics</strong> only where needed.</li>
+<li>Most fields filled in when creating a product in Shopify are passed to the feed.</li>
+<li>These include product type and brand.</li>
+<li>For most stores, the feed needs <strong>checking rather than rebuilding</strong>.</li>
+<li>A Google Shopping product feed is the structured product data you send to Google Merchant Center.</li>
+<li>It is usually sent through a connector <span class="ex">(a link between two tools)</span> or an API <span class="ex">(a way for programs to talk to each other)</span>.</li>
+<li>Google uses it to fill Shopping ads.</li>
+<li>Google also uses it to decide which search terms each product matches.</li>
+<li>Google Shopping product approval can be affected by feed quality.</li>
+<li><strong>Check the feed</strong> when the review takes too long.</li>
+</ul>
+</details><details class="part" id="ongoing-product-feed-changes"><summary><h2>Ongoing product feed changes</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Changes in product or shipping details in Merchant Center should be checked.</li>
+<li>Confirm the feed is <strong>not duplicated</strong>.</li>
+<li>Deleting and re-adding a feed can create a duplicate.</li>
+<li>So confirm there is <strong>only one feed</strong> from the feed app.</li>
+<li>A product ID is the unique code that names each product in the feed.</li>
+<li>Changing product IDs after the feed has been approved makes products count as new.</li>
+<li>Re-approval can take <strong>3 to 5 days</strong>.</li>
+<li>It also <strong>wipes the performance history</strong> of the feed.</li>
+<li>Do <strong>not change the product ID format</strong> after approval.</li>
+<li><strong>Never change product IDs</strong> once ads are running.</li>
+<li>Google treats a changed ID as a new product. The historical data for the old product is lost.</li>
+<li>The only exception is when performance is very poor.</li>
+</ul>
+</details><details class="part" id="verification-and-approval"><summary><h2>Verification and Approval</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Verify</strong> that products are correctly submitted to Google Merchant Center.</li>
+<li>Go to Merchant Center, then <strong>Settings &gt; Data Sources</strong>.</li>
+<li>Confirm products appear under <strong>"Provided by you"</strong>.</li>
+<li>The feed source should show as <strong>"Content API"</strong> (Google's channel for receiving product data), created automatically by Symprosis.</li>
+<li><strong>No products</strong> should appear under "Found by Google".</li>
+<li>In Google Merchant Center, go to <strong>Settings &gt; Data sources</strong>.</li>
+<li>Look at the section <strong>"Provided by you"</strong>.</li>
+<li>It shows a Content API source with the store's products.</li>
+<li>This is instead of the "Found by Google" products that appear with the built-in app.</li>
+<li>For a US-based store, the Content API source under Settings &gt; Data sources &gt; Provided by you usually has the feed label <strong>US</strong>.</li>
+<li>A feed label is a tag that names the country the feed is for.</li>
+<li>The app sets this label <strong>automatically</strong> when it creates the feed during setup.</li>
+<li><strong>Wait 2 to 4 days</strong>, up to about four.</li>
+<li>Wait until every product changes from Pending <span class="ex">(waiting for review)</span> to approved with a green check.</li>
+<li>Only <strong>after approval</strong>, move on to setting up Google Ads.</li>
+<li>The product section in Merchant Center can show <strong>"no data"</strong> for up to <strong>10 hours</strong> after the first sync for Google.</li>
+<li>For Facebook, it can take up to <strong>4 hours</strong>.</li>
+<li><strong>Wait until active items appear</strong> before setting up campaigns.</li>
+<li>Once the feed app is connected, Merchant Center checks the domain <span class="ex">(your store's web address)</span> and shipping setup automatically.</li>
+<li>Both should show as <strong>verified</strong>.</li>
+<li><strong>Run the product sync only after</strong> these checks pass.</li>
+</ul>
+</details><details class="part" id="feed-mistakes-to-avoid"><summary><h2>Feed Mistakes to Avoid</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Do not run two feeds at once</strong> without a deliberate plan.</li>
+<li>Example: the Shopify Google channel (Shopify's built-in Google sales link) and the Feed for Google Shopping app.</li>
+<li><strong>Do not submit demo or test products</strong> (examples, not real items) to a live Merchant Center account.</li>
+<li>They create product warnings.</li>
+<li><strong>Do not activate</strong> Shopify's built-in Google sales channel for Shopping.</li>
+<li>It duplicates the product feed if set live after the feed setup.</li>
+<li><strong>Do not check the box</strong> that submits products to Merchant Center through the Google sales channel.</li>
+<li><strong>Do not connect the Google &amp; YouTube app</strong> to Merchant Center alongside the feed app.</li>
+<li><strong>Do not list products</strong> you do not have in stock.</li>
+<li><strong>Do not change product IDs</strong> after approval or once ads are running.</li>
+<li><strong>Do not mark a product as custom</strong> to avoid competition.</li>
+<li><strong>Do not mark a product as custom</strong> when a barcode exists.</li>
+<li><strong>Do not invent SKUs.</strong></li>
+<li><strong>Do not use the Shopify SKU field</strong> expecting it to reach Google.</li>
+<li><strong>Do not rely on manual Excel or spreadsheet uploads</strong> for a growing store. Excel is a spreadsheet program.</li>
+<li><strong>Do not use the same GTIN</strong> for several products.</li>
+<li><strong>Do not use negative keywords</strong> to remove categories from Shopping campaigns.</li>
+<li>Remove them from the feed or the campaign product selection instead.</li>
+</ul>
+</details><details class="part" id="further-details"><summary><h2>Further details</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>To <strong>remove a brand entirely</strong> from Google Product Listing Ads <span class="ex">(ads that show product photos and prices)</span>, use your Shopify-to-Google feed app.</li>
+<li>Example apps: EasyTabs or similar.</li>
+<li><strong>Sort products by brand.</strong></li>
+<li><strong>Uncheck all products</strong> from that brand.</li>
+<li><strong>Save settings.</strong></li>
+<li>Google Merchant Center will exclude them on the <strong>next feed pull</strong> (the next time it reads your product list).</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/10-google-ads-and-shopping/06-product-feed-setup-and-feed-apps/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../10-google-ads-and-shopping/05-google-merchant-center-setup-and-verification/"><span class="k">&larr; Previous</span><span class="v">Google merchant center setup and verification</span></a><a class="nx" href="../../10-google-ads-and-shopping/07-feed-optimization-titles-images-descriptions-and-promotions/"><span class="k">Next &rarr;</span><span class="v">Feed optimization: titles, images, descriptions and promotions</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

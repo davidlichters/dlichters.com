@@ -1,0 +1,256 @@
+<!-- part of ecom/deep/03-suppliers-and-fulfillment.md -->
+Part 47 of 51 of "3. Suppliers and Fulfillment: full technical reference". Map of all parts: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment.md · Previous: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment/46-cases.md · Next: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment/48-supplier-management-sops.md
+
+## Building and Maintaining Supplier Relationships
+
+### Core principles of supplier relationships
+
+- Suppliers control margins, supply and product access, so relationships shape what the business can do. In the example, relationships led to exclusive products, a board advisor from a supplier and public listing of all suppliers, and they were maintained through in-person meetings at conferences. [L0334, 2017]
+- Trust is the basis of every supplier relationship in dropshipping, because suppliers ship the orders, keep delivery on time and give access to new products that increase revenue. [L1422, 2020-26]
+- Relationships largely determine whether the business succeeds. Responsive suppliers are essential, because you will need products quickly during scaling. Poor inventory management causes stockouts, and stockouts damage Amazon rankings. [L0592, 2020-26; L0227, 2014]
+- Strong relationships bring better terms over time, including negotiated pricing and exclusivity, and they determine who hears about opportunities first. [L0939, 2020-26]
+- Discounts and special incentives go to accounts that have built a real relationship and bring the supplier sales, because the supplier wants more product moving through its channel. [L0939, 2020-26]
+- Suppliers may offer credit terms or net terms to businesses they trust. [L1038, 2026]
+- Build long-term relationships with a small number of suppliers. Repeated work on the same cut, fabric and design gives more consistent output, faster sampling and better future designs, because the supplier learns your product and your customer. [L1438, 2023+]
+- Spend steadily with your suppliers and stay in regular contact, because the more business you bring them, the better they treat you. This applies to print-on-demand suppliers as well. [L1438, 2023+]
+- Do not treat every supplier interaction as a contest to win. Focus on a successful, profitable business and make the supplier's work as easy as possible, because the supplier also earns from your orders. [L1437, 2018]
+- Do not let suppliers take advantage of you. Check shipping charges, pricing and product quality, stay firm and respectful, and replace suppliers who do not do their job. [L1225, 2025]
+- Suppliers may ignore small sellers with low order numbers. Keep regular contact and set clear expectations about stock and fulfilment timelines. A low-volume seller can become a high-volume one later, which gives it more leverage. [L0552, 2023]
+
+### Ownership and approved contacts
+
+- Supplier approvals and supplier contact must not be outsourced. The relationship runs through the owner personally, not through a VA sending emails or making calls on your behalf, and approvals are a relationship task handled by the owner. (Older advice, 2020: [L0852, 2020]. Also stated in [L0592, 2020-26] and, from 2018, [L1085, 2018].) [L0592, 2020-26; L0852, 2020; L1085, 2018]
+- Even in a largely automated business, certain owner-held responsibilities should not be handed off. [L0592, 2020-26]
+- Team members may contact suppliers only for seven activities: placing orders, requesting stock levels, checking backorders, requesting product details, return claims, warranty claims and checking fulfillment details. Any other supplier topic must be cleared first with the named manager. [L1505, undated]
+- Each supplier contact must be recorded with supplier name, contact name, website URL, phone number and email. Only these recorded contacts may be used on the company's behalf, and anyone contacting suppliers must use this approved list. [L1505, undated]
+- Contact every supplier whose products you plan to list, and do not list products from suppliers you have not reached out to. Good supplier relationships help you become an authorized dealer and give you unique content for your store. [L1110, 2019]
+
+### Becoming a top account
+
+- Getting approved as a seller is only the start. The goal is to become one of the supplier's top accounts, so that the supplier contacts you proactively, checks in on your business and invites you to trade shows and after parties. [L0413, 2016]
+- After approval you are usually one of many retailers the supplier works with. Become a trusted, friendly contact. The main goal is a good working relationship with the supplier's sales rep, not only a finished account setup. [L0939, 2020-26]
+- Most brands assign a contact person when they approve a retailer. At a small company this is often the owner, at a larger company it may be the warehouse manager, and some brands assign a direct sales rep who processes orders. Either way, this person is your day-to-day contact. [L0939, 2020-26]
+- Bring the supplier sales before asking for anything else, because suppliers prefer retailers who bring them money. Increasing your sales with them is the most basic and most effective way to build the relationship. [L0939, 2020-26]
+- Suppliers that update stock slowly or offer thin margins often improve as the relationship grows. High sales volume through a supplier makes it more willing to grant better terms and preferential treatment. [L0247, 2021]
+- A strong relationship can bring wholesale price discounts and make a supplier a gold supplier who refers orders to you. Suppliers are more likely to send business to a seller they know is a real and reliable company. [L0413, 2016]
+- A small or new seller is more likely to open an account when its business looks legitimate. Attend trade shows, network in person, and use business cards and a professional presentation. [L1441, 2018]
+- After three to six months of regular sales through a supplier, a good sales rep relationship can lead to insider information. This includes upcoming product lines, restocks of items that were on back order for a long time, discontinued items with little stock left and low remaining inventory. [L0939, 2020-26]
+- Insider information lets you act before competitors. You can list a new product line first and start traffic and orders early. If only about 10 units of a popular product remain, you can advertise that scarcity to sell them before others. If a restock of a long out-of-stock product is coming, a supplier may reserve the units for you on the condition that you sell all of them within five days. [L0939, 2020-26]
+
+#### Ranking and tracking suppliers
+
+Procedure:
+
+1. Rank active suppliers by sales volume and put the one with the most business first. [L0939, 2020-26]
+2. Keep a separate list of target suppliers you have contacted but who have not yet approved you, including the name of the person you need to work with. [L0939, 2020-26]
+3. Keep building the relationship with both groups, because the stronger relationships lead to better business later. [L0939, 2020-26]
+
+### Communication and cadence
+
+- Supplier and VA communication must be in clear English, especially when the market is the United States. The speaker said about 97 percent of the market is in the US, so English fluency matters for both. [L0832, 2019]
+- Take regular calls with suppliers, but a weekly schedule is usually too frequent. Every other week is a reasonable cadence, and the relationship can later lead to better pricing, terms and exclusivity. [L1287, 2025]
+- Keep suppliers informed about your business by sending press releases, magazine features or podcast appearances that mention their products. A short email is enough, and no reply is required. [L0413, 2016]
+- Tell each supplier directly that orders must be processed and shipped on time, and that repeated delays or non-response will end the partnership. Stating this early sets a clear expectation before a problem appears. [L1407, 2023+]
+- Keep track of supplier prices as your volume grows, because suppliers often send unsolicited better price offers once sales start. Also check how fast a supplier responds, since slow replies matter for order handling. [L1127, 2024]
+- Record how orders are processed, the average shipping time and the point of contact for every supplier, in one place where any team member can learn each supplier. [L0468, 2020]
+
+#### Follow-up intervals per brand
+
+Set follow-up intervals per brand. Checking a monthly-shipping brand every two or three days annoys the manufacturer and wastes time. New team members can use these intervals while learning, then memorize them after a month or two of experience. Store the list where the team can look it up. [L1396, 2021-22]
+
+Use this structure in the corporate board:
+
+| Brand shipping group | Follow-up interval |
+|---|---|
+| Brands that ship in 2-3 days | Follow up after 2-3 days |
+| Brands that ship in 3-5 days | Follow up after 3-5 days |
+| Brands that ship once a month | Follow up after 1 month |
+
+[L1396, 2021-22]
+
+Keep track of about 40 vendors across several stores. At that scale, remembering each vendor's shipping time becomes unreliable, and a written per-brand list prevents mistakes in delivery promises to customers. [L1396, 2021-22]
+
+#### Quarterly check-in template
+
+Use this message to reconnect with a supplier contact after a quarter. (2023.)
+
+```
+Hi [Supplier contact name], it's [Your name] from [Store URL]. You may not recall me, since we spoke last quarter when I was just starting out. I'd like to hear how things are going on your side and at your company. Things have gone well for us because of [reason 1], [reason 2], and [reason 3]. Below are our goals for the coming quarter, and we'd be glad to have you involved. Shall we move forward?
+[Your name]
+[Company name]
+```
+
+[L0835, 2023]
+
+### Goodwill gestures
+
+- Send a handwritten thank-you letter to the supplier contact whenever they help you, for example by allocating scarce stock. Few sellers do this, so it makes you stand out. [L0413, 2016]
+- Personal gestures work because suppliers and sales reps are people, and people remember who treats them well. When a supplier later has discounts, exclusivity or low stock, the retailer they remember is the one they inform first. [L0939, 2020-26]
+- Choose supplier gestures by imagining how you would feel receiving them. A card or small gift you would enjoy receiving is the right standard, and it is more effective than a generic corporate gesture. [L0939, 2020-26]
+- Build goodwill with actions your competitors do not take, as long as the recipient will notice them and find them pleasant. Standing out in a supplier's memory leads to better treatment later. [L0939, 2020-26]
+- Match the gesture to the relationship stage. Send cards to suppliers who have not yet approved you and to suppliers with modest business. Reserve gift boxes for suppliers with high sales volume and those you want to take to the next level. [L0939, 2020-26]
+- Start holiday gestures around Christmas and other major holidays, even after the supplier has only just approved you and you have sold just one or two of its products. [L0413, 2016]
+
+#### Goodwill cases
+
+- Paying for a duplicate shipment that a customer kept, without arguing about it, built goodwill with a major supplier. Suppliers treated this way give early stock notices, new product videos and fast handling of warranty issues. [L1437, 2018]
+- A supplier who was close to the seller gave early notice that a discontinued product was coming back into stock. The seller listed it before the supplier's own site showed it and sold 12 units in 24 hours while nobody else had stock. [L1437, 2018]
+- A major supplier asked to run a sale through only one reseller. The reseller agreed and priced items well below the supplier's own site during the sale, which strengthened the relationship and sales. [L1437, 2018]
+- When a supplier has delayed tracking information, faulty products or inconsistent inventory, treat it as a weak supplier and shift volume away from it. During a supply shortage many of these suppliers go out of business, so do not keep pushing traffic to them. [L0942, 2022]
+
+### Holiday cards and gifts
+
+#### Gift cost tiers
+
+Sources give two price levels for different relationship stages. Use each where it applies.
+
+- Holiday gifts for supplier contacts, such as wine, flowers, cookies or brownies, cost about $20 to $50 per person. Include a letter with the gift that thanks them for their help. Use this level for supplier contacts in the general holiday round. [L0413, 2016]
+- For suppliers you want to grow with and who already go above and beyond for you, a gift box of about $50 to $100 delivered can be sent. A typical box contains a couple of bottles of wine and a personalized card. A wine gift alone can cost less than $50. Use this level only for high-volume suppliers and those you want to take to the next level. [L0939, 2020-26]
+
+#### Gift box logistics
+
+- Gift boxes can be ordered from online gift retailers and drop shipped directly to the supplier or the sales rep. Time the delivery around the holidays, when the recipient is likely to open them at home or at a holiday dinner. [L0939, 2020-26]
+- When you drop ship gift boxes, choose the online gift retailer based on where the supplier or sales rep is located. Different retailers serve different regions, so the right one depends on the recipient's location. [L0939, 2020-26]
+- Do not send a gift box to a supplier who has refused to approve you for a long period. A bottle of wine in that situation is too much, while a simple card is appropriate. [L0939, 2020-26]
+
+#### Cards
+
+- Custom greeting cards can be ordered at CardsDirect.com. You can personalize them with your logo and a message. Cards cost only a few dollars each, delivered, which makes them a low-cost way to stay in suppliers' minds. [L0939, 2020-26]
+- Holiday cards can also go to high-end customers, not only to suppliers and their sales reps. Each card should carry your logo and a short personal message and be addressed to a named person. [L0939, 2020-26]
+
+#### Holiday card routine
+
+Procedure:
+
+1. Collect the name of your sales rep and the company address for every supplier you work with. [L0939, 2020-26]
+2. Order custom greeting cards with your logo and a personal message for each contact. [L0939, 2020-26]
+3. Mail the cards around the holidays to all suppliers and their sales reps, not only to customers. [L0939, 2020-26]
+
+#### Card for a supplier that has not approved you
+
+Pattern: A card to a supplier who has not approved you yet works when it is a friendly holiday wish that names the contact person, mentions your hope of working together next year and asks for nothing.
+
+Formula: greeting with the name, a sincere holiday wish for them and their family, and a short statement of hope to do business together.
+
+Examples:
+- Hi Maria, wishing you and your team a great holiday season. I hope we get to work together next year.
+- Hi David, happy holidays to you and your family. Looking forward to building a partnership in the new year.
+
+[L0939, 2020-26]
+
+### Trade shows and in-person contact
+
+- Use an online trade show directory to find industry events in your country and abroad. Smaller local meetups found on meetup.com or in LinkedIn groups are also worth attending, because meeting supplier contacts face to face builds relationships. [L0413, 2016]
+- TSNN (Trade Show News Network) lists upcoming trade shows by industry and location. Attending a relevant trade show lets you meet existing suppliers face to face and build relationships with brands you have already contacted online. [L0806, 2024]
+- Attend trade shows and network in person to build supplier relationships, and use business cards and a professional presentation. [L1441, 2018]
+
+#### After a trade show
+
+Procedure:
+
+1. Take unique product photos and short videos of the approved supplier products at the trade show booth, and use them on social media and product pages. [L0834, 2021]
+2. Write down each supplier representative's name and what you discussed. [L0834, 2021]
+3. Send a personal follow-up email the same week that refers to the conversation. [L0834, 2021]
+
+### Incentive pricing, promotions and bulk terms
+
+#### Asking for incentive pricing
+
+- Reach out to suppliers, explain your sales situation and ask whether they offer incentive pricing or special terms that let you advertise their products profitably while growing their business. [L0249, 2022]
+- Ask for an incentive program in writing. Use this template, which asks for a percentage off all invoices once you reach a set volume.
+
+```
+Hi [Supplier contact name],
+
+We have been doing great business together and we want to grow our sales of your products even more. Do you have an incentive program where we get a percentage off all our invoices once we reach [X units or $X in orders] in a set period? If you do not have a program like that, could we agree on a deal along those lines?
+
+Thank you,
+[Your name]
+[Store name]
+```
+
+[L0853, 2021]
+
+- Suppliers with a bulk discount can be approached for an approval conversation with a fixed promotion plan. The supplier decides on MAP-affected promotions. [L0855, 2023]
+
+#### Supplier-funded promotions
+
+- Supplier-funded advertising is rare. A more realistic request is a discount on all orders for a set period tied to a seasonal event such as Black Friday and Cyber Monday. Ask early, for example for an October through November or November through December window, and offer more promotion of their products in return. [L0853, 2021]
+- Supplier promotions work best with suppliers that have high order volume, long relationships and a known contact person. Plan promotions with them about a year ahead instead of asking for ad hoc offers each month. [L0247, 2021]
+- Ask the supplier to plan the year's promotions with you, using this template.
+
+```
+Hello [supplier contact name], we are mapping out our promotional calendar for the coming 12 months. Would there be any opportunities for us to collaborate? A few possibilities we have in mind: [idea 1], [idea 2], [idea 3]. Kind regards, [your name]
+```
+
+[L0247, 2021]
+
+- After an established relationship with a brand, ask it for temporary wholesale discounts before big promotions such as a monthly sale or a holiday. Pitch these terms directly to the supplier, and do not expect them without a relationship. [L0667, 2025]
+- Build supplier relationships so you can run brand promotions together. You give customers a bigger discount, and the supplier gives you a discount in return. After you have sold a brand's products, ask the brand to negotiate similar deals. [L0894, 2020-26]
+
+#### Volume leverage
+
+- In the example, the store paid suppliers about 1.2 million per year. Such a large volume gives leverage to ask for better pricing and shared marketing, and the example framed a request for 5 to 10 percent better pricing. [L1046, 2021-22]
+
+#### Bundles and quantity offers
+
+Procedure for a buy-two-get-one-free offer, with the supplier (for example CJ). The rule and the procedure describe the same offer and are merged here:
+
+1. Contact the supplier and ask for a free third item when two are bought. [L0773, 2023; L0774, 2023]
+2. Ask the supplier to create a specific SKU for this bundle, so it knows to ship three items when that SKU is ordered. [L0773, 2023; L0774, 2023]
+3. Show the offer clearly on the product image, for example Buy 2 + 1 free, or Buy 2 get 1 free. [L0773, 2023; L0774, 2023]
+
+- To build a bundle of different products, ask the supplier (for example a CJ agent) to create a specific SKU for the bundle. Then test which bundles people buy most before running ads on the second product. [L0773, 2023]
+
+#### Case: a supplier's slow stock
+
+- Early on, a supplier with roughly a hundred products agreed only to let the author sell four products it was struggling to move through its physical retail partners. The author accepted, got good pricing because the stock needed to move, placed those four products prominently on the site and ran ads targeting them. The author sold all of that supplier's stock of those four products. The result led the supplier to open its full catalogue of high-end European design lighting products, and the relationship stayed strong from then on. [L0929, 2021-22]
+
+### Supplier performance review
+
+- Ask suppliers after approval for their top-selling products and for their top retailers with monthly unit volumes. Answers vary, but they show what sells and what the realistic sales ceiling is. [L0964, 2023]
+- Prioritise supplier quality over the lowest price. Even one customer complaint should be recorded and resolved, and a supplier who cannot fix a recurring issue should be replaced. In this case three or four suppliers were changed before a reliable supplier with slightly higher cost was kept for about one year. [L1440, 2021+]
+- Review the supplier's performance once a year with the sales rep. Use this template to ask for pricing incentives for the next year. (2023.)
+
+```
+Hi [sales rep name], I hope the new year is off to a good start. We are reviewing our [previous year] numbers, and we would like to keep growing with your brand [brand name] on [store name], and we are ready to put more resources into marketing your products.
+We have sold [sales figure] of your products this year. Do you have any pricing incentives, wholesale discounts or a different pricing tier for [next year] that could improve our margins so we can sell more of your products?
+Thank you, [your name]
+[store name]
+```
+
+[L0470, 2023]
+
+- Signs of a weak supplier include delayed tracking information, faulty products and inconsistent inventory. Shift volume away from such a supplier. [L0942, 2022]
+
+### Dropping weak suppliers
+
+#### Rules that differ by source
+
+Sources give different thresholds, depending on their date. Use the rule that fits the situation and the era of the advice.
+
+| Situation | Action | Source |
+|---|---|---|
+| Bronze or unreliable supplier | Delete its products from the store without notifying the supplier, once you have the facts | [L0468, 2020] |
+| Silver-tier supplier | Keep it, since silver suppliers make up most of a catalog. Remove only for product quality problems, slow response, shipping issues or a pattern of poor business behavior | [L0960, 2019] |
+| Problem that cannot be fixed (2022) | Remove products for poor product quality, slow shipping or an unresponsive supplier. Slow sales alone are not a reason | [L0854, 2022] |
+| Weeks-long responses | Cut losses and remove products rather than continue the relationship | [L0249, 2022] |
+| One late response | Not a pattern on its own. Weeks-long response times for most communications signal poor business priority | [L0249, 2022] |
+
+#### Dropping rules
+
+- Once you have reached the supplier and given it several chances, stop selling for a supplier whose response times stay weeks long. Allocate inventory to responsive suppliers. [L0249, 2022]
+- Drop a supplier that shows no realistic chance of reliability, even after you were approved and uploaded its products. Late shipments and slow responses make its products unsellable, even when they sell well. [L1110, 2019]
+
+#### Escalation procedure for an unreliable supplier
+
+Procedure:
+
+1. Identify the person you deal with and check whether that individual is the problem. [L1110, 2019]
+2. At a larger company, escalate to someone higher, such as that contact's manager or the owner. Explain that the supplier is letting you down and making you look bad to customers. [L1110, 2019]
+3. If needed, ask for a different contact at the company. [L1110, 2019]
+4. If the higher-level person does not take the problem seriously, drop the supplier. [L1110, 2019]
+5. At a very small company where you deal only with the owner or one or two people, drop a problematic supplier directly. [L1110, 2019]
+
+
+Part 47 of 51 of "3. Suppliers and Fulfillment: full technical reference". Map of all parts: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment.md · Previous: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment/46-cases.md · Next: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment/48-supplier-management-sops.md

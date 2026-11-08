@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add a friend on Lichters</title>
+<meta property="og:title" content="Add me as a friend on Lichters">
+<meta property="og:description" content="Tap the link, then Open in Lichters, to send a friend request.">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: #fff; color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    display: flex; align-items: center; justify-content: center; padding: 24px 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { width: 100%; max-width: 420px; text-align: center; }
+  h1 { font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -0.5px; margin: 0 0 28px; }
+  .id { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  a.button {
+    display: block; background: #007AFF; color: #fff; text-decoration: none;
+    font-size: 17px; font-weight: 600; padding: 16px; border-radius: 14px;
+  }
+  a.button:active { opacity: 0.8; }
+  p.small { margin: 18px 0 0; font-size: 13px; color: #8e8e93; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Open Lichters to send a <span id="who-wrap">friend request</span></h1>
+  <a class="button" id="open" href="lichters://add">Open in Lichters</a>
+  <p class="small">Don't have Lichters yet? Ask the person who sent this link.</p>
+</main>
+<script>
+  (function () {
+    var params = new URLSearchParams(location.search);
+    var id = (params.get("id") || "").replace(/\D/g, "");
+    if (!/^\d{8}$/.test(id) || id === "00000000") { return; }
+    // Vorname der einladenden Person (&n=), sonst die Nummer
+    var name = (params.get("n") || "").replace(/\s+/g, " ").trim().slice(0, 30);
+    var who = document.createElement("span");
+    if (name) {
+      who.textContent = name;
+    } else {
+      who.className = "id";
+      who.textContent = id.slice(0, 4) + " " + id.slice(4);
+    }
+    var wrap = document.getElementById("who-wrap");
+    wrap.textContent = "friend request to ";
+    wrap.appendChild(who);
+    // Kein automatischer Sprung: ohne App zeigt Safari sonst "address is invalid" vor dem Hinweis
+    document.getElementById("open").href = "lichters://add?id=" + id + (name ? "&n=" + encodeURIComponent(name) : "");
+  })();
+</script>
+</body>
+</html>

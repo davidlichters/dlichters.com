@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Traffic, conversion and funnel math for planning | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.4: Traffic, conversion and funnel math for planning.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/04-traffic-conversion-and-funnel-math-for-planning/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Traffic, conversion and funnel math for planning | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.4: Traffic, conversion and funnel math for planning."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/04-traffic-conversion-and-funnel-math-for-planning/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/04-traffic-conversion-and-funnel-math-for-planning/">Plain version</a></div><h1>19.4 Traffic, conversion and funnel math for planning</h1><article><h2 id="conversion-rate-definitions">Conversion rate definitions</h2>
+<ul>
+<li>A conversion is one completed purchase by default. The same formula, purchases ÷ sessions × 100, works for any tracked event on the store, such as email signups, add-to-cart clicks or checkout starts. Example: 2 purchases from 100 visitors is a 2% conversion rate. [L0135.006, L0390.001, L0423.001]</li>
+<li>Use the conversion rate per product if you have it. If not, use the site-wide rate as a close estimate. Recheck the numbers whenever the conversion rate changes. (Source B, 2021-22, older.) [L0446.013]</li>
+<li>The conversion rate is the main KPI for paid ads because it shows what is working. Read it together with cost per click, average order value (AOV), COGS and customer acquisition cost (CAC). (Source D, 2026.) [L1038.012]</li>
+<li>A conversion rate only means something against its industry and niche, so 2% is not automatically poor. Many visitors are still early in their decision and not ready to buy. [L0423.002]</li>
+</ul>
+<h2 id="measurement-base-sessions-visits-and-unique-visitors">Measurement base: sessions, visits and unique visitors</h2>
+<p>Each source uses a different denominator. Pick one and keep it consistent when comparing periods.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Denominator</th>
+<th>Formula</th>
+<th>Example</th>
+<th>Source (date)</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sessions (Shopify Online Store report)</td>
+<td>orders ÷ sessions × 100</td>
+<td>366 ÷ 64,887 = 0.56%; same example has 58,492 unique visitors</td>
+<td>Source B (2021-22, older)</td>
+<td>L0400.007</td>
+</tr>
+<tr>
+<td>Sessions, one month of one store</td>
+<td>orders ÷ sessions × 100</td>
+<td>Infrared sauna store 134 ÷ 23,382 ≈ 0.57%; gazebo store 402 ÷ 80,733 ≈ 0.50%; air purifier store 137 ÷ 24,288 ≈ 0.56%; one gazebo day 9 ÷ 716 ≈ 1.26%</td>
+<td>Source B (2021, older)</td>
+<td>L0771.066</td>
+</tr>
+<tr>
+<td>Unique visitors</td>
+<td>orders ÷ unique visitors × 100</td>
+<td>44 ÷ 2,500 = 1.76%</td>
+<td>Source A (2020, older)</td>
+<td>L0468.165</td>
+</tr>
+<tr>
+<td>Unique visits</td>
+<td>purchases ÷ unique visits × 100</td>
+<td>2 ÷ 100 = 2%</td>
+<td>Source A (undated)</td>
+<td>L0582.002</td>
+</tr>
+<tr>
+<td>Store visits</td>
+<td>orders ÷ store visits × 100</td>
+<td>1 ÷ 161 ≈ 0.6%; 3 ÷ 161 ≈ 1.9%</td>
+<td>Source C (undated)</td>
+<td>L0650.072</td>
+</tr>
+<tr>
+<td>Qualified clicks</td>
+<td>sales ÷ qualified clicks × 100, counting only clicks from campaigns aimed at the products you sell</td>
+<td>2.5 sales per 100 qualified clicks = 2.5%</td>
+<td>Source A (undated)</td>
+<td>L1254.021</td>
+</tr>
+<tr>
+<td>Unique outbound clicks (Facebook custom metric)</td>
+<td>purchases ÷ unique outbound clicks</td>
+<td>Used because Facebook tracks outbound clicks more reliably than page views</td>
+<td>Source C (undated)</td>
+<td>L0950.016</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Base conversion analysis on unique visitors, not total clicks, because repeat visits from the same people inflate the total. [L0468.167]</li>
+<li>In analytics, switch the visitor count from total to unique visitors before calculating the conversion rate. [L0963.141]</li>
+<li>An overall conversion rate can look low because of repeat visitors, bots, unrelated traffic and total rather than unique counts. Judge the store by paid traffic instead. [L0963.140]</li>
+<li>Measure the paid traffic rate on unique visitors, counting Google Shopping and remarketing on Google, Facebook and Instagram. (Source A, 2022, older.) [L0963.139]</li>
+</ul>
+<h2 id="conversion-rate-benchmarks">Conversion rate benchmarks</h2>
+<p>Sources disagree. Each value below applies to the context in its row. Use the row that matches your traffic type and store stage, not the nearest number.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Benchmark</th>
+<th>Source (date)</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Shopping and Facebook remarketing combined</td>
+<td>minimum 2.5%</td>
+<td>Source A (2022, older)</td>
+<td>L0249.078</td>
+</tr>
+<tr>
+<td>Qualified traffic targeted by keyword intent</td>
+<td>2.5% or better</td>
+<td>Source A (2023)</td>
+<td>L0251.006</td>
+</tr>
+<tr>
+<td>Google Shopping with quality traffic</td>
+<td>2.5%; below this, investigate traffic quality or the landing page</td>
+<td>Source A (2023)</td>
+<td>L0274.021</td>
+</tr>
+<tr>
+<td>Qualified unique visitors from Google Shopping</td>
+<td>about 2.5%; 100 qualified unique visitors should produce about 2.5 sales over a longer period</td>
+<td>Source A (2023)</td>
+<td>L0804.083</td>
+</tr>
+<tr>
+<td>Google Shopping once dialed in</td>
+<td>about 2.5% of visitors</td>
+<td>Source A (2023)</td>
+<td>L0855.030</td>
+</tr>
+<tr>
+<td>Qualified paid traffic</td>
+<td>about 2.5%</td>
+<td>Source A (2022, older)</td>
+<td>L0969.046</td>
+</tr>
+<tr>
+<td>Paid traffic on unique visitors (Google Shopping, remarketing on Google, Facebook, Instagram)</td>
+<td>at least 2.5%</td>
+<td>Source A (2022, older)</td>
+<td>L0963.139</td>
+</tr>
+<tr>
+<td>Drop-ship store, unique visitors</td>
+<td>2.5% or better (2020 benchmark)</td>
+<td>Source A (2020, older)</td>
+<td>L0468.166</td>
+</tr>
+<tr>
+<td>Google Shopping average</td>
+<td>about 2.5%; 2% is an acceptable lower benchmark while the store is still being optimized</td>
+<td>Source A (2020, older)</td>
+<td>L0961.066</td>
+</tr>
+<tr>
+<td>Controllable, targeted traffic</td>
+<td>about 2.5%; Google Ads traffic from specific product searches should convert above this; broad organic searches typically convert lower</td>
+<td>Source A (2018, older)</td>
+<td>L1109.046</td>
+</tr>
+<tr>
+<td>Stores on the Source A model, set up correctly, optimized, right traffic</td>
+<td>2.5%; reaching it means the store performs well</td>
+<td>Source A (undated)</td>
+<td>L0582.004</td>
+</tr>
+<tr>
+<td>Planning target for traffic needs</td>
+<td>2.5% (2.5 buyers per 100 visitors)</td>
+<td>Source A (undated)</td>
+<td>L1147.019</td>
+</tr>
+<tr>
+<td>Minimum conversion target</td>
+<td>2.5% (200 visitors should produce about 5 sales)</td>
+<td>Source A (undated)</td>
+<td>L0474.007</td>
+</tr>
+<tr>
+<td>Reasonable benchmark from targeted campaigns</td>
+<td>2.5 sales per 100 qualified clicks; compare only after a large enough click sample</td>
+<td>Source A (undated)</td>
+<td>L1254.007</td>
+</tr>
+<tr>
+<td>Google Product Listing Ads, new store</td>
+<td>2% even for a new store</td>
+<td>Source A (2018, older)</td>
+<td>L1085.050</td>
+</tr>
+<tr>
+<td>Qualified organic traffic searching for the product directly</td>
+<td>2% or higher</td>
+<td>Source A (2025)</td>
+<td>L0278.012</td>
+</tr>
+<tr>
+<td>Generic website / good website with cold traffic / product-specific landing page</td>
+<td>about 2% / about 5% / 15% or higher; check your own rate in Google Analytics before comparing</td>
+<td>Source A (undated)</td>
+<td>L0643.037</td>
+</tr>
+<tr>
+<td>Direct-response dropshipping store</td>
+<td>1-2% typical; 2-3% good (roughly 2 to 3 buyers per 100 visitors)</td>
+<td>Source C (undated)</td>
+<td>L0605.002</td>
+</tr>
+<tr>
+<td>Store minimum target</td>
+<td>1.5%</td>
+<td>Source C (undated)</td>
+<td>L1212.003</td>
+</tr>
+<tr>
+<td>Store, weekdays / weekends</td>
+<td>about 3-3.5% / 4-5%</td>
+<td>Source C (undated)</td>
+<td>L0693.048</td>
+</tr>
+<tr>
+<td>Products above $200</td>
+<td>1-1.5% industry standard; strong stores 2-3%</td>
+<td>Source C (undated)</td>
+<td>L0788.056</td>
+</tr>
+<tr>
+<td>Store, industry standard</td>
+<td>around 2%</td>
+<td>Source C (undated)</td>
+<td>L1315.016</td>
+</tr>
+<tr>
+<td>Winning product</td>
+<td>7-9%; a rate near 1% usually means a product or offer problem rather than an ad problem</td>
+<td>Source C (undated)</td>
+<td>L1316.041</td>
+</tr>
+<tr>
+<td>Typical US store</td>
+<td>4-6% (rough benchmark; compare against your own history)</td>
+<td>Source D (2026)</td>
+<td>L1038.011</td>
+</tr>
+<tr>
+<td>Typical e-commerce site</td>
+<td>around 0.5%, 1% or 2%; most first-time visitors do not buy on that visit</td>
+<td>Source B (2021-22, older)</td>
+<td>L1239.002</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The 2.5% target is the reference for paid, targeted, qualified traffic. The 2% figure is the lower benchmark for a new store still being optimized, for Google Product Listing Ads, and for qualified organic traffic searching the product directly. [L0961.066, L1085.050, L0278.012]</li>
+<li>The 1.5% store minimum and the 1-2% typical range for direct-response stores are lower figures from a different source. When they conflict with 2.5%, use the 2.5% figure for paid targeted traffic and the lower figure for the store as a whole. [L1212.003, L0605.002, L0249.078]</li>
+<li>If ad CTR or store conversion falls below these benchmarks, change the creatives, market or offer. [L1212.003]</li>
+<li>Price level does not change the expected rate for Google PLA: a $5,000 product should not be expected to convert at a much lower rate than a $500 product. [L1085.051]</li>
+<li>Benchmark sample from a new store: about 470 well-targeted visitors should produce roughly 8 sales in the early period (2024); poorly targeted traffic converts below that. [L0471.003]</li>
+<li>Google PLA example at a 2% rate: 400 visits give about 8 sales and 320 visits about 6 sales. (Source A, 2018, older.) [L1085.050]</li>
+<li>At a 2% rate, 100 unique clicks from Google should produce about 2 sales within 2 to 3 days, as a baseline for judging a campaign. (Source A, 2020, older.) [L0961.067]</li>
+</ul>
+<h2 id="sample-size-limits">Sample-size limits</h2>
+<p>Use the threshold that matches the decision. Below the threshold, wait for more data instead of acting.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Minimum data</th>
+<th>Source (date)</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conclusions about a product</td>
+<td>150 to 200 real visitors; 50 to 100 is too little</td>
+<td>Source C (undated)</td>
+<td>L1259.002, L1260.012</td>
+</tr>
+<tr>
+<td>Suspecting a store conversion problem</td>
+<td>about 200 visitors is too few; around 2,000 qualified visitors with no sales justifies investigation</td>
+<td>Source A (2021, older)</td>
+<td>L1090.130</td>
+</tr>
+<tr>
+<td>Budget or CPC decisions per product</td>
+<td>100 clicks minimum; 97 clicks is still too small, but small optimizations are fine</td>
+<td>Source A (undated)</td>
+<td>L0941.094</td>
+</tr>
+<tr>
+<td>Conclusions about ads</td>
+<td>about 100 people is too small; about 1,000 supports conclusions; 2,000 to 5,000 supports firm decisions</td>
+<td>Source A (undated)</td>
+<td>L1083.010</td>
+</tr>
+<tr>
+<td>Stable conversion average</td>
+<td>several thousand clicks; 280 clicks is too small; normal variation averages out over time</td>
+<td>Source A (2023)</td>
+<td>L0274.022</td>
+</tr>
+<tr>
+<td>Return on ad spend (ROAS)</td>
+<td>at least 20 purchases</td>
+<td>Source A (undated)</td>
+<td>L0649.047</td>
+</tr>
+<tr>
+<td>Store decision on paid Shopping traffic</td>
+<td>about 1,000 visits</td>
+<td>Source A (2023)</td>
+<td>L0855.031</td>
+</tr>
+<tr>
+<td>Percentages (CTR, conversion)</td>
+<td>several thousand impressions with a meaningful number of clicks</td>
+<td>Source C (undated)</td>
+<td>L0644.008, L1426.012</td>
+</tr>
+<tr>
+<td>Split test</td>
+<td>enough traffic to show a real change; a 2% change is unreliable, a 40% change is more reliable</td>
+<td>Source C (undated)</td>
+<td>L0995.015, L0995.049</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Small samples are unreliable for percentages. Two clicks out of 100 impressions can jump to 3% with one more click, and two clicks can swing CTR from 2% to 3%. [L0644.008, L1426.012]</li>
+<li>Small traffic samples are not statistically reliable for conversion rate optimization. Large moves, such as revenue or profit changing sharply, can be trusted more than small percentage changes of around 2%. [L0995.015]</li>
+<li>A split test of prices needs a steady traffic volume. A 2% change is not reliable, but a 40% change is more reliable. [L0995.049]</li>
+<li>Normal early-stage performance of 1,780 impressions, 36 clicks and zero sales over six days is a typical starting point, not a failure. These numbers are too few to conclude anything about conversion rate or viability. (Source A, 2019, older.) [L0243.002]</li>
+<li>A campaign with 110 unique clicks and no sales may just need a larger sample before you judge it. (Source A, 2020, older.) [L0961.068]</li>
+<li>Around 46 clicks is too small to estimate a conversion rate. Wait for more traffic, and compare the daily budget with the daily ad spend to judge whether traffic is limited. [L0837.008]</li>
+<li>57 clicks in 30 days (44 Microsoft Ads, 13 Google Ads, on $2.16 spend) is far too little data to draw any conclusion. [L1254.008]</li>
+<li>A store with 287 visits in 30 days, 116 of them from paid Shopping, should expect about 2.5% of 116, or roughly 2 to 3 sales. That sample is too small to judge the store; a decision needs about 1,000 visits. [L0855.031]</li>
+<li>Before judging a product, run ads long enough to gather at least 150 to 200 real visitors. [L1259.002, L1260.012]</li>
+<li>A conversion rate cannot be judged from a small number of clicks. Compare against the 2.5 per 100 benchmark only after you have a large enough sample. [L1254.008, L1254.007]</li>
+<li>Google Ads' estimated click volume, shown after an ad group is saved (about 29 clicks in the example), is a rough check only, not a performance target. [L1352.027]</li>
+<li>There is no fixed target visitor number. The goal is as many visitors as possible, as long as they are qualified: right country, relevant search terms and buying intent. Paid bot traffic is worthless. [L0971.003]</li>
+</ul>
+<h2 id="funnel-stage-math">Funnel stage math</h2>
+<ul>
+<li>Each step of the funnel should keep at least about 50% of users. Example: 100 add-to-carts should produce about 50 checkouts and 25 sales. A bigger drop points to hidden costs, a broken checkout or a mobile problem. (Source A, 2021, older.) [L0853.066]</li>
+<li>Stage rates are ratios of consecutive steps:
+<ul>
+<li>Landing page to add-to-cart = add-to-cart visitors ÷ landing page visitors</li>
+<li>Add-to-cart to checkout = checkout starts ÷ add-to-cart visitors</li>
+<li>Checkout to purchase = purchases ÷ checkout starts</li>
+<li>Example: 12 add-to-cart visitors out of 200 landing page visitors is a 6% add-to-cart rate, which is the benchmark threshold in this example. [L1259.058]</li>
+</ul></li>
+<li>Shopify's own analytics shows visitors, pages opened and time on site, enough to diagnose early traffic problems. On average the first sale comes around 700 visitors, so about 5,000 visitors with no sales signals a serious issue. [L1380.038]</li>
+<li>CTR is one of the first and often weakest points in the funnel. Doubling CTR from 1% to 2% doubles incoming target-audience traffic without changing targeting, which can proportionally double revenue if conversion stays constant. [L0327.004]</li>
+<li>The lesson's quick math uses three levers: a 20% CPC discount on Shopping ads from a CTR boost, a 26% conversion rate lift from dynamic product ads (DPA), and a 10% boost in customer lifetime value (LTV). [L1031.036]</li>
+</ul>
+<h2 id="click-volume-expectations">Click volume expectations</h2>
+<ul>
+<li>Expected clicks per conversion = 100 ÷ conversion rate in percent. At 2%, expect 1 conversion every 50 clicks. At 2.59%, expect 1 every 38 clicks (100 ÷ 2.59 ≈ 38.6). Expected conversions per 100 clicks = 100 × conversion rate. [L0745.014]</li>
+<li>Days to first conversion = clicks needed for one conversion ÷ clicks per day, where clicks per day = daily budget ÷ cost per click. Examples: at a 1% rate, 100 clicks are needed; at $10/day and $1 CPC that is 10 clicks/day, so 10 days to one conversion. At 0.5% it takes 20 days; at 0.25% it takes 40 days. [L1341.005]</li>
+<li>Visitors typically need 2 to 3 days from first click to purchase, because promotions and offers affect the buying timeline. Account for this delay when you compare ad spend to sales. (Source A, 2020, older.) [L0961.069]</li>
+<li>At a 2.5% rate, 385 visitors should yield 3 to 4 sales over seven days once the campaign and store are optimized. (Source A, 2022, older.) [L1092.078]
+<ul>
+<li>Source inconsistency: 385 × 2.5% ≈ 9.6 sales, not 3 to 4. Check the visitor base, rate or period before using this figure in a plan. [L1092.078]</li>
+</ul></li>
+<li>Example: 100 qualified clicks to a product page should produce 2.5 sales at a 2.5% rate. If sales are fewer, the product page, pricing or product selection may not match qualified traffic. Optimize the page or pause traffic to that product. [L0253.036]</li>
+<li>To determine how long to wait before expecting 2-3 sales per week:
+<ol type="1">
+<li>Select one qualified product page (receiving relevant keyword traffic). [L0253.047]</li>
+<li>Calculate spend per click (Ad Spend ÷ Clicks). [L0253.047]</li>
+<li>Calculate clicks needed for 2.5% conversion (40 clicks = 1 sale). [L0253.047]</li>
+<li>Calculate weekly clicks needed for 3 sales (120 clicks). [L0253.047]</li>
+<li>Example: if $2 per click, 120 clicks = $240 weekly spend needed. [L0253.047]</li>
+<li>Scale your daily budget to match this; give it 2-4 weeks of consistent traffic. [L0253.047]</li>
+<li>If conversion rate is lower than 2.5%, optimize the product page before concluding traffic is ineffective. [L0253.047]</li>
+</ol></li>
+<li>Organic traffic growth from zero: a realistic six-month target is around 10,000 monthly organic visits. 50,000 is unrealistic for most people starting from that baseline. (Source B, 2021-22, older.) [L0447.013]</li>
+<li>About 95% of ecommerce store visitors are new each day, and each visitor sees the discount offer only once. Plan traffic as new visitors, not returning ones. [L0137.005]</li>
+</ul>
+<h2 id="visitors-and-units-needed">Visitors and units needed</h2>
+<ul>
+<li>Units needed per month = target monthly net profit ÷ net profit per sale. Example: a $3,000 monthly target needs 1,000 sales at $3 profit each, or 10 sales at about $300 profit each. Ten sales in a 30-day month is roughly one sale every three days. [L0474.005]</li>
+<li>Low-ticket vs. high-ticket example: for $3,000 profit, low-ticket products ($10) need 1,000 sales per month, while high-ticket products ($1,000) need only 10 (about one sale every 3 days). [L0012.004]</li>
+<li>Required monthly visitors = required monthly sales ÷ conversion rate. At 2.5%, 1,000 monthly sales need about 40,000 visitors per month (over 1,000 per day), and 10 monthly sales need about 400 visitors per month. [L0474.008, L1147.020]</li>
+<li>Traffic needed at 2.5% for $3,000 monthly profit: about 400 qualified visitors per month for a $300-profit product, versus about 40,000 for a $3-profit product. Buying 400 visitors costs far less than buying 40,000, so paid advertising is far more affordable for high-ticket products. (Source A, 2020 and undated sources.) [L0012.006, L1147.022, L0474.009]</li>
+<li>Monthly orders = monthly unique visitors × conversion rate. Example: 191,000 visitors × 2.5% = 4,775 orders per month. [L0524.004]</li>
+</ul>
+<h2 id="affordable-cost-per-visitor">Affordable cost per visitor</h2>
+<ul>
+<li>Traffic is purchased only when profit per sale covers the cost per visitor, because not every visitor buys. A product earning $3 profit cannot support paid traffic at about $1 per visitor, while a $300 profit can. [L1147.021]</li>
+<li>Maximum affordable cost per visitor = profit per sale × conversion rate. At 2.5%, a product earning $3 can afford about $0.075 per visitor, and a product earning $300 can afford about $7.50. Paid traffic only makes sense below this limit. [L1147.027]</li>
+<li>Typical clicks should cost 20 to 50 cents. Example: at $1 per click, 1,000 clicks cost $1,000; the same traffic produced 20 sales on a generic website, 50 on a good website and 150 on a product-specific landing page, so page design changes cost per sale. (Source A, undated.) [L0643.038]</li>
+<li>Ad spend for traffic = visitors × CPC. Example: 500,000 visitors × $0.50 CPC = $250,000 spend. ROAS = revenue ÷ ad spend, so $1,000,000 ÷ $250,000 = 4x. [L0871.031]</li>
+<li>Judge return on ad spend only for ads with at least 20 purchases. [L0649.047]</li>
+</ul>
+<h2 id="early-months-and-ramp-up">Early months and ramp-up</h2>
+<ul>
+<li>A first-month revenue target of $20,000 is achievable only when the store is live, supplier products are uploaded, conversion is optimized and paid traffic is running. Missing it early does not mean the model failed; stores keep improving over time. (Source A, 2019, older.) [L0663.078]</li>
+<li>The first month after launch is mainly for collecting data with small ad budgets. Revenue grows after campaigns are optimized, so do not expect the first month to match later months. (Source A, 2025.) [L0667.085]</li>
+</ul>
+<h2 id="revenue-and-profit-forecasts">Revenue and profit forecasts</h2>
+<ul>
+<li>Revenue = visitors × conversion rate × AOV, where AOV = total revenue ÷ number of orders. Example per 100 visitors: 2% at a $60 AOV gives $120; 3% at a $50 AOV gives $150. [L1164.043]</li>
+<li>Calculate changes carefully: $150 against $120 is 25% more revenue, not 30%. Moving conversion from 2% to 3% is a 50% rise, not a doubling. [L1164.045]</li>
+<li>Estimated monthly revenue = sales per month × AOV. Example: 20 sales a month at an average order of $800 gives about $16,000 per month. Use this to check whether a high-ticket store grows as expected. [L1472.059]</li>
+<li>Estimated monthly net profit = monthly orders × customer value × net margin. Example from the session: about $622,000 gross customer value per month; at a 20% net margin, roughly $124,000 per month. Recompute with real data, because rough inputs multiply into large errors. [L0524.005]</li>
+<li>Present revenue and profit estimates as a range, not a single number. Rerun the estimate with a higher conversion rate (for example 3.5%) and with a higher average order value from bundles to see the spread. [L0524.006]</li>
+</ul>
+<h2 id="refunds-and-guarantees">Refunds and guarantees</h2>
+<ul>
+<li>Net sales = gross sales − refunds, where refunds = gross sales × refund rate. Without a guarantee: 100 sales at a 5% refund rate gives 95 net sales. With a guarantee: 130 sales at a 10% refund rate gives 13 refunds and 117 net sales. [L0683.012]</li>
+<li>In this worked example, the guarantee produced 117 net sales against 95 without it: 22 more sales, roughly a 23% revenue increase. The result assumes the guarantee lifts orders from 100 to 130 while the refund rate rises from 5% to 10%. [L0683.013]</li>
+<li>Test a guarantee by calculating net sales under the expected higher conversion rate and the expected higher refund rate together. A guarantee is worth adding when net sales still rise after refunds are subtracted. [L0683.014]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>The minimum benchmark is 2 sales per 100 unique visits, a 2% conversion rate. [L0582.003]</li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/03-break-even-and-target-roas-cpa-and-allowable-ad-spend/"><span class="k">&larr; Previous</span><span class="v">Break-even and target ROAS, CPA and allowable ad spend</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/05-ad-metrics-glossary-and-how-to-read-them/"><span class="k">Next &rarr;</span><span class="v">Ad metrics glossary and how to read them</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

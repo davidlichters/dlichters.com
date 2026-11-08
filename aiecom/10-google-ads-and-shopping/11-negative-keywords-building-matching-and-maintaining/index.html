@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Negative keywords: building, matching and maintaining | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.11: Negative keywords: building, matching and maintaining.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/11-negative-keywords-building-matching-and-maintaining/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Negative keywords: building, matching and maintaining | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.11: Negative keywords: building, matching and maintaining."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/11-negative-keywords-building-matching-and-maintaining/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/11-negative-keywords-building-matching-and-maintaining/">Plain version</a></div><h1>10.11 Negative keywords: building, matching and maintaining</h1><article><h2 id="negative-keywords-building-matching-and-maintaining">Negative Keywords: Building, Matching and Maintaining</h2>
+<h2 id="why-negatives-matter">Why Negatives Matter</h2>
+<ul>
+<li>Negative keywords stop Google from showing your ads for irrelevant searches, which shifts budget away from low-converting traffic toward profitable keywords over time. [L0193.009]</li>
+<li>Negative keywords stop Google from spending budget on the queries you add, so over the first month or two a Shopping campaign becomes more focused and more spend goes to queries that make sales. Starting with a small budget helps you find non-revenue queries sooner. [L0750.028]</li>
+<li>Roughly 20% of the search terms made on the Google search network each day are unique, meaning they have never been searched before. They cannot be predicted in advance and can only be handled by exclusion. [L1074.002]</li>
+<li>Negative keyword lists substantially reduce the time needed to manage Google Ads campaigns compared with managing exclusions without them, and make it more likely that campaigns run as intended. [L1074.007]</li>
+<li>Google matches products to search terms by reading the product feed in its own way. In the first one to three weeks, many search terms that no buyer would use may appear and need negatives. [L0715.007]</li>
+<li>Google builds Shopping keyword matches automatically from the product feed. It sometimes matches searches unrelated to the store or containing brand names you do not sell, so check the Search terms report regularly and add those queries as negatives. [L0750.027]</li>
+<li>Google chooses which products to show for generic searches based on feed data, including title, SKU, description and keywords. To reduce impressions for a product, add negative keywords or lower its CPC at product level. [L0803.043]</li>
+<li>Many advertisers never review the Search terms report, so they do not add new negatives or exclude non-converting terms. The report is where most wasted spend shows up, so check it regularly. [L0876.017]</li>
+<li>The Search terms report can reveal wasteful searches to exclude, winning searches to scale, comparison or "X versus Y" queries that suggest new keywords, and the split between brand and non-brand searches. Accounts with real spend produce hundreds or thousands of rows. [L0876.016]</li>
+</ul>
+<h2 id="where-negatives-live">Where Negatives Live</h2>
+<h3 id="campaign-ad-group-and-shared-list-placement">Campaign, Ad Group and Shared List Placement</h3>
+<p>Sources disagree on whether negatives belong at campaign or ad group level:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Advice</th>
+<th>Applies when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A, 2020 (older)</td>
+<td>Set negatives at ad group level, not campaign level, because campaign level blocks keywords across all ads instead of allowing refinement. [L0245.016]</td>
+<td>Read as the older view; superseded by the 2021 and 2023 rules below for most accounts.</td>
+</tr>
+<tr>
+<td>Source A, 2021</td>
+<td>Campaign-level negatives apply to every ad group in that campaign. Use ad-group-level negatives only when several ad groups in one campaign must not share keywords. [L0247.065]</td>
+<td>Several ad groups in one campaign must not share keywords.</td>
+</tr>
+<tr>
+<td>Source A, 2023</td>
+<td>Add negatives at campaign level, not in a universal keyword list. They can be added as soon as they show up because they do not reset the campaign into a learning phase. [L0470.055]</td>
+<td>Default for campaigns.</td>
+</tr>
+<tr>
+<td>Source A, 2025 (Beta)</td>
+<td>Add negatives to the campaign (Beta Source A merch) rather than to an ad group. [L0743.022]</td>
+<td>Beta campaign.</td>
+</tr>
+<tr>
+<td>Source A, 2025</td>
+<td>When a campaign has only one ad group, it does not matter whether negatives are added at campaign or ad group level. [L0746.026]</td>
+<td>Single-ad-group campaigns.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Read together: put negatives at campaign level by default, and use ad group level only where several ad groups must keep different keyword sets. [L0247.065, L0470.055, L0746.026]</p>
+<p>Shopping search terms and Gmail or YouTube:</p>
+<ul>
+<li>Shopping ads that also show on Gmail or YouTube can trigger search terms through audiences. To see clean search term data, set the ads to appear only in Google Shopping results. [L0247.064]</li>
+</ul>
+<h3 id="shared-library-and-negative-keyword-lists">Shared Library and Negative Keyword Lists</h3>
+<ul>
+<li>Negative keywords can be added to a single ad group, to a single campaign, or to a shared negative keyword list. A shared list is the only option that applies one entry to several campaigns at once. [L0744.028]</li>
+<li>Negative keyword lists are reused across campaigns from the Shared Library. It holds negative keyword lists alongside bid strategies, shared budgets, the audience manager, location groups and placement exclusion lists. [L1074.008]</li>
+<li>Negative keyword lists are found under Tools and Settings &gt; Shared library &gt; Negative keyword lists. Select the list, choose Apply to campaigns, tick the target campaigns and apply. [L0742.027]</li>
+<li>To remove a wrong assignment, open the list, go to the campaign list, tick the campaign and choose remove list from selected campaign. [L0742.027]</li>
+<li>Tools and Settings &gt; Shared Library &gt; Negative keyword lists opens the list overview. It shows each list with its keyword count and number of campaigns, and the plus button creates a new list. [L1074.009]</li>
+<li>The new list dialog has the fields List name and Add negative keywords, with the hint "Enter or paste your negative keywords, one per line", plus SAVE and CANCEL buttons. A list cannot be saved until it contains at least one negative keyword. [L1074.010]</li>
+<li>Inside a negative keyword list, the APPLY TO CAMPAIGNS button attaches the list to selected campaigns. The detail page offers DOWNLOAD, EXPAND and ADD FILTER options. Each keyword in the detail view has a Match type column. [L1074.013]</li>
+<li>The Master Generic Negative Keywords list is meant to grow over time into the largest negative keyword list in the account. It holds every irrelevant search term that your ads should never show for. [L1074.014]</li>
+<li>Create the negative keyword lists before building a Shopping campaign so they are ready to apply at the right moment. Creating a list does not require applying it to a campaign at that point. [L1074.012]</li>
+</ul>
+<p>Setup procedure for the three lists:</p>
+<ol type="1">
+<li>Open Tools and Settings in Google Ads. [L1074.011]</li>
+<li>Under Shared Library, click Negative keyword lists. [L1074.011]</li>
+<li>Click the plus button to create a new list. [L1074.011]</li>
+<li>Enter the list name Master Generic Negative Keywords. [L1074.011]</li>
+<li>Paste the negative keywords from a ready-made generic starter list into the Add negative keywords field, one per line. [L1074.011]</li>
+<li>Click SAVE. The list cannot be saved without at least one keyword. [L1074.011]</li>
+<li>Create a new list named Brand Names. [L1074.011]</li>
+<li>Enter the names of the brands you sell through your website, using just the brand name, one per line. [L1074.011]</li>
+<li>Click SAVE. [L1074.011]</li>
+<li>Create a new list named Product IDs, product identifiers or product names. [L1074.011]</li>
+<li>Enter the unique identifiers of your products, such as model numbers and model names, exactly as they appear in your product titles or in the manufacturer or supplier documentation, one per line. [L1074.011]</li>
+<li>Click SAVE. [L1074.011]</li>
+<li>Do not apply the lists to any campaign yet. They are applied when the Shopping campaign is set up. [L1074.011]</li>
+</ol>
+<h3 id="adding-negatives-in-shopping-campaigns">Adding Negatives in Shopping Campaigns</h3>
+<p>Steps for adding negatives in Shopping campaigns:</p>
+<ol type="1">
+<li>Log in to Google Ads and click Campaigns in the left navigation, then Campaigns in the dropdown. [L0750.011]</li>
+<li>Use the toggle to select Shopping campaigns (the options shown depend on your campaign types). [L0750.011]</li>
+<li>Open the beta campaign first, then repeat the same steps for the alpha campaign. [L0750.011]</li>
+<li>Do not use the Keywords section for this. It only shows negative keywords already added. [L0750.011, L0750.012]</li>
+<li>Expand Insights and reports at the top and click Search terms, checking the beta campaign one at a time. [L0750.011]</li>
+<li>Review the list of search terms the ads appeared for, and check off the ones to exclude. [L0750.011]</li>
+<li>Click Add to negative keywords. The added terms then appear in the negative keywords list in the Keywords section. [L0750.011]</li>
+<li>Switch to the alpha campaign in the Search terms report and add only universal negatives there (see the alpha and beta rules). [L0750.011]</li>
+</ol>
+<p>Negative keywords are added in the campaign under Keywords in the sidebar, using the Negative keywords section and its plus button. [L0746.026]</p>
+<p>Source A 2025 (Beta location): open the Beta campaign, expand "Audiences, keywords and content" in the sidebar, click "Keywords", then "Negative keywords", and add them to the campaign (Beta Source A merch) rather than to an ad group. [L0743.022]</p>
+<p>Entering negatives:</p>
+<ul>
+<li>Enter negative keywords directly in Google Ads line by line. A spreadsheet is not needed. [L0972.057]</li>
+<li>Alpha and beta campaigns each need their own negative keyword list. [L0972.057]</li>
+</ul>
+<h3 id="multi-campaign-setups-high-medium-and-low-priority">Multi-Campaign Setups (High, Medium and Low Priority)</h3>
+<ul>
+<li>Negative keyword work is done in the high priority campaign only, because Google checks that campaign first. If the setup is correct, the medium and low priority campaigns should not show unwanted terms. [L0744.023]</li>
+<li>A negative keyword added to only one campaign pushes the term into the other campaigns, where it costs more per click without a better chance of conversion. Every negative added at the high priority level must also apply to the other two campaigns. [L0744.026]</li>
+<li>Add negative keywords to the shared master generic negative keyword list, which applies to all three campaigns at once. This avoids missed campaigns and copy errors when lists are long. [L0744.027]</li>
+<li>Decide whether to review search terms per campaign or per ad group based on how many brands and product types the store carries. A store with many brands and product types usually needs ad group level review, while a narrow store can be reviewed at campaign level. [L0744.061]</li>
+</ul>
+<h3 id="campaign-moves-and-keyword-placement">Campaign Moves and Keyword Placement</h3>
+<ul>
+<li>Do not move keywords between campaigns. To keep a term out of a campaign, add it there as a negative keyword. [L0671.012, L0671.290]</li>
+<li>Example: a main niche term such as pool table is added as a keyword in beta and as a negative keyword in alpha, so alpha does not spend on it. [L0671.013]</li>
+</ul>
+<h3 id="master-negative-list">Master Negative List</h3>
+<ul>
+<li>Add negative keywords to a master list that applies to all new campaigns. Example list of universal terms that never convert: secondhand, used, wholesale, local, job, training, advice, agency, and similar terms. [L0225.026]</li>
+<li>Merchant Center is used for universal negatives during cleanup of a campaign with no sales. [L0807.024]</li>
+</ul>
+<h2 id="universal-negatives">Universal Negatives</h2>
+<h3 id="what-qualifies">What Qualifies</h3>
+<ul>
+<li>Universal negatives are terms that should never trigger an ad, such as unrelated products or topics. They belong in both Alpha and Beta. Brand, SKU and product-name negatives belong only in Beta, because Alpha has to be able to show for those searches. [L0746.009]</li>
+<li>Universal negative keywords are terms for other brands you do not sell, and for products or niches unrelated to your store. Add them as negatives in both the alpha and the beta campaign. [L0750.014]</li>
+<li>Universal negatives are only for keywords that never lead to a sale on your store, for example an unrelated product term. Do not use universal negatives for competitor brand names that buyers might search with your product name. [L0804.072]</li>
+<li>Add terms you never want to appear for to the universal negative keyword list, so they block across all campaigns. [L0745.022]</li>
+<li>Example: a chandelier store that shows for tanning beds should block tanning beds in both campaigns so no money is spent on it. [L0746.010]</li>
+<li>If a search term shows another brand you do not carry, add it as a universal negative keyword. Do not exclude generic brand names that could be confused with your own products. [L0276.016]</li>
+</ul>
+<h3 id="starting-list-and-timing">Starting List and Timing</h3>
+<ul>
+<li>Start with a universal list of negative keywords, plus your brand names and SKU numbers. Then review the keyword reports for the active campaigns every two to three days and add any unwanted search terms as negatives. [L0941.062]</li>
+<li>Add universal negative keywords to Alpha and Beta campaigns right away, before data comes in. [L0855.009]</li>
+<li>Universal negative keywords should be added to both alpha and beta campaigns from day one. New irrelevant search terms that appear later should be added as you find them. [L0970.112]</li>
+<li>Add universal negative keywords as irrelevant terms appear in ad reports. Start with a published list, then keep extending it through regular audits. (Source A, 2021, older.) [L0853.073]</li>
+<li>Add generic words such as "free", "cheap" and "local" as universal negative keywords on both alpha and beta campaigns. Broader niche terms should only be blocked as exact-match negatives. (Source A, 2022, older.) [L0854.049]</li>
+<li>Add negative keywords by applying the same universal negatives and campaign-specific negatives from the product feed submission lesson, and update them based on the search terms that bring irrelevant clicks. [L0856.020]</li>
+</ul>
+<p>Sources disagree on how much to add at the start. Read together: add the obviously irrelevant universal terms from day one, and hold back sweeping broad terms until search term data exists. [L0855.009, L0970.112, L0274.024, L0972.058]</p>
+<p>Early-phase advice that conflicts with the "add now" rules above:</p>
+<ul>
+<li>Be selective early in a campaign. If traffic is too new to tell what will convert, only block obviously irrelevant keywords. Broad negatives early risk blocking future sales. [L0274.024]</li>
+<li>Start with a few basic negative keywords, and add more as the search terms that trigger clicks become clear. Adding too many negatives at the start limits reach. [L0972.058]</li>
+<li>Do not add many negative keywords at the start. Begin with basic terms such as free and cheap, then add more negatives from actual search terms that waste money. (Source A, 2022, older.) [L0969.062]</li>
+<li>Start with broad keyword coverage and add negative keywords over time, based on search terms that do not match the products. Do not limit the keyword list at the start, because more impressions give more data. (Source A, 2020, older.) [L0468.113]</li>
+</ul>
+<h2 id="match-types">Match Types</h2>
+<h3 id="match-type-reference">Match Type Reference</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Match type</th>
+<th>Syntax</th>
+<th>What it blocks</th>
+<th>Typical use</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broad</td>
+<td>term, no symbols</td>
+<td>Searches containing the term; see the conflict below on single generic words</td>
+<td>Universal terms irrelevant to every product (e.g. free, retail); brand, product and SKU list in Beta</td>
+<td>[L0746.011, L0961.058, L0743.023]</td>
+</tr>
+<tr>
+<td>Phrase</td>
+<td>"term"</td>
+<td>Every variation containing the word or phrase</td>
+<td>Brand names; product-type phrases you never want; long competitor-style product titles in Beta</td>
+<td>[L0225.004, L0270.016, L0961.058, L0225.029, L0805.014]</td>
+</tr>
+<tr>
+<td>Exact</td>
+<td>[term]</td>
+<td>Only that exact phrase</td>
+<td>Specific terms that must be blocked exactly; generic words that must not block product-name searches; suppliers; broad niche keywords taking budget</td>
+<td>[L0225.004, L0962.058, L0837.012, L0854.050, L0857.001]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Syntax check: exact match negatives are typed in square brackets, for example [competitor name], and phrase match negatives in quotation marks, for example "competitor name". [L0804.071]</p>
+<p>Other match-type rules:</p>
+<ul>
+<li>Negatives in Google Shopping work as broad match, so every variation containing the negative term is blocked, not only the exact phrase. One negative such as course or videos covers many related queries. [L0746.011]</li>
+<li>Negative keyword match types: broad match blocks related searches, while phrase and exact match are narrower and better suited for most negatives. [L0966.087]</li>
+<li>Choose the match type for a negative keyword by how closely the term matches the products you want to keep showing. Broad and phrase negatives also block longer searches that contain the term, so a generic word like chandeliers can be added as an exact match negative if specific product-name searches must still appear. [L0626.007]</li>
+<li>Choose negative keyword match type per keyword. Use exact match for a single term that should always be blocked, and broad match to block variations. In practice, a mix of match types is common. (Source A, 2022, older.) [L0803.038]</li>
+<li>Check the match type before you add any negative keyword. [L0626.009]</li>
+<li>Use exact match negatives for generic terms that you want to block. [L0966.076]</li>
+<li>Exact match negative keyword: enter the term in square brackets in the negative keywords list, for example [table], so only that exact search is blocked. [L0966.077]</li>
+<li>Negative keywords do not automatically cover close variants, plurals or misspellings the way positive keywords do. Add each variant, such as plurals and misspellings of a blocked word, as its own negative. [L0876.027]</li>
+<li>Positive match types for search text ads differ from the negative keyword match types used in Shopping campaigns. Do not transfer the negative keyword rules to search text ads. (Source B, 2021-22, older.) [L0880.015]</li>
+</ul>
+<h3 id="broad-match-pitfalls">Broad Match Pitfalls</h3>
+<ul>
+<li>A broad match negative keyword blocks every search that contains that word, including specific product searches such as dining table with model numbers. Use exact match negatives for generic terms that you want to block. [L0966.076]</li>
+<li>Broad match negatives also block searches that contain the term with extra words before or after it. Use exact match negatives (wrapped in brackets) only when a specific term must be blocked exactly, and not for the brand, product, and SKU list. [L0743.024]</li>
+<li>A broad generic word such as sinks should not be added to alpha or beta manual campaigns. Broad matching would show ads for any search containing that word, so use exact match only if clicks justify it. (Source A, 2022, older.) [L0963.014]</li>
+<li>Negative keywords set as broad match block long-tail variants. Blocking broad "standing desk" also blocks "model 123 standing desk", because the system matches the partial phrase. Use exact or phrase match instead. (Source A, 2022, older.) [L0249.095]</li>
+<li>Do not add negative keywords using broad match. Use exact match to avoid accidentally blocking related keywords. (Source A, 2022, older.) [L0249.057]</li>
+<li>Add negative keywords as exact match by default, because phrase or broad match negatives can block traffic you want. Example: a broad negative "generators" would also block "brand name generators". Use phrase or broad match only for terms you never want to appear for. (Source A, 2025.) [L0837.012]</li>
+</ul>
+<p>Sources disagree on the broad-match default for brand and product lists:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Advice</th>
+<th>Applies when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A, 2025</td>
+<td>The brand list for Beta is entered as broad match, so searches for these terms are blocked in Beta and handled by Alpha. [L0743.023]</td>
+<td>Brand, product and SKU list in the Beta campaign.</td>
+</tr>
+<tr>
+<td>Source A, 2025</td>
+<td>Brand names are added as negatives; the default matching type is broad, which is correct for this strategy. Exact match negatives are optional for later optimization and not required for initial setup. [L0186.009]</td>
+<td>Initial Beta setup for high-intent searches.</td>
+</tr>
+<tr>
+<td>Source A, 2022 (older)</td>
+<td>Broad negatives block long-tail keywords; use exact or phrase match. [L0249.095, L0249.057]</td>
+<td>Generic keywords where related long-tail searches must still show.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Read together: broad match suits the brand, product and SKU list in Beta, while exact or phrase match suits generic or niche terms that must not block related product searches. [L0743.023, L0186.009, L0249.095, L0837.012]</p>
+<h3 id="single-generic-words">Single Generic Words</h3>
+<p>Sources disagree on how a single generic word behaves:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Behaviour described</th>
+<th>Applies when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A, 2021 (older)</td>
+<td>Single-word negatives use broad match, which blocks any search containing that word. [L0270.016]</td>
+<td>Single words such as "free" that should be blocked everywhere.</td>
+</tr>
+<tr>
+<td>Source A, 2025</td>
+<td>Broad match blocks every variation containing the term. [L0746.011]</td>
+<td>Negatives in Shopping campaigns.</td>
+</tr>
+<tr>
+<td>Source B, 2021-22 (older)</td>
+<td>Adding a single generic word such as sauna as a negative blocks only that word on its own, not longer search phrases that contain it. Use it when the word alone attracts irrelevant searches. [L0744.033]</td>
+<td>The word alone attracts irrelevant searches.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Test the behaviour in your own account before relying on either version. [L0274.062, L0744.031]</p>
+<h3 id="match-type-examples">Match Type Examples</h3>
+<ul>
+<li>Exact match example: [infrared sauna portable] blocks only that exact term but allows "infrared sauna portable for cats". Using just [portable] blocks only the word portable and still allows "portable infrared sauna". Use phrase match "portable" to block all variations containing portable. [L0225.005]</li>
+<li>Exact match example: a negative exact match for blue pool does not block searches for blue pool q. [L0962.058]</li>
+<li>Negative exact match keywords in brackets block only that exact phrase. Negative phrase match keywords in quotes block every search variation containing that word or phrase, which makes them useful for blocking entire categories like "portable". [L0225.004]</li>
+<li>For single-word negative keywords, such as free, use broad match (no quotes or brackets) to block any search containing that word. For brand name negatives, use phrase match (quotes) to block exact brand plus variations. For exact blocking, use exact match (brackets) when only one specific phrase must be blocked. (Source A, 2021, older.) [L0270.016]</li>
+<li>Use broad match for universal negative keywords that are irrelevant to every product, such as free or retail. Use phrase match for brand names and for product-type phrases you do not want, such as an unrelated product term. (Source A, 2020, older.) [L0961.058]</li>
+<li>Use a broad negative only when the term is irrelevant to every product you sell. Exact match suits any term that could still lead to a sale on a specific product. [L0626.007, L0837.012]</li>
+</ul>
+<h2 id="over-blocking-risks">Over-Blocking Risks</h2>
+<ul>
+<li>Double-check the negative keyword list early on, because over-blocking can cut off buyers who search for specific product names. [L0966.078]</li>
+<li>Do not add a broad negative that blocks a model, product or buying term. Blocking a broad use-case term can also block buyers who search for the same product type. [L0665.120]</li>
+<li>Add a use-case search term as a negative keyword only when it clearly signals no purchase intent, such as a treadmill search for weight loss. Never block model numbers, brand names or clear buying terms. [L0665.120]</li>
+<li>Adding a generic keyword as a broad or phrase negative can block the specific product-name searches that convert best. [L0626.009]</li>
+<li>Ingredient and feature terms that describe your selling points must not be negated, even when an AI lists them as irrelevant. Check the negative list against your full product range and selling propositions. [L0876.036]</li>
+<li>Some terms that look irrelevant can be real top-of-funnel or B2B demand, such as "how to" or recipe queries, or "wholesale" searches when the brand sells wholesale. Put these in a review list rather than negating them automatically. [L0876.035]</li>
+<li>Never negate terms that could come from real buyers. When uncertain, place the term in a separate "Review before adding" list rather than the main list. [L0876.031]</li>
+<li>A negative keyword added by mistake will quietly block real buyers. Read every term in an AI-generated list before adding it to the account, and treat AI suggestions as a head start rather than a final list. [L0876.037]</li>
+<li>Uploading a large list of negative keywords generated by ChatGPT can block searches you want, such as relevant customer queries. Check each proposed negative keyword against your target customers before adding it. (Source A, 2024, older.) [L0471.028]</li>
+<li>Negative keywords reduce spend on low-intent searches, but a list built too quickly can limit reach. Build negatives gradually. [L0972.058, L0471.027]</li>
+<li>Do not block a search term only because it has no clicks yet. Block it when it is not relevant to what you sell, whether or not it is getting clicks. [L0748.011]</li>
+<li>Do not block a term only because it has no clicks yet, but do not let it wait when it is clearly irrelevant. Waiting before cutting them wastes impressions on unrelated searches. (Source A, 2020, older.) [L0551.079]</li>
+</ul>
+<h3 id="testing-for-over-blocking">Testing for Over-Blocking</h3>
+<p>Test whether broad negatives are blocking profitable traffic:</p>
+<ol type="1">
+<li>Copy all universal negative keywords to a Google Doc. [L0274.062]</li>
+<li>Remove most negatives from the campaign (keep only your core niche keyword). [L0274.062]</li>
+<li>Run the campaign for one week. [L0274.062]</li>
+<li>If results improve, add back only the obviously irrelevant negatives. [L0274.062]</li>
+<li>If results worsen, restore all negatives. [L0274.062]</li>
+</ol>
+<p>This determines whether negatives are too restrictive. [L0274.062]</p>
+<h2 id="competitor-names">Competitor Names</h2>
+<ul>
+<li>Do not block competitor names as negative keywords by default. Let search term data show which terms lose money, and add those as negatives. (Source A, 2021, older.) [L0247.066]</li>
+<li>Start with exact match on competitor brand names rather than blocking them fully. [L0804.071]</li>
+<li>Long competitor-style product titles that trigger the ad can be added as negative keywords, entered as phrase match negatives in quotation marks ("term") so that exact searches are blocked and pushed into the other campaign. Source A, 2024, Beta campaign. [L0805.014]</li>
+<li>If search terms show a competitor that sells direct to consumers and whose products you do not carry, add that brand as a broad negative keyword so you stop appearing for it. [L0837.014]</li>
+<li>Competitor brand names belong in the negative list only for prospecting campaigns that should not target competitors. Flag them for review because they depend on the category. [L0876.033]</li>
+</ul>
+<h2 id="own-brand-and-product-names">Own Brand and Product Names</h2>
+<ul>
+<li>In the beta campaign, add your own brand names, product names and SKU numbers as negative keywords, so that this traffic is pushed to the alpha campaign. Alpha is meant to show for those brand, product and SKU terms, so never add them as negatives there. [L0750.013]</li>
+<li>Add branded product names and specific SKUs as negative phrase or exact match keywords in your beta campaign so they automatically funnel to your alpha campaign. For example, if "Lifestyles" is your brand, add negative phrase "lifestyles" to beta to block all related searches. [L0225.029]</li>
+<li>For Beta campaigns, add brand names you sell, product names you sell, and SKU numbers as negative keywords to prevent your ads from appearing for your own products. [L0193.007]</li>
+<li>Beta campaign negative list: add all brand names you are authorized to sell (e.g. the five authorized brands), all product names from the store, and all SKU numbers, entered as broad match. Searches for these terms are blocked in Beta and handled by Alpha. Update the list over time as new brands are added. [L0743.023]</li>
+<li>Brand names for the Beta list are entered in the Brand Names list, using just the brand name, one per line. [L1074.011]</li>
+<li>Block brand names in the beta campaign, vague short-tail keywords and universal keywords; set up match types (broad, phrase, exact) later based on data. (Source A, 2022, older.) [L0969.063]</li>
+</ul>
+<p>Sources disagree on own-brand negatives in Alpha:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Advice</th>
+<th>Applies when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A, 2020 (older)</td>
+<td>Add your brand name as a phrase-match negative in the alpha campaign, together with closely related but different product variants. [L0961.091]</td>
+<td>Read as the older view; not the current rule.</td>
+</tr>
+<tr>
+<td>Source A, 2025</td>
+<td>Never add brand, product or SKU terms as negatives in alpha, because alpha has to be able to show for them. [L0750.013, L0746.009]</td>
+<td>Current rule for Alpha.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Own-brand negatives in a campaign that carries the brand:</p>
+<ul>
+<li>In a campaign with a brand term, do not add your own brand to the negative keyword list if you carry that brand. Negative keywords should block only terms for product types you do not sell, such as commercial, which can be added as a universal negative. (Source A, 2022, older.) [L0429.049]</li>
+<li>Use this rule for the brand campaign; the Beta rules above apply to the Beta structure. [L0429.049, L0743.023]</li>
+</ul>
+<h2 id="suppliers-and-other-brands">Suppliers and Other Brands</h2>
+<ul>
+<li>Do not add search terms for suppliers you don't carry as negative keywords from day one. Add them only after search term reports show consistent spend without sales, using exact match, e.g. a supplier's brand name only. (Source A, 2022, older.) [L0854.050]</li>
+<li>If a search term shows another brand you do not carry, add it as a universal negative keyword. [L0276.016]</li>
+<li>Universal negative keywords are terms for other brands you do not sell. [L0750.014]</li>
+</ul>
+<h2 id="non-english-terms">Non-English Terms</h2>
+<p>No source unit covers non-English search terms.</p>
+<h2 id="building-negatives-from-the-search-terms-report">Building Negatives from the Search Terms Report</h2>
+<h3 id="where-to-find-the-report">Where to Find the Report</h3>
+<ul>
+<li>To find search terms triggering your ads in Google Ads: navigate to Campaigns → Select your campaign → Insights &amp; Reports → Search Terms. [L0193.006]</li>
+<li>The Search terms report is found inside a campaign under Insights and reports &gt; Search terms. It shows the actual phrases people typed that triggered the ads, with metrics for each. Use Add filter on the Search term column to narrow the list. [L0876.015]</li>
+<li>To see which searches triggered your ads, open the campaign in Google Ads, expand "Insights and reports", and select the "Search terms" tab. Review each term for relevance and add irrelevant ones as negative keywords. (Source A, 2025.) [L0837.011]</li>
+<li>To see which search terms triggered Google Shopping ads: open the Shopping campaign, click Insights and reports in the left navigation and then click Search terms. It shows the terms you appeared for and what you spent on each. (Source A, 2025.) [L0857.010]</li>
+<li>To see which searches triggered your Google Ads, open the campaign in Google Ads and click Keywords. Review the listed search terms and mark the irrelevant or overly broad ones as negative keywords. (Source A, 2020, older.) [L0551.078]</li>
+<li>To see which search terms converted: open Google Ads, select the campaign, then click Keywords or Search terms in the left sidebar. Choose the date range; the view shows the terms that triggered ads and the conversions they produced. (Source A, 2022, older.) [L0963.012]</li>
+<li>To see which search terms trigger a Beta campaign: open Google Ads, go to the Beta campaign, click Keywords, and review the triggering search terms. (Source A, 2024.) [L0805.014]</li>
+<li>Do not use the Keywords section for this. It only shows negative keywords already added, not the search terms the ads actually appeared for. Use the Search terms report under Insights and reports. [L0750.012]</li>
+<li>Find which search terms a Shopping product got impressions for: 1) Open Google Ads. 2) Go to your alpha and beta campaigns. 3) Open the keywords view and click the search terms your product appeared for. 4) Look for keywords with many impressions that go to that product. (Source A, 2024.) [L0806.065]</li>
+</ul>
+<h3 id="reading-the-report">Reading the Report</h3>
+<ul>
+<li>The Search terms view shows the columns Search term, Match type, Added/Excluded, Ad group, Clicks, Impr., CTR, Avg. CPC, Cost and Conversions. Use these to spot irrelevant terms, low click-through terms and clicks without sales. (Source B, 2021-22.) [L0744.031]</li>
+<li>The Search Terms view can list thousands of terms over 30 days, for example 6,971 terms in an established account. The view can show up to 500 rows per page, and a single ad group view can show 1 to 500 of 2,673 terms. (Source B, 2021-22.) [L0744.030]</li>
+<li>The Google Ads search terms view paginates its rows, so only a fraction of a large report is visible on screen at once. Export the complete search terms report to a file before analysis instead of reading the on-screen list. [L0876.039]</li>
+<li>Use the search terms report within each ad group to view exact searches triggered by your ads. Add irrelevant searches as negative keywords at the ad group level to prevent wasted spend. (Source B, 2021-22.) [L0262.022]</li>
+<li>Shopping campaign search terms: Open the campaign, then the ad group. Look at Keywords and then Search terms. Expand the date range if nothing shows. If a product group reads not set, click it and expand it. (Source A, 2021, older.) [L0247.063]</li>
+<li>Search terms optimization in Shopping campaigns: sort by clicks to see where most traffic came from. Check that branded terms show up in the campaign that should contain them, since branded terms normally convert very well and should not run in the beta campaign. [L0745.022]</li>
+<li>Compare reported impressions with the impressions the ad group actually received. The difference (example: 1,500 shown vs 3,800 received, about 2,000 hidden) is the search traffic Google does not report. [L0745.022]</li>
+<li>Compare the compare-period columns (Clicks, Impr., CTR, Conversions, Conv. rate, Cost / conv., Cost) against the previous period to spot new waste. [L0876.021]</li>
+<li>Use a negative keyword list built from the search terms report. Add a term as a negative only after checking whether it produced clicks or conversions. (Source A, 2022, older.) [L0963.013]</li>
+<li>Build negative keyword lists from the search terms report: add terms that get impressions or clicks but make no sense for your product, and terms that spend money without producing sales. [L0857.011]</li>
+<li>Negative keywords come from the search terms report: any term that triggers your ads but does not match what you sell should be added as a negative. Example: if you sell only glass dining tables, the word wood should be a negative keyword when it triggers searches. [L0855.008]</li>
+<li>Negative keywords come in three match types: exact, phrase and broad. Every irrelevant search term found in the Search terms report becomes a negative, so the report determines what to cut. [L0876.028]</li>
+<li>Negative keyword decisions require judgement, not a fixed rule. Combine click-through rate, relevance and conversions. In a profitable account exclude only a few terms, while in an unprofitable account cut more aggressively. (Source B, 2021-22.) [L0744.034]</li>
+<li>A search term with 13,000 impressions, 19 clicks, a CTR of 0.14% and no tracked conversions is a clear negative keyword candidate. Either the term is not relevant to the product, or shoppers are not looking for it. (Source B, 2021-22.) [L0744.035]</li>
+<li>When low CTR is the problem, exclude search terms with a CTR below 0.5%, unless conversion data shows that these terms still produce sales. (Source B, 2021-22.) [L0879.030]</li>
+<li>About three months of search term data is usually enough for a useful search term report. Use a shorter or longer period depending on how much data the account has. (Source B, 2021-22.) [L0880.019]</li>
+</ul>
+<h3 id="weekly-review-procedure-source-b-2021-22">Weekly Review Procedure (Source B, 2021-22)</h3>
+<ol type="1">
+<li>Open the high priority campaign, click into it to see its ad groups, then open Keywords and choose Search Terms. [L0744.029]</li>
+<li>Set the date range from the day after your last review to today, for example 2 November to 7 November, and apply it. [L0744.029]</li>
+<li>Work through the list from top to bottom, marking search terms the business does not sell, clearly irrelevant terms, terms with very low click-through rate, and terms with clicks but no conversions. [L0744.029]</li>
+<li>Select the chosen terms, choose Add as negative keyword, select the master generic negative keyword list and save. [L0744.029]</li>
+<li>Before going to the next page, save the selected negatives, because selections are not kept when you change pages. [L0744.029]</li>
+<li>Repeat for each page of up to 500 rows until the end of the list. [L0744.029]</li>
+<li>Note the review date so the next date range starts the day after it. [L0744.029]</li>
+</ol>
+<p>Remove search terms for products or services the business does not sell, such as outdoor saunas or Roman tubs. Plural forms and variants of the same term may need their own negative entries. (Source B, 2021-22.) [L0744.032]</p>
+<p>Remove searches for used, rental or repair items when you sell only new products: if you sell only new products, searches containing words such as used, second-hand, rental or hire do not match your offer, so add them as negative keywords. Image-only or repair-related searches for products you sell are also poor matches and should be excluded when they waste clicks. (Source B, 2021-22.) [L0739.032]</p>
+<p>Broad category searches often come from people who want product images, repair or servicing of a product they already own, used or secondhand items, or rental for an event, and a retailer of new goods cannot sell to any of these. Clicks from such terms cost money without sales, so limit them with negative keywords or bid less. (Source B, 2021-22.) [L0741.018]</p>
+<p>Example: if a search term shows an irrelevant category, such as a chandelier store that shows for tanning beds, block it in both campaigns. [L0746.010]</p>
+<h3 id="search-term-routine-by-campaign-type">Search Term Routine by Campaign Type</h3>
+<p>Shopping cleanup for a campaign with no sales:</p>
+<ol type="1">
+<li>Export the search term report and review terms that received impressions, not only terms that got clicks. [L0807.024]</li>
+<li>Mark irrelevant or researching terms as negatives. [L0807.024]</li>
+<li>Add negatives at campaign level or as universal negatives, using Merchant Center for universal ones. [L0807.024]</li>
+<li>Leave bids and budgets unchanged while the new negatives take effect. [L0807.024]</li>
+<li>Set up Meta remarketing shortly after the negatives are in place. [L0807.024]</li>
+</ol>
+<p>Finding negative candidates in the alpha campaign:</p>
+<ol type="1">
+<li>Open the Google Ads account. [L0970.111]</li>
+<li>Click into the alpha campaign. [L0970.111]</li>
+<li>Open the Keywords view. [L0970.111]</li>
+<li>Review the keywords that received impressions, the clicks each one produced, and the sales that came from them. [L0970.111]</li>
+<li>Add the irrelevant or vague terms as negative keywords. [L0970.111]</li>
+</ol>
+<p>Reviewing and refining negatives in the alpha and beta Shopping campaigns:</p>
+<ol type="1">
+<li>Open the alpha and beta Shopping campaigns. [L0972.059]</li>
+<li>Review the search terms that triggered clicks. [L0972.059]</li>
+<li>Check whether each search term is relevant to buying your products. [L0972.059]</li>
+<li>Add irrelevant search terms as negative keywords, and keep the list growing over time. [L0972.059]</li>
+</ol>
+<p>Daily routine for Google Shopping campaigns (Source A, 2019, older):</p>
+<ol type="1">
+<li>Each morning or evening, open the search terms report for the day. [L0357.033]</li>
+<li>Mark search terms with no buying intent, such as generic terms, video searches or unrelated topics (for example standup paddle board yoga), as negative keywords. [L0357.033]</li>
+<li>Keep brand names, product names and SKU numbers, because these show purchase intent. [L0357.033]</li>
+<li>Compare impressions with clicks for each search term and investigate keywords with many impressions but few clicks. [L0357.033]</li>
+</ol>
+<p>Steps to find negative keywords (Source A, 2020, older):</p>
+<ol type="1">
+<li>Let the ads run for a while. [L0961.059]</li>
+<li>Review the search terms that trigger your ads. [L0961.059]</li>
+<li>Mark the terms that are irrelevant to your products, for example free, retail or a related but different product type. [L0961.059]</li>
+<li>Add those terms as negative keywords with the right match type. [L0961.059]</li>
+</ol>
+<p>Daily checks for irrelevant keywords (Source A, 2023):</p>
+<ol type="1">
+<li>Check Google Shopping ads daily for impressions on irrelevant keywords. [L0251.001]</li>
+<li>Screenshot or note keywords that do not match your product category or brand. [L0251.001]</li>
+<li>Add these as negative keywords in your campaign settings before they generate clicks and cost. [L0251.001]</li>
+<li>Repeat this process every day to prevent budget waste on unqualified traffic. [L0251.001]</li>
+</ol>
+<p>Search terms optimization in Shopping campaigns (Source A): use the same five-step routine above, then add terms you never want to appear for to the universal negative list. [L0745.022]</p>
+<p>Example of a search term to block in a chandelier store: a term that shows the ads for tanning beds, blocked in both campaigns. [L0746.010]</p>
+<h3 id="find-the-right-scope-before-changing-anything-else">Find the Right Scope Before Changing Anything Else</h3>
+<ul>
+<li>If Google Shopping spend goes to search terms without buying intent, fix keyword targeting and add negative keywords before changing the niche or widening the product range. Buying intent means the searcher is ready to purchase a specific product now. [L0665.119]</li>
+<li>If search impression share for broad category keywords stays low in a beta campaign set up for brand plus SKU searches, raise the default cost per click so those keywords get impressions. Add the brand name as a negative keyword to keep category searches out. (Source A, 2023.) [L0470.013]</li>
+<li>When a broad niche keyword takes most of the Google Shopping budget, add that keyword as an exact match negative keyword so spend shifts toward more purchase-ready searches. [L0857.001]</li>
+<li>Negative keywords reduce wasted spend, lift click-through rate and bring more relevant impressions. If search impression share is low, the ads are often showing for irrelevant search terms. [L0806.064]</li>
+<li>If visitors click but do not convert, check which keywords generate those clicks and add negatives for irrelevant searches, because the buying intent of the traffic drives conversion rate. Negative keywords reduce spend on low-intent searches and raise the share of buyers in the traffic. (Source A, 2024.) [L0471.004]</li>
+<li>Adding a negative keyword as a fix for a product that is shown too often: add negative keywords or lower its CPC at the product level. [L0803.043]</li>
+</ul>
+<h2 id="ai-assisted-term-audits">AI-Assisted Term Audits</h2>
+<h3 id="starter-list-for-a-new-campaign">Starter List for a New Campaign</h3>
+<ul>
+<li>For a new campaign with no search history, an AI can build a starter negative keyword list from the store URL alone. This avoids launching blind and spending the first week's budget on irrelevant searches. [L0876.029]</li>
+<li>Starter list prompt for a new Search or Shopping campaign on an eCommerce store:</li>
+</ul>
+<pre><code>You are a Google Ads strategist building a starter negative keyword list for a new Search or Shopping campaign on an eCommerce store.
+
+Store URL: [paste store URL]
+Product overview (optional, use only if the URL gives little detail): [one line]
+
+Review the store to determine what it truly sells: product types, categories, price level and the type of buyer it targets. If the URL cannot be read, request the page contents from me instead of guessing.
+
+Then compile a starter list of negative keywords for searches that would waste budget or indicate the wrong intent for this store. Sort the negatives into these buckets:
+- Free / cheap intent (for example &#39;free&#39;, &#39;cheap&#39;, &#39;discount code&#39;, &#39;coupon&#39;)
+- Job / career intent (for example &#39;jobs&#39;, &#39;careers&#39;, &#39;salary&#39;, &#39;hiring&#39;)
+- Non-buyer intent (for example &#39;DIY&#39;)
+- Wholesale / B2B / bulk (only if the store is retail or DTC)
+- Wrong product or category (adjacent items the store does not carry)
+- Competitor brand names (include only if they are obvious from the category; flag each one for my review)
+- My own brand names, such as my actual brand name and product names unique to my brand
+
+Rules:
+- Include only negatives that clearly would not lead to a sale for this specific store.
+- Never negate terms that could come from real buyers. When uncertain, place the term in a separate &#39;Review before adding&#39; list rather than the main list.
+- Format each bucket as a plain list I can copy directly into Google Ads.
+- End with one short note naming any buckets I should double-check against my own product range.
+
+Include a note stating that this list is a starting seed and must be replaced with search terms report data once real data is available.</code></pre>
+<p>[L0876.031]</p>
+<ul>
+<li>Discount and promo terms such as "discount code" or "promo code" are often added as negatives. Some accounts target them by mistake and end up competing with large discount websites, so they are usually worth excluding. [L0876.032]</li>
+</ul>
+<h3 id="audit-prompt">Audit Prompt</h3>
+<p>Audit workflow:</p>
+<ol type="1">
+<li>Export the Search terms report. [L0876.018]</li>
+<li>Paste the file into an AI tool together with a brand definition (brand names, founder name and name variants) and a description of what the store sells. [L0876.018]</li>
+<li>Use the audit prompt to tag every term. [L0876.018]</li>
+<li>Download the result as CSV. [L0876.018]</li>
+<li>Import the CSV into Google Sheets. [L0876.018]</li>
+<li>Filter and sort by brand, intent, relevance and recommended action before making changes in Google Ads. [L0876.018]</li>
+</ol>
+<p>Audit prompt:</p>
+<pre><code>You are a Google Ads search term auditor.
+
+Brand definition: [list your brand names, name variants and founder name(s)].
+
+Product scope: [describe the products, categories, price level and key ingredients or features, and state explicitly what is NOT sold].
+
+Audit rules: Apply strict relevance standards. Any search term that does not fit what we sell is marked irrelevant, and we recommend adding it as a negative.
+
+For each search term in the attached report, return these columns:
+- Search term
+- Brand or non-brand (per the brand definition above)
+- Intent stage (top, middle or bottom of funnel)
+- Relevant? (yes / no)
+- Recommended action (keep, add as negative, promote to its own ad group, watch)
+
+Deliver the complete output as a CSV that imports cleanly into Google Sheets. Include every row without exception.</code></pre>
+<p>[L0876.019]</p>
+<p>Case: a search terms report with 13,264 search terms was run through an AI audit prompt with a brand definition and a description of the store. The AI returned a CSV with brand or non-brand, intent stage, relevance and a recommended action for each term. The output could be imported into Google Sheets and filtered, which replaced reading the full report line by line. [L0876.020]</p>
+<p>Audited search terms sheet layout (keep the Google Ads performance columns from the export and add the four columns from the AI audit at the end):</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search term</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Match type</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Ad group</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Clicks</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Impr.</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>CTR</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Conversions</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Conv. rate</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Cost / conv.</td>
+<td>Export</td>
+</tr>
+<tr>
+<td>Brand or non-brand</td>
+<td>AI audit</td>
+</tr>
+<tr>
+<td>Intent stage</td>
+<td>AI audit</td>
+</tr>
+<tr>
+<td>Relevant?</td>
+<td>AI audit</td>
+</tr>
+<tr>
+<td>Recommended action</td>
+<td>AI audit</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0876.021]</p>
+<p>Checking the AI output:</p>
+<ol type="1">
+<li>Read the AI's restatement of your brand terms and product range at the start of its reply. [L0876.040]</li>
+<li>Correct any brand name, name variant, founder name or product it missed, and re-run the audit if the definition is wrong. [L0876.040]</li>
+<li>Open the returned CSV and check that every search term from the export appears with no skipped rows. [L0876.040]</li>
+<li>Read the actual terms behind every row flagged as irrelevant or add as negative before adding any of them to the account. [L0876.040]</li>
+</ol>
+<p>Treat AI suggestions as a head start rather than a final list. Read every term in an AI-generated list before adding it to the account. [L0876.037]</p>
+<h2 id="review-frequency-and-workload-over-time">Review Frequency and Workload Over Time</h2>
+<h3 id="review-rhythm-by-phase">Review Rhythm by Phase</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Phase or rule</th>
+<th>Rhythm</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First 1 to 3 weeks of a new Shopping campaign</td>
+<td>Heaviest; irrelevant terms are most common</td>
+<td>[L0715.025, L0715.007]</td>
+</tr>
+<tr>
+<td>Every week, alpha and beta both</td>
+<td>Add negatives weekly, not only once at the start</td>
+<td>[L0715.006]</td>
+</tr>
+<tr>
+<td>Every 2 to 3 days</td>
+<td>Review keyword reports for active campaigns</td>
+<td>[L0941.062]</td>
+</tr>
+<tr>
+<td>Weekly</td>
+<td>Weekly reviews produce faster ROAS improvement</td>
+<td>[L0193.005, L0744.029]</td>
+</tr>
+<tr>
+<td>Daily (2023)</td>
+<td>Check Shopping ads daily for irrelevant impressions</td>
+<td>[L0251.001]</td>
+</tr>
+<tr>
+<td>Daily (2019, older)</td>
+<td>Morning or evening routine</td>
+<td>[L0357.033]</td>
+</tr>
+<tr>
+<td>At most twice a week (2021-22, older)</td>
+<td>Checking daily wastes time because too little new data builds up in a day</td>
+<td>[L0744.022]</td>
+</tr>
+<tr>
+<td>At least every 2 weeks</td>
+<td>Minimum review frequency for Google Shopping campaigns</td>
+<td>[L0193.005]</td>
+</tr>
+<tr>
+<td>Never stop</td>
+<td>Work decreases as the campaign matures, but never stops completely, even for established stores</td>
+<td>[L0715.025]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Sources disagree between daily and twice-weekly review:</p>
+<ul>
+<li>Daily review fits a new campaign with a high volume of irrelevant terms in the first weeks. [L0251.001, L0715.025]</li>
+<li>Twice a week at most fits an established account, where little new data builds up in a day. [L0744.022]</li>
+</ul>
+<h3 id="workload-over-time">Workload Over Time</h3>
+<ul>
+<li>Negative keyword work is heaviest in the first weeks of a new Google Shopping campaign, when irrelevant search terms are most common. The workload drops as the campaign matures, but it should never be stopped completely, even for established stores. [L0715.025]</li>
+<li>A new account starts with a short master negative keyword list, while an established account can grow it to thousands of entries. Once the main variants are excluded, few new negatives are usually needed, and most new additions are variations of terms already blocked. (Source B, 2021-22.) [L0744.056]</li>
+<li>Example of list growth: 6,971 search terms in an established account over 30 days. [L0744.030]</li>
+<li>A keyword search term list growing to 20,000 entries is not inherently good or bad. Review which keywords earn money and which waste spend, and add negatives where needed. (Source A, 2022, older.) [L0969.064]</li>
+<li>Adding negatives at the start limits reach, so begin with a few basic negatives and add more as the search terms that trigger clicks become clear. [L0972.058]</li>
+<li>Between the alpha and beta campaigns, beta carries more negative keywords than alpha. There is no fixed ratio of negative keywords to aim for. [L0837.013]</li>
+<li>Using negative keyword lists reduces the time needed to manage campaigns substantially. [L1074.007]</li>
+</ul>
+<h2 id="universal-negative-keyword-list">Universal Negative Keyword List</h2>
+<p>Start the master generic negative list with a ready-made starter list of terms that no business wants ads for. Copy all of it and paste it in at once, then add terms specific to your business later. <em>(Older advice, 2021-22.)</em> [L1074.015]</p>
+<p>The word <code>rent</code> is an example of a starter negative keyword for a high-ticket dropshipping business that sells new products. Searches for renting signal that the person does not want to buy, so ads should not show for them. <em>(Older advice, 2021-22.)</em> [L1074.016]</p>
+<p>A store selling new surfboards found that its Shopping ads could appear for searches like "hire a surfboard." This happened because product titles contain the word "surfboard," and Google does not weigh the buying intent behind the search. Google also showed organic results and text ads for places to hire, so the merchant added the unwanted intent as a negative keyword and planned to add more business-specific terms over time. <em>(Older advice, 2021-22.)</em> [L1074.017]</p>
+<p>Shopping ads can show for searches that share a product word but have a different intent, such as rental or hire searches for items you sell to buy. Block such queries with negative keywords as soon as they are noticed. <em>(Older advice, 2021-22.)</em> [L1074.018]</p>
+<p>Add terms you never want to appear for, such as unrelated product words, to a global negative keyword list that applies to both alpha and beta campaigns. <em>(Older advice, 2022.)</em> [L1113.053]</p>
+<p>Build and maintain a universal negative keyword list that applies across campaigns. [L1226.020]</p>
+<h2 id="intent-mismatches">Intent Mismatches</h2>
+<p>Shopping ads often show a product to people searching for the vehicle or item it fits, not the accessory itself, which creates irrelevant paid clicks. Check search term reports for this mismatch, because those visitors are not in the market for the product and paying for them is wasteful. <em>(Older advice, 2021-22.)</em> [L1456.007]</p>
+<p>Bidding on every keyword a broad search might trigger, like a billboard, wastes budget on irrelevant clicks, such as searches for generic terms that match a product's name loosely. Limit targeting to keywords and audiences that match what you sell and the intent behind the search. [L1455.012]</p>
+<p>Do not target all available traffic on a search network. Build campaigns to attract the paid traffic that best fits your business and exclude the rest. Use negative targeting to remove traffic that does not match the right customer, time, and price. <em>(Older advice, 2021-22.)</em> [L1507.009]</p>
+<h2 id="brand-and-product-name-negatives">Brand and Product-Name Negatives</h2>
+<h3 id="brand-names-list">Brand Names list</h3>
+<p>The Brand Names list should contain the names of the brands sold through your website, entered as just the brand name. It is a separate negative list from the master and product lists. <em>(Older advice, 2021-22.)</em> [L1074.019]</p>
+<h3 id="product-ids-list">Product IDs list</h3>
+<p>Create a separate Product IDs list, which may also be named product identifiers or product names, containing the unique identifiers of your products. These identifiers can be model numbers, model names or similar codes. <em>(Older advice, 2021-22.)</em> [L1074.020]</p>
+<p>A Product IDs list can mix model numbers such as <code>AM156JDTSZ</code>, <code>BO73D-BLK</code> and <code>BT-0502</code> with model names such as Baldwin, Barcelona, Barrett, Bergen and Bliss. Such a mix is fine. <em>(Older advice, 2021-22.)</em> [L1074.021]</p>
+<p>Every product with a unique identifier needs its identifier in the Product IDs list, so 1,000 such products produce 1,000 negative search terms. A list of that size is expected and acceptable. <em>(Older advice, 2021-22.)</em> [L1074.022]</p>
+<p>If a product has both a model number and a model name, enter both as separate negative terms. Customers may search with either one, so both must be covered. <em>(Older advice, 2021-22.)</em> [L1074.023]</p>
+<p>One Product IDs negative list held 366 terms and was applied to 2 Shopping campaigns in the example account shown. <em>(Older advice, 2021-22.)</em> [L1074.024]</p>
+<h3 id="skus-upcs-and-product-names">SKUs, UPCs and product names</h3>
+<p>Add SKU numbers and UPCs as broad match negative keywords, because broad negatives catch variations of the SKU. [L1115.043]</p>
+<p>For product names, use phrase or exact match negative keywords with the brand name and product name, such as brand plus product name, so you do not block searches for other products that share generic words. [L1115.044]</p>
+<h3 id="which-match-type-for-which-item">Which match type for which item</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Match type</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand name as a single word</td>
+<td>Broad (older)</td>
+<td>[L1074.027, L1074.028]</td>
+</tr>
+<tr>
+<td>Model number, model name or other single model word</td>
+<td>Broad</td>
+<td>[L1074.027, L1074.028]</td>
+</tr>
+<tr>
+<td>SKU number or UPC</td>
+<td>Broad</td>
+<td>[L1115.043]</td>
+</tr>
+<tr>
+<td>Brand plus product name</td>
+<td>Phrase or exact</td>
+<td>[L1115.044]</td>
+</tr>
+<tr>
+<td>Brand name (alternative guidance, undated)</td>
+<td>Phrase</td>
+<td>[L1328.009]</td>
+</tr>
+<tr>
+<td>Generic term you want out of the campaign (undated)</td>
+<td>Exact</td>
+<td>[L1328.009]</td>
+</tr>
+<tr>
+<td>Term you never want</td>
+<td>Broad</td>
+<td>[L1285.057]</td>
+</tr>
+<tr>
+<td>Term you might want in some cases</td>
+<td>Phrase or exact</td>
+<td>[L1285.057]</td>
+</tr>
+</tbody>
+</table></div>
+<p>The sources disagree on brand names. The 2021-22 approach uses broad match for single brand and model words because exact match would only block searches consisting of that word alone and would miss most related queries. [L1074.027, L1074.028] The undated approach uses phrase match for brand names and exact match for generic terms. [L1328.009] Use broad match for single brand or model words that are almost never relevant to your product, and phrase or exact match where a blocked word also appears in searches you want to keep. [L1074.028, L1115.044, L1328.009]</p>
+<h2 id="match-types-and-pitfalls">Match Types and Pitfalls</h2>
+<h3 id="match-type-definitions">Match type definitions</h3>
+<p>The screen describes each negative keyword match type as follows. <em>(Older advice, 2021-22.)</em></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Match type</th>
+<th>Ad does not show when the search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broad match</td>
+<td>Contains all keyword terms, even if they are in a different order</td>
+</tr>
+<tr>
+<td>Phrase match</td>
+<td>Contains the exact keyword terms in the same order</td>
+</tr>
+<tr>
+<td>Exact match</td>
+<td>Contains the exact keyword terms, in the same order, without extra words</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1074.025]</p>
+<p>A broad match negative blocks a search only when it contains all of the keyword terms. A broad positive keyword triggers on any one of the terms. For negative keywords, broad match is often the usual choice. <em>(Older advice, 2021-22.)</em> [L1074.026]</p>
+<p>A broad match negative keyword blocks any search containing its words in any order. Phrase match blocks searches containing the phrase with extra words before or after. Exact match blocks only that exact search. Use broad match for SKU numbers, and phrase or exact match for brand plus product names so you do not block searches for other products that share generic words. [L1115.100]</p>
+<p>Negative exact keywords are written in square brackets and block only that exact query. Negative phrase keywords block any query that contains the words. Use phrases for brand names and exact keywords for generic terms you want to keep out of a campaign. [L1328.009]</p>
+<p>Use broad match for terms you never want, and phrase or exact match for terms you might want in some cases. [L1285.057]</p>
+<p>Use negative keywords to block searches you do not want. A negative phrase keyword blocks every query that contains that phrase, so a negative phrase on a single word blocks all queries with that word. [L1352.007]</p>
+<h3 id="common-pitfalls">Common pitfalls</h3>
+<p>A broad match negative keyword can also block searches that are relevant to your product, because it blocks every search containing that word. Check which relevant searches a broad negative is removing. <em>(Older advice, 2021-22.)</em> [L1074.029]</p>
+<p>Exact match on a single brand or model word such as Baldwin would only block searches that consist of that word alone, and would miss most related queries. <em>(Older advice, 2021-22.)</em> [L1074.028]</p>
+<p>A negative exact keyword blocks only the exact wording you typed. Plural forms, word-order changes and abbreviations such as "mens" can still trigger the campaign, so add each common variant of a generic term as its own negative exact keyword. [L1328.039]</p>
+<p>Add irrelevant search terms as negative keywords and add close variations as broad match modifier, phrase match and exact match negatives. Keep adding negatives over time, because they are the main way to stop wasted spend. <em>(Older advice, 2021.)</em> [L1090.087]</p>
+<p>Phrase match blocking can accidentally block searches that already make money, such as a product name that contains the blocked phrase. Before blocking, check whether the term affects profitable search terms and choose exact, phrase or broad match accordingly. <em>(Older advice, 2021.)</em> [L1090.094]</p>
+<h2 id="non-english-terms-1">Non-English Terms</h2>
+<p>Add non-English search terms to negative keywords only if they actually appear in your search terms report for your ads. Do not add them to a starting negative keyword list. [L1285.056]</p>
+<h2 id="location-of-negative-lists">Location of Negative Lists</h2>
+<h3 id="attaching-lists-to-campaigns">Attaching lists to campaigns</h3>
+<p>On a negative keyword list's detail page in Google Ads, a counter shows how many campaigns use the list, for example "2 campaigns using this list," or "0 campaigns using this list" for an unused list. The APPLY TO CAMPAIGNS button opens a campaign picker, labelled Campaign +, to attach the list to selected campaigns. <em>(Older advice, 2021-22.)</em> [L1074.030]</p>
+<p>A negative keyword list is attached to campaigns individually, and one list can be attached to several campaigns. Its terms are then excluded in every campaign it is attached to, so a list must be applied to each Shopping campaign that needs the exclusions. <em>(Older advice, 2021-22.)</em> [L1074.031]</p>
+<h3 id="shared-and-global-placement">Shared and global placement</h3>
+<p>Add terms you never want to appear for to a global negative keyword list that applies to both alpha and beta campaigns. <em>(Older advice, 2022.)</em> [L1113.053]</p>
+<p>Review the search terms report once campaigns are live and add irrelevant terms as negatives to both alpha and beta. <em>(Older advice, 2022.)</em> [L1113.055]</p>
+<p>Block broad search terms that do not lead to sales by adding them as negative keywords in the main campaign. Keep search terms that bring buyers, and raise their cost per click instead of blocking them. <em>(Older advice, 2021.)</em> [L1112.012]</p>
+<h2 id="starting-the-negative-list">Starting the Negative List</h2>
+<p>Start negative keywords from the standard setup. After the first one or two weeks of running, review the search terms, including terms with no clicks, and add irrelevant ones as negative keywords. [L1116.026]</p>
+<p>Build a starter list from the standard setup and add terms as the search terms report shows them. [L1116.026, L1226.020]</p>
+<h2 id="finding-search-terms">Finding Search Terms</h2>
+<h3 id="where-to-find-the-report-1">Where to find the report</h3>
+<p>To view search terms that triggered your ads, open the campaign in Google Ads and click Keywords in the left navigation. The list shows impressions, click-through rate and other performance data for each term. <em>(Older advice, 2021.)</em> [L1090.099]</p>
+<p>In Google Ads, find search terms under Insights and reporting &gt; Search terms. The report shows every query the ads appeared for, including queries without clicks. [L1116.027]</p>
+<h3 id="procedure-alpha-and-beta-campaigns-2024">Procedure: alpha and beta campaigns (2024)</h3>
+<ol type="1">
+<li>Log into the Google Ads account.</li>
+<li>Open the alpha and beta campaigns.</li>
+<li>Go to Insights and reporting.</li>
+<li>Click Search terms to see all search terms the ads appeared for.</li>
+<li>Add unwanted search terms as negative keywords.</li>
+</ol>
+<p>[L1115.045]</p>
+<h3 id="procedure-shopping-campaigns-2025">Procedure: Shopping campaigns (2025)</h3>
+<ol type="1">
+<li>Open the Shopping campaigns in Google Ads.</li>
+<li>Go to Campaigns and expand Insights and reports.</li>
+<li>Click Search terms.</li>
+<li>Check that the search terms match your keywords and that the traffic is relevant.</li>
+<li>Check which product pages those terms land on and what the conversion rate is.</li>
+</ol>
+<p>[L1287.038]</p>
+<h3 id="procedure-weekly-search-terms-workflow-2023">Procedure: weekly search terms workflow (2023)</h3>
+<ol type="1">
+<li>Open the search terms report in Google Ads that shows which search terms triggered impressions.</li>
+<li>Mark every irrelevant search term and add it to the negative keyword list.</li>
+<li>Export the list to Excel or Google Sheets to sort and manage larger lists more easily.</li>
+</ol>
+<p>[L1094.034]</p>
+<h3 id="procedure-general-search-term-review-undated">Procedure: general search term review (undated)</h3>
+<ol type="1">
+<li>Review the search terms report to see which real queries trigger your ads.</li>
+<li>Add irrelevant queries as negative keywords to stop wasted impressions.</li>
+<li>Build and maintain a universal negative keyword list that applies across campaigns.</li>
+<li>Test ad copy continuously, since testing is the main way to improve performance.</li>
+</ol>
+<p>[L1226.020]</p>
+<h3 id="actions-during-review">Actions during review</h3>
+<p>Add negative keywords for search terms that trigger ads without producing sales. This stops spend on irrelevant traffic. <em>(Older advice, 2020.)</em> [L1277.074]</p>
+<p>Add negative keywords for broad-match search terms that bring in clicks but do not match the product. This cuts wasted spend as budgets rise. <em>(Older advice, 2020.)</em> [L1088.044]</p>
+<p>Add non-specific search terms that appear in search reports as negative keywords, so ads stop showing for them. <em>(Older advice, 2022.)</em> [L1092.063]</p>
+<p>When a big-box retailer name appears as a search term that does not make money, add it as a phrase-match negative keyword. Check profitability first, because a retailer name that converts should stay in the campaign. <em>(Older advice, 2021.)</em> [L1112.083]</p>
+<h2 id="review-frequency">Review Frequency</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Cadence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First review after launch</td>
+<td>After the first one or two weeks, including terms with no clicks</td>
+<td>[L1116.026]</td>
+</tr>
+<tr>
+<td>Early period, spend is high</td>
+<td>Weekly, after waiting a few days for obvious items</td>
+<td>[L1090.088]</td>
+</tr>
+<tr>
+<td>Spend around 50 USD per day or less</td>
+<td>Every other week</td>
+<td>[L1090.088]</td>
+</tr>
+<tr>
+<td>Campaigns live, alpha and beta</td>
+<td>Once live, then add irrelevant terms to both</td>
+<td>[L1113.055]</td>
+</tr>
+</tbody>
+</table></div>
+<p>The sources differ on the first review. The 2025 guidance sets the first review after one or two weeks. [L1116.026] The 2021 guidance says to review weekly at the beginning, when spending is high, after waiting a few days for obvious items. [L1090.088] Use the first-review timing for the initial setup, then move to the weekly cadence while spend is high and every other week at around 50 USD per day or less. [L1090.088, L1116.026]</p>
+<p>Do not block weak terms such as <code>black</code> or <code>modern</code> from day one. Wait a few days, and only block them if they receive impressions and clicks but no sales. <em>(Older advice, 2021.)</em> [L1090.093]</p>
+<h2 id="over-blocking-risks-1">Over-Blocking Risks</h2>
+<p>Check which relevant searches a broad negative is removing before you add it. [L1074.029]</p>
+<p>Check whether a term affects profitable search terms before blocking it, because phrase match can block product names that already sell. <em>(Older advice, 2021.)</em> [L1090.094]</p>
+<p>Keep search terms that bring buyers and raise their cost per click instead of blocking them. <em>(Older advice, 2021.)</em> [L1112.012]</p>
+<p>Check profitability before blocking a retailer name, because a retailer name that converts should stay in the campaign. <em>(Older advice, 2021.)</em> [L1112.083]</p>
+<h2 id="bids-and-workload-over-time">Bids and Workload Over Time</h2>
+<p>Raising bids on a low-priority keyword to chase more impressions can flood the campaign with generic, non-converting search terms. Watch the search terms report closely after any bid increase. <em>(Older advice, 2019.)</em> [L1275.049]</p>
+<p>Every product with a unique identifier adds its identifier to the Product IDs list, so the number of negative terms grows with the catalogue. A list of 1,000 terms from 1,000 products is expected. <em>(Older advice, 2021-22.)</em> [L1074.022]</p>
+<p>As spend rises, review the search terms more often and add negatives for non-converting traffic, because negatives are the main way to limit wasted spend. [L1088.044, L1090.087, L1090.088]</p>
+<p>For larger lists, export the negative list to Excel or Google Sheets to sort and manage it. [L1094.034]</p>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>For both Alpha and Beta campaigns, add unrelated brand names, irrelevant niches, and search terms unlikely to convert as negative keywords to reduce wasted spend. [L0193.008]</p></li>
+<li><p>Do not leave out the negative keywords. Without them Alpha and Beta compete for the same searches, and Beta, which has higher priority, will catch the strong terms that should go to Alpha at its lower bid. [L0746.027]</p></li>
+<li><p>Add negative keywords over time to clean junk traffic out of Google Ads campaigns; the blueprint lists universal negative keywords to block first, then weaker terms as they appear in the search term report. [L0834.065]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/10-search-intent-shopping-funnel-low-medium-high-value-campaign/"><span class="k">&larr; Previous</span><span class="v">Search-Intent shopping funnel (Low/Medium/High value campaigns)</span></a><a class="nx" href="../../10-google-ads-and-shopping/12-bidding-budgets-and-bid-optimization/"><span class="k">Next &rarr;</span><span class="v">Bidding, budgets and bid optimization</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

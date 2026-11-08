@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Test budgets, kill rules and scale decisions | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.11: Test budgets, kill rules and scale decisions.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/11-test-budgets-kill-rules-and-scale-decisions/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Test budgets, kill rules and scale decisions | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.11: Test budgets, kill rules and scale decisions."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/11-test-budgets-kill-rules-and-scale-decisions/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/11-test-budgets-kill-rules-and-scale-decisions/">Plain version</a></div><h1>19.11 Test budgets, kill rules and scale decisions</h1><article><h2 id="starting-budgets-and-first-spend">Starting budgets and first spend</h2>
+<ul>
+<li>Older advice (2019): start with $10 to $30 USD per day across all campaigns. The goal is to reach return on ad spend (ROAS) within two to three days. [L0243.032]</li>
+<li>Older advice (2021): a starting daily ad budget of about $10 to $30 per day is typical for new stores. Promotional ad-credit vouchers can cover roughly one week of advertising at no cost. [L0247.118]</li>
+<li>Older advice (2019): a few hundred dollars is enough as a starting ad budget for the first months, provided ad spend is monitored closely and optimized. Profits should then be reinvested into ads. [L1068.070]</li>
+<li>Older advice (2019): leaving campaigns running without checking them can drain money quickly. For example, a $100 per day budget left unmonitored for a month would leak a large amount of money. [L1068.071]</li>
+<li>For a new store, $1,000 in ad spend covers about 30 days of paid traffic. Free traffic methods can reduce how much must be invested in ads each month. [L0360.077]</li>
+<li>Older advice (2021 to 2022): a daily budget of about $30 equals roughly $1,000 per month and is a reasonable entry level. Other examples mentioned are $50, $100 and $1,000 per day, depending on what the advertiser can comfortably afford. [L0749.007]</li>
+<li>Older advice (2021 to 2022): only put a daily ad budget into a shared budget that you could lose completely in a single day without financial stress. If you cannot afford to lose a given amount daily, do not set it as the budget. [L0749.004]</li>
+<li>Older advice (2021 to 2022): a daily budget set very low, for example $2 per day, produces too little data to learn anything. Sales may come only once every three or four months. The budget must be realistic enough to generate meaningful results. [L0749.006]</li>
+<li>Older advice (2021 to 2022): ad spend aims at long-term profitability, not profit every day. Days with zero return or a full loss on ad spend will happen, so judge performance over time rather than daily. [L0749.005]</li>
+<li>Older advice (2021 to 2022): beginners without advertising experience often spend money on ads that bring no return during trial and error. Plan a test budget for this learning period and track returns from the start so losses are limited. [L1014.013]</li>
+<li>Treat money spent on ads and tests as a purchase of data. Every dollar spent should produce a lesson that brings the business closer to profitability. [L0631.011]</li>
+</ul>
+<h2 id="lead-generation-and-warm-audience-budgets">Lead generation and warm audience budgets</h2>
+<ul>
+<li>Daily lead budget = target leads per day × maximum cost per lead. Example: 10 leads per day at a $4 maximum gives about $40 per day. [L0649.042]</li>
+<li>Start each lead generation campaign at $5 to $10 per day. The customer goodwill campaign can run on $5 per day because it only needs to show ads to a few people. [L0649.043]</li>
+<li>As a starting point, the three warm audiences together need about $15 to $20 per day. The promotions budget depends on the size of the audience. [L0649.044]</li>
+<li>When entering a promotion budget in Meta, the screen shows the audience size and the estimated daily reach. Try different budget amounts to see how reach changes before launching. [L0649.045]</li>
+<li>Budget needs grow with traffic. Retargeting a large audience, such as 100,000 site visitors, costs far more to reach than a 1,000-visitor audience, so size budgets to the audience. [L0649.046]</li>
+<li>Ad fatigue in cold lead generation took roughly half a year to over a year to appear. Earlier, ads had to be swapped out about every week. [L0649.048]</li>
+</ul>
+<h2 id="per-product-testing-budgets">Per-product testing budgets</h2>
+<h3 id="budget-caps-and-loss-limits">Budget caps and loss limits</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Cap or limit</th>
+<th>Applies when</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maximum $300 per product before deciding to cut or continue</td>
+<td>Cut the product if it is profitable or break-even after $300 of spend.</td>
+<td>L0307.010</td>
+</tr>
+<tr>
+<td>About $200 to $250 before the decision</td>
+<td>Set as the test budget limit. Kill threshold: conversion stays below 1% after optimization.</td>
+<td>L0363.040</td>
+</tr>
+<tr>
+<td>Loss limit about $300 (or $200 also possible)</td>
+<td>Track daily in a Google Sheet recording ad spend, cost of goods and sales. Stop once cumulative losses reach the limit.</td>
+<td>L0691.022</td>
+</tr>
+<tr>
+<td>About 200 to 300 USD</td>
+<td>Good CTR but no sales after the full optimization set.</td>
+<td>L0773.034</td>
+</tr>
+<tr>
+<td>About 100 USD</td>
+<td>Poor CTR: turn the product off earlier.</td>
+<td>L0773.034</td>
+</tr>
+<tr>
+<td>About 250 to 300 USD</td>
+<td>Spend on testing one product. Move on if the aimed-for results do not appear, but only if the store was also improved during the test.</td>
+<td>L1108.023</td>
+</tr>
+<tr>
+<td>$300 without sales</td>
+<td>Switch the ads off and move to the next product, after the optimization steps in the procedure below.</td>
+<td>L1171.022</td>
+</tr>
+<tr>
+<td>About 500 USD per product</td>
+<td>Reference figure for planning a product test in the example given.</td>
+<td>L0678.007</td>
+</tr>
+<tr>
+<td>About 400 to 500 USD with good CTR and no sales</td>
+<td>Move on to the next product. The likely cause is the offer, which should be improved before spending more.</td>
+<td>L0661.041</td>
+</tr>
+<tr>
+<td>About 400 USD spent, only about 50 to 60 USD returned</td>
+<td>Still losing money: stop and move on.</td>
+<td>L0661.042</td>
+</tr>
+<tr>
+<td>Break-even cost per purchase</td>
+<td>Test budget limit. One or two days beyond it only if there are positive signals, such as a good CTR of around 2.5 to 3% with no sales yet.</td>
+<td>L0639.029</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Example daily tracking for a $300 test limit: day 1 is -$50, day 2 is -$30, day 3 is +$20, giving a running balance of -$60. Keep adding each day's result until the balance reaches -$300, then stop the product. [L0691.023]</li>
+<li>Low-cost product test example: a pack of 24 cheap juice units cost about 3 USD in total, and the challenge was run with almost zero spend besides the product and food. [L0764.029]</li>
+<li>A low-cost product test can be run by buying the item from a marketplace such as Amazon, filming with it, and returning it for a refund afterward. The main cost is the consumables used during filming, such as food, so the test budget stays close to zero. [L0764.048]</li>
+</ul>
+<h3 id="product-test-procedure-budget-and-kill-rule">Product test procedure (budget and kill rule)</h3>
+<ol type="1">
+<li>Spend about $25 to $30 per day across 5 to 6 ad sets at $5 each. [L1171.022]</li>
+<li>Let the ads run for the first three days without interfering. [L1171.022]</li>
+<li>Gather data until about $100 is spent and check that CPM is below $25, CTR is above 1.5% (ideally 2%), and CPC is below $1. [L1171.022, L1171.020]</li>
+<li>If these numbers are met, check the store's conversion rate, which should be at least 1.5%. [L1171.022, L1171.021]</li>
+<li>If conversion is too low, improve the offer and store for two to three days. [L1171.022]</li>
+<li>If there are still no sales after $300 spent, switch the ads off and move to the next product. [L1171.022]</li>
+</ol>
+<h3 id="price-based-spend-threshold-product-page-test">Price-based spend threshold (product page test)</h3>
+<ul>
+<li>Use this procedure when a product reaches its first spend threshold, about 10% of price, with no sale. [L0965.043]
+<ol type="1">
+<li>Do not switch the ads off yet. [L0965.043]</li>
+<li>Check the search terms for irrelevant traffic and add those keywords as negative keywords. [L0965.043]</li>
+<li>Open the product pages of your future competitors for the exact same product and compare them with yours. [L0965.043]</li>
+<li>Change your page to match or beat what the competitors do better, which is where the conversion rate can improve. [L0965.043]</li>
+<li>Keep spending while you optimize, and stop only at about three times the first threshold if there is still no sale. [L0965.043]</li>
+</ol></li>
+<li>Example: for a $1,500 product, the first spend threshold is about $150, meaning 10% of price. If $150 is spent without a sale, keep the ads running and start optimizing. Stop at about $450 (three times the threshold, roughly 30% of price) if there is still no sale. [L0965.044]</li>
+</ul>
+<h2 id="ad-and-ad-set-budgets-by-platform">Ad and ad set budgets by platform</h2>
+<h3 id="meta-facebook">Meta (Facebook)</h3>
+<ul>
+<li>Test ad sets with a daily budget of $5 each. The presenter starts 4 to 6 ad sets, so the test spends about $20 to $30 per day in total. [L0642.034]</li>
+<li>Check ad performance after about four days of spend (about $20 per ad set), starting with CTR, then CPM, then sales. [L0642.033]</li>
+<li>Ad testing budget: start with about 5 USD per ad set (or 5.10 USD). Run five ad sets at 5 USD per day for about four days, then analyze. Alternatively, 20 USD per ad set for two days. [L0773.033]</li>
+<li>Ad budgets for a single ad start at $10 to $50 per day. The ad is judged when it has spent three times the desired cost per acquisition (CPA). Example: for a product bought at $15 and selling at $45 with a target CPA of $15, the ad runs with $45 per day until it is switched off or scaled. [L0995.017]</li>
+<li>Budget rule for a single Facebook ad: daily budget = 3 × target CPA. Example: CPA $15 gives a daily budget of $45 per ad. Target ROAS example: product cost $15, selling price $45, CPA $15 = 3:1 target ROAS. [L0995.018]</li>
+<li>Limit a Meta daily budget correctly. The daily budget shows three limits: average daily spend equals the daily budget, maximum daily spend equals daily budget × 1.75, and maximum weekly spend equals daily budget × 7. Example with a $25 daily budget: average $25.00 per day, maximum daily $43.75, maximum weekly $175.00. [L0348.032]</li>
+<li>Set the spend limit for an ad set at the product's cost of goods, so the first test measures whether the product covers its cost. Return on ad spend (ROAS) is the revenue from the ad divided by the amount spent on it. [L0562.015]</li>
+</ul>
+<h3 id="tiktok">TikTok</h3>
+<ul>
+<li>Starting daily ad spend for a new product test: break-even cost multiplied by 10, divided by 4, which equals the daily ad spend for one ad set with no targeting. [L1177.046]</li>
+</ul>
+<h3 id="pinterest">Pinterest</h3>
+<ul>
+<li>Pinterest test budget: start with a daily budget of exactly $5 per campaign, with $10 as the maximum to start with. A single product can be tested for under $5 per day, and multiple products can run in parallel at $5 each. Test three to five products if the budget allows. [L1134.009]</li>
+</ul>
+<h3 id="google-and-youtube">Google and YouTube</h3>
+<ul>
+<li>A YouTube ads test needs a budget of at least $1,000 to $2,000. Expect to wait two to three weeks before judging results, and a single month of testing often only improves creatives. [L0788.038]</li>
+</ul>
+<h2 id="learning-phase-and-waiting-times">Learning phase and waiting times</h2>
+<h3 id="wait-times-at-a-glance">Wait times at a glance</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform or case</th>
+<th>Wait before judging</th>
+<th>Condition</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meta learning phase</td>
+<td>About 50 conversion events within one week</td>
+<td>The event must match the optimization goal (purchase or add to cart). Hard to reach at small budgets.</td>
+<td>L0353.023</td>
+</tr>
+<tr>
+<td>Meta ad sets</td>
+<td>About 3 to 5 days of data</td>
+<td>Early results are unstable because the pixel is still learning.</td>
+<td>L0639.006</td>
+</tr>
+<tr>
+<td>Meta new campaign (Source D)</td>
+<td>Roughly 3 days of ad spend</td>
+<td>If the 24-hour spend runs out before that, send metrics to the coach for review instead of deciding alone.</td>
+<td>L0874.003</td>
+</tr>
+<tr>
+<td>Meta ad set (budget $5)</td>
+<td>Break-even amount spent</td>
+<td>Break-even $20 at $5 per day: wait 4 days (20 ÷ 5).</td>
+<td>L0648.034</td>
+</tr>
+<tr>
+<td>Phase 5 ad testing (Source D)</td>
+<td>48 to 72 hours</td>
+<td>Sufficient data to identify whether a product-and-creative pairing is viable.</td>
+<td>L0199.012</td>
+</tr>
+<tr>
+<td>Pinterest campaign</td>
+<td>About 100 visitors</td>
+<td>Early data is too noisy to act on.</td>
+<td>L1134.035</td>
+</tr>
+<tr>
+<td>Campaign at $5 per day</td>
+<td>At least 5 to 7 days, ideally 7</td>
+<td>Review once it has reached around 100 visitors.</td>
+<td>L1135.049</td>
+</tr>
+<tr>
+<td>TikTok new campaign with little traffic</td>
+<td>2 to 3 days</td>
+<td>Check whether metrics have settled before changing anything.</td>
+<td>L1177.049</td>
+</tr>
+<tr>
+<td>Google integrated system</td>
+<td>2 to 4 weeks</td>
+<td>Measurable improvement during Google's learning and optimization phase.</td>
+<td>L0168.005</td>
+</tr>
+<tr>
+<td>Google campaign data</td>
+<td>Six weeks (January to mid-February example)</td>
+<td>Enough to identify which products attract traffic and deserve optimization investment.</td>
+<td>L0208.005</td>
+</tr>
+<tr>
+<td>Google, ads evaluated</td>
+<td>Two-week intervals (older advice, 2022)</td>
+<td>Do not switch ads off early.</td>
+<td>L0429.046</td>
+</tr>
+<tr>
+<td>Ad account ranking</td>
+<td>About five months at about $500 per month (about $2,500 spend) (older advice, 2022)</td>
+<td>Enough data to rank products and ads by results.</td>
+<td>L0803.104</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Do not judge a campaign after one day of data. Allow about 3 to 5 days of data before deciding. [L0639.006]</li>
+<li>Judging a new campaign after less than a day or after a small spend, such as $35, is premature. Wait for several days of data before deciding whether it works. [L1107.036]</li>
+<li>For a $24.99 product, four ad sets with about $3.50 spent each and a single sale is an acceptable early start. Judging the campaign after less than one day is premature. Compare results against break-even ROAS and wait for several days of data before changing the setup. [L1107.039]</li>
+<li>Do not judge a product on the first day. During learning, CPMs tend to be high and CTR low, so the data is not reliable yet. [L1135.033]</li>
+<li>Avoid abrupt launches and large budget changes. Performance fluctuates on the first day and usually stabilises around day three or four as the account learns the audience. [L1135.032]</li>
+<li>Let each campaign run for at least five to seven days, ideally seven, and review it once it has reached around 100 visitors. [L1135.049]</li>
+<li>Waiting for a longer run only makes sense when the early numbers show a plausible path to the benchmarks. [L0361.006]</li>
+<li>Do not close a store just because ads have run for a few weeks without sales. Compare the clicks from each Google Ads campaign against the sales and decide on optimizations based on traffic volume. A store with very little traffic cannot yet be judged on its conversion rate. [L0837.006]</li>
+<li>Judge a new Meta campaign after roughly three days of ad spend. [L0874.003]</li>
+<li>A new campaign with little traffic may need several days before its results stabilize. Judge performance after two to three days and check whether the metrics have settled before changing anything. [L1177.049]</li>
+<li>Typical Google Ads ramp (especially with low starting budgets): a first sale within a few weeks, about one sale a day by month two, and two to three sales a day by month three. (2023) [L1094.107]</li>
+</ul>
+<h3 id="test-cost-before-the-first-sale-gate">Test cost before the first-sale gate</h3>
+<ul>
+<li>Test cost before the first-sale gate equals the daily budget times the number of test days. At $5 per day for six days, the spend is $30, so a product without a sale by then is dropped. [L1135.053]</li>
+</ul>
+<h2 id="kill-rules-by-platform">Kill rules by platform</h2>
+<h3 id="meta-facebook-1">Meta (Facebook)</h3>
+<ul>
+<li>Use CTR as the first gate: a click-through rate of about 1.5% or higher suggests real interest in a product, and around 2% is a stronger sign. Give a product a longer test when the rate sits around 1.5%, and stop it when the rate is well below that. [L0661.040]</li>
+<li>Primary metric for a new store is CTR: aim for at least 1.5%. The presenter sees 2 to 5% as a sign that the ads are working. [L0642.032]</li>
+<li>A CTR above 1.5% is considered good for Facebook ads. Creatives at around 1.3 to 1.5% CTR can still be scaled if the ROAS is 2 or higher. [L0645.004]</li>
+<li>Day-one ad-level optimization:
+<ol type="1">
+<li>After day one, review only the ads inside each ad set, not the ad sets. [L0648.032]</li>
+<li>Find ads that have spent at least 8 USD (normally 8 to 10 USD). [L0648.032]</li>
+<li>Mark an ad as poor if its CPC is above 3 USD or one USD above the average CPC of the account. [L0648.032]</li>
+<li>Turn off ads that have spent that amount with a poor CPC and no sales, so Meta moves budget to the other ads. [L0648.032]</li>
+<li>Keep ads with a good CPC running even if their CTR is lower. [L0648.032]</li>
+</ol></li>
+<li>CPC and profitable spend matter more than CTR. A low CTR is acceptable when CPC is cheap, while a high CPC means the budget goes to the wrong ad, and CTR and creatives should be improved. [L0648.033]</li>
+<li>Do not kill an ad set before it has spent its break-even cost per purchase. At a 5 USD daily budget and a 20 USD break-even, wait 4 days (20 ÷ 5) before judging it. [L0648.034]</li>
+<li>Use the break-even cost per purchase as the maximum spend an ad set should reach without a sale before it counts as unprofitable. Without a sale after spending the break-even amount, the ad set is unlikely to become profitable in the long run. [L0648.031]</li>
+<li>Decision after an ad set reaches its break-even cost per purchase:
+<ol type="1">
+<li>If there was no sale and the CPC and CTR are poor, turn the ad set off. [L0648.035]</li>
+<li>If there was no sale but the CTR is above average and the CPC is low, give it one more day, then turn it off if it still has no sale. [L0648.035]</li>
+<li>If there is at least one sale, let it spend another break-even cost per purchase to check whether the sales are consistent. [L0648.035]</li>
+<li>Two sales by day two can mark a potential winner. [L0648.035]</li>
+<li>Repeat the same check after each break-even amount until the audience reaches four or more sales with a profitable ROAS, then it is ready to scale. [L0648.035]</li>
+</ol></li>
+<li>Meta campaign spending around 150 EUR over three days across several ad sets with only one add-to-cart: stop the campaign and investigate rather than leaving it running. Such a result points to a broken setup, tracking or a fundamentally weak offer. [L0361.001]</li>
+<li>The purpose of stopping a losing test early is to cut losses before money is spent on a product that does not work. [L0361.006]</li>
+<li>A product with 350 USD spent, a ROAS of 0.42, a link CTR under 1% and a conversion rate under 1% was judged as not worth more spend. Investing the energy in the next product was the recommended choice. [L0363.041]</li>
+<li>Do not judge a test ad by CTR alone, because a high CTR can still be unprofitable. Compare the spend per ad set with the break-even cost per purchase and the resulting sales and ROAS. [L0692.018]</li>
+<li>Facebook ads should be judged after the test has spent enough to give data. Without enough spend the data is not reliable, so one can only rely on signals such as add-to-carts for early judgment. [L0995.048]</li>
+<li>Cut losing ads early using soft metrics: cost per ATC, CTR, CPC, CPM and engagement rate ranking. Keep an ad only if these metrics improve day over day, otherwise cut it. [L1019.042]</li>
+</ul>
+<h3 id="tiktok-1">TikTok</h3>
+<ul>
+<li>Product kill thresholds for a TikTok test:
+<ul>
+<li>If no video passes 10,000 views in the first week after consistent uploading, the product is probably dead. [L0501.022]</li>
+<li>If you cannot reach around 500 followers or a few thousand views in the first week, kill it. [L0501.022]</li>
+<li>If you cannot reach 1,000 followers within two weeks, or if revenue per million views is under 100 USD, drop the product. [L0501.022]</li>
+<li>Kill early to save time. [L0501.022]</li>
+</ul></li>
+<li>Revenue per million views after the second week:
+<ul>
+<li>Keep products that reach at least about 1,000 USD per million views on average. [L0501.025]</li>
+<li>At 500 USD per million, it is still worth it. [L0501.025]</li>
+<li>A product with 10 million views and 5,000 USD in sales (50% profit) is still considered good. [L0501.025]</li>
+</ul></li>
+<li>Strong product test performance (example): CPM $4 to $6 on Facebook ($10 in Germany), under $5 on TikTok; CTR 1 to 2% on Facebook, under 1% on TikTok; add-to-cart ratio 13 to 18%; 4 sales total (1 from Facebook under $100 spend, 3 from TikTok $120 spend). These top-tier metrics indicate creative resonance and audience fit before scaling. [L0307.022]</li>
+</ul>
+<h3 id="pinterest-1">Pinterest</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Minimum threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CTR</td>
+<td>Above 1% on day 3</td>
+<td>L1133.009</td>
+</tr>
+<tr>
+<td>ATC (add-to-cart) rate</td>
+<td>At least 5%</td>
+<td>L1133.009</td>
+</tr>
+<tr>
+<td>Add-to-cart count</td>
+<td>At least 1 ATC within 3 days, otherwise test other offers</td>
+<td>L1133.009</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td>At least 1 sale within 6 to 7 days, otherwise move to the next product</td>
+<td>L1133.009</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A product without any add-to-cart within 3 days on Pinterest signals that the offer needs testing. A product without a sale within 6 to 7 days should be replaced rather than kept running. [L1133.011]</li>
+<li>Only conversion campaigns should be used on Pinterest. Consideration and brand awareness campaigns are not used in this approach. [L1134.007]</li>
+<li>Pinterest test KPIs in the first week:
+<ul>
+<li>After day three (about $15 spent), CTR should be at least 1%. If not, try new creatives for one or two more days, then switch product. [L1134.030]</li>
+<li>Add-to-cart rate should be at least 5% (e.g. 5 add-to-carts per 100 visitors) after day three. Otherwise test another offer for two days. [L1134.030]</li>
+</ul></li>
+<li>Pinterest kill rule: at least one add-to-cart within three days, and at least one sale within six to seven days (about $30 spent at $5 per day). If there is no sale within that time, move to the next product. [L1134.031]</li>
+</ul>
+<h3 id="gates-at-5-per-day-platform-not-named-in-the-source-the-gates-match-the-pinterest-rules">Gates at $5 per day (platform not named in the source; the gates match the Pinterest rules)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Checkpoint</th>
+<th>Spend or visitors</th>
+<th>Required result</th>
+<th>If the result is missed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day 3</td>
+<td>About $15 spent</td>
+<td>CTR of at least 1%</td>
+<td>Test new creatives for one or two days; if still weak, switch product</td>
+</tr>
+<tr>
+<td>After 100 visitors</td>
+<td>100 visitors</td>
+<td>Add-to-cart rate of at least 5%</td>
+<td>Change the offer and test another two days</td>
+</tr>
+<tr>
+<td>Day 3</td>
+<td>3 days of traffic</td>
+<td>At least 1 add to cart</td>
+<td>Test more offers</td>
+</tr>
+<tr>
+<td>Day 6 to 7</td>
+<td>About $30 spent</td>
+<td>At least 1 sale</td>
+<td>Move to the next product</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1135.050]</p>
+<ul>
+<li>Create only conversion campaigns, not consideration or brand awareness campaigns, because the test is built to measure sales. [L1135.028]</li>
+<li>In a stable campaign, the lesson reported CPM of $3.38, CTR of 2.81% and CPC of $0.12. A campaign on its first day showed a CPM of $0.75 and CTR of 0.63%, which shows how much early data fluctuates. [L1135.051]</li>
+</ul>
+<h3 id="google-and-youtube-1">Google and YouTube</h3>
+<ul>
+<li>If a Google Ads campaign spends budget early but produces no sales, delete it and create a fresh campaign rather than making multiple bid or audience adjustments. The algorithm struggles to recover from poor learning phase performance, so restarting from scratch allows more effective optimization. [L0210.040]</li>
+<li>Pause a product or ad group when it has accumulated clicks equal to about twice the expected clicks per conversion without a conversion, provided there is enough data (roughly 10 to 15 conversions per month in the campaign). Example: with 38 expected clicks per conversion, pause at about 70 to 76 clicks without a conversion. [L0745.015]</li>
+<li>Judging a campaign after only three sales over three months and concluding the ads are not working is a mistake. Three sales with a cost per sale that is too high relative to product prices is still usable data, and it points to product selection rather than a lack of data. [L0748.015]</li>
+<li>Older advice (2020), procedure when ads are unprofitable:
+<ol type="1">
+<li>If ads are unprofitable (ROAS is too low), first try cutting negative keywords and removing underperforming products. [L0245.057]</li>
+<li>Monitor for two weeks. [L0245.057]</li>
+<li>If ROAS still does not improve, consider pausing ads or significantly cutting budget. [L0245.057]</li>
+<li>Do not pause ads if ROAS is stable just because traffic is low. [L0245.057]</li>
+</ol></li>
+</ul>
+<h2 id="checks-before-pausing-or-cutting">Checks before pausing or cutting</h2>
+<ul>
+<li>Before pausing a product, verify its performance across all channels and touchpoints. Check Google Analytics data, Shopify transaction data, and email conversion sequences to confirm the product is truly underperforming and not driving conversions through other customer journeys. [L0299.018]</li>
+<li>Do not pause a low-performing product variant without checking similar variants of the same product. A weak-converting color or size might be pulling down overall metrics while other variants of the same SKU are strong sellers. [L0299.019]</li>
+<li>Test and analyze one change at a time when performance drops, because changing creatives, pages and audiences together makes the cause hard to find. [L0950.074]</li>
+<li>A creative that worked in the first days but dropped suddenly after a new asset was added suggests a test of the newest creative by cutting it for a few days to see whether the old ads recover. [L0950.073]</li>
+<li>Optimize in this order: first check the creatives, then the account structure, then the store. Stop the product only after these steps have been tested within the test budget. [L0363.043]</li>
+<li>Before the store is blamed, check the funnel. If the product does not reach its breakeven KPIs, treat that as a signal to check the funnel and, if no fix works, consider killing the product. [L0445.018]</li>
+<li>Evaluate ads at two-week intervals rather than switching them off early. A campaign should only be stopped after months of optimization fail, and in the meantime fix negative keywords, bids and budgets. (older advice, 2022) [L0429.046]</li>
+</ul>
+<h2 id="product-level-kill-thresholds">Product-level kill thresholds</h2>
+<ul>
+<li>Set a kill threshold for each product: stop spending when conversion stays below 1% after optimization, since a conversion rate under 1% is treated as a fatal sign. Test budgets should be limited to about 200 to 250 USD before the decision. [L0363.040]</li>
+<li>Seriously consider dropping a product if its CTR falls below 1.5%, sales are very hard to get, and it is still not profitable after about $10k in sales. Before that threshold, improve the offer and the store first. [L1017.014]</li>
+<li>A product with a barely profitable cost per acquisition should be tested with new interests and a changed offer before it is dropped. Keep testing until the margin is positive. [L0661.043]</li>
+<li>Accept break-even in the early stage if the goal is proof of concept and brand positioning, not immediate profit. Judge the product over two to three months or a full year. [L0492.053]</li>
+<li>Decide whether to continue a product by its numbers, not by attachment: continue if the numbers are good and move on if they are not. [L1176.022]</li>
+<li>Falling in love with a product and spending too much on it causes losses. Ask what the data says instead of why the product is not working. [L1176.023]</li>
+<li>A product that only just breaks even on ROAS and does not reach the break-even point will eventually die out. Do not scale it. Scale only after you find a clear winner. [L1176.024]</li>
+<li>Ad-level judgment: a single product was tested with two Facebook interests. The interest around personal-care buyers reached about 40% attention rate but produced no add-to-carts and no sales. The home and garden interest had a poor attention rate but generated the sales, so the decision was based on sales rather than attention. [L0995.054]</li>
+</ul>
+<h2 id="quick-kill-threshold-comparison">Quick kill-threshold comparison</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform or context</th>
+<th>CTR gate</th>
+<th>Conversion or ATC gate</th>
+<th>Spend or time gate</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meta, new store</td>
+<td>At least 1.5% (2 to 5% seen as working)</td>
+<td>Not stated</td>
+<td>About 4 days or about $20 per ad set</td>
+<td>L0642.032, L0642.033</td>
+</tr>
+<tr>
+<td>Meta, product test</td>
+<td>About 1.5% (longer test); well below stops it</td>
+<td>ATC or sale needed before break-even spend</td>
+<td>Break-even cost per purchase</td>
+<td>L0661.040, L0648.031</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td>Under 1% signals weak link CTR (kill example)</td>
+<td>Conversion under 1% after optimization is fatal</td>
+<td>Views: 10,000 in week 1</td>
+<td>L0363.041, L0501.022</td>
+</tr>
+<tr>
+<td>Pinterest</td>
+<td>At least 1% on day 3</td>
+<td>ATC at least 5%; at least 1 ATC within 3 days</td>
+<td>At least 1 sale within 6 to 7 days (about $30)</td>
+<td>L1134.030, L1134.031</td>
+</tr>
+<tr>
+<td>Store conversion (test)</td>
+<td>Not applicable</td>
+<td>At least 1.5% of visitors buying</td>
+<td>Within test budget</td>
+<td>L1171.021</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="scale-or-hold-decisions">Scale-or-hold decisions</h1>
+<h2 id="proof-required-before-scaling">Proof required before scaling</h2>
+<ul>
+<li>Before scaling an ad set, wait until it has about six or more sales. Several ad sets with six or more sales are a stronger signal than one ad set with a single high-performing result. [L0349.017]</li>
+<li>Scale an interest only after it has produced about six or more profitable sales. Below that, the pixel does not yet have enough purchase data to optimize. [L0639.013]</li>
+<li>A winning audience means two to three interests that each produce at least three purchases at a ROAS above break-even within about 3 to 5 days of data. Test ads with winning creatives together with winning interests, because a winning asset is the combination of an interest and a creative. [L0645.002]</li>
+<li>Four or more sales on one audience with a profitable ROAS is the consistency signal to scale that audience. Three to four sales is an early sign that needs more spend to confirm. [L0648.036]</li>
+<li>A product is ready to be scaled once a winning interest reaches more than six sales. Scaling should start only after the sales signal appears, not after a few clicks. [L1172.034]</li>
+<li>A product has proof of concept when it earns about $100 profit per day consistently for three days, as shown on the profit and loss sheet. This consistency, not a single good day, is the signal to act on. [L1175.032]</li>
+<li>Do not scale the ad budget while the metrics are inconsistent or fluctuate strongly. Scale only when the metrics hold steady, because a lack of stable results means no break and no scale. [L1175.033]</li>
+<li>Judge ads by hard metrics first (sales, profit and add-to-carts). Soft metrics matter only if an ad is not making money. [L0999.023]</li>
+<li>Scale only the ads that are profitable. Do not overspend on unprofitable ads. [L1184.056]</li>
+<li>Check margin and return on ad spend before any ad budget is increased. Spending on ads that do not produce profit drains budget quickly. [L1131.018]</li>
+<li>Ad spend is a real cost, so before scaling any ads, check that the spend is justified by the numbers. Spending on ads without reading the metrics properly burns money without a clear return. [L1038.022]</li>
+<li>For a clear winning product, track only ROAS and sales, and ignore CTR, CPC and CPM. Turn off or cut budget for any ad set that stops performing. [L1173.036]</li>
+<li>Use daily optimization decisions on purchase-related metrics: cost per purchase, total spend, purchase value and ROAS. CTR, CPC, CPM and conversion rate alone should not drive major decisions. [L0290.008]</li>
+<li>In the first testing days, do not judge the whole campaign by profitability, because product, interest, creative and website are all still variables. ROAS per ad set on daily data is the main decision metric during testing. [L0645.005]</li>
+<li>A low CTR combined with a high ROAS shows there is room to improve the creative, but the ROAS still decides whether the ad set stays. Profit comes from ROAS, not from CTR alone. Example: CTR 0.92% with ROAS 3.21. [L0645.006]</li>
+<li>Break-even cost per purchase is the reference for whether a campaign is working. A test campaign that spends about one to one-and-a-half times the break-even without a sale should be stopped. [L0349.028]</li>
+</ul>
+<h2 id="roas-thresholds-for-scaling-conflicting-sources">ROAS thresholds for scaling (conflicting sources)</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Threshold</th>
+<th>Applies when</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A</td>
+<td>10× ROAS floor, $10 revenue per $1 ad spend</td>
+<td>Only increase ad spend when ROAS consistently reaches or exceeds 10×. 10× is the floor for sustainable scaling.</td>
+<td>L0193.002, L0276.018</td>
+</tr>
+<tr>
+<td>Source A (2024)</td>
+<td>20× example ($1,000 spend, $20,000 revenue)</td>
+<td>Exceeds the 10× minimum and signals readiness to increase budget.</td>
+<td>L0276.019</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>Increase only while ROAS stays at 10× or above</td>
+<td>Optimize campaigns before each increase.</td>
+<td>L0359.096</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>2.5× minimum for doubling</td>
+<td>If ROAS is only 1.5 to 2.0 (barely above break-even), compare profit between scenarios before deciding.</td>
+<td>L0308.016</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>ROAS above 2.0 for a 20% profit goal (breakeven 1.6)</td>
+<td>Safe to increase budget when ROAS is above the target.</td>
+<td>L0445.009</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>ROAS 2 or higher for creatives at 1.3 to 1.5% CTR</td>
+<td>Creatives can still be scaled.</td>
+<td>L0645.004</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>Break-even ROAS roughly 1.5 to 1.7, operating-expense multiplier about 3 to 3.5× break-even</td>
+<td>Below a multiplier of about 3, one speaker does not consider scaling worthwhile.</td>
+<td>L0646.002</td>
+</tr>
+<tr>
+<td>Source D</td>
+<td>2.5× comfort threshold when breakeven is 1.5×</td>
+<td>Scale bottom-of-funnel only if ROAS stays above this.</td>
+<td>L0316.043</td>
+</tr>
+<tr>
+<td>Source C (Pinterest)</td>
+<td>ROAS above 2.5 with breakeven 1.5 to 1.6</td>
+<td>Two consecutive days of consistent profit before doubling.</td>
+<td>L1134.032</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Scale aggressively only when the measured ROAS is above the profit-target ROAS. If it is below, keep the ad spend flat and test new creatives or angles. [L0445.017]</li>
+<li>Use the desired ROAS to decide on scaling. If the ROAS is below the desired level, do not scale aggressively; keep the spend level and test changes. [L0445.009]</li>
+<li>Accept the economics, not the headline ROAS: a product with 4 to 6:1 ROAS at $50 per day was the benchmark. The outcome depends on the spend level. [L0995.022]</li>
+<li>Break-even ROAS and margin check: £400 spend at 2.5× ROAS equals £1,000 revenue. Cost of goods at 33% of revenue is £330, so profit is £670. The same £400 spend at 1.6× ROAS equals £1,280 revenue. Cost of goods is £422, so profit is £858. Even though 1.6× is lower ROAS, it nets more profit, so keep budget at £800 (double the original) rather than spending at 2.5×. [L0308.017]</li>
+<li>A campaign with a few large orders can show a very high return in one month and a much lower one the next. One month of results is not a reliable basis for decisions. [L0969.115]</li>
+<li>ROAS typically falls as ad spend grows. Scaling should be preceded by improving the return at the current spend level. [L1111.149]</li>
+<li>Average ROAS and conversion: measure against the first-month baseline and adjust budget only when return on ad spend is well above target. (older advice, 2022) [L0665.103]</li>
+<li>Increase the ad budget only while return on ad spend stays at 10× or above, and optimize the campaigns before each increase. [L0359.096]</li>
+<li>Target ROAS for ad scaling is 10×. Only increase ad spend when ROAS consistently reaches or exceeds this threshold. [L0193.002]</li>
+<li>Seasonality changes both demand and ROAS. For a worked example, see the seasonality section below. [L0995.057]</li>
+</ul>
+<h2 id="budget-ramps">Budget ramps</h2>
+<h3 id="doubling-and-step-ramps">Doubling and step ramps</h3>
+<ul>
+<li>4-Hour Budget Doubling Method:
+<ol type="1">
+<li>Start one ad with £200 budget. [L0308.015]</li>
+<li>After 4 hours, calculate ROAS from sales in that 4-hour period only (ignore previous sales). [L0308.015]</li>
+<li>If ROAS is profitable (above break-even), double budget to £400. [L0308.015]</li>
+<li>After 4 more hours, calculate ROAS for the new 4-hour period. [L0308.015]</li>
+<li>If profitable, double again. [L0308.015]</li>
+<li>Repeat until budget reaches target or ROAS drops below threshold. [L0308.015]</li>
+<li>Example progression: £200 → £400 → £800 → £1,600 → £3,200 → £4,000. [L0308.015]</li>
+</ol></li>
+<li>Black Friday 2023 scaling: started at £200 and scaled over the day to approximately £4,000. Final weekend (Friday to Sunday) ad spend was £13,491. Total weekly ad spend was £33,661. Revenue was £76,000. [L0308.018]</li>
+<li>Pinterest scaling rule: once a campaign is profitable, double the daily budget (e.g. $5 to $10). Require consistent profit for two days, for example ROAS above 2.5 while breakeven ROAS is 1.5 to 1.6. Increase the budget at the start of the day, around 12:00 midnight UTC or up to 4 to 5 a.m. UTC, not in the evening, to avoid a sudden spend spike. [L1134.032]</li>
+<li>Step-by-step ramp (Source A): a first-month test with a $1,000 ad budget produced $20,000 in sales, a 20× return. After optimizing, the budget was raised step by step. At the next step, sales doubled while the return stayed above 10×. A later large increase of tens of thousands of dollars dropped the return well below 10×, which shows why big jumps are risky. [L0359.097]</li>
+<li>Avoid abrupt launches and large budget changes, because performance fluctuates on the first day and usually stabilises around day three or four as the account learns the audience. [L1135.032]</li>
+<li>Ads with a budget of at least 20 USD per day in a dedicated structure: Meta ad sets were fragmenting after a sales milestone, a week of weak results followed, raising the daily budget from 5 to 7 for three to four days did not help, and combining ad sets at about 20 per day still gave a good CTR but no sales. Earlier the store had at least 200 sales a day. Afterward it dropped to zero or one sale a day, which led to a funnel and offer review. [L1017.041]</li>
+<li>One student reached $1,300 in sales in a single day at a profit margin of about 40%. This shows that a product with healthy margins can produce strong daily sales, but scaling should begin only after the numbers are checked. [L1017.040]</li>
+</ul>
+<h3 id="horizontal-and-advanced-scaling-pinterest">Horizontal and advanced scaling (Pinterest)</h3>
+<ul>
+<li>Horizontal scaling on Pinterest: after a winning interest is found in the Targeting breakdown (Interest view), create new campaigns that target the winning sub-interests, or add 50 to 80 keywords with audience sizes of 10 to 30 million, then judge each new campaign by its profitability. [L1134.033]</li>
+<li>A more advanced scaling option on Pinterest is CPA-based targeting (a cost-per-acquisition cap, e.g. sales under $20), used after about 10 to 15 days of consistent results, similar to the bid cap on Facebook. [L1134.034]</li>
+</ul>
+<h3 id="bottom-of-funnel-and-campaign-level-ramps">Bottom-of-funnel and campaign-level ramps</h3>
+<ul>
+<li>If you are not profitable at $50 per day on a bottom-of-funnel campaign, the ad concept or product validation is likely the problem, not the budget level. De-scaling further (to $30 or $20) does not solve this. Test new ad concepts, new products or stop and focus elsewhere. [L0316.035]</li>
+<li>If you have a video campaign spending $300 per day with a given ROAS, run bottom-of-funnel at roughly $100 per day ($300 × 30%). Monitor ROAS and scale bottom-of-funnel only if it stays above your comfort threshold (e.g., 2.5× if breakeven is 1.5×). This prevents overspending on a limited warm pool. [L0316.043]</li>
+<li>Keep ROAS stable as the primary success metric. If costs drop 20% but lead volume increases 20%, and ROAS stays the same, you are succeeding even if absolute profit has not changed. (older advice, 2020) [L0245.056]</li>
+<li>Track the daily pixel purchase volume. That number determines when ABO becomes an option. [L1019.016]</li>
+</ul>
+<h2 id="audience-market-and-ad-type-comparisons">Audience, market and ad-type comparisons</h2>
+<ul>
+<li>Savings from a cheaper audience = (precise-interest cost per conversion − lookalike cost per conversion) ÷ precise-interest cost per conversion. The reported $0.93 versus $1.20 works out to about 22.5% lower, not 30%, so calculate the saving from your own numbers and do not trust rounded claims. The comparison came from only two days of data, so repeat the split test before relying on it. [L0641.024]</li>
+<li>Compare markets by cost per lead and by the first profitable sales. The market with the lowest cost per lead that also produces profitable sales is the one to scale. [L0549.016]</li>
+<li>A store about 30 days into its ads had around $2,500 in sales and was breaking even, which is typical for the early testing phase. [L0549.046]</li>
+<li>A German market with a cost per click of about €0.50 and a conversion rate of 2.5 to 3% was judged as a clear candidate to scale, because the margin should allow a decent profit. A low cost per click combined with a healthy conversion rate gives room to increase spend. [L0694.002]</li>
+<li>For a Facebook ad to be scaled, check whether its ROAS, cost per acquisition and attention rate are good at a small spend. Most ads that are good at $10 per day do not scale easily and need a higher budget structure to hold. [L0999.059]</li>
+<li>In a review of hundreds of ad accounts over roughly 6 to 8 years, each ad was classed as a workhorse or a warhorse, and revenue was attributed to each category with the help of AI. About 80% to 81% of ad revenue (81% by exact figure) came from workhorse-type ads, not warhorses. The result suggests that low-effort, relevant ads drive most sales. [L0483.008]</li>
+<li>How closely you review performance and how aggressively you bid depend on how much risk you accept. Aggressive operators push bids and fund more testing, while restrained operators keep tighter spend limits. Set ROAS and break-even targets to match that choice. [L0719.046]</li>
+</ul>
+<h2 id="account-level-allocation-scale-score-framework">Account-level allocation (scale score framework)</h2>
+<h3 id="efficiency-vs-scale-quadrant">Efficiency vs scale quadrant</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Quadrant</th>
+<th>Spend</th>
+<th>Efficiency</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scale hard</td>
+<td>High</td>
+<td>High</td>
+<td>Increase budget</td>
+</tr>
+<tr>
+<td>Unlock scale</td>
+<td>Low</td>
+<td>High</td>
+<td>Investigate why spend is limited</td>
+</tr>
+<tr>
+<td>Diagnose and fix</td>
+<td>High</td>
+<td>Low</td>
+<td>Find the funnel leak</td>
+</tr>
+<tr>
+<td>Kill</td>
+<td>Low</td>
+<td>Low</td>
+<td>Turn off immediately</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Goal: more than 70% of spend should go to ads above target ROAS. ROAS segments: exceeds, meets, below, failing. CPA segments: excellent, good, acceptable, poor, failing. [L0613.055]</li>
+</ul>
+<h3 id="scale-score-ranking-formula">Scale score ranking formula</h3>
+<ul>
+<li>Scale Score = (ROAS Index × 30) + (CPA Index × 30) + (Spend Velocity × 20) + (Fatigue Index × 20).</li>
+<li>ROAS Index = Ad ROAS / Target ROAS, capped at 1.5.</li>
+<li>CPA Index = Target CPA / Ad CPA, capped at 1.5.</li>
+<li>Spend Velocity = Ad daily spend / account average daily spend.</li>
+<li>Fatigue Index = 1 − (Frequency / 6), with a minimum of 0. [L0613.057]</li>
+</ul>
+<h3 id="dollar-allocation-output">Dollar allocation output</h3>
+<ol type="1">
+<li>For each scale candidate, state the percentage budget increase. [L0613.058]</li>
+<li>For each ad to kill, state the budget freed. [L0613.058]</li>
+<li>List ads to monitor with explicit triggers. [L0613.058]</li>
+<li>State the expected impact on ROAS and CPA. [L0613.058]</li>
+<li>For each scale candidate, also assess fatigue risk (frequency and age), concentration risk (what the backup is) and learning-reset risk if scaling too fast. [L0613.058]</li>
+</ol>
+<h1 id="hard-versus-soft-metrics">Hard versus soft metrics</h1>
+<h2 id="hard-metrics-decide-soft-metrics-diagnose">Hard metrics decide, soft metrics diagnose</h2>
+<ul>
+<li>Hard metrics such as sales outrank soft metrics. If an ad makes sales, a high CPC is acceptable, and you should keep improving the soft metrics. If there are no sales, improve all the metrics across the funnel. [L0639.032]</li>
+<li>Hard metrics such as profitable sales matter more than soft metrics such as attention rate or click-through rate. An ad that makes sales should be kept even if its soft metrics are weak, and soft metrics are improved afterwards. [L0995.016]</li>
+<li>A low attention rate and low click-through rate can still be acceptable when the ad makes sales, because the people who engage may be more qualified buyers. A high attention rate with no sales is not a good sign. [L0999.024]</li>
+<li>Soft metrics are early funnel signals: link clicks, add to cart and initiate checkout, together with their cost columns. Hard metrics are purchases and ROAS. Read the soft metrics first to judge whether an ad is worth scaling or needs more budget. [L1030.003]</li>
+<li>Read soft metrics (engagement and early signals such as cost per click and CVR) alongside hard metrics (ROAS, CAC and profit) to decide what to fix. A product that fails may need better landing page, creative or product detail page work before it is judged dead. [L1038.014]</li>
+<li>Add-to-cart activity signals real buyer interest. If CPC, CPM and CTR look bad but add-to-carts are happening, let the campaign run another day before cutting it. [L0874.016]</li>
+<li>The primary decision metric for a new Facebook product test is CTR in the first phase. CTR is read before sales, since sales need more spend and time to show up. [L0562.001]</li>
+</ul>
+<h2 id="conflicts-on-the-metrics-that-matter">Conflicts on the metrics that matter</h2>
+<ul>
+<li>Daily decisions (Source E, 2025 to 26): use only purchase-related metrics for daily optimization. Do not make major decisions based on CTR, CPC, CPM or conversion rate alone. These secondary metrics inform analysis but should never drive primary decisions. [L0290.008]</li>
+<li>Early test phase (Source C): CTR is the main early metric in the first phase of testing a product on Facebook because it compares the people who saw the ad with those who clicked it. [L0562.001]</li>
+<li>New store (Source C): primary metric for a new store is CTR, at least 1.5%. [L0642.032]</li>
+<li>Add-to-cart classification: Source C lists add-to-carts among hard metrics (judge ads by sales, profit and add-to-carts). [L0999.023] Source D lists add-to-cart among early soft signals, with purchases and ROAS as the hard metrics. [L1030.003] Use add-to-carts as early signals and not as the final verdict, since the sources differ on the label.</li>
+<li>Phase 5 ad testing: optimize using four metrics: CTR (click-through rate), CPM (cost per thousand impressions), ATC (add-to-cart rate) and conversion rate. These indicate creative strength, targeting efficiency, funnel engagement and sales conversion. [L0199.013]</li>
+<li>Ad metrics targets for a test: CPM below $25, CTR above 1.5% (ideally 2%), and CPC below $1. [L1171.020]</li>
+<li>Store conversion rate target during a test is at least 1.5% of visitors buying. [L1171.021]</li>
+<li>For a clear winning product, track only ROAS and sales. [L1173.036]</li>
+</ul>
+<h2 id="cut-early-signals-and-metric-discipline">Cut-early signals and metric discipline</h2>
+<ul>
+<li>Cut losing ads early using soft metrics. Keep an ad only if these metrics improve day over day, otherwise cut it. [L1019.042]</li>
+<li>CPC and profitable spend matter more than CTR. [L0648.033]</li>
+<li>Do not judge a test ad by CTR alone. [L0692.018]</li>
+<li>Judge ads by hard metrics first; soft metrics matter only if an ad is not making money. [L0999.023]</li>
+<li>Judge performance using a product's numbers, not by attachment. [L1176.022]</li>
+</ul>
+<h1 id="seasonality-and-volatility">Seasonality and volatility</h1>
+<ul>
+<li>Many products sell less in summer because customers spend more time outdoors, so many stores see a dip in that season unless they sell summer products. Plan lower spending for that period rather than treating it as a store failure. (older advice, 2021 to 2022) [L0949.027]</li>
+<li>Seasonality changes both demand and ROAS for a product. Outside the selling season, traffic and data are lower. A product that reached 4 to 6:1 ROAS at $50 per day dropped to about 4:1 at $10 per day, which was not enough to scale. Rising in-season demand can lift the same ad's ROAS again. [L0995.057]</li>
+<li>Seasonality affects results: demand can be lower outside the peak season, which reduces traffic and ROAS, and rises again during the season, which can push ROAS higher and make scaling easier. [L0999.061]</li>
+<li>Outside the season, a product reached about 4:1 ROAS at $10 per day, which was not enough to scale in its own campaign with an aggressive budget. [L0995.022]</li>
+<li>With small order volumes, sales vary randomly from day to day and week to week even when traffic and ads stay the same. Do not react to a few quiet days. (older advice, 2021) [L0671.103, L0671.239]</li>
+<li>Do not increase ad spend because Pinterest or Google account representatives push for bigger budgets. Their pressure does not lead to more sales. (older advice, 2021) [L0671.235]</li>
+<li>Monthly sales are volatile: a few large orders can drive a month, so judge by sample size over several weeks, not one month. (older advice, 2022) [L0969.053]</li>
+<li>A campaign with a few large orders can show a very high return in one month and a much lower one the next, so one month of results is not a reliable basis for decisions. Make judgments on a larger sample, usually several weeks of data. (older advice, 2022) [L0969.115]</li>
+<li>Early results are unstable, because the pocket and the pixel are still learning. [L0639.006]</li>
+<li>Stable campaign versus first day: in a stable campaign the lesson reported CPM of $3.38, CTR of 2.81% and CPC of $0.12, while a campaign on its first day showed CPM of $0.75 and CTR of 0.63%, which shows how much early data fluctuates. [L1135.051]</li>
+<li>A new Meta campaign sold lower early results (a single sale from four ad sets with about $3.50 each for a $24.99 product) and this is an early start, not a verdict. [L1107.039]</li>
+</ul>
+<h2 id="testing-structure-and-tracking">Testing structure and tracking</h2>
+<ul>
+<li>Set a weekly spend limit for product testing before any campaign launches. The limit determines how many products you can test in a week. A test that runs out of budget without a winner should be cut quickly. [L1194.058]</li>
+<li>Run each product in its own campaign rather than sharing one campaign. Testing two products in a shared campaign can record the same sale for both products, which makes it hard to see which product drove add-to-cart, checkout and purchase events. [L1347.028, L1347.029]</li>
+<li>Install UTM tracking so every sale can be traced to its source campaign. Without it, Business Manager figures alone are not reliable for product comparison. [L1347.028, L1347.029]</li>
+<li>Analyze results in Business Manager and in your tracking data to see which product performs better. [L1347.028]</li>
+<li>Change only one variable at a time, such as the creative, the audience or the store, so you can see what caused a result. Once a store and product have proven themselves, test creatives while keeping the audience and settings identical. [L1377.004]</li>
+<li>Optimize in steps so each change can be attributed to a single fix. [L1377.005]</li>
+</ul>
+<h2 id="product-test-budgets">Product test budgets</h2>
+<ul>
+<li>Sources give different test budgets for a single product. Use the figure that matches your decision rule:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform or context</th>
+<th>Budget</th>
+<th>Notes</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook, deciding on one product</td>
+<td>200 to 300 USD</td>
+<td>Spend this to test one product before deciding on it.</td>
+<td>L1432.019</td>
+</tr>
+<tr>
+<td>Facebook, with a break-even check</td>
+<td>300 to 600 USD ad spend</td>
+<td>After this spend, check whether the store is at least at break-even with a very high add-to-cart ratio.</td>
+<td>L1215.014</td>
+</tr>
+<tr>
+<td>TikTok, normal test</td>
+<td>200 to 250 USD (minimum 200 USD per product)</td>
+<td>Gives enough spend to judge an ad group over at least two days.</td>
+<td>L1377.002</td>
+</tr>
+<tr>
+<td>TikTok, smaller test</td>
+<td>3 to 5 ad groups, about 60 to 100 USD total</td>
+<td>Gives roughly 100 to 200 USD of data over two days.</td>
+<td>L1377.003</td>
+</tr>
+<tr>
+<td>Beginners, general</td>
+<td>5 to 30 USD per day</td>
+<td>Depends on platform and campaign.</td>
+<td>L1285.051</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1432.019, L1215.014, L1377.002, L1377.003, L1285.051]</p>
+<ul>
+<li>Once profitable products are identified, put most of the ad budget into the small group of products that generate most sales. Test the rest with a separate, smaller budget. This concentrates spending where return on ad spend is proven. [L1285.005]</li>
+<li>Do not decide how much to spend based on the total ad budget alone, since the budget can be $100 or $100,000. Decide based on ROAS: keep spending while the return meets the target you set. [L1508.009]</li>
+<li>Optimize for profit, not for spend. If a campaign still stays above its profitable ROAS, the usual move is to increase its budget, not to cut costs to lower the bill. [L1203.006]</li>
+</ul>
+<h2 id="ad-structure-and-budget-minimums">Ad structure and budget minimums</h2>
+<ul>
+<li>Use ABO (ad group budget) as the default structure, so each ad group has its own budget and spends it independently. Use at least $25 per ad group, since the platform's minimum is $20 and new accounts often underspend at lower levels. [L1377.014]</li>
+<li>If ABO ad groups show spending problems, switch to a CBO campaign with about $50 to $60 at campaign level containing about four ad groups. Let the campaign distribute budget across ad groups instead of fixing a budget per group. [L1377.015]</li>
+<li>Optimize an ad group after about every $5 to $10 of spend rather than making large decisions early. Keep a test creative running for at least two days before deciding it has failed. [L1377.019]</li>
+</ul>
+<h2 id="early-signals-before-purchases">Early signals before purchases</h2>
+<ul>
+<li>During product testing the goal is not purchases but early signals: add-to-cart ratio, cost per add-to-cart, highest CTR and lowest CPC. Purchases are expected only after the page and ads are working. [L1194.010]</li>
+<li>Judge a tested product by its CTR and CPM first (and CPC). CTR shows whether people are interested in the product; a CTR above 1 percent is considered good and 1.5 percent is considered better. [L1432.020]</li>
+<li>Review click-through rate after about 10 USD of ad spend, and send the ad screenshots for a detailed check, since per-country differences can drag down the overall CTR. [L1432.021]</li>
+<li>Roughly every fifth or sixth tested product becomes a winner, according to the speaker's experience. [L1432.022]</li>
+</ul>
+<h2 id="learning-phase-and-wait-times">Learning phase and wait times</h2>
+<ul>
+<li>Facebook's learning phase requires about 50 purchase events per week for the ad algorithm to find the right people. Below that volume the algorithm lacks data, so the creative, product and offer must carry the early results. [L1315.015]</li>
+<li>Traffic systems typically need 2 to 4 weeks after setup and approval before they show their full performance. Do not judge a campaign's results before this window has passed. [L1393.008]</li>
+<li>Test periods differ by source and by decision. Use the window that matches the decision you are making:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Decision or context</th>
+<th>Window</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decide on a product or concept, then read website purchases and ROAS</td>
+<td>At least 3 days</td>
+<td>L1195.050</td>
+</tr>
+<tr>
+<td>Scaling decision</td>
+<td>5 to 7 days of consistent data; one good or bad day is not enough</td>
+<td>L1354.020</td>
+</tr>
+<tr>
+<td>Judging a batch of ad creatives</td>
+<td>About one week, not a single day</td>
+<td>L1354.008</td>
+</tr>
+<tr>
+<td>TikTok ad groups</td>
+<td>At least 2 days, since one day is not enough</td>
+<td>L1377.002, L1377.005</td>
+</tr>
+<tr>
+<td>Other platforms</td>
+<td>Usually 3 to 5 days</td>
+<td>L1377.005</td>
+</tr>
+<tr>
+<td>TikTok review of ad sets</td>
+<td>After 3 to 4 days</td>
+<td>L1374.024</td>
+</tr>
+<tr>
+<td>Offer or ad test on break-even cost per purchase</td>
+<td>Spread the spend over 3 to 4 days rather than one day</td>
+<td>L1315.025</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1195.050, L1354.020, L1354.008, L1377.002, L1377.005, L1374.024, L1315.025]</p>
+<ul>
+<li>Before deciding to quit a product, you must have uploaded consistently for at least about two weeks. [L1444.017]</li>
+</ul>
+<h2 id="kill-rules-by-platform-1">Kill rules by platform</h2>
+<ul>
+<li><strong>Break-even cost per purchase (both TikTok and Facebook).</strong> This is the strict rule for media buying: once an ad or campaign has spent that amount with no sale, it should be cut, especially in the scaling phase. A campaign that gives sales consistently at or before each break-even interval is the kind worth keeping. [L1382.040]</li>
+<li><strong>Facebook, no-sale threshold.</strong> Once ad spend passes about $60 without any sales, the store is likely not converting. At that point test new offers and new marketing angles before spending more. [L1216.003]</li>
+<li><strong>Facebook, near break-even.</strong> A product that is less than about 100 USD away from break-even after roughly 300 USD of ad spend, with a poor add-to-cart ratio, is not close enough to move forward with. A product that is nowhere near break-even after the test budget should be dropped. [L1215.015]</li>
+<li><strong>Facebook, stop rule.</strong> After roughly 300 USD of ad spend, if the store is not at break-even and the add-to-cart ratio is poor, stop the product. [L1215.014]</li>
+<li><strong>Facebook, lesson kill rule.</strong> Turn off an ad after six days if it has spent less than $50 and sits below break-even ROAS. This is the lesson's own kill rule and is a starting point to adapt to the product's margins. [L1476.043]</li>
+<li><strong>Per offer.</strong> Before judging a new offer or ad, spend at least one break-even cost per purchase on it. Around $20 per ad is a minimum example. [L1315.025]</li>
+<li><strong>TikTok, review.</strong> After 3 to 4 days, check each ad set against your break-even return on ad spend. Turn off ad sets below break-even and keep the ones with a good positive ROAS, then scale them by horizontal or vertical scaling. [L1374.024]</li>
+<li><strong>TikTok, ad group reduction.</strong> Check the campaign about 8 to 12 hours after launch and note spend per ad group. Compare CPC, CPM and CTR across the ad groups. Cut ad groups whose CPC is clearly above the others, for example $1.50 to $2 or more against $0.50 to $0.77. [L1377.018]</li>
+</ul>
+<p><strong>TikTok ad group review steps:</strong></p>
+<ol type="1">
+<li>Check the campaign about 8 to 12 hours after launch and note spend per ad group. [L1377.018]</li>
+<li>Compare CPC, CPM and CTR across the ad groups. [L1377.018]</li>
+<li>Cut ad groups whose CPC is clearly above the others, for example $1.50 to $2 or more against $0.50 to $0.77. [L1377.018]</li>
+<li>Let the remaining ad groups run and review again after one day. [L1377.018]</li>
+<li>Duplicate the winning ad groups and replace the weak ones with new creatives. [L1377.018]</li>
+</ol>
+<ul>
+<li><strong>Content and video thresholds.</strong> Kill a product when any of these metrics fall below the threshold:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Threshold</th>
+<th>Checked after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Views</td>
+<td>No video reaches at least 50k views</td>
+<td>2 weeks</td>
+</tr>
+<tr>
+<td>Engagement rate</td>
+<td>Below 3%</td>
+<td>1 month</td>
+</tr>
+<tr>
+<td>Click-through rate to the website</td>
+<td>Below 1%</td>
+<td>1 month</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1367.016]</p>
+<h2 id="quit-checklist-for-organic-and-content-tests">Quit checklist for organic and content tests</h2>
+<p><strong>Checklist before quitting a product:</strong></p>
+<ol type="1">
+<li>Confirm you uploaded consistently for at least about two weeks. [L1444.017]</li>
+<li>Rule out your store, your content type, the region where the video went viral, and a shadow ban. [L1444.017]</li>
+<li>If views are still low and the factors in step 2 are excluded, the product is a candidate to quit. [L1444.017]</li>
+<li>If a product reaches 1 million views with zero sales after steps 1 to 3, treat it as a strong sign the product is wrong. [L1444.017]</li>
+<li>If the store has more than 1,000 Shopify sessions with no sale, treat that as another strong quit sign. [L1444.017]</li>
+</ol>
+<ul>
+<li>On average about 700 to 750 Shopify store sessions were needed before the first sale. A store with 1,000 sessions and no sale is a warning sign for the product. [L1444.018]</li>
+<li>A low view count that is not caused by shadow banning, content or region can also mean the product is not attracting attention. Once that is ruled out, low views are a reason to stop the product. [L1444.022]</li>
+</ul>
+<h2 id="hard-and-soft-metrics">Hard and soft metrics</h2>
+<ul>
+<li><strong>Hard metrics (decide on these):</strong> break-even ROAS and break-even cost per acquisition, profit, and purchases once the page and ads work. [L1382.040, L1203.006, L1194.010]</li>
+<li><strong>Soft metrics (diagnose with these):</strong> add-to-cart ratio, cost per add-to-cart, CTR, CPC, CPM and views. They signal whether a product is worth more spend, but they do not prove profitability. [L1194.010, L1432.020, L1367.016]</li>
+<li>Use the break-even ROAS, not revenue or spend, as the threshold for keeping or cutting a campaign. [L1476.041]</li>
+<li>A consistent profit of about $100 per day is a real proof of concept, and $1k per day is not needed yet. [L1195.051]</li>
+</ul>
+<h2 id="scale-or-hold">Scale or hold</h2>
+<ul>
+<li>Scale a product or ad set only when its ROAS is at least breakeven ROAS plus 1. For example, with a breakeven ROAS of 2.5, scale once the ROAS reaches 3.5 or higher. [L1185.029]</li>
+<li>Scale a campaign only based on its break-even ROAS. Campaigns below break-even ROAS are not profitable, and campaigns above it can be scaled. [L1476.041]</li>
+<li>During a sale, check ROAS every four hours to decide whether to add budget. Continue scaling only while the ROAS is still strong. [L1363.048]</li>
+<li>Judge ads only after testing a batch of creatives over about a week, not on a single day. A ROAS that holds at or above break-even over that period signals profitability. [L1354.008]</li>
+<li>Products of this type can show a high ROAS when they are scaled fast. Speed of scaling matters because the product's window of demand is short. [L1211.009]</li>
+<li>A high ROAS after two or three purchases usually falls back to a lower plateau. Expect a drop from an early high (for example 9 ROAS) toward a more realistic level (for example 4 to 5) and plan around that, not the early number. [L1315.024]</li>
+<li>Facebook ads were expensive and inconsistent even early on, which made profitable scaling difficult. Test budgets and expectations with this in mind before committing large spend. [L1251.034]</li>
+<li>A successful TikTok ad winner is not required to be a unique product, since a widely dropshipped product can perform well if the ad itself is well executed. Judge the ad on execution, not on product uniqueness. [L1374.008]</li>
+<li>A store running three campaigns at about $230 a day had seven-day ROAS values of about 4.3, 3.1 and 5. The owner saw this as good enough, and the lesson advised building more cash flow before adding a new campaign structure. [L1225.070]</li>
+</ul>
+<h2 id="budget-ramps-and-roas-targets">Budget ramps and ROAS targets</h2>
+<ul>
+<li>Use different ROAS targets for different funnel stages. Bottom-of-funnel YouTube campaigns (retargeting) should use a different return-on-ad-spend target than top-of-funnel awareness campaigns, because top-of-funnel campaigns are judged on cheap views and later retargeting, not direct sales. [L1510.012]</li>
+<li>Scaling example from the formula: with a breakeven ROAS of 2.5, the scale trigger is a ROAS of 3.5. [L1185.029]</li>
+</ul>
+<p><strong>Case: TikTok product launch, Day 1 to Day 2 ramp:</strong></p>
+<p>Case: a product was launched with $100 of Day 1 sales, then scaled to about $1,000 in Day 2. Day 1 results: $75 ad spend, two sales, $95.80 revenue. Average order value was about $48, cost per acquisition about $12, and ROAS of roughly 3.5x was reached on Day 2 after about $290 spend against about $920 revenue. [L1382.043]</p>
+<p><strong>Case: TikTok dropshipping, new product, April:</strong></p>
+<p>Case study (TikTok dropshipping, new product, April). Starting point: a new product tested with a single reused creator video that had not yet gone viral (about 23,000 to 30,000 views). Day 1: the testing structure of four ad groups at $25 to $30 each with three creatives per group ran; about $75 was spent for two sales and about $95.80 revenue, and the winning creative had a CTR above 1 percent. Day 2: five CBO campaigns at $150 each on manual payment, four ad groups each, only the winning creative and copy; the campaign with a CPC of $0.62 produced sales at a CPA of about $12 on an AOV of about $48. Other campaigns were cut, the winner's budget was raised to $300, and the product price was raised by $5. Results: about $920 revenue on about $290 spend on day 2 (about 3.5x ROAS on that day), and total revenue around $900 to $1,000 across two days. [L1436.063]</p>
+<ul>
+<li>Case results on TikTok: average order value about $44 on day 1 and about $47.69 to $48 on day 2; cost per acquisition about $12 with the winning campaign. [L1436.062]</li>
+</ul>
+<h2 id="seasonality-volatility-and-red-days">Seasonality, volatility and red days</h2>
+<ul>
+<li>Mixed green and red days are normal, so do not kill a campaign on one red day. [L1195.051]</li>
+<li>When a campaign has a red day, pump out more creatives, sharpen the messaging through research, and keep CBO 2 and CBO 3 fed so the system can spend and learn. [L1195.052]</li>
+<li>Do not judge a TikTok test on one day of data; give ad groups at least two days. [L1377.005]</li>
+<li>Single days can be off, so spread the spend over three to four days rather than one day when testing an offer or ad. [L1315.025]</li>
+<li>Cut a product if demand is weak, the messaging does not work, or the market is saturated in Meta Ad Library, but only after testing for at least three days. [L1195.050]</li>
+<li>Per-country differences can drag down the overall CTR, so check creatives by country before deciding. [L1432.021]</li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/10-daily-and-weekly-ad-analysis-workflow/"><span class="k">&larr; Previous</span><span class="v">Daily and weekly ad analysis workflow</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/12-diagnosing-the-store-funnel-conversion-bounce-and-on-site-be/"><span class="k">Next &rarr;</span><span class="v">Diagnosing the store funnel: conversion, bounce and on-site behavior</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

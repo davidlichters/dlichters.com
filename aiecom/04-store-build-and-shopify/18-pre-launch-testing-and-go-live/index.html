@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pre-launch testing and go-live | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.18: Pre-launch testing and go-live.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/18-pre-launch-testing-and-go-live/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Pre-launch testing and go-live | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.18: Pre-launch testing and go-live."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/18-pre-launch-testing-and-go-live/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/18-pre-launch-testing-and-go-live/">Plain version</a></div><h1>4.18 Pre-launch testing and go-live</h1><article><h2 id="readiness-before-paid-traffic">Readiness before paid traffic</h2>
+<ul>
+<li>Optimize the store for conversion before any paid traffic is sent to it, because visitors who arrive at a store that is not ready cannot be converted and the advertising budget is wasted. [L0582.015]</li>
+<li>Older advice (2019): set up and optimize the Shopify store before spending money on ads, so paid visitors land on a working store. [L1002.028]</li>
+<li>Before a campaign goes live, make the store attractive. A better offer and a better-made website can outperform a competitor's store selling the same product, and weak competitor stores show room for improvement. [L1161.043]</li>
+<li>Run the full pre-launch checklist before sending any paid traffic, so mistakes in the theme, product page, bundles or checkout are fixed before money is spent on clicks. [L1324.002]</li>
+<li>If the store is not ready when a video goes viral, sales are lost and the store must be rebuilt in a hurry. Build a working store before the content has a real chance to take off, especially without web-building experience. [L1380.039]</li>
+<li>Set a deadline for the store to be live within one week, and check each store task on the deadline day. [L1431.010]</li>
+<li>Publishing a store before launch carries no risk, because you are the only visitor until you send traffic. Keep the store unpublished only if you prefer not to test it yourself. [L0934.094, L0934.165]</li>
+<li>Build the store in this order before launch (older advice, 2021-22 source label Source C; no date given):</li>
+</ul>
+<p>Store setup order before launch [L1288.001]:</p>
+<ol type="1">
+<li>Set the store name.</li>
+<li>Activate payments: Shopify Payments, PayPal and Clearpay.</li>
+<li>Add products and make sure the stock count is set.</li>
+<li>Set up shipping.</li>
+<li>Set up policies.</li>
+<li>Connect the domain.</li>
+<li>Set up markets for UK, Australia and US.</li>
+<li>Choose and set up the theme.</li>
+<li>Build pages with Pagefly.</li>
+<li>Build the homepage.</li>
+<li>Build the product page.</li>
+<li>Build the About us page.</li>
+<li>Build the Contact us page.</li>
+<li>Set up the header.</li>
+<li>Set up the footer and menus.</li>
+<li>Set up checkout.</li>
+<li>Add reviews with Ryviu.</li>
+<li>Set up Tag Manager.</li>
+<li>Set up Google Analytics (GA).</li>
+<li>Set up GA4.</li>
+<li>Review all Shopify settings.</li>
+<li>Check whether redirects from the testing site are still active. [L1288.001]</li>
+</ol>
+<ul>
+<li>Leftover redirects from the testing site can keep visitors away from the live store, so they must be checked before launch. [L1288.003]</li>
+<li>When conversion is below 1 percent with a lot of traffic and few add-to-carts, the offer, theme and checkout are the first suspects. Have someone review the checkout process and the offer for friction before running more ads. [L1316.040]</li>
+</ul>
+<h2 id="store-access-and-password-protection">Store access and password protection</h2>
+<ul>
+<li>Disable the protection before beginning supplier outreach (Module 4), because suppliers must be able to review the store during initial contact without a password. [L0076.002, L0834.130]</li>
+<li>Keep Shopify Payments turned off until real products are live, so nobody can place an order. [L0834.130]</li>
+<li>Launching while the demo password is still active leaves the storefront hidden from visitors and ad traffic. Remove the password before sending any traffic. [L0393.023]</li>
+<li>A password left on blocks customers and can get your Google Merchant Center and Google Ads accounts suspended. It is often switched on during supplier work and forgotten, so check that it is off before launch. [L1145.018]</li>
+<li>While the online store is password protected, visitors without the password cannot see any pages. The Pages screen shows a banner, Online store is password protected, with a Disable password button that must be used before launch. [L1264.007]</li>
+<li>While password protection is on, visitors who open the store address see an Opening Soon page with an email sign-up field instead of the shop. [L1292.032]</li>
+<li>While a store is protected, visitors see an Opening soon page with an email signup field and a link for the store owner to log in. A theme published behind this password is not visible to the public until the password is removed. [L1330.025]</li>
+<li>Remove the storefront password once the demo store is complete, so the store becomes publicly accessible. [L0532.007]</li>
+<li>The store is only publicly live after the password toggle is switched off and saved. Switching it off without clicking Save does not complete the step. [L1294.005]</li>
+</ul>
+<p>Where to find the setting (the label varies by source and Shopify version):</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Location</th>
+<th>Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0393.006</td>
+<td>Online Store &gt; Preferences &gt; Password protection</td>
+<td>Turn off the password for the store</td>
+</tr>
+<tr>
+<td>L1294.003</td>
+<td>Online Store &gt; Preferences</td>
+<td>First setting shown is Store access, currently set to Password protected</td>
+</tr>
+<tr>
+<td>L1145.053</td>
+<td>Online Store &gt; Preferences &gt; Password protection section</td>
+<td>Enable password must be off before launch</td>
+</tr>
+<tr>
+<td>L1292.020</td>
+<td>Online Store &gt; Preferences</td>
+<td>Disable password can be used once the store is ready to launch</td>
+</tr>
+<tr>
+<td>L1292.031</td>
+<td>Online Store &gt; Themes</td>
+<td>Banner Online store is password protected with a Disable password button</td>
+</tr>
+</tbody>
+</table></div>
+<p>Removing the password, step by step [L1294.004]:</p>
+<ol type="1">
+<li>Log into your Shopify account.</li>
+<li>Click Online Store.</li>
+<li>Click Preferences, located at the bottom of the Online Store section.</li>
+<li>In the Store access setting, which shows Password protected, toggle the switch off.</li>
+<li>Click Save.</li>
+</ol>
+<p>After saving, the store is live and anyone who opens the store URL can view it. [L1294.004, L0076.001]</p>
+<ul>
+<li>Speed score is not calculated while a store is protected. The speed score becomes available 1 to 3 days after protection is disabled, so the store stays hidden from speed measurement until protection is removed. [L1292.020, L1292.032]</li>
+<li>Conflict on removing the password, with costs and plan requirements:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Requirement</th>
+<th>When each applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0356.025 (older, 2019)</td>
+<td>Removing the password page costs about 29 USD and can be done even during the free trial</td>
+<td>Older advice from 2019; check current Shopify plan rules before relying on it</td>
+</tr>
+<tr>
+<td>L0370.010 (older, 2021-22)</td>
+<td>The password cannot be disabled without a paid plan. Click Select a plan to end the free trial. The Basic Shopify plan is recommended, at USD 29 per month when billed every 30 days. A credit card is required, and remaining trial days are kept before the first charge.</td>
+<td>Use this when the store is still on the free trial, since it requires a paid plan to remove the password</td>
+</tr>
+</tbody>
+</table></div>
+<p>Removing the password with a paid plan, step by step (older advice, 2021-22) [L0370.010]:</p>
+<ol type="1">
+<li>Open Online Store &gt; Preferences in Shopify admin.</li>
+<li>Click "Select a plan" to end the free trial, since the password cannot be disabled without a paid plan.</li>
+<li>Choose a plan; the Basic Shopify plan is the recommended starting plan, at USD 29 per month when billed every 30 days.</li>
+<li>Add a payment method (a credit card is required); the trial days still remaining are kept before the first charge.</li>
+<li>Return to Online Store &gt; Preferences.</li>
+<li>Under Password protection, turn off "Enable password" and click Save.</li>
+<li>Check the storefront in a separate browser or private window to confirm the "Opening Soon" password page is gone.</li>
+</ol>
+<h2 id="link-and-content-checks">Link and content checks</h2>
+<ul>
+<li>Click-test every link on the site and confirm each one opens the correct destination with no 404 errors, in this order [L0167.004]:</li>
+</ul>
+<ol type="1">
+<li>Header menu links, including every item and every dropdown item.</li>
+<li>Homepage collection sections, opening each collection.</li>
+<li>Every other linked section or button on the homepage.</li>
+<li>Footer links, especially the Quick Links and policy links.</li>
+</ol>
+<ul>
+<li>Click every link on the homepage, the collection pages, the about page and the policy pages. [L0855.179]
+<ol type="1">
+<li>Fix or remove any link that goes nowhere, is broken, or reloads the same page.</li>
+<li>Remove placeholder text and theme default labels, such as generic collection names, left over from installing the theme.</li>
+<li>Check that each product category matches what the store says it sells, and that the policy pages are rewritten for this business.</li>
+<li>Confirm that the contact method, shipping time and return policy are all filled in.</li>
+</ol></li>
+</ul>
+<p>Note: L0855.179 is listed above as a single procedure with five steps; the numbering in the source is 1 to 5, with the click-test as step 1.</p>
+<ul>
+<li>Before going live, check for glaring issues such as broken links, product pages missing information, mispriced items and empty collections. The store should look professional from the first day. [L1446.022]</li>
+<li>Check the About Us page and the rest of the site for typos before turning on ads. [L1068.045]</li>
+</ul>
+<h2 id="critical-elements-prices-buttons-and-add-to-cart">Critical elements: prices, buttons and add-to-cart</h2>
+<ul>
+<li>A product page with the price and compare price accidentally hidden produced 40 add-to-carts and only 4 purchases for one student. Always verify that critical information is visible. [L0067.031]</li>
+<li>A missing or unclear add-to-cart button is a technical oversight that can silently kill conversions. Verify that all buttons and fields work before running ads. [L0067.032]</li>
+<li>A product listing that shows a price of $0.00 or a broken price looks like a bug and kills trust. Test the product page and cart before sending paid traffic. [L0657.039]</li>
+<li>Older advice (2019): check the store before turning on ads, in this order [L1068.045]:</li>
+</ul>
+<ol type="1">
+<li>Make sure the checkout works.</li>
+<li>Make sure all links in the header and footer work.</li>
+<li>Make sure every add-to-cart button works.</li>
+<li>Check the About Us page and the rest of the site for typos.</li>
+<li>Once confident, turn the ads on.</li>
+</ol>
+<h2 id="mobile-and-cross-device-checks">Mobile and cross-device checks</h2>
+<ul>
+<li>Check the store on mobile first, because most shoppers buy from phones and desktop views often look weaker. Make sure the layout looks trusting and polished on a phone. [L0657.037]</li>
+<li>Check the store on a phone as well as on desktop, because the mobile layout can look much better or worse than the desktop version. [L0656.022]</li>
+<li>Review a store on a phone in portrait view, not only on desktop, because desktop layouts can hide gaps where a product photo or GIF fails to fit. Count the taps needed to reach the real product page on the phone as well. [L0530.034]</li>
+<li>Check the mobile version separately from the desktop view at every stage of editing, because mobile is the main traffic source. Confirm that images, icon bars, reviews and FAQs look clean on mobile before publishing. [L1324.004, L1331.039]</li>
+<li>A product title shown vertically on mobile after Add to cart, while the cart shows it horizontally, looks broken and can cost a sale. A likely cause is a font size set too large for mobile. [L0837.005]</li>
+<li>Shopify checkout appears as a dropdown order summary on mobile but displays differently on desktop. [L0255.026]</li>
+<li>Scroll the whole page on mobile before linking the store from TikTok, to confirm that the lower half loads and that text and images display correctly. Most visitors arrive on their phone. [L1380.056]</li>
+</ul>
+<p>Mobile-first store review, step by step [L0530.015]:</p>
+<ol type="1">
+<li>Open the store on a phone and count the clicks to reach the actual product page; a product page that takes around five clicks is a weakness.</li>
+<li>Make sure the product page comes first on the page, with the product image, title, price and add to cart above everything else.</li>
+<li>Move the product details, refund policy, and long text blocks below the main product information.</li>
+<li>Place customer reviews above the email signup section and the footer.</li>
+<li>Keep the footer last, and remove the "Powered by Shopify" credit only if your theme allows it.</li>
+</ol>
+<p>Cross-device check before launch [L0552.054]:</p>
+<ol type="1">
+<li>Before launch, open the store page and every ad creative on a Windows PC and on a Mac.</li>
+<li>Check the page on an iPhone and on an Android phone.</li>
+<li>Fix any layout or visual differences before spending on ads, because a page can look correct on one device and broken on another.</li>
+</ol>
+<ul>
+<li>Older advice (2019): run a test purchase on desktop and on mobile to confirm orders go through, and check on mobile that all content stays visible and usable. [L0356.020]</li>
+</ul>
+<h2 id="test-orders-and-checkout">Test orders and checkout</h2>
+<ul>
+<li>Place a test order before launch to check that the whole store works as intended. Reviewing it in the Shopify admin shows what a real customer order will look like. [L1302.001]</li>
+<li>Test order in Shopify [L1302.002]:</li>
+</ul>
+<ol type="1">
+<li>Open the store and go to the cart.</li>
+<li>Remove most of the extra products, since a test does not require buying several units.</li>
+<li>Go to checkout and enter any email address that uses the domain example.com.</li>
+<li>Enter dummy shipping information.</li>
+<li>Click Complete order.</li>
+<li>Open the Shopify admin, go to Orders, and check that the test order appears.</li>
+</ol>
+<ul>
+<li>In Shopify Admin &gt; Orders, a test order shows payment status payment pending, because it is not a live order and receives no payment. Its fulfillment status starts as unfulfilled. The list also shows the sales channel (Online Store), the order amount and the shipping method (here free shipping). [L1302.004]</li>
+<li>Before launching ad campaigns, place a full test order on your own store with your own credit card, going through the entire checkout. Check that every step works, then cancel the order, since the money returns to your account. [L1126.028]</li>
+<li>Test the payment flow on a new store [L1381.047]:</li>
+</ul>
+<ol type="1">
+<li>Place a real dummy order on your own store.</li>
+<li>Cancel the order or issue the refund in Shopify.</li>
+<li>Confirm the refund arrives quickly, which one seller reported as within seconds.</li>
+</ol>
+<ul>
+<li><p>Note on refund timing: L1126.028 says the money returns to the account after cancelling, while L1381.047 reports one seller's refund arriving within seconds. Both describe the same test; the refund timing depends on the payment provider and is not guaranteed by either source. [L1126.028, L1381.047]</p></li>
+<li><p>Older advice (2020): create a $1 test product on the store, add it to the cart, and go through a complete checkout, on both desktop and mobile. Then verify that the order confirmation appears and that the payment gateway processes without errors. This validates that checkout works before driving traffic. [L0268.019]</p>
+<ol type="1">
+<li>Create $1 test product on store.</li>
+<li>Add to cart and go through complete checkout.</li>
+<li>Test on both desktop and mobile devices.</li>
+<li>Verify order confirmation appears.</li>
+<li>Confirm payment gateway processes without errors.</li>
+</ol></li>
+<li><p>When you create a test product to check the cart flow, turn off quantity tracking for it so you can add it to the cart from the storefront. This setting is only for testing and is not a recommended way to run a live product. [L1326.027]</p></li>
+<li><p>Test the checkout with a real sale before scaling ad spend, so you know orders can be completed end to end. [L0823.015]</p></li>
+<li><p>Run the test before expecting any orders, because a store that looks finished can still fail at checkout. [L1324.003]</p></li>
+</ul>
+<h2 id="compliance-review">Compliance review</h2>
+<ul>
+<li>Before launch, check the store against the pre-launch compliance checklist. A second reviewer can look at the same checklist on the live store to catch items that were missed. [L0970.166]</li>
+<li>Link all policy pages in the store footer before running any ads, for Google compliance. [L1446.030]</li>
+<li>Legal pages must exist before traffic: refund policy and shipping policy, with company name and email address. [L1345.073]</li>
+<li>Update the Legal section in Shopify Settings and make the Contact Us page list phone number, email and postal address. [L1145.051]</li>
+<li>Rewrite the policy pages for this business, not the theme defaults. [L0855.179]</li>
+<li>Link Privacy Policy, Terms of Service and Contact Us in the header and footer. [L1145.051]</li>
+</ul>
+<h2 id="viewing-the-store-as-a-customer">Viewing the store as a customer</h2>
+<ul>
+<li>When you view your own store while logged in as admin, Shopify displays a bar stating that the store is not live and checkout is disabled. Use an incognito window or a different browser to see the customer view. [L0255.025]</li>
+<li>Shopify's bottom ribbon that reads Dropship appears only for admins logged into the Shopify admin while previewing the store. To confirm what customers see, open the storefront in an incognito window or while logged out of Shopify. [L0837.060]</li>
+</ul>
+<h2 id="launch-criteria-and-checklists">Launch criteria and checklists</h2>
+<p>Launch criteria, by source. The supplier and product numbers differ, so each applies to a different situation:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Criterion</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0356.026 (older, 2019)</td>
+<td>Launch when the store works and has no obvious red flags; check that the cart and checkout work</td>
+<td>General go/no-go</td>
+</tr>
+<tr>
+<td>L0671.036, L0671.175 (older, 2021; merged, the two units differ only in "a few hours" vs "hours")</td>
+<td>Launch when real products are uploaded, checkout works and the site is live. Google traffic starts once the product feed is approved, which can take hours or a few days.</td>
+<td>Before Google traffic</td>
+</tr>
+<tr>
+<td>L0808.009 (2026)</td>
+<td>Launch once the first two suppliers are onboarded with live products uploaded and demo products removed. Launching before the full catalog is loaded is acceptable.</td>
+<td>Minimum for launch</td>
+</tr>
+<tr>
+<td>L0967.049 (older, 2020)</td>
+<td>Before launching ad campaigns, products from at least two different suppliers must be uploaded. Ads can be turned on then, and new suppliers added over time.</td>
+<td>Before ads</td>
+</tr>
+<tr>
+<td>L0853.109 (older, 2021)</td>
+<td>Upload at least two suppliers' products before the store is opened to traffic</td>
+<td>Before traffic</td>
+</tr>
+<tr>
+<td>L1446.030</td>
+<td>Confirm at least two suppliers are onboarded and uploaded; see the readiness check below</td>
+<td>Before ads</td>
+</tr>
+<tr>
+<td>L1446.008</td>
+<td>Eight supplier approvals and more than 500 uploaded products is more than enough to launch a store. Cross-sells are an advanced add-on not needed before the first launch.</td>
+<td>Scale reference, not a minimum</td>
+</tr>
+<tr>
+<td>L0963.158 (older, 2022)</td>
+<td>Before expecting the first sale: the site is not behind a password, real products are uploaded, and Shopify Payments is set up</td>
+<td>Before the first sale</td>
+</tr>
+<tr>
+<td>L0834.130 (older, 2021)</td>
+<td>Keep Shopify Payments turned off until real products are live, so nobody can place an order</td>
+<td>Before real products are live</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Payments timing: L0834.130 keeps Shopify Payments off until real products are live, and L0963.158 requires Shopify Payments to be set up before the first sale. Both apply in sequence: off while products are not yet live, then set up before the first sale. [L0834.130, L0963.158]</li>
+<li>Supplier count: the minimum is two suppliers with live products (L0808.009, L0967.049, L0853.109, L1446.030). The eight approvals and more than 500 products in L1446.008 describe a store that is more than enough, not a requirement. [L0808.009, L0967.049, L0853.109, L1446.030, L1446.008]</li>
+<li>Do not chase a perfect performance score before launch: a B grade on a performance tool is not a reason to delay launch, because large e-commerce brands often score lower than a typical new store. [L1446.019]</li>
+<li>A store that is set up is ready to launch with a high-converting design, because the store is where paid traffic lands and must turn visitors into buyers. [L0914.007]</li>
+<li>Publish before launch: see the readiness section, L0934.094 and L0934.165.</li>
+</ul>
+<p>Launch readiness check, in order [L1446.030]:</p>
+<ol type="1">
+<li>Confirm that at least two suppliers are onboarded and their products are uploaded to the store.</li>
+<li>Link all policy pages in the store footer before running any ads, for Google compliance.</li>
+<li>Complete the conversion optimization module so the store is optimized for conversions.</li>
+<li>Check for broken links, product pages with missing information, mispriced items, and empty collections.</li>
+<li>Have a family member or friend who has not seen the store shop it while you watch. If no glaring problems remain, launch.</li>
+</ol>
+<p>Family-member test, in order [L1446.023]:</p>
+<ol type="1">
+<li>Ask a family member or friend who has not seen the store to shop it as if buying one of your products.</li>
+<li>Sit beside them while they browse and watch where they click.</li>
+<li>Ask what stands out, what is not working, and what is confusing.</li>
+<li>Thank them and make the changes they point out.</li>
+</ol>
+<ul>
+<li>Launch when the store works and has no obvious red flags. Have a friend or family member test whether they would buy from it, and check that the cart and checkout work. (Older advice, 2019.) [L0356.026]</li>
+</ul>
+<p>Checklist before sending traffic [L1345.073]:</p>
+<ol type="1">
+<li>Payment processor: at least one payment method that accepts credit cards, plus PayPal for top markets.</li>
+<li>Markets: all target countries are active in Settings &gt; Markets, and a test checkout works in each.</li>
+<li>Shipping prices: default rates are deleted, custom rates are set, and shipping is free or clearly priced.</li>
+<li>Legal pages: refund policy and shipping policy exist, with company name and email address.</li>
+<li>Checkout page: trust badges and payment icons are added, and taxes are disabled where no tax is charged.</li>
+</ol>
+<p>Pre-launch Shopify store checklist, in order (Source D, 2026) [L1324.001]:</p>
+<ol type="1">
+<li>Create the Shopify store.</li>
+<li>Install the Elixir theme.</li>
+<li>Upload the logo.</li>
+<li>Customize the homepage.</li>
+<li>Check the mobile version of the store.</li>
+<li>Import the product.</li>
+<li>Add images and/or videos to the product page.</li>
+<li>Add customer reviews to the product page.</li>
+<li>Add FAQs to the product page.</li>
+<li>Install the Kaching Bundles app.</li>
+<li>Create the bundle offer.</li>
+<li>Add quantity breaks to the bundle.</li>
+<li>Highlight the best-selling offer.</li>
+<li>Add the shipping, refund and privacy policies.</li>
+<li>Complete a test checkout.</li>
+<li>Review the store on both desktop and mobile.</li>
+<li>Confirm the store is ready to receive paid traffic.</li>
+</ol>
+<p>Launch checklist before the store is opened to traffic (older advice, 2021) [L0853.109]:</p>
+<ol type="1">
+<li>Remove the storefront password so the store is publicly live.</li>
+<li>Upload at least two suppliers' products.</li>
+<li>Configure all payment options.</li>
+<li>Click every link and confirm nothing is broken.</li>
+<li>Run a full test purchase through checkout to confirm it works.</li>
+<li>Set up the ads.</li>
+<li>Install analytics.</li>
+</ol>
+<p>Full pre-launch checklist for a Google Shopping store (older advice, 2021-22 source). Use it as a reference; items about Google accounts apply only if you run those channels [L1145.051]:</p>
+<ol type="1">
+<li>Connect Shopify Payments and PayPal so checkout works.</li>
+<li>Activate billing on the Google Workspace email.</li>
+<li>Connect the public phone number to a phone you can answer, and test it with a call from another phone.</li>
+<li>Set up a voicemail on the public number that lets callers request a callback.</li>
+<li>Adjust the main navigation to the live products.</li>
+<li>Show the phone number in the header and footer of the homepage.</li>
+<li>Link Privacy Policy, Terms of Service and Contact Us in the header and footer.</li>
+<li>Make the Contact Us page list phone number, email and postal address.</li>
+<li>Update the Legal section in Shopify Settings.</li>
+<li>Set at least one free shipping rate in Shopify shipping settings.</li>
+<li>Set correct tax rates in Shopify settings.</li>
+<li>Connect the domain to Shopify and set it as primary.</li>
+<li>Turn off password protection.</li>
+<li>Update the Preferences and General areas of Shopify.</li>
+<li>Add online chat, review and email marketing apps.</li>
+<li>Add USP information to product pages.</li>
+<li>Open a Google Analytics account and connect it to Shopify.</li>
+<li>Activate ecommerce tracking in Google Analytics.</li>
+<li>Homepage: check that the USP highlight bars still match your offer.</li>
+<li>Homepage: update the featured product and collection sections to show live products.</li>
+<li>Products: delete all demo products.</li>
+<li>Products: check that every product has the correct price.</li>
+<li>Products: set correct stock levels, or mark products in stock with a placeholder quantity.</li>
+<li>Products: add correct SKU, MPN and barcode where relevant.</li>
+<li>Products: optimize product titles.</li>
+<li>Products: check that each product image matches its product.</li>
+<li>Products: set up and check the product page tabs.</li>
+<li>Products: check that every product is in at least one collection and reachable from the main navigation.</li>
+<li>Merchant Center: install the Feeds for Google Shopping app and submit the feed.</li>
+<li>Merchant Center: make tax and shipping details match Shopify.</li>
+<li>Merchant Center: update business information.</li>
+<li>Merchant Center: verify the domain.</li>
+<li>Merchant Center: verify the phone number.</li>
+<li>Merchant Center: add branding.</li>
+<li>Merchant Center: enable Free listings under Growth &gt; Manage Programs.</li>
+<li>Merchant Center: enable Shopping ads under Growth &gt; Manage Programs.</li>
+<li>Merchant Center: fix warnings under Products &gt; Diagnostics.</li>
+<li>Merchant Center: link the account to Google Ads.</li>
+<li>Google Ads: set up the three-tier Google Shopping campaigns.</li>
+<li>Google Ads: set up a trademark search text ad campaign.</li>
+<li>Google Ads: create a payments profile and add billing details.</li>
+<li>Google Ads: add the conversion tag through the Feeds for Google Shopping app.</li>
+<li>Google Ads: add the remarketing tag through the Feeds for Google Shopping app.</li>
+<li>Google Ads: link the account to Google Analytics.</li>
+</ol>
+<p>Store setup order and the readiness items above are listed in the readiness section. Homepage and product items are also covered by the checks in the critical elements and link sections. [L1145.051]</p>
+<ul>
+<li>Old-label reference: the Pages banner in L1264.007 and the Themes banner in L1292.031 are the two places where the password notice appears; use either to find the Disable password button. [L1264.007, L1292.031]</li>
+</ul>
+<h2 id="traffic-spikes-and-viral-moments">Traffic spikes and viral moments</h2>
+<ul>
+<li>Before a large influencer post goes live, check that the store can handle a traffic spike. One brand saw more than 3,000 people shopping at once, compared with a normal load of 20 to 100 visitors. [L0790.014]</li>
+<li>A store that went viral was shut down by Shopify two to three days after the first viral sales, when order volumes were large. Customers reported they could not purchase, the seller noticed through comments, and the store was restored within about one hour, though more than $5,000 in sales was estimated to be lost during that hour. Shopify also requested paperwork such as proof of inventory once orders reached tens of thousands. [L0352.038]</li>
+<li>Check the comments on your videos regularly, because customers writing that they cannot buy is an early warning of a store shutdown. Shopify may also restrict accounts when order volume is very high. [L0352.039]</li>
+<li>A broken product link in a viral video or post sends traffic nowhere and directly reduces conversion. Check the link in every post before and during a viral moment. [L0655.005]</li>
+<li>Shipping or checkout issues on the store page can cost sales even when a video goes viral. Check the product page and checkout flow every time before promoting. [L0655.006]</li>
+<li>After adding the link to the bio, check it regularly to confirm the landing page and product page load without errors, since an error can appear after the link is applied. Fix any errors in Shopify when they show up. [L1380.040]</li>
+</ul>
+<h2 id="zero-sales-and-add-to-cart-diagnostics">Zero-sales and add-to-cart diagnostics</h2>
+<ul>
+<li>Checking a product that gets add-to-carts but few sales [L0660.020]:</li>
+</ul>
+<ol type="1">
+<li>Check which payment methods are offered at checkout, including credit card and PayPal.</li>
+<li>Check that the checkout works without errors.</li>
+<li>Check the pricing point against the market.</li>
+<li>Check the website speed.</li>
+<li>If these are fine and sales are still low, the product is probably not good enough, so test a different product.</li>
+</ol>
+<ul>
+<li>Checkout test for a store with zero sales after add-to-cart [L0361.031]:</li>
+</ul>
+<ol type="1">
+<li>Check the shipping setup in Shopify and confirm that shipping rates are correct.</li>
+<li>Check the market setup if you sell to several countries and confirm that each target country is active.</li>
+<li>Try to check out with two random addresses in each target country, for example USA and Canada.</li>
+<li>If checkout fails for those addresses, fix the setting that is blocking customers.</li>
+</ol>
+<ul>
+<li>Use this order when ad metrics are good but there are no sales, although add-to-cart and checkout ratios are healthy [L0774.007]:</li>
+</ul>
+<ol type="1">
+<li>Check the shipping options and whether shipping is being charged to the customer.</li>
+<li>Check the markets: make sure every country you run ads to is enabled in Shopify Markets (Settings &gt; Markets), because customers from a country that is not activated cannot choose it at checkout and abandon the cart.</li>
+<li>Check that the payment providers work: create a 95% discount code for yourself and test a payment through PayPal, Shopify Payments or Stripe, whichever you use.</li>
+<li>If a payment provider fails the test, uninstall it and install it again, which fixes setup problems in many cases.</li>
+</ol>
+<ul>
+<li>A common cause of zero sales with healthy funnel numbers is a targeted country that is not activated in Shopify Markets, so checkout cannot offer shipping to that customer. Check the country list against the countries in your ad targeting. [L0774.008]</li>
+<li>Review the drop-off rate at each step in analytics to find the bottleneck. Check in this order [L1225.040]:</li>
+</ul>
+<ol type="1">
+<li>Check the homepage.</li>
+<li>Check the collection page.</li>
+<li>Check the product page.</li>
+<li>Check the cart.</li>
+<li>Check checkout.</li>
+</ol>
+<ul>
+<li>A high bounce rate, for example 87 percent, is normal for ad traffic landing on product pages. Use Lucky Orange screen recordings to see why visitors leave and fix what causes it. [L0665.040]</li>
+<li>Diagnosis order when funnel numbers are weak: the offer, theme and checkout are the first suspects, as stated in the conversion section. [L1316.040]</li>
+</ul>
+<h2 id="post-launch-maintenance">Post-launch maintenance</h2>
+<ul>
+<li>Constantly update the store as you learn: change the header, footer and apps, and optimize the product page as more visitors arrive. A store needs ongoing maintenance rather than a single build. [L1444.043]</li>
+<li>Check the store on mobile at every stage of editing, since mobile remains the main traffic source after launch. [L1331.039]</li>
+<li>Keep checking the store links and product pages after launch, especially after changes to the bio link or the header and footer. [L1380.040, L0855.179]</li>
+<li>Re-check the store's speed score once the store is public. The score becomes available 1 to 3 days after protection is disabled, and a B grade is not a reason to pause sales. [L1292.020, L1446.019]</li>
+<li>A new Shopify store is password protected by default and shows a coming-soon page to visitors who are not logged in, asking for a password instead of showing the storefront. [L1294.001]</li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/17-speed-apps-and-technical-health/"><span class="k">&larr; Previous</span><span class="v">Speed, apps and technical health</span></a><a class="nx" href="../../04-store-build-and-shopify/19-scaling-the-store-more-suppliers-niches-content-and-delegati/"><span class="k">Next &rarr;</span><span class="v">Scaling the store: more suppliers, niches, content and delegation</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

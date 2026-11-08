@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Remarketing: audiences, display and dynamic campaigns | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.18: Remarketing: audiences, display and dynamic campaigns.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/18-remarketing-audiences-display-and-dynamic-campaigns/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Remarketing: audiences, display and dynamic campaigns | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.18: Remarketing: audiences, display and dynamic campaigns."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/18-remarketing-audiences-display-and-dynamic-campaigns/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/18-remarketing-audiences-display-and-dynamic-campaigns/">Plain version</a></div><h1>10.18 Remarketing: audiences, display and dynamic campaigns</h1><article><h2 id="remarketing-audiences-display-and-dynamic-campaigns">Remarketing: Audiences, Display and Dynamic Campaigns</h2>
+<h2 id="audience-basics-and-prerequisites">Audience Basics and Prerequisites</h2>
+<ul>
+<li>A segment is a user bucket built from website visitors' actions, such as visits, purchases and page interactions. Segments are the building blocks of the remarketing audiences used in retargeting campaigns. [L0187.002]</li>
+<li>Traffic temperature defines who sits in each audience. Cold audiences are people who may want the store's products, built from keyword searches. Warm audiences are people who have visited the store, built from website visitors. Past-customer audiences are people who have bought, built from customers. [L1121.002]</li>
+<li>The core Google Ads strategy for a dropshipping store combines Google Shopping ads with remarketing. Shopping reaches new buyers searching for products, and remarketing re-engages people who already know the store. [L1121.001]</li>
+<li>Google remarketing is still worth setting up in countries without Google Shopping. [L0471.006]</li>
+<li>Google Ads works best when traffic already comes from other channels and the store has tags, tracking and analytics connected. Google can then retarget visitors across its network, such as YouTube and display placements. [L0637.038]</li>
+<li>To set up Google retargeting, install the Google tag on the website, track user data (add to cart, initiate checkout), then build retargeting campaigns for previous visitors who did not complete a purchase. [L0296.012]</li>
+<li>Before building any audience, check that Google Analytics data collection is active:
+<ol type="1">
+<li>Log into Google Analytics 4.</li>
+<li>Click the Settings gear icon (bottom left).</li>
+<li>Click Data Collection and Modification.</li>
+<li>Click Data Collection.</li>
+<li>Ensure all toggle switches are ON.</li>
+<li>Verify that User Data Collection Acknowledgement is acknowledged.</li>
+<li>If not enabled, remarketing will not function. [L0253.017]</li>
+</ol></li>
+<li>The Google Shopping feed app provides three tracking events for Google Ads audiences: add to cart, begin checkout and purchase. These events must be installed through this app, and they are the source for the tag-based segments. [L0420.008]</li>
+<li>For the purchaser segment, select the purchase event whose name includes the label "purchase in category". This label identifies the correct event when several are listed. [L0420.009]</li>
+</ul>
+<h2 id="creating-audiences-in-google-ads-and-analytics">Creating Audiences in Google Ads and Analytics</h2>
+<h3 id="navigation">Navigation</h3>
+<ul>
+<li>In Google Ads, go to Tools in the left navigation, then Shared library, then Audience manager. If Shared library is collapsed, expand it with the caret before clicking Audience manager. [L0420.001, L0187.001, L0253.016]</li>
+</ul>
+<h3 id="starter-segments-in-audience-manager">Starter Segments in Audience Manager</h3>
+<ol type="1">
+<li>Log in to Google Ads, open the Tools menu from the left navigation, then select Audience Manager within Shared library (expand the section if needed).</li>
+<li>Go to Data segments and click + to create a new segment. Select Website visitors.</li>
+<li>Configure the first segment: enter the name [YourStore].com Visitors 30 Days, set Segment members to Anyone who visited a webpage, set Membership duration to 30 days, and leave the Pre-fill option enabled.</li>
+<li>Click Create segment and allow the audience size to populate over the next several hours.</li>
+<li>Click + to create another segment and select Website visitors again.</li>
+<li>Configure the second segment: enter the name [YourStore].com Purchase 30 Days, change Segment members to Visitors of a page with specific tags, then search for and select the Purchase event tag.</li>
+<li>Set Membership duration to 30 days and click Create segment. [L0187.001]</li>
+</ol>
+<ul>
+<li>Website visitor segment sizes take hours to populate. Purchaser segment sizes populate only once purchases occur and may take extra time to show initial data. [L0187.004]</li>
+<li>Create dynamic Google audiences early, such as purchase and website visitor audiences, even with no customers yet. They fill automatically as actions occur, so they can be empty on the day they are created. [L0934.062]</li>
+<li>A 180-day website visitor audience or a 30-day purchase audience can be empty on day zero and still populate later. [L0934.129]</li>
+</ul>
+<h3 id="analytics-audience-definitions">Analytics Audience Definitions</h3>
+<ol type="1">
+<li>Create website visitor audiences in Google Analytics admin under audience definitions: website visitors 180 days, 30 days and 7 days, plus all customers (transactions of at least 1) in the past 30 days and the past 7 days.</li>
+<li>Link Google Analytics to Google Ads with the same email and linked accounts, so audience data syncs automatically.</li>
+<li>In Google Ads, select your campaign, then Audiences &gt; Exclusions, to block customer lists from remarketing ads. [L0210.009]</li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Audience name</th>
+<th>Membership window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Website Visitors - 180 Days</td>
+<td>180 days</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Website Visitors - 30 Days</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Website Visitors - 7 Days</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>4</td>
+<td>All Customers - 30 Days</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td>5</td>
+<td>All Customers - 7 Days</td>
+<td>7 days</td>
+</tr>
+</tbody>
+</table></div>
+<p>Create these in Google Analytics before building campaigns. [L1121.003]</p>
+<h3 id="lists-by-platform">Lists by Platform</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Audience type</th>
+<th>Lists to create</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google</td>
+<td>Website visitors</td>
+<td>Website Visitors - 7 Days; Website Visitors - 30 Days; Website Visitors - 180 Days</td>
+</tr>
+<tr>
+<td>Google</td>
+<td>Customers (invisible list)</td>
+<td>Purchased - 7 Days; Purchased - 180 Days</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td>Website visitors</td>
+<td>Website Visitors - 7 Days; Website Visitors - 30 Days; Website Visitors - 180 Days</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td>Customers</td>
+<td>Purchased - 7 Days; Purchased - 180 Days</td>
+</tr>
+<tr>
+<td>Facebook</td>
+<td>Engagement</td>
+<td>FB Engagement - 180 Days</td>
+</tr>
+<tr>
+<td>Instagram</td>
+<td>Engagement</td>
+<td>Insta Engagement - 180 Days</td>
+</tr>
+</tbody>
+</table></div>
+<p>Visitor and purchaser lists are the core. Engagement lists are Meta-only. [L0757.008]</p>
+<ul>
+<li>The Google customer list windows differ between sources: this table uses 7 and 180 days, while the standard table uses 30 and 7 days for all customers. Use the 30-day customer list for a 30-day remarketing campaign. [L0757.008, L1121.003, L0210.008]</li>
+</ul>
+<h3 id="missing-audiences">Missing Audiences</h3>
+<ol type="1">
+<li>Open the Google Analytics account and click the gear icon (Admin) at the bottom left.</li>
+<li>Under Audience definitions, choose Audiences and confirm the audience is listed.</li>
+<li>Check that the Google Ads account is linked to Analytics.</li>
+<li>Under audience destinations, click Edit and select the correct Google Ads account.</li>
+<li>In Google Ads, open shared audiences and remove any active filters.</li>
+<li>If the audience still does not appear, create a couple of additional audiences to see whether the issue is specific to one audience. [L0934.125]</li>
+</ol>
+<ul>
+<li>A linked Google Ads account can point to the wrong account when several exist, which stops audiences from appearing. Verify that the link points to the account you actually run. [L0934.126]</li>
+</ul>
+<h3 id="audience-counts">Audience Counts</h3>
+<ul>
+<li>An audience imported from GA4 into Google Ads shows far fewer users than GA4 counts, because only visitors eligible for remarketing are included. A drop from about 3,000 GA4 users to about 200 in Google Ads is a large gap, but the two numbers are not expected to match one-to-one. [L0965.001]</li>
+<li>If an imported audience is too small, widen its date range so more people fall into it. The audience itself offers no setting to narrow or change its eligibility. [L0965.002]</li>
+<li>To see the number of users per audience per channel, open Tools &gt; Shared audiences in Google Ads. The list shows the number of eligible users for each channel. [L0965.003]</li>
+<li>Google Ads audience sizes are counted per channel (Search, YouTube, Display, Gmail). Never add them together. Check the number for the channel you plan to run, which is usually Display. [L0965.004]</li>
+</ul>
+<h2 id="windows-and-minimum-sizes">Windows and Minimum Sizes</h2>
+<ul>
+<li>Website visitor audiences are defined by window length, such as 2, 5, 7, 10, 14, 21 and 28 days. A 7-day website visitor audience shows ads only to people who visited the site in the last seven days. [L0968.061]</li>
+<li>Google requires at least 1,000 people in a 30-day website visitor audience before it allows proper targeting. If your traffic is smaller, increase the window to 90 or 180 days. [L0210.007]</li>
+<li>Google remarketing audiences require at least 1,000 people before they can be used. Do not inflate the audience with bot traffic or unique-IP tricks. Instead, use a bigger window or grow the audience faster with more paid cold traffic or SEO. [L0805.008]</li>
+<li>For a single store with a remarketing audience, a bigger window (for example 180 days) is the right way to reach the 1,000-person minimum. Inflating numbers with bot traffic defeats the purpose of remarketing to qualified visitors. Faster audience growth comes from more cold traffic spend or more SEO traffic. [L0805.007]</li>
+<li>Creating a remarketing campaign with a 7-day audience in a new store can result in no impressions, because the audience is usually too small. Start with the 30-day audience and add shorter audiences only when traffic supports them. [L0733.022]</li>
+<li>A remarketing campaign only starts receiving impressions once its audience shows as eligible, so budget does not matter until then. If the audience still shows as not eligible after a day, pause the campaign and recreate it. [L0807.026]</li>
+<li>In Audience Manager, check each audience's size. If an audience says "too small to serve", it does not have enough users yet. [L1115.046]</li>
+</ul>
+<h2 id="setting-up-dynamic-display-remarketing">Setting Up Dynamic Display Remarketing</h2>
+<h3 id="campaign-order">Campaign Order</h3>
+<ul>
+<li>Eight campaign types across Display, Search, Video and Discovery target cold, warm and past customers. Implement one at a time, starting with dynamic display remarketing. [L0210.001]</li>
+<li>Set up the Shopping campaign before the remarketing campaign. Google Shopping is often the largest traffic source for a new store, and remarketing is built on top of that traffic. [L0733.003]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Campaign name</th>
+<th>Channel</th>
+<th>Traffic temperature</th>
+<th>Audience or focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Display - WARM - Website Visitors</td>
+<td>Display</td>
+<td>WARM</td>
+<td>Website visitors</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Display - WARM - Monthly Promotions</td>
+<td>Display</td>
+<td>WARM</td>
+<td>Monthly promotions</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Search - COLD - YourStore.com</td>
+<td>Search</td>
+<td>COLD</td>
+<td>Brand name (store name)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Search - COLD - [Top Shopping Product]</td>
+<td>Search</td>
+<td>COLD</td>
+<td>Best-selling product</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Video - WARM - Website Visitors</td>
+<td>Video</td>
+<td>WARM</td>
+<td>Website visitors</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Video - WARM - Monthly Promotions</td>
+<td>Video</td>
+<td>WARM</td>
+<td>Monthly promotions</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Video - PAST CUSTOMERS - Goodwill</td>
+<td>Video</td>
+<td>PAST CUSTOMERS</td>
+<td>Goodwill</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Discovery - WARM - Monthly Promotions</td>
+<td>Discovery</td>
+<td>WARM</td>
+<td>Monthly promotions</td>
+</tr>
+</tbody>
+</table></div>
+<p>Campaign names use the format Channel - Temperature - Audience or goal. [L1121.004]</p>
+<ul>
+<li>Display - WARM - Website Visitors uses dynamic display ads served to the remarketing audiences. Its goal is more exposure to website visitors. Exclude recent customers from this campaign. [L1121.006]</li>
+<li>Display - WARM - Monthly Promotions uses standard display ads to raise awareness of limited-time offers. Static image ads for this campaign can be designed in Canva. Exclude recent customers from this campaign. [L1121.007]</li>
+<li>Implementation order:
+<ol type="1">
+<li>Complete Google Ads training in Blueprint Module 6.</li>
+<li>Create all audience segments in Google Analytics.</li>
+<li>Launch Campaign 1 (Dynamic Display Remarketing) with a small budget.</li>
+<li>When profitable, add Campaign 2 (Display Monthly Promos).</li>
+<li>Then add Search campaigns (3-4).</li>
+<li>Then add Video campaigns (5-7).</li>
+<li>Finally add the Discovery campaign (8). Each campaign can run independently, and minimal maintenance is required after setup. [L0210.029]</li>
+</ol></li>
+<li>Standard display campaigns work well for remarketing and monthly promotions. Dynamic remarketing with Shopping product ads, which show the customer's viewed products, also works well. [L0964.052]</li>
+<li>Remarketing is set up for product-specific remarketing with Shopping ads. [L0964.143]</li>
+<li>Start the first paid campaigns with remarketing when a store already has heavy organic traffic. Remarketing usually shows the highest ROAS and can be launched quickly, followed by new Shopping campaigns. [L0836.032]</li>
+</ul>
+<h3 id="campaign-creation-path">Campaign Creation Path</h3>
+<ul>
+<li>Campaign setup for display or search: select campaign type, choose "without goals guidance", select the campaign category (Display, Search, Video or Discovery), set the conversion goal to Purchases only, select "Standard display campaign" or "Search", and link the Google Merchant Center data feed if using dynamic ads. [L0210.004]</li>
+<li>Navigate to Google Ads left navigation &gt; Campaigns &gt; New campaign, then pick "Create a campaign without goals guidance". This path starts every remarketing campaign build. [L0734.004, L0733.005]</li>
+<li>Choose Display, not Shopping. Display ads run on websites and apps that are not owned by Google but partner with it to show ads. [L0734.005]</li>
+<li>The Google Display Network is stated to reach about 3 million websites and apps. Remarketing ads use this network to follow visitors across the web. [L0734.006]</li>
+<li>A display campaign can reach customers across 3 million sites and apps, as shown on the campaign type selection screen. Remarketing ads appear on any site or app where Google places ads. [L0733.017]</li>
+<li>Dynamic display ads pulled from the product feed can appear across over 3 million websites and 650,000 apps via the Google Display Network, showing people the specific products they viewed on the site. [L0210.033]</li>
+<li>Dynamic remarketing reduces ad fatigue by showing each person the products they browsed, instead of the same ad repeatedly. This increases relevance and conversion likelihood. [L0210.036]</li>
+</ul>
+<h3 id="full-build-version-a-16-steps">Full Build: Version A (16 steps)</h3>
+<ol type="1">
+<li>Log into Google Ads and open Campaigns.</li>
+<li>Click the blue plus button and choose New campaign.</li>
+<li>Choose "Create a campaign without goals guidance" for manual control.</li>
+<li>Select the campaign type Display.</li>
+<li>Under conversion goals, check that the Purchase goal is listed. If it is missing, click Add goal and add the purchase goal.</li>
+<li>Click Continue and enter your store's homepage URL, even though the ads link to product pages.</li>
+<li>Name the campaign with the domain, the word display, the purpose and the audience length, for example: domain display campaign remarketing - 30 days.</li>
+<li>Select the audience of 30-day website visitors who are not customers.</li>
+<li>Click Continue, set the country where you do business, and set the language.</li>
+<li>Open More settings and set the dynamic ads data feed from Google Merchant Center, with no product filters.</li>
+<li>Open More settings &gt; Content exclusions and apply the exclusions listed in the content exclusion units.</li>
+<li>Set the average daily budget to 10% of your Google Shopping daily spend and review it over time.</li>
+<li>Change the focus from conversions to viewable impressions.</li>
+<li>Enter a viewable CPM bid of $10.</li>
+<li>Add targeting, select the 30-day remarketing audience, and turn off optimized targeting.</li>
+<li>Add headlines, long headlines and descriptions, create the ad, give it a name, and click Publish. [L0733.004]</li>
+</ol>
+<h3 id="full-build-version-b-18-steps">Full Build: Version B (18 steps)</h3>
+<ol type="1">
+<li>Open the Google Ads account and go to Campaigns in the left navigation.</li>
+<li>Click New campaign, then choose Create a campaign without goals guidance.</li>
+<li>Under campaign type, select Display (not Shopping). Keep the existing conversion goals and click Continue.</li>
+<li>Enter the homepage as the business website address and click Continue.</li>
+<li>Give the campaign a clear name (example pattern: store domain plus remarketing) and click Continue.</li>
+<li>Set the targeting location to the country where you do business and the language to English.</li>
+<li>Under More settings, leave ad rotation, ad schedule, devices and campaign URL options at their defaults.</li>
+<li>Change the dynamic ads setting: tick "Use dynamic ads feed for personalized ads" and select the data feed from your Google Merchant Center account.</li>
+<li>Leave the product filter on no filters so all products are remarketed.</li>
+<li>Under More settings &gt; Content exclusions, set the exclusions described in the content exclusion units.</li>
+<li>Click Next to go to budget and bidding.</li>
+<li>Set the average daily budget (see the budget rule).</li>
+<li>Change the focus from conversions to viewable impressions.</li>
+<li>Enter a viewable CPM bid of $10 (see the bid units).</li>
+<li>Click Next, then click add targeting and select the 30-day website visitor audience segment. Turn off optimized targeting.</li>
+<li>Click Next to open the ad builder and complete the ad fields.</li>
+<li>Click Next. If Google reports errors, go back to Ads, add the required images (one landscape and one square), click apply changes, then Next.</li>
+<li>Click Publish campaign. [L0734.003]</li>
+</ol>
+<p>Versions A and B differ in detail. Version A adds headlines and descriptions as step 16, and Version B adds the images check in step 17. Both use the same budget, bid, focus and targeting rules. [L0733.004, L0734.003]</p>
+<h3 id="campaign-settings-details">Campaign Settings Details</h3>
+<ul>
+<li>In the campaign settings, the Purchase goal must appear under conversion goals. If it does not, use Add goal to add it. [L0733.005]</li>
+<li>For a remarketing display campaign, keep the existing conversion goals already present in the account, then enter the homepage URL as the business website address. Click Continue after each step. [L0734.007]</li>
+<li>A remarketing display campaign needs the Purchase goal in its conversion goals list. If it is missing, add it so Google treats any purchase signal as a success for performance optimization. [L0733.023]</li>
+<li>Set the targeting location to the country where the business operates and leave the language on English. Google's EU political ads declaration is a separate requirement that applies only if political ads are run. [L0734.008]</li>
+<li>Under More settings, leave ad rotation, ad schedule, devices and campaign URL options unchanged. Only the dynamic ads option changes in this section. [L0734.009]</li>
+<li>Dynamic ads option, Version A: in campaign settings under More settings, the field "dynamic ads, no data feed" must be changed. Click the icon that appears on hover, choose "use dynamic ads feed for personalized ads", and select the data feed from Google Merchant Center. Keep filters off so that every product a visitor viewed can appear in the ads. [L0733.006]</li>
+<li>Dynamic ads option, Version B: tick "Use dynamic ads feed for personalized ads" and select the data feed from the Google Merchant Center account. The dynamic feed is what makes each ad show the products the visitor actually viewed. [L0734.010]</li>
+<li>The dynamic ads feed must already exist as a data feed in Google Merchant Center before the remarketing campaign is built, because the feed is selected there during campaign setup. [L0733.024]</li>
+<li>A dynamic Display remarketing campaign needs a Google Merchant Center product feed already connected to the Google Ads account, usually from an earlier Shopping setup. Connect Merchant Center before building the remarketing campaign. [L0734.035]</li>
+<li>Product filter: leave on no filters so all products are included in remarketing. Add a filter only if a subset of products should be remarketed. [L0734.011, L0189.012]</li>
+<li>The filter option can exclude specific products from remarketing ads if only certain products should appear. For a general remarketing campaign, keep filters off. [L0733.025]</li>
+<li>Turn off native formats in ad settings. [L0189.011]</li>
+<li>Once live, the dynamic remarketing campaign updates its products and audience automatically. The only ongoing change needed is raising the campaign's daily budget as shopping spend grows. [L0734.034]</li>
+</ul>
+<h3 id="ad-builder">Ad Builder</h3>
+<ul>
+<li>In a dynamic remarketing ad builder, the additional images field is meant for regular display ads, not for dynamic remarketing ads. Google may still ask for extra images during its error check, so add them only when the check requires it. Skip video for this campaign type. [L0734.036]</li>
+<li>If Google reports errors on the review screen, add the required images (one landscape and one square), click apply changes, then click Next. [L0734.003]</li>
+<li>Complete the headlines, long headlines and descriptions, create the ad, give it a name and click Publish. [L0733.004]</li>
+</ul>
+<h3 id="approval-and-go-live">Approval and Go-Live</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Approval time</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New Google Ads account with a new remarketing campaign</td>
+<td>1 to 2 days</td>
+<td>[L0733.016]</td>
+</tr>
+<tr>
+<td>Account already running other campaigns</td>
+<td>About 1 hour</td>
+<td>[L0733.016]</td>
+</tr>
+<tr>
+<td>Established account with previously approved ads</td>
+<td>Usually under 30 minutes</td>
+<td>[L0734.032]</td>
+</tr>
+<tr>
+<td>First-time remarketing setup</td>
+<td>A couple of days</td>
+<td>[L0734.032]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>After approval, the ads may take about a day to start getting impressions. Clicks and sales come after impressions. [L0734.033]</li>
+<li>Set up promotion campaigns one week in advance so they have time to be reviewed and approved by Google. Last-minute setup risks delays or rejection. [L0210.025]</li>
+</ul>
+<h2 id="budget-rules">Budget Rules</h2>
+<ul>
+<li>Set the average daily budget of a remarketing display campaign to 10% of the daily spend on your Google Shopping campaigns. For example, $30 per day on Shopping means $3 per day on remarketing, and $50 per day means $5. Adjust the number up or down over time based on results. [L0733.008]</li>
+<li>Set the remarketing campaign's average daily budget to about 10% of the total daily budget spent on Shopping campaigns. If Shopping and remarketing share one budget, use 10% of the combined Shopping total. [L0734.013]</li>
+<li>Budget examples: with $10 per day on Shopping, the remarketing budget is $1 per day. With a shared $10 per day across Shopping and remarketing, the remarketing budget is $2 per day. [L0734.014]</li>
+<li>The 10% rule scales as Shopping spend grows, so keep it proportional when profitable Shopping campaigns get more money. At $50 per day on Shopping, the remarketing budget becomes $5 per day. [L0734.015]</li>
+<li>Core-spend example (2022, older): a store spending 100 per day on Google Shopping can start remarketing at about 10 per day. [L0969.069]</li>
+<li>Google remarketing budgets are usually smaller than Facebook budgets, around $5 to $50 per day, and take a similar amount of time to set up. [L1076.068]</li>
+<li>Budget and delivery method are set for retargeting Shopping campaigns during setup. [L1242.010]</li>
+</ul>
+<h2 id="bidding-focus-and-cpm">Bidding Focus and CPM</h2>
+<ul>
+<li>For remarketing, change the campaign focus from conversions to viewable impressions. Viewable impressions appear at the bottom of the focus list. The bid is then entered as a viewable CPM for the ad group. [L0733.009, L0734.016]</li>
+<li>Configure the bidding focus to viewable impressions so the campaign optimizes for ads actually seen by users rather than counting all impressions. [L0189.006]</li>
+<li>Set Viewable CPM to $10 when using viewable impressions as the bidding focus in Google Display remarketing. [L0189.005]</li>
+<li>Set CPM to $10 for display campaigns. Actual spend typically ranges $3-$4 per 1,000 impressions, which lets you outbid competitors and ensures the warm audience sees your ads. [L0210.006]</li>
+<li>CPM is the cost to reach 1,000 people. For remarketing, a viewable CPM bid of $10 is a suggested starting value. The full bid is rarely spent, but a high bid helps the ads win impressions in a small, highly qualified audience. [L0733.010]</li>
+<li>Recommended viewable CPM bid for remarketing is $10. CPM means the cost for every 1,000 people who see the ad, and actual spend is typically far below the bid. [L0734.017]</li>
+<li>A high CPM bid makes Google show the remarketing ads to more people, since it ranks inventory by the bid it receives. The bid does not mean spending the full amount per 1,000 impressions. [L0734.018]</li>
+<li>Bid adjustment for low delivery: if the viewable impressions bid does not produce enough impressions, raise the maximum viewable CPM bid. If that still gives few clicks, duplicate the campaign, change its objective to conversions and let it run alongside the original. The original can be re-enabled if needed. [L0805.017]</li>
+<li>For retargeting Shopping campaigns, Manual CPC is the bidding strategy at setup. The campaign starts with a bid and is adjusted from there. [L1242.013]</li>
+</ul>
+<h2 id="targeting-and-optimized-targeting">Targeting and Optimized Targeting</h2>
+<ul>
+<li>Targeting for a remarketing display campaign: under Add targeting, open Audience segments and search for the customer exclusion audience. Scroll to the bottom to find the most recently created audiences, then select the 30-day website visitor audience. Turn off optimized targeting before clicking Next. [L0733.011]</li>
+<li>Turn off optimized targeting for all remarketing campaigns. It spends more money on people outside the audience, despite promising 20% more conversions. [L0210.005]</li>
+<li>If optimized targeting stays on, Google may show the ads to people outside the chosen audience. Turn it off so only the qualified remarketing audience sees the ads. [L0733.012]</li>
+<li>Retargeting audiences can receive their own offers, such as a coupon, instead of the message shown to cold traffic. Because these visitors already know the brand, bids for them can be set more aggressively. [L0720.026]</li>
+<li>Targeting methods can be stacked, so an audience must meet several conditions at once. For example, show a retargeting ad only to people who visited the site and are also browsing hotel or travel websites. [L0720.018]</li>
+</ul>
+<h2 id="exclusions">Exclusions</h2>
+<h3 id="customer-exclusions">Customer Exclusions</h3>
+<ul>
+<li>Always exclude customer lists from remarketing campaigns after publishing. Go to Audiences &gt; Exclusions and select the customer audience that matches the campaign timeframe (for example, 30-day customers for a 30-day remarketing campaign). This avoids wasting budget on people who have already bought. [L0210.008]</li>
+<li>Build a 30-day purchase audience and exclude it from remarketing campaigns. This keeps remarketing ads from reaching people who have already bought. [L0934.130]</li>
+<li>For monthly promotion campaigns on Google, add recent purchasers as exclusion audiences. All other warm audiences see the promotion ads. [L1204.016]</li>
+<li>Promotion Google ads should match the email message and be shown to all website visitors from the last 180 days, excluding customers from the last 30 days. Use Display ads and Demand Gen ads for this audience. [L1222.009]</li>
+<li>Exclude recent customers from both Display - WARM campaigns (Website Visitors and Monthly Promotions). [L1121.006, L1121.007]</li>
+<li>Two remarketing audiences of different lengths, such as 30-day and 14-day, must exclude each other, so the same user does not see ads in both. [L0253.019]</li>
+</ul>
+<h3 id="content-exclusions">Content Exclusions</h3>
+<ul>
+<li>Content exclusions under More settings (version A): exclude content that is not yet labeled and mature audience content. Exclude the sensitive content group in the middle of the list. Under content type, exclude live streaming YouTube videos and parked domains. [L0733.007]</li>
+<li>Content exclusions under More settings &gt; Content exclusions (version B): exclude content not yet labeled, the entire sensitive content category, and live streaming videos. These keep ads off unlabeled, sensitive and live-stream placements. [L0734.012]</li>
+<li>Google review extension: exclusions for reviews are not tested in the source. Turn off the Google review extension if it appears, and ask Google Ads live chat to confirm the setting. [L0962.070] (2021, older)</li>
+</ul>
+<h3 id="placement-exclusions">Placement Exclusions</h3>
+<ul>
+<li>Account-level placement exclusions: open the display network placements section and add exclusions for sites or apps that do not convert, such as app traffic. The exclusion applies to the whole account, not one campaign. [L0454.038]</li>
+<li>Excluding unwanted placements in a display remarketing campaign:
+<ol type="1">
+<li>Open the Google Ads account and go to Display campaigns.</li>
+<li>Open the current remarketing campaign.</li>
+<li>Go to Insights and reports &gt; Where ads showed.</li>
+<li>Sort the placements by Cost to see where the most money goes.</li>
+<li>Tick the checkbox next to each placement you do not want, then choose the exclude action.</li>
+<li>Check the placement exclusions under Audiences, keywords and content &gt; Content &gt; Placement exclusions to confirm them. [L0805.005]</li>
+</ol></li>
+<li>The placement exclusion view lists all apps and websites excluded from the display campaign. After excluding a placement, a small black bar at the bottom of the screen confirms how many placements were excluded. With many placements at once, that message can take a while to appear. [L0805.006]</li>
+</ul>
+<h3 id="app-placement-exclusions-2021-2022-source-older">App Placement Exclusions (2021-2022 source, older)</h3>
+<ul>
+<li>Display ads can run inside free mobile and tablet apps, usually as a small banner along the bottom of the screen. That spot sits close to the phone's own navigation controls, so many clicks there are accidental. [L1137.001]</li>
+<li>App placements often show a high click-through rate that is largely accidental. This spends budget without bringing in genuinely interested visitors, so excluding app placements from display campaigns is worth doing. [L1137.002]</li>
+<li>Google Ads does not let you exclude apps during display campaign setup. The exclusion must be built beforehand as a placement exclusion list, then applied to the campaign. [L1137.003]</li>
+<li>Excluding app placements matters most for cold traffic, lead generation and content promotion on the display network. For retargeting it matters less because the traffic volume is much lower, but it can still be applied. [L1137.004]</li>
+<li>Placement exclusion lists are found at Tools and Settings &gt; Shared Library &gt; Placement exclusion lists. Click the blue button at the top to create a new list. [L1137.005]</li>
+<li>A suitable name for the list is Display Network App Placement Exclusions. Once saved, it appears in the Placement exclusion lists table of the shared library. [L1137.006]</li>
+<li>Create the app exclusion list:
+<ol type="1">
+<li>Open Tools and Settings in the Google Ads account.</li>
+<li>Under Shared Library, click Placement exclusion lists.</li>
+<li>Click the blue button at the top to create a new list.</li>
+<li>Enter a list name, for example Display Network App Placement Exclusions.</li>
+<li>In the placement selector, open the App categories option. The selector offers YouTube channels, YouTube videos, Websites, Apps and App categories (140). Individual apps can be typed into the search field, but to exclude all apps use the categories.</li>
+<li>Expand Apple App Store (84) and tick every category, including the subcategories under Games (19) such as Action, Arcade and Board. Visible Apple categories include Book, Business, Catalogs, Education, Entertainment, Food &amp; Drink, Finance, Music, Navigation, News, Photo &amp; Video, Productivity and Reference.</li>
+<li>Expand Google Play (56) and tick every category, including Places &amp; Objects, Social, Sports, Sports &amp; Activities, Tools, Travel, Travel &amp; Local, Utilities, Video Players &amp; Editors and Weather.</li>
+<li>Check that the counter shows 140 selected, which is 84 Apple categories plus 56 Google Play categories.</li>
+<li>Click Save.</li>
+<li>Confirm that the new list appears in the placement exclusion lists table. [L1137.007]</li>
+</ol></li>
+<li>Every app category checkbox must be ticked by hand, because there is no select-all option. Ticking a whole category excludes all apps inside it, so there is no need to go through individual apps. [L1137.008]</li>
+<li>The App categories list contains 140 categories in total: 84 under Apple App Store and 56 under Google Play. All 140 must be selected to exclude all apps. [L1137.009]</li>
+<li>Individual app names can be added through the search field if only specific apps should be excluded. App suggestions only appear after a search term has been entered. [L1137.010]</li>
+<li>Placement exclusion lists sit in the shared library, so one list can be applied to several display campaigns. The same list can also be used in YouTube campaigns. [L1137.011]</li>
+<li>Excluding app categories pushes Google to show display ads mostly on websites. Visitors then arrive from a website, instead of being pulled out of a game or other app by an accidental click. [L1137.012]</li>
+<li>Apply the list to campaigns:
+<ol type="1">
+<li>Select the checkbox of the new placement exclusion list in the table.</li>
+<li>Click Apply to campaigns.</li>
+<li>Select the display campaigns the list should apply to, including both retargeting and cold traffic campaigns, and confirm. [L1137.013]</li>
+</ol></li>
+<li>Apply the list to one campaign:
+<ol type="1">
+<li>Open the display campaign, for example a retargeting campaign.</li>
+<li>Open the Placements menu and go to Exclusions.</li>
+<li>Under Exclude placements, choose Use placement exclusion list.</li>
+<li>In the field Search placement exclusions lists, select the list. The field shows how many lists are selected.</li>
+<li>Click Save. [L1137.014]</li>
+</ol></li>
+<li>The campaign-level Exclusions page has an "Exclude placements on Display Network and YouTube" section with a Use placement exclusion list option. A list selected there applies to both the Display Network and YouTube placements of that campaign. [L1137.020]</li>
+<li>Creating the list does nothing by itself. It has to be applied to every display campaign that runs ads, otherwise apps remain eligible for those campaigns. [L1137.015]</li>
+<li>After the list is applied, the campaign's Exclusions view lists the excluded mobile applications with the type Mobile application and the level Ad Group. Entries show the excluded apps by name and store, such as iTunes App Store. [L1137.016]</li>
+<li>Display ads inside mobile apps usually appear in the free versions of those apps. Users who pay to upgrade often get an ad-free version, so ads in apps mostly reach users who have not paid. [L1137.019]</li>
+<li>For products that are themselves related to an app, a different approach may make sense. High-ticket products generally do not need app placements excluded this way. [L1137.017]</li>
+<li>Demo example (older): a retargeting display campaign with a budget of US$1,500 per day and an enhanced default max CPC of US$0.20. These figures only illustrate the example and are not benchmarks. [L1137.018]</li>
+</ul>
+<h2 id="static-and-promotional-remarketing">Static and Promotional Remarketing</h2>
+<ul>
+<li>Use static remarketing ads (not linked to the product feed) to run promotional remarketing when dynamic product-feed remarketing is not possible or needed. [L0836.034]</li>
+<li>Monthly promotions run across all channels at once (Google Shopping, Display Network, Search, Video, Discovery, Email, Meta). This keeps the offer top-of-mind and gives warm audiences several touchpoints to see and act on a limited-time offer. [L0210.026]</li>
+<li>A specific offer can also run as a static Google Display Network banner with the same deal message and a Shop Now call to action, shown based on the person's journey stage. [L0799.004]</li>
+<li>Holiday promotions on Google:
+<ul>
+<li>Use static Display ads (not dynamic display ads) and static Demand Gen ads.</li>
+<li>Audience: all website visitors in the past 180 days.</li>
+<li>Exclusion: all customers who purchased in the past 30 days.</li>
+<li>The ads should use the same message as the emails. [L1223.025]</li>
+</ul></li>
+<li>Promotion Google ads should match the email message and be shown to all website visitors from the last 180 days, excluding customers from the last 30 days. Use Display ads and Demand Gen ads for this audience. [L1222.009]</li>
+<li>Running both Meta and Google accounts with remarketing audiences gives more reach for holiday promotions. Having both is not mandatory, but it increases traction considerably. [L1223.026]</li>
+<li>Google Display remarketing for promotions: the Display - WARM - Monthly Promotions campaign is the standard approach. [L1121.007]</li>
+<li>The same Google remarketing setup can run while a policy violation warning is active. Reach is limited, but the ads still show. [L0855.029]</li>
+</ul>
+<h2 id="troubleshooting-no-impressions">Troubleshooting: No Impressions</h2>
+<h3 id="checks-in-order">Checks in Order</h3>
+<ol type="1">
+<li>Go to Google Ads &gt; Tools &gt; Shared Library &gt; Audience manager.</li>
+<li>Check whether the audience is marked as Eligible.</li>
+<li>If it is not eligible, go to Google Analytics 4 &gt; Admin (gear) &gt; Data Collection.</li>
+<li>Ensure all data collection toggles are ON.</li>
+<li>If the audience is eligible in Audience Manager, delete the remarketing campaign and recreate it from scratch.</li>
+<li>Give it a few days to accumulate impressions.</li>
+<li>If it still does not work, post in the Discord community or contact support with screenshots. [L0253.037]</li>
+</ol>
+<ul>
+<li>Eligible audiences can run remarketing ads. If an audience is not eligible, check Google Analytics settings. [L0253.016]</li>
+<li>If an audience says "too small to serve", it does not have enough users yet. If the audience is not labeled too small and the campaign still does not run, recreate the campaign. [L1115.046]</li>
+<li>A remarketing campaign only starts receiving impressions once its audience shows as eligible. If still not eligible after a day, pause and recreate it. [L0807.026]</li>
+<li>Creating a 7-day remarketing campaign in a new store can produce no impressions, because the audience is too small. Start with 30 days. [L0733.022]</li>
+<li>Policy disapprovals: Google Merchant Center can disapprove products for dynamic remarketing when ads target personalized advertising around health content or are built to exploit customers' struggles or difficulties. Such products can still be retargeted on Meta. [L0666.053]</li>
+<li>Some niches may not be allowed to run Google remarketing due to Google policy. In that case contact Google support to check whether an extra terms form or step is needed. [L0836.033]</li>
+<li>Low results are not yet a verdict. A remarketing display campaign that ran three months with 123 clicks at an average CPC of $3.50, CTR 0.11%, zero conversions and total spend of roughly $400-450 was too small to judge. Some clicks are repeat visitors, so the unique audience may be under 100 people. It needed more time, and the CPC needed to come down. [L0805.004]</li>
+<li>With only 65 clicks over two months, the sample is too small to judge conversions. The priority at that level is to increase traffic (more impressions and higher CTR), not to optimize who the ads target. [L0805.009]</li>
+<li>Old dynamic remarketing lessons were updated in 2024 because Google changed how dynamic remarketing works, not because the method stopped working. A paused legacy campaign may give different results or show an error message when re-enabled. [L0805.004]</li>
+<li>Excluding placements by name requires a current view of the campaign. Earlier advice (2021, older) on review placements remains untested. [L0962.070]</li>
+</ul>
+<h2 id="audience-creation-pitfalls">Audience Creation Pitfalls</h2>
+<ul>
+<li>Create dynamic Google audiences early, before customers exist. They fill as people take the action, so a 180-day visitor audience or a 30-day purchase audience can be empty on day zero. [L0934.129]</li>
+<li>Creating a remarketing list and copying a search campaign with an added audience took about 19 to 20 seconds in Google Ads Editor in the demonstration. [L1203.021]</li>
+<li>Google Shopping ads convert best when they reach people who already engaged through an earlier touchpoint. [L1142.014]</li>
+</ul>
+<h2 id="performance-expectations-and-strategy">Performance Expectations and Strategy</h2>
+<ul>
+<li>Remarketing campaigns aimed at your best customers should exceed 10X ROAS within the first two to five days, because those buyers already know the brand. Higher ROAS is better, and there is no fixed upper limit. [L0469.078] (2021, older)</li>
+<li>Display ads should be remarketed to recent visitors. For the hottest audience, such as seven-day website visitors who did not buy, expect a click-through rate around 5 percent. Broader audiences often reach around 1 percent. Responsive display ads have performed well. [L0801.069] (2021, older)</li>
+<li>Google works as a strong retargeting platform because people search the brand after seeing a Facebook ad. The seller reports about 50% of Google visitors search the brand after a Facebook ad. [L0950.065]</li>
+<li>Prospects who joined an email list with a coupon convert more often on Shopping ads, because the earlier brand contact and incentive build trust. Use email signup offers as a warm-up step before Shopping campaigns. [L1142.006]</li>
+<li>Shopping ads convert best when they target people who have already engaged with the brand through an email signup, a guide download or a coupon. Use these warmed prospects as the audience for Shopping campaigns, and keep cold traffic on upper-funnel channels. [L1142.014]</li>
+<li>Excluding placements and audiences is a cost-control step; it does not replace growing the audience. [L0805.007]</li>
+</ul>
+<h2 id="customer-match-and-audience-lists">Customer Match and Audience Lists</h2>
+<ul>
+<li>Customer Match lets you upload a list of your customers' email addresses to Google. You can then show ads to those people or to lookalike audiences of people who resemble them. [L0720.015]</li>
+<li>Customer lists from previous customers can be uploaded as audiences on Facebook and Google. These audiences typically perform better than cold campaigns. [L1092.076] (2022, older)</li>
+</ul>
+<h2 id="search-and-shopping-retargeting">Search and Shopping Retargeting</h2>
+<h3 id="search-audiences">Search Audiences</h3>
+<ul>
+<li>Search audience campaigns are an underused tactic. Fewer than 10 percent of advertisers ran them in AdWords and Bing Ads (older, AdWords era). They allow targeting on Google search by audience lists and demographics, not only by keywords. [L1203.013]</li>
+<li>Google's ad preferences page (google.com/ads/preferences) shows the gender, age range and interests Google has inferred from a user's activity, even without profile data. Check it to see what Google expects about your audience. [L1203.014]</li>
+<li>Google search campaigns can be targeted by audience in two main ways: retargeting lists built from past site visitors, and demographic groups such as gender, age range and household income. Layering these onto search campaigns allows bid adjustments by segment, which goes beyond keyword targeting alone. [L1203.039]</li>
+</ul>
+<h3 id="retargeting-shopping-campaign">Retargeting Shopping Campaign</h3>
+<ol type="1">
+<li>Create a new Shopping campaign with the same steps as a standard Shopping campaign: select merchant and goal.</li>
+<li>Give it a clear name, for example "Retargeting on search Shopping".</li>
+<li>Set bidding to Manual CPC.</li>
+<li>Set the budget and delivery method.</li>
+<li>Set campaign priority to High so it is checked first.</li>
+<li>Skip the alpha-beta structure and use one campaign for the whole retargeting audience.</li>
+<li>Include the Search Network and show ads on all devices.</li>
+<li>Set the location to the United States.</li>
+<li>Add an ad group name and a starting bid.</li>
+<li>Open the Audiences section, apply the audience to the campaign, and choose Targeting.</li>
+<li>Select the 540-day retargeting list.</li>
+<li>Make the starting bids in the waterfall more aggressive than in normal campaigns so retargeting traffic is funneled into this campaign. [L1242.010]</li>
+</ol>
+<ul>
+<li>Campaign settings: Bidding = Manual CPC; Campaign priority = High; Networks = Search Network included; Devices = all devices; Location = United States; Audiences: Apply to campaign &gt; Targeting &gt; 540-day retargeting list for search. [L1242.011]</li>
+<li>Set campaign priority to High for a retargeting Shopping campaign so it is evaluated before other campaigns that may target the same searches. [L1242.012]</li>
+<li>In the experience behind this method, an alpha-beta split is not needed when monthly spend is below 10,000 USD. A single retargeting campaign can serve the whole audience at that budget level. [L1242.014]</li>
+<li>The retargeting campaign should be set to Targeting, not Observation. Targeting narrows delivery to the selected audience and allows bid adjustments. Observation only reports on the audience and keeps the broad reach. [L1242.015]</li>
+<li>Choosing Observation instead of Targeting means the campaign still reaches all searchers, so the retargeting list does not limit spend. Always apply the audience as Targeting when the campaign should serve only that audience. [L1242.016]</li>
+</ul>
+<h2 id="cross-platform-notes">Cross-Platform Notes</h2>
+<ul>
+<li>Facebook remarketing campaigns can be set up right after the first Google campaign is live. They are small-budget campaigns that amplify Google Shopping results. Bing can be added later. [L0834.068] (2021, older)</li>
+<li>Match the Google video to the Facebook thank-you video so the message is the same on both platforms. [L1076.068]</li>
+</ul>
+<h2 id="setting-up-audiences-in-ga4-and-google-ads">Setting up audiences in GA4 and Google Ads</h2>
+<p>Use this order when you connect GA4 to Google Ads for the first time:</p>
+<ol type="1">
+<li>Link Google Ads to GA4 under Admin &gt; Product links &gt; Google Ad Links &gt; Link.</li>
+<li>Turn on all options under Data settings &gt; Data collection, and accept the user data collection acknowledgement.</li>
+<li>Change Data settings &gt; Data retention &gt; Event data retention from 2 months to 14 months, then click Save.</li>
+<li>Create the three non-purchaser audiences (website visitors who exclude customers, 7, 30 and 180 days) under Audiences. [L1520.016]</li>
+</ol>
+<p>The Google Ads remarketing tag and the Google Analytics tag both need to be installed. Add both as audience sources. Google shows a warning when you enable the second source. Confirm it, because the two tags feed different audiences. [L1390.007]</p>
+<p>The Google Ads remarketing tag builds audiences only from pages a visitor viewed. Google Analytics can also segment by session duration, technology, location and other behaviour, which makes it the main audience source. The Google Ads tag still helps with dynamic product ads, where it is easier to set up. [L1390.008]</p>
+<p>Google Analytics Audience Builder offers these options:</p>
+<ul>
+<li><strong>Traffic Sources:</strong> filter by Campaign, Medium, Source or Keyword. This works with UTM parameters, so you can target visitors from one specific ad campaign, such as a bottom-of-funnel shopping campaign. [L1390.034]</li>
+<li><strong>Advanced Google Ads conditions:</strong> Ad Content, a specific Google Ads campaign and ad group, Targeting Type, and Ad Slot. Sequences are advanced and not needed for basic audiences. [L1390.036]</li>
+<li>Audiences built in Google Analytics appear in Google Ads as remarketing lists for Search Ads and the Google Display Network. They show up as targeting options only after the Google Ads account is selected as an audience destination. [L1390.044]</li>
+</ul>
+<p>Audience rule example: the rule <em>Visitors of a page who did not visit another page</em> builds a list of people who viewed a product page but never reached the checkout page. You can limit it to chosen dates or tags. This is a narrower alternative to a plain page-visit audience when the goal is to target shoppers who stalled before buying. [L1242.022]</p>
+<h2 id="audience-windows-and-minimum-sizes">Audience windows and minimum sizes</h2>
+<p>Google Ads remarketing audiences need at least 100 unique people before ads start serving. Repeat visitors count only once. Check eligibility in Google Ads under shared audiences by opening the audiences you created. Check Meta Business Manager under Audiences. [L1283.035]</p>
+<p>Example audience sizes for reference: a website visitor list of about 1,000 to 1,500 people, built from all site traffic in the last 30 days, and a retargeting list of about 7,100 people used for search retargeting. Actual sizes depend on your site traffic. [L1242.017]</p>
+<p>Recommended windows by stage (older advice, 2021):</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Remarketing audience</th>
+<th>Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All website visitors, 90 days</td>
+<td>Start here if traffic is low</td>
+</tr>
+<tr>
+<td>All website visitors, 180 days</td>
+<td>Use if the 90-day audience is still too small</td>
+</tr>
+<tr>
+<td>Visitors, 7 days</td>
+<td>Build once traffic is high</td>
+</tr>
+<tr>
+<td>Visitors, 30 days</td>
+<td>Build once traffic is high</td>
+</tr>
+<tr>
+<td>Visitors, 60 days</td>
+<td>Build once traffic is high</td>
+</tr>
+<tr>
+<td>Visitors, 90 days</td>
+<td>Build once traffic is high</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1279.057]</p>
+<p>Window procedure (older advice, 2021):</p>
+<ol type="1">
+<li>Create a remarketing audience of all website visitors covering 90 days.</li>
+<li>If Google says the audience is too small, widen the window to 180 days.</li>
+<li>As traffic grows, create more recent audiences with 7, 30, 60 and 90-day windows and adjust spend accordingly.</li>
+</ol>
+<p>[L1279.058]</p>
+<h2 id="shopping-remarketing-structure">Shopping remarketing structure</h2>
+<p>Retargeting bids should be higher than normal bids for the same audience. This lets the retargeting campaign win the auction for returning searchers. Lower bids in normal campaigns keep that traffic from triggering there. [L1242.021]</p>
+<p>The alpha-beta structure first filters the search population to past site visitors, then to those searching again, and only then splits that group further by performance. At monthly Shopping spend below 10,000 USD this extra split is usually unnecessary, so one retargeting campaign can serve the full retargeting list. [L1242.024]</p>
+<p>Keep retargeted visitors out of normal Shopping campaigns (procedure):</p>
+<ol type="1">
+<li>Go to the normal Shopping campaign (for example, the alpha-beta campaign).</li>
+<li>Open the Audiences section and add an audience to the ad group.</li>
+<li>Select the ad group and the campaign, then select the 540-day retargeting list.</li>
+<li>Set the bid adjustment to minus 100%.</li>
+<li>Save. Retargeted visitors then get a near-zero bid in normal campaigns and the higher bid in the retargeting campaign.</li>
+</ol>
+<p>[L1242.018]</p>
+<p>Setting path: Normal Shopping campaign &gt; Ad group &gt; Audiences &gt; add the 540-day retargeting list &gt; Bid adjustment: -100%. [L1242.019]</p>
+<p>A -100% bid adjustment on the retargeting audience in normal Shopping campaigns is the method for keeping that traffic out of them, so the retargeting campaign receives it. [L1242.020]</p>
+<p>Once a website visitor audience is applied to a Shopping campaign with Targeting selected, the audience appears in the campaign's audience list. Its bid adjustment is set there, directly below the audience entry. Observation mode only adds reporting for that audience. It does not change bids or limit reach. [L1242.023]</p>
+<p>Free traffic from Google product listings and organic results can be used alongside a small remarketing budget. This way paid spend goes to visitors who already found the store (older advice, 2022). [L1281.111]</p>
+<h2 id="display-retargeting-campaign-setup">Display retargeting campaign setup</h2>
+<p>Standard display retargeting campaign with static ads (procedure, older advice, 2021-22):</p>
+<ol type="1">
+<li>In Google Ads, open Campaigns, go to the Display campaigns view and click to add a new campaign.</li>
+<li>Choose Create a campaign without a goal's guidance.</li>
+<li>Select campaign type Display (use Video only for YouTube retargeting).</li>
+<li>Select subtype Standard display campaign.</li>
+<li>Skip the website URL step and click Continue.</li>
+<li>Name the campaign, then set locations and language.</li>
+<li>Under bidding, choose Manually set bids and pay for Clicks, with Enhanced CPC turned off.</li>
+<li>Set the daily budget (test budget: 20 USD).</li>
+<li>Set the delivery method to Standard.</li>
+<li>Under ad rotation, choose Do not optimize: Rotate ads indefinitely.</li>
+<li>Under frequency capping, set a limit of 3 impressions per day per ad group.</li>
+<li>Leave dynamic ads without a data feed and keep the account-level conversions setting.</li>
+<li>Set content exclusions as needed for brand safety.</li>
+<li>Create the ad group: give it a name, add the audience Product Viewers 14 Days, turn targeting expansion Off, and set the ad group bid to 0.20 USD CPC.</li>
+<li>Create the ads: choose Upload display ads (not responsive), enter the final URL and upload the image files.</li>
+<li>Click Create campaign.</li>
+<li>Open the new campaign, go to Audiences, then the Exclusions tab, and add an exclusion for Product Viewers 7 Days at ad group level. Save.</li>
+</ol>
+<p>[L1342.010]</p>
+<p>You can skip creating an ad during campaign setup and add one later. The campaign will not run until it has at least one ad. [L1342.043]</p>
+<h2 id="bidding-budget-and-delivery">Bidding, budget and delivery</h2>
+<ul>
+<li>Bidding for a new retargeting test: Settings &gt; Campaign &gt; Bidding, Manually set bids, pay for Clicks, Enhanced CPC turned off. Audience-based bidding on conversions is not recommended at low volume. [L1342.011]</li>
+<li>Starting ad group bid for Google display retargeting is 0.20 USD CPC, kept low at the start. Manual CPC bids are the starting point for new campaigns. [L1342.018]</li>
+<li>For a new Google Ads display campaign, set Settings &gt; Campaign &gt; Delivery method to Standard rather than Accelerated. Monthly spend cannot exceed the daily budget multiplied by the average number of days in a month, although individual days may spend slightly more or less. [L1342.040]</li>
+<li>When Smart Bidding is active, Google Ads optimizes ad rotation toward the best-performing ads, even if rotation is set to rotate indefinitely. The rotate-indefinitely setting only keeps ads evenly rotated in campaigns that use manual bidding. [L1342.041]</li>
+</ul>
+<h2 id="static-ad-creative-and-split-testing">Static ad creative and split testing</h2>
+<ul>
+<li>Insert a real review text and star rating directly into static Google Display ads. [L1398.004] (older advice, 2021-22)</li>
+<li>Use image ads for the display set. Text-only display ads are weak for retargeting in the lesson's experience and tend to underperform image ads. [L1342.020]</li>
+<li>Standard uploaded display ads are the recommended base. Responsive display ads let Google decide formats, placements and sizes, including text-only and weaker ad sizes, so you have less control over the result. Responsive ads can be tested as an optional extra. [L1342.019]</li>
+<li>Ad rotation for split tests: choose Do not optimize: Rotate ads indefinitely. Avoid Optimize: Prefer best performing ads, because Google picks a winner very early using data that is not statistically meaningful. [L1342.012]</li>
+</ul>
+<p>Split test procedure on static ads (rotation set to rotate indefinitely):</p>
+<ol type="1">
+<li>Let the ads run until each one gets a large, even number of impressions.</li>
+<li>Compare the results once the sample is large enough.</li>
+<li>Pick the best-performing ad and replace the weaker ones as needed.</li>
+</ol>
+<p>[L1342.013]</p>
+<h2 id="frequency-capping">Frequency capping</h2>
+<p>Under Settings &gt; Campaign &gt; Additional settings &gt; Frequency capping, you can limit impressions for the whole campaign, per ad, or per ad group. For retargeting, the test limit is 3 impressions per day per ad group. [L1342.014]</p>
+<h2 id="exclusions-1">Exclusions</h2>
+<p><strong>Content exclusions</strong></p>
+<p>Setting path: Settings &gt; Campaign &gt; Content exclusions. [L1342.015, L1342.016]</p>
+<ul>
+<li>Digital content labels: DL-G General audiences, DL-PG Most audiences with parental guidance, DL-MA Mature audiences, and Content not yet labeled. [L1342.015]</li>
+<li>Sensitive content categories: Tragedy and conflict, Sensitive social issues, Profanity and rough language, Sexually suggestive, and Sensational and shocking. [L1342.015]</li>
+<li>Content types that can be excluded: Games, Inactive, Live streaming YouTube video, Embedded videos, Below-the-fold, Mobile app non-interstitial, Parked domains and In-video. Google states that exclusions are applied as well as possible but may not catch all related content. [L1342.016]</li>
+</ul>
+<p><strong>Audience exclusions</strong></p>
+<p>Audience exclusions in Google Ads can be applied at campaign level or ad group level. Use the ad group level when different ad groups in the same campaign target different audiences, because a campaign-level exclusion applies to all of them. [L1342.042]</p>
+<h2 id="targeting-expansion">Targeting expansion</h2>
+<p>Keep targeting expansion Off at ad group level. This ensures the ad group reaches only the selected audience. Otherwise Google may expand reach to similar users, which defeats retargeting. [L1342.017]</p>
+<h2 id="search-remarketing">Search remarketing</h2>
+<p>Google search campaigns accept audience and demographic targeting, similar to Facebook targeting. You can narrow who sees a search ad beyond the keywords. Audience-based search ad clicks were reported to have grown 34% year over year in 2018 (older data). [L1455.016]</p>
+<p>Remarketing lists for search ads is an advanced Google Ads option that applies retargeting audiences to search campaigns. It is not needed for a standard display retargeting setup and is usually added after display campaigns are running. [L1342.046]</p>
+<h2 id="troubleshooting-no-impressions-and-narrow-audiences">Troubleshooting: no impressions and narrow audiences</h2>
+<ul>
+<li>If remarketing shows zero impressions after the audiences are built, check the audience size first. Raising bids is a secondary option if the audience is eligible but still not serving. [L1283.036]</li>
+<li>Google's weekly estimates can show "Estimates aren't available because your targeting is too narrow" for small retargeting audiences. This message is normal for narrow lists and does not by itself mean the campaign is broken. [L1342.044]</li>
+</ul>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/17-brand-search-and-competitor-protection/"><span class="k">&larr; Previous</span><span class="v">Brand search and competitor protection</span></a><a class="nx" href="../../10-google-ads-and-shopping/19-youtube-demand-gen-and-display-prospecting/"><span class="k">Next &rarr;</span><span class="v">YouTube, demand gen and display prospecting</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

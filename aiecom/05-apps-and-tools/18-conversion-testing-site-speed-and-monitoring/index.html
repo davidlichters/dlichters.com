@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Conversion testing, site speed and monitoring | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 5.18: Conversion testing, site speed and monitoring.">
+<link rel="canonical" href="https://dlichters.com/aiecom/05-apps-and-tools/18-conversion-testing-site-speed-and-monitoring/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Conversion testing, site speed and monitoring | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 5.18: Conversion testing, site speed and monitoring."><meta property="og:url" content="https://dlichters.com/aiecom/05-apps-and-tools/18-conversion-testing-site-speed-and-monitoring/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">5. Apps and tools</a> &rsaquo; <a href="../../../ecom/05-apps-and-tools/18-conversion-testing-site-speed-and-monitoring/">Plain version</a></div><h1>5.18 Conversion testing, site speed and monitoring</h1><article><h2 id="tool-map-and-testing-stack">Tool Map and Testing Stack</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Job</th>
+<th>Tool</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A/B testing on Shopify, no code</td>
+<td>Visually</td>
+<td>L0197.001, L0389.017, L0389.025</td>
+</tr>
+<tr>
+<td>Controlled A/B testing after site changes</td>
+<td>Lively</td>
+<td>L1225.086</td>
+</tr>
+<tr>
+<td>Price, image and description tests on one product</td>
+<td>Lomio</td>
+<td>L0524.042</td>
+</tr>
+<tr>
+<td>Session recording and heatmaps</td>
+<td>Lucky Orange, Hotjar, Smartlook, FullStory, Microsoft Clarity</td>
+<td>L0293.007, L0390.020, L0837.029</td>
+</tr>
+<tr>
+<td>User testing with real people</td>
+<td>User testing services, Usertesting.com</td>
+<td>L0390.019, L0423.018</td>
+</tr>
+<tr>
+<td>Speed testing</td>
+<td>GTmetrix, Google PageSpeed Insights, Pingdom</td>
+<td>L0851.002, L0390.057, L0575.023, L1522.037</td>
+</tr>
+<tr>
+<td>Image optimization and SEO app</td>
+<td>Smart SEO</td>
+<td>L1190.005</td>
+</tr>
+<tr>
+<td>Broken-link checks</td>
+<td>Check My Links (Page Modified)</td>
+<td>L0332.003, L0332.025</td>
+</tr>
+<tr>
+<td>Uptime monitoring</td>
+<td>Pingdom</td>
+<td>L0575.023</td>
+</tr>
+<tr>
+<td>Test tracking</td>
+<td>Trello, spreadsheet, Google Sheet, Asana</td>
+<td>L0399.002</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="conversion-testing-prerequisites">Conversion Testing: Prerequisites</h2>
+<ul>
+<li>Testing tools named in the sources include Optimizely, VWO, Convert and Google Optimize. [L0423.011]</li>
+<li>Tools for finding conversion problems include Google Analytics with Shopify Analytics, Usertesting.com for user tests, and session recording tools such as Hotjar, Smartlook and FullStory. [L0423.018]</li>
+<li>VWO and Google Optimize-style platforms are for running controlled tests. They are only worth the investment once traffic and basic best-practice fixes are in place. [L0886.023]</li>
+<li>Track conversion rate tests and planned future tests in a Trello board or a spreadsheet, Google Sheet, Asana or similar project management tool. A downloadable Trello template can be used as a starting point. (Older advice, 2021-22.) [L0399.002]</li>
+</ul>
+<h2 id="conversion-testing-tools">Conversion Testing: Tools</h2>
+<p><strong>Visually (Shopify A/B testing)</strong></p>
+<ul>
+<li>Visually is a Shopify A/B testing platform available risk-free through Source E: no charges until reaching 1.5x to 3x return on investment, which creates zero upfront app cost. [L0197.001]</li>
+<li>Its recommendation engine uses Shopify purchase data, customer order history and on-site browsing behavior. [L0197.001]</li>
+<li>Most tests are set up in 3-4 clicks, with toggles for magnifying glass, reviews and design elements. Custom options are available through the Visually team. [L0197.001]</li>
+<li>Visually runs no-code A/B tests and on-site experiences: promotion bars, social proof, product recommendations, product upsells, custom HTML/CSS/JS components, redirects, Fake Click, and global CSS or JavaScript files. [L0389.017]</li>
+<li>Results are sent to Google Analytics when the event box is ticked. [L0389.017]</li>
+<li>The Redirect feature sends visitors to a different URL. This lets you compare two pages, such as two landing pages, and optimize conversions without code. It sits alongside Fake Click, Global CSS and Global JavaScript in the element list. [L0389.025]</li>
+</ul>
+<p><strong>Lively</strong></p>
+<ul>
+<li>Lively is an app for A/B split testing on a Shopify store. After major website changes, run the new version against the old one in a controlled test, so each version gets enough visitors to show a clear result. [L1225.086]</li>
+</ul>
+<p><strong>Lomio</strong></p>
+<ul>
+<li>Lomio is used for price and image testing, and for description testing, rather than full page tests. It is a quick way to shift prices and visuals on one product. [L0524.042]</li>
+</ul>
+<p><strong>Neat</strong></p>
+<ul>
+<li>The Neat A/B testing tool is an option for Shopify stores to run conversion tests. It can be used alongside another testing tool to compare results. (Older advice, 2021-22.) [L0399.004]</li>
+<li>Neat AB Testing is a split-testing app from the Shopify App Store. It pulls conversion data from the Shopify checkout and links it to each page version, so results are collected inside the app. (Older advice, 2021-22.) [L1364.033]</li>
+</ul>
+<p><strong>Google Optimize (discontinued)</strong></p>
+<ul>
+<li>Google discontinued Google Optimize in September 2023. It can no longer be used, and current alternatives must be checked before setup. [L0399.003, L0423.011, L1259.068, L1364.032]</li>
+<li>Older sources (2021-22) describe Google Optimize as a free split-testing tool linked to Google Analytics for on-page tests. That method no longer works as described, so a current alternative is needed. (Older advice.) [L0399.003, L1364.032]</li>
+<li>For landing page split tests in 2026, use a current A/B testing app that works with Shopify instead. [L1259.068]</li>
+</ul>
+<h2 id="session-recording-lucky-orange">Session Recording: Lucky Orange</h2>
+<ul>
+<li>Lucky Orange records your visitors' mouse movements and clicks on store pages in real time. It creates heatmaps showing where visitors interact. [L0293.007]</li>
+<li>You can watch individual visitor sessions to see scrolling patterns, cursor movements and interaction points. [L0293.007]</li>
+<li>Lucky Orange records visitor sessions and shows country and location. It can be used to measure average time on site. [L0363.029]</li>
+<li>Lucky Orange offers a 7-day free trial. If you continue after the trial ends, the subscription costs $10 per month. [L0293.008]</li>
+<li>Use Lucky Orange to show why people bounce. A free trial or free account is enough to start. (Older advice, 2022.) [L0665.047]</li>
+<li>Use it to spot frustrating elements, such as things visitors try to click that are not clickable, which increase bounce rate. (Advice from 2023.) [L0804.048]</li>
+<li>It shows where visitors click, where they stop and whether something on the site looks broken. (Older advice, 2018.) [L1085.044]</li>
+<li>A free trial is available for testing. (Older advice, 2019.) [L0663.064]</li>
+<li>Lucky Orange shows how visitors behave on a store, so you can make optimizations based on what they actually do. [L0837.029]</li>
+<li>Microsoft Clarity is a free alternative that offers similar behavior tracking. [L0837.029]</li>
+<li>It shows how long a visitor has looked at a product before leaving. You can use that information to personalize abandoned cart messages. [L1472.055]</li>
+</ul>
+<p><strong>Bot traffic and IP addresses (Lucky Orange)</strong></p>
+<ul>
+<li>Lucky Orange shows visitor IP addresses. This lets you block bot traffic that inflates visitor counts. [L0941.043]</li>
+<li>A seven-day free trial is enough to collect this data. You can cancel afterwards. [L0941.043]</li>
+<li>Repeated visits from one IP address with no purchases are most likely a bot. [L1114.037]</li>
+<li>To check, search the IP address on Google. Others often identify it as a Google, Microsoft or Meta bot. [L1114.037]</li>
+</ul>
+<h2 id="session-recording-other-tools">Session Recording: Other Tools</h2>
+<ul>
+<li>Hotjar offers heatmaps, scroll maps, user recordings and exit-intent feedback polls. [L0390.020]</li>
+<li>Smartlook is a similar session recording tool. [L0390.020]</li>
+<li>FullStory is the most expensive option of this group. [L0390.020]</li>
+</ul>
+<p><strong>Daily recording review routine (Hotjar, Smartlook or similar)</strong></p>
+<ol type="1">
+<li>Install the tool on the store. [L0390.021]</li>
+<li>Once a day, spend about 10 to 15 minutes watching about 5 recordings. [L0390.021]</li>
+<li>Prioritize visitors who added products to cart but did not complete the purchase. [L0390.021]</li>
+<li>Look for buttons that are hard to find, checkout buttons hidden by scrolling, elements visitors click that are not clickable, and rage clicking. [L0390.021]</li>
+<li>Record each flaw and fix the most frequent ones first. [L0390.021]</li>
+</ol>
+<h2 id="user-testing">User Testing</h2>
+<ul>
+<li>User testing services let you buy recorded sessions with real users matching a chosen audience, such as age range or interests. [L0390.019]</li>
+<li>Assign them a task, such as buying a specific product. You receive recordings with spoken thoughts and notes on why tasks were easy or hard. [L0390.019]</li>
+<li>Usertesting.com is named as the tool for user tests when looking for conversion problems. [L0423.018]</li>
+</ul>
+<h2 id="speed-measurement-which-numbers-to-trust">Speed Measurement: Which Numbers to Trust</h2>
+<ul>
+<li>Shopify's built-in speed test is not a reliable measure. Use Google PageSpeed Insights and GTmetrix for speed checks. (Older advice, 2022.) [L0665.051]</li>
+<li>A Shopify speed score is less useful than the GTmetrix breakdown for finding the cause. (Advice from 2023.) [L1283.080]</li>
+<li>GTmetrics and Shopify can show different load times because the tests run from different locations. [L0807.037]</li>
+<li>The slowest item in the GTmetrics waterfall is usually the same slow element that shows up in Shopify. [L0807.037]</li>
+</ul>
+<h2 id="speed-measurement-gtmetrix">Speed Measurement: GTmetrix</h2>
+<ul>
+<li>GTmetrix is a free speed test that reports page load performance and a waterfall of every page element with its load time. Use it to find the element slowing a product page. (Older advice, 2021.) [L0801.110, L0851.002]</li>
+<li>GTmetrix reports a performance score and a waterfall chart. The waterfall shows how each element of the page loads, from fastest to slowest. [L1446.018]</li>
+<li>It shows the scores, the elements slowing the page, and the code loaded on the site. (Advice from 2023.) [L0970.089]</li>
+<li>A free account with no credit card is enough for these tests. [L0857.060]</li>
+<li>The free GT Metrics account needs no credit card and allows about 3 speed tests per day. Enter the product or store URL and run the test to get a starting score. [L1190.006]</li>
+<li>The free version also shows which installed apps or tracking scripts slow the page. (Older advice, 2020.) [L0551.029]</li>
+</ul>
+<p><strong>Benchmarks</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Clean store (no code changes, no heavy apps)</th>
+<th>Lower results mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Performance</td>
+<td>About 99%</td>
+<td>Room to optimize theme, apps or images</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>About 95%</td>
+<td>Room to optimize theme, apps or images</td>
+</tr>
+<tr>
+<td>LCP (largest contentful paint)</td>
+<td>Under 1 second</td>
+<td>Room to optimize theme, apps or images</td>
+</tr>
+<tr>
+<td>Grade</td>
+<td>A</td>
+<td>,</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1190.007]</p>
+<p><strong>Reading the waterfall</strong></p>
+<ul>
+<li>The GT Metrics Waterfall view lists every loaded resource from fastest to slowest. [L1190.008]</li>
+<li>Scroll down to the lines that stretch furthest to the right on the timeline. These are the slowest items. [L1190.008, L0272.015]</li>
+<li>Optimize or remove the apps or resources that cause them. [L1190.008]</li>
+<li>Check the waterfall to find slow images or app code, then remove or reduce them. (Older advice, 2021.) [L0962.046]</li>
+</ul>
+<p><strong>Speed check procedure (GTmetrix)</strong></p>
+<ol type="1">
+<li>Run the store URL through GTmetrics. [L1283.081]</li>
+<li>Open the waterfall view. [L1283.081]</li>
+<li>Find the item loading slowest, such as a large image or an app script. [L1283.081]</li>
+<li>Fix it or send the code to the developer for identification. [L1283.081]</li>
+</ol>
+<p><strong>Finding a slow app (GTmetrix)</strong></p>
+<ol type="1">
+<li>Create a free GTmetrics account. [L0807.036]</li>
+<li>Enter your store URL and run the test. [L0807.036]</li>
+<li>Open the waterfall view. [L0807.036]</li>
+<li>Scroll to the bottom of the waterfall to see the slowest-loading items. [L0807.036]</li>
+<li>Note any app or developer names you do not need. [L0807.036]</li>
+<li>Remove the unneeded app from the store. [L0807.036]</li>
+<li>Retest the store speed. [L0807.036]</li>
+<li>Contact the app developer to ask them to remove any leftover code. [L0807.036]</li>
+</ol>
+<h2 id="speed-measurement-pagespeed-insights">Speed Measurement: PageSpeed Insights</h2>
+<ul>
+<li>Google PageSpeed Insights often returns generic speed recommendations that are impractical for a Shopify store. [L0390.057]</li>
+<li>Filter its results against your actual app list and image sizes. Start with the heaviest elements, such as apps and unoptimized images. [L0390.057]</li>
+<li>The "Remove unused JavaScript" entry lists each script with its host domain, such as a chat widget, pop-up, analytics or finance vendor. (Older advice, 2021-22.) [L1266.036]</li>
+<li>Use those domains to match each slow script to the installed app that injects it before deciding to remove or replace it. (Older advice, 2021-22.) [L1266.036]</li>
+<li>Use Google PageSpeed Insights, GTmetrix and Pingdom to test page speed regularly. They list suggested fixes, though many of those fixes are technical. (Older advice, 2021-22.) [L1522.037]</li>
+</ul>
+<p><strong>WebPageTest waterfall</strong></p>
+<ul>
+<li>In a WebPageTest waterfall, one slow third-party request, such as a chat widget that stalls on connection, can hold back every request that follows it. This can push the Largest Contentful Paint out by tens of seconds. (Older advice, 2021-22.) [L1266.046]</li>
+<li>Locate the stalled item by its position in the waterfall. Removing that one script can change the result more than any other fix. (Older advice, 2021-22.) [L1266.046]</li>
+</ul>
+<h2 id="apps-scripts-and-what-you-control">Apps, Scripts and What You Control</h2>
+<ul>
+<li>Installed apps add code that slows a store. The impact depends on how each app is built, not only on how many are installed. [L1190.003]</li>
+<li>Remove apps that are not needed so their code is removed as well. [L1190.003]</li>
+<li>Shopify's hosting, CDN and base platform scripts cannot be changed. Focus optimization effort on images, apps, custom code, CSS, HTML and JavaScript that the store controls. (Older advice, 2021-22.) [L1266.020]</li>
+<li>The standard Shopify plan at about 29 dollars per month serves assets from cdn.shopify.com. The store does not need a separate CDN for normal speed. (Older advice, 2020.) [L0551.029]</li>
+<li>Check hosting-level items in PageSpeed Insights, including Google Tag Manager and tracking tools. Hotjar, Privy, Zotabox, Klaviyo, Facebook and Google Analytics scripts add JavaScript cost. Check whether each is still needed, and move tags to Google Tag Manager where possible. (Older advice, 2021-22.) [L1266.027]</li>
+<li>Financing widgets such as Bread load their scripts on every page, including the homepage. Shoppers only need them on product or checkout pages. For high-ticket stores, check whether the financing app's scripts can be limited to those pages. (Older advice, 2021-22.) [L1266.037]</li>
+</ul>
+<h2 id="image-optimization-and-alt-text">Image Optimization and Alt Text</h2>
+<ul>
+<li>Add image alt text either manually or with a free Shopify app from the Shopify App Store. Compress product images as well, since large images slow the store down. (Older advice, 2020.) [L0468.087]</li>
+<li>Minifier adds metatags (alt text) to product photos automatically. It resets once per month. (Older advice, 2022.) [L0272.057]</li>
+<li>If only some photos get tagged when you expect all to be tagged, contact Minifier's support for a reset, then run it again. (Older advice, 2022.) [L0272.057]</li>
+<li>Crush Picks is an alternative app if Minifier issues persist. (Older advice, 2022.) [L0272.057]</li>
+</ul>
+<p><strong>Smart SEO: optimize images by collection</strong></p>
+<ol type="1">
+<li>Open the Collections tab. [L0368.002]</li>
+<li>Select all collections. [L0368.002]</li>
+<li>Deselect those without images. Only collections that actually have images need this step. [L0368.002]</li>
+<li>Click Optimize collection images. [L0368.002]</li>
+</ol>
+<p>Path: Smart SEO app &gt; Configure &gt; Image optimization. [L0368.002]</p>
+<p><strong>Smart SEO: optimize product images</strong></p>
+<ol type="1">
+<li>Open the Shopify admin and open the Smart SEO app. [L1190.009]</li>
+<li>Find the Image optimization section and click Configure. [L1190.009]</li>
+<li>Open the Products tab. The app pulls in all store products and shows whether each image is optimized. [L1190.009]</li>
+<li>Tick the products to optimize, for example all of them. [L1190.009]</li>
+<li>Click Optimize product images and wait for the job to finish. [L1190.009]</li>
+<li>Check the savings shown afterwards for the combined image size before and after. [L1190.009]</li>
+</ol>
+<p><strong>Expected results</strong></p>
+<ul>
+<li>In one test with 10 products, the combined image size dropped from 60.2 MB to 18.1 MB, which saved about 42 MB. [L1190.010]</li>
+<li>A store with hundreds or thousands of products may need around 30 minutes or longer. The job can run while you work on other tasks. [L1190.010]</li>
+</ul>
+<p><strong>Smart SEO: add alt text to product images</strong></p>
+<ol type="1">
+<li>Open Smart SEO, go to the Alt tags section, and click Configure. [L1190.013]</li>
+<li>Select all products with the checkbox at the top and click Edit products. [L1190.013]</li>
+<li>Set the alt text to the product title as a dynamic value pulled from the store, then click Save. [L1190.013]</li>
+<li>Open each product image and rewrite its alt text to describe what the image shows, such as the view angle (for example, front view, front view with model, back view with model). [L1190.013]</li>
+<li>Save each change. [L1190.013]</li>
+</ol>
+<h2 id="smart-seo-features-plans-and-settings">Smart SEO: Features, Plans and Settings</h2>
+<ul>
+<li>Smart SEO covers image compression, Instant Page preloading, alt text editing, AI-generated meta titles and descriptions, product SEO scores (0 to 100), and structured data (JSON-LD). [L1190.005]</li>
+<li>The JSON-LD feature requires a paid plan. [L1190.005]</li>
+</ul>
+<p><strong>AI meta tag limits by plan</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>AI meta descriptions per month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$10 per month</td>
+<td>100</td>
+</tr>
+<tr>
+<td>$20 per month</td>
+<td>200</td>
+</tr>
+<tr>
+<td>$30 per month</td>
+<td>300</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0965.057]</p>
+<ul>
+<li>Meta tags generated by an AI app stay on the product after you cancel the subscription. You can subscribe for a month or two to generate them, then cancel. [L0965.058]</li>
+<li>Structured data (JSON-LD) setting covers product pages. Before saving, upload the logo, add social media URLs, set the price range, enable the phone number, and connect Judge.me reviews to the store. [L1190.030]</li>
+<li>The 0 to 100 optimization score for each product updates after you edit its title or meta description and refresh the product list. Use the low scores to choose which products to improve first. [L1190.050]</li>
+<li>Smart SEO &gt; Page speed &gt; Instant page is disabled until it is set up. Click Enable to preload each page just before a user opens it. This makes page loads feel almost instant and improves user experience. Google's Core Web Vitals test is expected to reflect this over time. [L1190.011]</li>
+</ul>
+<h2 id="broken-links-check-my-links">Broken Links: Check My Links</h2>
+<ul>
+<li>Check My Links is a free Chrome extension offered by pagemodified.com. It checks every link on the page you are viewing and marks broken ones. [L0332.003]</li>
+<li>It finds 404 links on other sites without clicking each link manually, which is too slow on pages with dozens of outgoing links. (Older advice, 2021-22.) [L0332.003]</li>
+<li>Use Check My Links for broken link building. Searching the Chrome Web Store for "check my links" returns similar extensions, such as Link Redirect Trace from linkresearchtools.com and Redirect Link Checker. Use the extension offered by pagemodified.com. (Older advice, 2021-22.) [L0332.026]</li>
+<li>Page Modified also offers a crawl of an entire website instead of only the open page. Use the full-site crawl when you need to audit every page of a site for broken links. (Older advice, 2021-22.) [L0332.025]</li>
+</ul>
+<p><strong>Installation</strong></p>
+<ol type="1">
+<li>Install Check My Links from the Chrome Web Store. [L0332.004]</li>
+<li>Chrome asks to add it with the permission to read and change all data on the websites you visit. Accept this to add the extension. [L0332.004]</li>
+<li>The default options can be left unchanged. [L0332.004]</li>
+</ol>
+<p><strong>Options</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Setting</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Method of Request</td>
+<td>Keep GET as the default. HEAD is faster but can misreport the true HTTP status of a page. Switch to GET if results look odd. GET is also required to parse hashtag targets by element ID.</td>
+<td>L0332.005</td>
+</tr>
+<tr>
+<td>Autocheck</td>
+<td>When enabled, the extension checks links automatically whenever the URL of the current tab changes and the page has loaded. If you enable it, also enable Valid Link Caching.</td>
+<td>L0332.006</td>
+</tr>
+<tr>
+<td>Warnings</td>
+<td>Warnings appear in the browser console (F12, then Console tab) and are highlighted yellow. Optional checks: Parse DOM after hashtag (flags a hashtag link whose target element does not exist), Trailing # (flags links ending in #), Empty Link (flags empty href), and Anchor tag without href.</td>
+<td>L0332.007</td>
+</tr>
+<tr>
+<td>Valid Link Caching</td>
+<td>Enable it so the extension stops re-checking good links that return HTTP 200. It only checks new links or links that were previously broken. This greatly reduces the time needed to recheck a page. The Clear Cache button resets it.</td>
+<td>L0332.008</td>
+</tr>
+<tr>
+<td>Nofollow Links</td>
+<td>By default the extension skips links with the nofollow attribute, so only dofollow links are checked. Leave the option Check Links with rel=nofollow unchecked, because dofollow links are the ones worth pursuing for backlinks.</td>
+<td>L0332.009</td>
+</tr>
+<tr>
+<td>Exclude links from these domains</td>
+<td>Enter one domain or URL part per line to skip it. The default list already excludes ad network domains such as googleadservices and doubleclick, and appliedsemantics.com, because these are not sites you would contact about a link.</td>
+<td>L0332.010</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>On the options page, change the settings you need, then click the "Save my preferences" button at the bottom so the changes are stored. [L0332.027]</li>
+</ul>
+<p><strong>Results</strong></p>
+<ul>
+<li>After running Check My Links on a page, the results panel shows the following counts. [L0332.011]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Result</th>
+<th>Meaning</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Links</td>
+<td>Total on the page</td>
+<td>L0332.011</td>
+</tr>
+<tr>
+<td>Valid links</td>
+<td>HTTP 200</td>
+<td>L0332.011</td>
+</tr>
+<tr>
+<td>Valid redirecting links</td>
+<td>Redirects</td>
+<td>L0332.011</td>
+</tr>
+<tr>
+<td>Warnings</td>
+<td>Optional warning checks</td>
+<td>L0332.011</td>
+</tr>
+<tr>
+<td>Invalid links</td>
+<td>Act on these; highlighted red on the page</td>
+<td>L0332.011</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The counter shows how many links are still in the queue. [L0332.011]</li>
+</ul>
+<h2 id="uptime-monitoring-pingdom">Uptime Monitoring: Pingdom</h2>
+<ul>
+<li>Pingdom monitors the website every minute and sends SMS or email alerts on downtime. [L0575.023]</li>
+<li>The base plan costs about $10 per month or $100 per year and covers up to five sites. [L0575.023]</li>
+<li>A common alert threshold is 10 or 20 minutes of downtime, to avoid noise from brief hiccups. [L0575.023]</li>
+</ul>
+</article><nav class="pn"><a href="../../05-apps-and-tools/17-advertising-platforms-tracking-and-attribution/"><span class="k">&larr; Previous</span><span class="v">Advertising platforms, tracking and attribution</span></a><a class="nx" href="../../05-apps-and-tools/19-orders-automation-fraud-and-operations/"><span class="k">Next &rarr;</span><span class="v">Orders, automation, fraud and operations</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

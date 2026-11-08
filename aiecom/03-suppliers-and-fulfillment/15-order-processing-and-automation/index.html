@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Order processing and automation | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 3.15: Order processing and automation.">
+<link rel="canonical" href="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/15-order-processing-and-automation/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Order processing and automation | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 3.15: Order processing and automation."><meta property="og:url" content="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/15-order-processing-and-automation/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">3. Suppliers and fulfillment</a> &rsaquo; <a href="../../../ecom/03-suppliers-and-fulfillment/15-order-processing-and-automation/">Plain version</a></div><h1>3.15 Order processing and automation</h1><article><h2 id="why-order-processing-needs-a-system">Why Order Processing Needs a System</h2>
+<ul>
+<li>Every order placed on the website must be shipped, which makes order processing a daily recurring task and a prime candidate for automation or delegation. [L0592.005]</li>
+<li>Automating order placement with suppliers is worthwhile only after the manual process is understood. [L0967.038]</li>
+<li>Speed matters more than the time automation saves. The sooner a supplier receives an order, the sooner it ships. Instant submission removes the wait between order receipt and supplier notification, which gets products to customers faster and raises satisfaction. [L0283.007]</li>
+<li>Track the status of every order at every supplier. Suppliers ship at different speeds, orders can get lost in supplier queues, and placed orders can slip through unnoticed. Proactive monitoring catches these failures and enables customer follow-up and review requests. [L0236.004]</li>
+<li>Without a system that records when each order went to the supplier and whether it shipped, customers may contact you one or two weeks later asking where their order is, and you have no proof of what was sent. [L1407.004]</li>
+<li>Payment processors may release money late when fulfillment proof is missing. Ship and track orders quickly, and send tracking information to the payment processor automatically with each fulfillment. [L1512.040]</li>
+<li>Write your own process checklists for order handling and similar daily tasks. The right steps differ between businesses, and written steps prevent gaps. Add a new step whenever a problem shows that one is missing. [L0949.010]</li>
+</ul>
+<h2 id="daily-order-check-in-shopify">Daily Order Check in Shopify</h2>
+<h3 id="checking-and-processing-new-orders">Checking and processing new orders</h3>
+<ol type="1">
+<li>Open the Orders option in the left main menu of the Shopify Admin. All orders are listed from newest to oldest.</li>
+<li>To find a specific order, use the search bar at the top of the page. You can search by order number, customer name or ordered product.</li>
+<li>Always reference the order by its Shopify order number.</li>
+<li>Check the orders page three times per day: in the morning, around midday, and about one hour before the end of the business day. Constant checking is not needed.</li>
+<li>Process the morning check first, because many orders arrive overnight.</li>
+<li>Follow the standard order flow: place the supplier order, capture payment, then fulfill the items.</li>
+</ol>
+<p>[L1119.002]</p>
+<h3 id="check-schedules-in-the-sources">Check schedules in the sources</h3>
+<p>Sources give different check frequencies. Both are recorded below. The sources do not state which order volume each schedule suits.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Check schedule</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A order routine</td>
+<td>Three checks: morning, midday, and about one hour before the end of the business day</td>
+<td>L1119.002</td>
+</tr>
+<tr>
+<td>Source C fulfillment routine</td>
+<td>Once each evening</td>
+<td>L1173.025</td>
+</tr>
+<tr>
+<td>Source A status folders</td>
+<td>Check the order status folders at the end of each day</td>
+<td>L1000.066</td>
+</tr>
+<tr>
+<td>Delegated fulfillment routine</td>
+<td>Check at the end of each day whether orders have been fulfilled</td>
+<td>L1360.017</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Check the status folders at the end of each day to find stalled orders, such as one a supplier never confirmed. This catches problems before a customer calls to ask where the order is. [L1000.066]</li>
+<li>Check supplier fulfillment timing by sampling random orders regularly, since slow fulfillment damages the whole funnel. Sampling random orders and checking that the supplier ships on time, because delays affect performance and the whole funnel. [L1259.057, L1260.057]</li>
+</ul>
+<h2 id="manual-purchase-orders-first">Manual Purchase Orders First</h2>
+<h3 id="process-orders-manually-before-you-automate">Process orders manually before you automate</h3>
+<ul>
+<li>Process orders manually before automating. Only switch to automated forwarding after you have handled several orders by hand and understand each step. [L0804.032]</li>
+<li>For a new store, beginners should forward orders manually rather than rely on automation. Before forwarding, confirm the product is in stock, and check that the order is not high risk. Send the order during the supplier's business hours. Orders that arrive late at night can be sent when the supplier opens. [L0807.014]</li>
+<li>Default to one email per order. Send each order to a supplier in its own separate email rather than batching several orders together, so that any problem with one order stays isolated and easy to track. [L1279.026] <em>(Older advice, 2021.)</em></li>
+<li>Batching is the exception. If a supplier wants a daily email with a list of orders, send that list every day instead. [L0933.015]</li>
+<li>Some suppliers take about a week to process a purchase order, even when you pay quickly. Paying immediately by ACH can help, but slow processing can still happen beyond your control. [L1472.032]</li>
+<li>Suppliers with slow processing can still be worth working with if they offer good products and good margins. Accept the slower process, but keep customers informed. [L1472.034]</li>
+</ul>
+<h3 id="standard-manual-order-process-the-most-common-method">Standard manual order process (the most common method)</h3>
+<p>Sending an order to a supplier by email:</p>
+<ol type="1">
+<li>Subject line: store name, "Purchase Order" or PO, and the Shopify order number.</li>
+<li>Body: item name, quantity (usually one), SKU number if one exists.</li>
+<li>Add a "ship to" line with the customer's address.</li>
+<li>Ask the supplier to charge the card on file and to send tracking information when shipped.</li>
+</ol>
+<p>Some suppliers instead give a dealer-website login to place orders. The method is confirmed during approval. [L0964.021]</p>
+<ul>
+<li>Automating supplier order emails uses the automation covered in module seven of the course. For suppliers that require a dealer website login, a team member places the order manually. [L0964.022]</li>
+<li>Read the supplier agreement, which states how orders are submitted. [L0966.032]</li>
+<li>If orders go by email, send them to the order address listed in the agreement. [L0966.032]</li>
+<li>Use a subject line made of your store domain plus the Shopify order number. [L0966.032]</li>
+<li>In the body, state the quantity and SKU, the product name, and the customer's full shipping address. [L0966.032]</li>
+<li>If the supplier has a dealer portal, log in with the username and password issued after authorization and place the order there. [L0966.032]</li>
+<li>If the agreement does not explain the process, ask your supplier rep how to submit orders. [L0966.032]</li>
+<li>Typical order fulfillment with a drop-ship supplier: (1) the customer places an order in your store; (2) you send the supplier a purchase order by email listing the SKU, quantity and customer shipping address; (3) the supplier charges you and ships the item; (4) the supplier sends tracking information to you. <em>(Older advice, 2021.)</em> [L0962.018]</li>
+<li>Manual fulfillment for early orders: (1) receive the order notification; (2) go to the warehouse where the stock is kept; (3) pick and pack the item; (4) ship it to the customer. This method is time-consuming, so it becomes a bottleneck as volume grows. [L1439.005]</li>
+<li>Pack and ship the first orders personally to learn the correct packaging and shipping process before delegating. When volume grows, hire someone who is shown the process and works at the warehouse on a fixed schedule, for example three times a week. [L1431.009]</li>
+</ul>
+<h3 id="email-templates-for-purchase-orders">Email templates for purchase orders</h3>
+<p>Standard supplier order email (store-wide layout with dynamic fields):</p>
+<pre><code>Subject: PO [purchase order number]
+
+Hi [supplier contact name],
+
+We would like to place an order for item [supplier item number or SKU], quantity [quantity].
+
+Ship to customer, using the details below:
+Name: [customer full name]
+Address: [customer full shipping address]
+Phone: [customer phone number]
+
+Please charge our card on file and send the tracking information as soon as it is available.
+
+Thank you,
+[your name]
+[your store name]</code></pre>
+<p>[L0360.009] <em>(2024.)</em></p>
+<pre><code>Subject: Purchase Order [PO number] - [Store name]
+
+Hi [Supplier contact name],
+
+Please process the order below and charge the card we have on file.
+
+Items:
+[Quantity] x [Supplier SKU] - [Product name, size, color]
+
+Ship to:
+[Customer full name]
+[Street address]
+[City, State, ZIP]
+[Customer phone]
+
+Thank you,
+[Your name]
+[Store name] | [Contact email]</code></pre>
+<p>[L0804.031] <em>(2023.)</em></p>
+<pre><code>Subject: [your store domain] order [Shopify order number]
+
+Body:
+This order is for [quantity] unit(s) of SKU [SKU number], product name: [product name].
+Ship to:
+[customer full name]
+[customer street address]
+[customer city, state, ZIP code]
+[customer phone number, if the supplier requires it]</code></pre>
+<p>[L0966.033] <em>(2025.)</em></p>
+<pre><code>Subject: [Store name] PO [Shopify order number]
+
+Hello,
+
+Please process the order below and send the tracking number once it has shipped.
+
+Quantity: [quantity]
+SKU or item number: [SKU]
+Item: [product name]
+Ship to: [customer full name], [street address], [city, state or province, postal code], [country], [phone number]
+
+Thank you,
+[Your name]
+[Store name]</code></pre>
+<p>[L1279.025] <em>(Older advice, 2021.)</em></p>
+<p>Place a supplier order by email using this layout and replace every bracketed field with real data. The sender is the company's business address. The recipient is the supplier's address from the supplier details spreadsheet. The subject combines the company name, the word "order", and the Shopify order number. Open with a polite greeting such as Good Morning or Good Afternoon, then ask for the items: one line per product, showing quantity, product name and supplier SKU, with a line repeated for each product in the order. Under a "please ship to" heading, paste the customer's shipping details exactly as they appear on the Shopify order page. Close by asking the supplier to confirm stock and send an invoice for payment, end with a courteous sign-off, and add the full signature block.</p>
+<p>[L1119.004]</p>
+<ul>
+<li>Every order email must use the same format and be sent from the company's business email address. Keep contact names, email addresses, phone numbers and websites for each supplier in a separate supplier details spreadsheet. [L1119.003]</li>
+</ul>
+<pre><code>Order {order number}: please ship this order directly to our customer {customer name and shipping address} and charge the card we have on file for this order. Reply to confirm you have received and processed the order, and send the tracking number as soon as it ships.</code></pre>
+<p>[L1407.024]</p>
+<pre><code>How do you prefer us to process orders? [If they want a daily email: That sounds great, we will send you a list of orders every day.] [If they have a dealer portal: That sounds great, we will place our orders through your dealer portal.]</code></pre>
+<p>[L0933.017]</p>
+<h3 id="pre-written-forwarding-scripts">Pre-written forwarding scripts</h3>
+<ul>
+<li>Each supplier may require a different ordering method. Keep a pre-written order-forwarding script for each supplier in a shared sheet, so the assistant can forward orders quickly without searching for the procedure. [L1000.049]</li>
+<li>Example: a main store used around 35 different suppliers, each with its own ordering procedure. Keeping all of their scripts in one sheet made it possible to place orders quickly. [L1000.050]</li>
+</ul>
+<h2 id="supplier-ordering-channel-and-agreement">Supplier Ordering Channel and Agreement</h2>
+<ul>
+<li>The authorized-retailer agreement from a supplier should state how orders are placed: through a dealer portal or by email purchase order. If the agreement does not say, ask the supplier how to submit orders after the first sale. [L0360.008]</li>
+<li>Let the supplier choose the order process, then confirm it. Keeping the process as simple as possible removes friction, which reduces the chance that the supplier hesitates to approve your account. [L0933.016]</li>
+<li>Ask the supplier how they prefer you to process orders. [L0933.015]</li>
+<li>If they want a daily email with the list of orders, send that list every day. [L0933.015]</li>
+<li>If they provide a dealer portal login, place your orders on their website through that portal. [L0933.015]</li>
+<li>Confirm to the supplier that you will work the way they prefer. [L0933.015]</li>
+<li>Route new orders based on how each supplier accepts them. Suppliers that take uniform emailed purchase orders can be handled by an order-sending tool. Suppliers with members portals can be assigned to yourself, a team member, or a Trello board. [L0466.042]</li>
+<li>An order automation can send each new order to Trello as a card, so that you or a team member can make sure it is processed. [L0466.043] <em>(2018.)</em></li>
+<li>Some suppliers receive orders by email (for example, a Gmail address) rather than through a portal. This is normal for older, owner-run brands and is not by itself a red flag. [L0805.027]</li>
+<li>Supplier orders can be placed by email, through the supplier's own ordering website, or by phone call, depending on what each supplier offers. Whichever channel is used, the supplier confirms the order, then invoices you, and you pay the invoice before the goods ship. [L1480.035] <em>(Older advice, 2021-2022.)</em></li>
+<li>Each supplier's channel can be summarized as follows:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>When it applies</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email purchase order</td>
+<td>Supplier accepts email orders; automation via Zapier is possible only for these</td>
+<td>L0283.002, L0964.021</td>
+</tr>
+<tr>
+<td>Supplier's online ordering form</td>
+<td>Stated as an alternative to email in the supplier details process</td>
+<td>L1119.003</td>
+</tr>
+<tr>
+<td>Dealer portal or dealer website login</td>
+<td>Supplier issues login after authorization; order placed manually</td>
+<td>L0964.021, L0964.022, L0966.032</td>
+</tr>
+<tr>
+<td>Phone call</td>
+<td>Offered by some suppliers</td>
+<td>L1480.035</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="supplier-payment-and-shopify-payment-capture">Supplier Payment and Shopify Payment Capture</h2>
+<h3 id="who-pays-the-supplier-and-when">Who pays the supplier and when</h3>
+<p>Sources describe several models. Each applies to a different supplier arrangement.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>How it works</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supplier charges card on file</td>
+<td>You send a purchase order; the supplier charges your card on file and ships</td>
+<td>L0804.030, L0964.021</td>
+</tr>
+<tr>
+<td>Supplier invoices, you pay before shipping</td>
+<td>Supplier confirms the order, invoices you, and you pay before the goods ship <em>(2021-2022)</em></td>
+<td>L1480.035</td>
+</tr>
+<tr>
+<td>Prepay the supplier</td>
+<td>Customer pays your store; you verify, ask the supplier to check availability, the supplier confirms, then you prepay <em>(2023)</em></td>
+<td>L0835.034</td>
+</tr>
+<tr>
+<td>Ship first, charge or bill later</td>
+<td>Suppliers ship automatically and charge the company card or bill it later; others require payment confirmed before they ship</td>
+<td>L1119.005</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>After the order email is sent, suppliers usually confirm stock and send an invoice. Know which group each supplier belongs to before you start the process. [L1119.005]</li>
+<li>Each supplier may require payment to be confirmed before it ships. Check this before you capture payment. [L1119.005]</li>
+</ul>
+<h3 id="prepayment-procedure-for-supplier-invoiced-orders-2023">Prepayment procedure for supplier-invoiced orders (2023)</h3>
+<ol type="1">
+<li>Customer pays on your store.</li>
+<li>Verify the payment and the shipping details.</li>
+<li>Email the purchase order to the supplier and ask them to check availability.</li>
+<li>The supplier confirms availability.</li>
+<li>Prepay the supplier for the product.</li>
+<li>Create the shipment on your own shipping account. For UPS or FedEx, give the supplier your account number so they create the shipment under it. For freight, get quotes from a freight service, pay it, and send the BOL to the supplier.</li>
+</ol>
+<p>[L0835.034]</p>
+<h3 id="when-to-capture-payment">When to capture payment</h3>
+<p>Capture timing differs by source, and both are recorded.</p>
+<ul>
+<li>Pre-authorize, verify stock, then capture. Shopify authorizes the customer's card at checkout without capturing. You check whether the item is in stock with the supplier. If it is in stock, you capture the payment, which charges the card and lets you process the order. [L0358.024] <em>(Older advice, 2020.)</em></li>
+<li>Pre-authorize, verify stock, then capture, shipping after capture. The same steps are repeated: authorize without capturing, confirm stock with the supplier, capture the payment in the Shopify admin, then ship. [L0671.063] <em>(Older advice, 2021.)</em></li>
+<li>Note the conflict on when the customer is charged. L0358.024 says capture is the charge. L0671.063 says the customer is charged when the order ships (step 4), after capture. Test your own setup so you know which event charges the card.</li>
+<li>Choose by stockout frequency. If stockouts are common with your suppliers, pre-authorize, verify stock, then capture. If stock is reliable, capture automatically. [L1090.035] <em>(Older advice, 2021.)</em></li>
+<li>Stores can be set not to charge customers until the owner manually selects that option, which ensures all ordered products are in stock before payment is taken. [L0856.060]</li>
+<li>Customer payments through Shopify Payments reach the bank account in about two business days (48 hours). For early orders, you can place the supplier order once those funds arrive. Only the first order or two need this workaround. [L0970.045] <em>(2023.)</em></li>
+<li>Set the Payment Status to "paid" in the Shopify trigger settings. This prevents orders from being sent to suppliers before payment is confirmed. Only send orders to suppliers once they are confirmed as paid. [L0283.006]</li>
+<li>Do not process and submit orders to suppliers before payment status is confirmed as "paid". Setting this to "pending" or "any" sends unpaid orders to suppliers, which wastes their resources and creates fulfillment problems. [L0283.012]</li>
+</ul>
+<h3 id="shopify-capture-and-fulfillment-procedure">Shopify capture and fulfillment procedure</h3>
+<ol type="1">
+<li>Once stock is verified, either through your own records or the supplier, press the blue "Capture Payment" button on the order page.</li>
+<li>A pop-up opens. Press the blue button a second time to approve it. This transfers the customer's money to the company bank account or PayPal account.</li>
+<li>Before capturing, check whether the order carries a risk warning. If the risk level is medium or high, send the order to the business owner for direction before taking payment.</li>
+<li>When the supplier has acknowledged the order, or after you have paid the supplier in cases where payment was required, press the blue "Fulfil Items" button on the order page.</li>
+<li>In the pop-up, verify that the items being shipped are selected and that the "send a confirmation to the customer" box is ticked.</li>
+<li>Press the green "Fulfil Items" button.</li>
+<li>Shopify emails the customer to say the order is being fulfilled and then archives the order. You need to do nothing further.</li>
+</ol>
+<p>[L1119.006]</p>
+<ul>
+<li>Shopify order page buttons: "Capture Payment" is a blue button, and its confirmation popup has a second blue button. "Fulfil Items" is a blue button on the order page. Its popup has a "send a confirmation to the customer" tick box and a green "Fulfil Items" button. [L1119.007]</li>
+<li>Sequence for fraud-screened stores: wait for the fraud-screening tool's decision and act only on its result; confirm with the manufacturer that the product is in stock, using a stock spreadsheet or a phone call; once you know the order will ship, capture the customer's payment; send the order to the supplier by copying only the needed details from the Shopify order notification email, deleting the parts you do not need, and including the order number. <em>(Older advice, 2021-2022.)</em> [L0949.009]</li>
+</ul>
+<h2 id="zapier-automation-for-email-orders">Zapier Automation for Email Orders</h2>
+<h3 id="rules-before-you-build">Rules before you build</h3>
+<ul>
+<li>Automation works only for suppliers that accept orders by email. Suppliers that require website ordering cannot use this method. If you have 20 suppliers and 2 require website ordering, you can still automate the other 18 that accept email. [L0283.002]</li>
+<li>Manual order submission by email takes about 3 minutes per order. With 500 orders in the first year, automating this process saves roughly 25 hours per year. [L0283.001]</li>
+<li>Create one separate Zap for each supplier that accepts email orders. This ensures each order goes only to the correct supplier and prevents one order from being sent to all suppliers at once. [L0283.004]</li>
+<li>Do not use one Zap for all suppliers, and do not skip the vendor matching filter. Without vendor filtering, one customer order could be sent to all suppliers instead of only the one whose product was ordered, creating confusion and duplicate work. [L0283.013]</li>
+<li>Use the "Filter by Zapier" feature with the condition "Line item vendor text exactly matches [vendor name]". This ensures only orders containing products from a specific supplier are sent to that supplier. The vendor name must match exactly what is assigned to products in your Shopify store. [L0283.008]</li>
+<li>In Shopify, each product is assigned to a vendor in its product settings. The Zapier condition uses these vendor assignments to route orders to the correct supplier. Without vendors assigned to products in Shopify beforehand, the filter cannot identify which supplier should receive each order. [L0283.016]</li>
+<li>Forwarding orders to suppliers automatically is an advanced step. Set it up only after the store is profitable and receives several orders per day. A connector tool for this costs about $20 per month, so it should save meaningful time to justify the expense. [L0853.108] <em>(Older advice, 2021.)</em></li>
+<li>Auto-fulfillment tools (AutoDS-type) send orders instantly, which makes cancellations and returns costly once the supplier has already shipped. Some operators prefer to review orders daily before sending them to the supplier, and to connect the supplier to Shopify directly. [L1315.010]</li>
+<li>Automation tools such as AutoDS are better added later, once the store has a high order volume and the main need is automating fulfillment. Starting with them too early adds cost without solving a real problem. [L1172.019]</li>
+</ul>
+<h3 id="zap-setup-procedure">Zap setup procedure</h3>
+<ol type="1">
+<li>Log into zapier.com and create a new Zap.</li>
+<li>Name the Zap (e.g., "Automated Order Processing Vendor [Supplier Name]").</li>
+<li>Step 1 - Trigger: Select Shopify as the app.</li>
+<li>Select "New Paid Order" as the trigger event.</li>
+<li>Choose your Shopify store from the dropdown.</li>
+<li>Set Payment Status to "paid".</li>
+<li>Set Order Status to "any".</li>
+<li>Set Fulfillment Status to "any".</li>
+<li>Click "Done Editing".</li>
+<li>Add Step 2: Click the plus sign to add a new step.</li>
+<li>Click "Filter".</li>
+<li>Select "Filter by Zapier" as the app.</li>
+<li>Set the condition to "Line item vendor text exactly matches".</li>
+<li>Enter the vendor name exactly as it appears in your Shopify store (e.g., "Source A Merch").</li>
+<li>Add Step 3: Click the plus sign to add another step.</li>
+<li>Select Gmail as the app.</li>
+<li>Select "Send Email" as the action event.</li>
+<li>In the "To" field, enter the supplier's email address.</li>
+<li>In the "Bcc" field, enter your own email address to receive a copy of every order.</li>
+<li>In the "From" dropdown, select the email account you want orders sent from.</li>
+<li>In "From Name", enter a name that will appear in the supplier's inbox (e.g., "Source A Orders").</li>
+<li>In the subject line, type "Source A order PO " then click the plus icon to insert a field.</li>
+<li>Select Shopify "New Paid Order" and select "Order Name" to create a dynamic order reference.</li>
+<li>In the email body, compose your message and use the plus icon to insert dynamic fields.</li>
+<li>Insert fields for product name, quantity, SKU, customer name and address from Shopify.</li>
+<li>Format the email body to include all order details required by your supplier.</li>
+<li>Click "Continue".</li>
+<li>Toggle the switch from "off by default" to "on" to activate the Zap.</li>
+<li>Test by placing a test order in your Shopify store.</li>
+<li>Check your BCC inbox to verify the email was sent correctly to the supplier.</li>
+</ol>
+<p>[L0283.005]</p>
+<p>Zapier email template for a supplier (dynamic fields in brackets):</p>
+<pre><code>To: [supplier&#39;s email address]
+Bcc: [your email address]
+From: [your email account]
+From Name: [Your Business Name] Orders
+
+Subject: Source A order PO [Order Name]
+
+Body:
+
+Please process the order for [Quantity] [Product Name].
+
+SKU: [Line Item SKU]
+
+Shipping to:
+[Customer First Name] [Customer Last Name]
+[Customer Address]
+[Customer Address Line 2 - if applicable]
+[Customer City], [Customer State] [Customer Zip]
+
+Let me know if you have any questions.
+
+Best regards,
+[Your Name]
+[Your Business]</code></pre>
+<p>[L0283.009]</p>
+<ul>
+<li>Always BCC yourself on every order email sent by automation. This lets you verify that orders are submitted correctly and monitor the automation's performance. Review the BCC emails after a few orders to confirm everything works. [L0283.010]</li>
+<li>Zapier forwards orders only. The complete workflow includes one manual step: after Zap 1 creates a card in the paid orders list, move it manually to "sent to supplier" once you place the actual purchase order. This list shows which paid orders have been communicated to suppliers and which still need supplier contact, which helps prevent orders from being forgotten in supplier inboxes. [L0292.013]</li>
+<li>The "delivered and pending review" status is not automated. Zapier handles only the paid and shipped transitions. You or your VA must monitor carrier tracking data and supplier notifications to see when orders reach customers. Once tracking confirms delivery, move the card from shipped orders to "delivered and pending review" to trigger the customer follow-up process. [L0292.015]</li>
+</ul>
+<h2 id="order-status-tracking">Order Status Tracking</h2>
+<h3 id="status-flow-with-gmail-labels">Status flow with Gmail labels</h3>
+<ol type="1">
+<li>Order comes in and is vetted with the fraud-screening service ClearSale.</li>
+<li>Order is forwarded to the supplier, which must approve it. The order sits in an "awaiting approval" label.</li>
+<li>Once the supplier confirms stock, the order moves to "approved, awaiting shipment".</li>
+<li>Send the shipping details to the supplier and move the order to the next stage until it ships.</li>
+</ol>
+<p>[L1000.065]</p>
+<h3 id="status-stages-across-the-workflow">Status stages across the workflow</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Where it is tracked</th>
+<th>Automated?</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Paid</td>
+<td>Paid orders list (card created by Zap 1)</td>
+<td>Yes, by Zapier</td>
+<td>L0292.013</td>
+</tr>
+<tr>
+<td>Sent to supplier</td>
+<td>Moved manually after the purchase order is placed</td>
+<td>No</td>
+<td>L0292.013</td>
+</tr>
+<tr>
+<td>Shipped</td>
+<td>Shipped orders list</td>
+<td>Yes, by Zapier</td>
+<td>L0292.015</td>
+</tr>
+<tr>
+<td>Delivered and pending review</td>
+<td>Moved manually after tracking confirms delivery</td>
+<td>No</td>
+<td>L0292.015</td>
+</tr>
+<tr>
+<td>Awaiting approval / approved, awaiting shipment</td>
+<td>Gmail labels</td>
+<td>Labels set by the team during flow</td>
+<td>L1000.065</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Monitoring catches failures that would otherwise lead to lost orders and missed follow-ups. [L0236.004]</li>
+</ul>
+<h2 id="confirming-shipment-and-tracking-in-shopify">Confirming Shipment and Tracking in Shopify</h2>
+<h3 id="fulfillment-with-tracking-details">Fulfillment with tracking details</h3>
+<p>Sources name the Shopify screens differently. The steps are the same: enter the carrier and tracking number, then mark the order fulfilled.</p>
+<ul>
+<li><p>Confirming shipment when the supplier ships:</p>
+<ol type="1">
+<li>Wait for the supplier to confirm that the order has shipped, including the shipping service used and the tracking details.</li>
+<li>In the Fulfillment screen of the Shopify Admin, select the shipping service and enter the tracking number in the "Tracking Information" section.</li>
+<li>Mark the order as fulfilled, which tells the customer that the order has shipped.</li>
+</ol>
+<p>[L1291.005]</p></li>
+<li><p>Fulfilling an order in Shopify:</p>
+<ol type="1">
+<li>Click "Fulfill item".</li>
+<li>Enter the tracking number.</li>
+<li>Enter the shipping carrier used by the supplier.</li>
+<li>Click "Send shipment details to customers".</li>
+</ol>
+<p>Once an item is marked fulfilled, its status changes from unfulfilled to fulfilled, and the customer receives an email with the tracking number. [L1302.008]</p></li>
+<li><p>The order page offers duplicate, cancel and archive actions, plus print and create shipping label options. Printing and shipping labels matter only if the store owner ships the items personally. In dropshipping the supplier ships, so these are not needed. [L1302.006]</p></li>
+<li><p>Sources differ on the customer email. L1302.008 says the customer receives an email with the tracking number. L1119.006 says Shopify emails the customer that the order is being fulfilled and then archives the order. Both happen in their respective flows, so check what your customer actually receives.</p></li>
+<li><p>If a shipping app is used on top of the standard Shopify fulfillment process, write its steps into the shipping SOP so staff can follow them, including how tracking details reach the customer. [L1291.028]</p></li>
+<li><p>Give the shipping and returns SOP a version number, starting at Version 1, and increase it each time the document is changed. This shows staff which version is current. [L1291.029]</p></li>
+<li><p>When you arrange shipping yourself, add this line to the standard order message to the supplier: "Please provide the dimensions and weight of the parcel(s) so we can organise delivery." [L1291.004]</p></li>
+</ul>
+<h2 id="delegating-order-fulfillment">Delegating Order Fulfillment</h2>
+<h3 id="why-and-when-to-delegate">Why and when to delegate</h3>
+<ul>
+<li>Outsource order fulfillment early, because it is a low-skill but very time-consuming task. Check the fulfilled orders closely at first, then monitor them routinely once the process runs as planned. [L1358.016]</li>
+<li>Order fulfillment is one of the first tasks to outsource. It is time-consuming, and it is not a highly skilled task that anyone can learn from online tutorials. It is commonly the first task delegated in a dropshipping business. [L1360.016]</li>
+<li>A dedicated order processing hire should handle order management and supplier coordination, including placing supplier orders on time. Supplier and order work is a common place where a single person's workload first breaks down. [L1334.029] <em>(Older advice, 2021-2022.)</em></li>
+</ul>
+<h3 id="delegation-procedure">Delegation procedure</h3>
+<ol type="1">
+<li>Make sure everything is set up properly before handing over the work.</li>
+<li>Give the virtual assistant or team member access to your payment providers.</li>
+<li>Check at the end of each day whether orders have been fulfilled.</li>
+<li>For bundles, have the team member create a specific SKU for the variant in CJ, for example when product A is sold at full price and the same variant of product B is added as a free gift.</li>
+<li>Have them add the SKU to the store, so that incoming orders can be fulfilled.</li>
+<li>Check closely in the beginning, then reduce oversight once the routine works as planned.</li>
+</ol>
+<p>[L1360.017]</p>
+<ul>
+<li>Bundle example: product A is sold at full price and the same variant of product B is included as a gift. This requires a dedicated SKU for that variant at the supplier CJ. The team member creates this SKU, adds it to the store, and then fulfills the orders that come in. [L1360.018]</li>
+<li>Bundle setup step: for a bundle that gives product B free with product A, have the team create a specific SKU for that variant on the supplier platform, for example CJ. Add it to the store before orders come in so the bundle can be fulfilled. [L1358.017]</li>
+</ul>
+<h3 id="own-stock-fulfillment-model">Own-stock fulfillment model</h3>
+<p>Use this procedure if you hold stock yourself rather than dropshipping. It is a separate model from supplier fulfillment.</p>
+<ol type="1">
+<li>Rent a warehouse on a monthly basis and store all stock there.</li>
+<li>Keep a record of every incoming order.</li>
+<li>Have a small team pack the orders on set days, here Saturday, Monday and Wednesday mornings for about one hour each.</li>
+<li>Place the blanket inside the branded packaging provided by the box supplier.</li>
+<li>Take the packed orders to the post office each day.</li>
+<li>Mark each order as fulfilled in the order system.</li>
+<li>Stop renting the warehouse once the stock is gone.</li>
+</ol>
+<p>[L0492.023]</p>
+<h2 id="supplier-specific-procedures">Supplier-Specific Procedures</h2>
+<h3 id="suppliers-that-ship-in-bulk-to-their-warehouse">Suppliers that ship in bulk to their warehouse</h3>
+<p>If the supplier insists on bulk orders delivered to their warehouse:</p>
+<ol type="1">
+<li>Ask why they do not ship direct to customers. It is often just extra admin for them.</li>
+<li>Offer to pay an extra percentage per order or a flat few dollars per order to cover their admin costs. Some suppliers charge such a fee themselves. You can drop it later once you are making them money.</li>
+<li>Alternatively, propose shipping to a central freight forwarding location that you arrange, and ask whether that works for them.</li>
+</ol>
+<p>[L0929.026] <em>(Older advice, 2021-2022.)</em></p>
+<h3 id="shipping-responsibility-per-brand">Shipping responsibility per brand</h3>
+<ul>
+<li>In a dropshipping setup where roughly 80% of brands ship directly from the manufacturer, about 20% of brands must be shipped by the store owner. Record each brand's shipping responsibility so staff know which orders need a manual shipping step. [L1396.001] <em>(Older advice, 2021-2022.)</em></li>
+<li>Mark brands you ship yourself with a yellow label: open the brand card in Trello, go to Labels, choose Create a new label, pick yellow and add it to the card. Use the card comments to note the extra shipping steps for that brand. [L1396.002] <em>(Older advice, 2021-2022.)</em></li>
+<li>Suppliers that take uniform emailed purchase orders can be handled by an order-sending tool. Suppliers with members portals go to yourself, a team member, or a Trello board. [L0466.042]</li>
+</ul>
+<h3 id="supplier-platforms">Supplier platforms</h3>
+<ul>
+<li>Connect the store to a supplier platform such as CJ, HyperSKU or Best Dealer, depending on the product. Check open orders each evening. Place orders with the supplier using the payment method for the supplier account. Send shipping updates to customers. [L1173.025]</li>
+<li>Source D course setting: under Settings &gt; Shipping and delivery, the Custom order fulfillment section lets you add an outside fulfillment service by entering its email address. Click "Add fulfillment service" to connect a supplier or fulfillment partner that ships orders for you. [L1167.038]</li>
+</ul>
+<h3 id="free-gifts-and-promotions">Free gifts and promotions</h3>
+<ul>
+<li><p>Free-gift promotion that ships from a different source (2020):</p>
+<ol type="1">
+<li>Set up the promotion (for example, spend over 1,000 USD and get a free rash guard).</li>
+<li>Send each qualifying customer's details to a Google Sheet or directly to the supplier using an automation.</li>
+<li>The gift ships separately from the main order.</li>
+</ol>
+<p>[L1277.042] <em>(Older advice, 2020.)</em></p></li>
+<li><p>A free gift can be sold as a bundled SKU with the supplier. Ask the supplier to ship the product and gift together as one combined item (for example, CJ can create a unique SKU for two products). This avoids a gift app. It works only if there is no sizing conflict for the gift. [L1363.035]</p></li>
+</ul>
+<h3 id="custom-sizes-and-size-conversion">Custom sizes and size conversion</h3>
+<ul>
+<li>For custom-sized products, the store must capture each buyer's individual measurements, such as width and height, on the order so the supplier can produce the item. Product option apps can collect these values. [L0467.037] <em>(Older advice, 2019.)</em></li>
+<li>For clothing and shoes, you can convert sizes on the back end. When a customer orders a size, the supplier ships a size that fits better, such as one size up (for example, US 9 ordered, US 9.5 or 10 shipped). The label will not match the order, but the item fits. This can be set up through instructions to a private supplier or inside the DSers or CJ Dropshipping apps. [L1128.014]</li>
+</ul>
+<h3 id="personalized-products">Personalized products</h3>
+<ul>
+<li><p>Sending a customer personalization such as an engraved name to the supplier:</p>
+<ol type="1">
+<li>Ask the fulfillment provider which line item properties they need on the order and obtain their exact field names from their API documentation.</li>
+<li>Define each property in Shopify so the customer's input is captured on the product page before checkout.</li>
+<li>Check that the property appears on the Shopify order.</li>
+<li>Have a developer map the property into the supplier's endpoint so the value is sent with the order.</li>
+</ol>
+<p>[L0709.001]</p></li>
+<li><p>Many suppliers provide only an API document rather than a ready-made integration. Connecting a custom field to the supplier's order usually needs a developer to read the endpoint and send the parameter correctly. [L0709.046]</p></li>
+<li><p>On personalized products, vague or incomplete customization instructions can lead to wrong prints or wording. Send the exact text and every required detail, and confirm them before the order goes into production. [L1108.043]</p></li>
+<li><p>Customization workflow for personalized products:</p>
+<ol type="1">
+<li>Let the customer enter the personalization, such as a first name, on the product page.</li>
+<li>Hire a designer, for example on Fiverr, to create the design from the customer's information.</li>
+<li>Send the design to the customer for approval before printing.</li>
+<li>After approval, send the order to the fulfillment provider to print and ship the product.</li>
+</ol>
+<p>[L1172.016]</p></li>
+</ul>
+<h3 id="suppliers-where-you-arrange-shipping">Suppliers where you arrange shipping</h3>
+<ul>
+<li>A supplier that ships with your shipping account requires a prepayment and a shipment created on your account, as set out in the 2023 procedure. For UPS or FedEx, give the supplier your account number. For freight, pay the freight quote and send the BOL to the supplier. [L0835.034]</li>
+<li>Add the parcel dimensions and weight request to the standard order message to these suppliers. [L1291.004]</li>
+</ul>
+<h3 id="suppliers-that-require-sales-or-order-checks-before-shipping">Suppliers that require sales or order checks before shipping</h3>
+<ul>
+<li>Fraud screening: wait for the screening decision before acting, and place the order with the supplier only after payment capture (see the checklist above). [L0949.009]</li>
+<li>Medium or high risk: before capturing payment, send the order to the business owner for direction. [L1119.006]</li>
+</ul>
+<h3 id="slow-suppliers">Slow suppliers</h3>
+<ul>
+<li>Some suppliers take about a week to process a purchase order even when you pay quickly. Pay by ACH to speed it up, but the delay can still happen. [L1472.032]</li>
+<li>Accept a slower process from a supplier with good products and margins, and keep customers informed. [L1472.034]</li>
+</ul>
+<h2 id="quality-monitoring">Quality Monitoring</h2>
+<ul>
+<li>Check supplier fulfillment timing by sampling random orders regularly, because slow fulfillment damages the whole funnel. Sample random orders and check that the supplier ships on time, since delays affect performance and the whole funnel. [L1259.057, L1260.057]</li>
+<li>Payment processors may release money late when fulfillment proof is missing, so ship and track quickly. [L1512.040]</li>
+</ul>
+</article><nav class="pn"><a href="../../03-suppliers-and-fulfillment/14-freight-heavy-items-and-white-glove-delivery/"><span class="k">&larr; Previous</span><span class="v">Freight, heavy items and white glove delivery</span></a><a class="nx" href="../../03-suppliers-and-fulfillment/16-inventory-stock-outs-and-backorders/"><span class="k">Next &rarr;</span><span class="v">Inventory, stock-Outs and backorders</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

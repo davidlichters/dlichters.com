@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Theme selection, installation and migration | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.7: Theme selection, installation and migration.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/07-theme-selection-installation-and-migration/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Theme selection, installation and migration | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.7: Theme selection, installation and migration."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/07-theme-selection-installation-and-migration/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/07-theme-selection-installation-and-migration/">Plain version</a></div><h1>4.7 Theme selection, installation and migration</h1><article><h2 id="theme-basics-and-where-themes-sit-in-shopify">Theme basics and where themes sit in Shopify</h2>
+<ul>
+<li>A Shopify theme controls how the store appears, how pages are structured, and how customers interact with the site. Shopify provides the backend functionality, and the theme provides the presentation and user-experience layer. [L0071.001]</li>
+<li>The theme controls the storefront that visitors see and how it behaves. Products and store content stay the same when the theme changes, and themes are installed as ZIP files through the Shopify admin. [L0974.007]</li>
+<li>Free and paid themes both change how the storefront looks and functions, while products and store content stay the same. A theme is therefore a separate layer from the store's catalog and settings. [L0974.009]</li>
+<li>A theme sets the overall design, the page structure, and how far the store can be customized. Any installed theme can be changed to fit the store. A theme is a structure and does not include product images or content. [L0975.001]</li>
+<li>A developer builds the base theme and supplies all site code. The store owner adds branding (colors, images, a few settings) through the theme editor instead of coding from scratch. [L1292.002]</li>
+<li>A theme provides the basic site layout and structure. After installing it, add your own branding, colors, and fonts. [L0912.009]</li>
+<li>Themes are managed under Online Store &gt; Themes (the path is written as Sales channels &gt; Online store &gt; Themes in one source). The page shows the active theme and an Add theme button, and the Theme library lower down lists all uploaded themes. [L1292.001, L0975.002]</li>
+<li>The Themes page has a Visit theme store link near the bottom. The theme store lists free and paid themes, and paid themes are generally better built than free ones. [L0975.004]</li>
+<li>The Themes page also links to Free themes and the Shopify Theme Store. [L1292.001]</li>
+<li>The Customize button opens the theme editor, where most store layout and branding work happens. [L1292.001, L1292.011]</li>
+<li>An unpublished theme shows Customize and Actions buttons. Use Customize only when editing. [L1292.011, L1292.008]</li>
+<li>A store can hold several uploaded themes, but only one can be published and shown to visitors. [L0975.012]</li>
+</ul>
+<h2 id="the-default-theme-on-a-new-store">The default theme on a new store</h2>
+<ul>
+<li>New accounts receive the free theme Dawn, which is the active theme from the start and stays active until another theme is published. [L0975.003]</li>
+<li>Dawn is Shopify's free default theme and a common base for a first store. [L0552.055]</li>
+<li>The course store in one source used Dawn. The source advised keeping the store simple at first, because the offer and product images matter more than design complexity. [L0492.026]</li>
+<li>Older (2021-22): the course material of that period says a new store starts with the free theme Debut, which shows only placeholder text and images with no branding, so it must be customized before launch. [L1292.005]</li>
+<li>Where sources disagree on the default, use Dawn for current accounts and Debut only for stores described in the older 2021-22 material. [L0975.003, L1292.005]</li>
+<li>The free default theme without customization looks very basic. Changing only the header while leaving default colors in other sections creates an inconsistent look that signals a beginner. [L0656.016]</li>
+</ul>
+<h2 id="choosing-a-theme-criteria">Choosing a theme: criteria</h2>
+<ul>
+<li>Start with a lightweight theme for site speed. The 2022 advice recommended the Charlotte theme (older). [L0272.011]</li>
+<li>Speed is one of the first things to check when comparing themes. Check a theme on stores that already run it and run speed tests on those stores before buying. [L0853.006]</li>
+<li>Check when the theme was last updated and how long its developer has supported it. Themes untouched for four or five years can produce errors with the current Shopify framework. (Older, 2021.) [L0853.007]</li>
+<li>Use a mobile-responsive theme, because most purchases now happen on phones. A web-only theme loses sales to competitors and needs a full rebuild. [L0826.012]</li>
+<li>Mobile traffic can be 80 to 90 percent of visits, so the theme should work well on phones out of the box. Mobile-only design changes that differ from desktop need a developer, so make them only when a specific error or problem appears. [L1287.023]</li>
+<li>Check every key page at laptop-width screens as well as desktop and mobile. If the theme stops at a fixed maximum width, the side margins stay cramped and the white space that keeps the page readable disappears. Choose a theme that scales to wide screens. (Older, 2021-22.) [L0409.051]</li>
+<li>Prefer a theme with minimal, clean code. Theme and app code quality varies, and some popular-looking themes are coded inefficiently and slow the page. (Older, 2021-22.) [L1266.026]</li>
+<li>Choose a theme with built-in features so fewer third-party apps are needed, since fewer apps generally means faster pages and fewer plugins to maintain. (Older, 2019.) [L1086.060]</li>
+<li>A premium theme is worth choosing over a free one when it already includes conversion elements, because the store then needs fewer paid apps to provide the same features. [L1330.001]</li>
+<li>Before buying a paid theme, check that it supports the features you need, such as bundles with variants and free gift offers. Themes that lack these features may force a costly workaround. [L1173.019]</li>
+<li>Give the person building the store clear written requirements. Make sure the theme is installed correctly and reviewed before launch, because a poorly installed theme can make a store look messy. [L1173.020]</li>
+<li>Choose the base theme with your planned amount of custom work in mind. A simpler base with fewer built-in features can be easier to customize heavily than a feature-rich theme. (Older, 2021-22.) [L0949.066]</li>
+<li>A dropshipping-focused theme can be more efficient than comparing many general themes, because the theme affects both conversion and setup effort. Treat claims about higher conversions as unverified until tested on your own store. [L0974.010]</li>
+<li>Manhattan is built specifically for the high-ticket dropshipping model and is optimized for higher conversions and supplier-ready presentation. It includes features that usually require paid apps, which reduces setup cost and complexity compared with choosing and buying individual apps. [L0071.002]</li>
+<li>The higher-conversion claim for Manhattan is a vendor statement. Test it on your own store. [L0974.010]</li>
+<li>A dropshipping-focused theme (2020, older) can be customized in every element. The same theme works for an elegant brand look or a playful one, and it is a free download for stores built on the blueprint. [L0852.116]</li>
+<li>Pick a theme you expect to be happy with long term, because switching themes costs time that could go to revenue-generating work. Themes from established vendors that do what you need are a sound choice. (Older, 2021.) [L0853.088]</li>
+<li>Buy themes only from the Shopify Theme Store or from established theme vendors. Unverified theme code can contain malicious code and cause problems later. (Older, 2021.) [L0853.087]</li>
+<li>Choose a theme from the Shopify theme store or from a trusted, certified developer. A developer who builds themes full time, with a team of about 3 to 5 people, is a stronger choice than someone who sells a theme as a side project. [L0390.040]</li>
+<li>Before adopting a third-party theme, check community discussions about the vendor's support quality, because poor support can leave customizations broken. Search the store owners' Facebook group for the theme name to see what other users report. (Older, 2019.) [L0356.066]</li>
+<li>Shopify planned to separate theme design from store content, so a theme could be replaced without rebuilding all content. Once available, this would make theme updates faster and reduce the need for third-party page builders such as PageFly or Shogun, which may become less useful as native features improve. [L0390.039]</li>
+<li>A brand that takes branding seriously usually needs a custom build from a design file, for example a pixel-perfect conversion of a Figma design into a Shopify store. Prototyping in a page builder first and then having a developer make a polished version is a common approach among high-revenue brands. [L0709.006]</li>
+<li>A plug-and-play store theme gets a high-converting store running fast instead of building a website from scratch. It reduces development time so the focus can move to marketing and sales. [L1251.030]</li>
+<li>Shopify beginners do well with a theme that has many built-in features and handles most of the layout work. Its graphics are simple to make and upload and need little design skill. Other themes need their own graphic sizes, so confirm the chosen theme first. [L0342.038]</li>
+<li>For beginners without web design experience, the Source A theme is a strong choice because it has many features and needs little design work from the merchant. Its graphics are simple to upload because the theme handles much of the layout. [L1045.002]</li>
+<li>Free Shopify themes suitable for beginners include Sense, Refresh and Dawn. They are found under Online Store &gt; Themes and can be used right after sign-up. [L1313.003]</li>
+<li>The course material pointed to Refresh as a starting theme for a first build. [L0552.055]</li>
+<li>Winning Hunter's Sales Tracker Details page shows which Shopify theme a competitor store runs, next to its launch date and shop URL. Note the theme when you study a competitor's build, because it shows what a working store layout looks like on that platform. [L1164.050]</li>
+</ul>
+<h2 id="named-themes">Named themes</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Status and price</th>
+<th>Use and notes</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manhattan (Source A, version 2023)</td>
+<td>Members only. The 2023 Theme Store listing note is dated 9 November 2023.</td>
+<td>Built for high-ticket dropshipping. More user-friendly and somewhat faster than Charlotte. A new store should use it.</td>
+<td>[L0975.005, L0966.061, L0081.001]</td>
+</tr>
+<tr>
+<td>Charlotte (Source A)</td>
+<td>Download from the members area, not from the theme store.</td>
+<td>Fully capable. Loads in about 645 ms. Used for the stores in the program. Switching from it is optional.</td>
+<td>[L0854.066, L0806.035, L1114.074, L0975.006]</td>
+</tr>
+<tr>
+<td>Dawn</td>
+<td>Free default.</td>
+<td>Supports Shopify 2.0 drag-and-drop sections. (Older, 2021-22 source.)</td>
+<td>[L0975.003, L0552.055, L0949.065]</td>
+</tr>
+<tr>
+<td>Debut</td>
+<td>Free, older default.</td>
+<td>Shows placeholder content and no branding. Stays listed after replacement as "Not customized yet."</td>
+<td>[L1292.005, L1292.040]</td>
+</tr>
+<tr>
+<td>Venture</td>
+<td>Free.</td>
+<td>Compared against paid themes in the store listing.</td>
+<td>[L1292.007, L1292.039]</td>
+</tr>
+<tr>
+<td>Refresh, Sense</td>
+<td>Free.</td>
+<td>Beginner-friendly starting themes.</td>
+<td>[L1313.003]</td>
+</tr>
+<tr>
+<td>Ecomify Lite / Pro</td>
+<td>Lite is free. Pro was a one-time payment of $249 at the time of the lesson.</td>
+<td>Lite lacks the line item property feature, which is part of Pro. Upgrades to the next major version were announced as about $50.</td>
+<td>[L0709.004, L0709.017]</td>
+</tr>
+<tr>
+<td>Shrine Pro</td>
+<td>Premium. One license per store.</td>
+<td>Chosen because it has the most sections of the Shrine versions.</td>
+<td>[L1330.004]</td>
+</tr>
+<tr>
+<td>Superstore (Pixel Union)</td>
+<td>Premium. Arrives as a zip; the version suffix (for example superstore-v3) changes with releases.</td>
+<td>Demo homepage built from editor sections.</td>
+<td>[L1292.030, L1310.036]</td>
+</tr>
+<tr>
+<td>Avenue</td>
+<td>Paid. Shown at 180 USD during a spring sale.</td>
+<td>Check the current price on the store page.</td>
+<td>[L1292.039]</td>
+</tr>
+<tr>
+<td>Parallax</td>
+<td>Listed at $180 in the Theme Store at the time of the lesson.</td>
+<td>Demo showed full-screen video blocks, scrolling image backgrounds and large decorative images. Paid themes are not automatically faster or more usable.</td>
+<td>[L1098.024]</td>
+</tr>
+<tr>
+<td>Turbo</td>
+<td>Recommended.</td>
+<td>Strong support.</td>
+<td>[L1274.069] (Older, 2018.)</td>
+</tr>
+<tr>
+<td>Shoptimize</td>
+<td>Listed in the same source.</td>
+<td>Suits direct-response stores but looks less premium, which can limit perceived brand quality.</td>
+<td>[L1274.069] (Older, 2018.)</td>
+</tr>
+<tr>
+<td>Out of the Sandbox themes</td>
+<td>Roughly $300 to $500; Flex around $500.</td>
+<td>Recommended for large-inventory stores when the budget allows. All were converted to Online Store 2.0 at the time of recording.</td>
+<td>[L0921.009, L0245.028]</td>
+</tr>
+<tr>
+<td>Source A Charlotte</td>
+<td>Mid-range.</td>
+<td>Works as an alternative to premium Out of the Sandbox themes for a professional look without the highest price.</td>
+<td>[L0921.034]</td>
+</tr>
+<tr>
+<td>Shop (Pixel Union)</td>
+<td>Retail around $300.</td>
+<td>Budget for this cost if the theme is not included with a course or purchase.</td>
+<td>[L0912.015]</td>
+</tr>
+<tr>
+<td>the Course C theme</td>
+<td>Added to an existing store.</td>
+<td>See the procedure below.</td>
+<td>[L0298.024]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Shopify's Charlotte-era advice on speed (older, 2020) said the Source A Shopify theme was faster than most free themes by default. Paid Out of the Sandbox themes were described as high-quality but expensive. [L0245.028]</li>
+<li>The Online Store 2.0 theme that replaces several paid apps with built-in functions reportedly loads in under two seconds. It was still in beta at the time (older, 2021). [L1112.079]</li>
+</ul>
+<h2 id="free-versus-paid">Free versus paid</h2>
+<ul>
+<li>A free theme is enough for conversions unless a paid theme has built-in functionality you cannot get elsewhere. Beautiful design alone does not drive sales, and speed plus trust matter most. (Older, 2021.) [L0834.041]</li>
+<li>Premium paid third-party themes, some costing around 500 dollars, are not needed to start. A free theme is enough, and the theme is not what makes a store profitable. (Older, 2021.) [L0801.095]</li>
+<li>Premium themes are worth the cost because they are highly customizable, load fast and come with strong support. A store with many products benefits most from these features. [L0921.010]</li>
+<li>Out of the Sandbox themes are recommended for large-inventory stores when the budget allows. [L0921.009]</li>
+<li>Upgrading to a paid premium theme was seen as sensible once the store earns good revenue. One source bought a premium theme for about 200 USD with a 20 USD discount. [L0694.029]</li>
+<li>Premium Shopify themes from paid developers can retail for around $300. Budget for this if the theme is not included free with a course or purchase. (Older, 2021-22.) [L0912.015]</li>
+<li>Off-the-shelf premium themes are a far cheaper route than a fully custom theme, which can cost thousands of dollars. [L1292.030]</li>
+<li>Free line item property code snippets exist online and can be added to a Shopify theme by hand. [L0709.004]</li>
+<li>Ecomify Pro was a one-time payment of $249 at the time of the lesson, while Lite was free. Upgrades to the next major version were announced as small fees of about $50 instead of a new $249 payment. [L0709.017]</li>
+<li>Check the current price on the store page before buying. Sale prices can differ from standard prices. [L1292.039]</li>
+<li>Where sources disagree on premium prices, the values differ by source and date: about 180 USD for a Theme Store listing (older 2021-22 material); about 300 USD for a comparable premium theme (same period); about 200 USD for a premium theme bought at a discount (Source C); 300 to 500 USD for Out of the Sandbox themes (Source A); and about 500 USD for the high-end paid themes that a free theme replaces. Treat each figure as the price at the time of its source. [L1292.007, L0694.029, L0912.015, L0921.009, L0801.095]</li>
+</ul>
+<h2 id="where-sources-disagree">Where sources disagree</h2>
+<ul>
+<li>Manhattan access: one note dated 9 November 2023 tells you to find and download Manhattan from the Shopify Theme Store. Other units say Manhattan is available only to members of the program. Use the members' download link from the lesson. [L0081.001, L0975.005, L0071.004]</li>
+<li>Charlotte versions: Charlotte 1.0 was the original download from the blueprint's module 3, lesson 3.1 [L0665.028]. Version 1.3 is the latest downloadable version, released 21 February 2022 [L0963.035]. Earlier versions can be updated to it as a new theme [L0963.035].</li>
+<li>Source A version: the newest Source A theme was last updated 12 December 2022 [L0804.039]. A later source named version 1.3 as current and said the course downloads carry it [L0941.037].</li>
+<li>Charlotte or Manhattan for an existing store: a new store should use Manhattan, but an existing store on Charlotte does not need to be switched. [L0966.061, L0975.006, L1114.030]</li>
+<li>Speed: older advice (2022) recommended Charlotte for speed. Later advice says Manhattan is somewhat faster than Charlotte. Use the newer comparison when choosing for a new store. [L0272.011, L0966.061]</li>
+<li>Premium value: for large-inventory stores, premium themes are worth the cost. For a starting store, a free theme is enough. Use the premium argument only when the store has the volume or features to justify it. [L0921.010, L0834.041, L0801.095]</li>
+<li>Publishing a new theme: publish straight away only on a brand-new store with no other active theme in use. On a store that already has visitors and sales, keep the theme unpublished until setup is finished. [L0975.015, L0975.014, L0975.010]</li>
+<li>Password-protected stores: a new store can be published while still password protected, so visitors cannot see the live site until a custom domain is connected. [L1292.010, L1330.005]</li>
+</ul>
+<h2 id="getting-the-theme-file">Getting the theme file</h2>
+<ul>
+<li>Done For You: if the store was set up through a done-for-you option, the team installs Manhattan for you. Skip the remaining build steps until you receive confirmation. [L0071.003]</li>
+<li>Done For You: the theme is already installed by the provider, so the manual upload and publish steps are not needed. [L0974.006]</li>
+<li>Receive the theme file from the course provider before uploading. It arrives as a zip archive by email. [L1292.028]</li>
+<li>Charlotte is not in the Shopify theme store. Download it from the members area. (Older, 2022.) [L0854.066]</li>
+<li>The newest Source A theme version is in the members area, module 3, lesson 3.1. It was last updated 12 December 2022. [L0804.039]</li>
+<li>The older Source A theme still works and does not need an upgrade. The theme is private and not in the Shopify app store, so the newest version must come from the course downloads. [L0941.037]</li>
+<li>Download the theme as a zip file and upload the zip directly. Extracting the zip and uploading its folders will not work. [L1283.090]</li>
+<li>Shopify accepts theme files only in.zip format, so the file has to end in.zip before you upload it. Uploading a folder or another format will not work. [L0975.007]</li>
+<li>The Shopify theme file must be a zip archive with a maximum size of 50 MB. An unzipped folder fails. (Older, 2021-22.) [L1292.009]</li>
+</ul>
+<h3 id="download-procedure-for-manhattan">Download procedure for Manhattan</h3>
+<ol type="1">
+<li>Click the Manhattan theme download link provided in the lesson.</li>
+<li>Review the theme details on the page if desired.</li>
+<li>Scroll to the bottom of the page.</li>
+<li>Check the box to confirm your membership status.</li>
+<li>Click Download Manhattan to download the ZIP file to your computer.</li>
+<li>Log into your Shopify account.</li>
+<li>Click Online Store in the main menu.</li>
+<li>Click Themes.</li>
+<li>Click Import Theme in the top right corner.</li>
+<li>Click Upload a zip file.</li>
+<li>Upload the Manhattan ZIP file by clicking Add File to select it from your computer, or drag and drop the file.</li>
+<li>Click Upload File.</li>
+<li>Wait for the installation to complete; Manhattan will appear in your Theme Library.</li>
+<li>Click the Publish button on the Manhattan theme (note: newly uploaded themes are not automatically published).</li>
+<li>Confirm that Manhattan is now set as your active theme and appears at the top of your theme list.</li>
+</ol>
+<p>[L0071.004]</p>
+<h3 id="theme-store-download-procedure-dated-9-november-2023">Theme store download procedure (dated 9 November 2023)</h3>
+<ol type="1">
+<li>Go to the Shopify Theme Store at <a href="https://themes.shopify.com/">https://themes.shopify.com/</a>.</li>
+<li>Find and download the Manhattan theme (current as of November 9th, 2023).</li>
+<li>Upload the theme to your Shopify store using Shopify's official documentation at <a href="https://help.shopify.com/manual/using-themes/install-themes#upload-theme">https://help.shopify.com/manual/using-themes/install-themes#upload-theme</a>.</li>
+</ol>
+<p>[L0081.001]</p>
+<h2 id="fixing-a-zip-download-on-a-mac">Fixing a zip download on a Mac</h2>
+<ul>
+<li>On a Mac, downloading a.zip file can automatically extract it into a folder. The folder shows as a blue folder icon instead of a zip icon. Uploading that folder fails because Shopify needs the.zip file. [L0975.008]</li>
+<li>Older (2021-22): if macOS unzipped the theme, re-zip the folder, since other folder types fail to upload. [L1292.008]</li>
+<li>Fix a Mac download that was extracted into a folder:</li>
+</ul>
+<ol type="1">
+<li>Right-click the blue folder.</li>
+<li>Choose Compress with the theme file name (for example Source A Manhattan) from the menu.</li>
+<li>Use the new.zip file that macOS creates for the upload.</li>
+</ol>
+<p>[L0975.009]</p>
+<h2 id="uploading-a-zip-file">Uploading a zip file</h2>
+<ul>
+<li>Upload a theme to Shopify (current procedure):</li>
+</ul>
+<ol type="1">
+<li>Go to Online Store &gt; Themes and open the Theme library.</li>
+<li>Click Add theme.</li>
+<li>Click Upload zip file.</li>
+<li>Drag the.zip file into the upload area or select it, then click Upload file.</li>
+<li>Wait while the message Installing theme appears; this takes about 30 seconds while Shopify processes the file.</li>
+<li>Check that the new theme appears in the Theme library with its name and version number, for example Manhattan version 2023.</li>
+<li>Click Publish only if the store has no active theme in use yet, which is the case for a brand-new store.</li>
+</ol>
+<p>[L0975.010]</p>
+<ul>
+<li>Processing a theme file takes about 30 seconds, and the progress message Installing theme appears during this time. [L0975.013]</li>
+<li>Large theme files take a while to upload. Wait until the theme shows in the theme library and the installation has finished before clicking Publish. [L0974.005]</li>
+<li>A theme uploaded to Shopify is unpublished by default. Uploading it does not change what visitors see, so the new theme can be edited safely before it is published. [L0975.011]</li>
+<li>Uploading a theme does not activate it. The previously published theme, usually the default Shopify theme, stays live until you click Publish on the new theme. [L0974.004]</li>
+</ul>
+<h3 id="theme-admin-upload-procedure-course-version">Theme admin upload procedure (course version)</h3>
+<ol type="1">
+<li>Log in to your Shopify account.</li>
+<li>In the left navigation, click Online store, then Themes.</li>
+<li>Click Import theme in the top right corner.</li>
+<li>Click upload a zip file, then either click add file and select the ZIP file, or drag the ZIP file into the upload area.</li>
+<li>Click upload file and wait for the upload to finish.</li>
+<li>Find the new theme in the theme library and click Publish on it.</li>
+</ol>
+<p>[L0974.001]</p>
+<ul>
+<li>Online store &gt; Themes &gt; Import theme (top right) &gt; upload a zip file &gt; add file or drag the ZIP file in &gt; Upload file. The uploaded theme then appears in the theme library below the active theme. [L0974.002]</li>
+<li>Publish the uploaded theme in the theme library to make it the live theme. Publishing replaces the currently active theme, such as the free default Shopify theme, with the uploaded one. [L0974.003]</li>
+<li>Import theme is the same action as Upload theme or Add theme &gt; Upload zip file in the other sources. [L0974.001, L0975.010, L0934.091, L1292.008]</li>
+</ul>
+<h3 id="upload-procedure-older-2021-22">Upload procedure (older, 2021-22)</h3>
+<ol type="1">
+<li>In the Shopify admin, go to Online Store &gt; Themes.</li>
+<li>Click Upload theme under Theme library.</li>
+<li>Click Add file and select the theme file, which must be a.zip archive; re-zip the folder if it was automatically unzipped by macOS, since other folder types fail to upload.</li>
+<li>Click Upload file and wait for the upload to finish; the theme is added unpublished by default (maximum file size 50 MB).</li>
+<li>Click Actions on the uploaded theme (use Customize only when editing); do not change the code editor settings in Actions at this stage.</li>
+<li>Click Publish, then confirm with Publish again; this replaces the current theme and makes it the active theme.</li>
+<li>Preview the store using the eyeball icon to check the change.</li>
+</ol>
+<p>[L1292.008]</p>
+<h3 id="add-theme-procedure-2023">Add theme procedure (2023)</h3>
+<ul>
+<li>Upload a new theme in the Shopify admin under Themes, using Add theme and then Upload. It stays unpublished and invisible to customers until you click Publish, so you can customize it safely first. [L0934.091]</li>
+<li>Setting up a new theme without disturbing the live store:</li>
+</ul>
+<ol type="1">
+<li>In Shopify admin, open Themes.</li>
+<li>Click Add theme and then Upload theme.</li>
+<li>Customize the uploaded theme while it is unpublished.</li>
+<li>Click Publish only when the store is ready.</li>
+</ol>
+<p>[L0934.158]</p>
+<h3 id="upload-and-check-procedure-2025">Upload and check procedure (2025)</h3>
+<ul>
+<li>Uploading a new theme in Shopify: import the theme so it lands in the theme library. Make all customizations there, then click Publish. The published theme replaces the live one and the old theme moves into the library. [L0472.033]</li>
+<li>Check the active theme name in Shopify under Online Store &gt; Themes. [L0472.034]</li>
+</ul>
+<h3 id="source-d-store-build-2026">Source D store build (2026)</h3>
+<ol type="1">
+<li>Buy the theme license on the vendor site and choose the number of licenses needed for the store.</li>
+<li>Download the theme file that the vendor emails after checkout.</li>
+<li>In Shopify admin go to Online Store &gt; Themes and choose Upload theme, selecting the zip file.</li>
+<li>Uploaded themes are unpublished by default, so open the theme and choose Edit theme or Publish once it is ready.</li>
+<li>Enter the license number from the vendor into the review app (Judge.me) so reviews work.</li>
+<li>Adjust header, home page, collection and product page sections in the theme editor.</li>
+<li>Set logo, colors, typography and button styling under Theme settings.</li>
+<li>Check the layout in mobile preview before publishing.</li>
+</ol>
+<p>[L1188.001]</p>
+<ul>
+<li>A theme uploaded as a zip file is placed under Online Store &gt; Themes as an unpublished draft. It must be published before visitors see it. Use the Edit theme button on the draft to open the editor. [L1188.002]</li>
+</ul>
+<h3 id="adding-course-c-theme-to-an-existing-store">Adding the Course C theme to an existing store</h3>
+<ul>
+<li>Online Store &gt; Add Theme &gt; Upload ZIP file. No new Shopify account is required. [L0298.024]</li>
+</ul>
+<h2 id="draft-versus-published">Draft versus published</h2>
+<ul>
+<li>Install a new theme as unpublished, adjust it while unpublished, then publish it when ready. Installing a theme directly onto a live store can break the site. (Older, 2021.) [L0247.088]</li>
+<li>When a new theme is uploaded it goes live only as a draft, so the current live store is not changed. The draft can be customized and then published when it is ready. (2024.) [L0360.019]</li>
+<li>A new Shopify theme is installed as a draft that only you can see. Design it in the draft, then publish it. Installing a new theme does not carry over the design edits of the old theme. Apps and products do carry over. (Older, 2021.) [L0834.038]</li>
+<li>Upload a new theme as a draft first, so the live store is not affected while you check it. [L0470.053]</li>
+<li>Uploading a theme as a draft does not change the live store. If the new theme is published by mistake, you can republish the old theme to revert. Themes do not update automatically in the background once installed. [L0804.040]</li>
+<li>Publishing a new theme on a store that already gets traffic and sales, before its customization is finished, can change the live site unexpectedly. Finish setup and customization before publishing. [L0975.014]</li>
+<li>Publish a new theme right away only when the store is brand new and no other theme besides the default free one is in use. If the store already has visitors and sales, keep the new theme unpublished until the remaining setup steps are complete. [L0975.015]</li>
+<li>Publishing a new theme replaces the current active theme immediately. Until a custom domain is connected, the store can remain password protected so visitors cannot see the live site. [L1292.010]</li>
+<li>The replaced theme stays listed in the Theme library. It can be published again if the new theme needs to be reverted. [L1292.040]</li>
+<li>Shrine Pro setup includes publishing the theme while the store is still password protected. This is the step where the theme goes live behind the password. [L1330.005]</li>
+<li>Do not change a working theme just to upload products. Uploading products is the same process for any theme, so a redesign suggested for that reason is unnecessary. [L0808.024]</li>
+<li>A live store with traffic does not need to switch to a newly released theme. Upgrades only improve usability and should be adopted when convenient, not as an urgent change. [L1114.030]</li>
+<li>Switching themes is not urgent. An older Source A theme can continue to be used until you have time to change it. Changing to a newer theme later will not break the store if it is not published before testing. [L0934.092]</li>
+<li>Changing the theme often disrupts traffic and conversions, so design changes should be made deliberately and mostly during a later conversion-rate optimization phase rather than repeatedly. (Older, 2021-22.) [L1292.004]</li>
+<li>Avoid editing the site's code early on. Custom code changes are worth it only once the business is selling and growing, and the theme editor covers the launch phase. (Older, 2021-22.) [L1292.003]</li>
+<li>Test a new theme without changing the live store:</li>
+</ul>
+<ol type="1">
+<li>Go to Online Store &gt; Themes.</li>
+<li>Add the theme zip to the theme library. It appears as a draft and does not change the store.</li>
+<li>Click Customize on the draft and edit and preview it.</li>
+<li>When it is ready, click Publish to make it the live theme.</li>
+</ol>
+<p>[L0665.026] (Older, 2022.)</p>
+<ul>
+<li>Test a new theme without going live (2023):</li>
+</ul>
+<ol type="1">
+<li>Download the theme zip file.</li>
+<li>Upload it in Shopify admin as an unpublished theme.</li>
+<li>Preview it and make changes.</li>
+<li>Keep the current live theme until you decide to publish the new one, at which point the current theme becomes a draft.</li>
+</ol>
+<p>[L1283.091]</p>
+<ul>
+<li>Publish a new theme after customizing it (2025):</li>
+</ul>
+<ol type="1">
+<li>Upload the new theme, where it is saved as a draft.</li>
+<li>Open Customize for the draft theme and change colors, the logo and other settings.</li>
+<li>When satisfied, click Publish.</li>
+<li>The new theme becomes the main theme and the old theme moves to the theme library as a draft. Menus, products and pages stay in place, so you do not need to recreate them.</li>
+</ol>
+<p>[L1287.026]</p>
+<h2 id="switching-themes">Switching themes</h2>
+<ul>
+<li>Switching themes requires redoing customizations such as colors and homepage images. Products do not need to be rebuilt. (Older, 2021.) [L0247.089]</li>
+<li>Switching themes takes only a few clicks, but custom colors and custom code do not carry over automatically. The effort depends on how far the store has been changed from the default theme. (Older, 2019.) [L0960.072]</li>
+<li>When switching themes, products, collections, blog posts and pages are kept. Logo, menus, colors, fonts, homepage images and homepage layout must be set again. (Older, 2022.) [L0665.027]</li>
+<li>Switching themes changes the look, not the data. Products, pages and blogs remain. The new theme needs only skinning (colors, logos, images) before publishing. Test the new design in draft mode first. (2024.) [L0806.034]</li>
+<li>Switching themes does not change your products, but theme customizations such as layout changes must be applied again in the new theme. (Older, 2021.) [L0968.034]</li>
+<li>A theme switch to a newer Shopify theme does not require rebuilding the store. Content pages and product pages carry over, but colors and image placements need to be reset in the new theme. (2023.) [L1114.029]</li>
+<li>A new theme migration keeps products, pages and content, but cosmetic items must be reset. These include color scheme, logo, homepage images and layout. (Older, 2021.) [L1112.043]</li>
+<li>Switch an established store to a new theme only if you need functions it offers. New stores can start on the newest version, while stores already running well can wait for the final release. (Older, 2021.) [L1112.042]</li>
+<li>The Charlotte theme is not expected to be replaced soon, and no major update is planned in the near term. A new theme was expected around a year out, and the current one stays supported. (Older, 2022.) [L1281.059]</li>
+<li>Changing themes (for example Charlotte to Manhattan) has no one-click migration. The practical method is to keep both theme editors open side by side, on two monitors or in a split screen, and move settings over manually. (2024.) [L0805.036, L0805.062]</li>
+<li>Migrating to a new theme (2021):</li>
+</ul>
+<ol type="1">
+<li>Install the new theme as a draft so the live store is unchanged.</li>
+<li>Copy over the color scheme, logo, homepage images and layout by hand. Products, pages and content carry over automatically.</li>
+<li>Keep the published theme and the draft theme open side by side and transfer things one by one.</li>
+</ol>
+<p>[L1112.040]</p>
+<ul>
+<li>Install a new theme (for example Manhattan) on an existing Shopify store without losing content (2024):</li>
+</ul>
+<ol type="1">
+<li>Download the theme from the blueprint's theme lesson.</li>
+<li>Upload it to Shopify. It is saved as a draft and does not replace the live theme.</li>
+<li>In the draft, set the color scheme, logo, images, homepage and collection images, and add any custom code.</li>
+<li>Products, pages and blogs carry over automatically.</li>
+<li>When happy, publish the draft. The old theme becomes a draft and the new theme becomes active. You can toggle back at any time.</li>
+</ol>
+<p>[L0806.033]</p>
+<ul>
+<li>Migrating to a new theme, the course checklist (2022):</li>
+</ul>
+<ol type="1">
+<li>Make changes in draft mode, not live.</li>
+<li>Visit every page type: homepage, collections, product pages, contact, blog and checkout.</li>
+<li>Click and interact with everything.</li>
+<li>Test the entire purchase process.</li>
+<li>Check that all apps display correctly (for example Klarna financing buttons).</li>
+<li>Only push live after confirming everything works.</li>
+</ol>
+<p>[L0249.024] (Older, 2022.)</p>
+<ul>
+<li>Migrating Shopify themes (2022):</li>
+</ul>
+<ol type="1">
+<li>Create the new theme as a draft in Shopify (this does not affect the live store).</li>
+<li>Work on design changes in draft mode: colors, logo, layouts.</li>
+<li>Preview the draft to test all pages.</li>
+<li>When satisfied, publish the draft as the new live theme.</li>
+<li>The previous theme automatically moves to draft status and can be reverted if needed.</li>
+<li>The product catalog, data and content remain unchanged. Only design elements are swapped.</li>
+</ol>
+<p>[L0272.012] (Older, 2022.)</p>
+<ul>
+<li>When switching Shopify themes, create the new theme as a draft, work on design changes in the background, preview the draft, then publish it as live. The previous theme automatically moves to draft status, and you can revert to it at any time if needed. (Older, 2022.) [L0272.064]</li>
+<li>Install a new Shopify theme such as Charlotte without disrupting the live store (2022):</li>
+</ul>
+<ol type="1">
+<li>Add the theme as a new theme in the Shopify back end, where it appears as a draft.</li>
+<li>Customize the draft for colors, logo and similar settings.</li>
+<li>Publish it. The previous theme then becomes the draft.</li>
+</ol>
+<p>Products, collections and pages transfer automatically, and no downtime occurs. [L0963.034] (Older, 2022.)</p>
+<ul>
+<li>Switching to a newer theme (2022):</li>
+</ul>
+<ol type="1">
+<li>Upload the new theme as a draft in Shopify.</li>
+<li>Re-apply the colors, logo and custom images.</li>
+<li>Products, collections and content pages carry over, so the store core does not need to be rebuilt.</li>
+</ol>
+<p>[L1281.058] (Older, 2022.)</p>
+<ul>
+<li>Migrating a live store to a new theme without changing the live store (2024):</li>
+</ul>
+<ol type="1">
+<li>Upload the new theme, which is saved as a draft.</li>
+<li>Customize the draft while the current theme stays live.</li>
+<li>Publish the draft when it is ready. This makes it the live theme and turns the previous live theme into a draft.</li>
+</ol>
+<p>[L0360.091]</p>
+<ul>
+<li>Traffic after a theme change: the page structure and URLs remain identical, so traffic should not change. If traffic drops after a theme migration, check the Google Analytics acquisition sources to identify which traffic source dropped (organic, paid, direct or referral). (Older, 2022.) [L0249.023]</li>
+<li>The Charlotte theme was recommended for its lightweight speed. (Older, 2022.) [L0272.011]</li>
+<li>Charlotte loads in about 645 milliseconds, which is already fast. Switching to a newer theme is optional, not needed for speed alone. (2024.) [L0806.035]</li>
+</ul>
+<h2 id="updating-a-theme">Updating a theme</h2>
+<ul>
+<li>A new theme version is not an automatic update to an existing store. It has to be uploaded and installed like any other theme, so plan the switch and test the store before going live. (Older, 2019.) [L1086.068]</li>
+<li>Theme updates are not applied automatically. The developer notes what changed and how to apply it, because automatic updates could break a customized store. (Older, 2022.) [L0854.067]</li>
+<li>Before updating a Shopify store theme, confirm which theme version is installed and ask support whether the update will keep your customizations. Do not assume a theme update will leave custom changes intact. (Older, 2020.) [L1088.094]</li>
+<li>Upgrading a theme without losing the live store (2020):</li>
+</ul>
+<ol type="1">
+<li>Open the Shopify admin.</li>
+<li>Go to Online Store, then Themes.</li>
+<li>Upload the newest version of the theme.</li>
+<li>Adjust colors and layout in the draft, which does not change the live store.</li>
+<li>Click Publish only when the draft is ready.</li>
+<li>If needed, republish the previous theme.</li>
+</ol>
+<p>[L0664.035] (Older, 2020.)</p>
+<ul>
+<li>Theme upgrades reset design choices such as colors and layout, but products and content stay. Plan time to restyle after upgrading. (Older, 2020.) [L0664.036]</li>
+<li>Use the newest version of the store theme, which is at least as recent as the last couple of months. Older themes can be upgraded, but the upgrade means redoing the design. (Older, 2020.) [L0664.037]</li>
+<li>Update to a new theme without breaking the live store (2021):</li>
+</ul>
+<ol type="1">
+<li>Upload the new theme, which is saved as a draft.</li>
+<li>Edit and adjust the draft until it looks right.</li>
+<li>Publish it. The old theme remains available as an option.</li>
+</ol>
+<p>If the current theme works, there is no need to switch. [L0968.033] (Older, 2021.)</p>
+<ul>
+<li>Install the newest Source A theme version (2023):</li>
+</ul>
+<ol type="1">
+<li>Go to the members area, module 3, lesson 3.1, and download the newest theme (last updated 12 December 2022).</li>
+<li>In Shopify, upload it as a draft so customers do not see it.</li>
+<li>Edit and test it in the draft.</li>
+<li>When ready, publish the new theme and set the old one to draft.</li>
+</ol>
+<p>[L0804.039]</p>
+<ul>
+<li>Charlotte v1.3 is the latest downloadable version, released 21 February 2022. Earlier versions can be updated to it as a new theme. (Older, 2022.) [L0963.035]</li>
+<li>Charlotte bug fixes arrive as small code snippets. If a live store shows an issue, ask support for the code change rather than downloading and rebuilding the theme again. (Older, 2022.) [L0963.036]</li>
+<li>The 1.2 to 1.3 Charlotte update consisted of small bug fixes, not new features. No detailed change log was available at that time. (Older, 2022.) [L0963.037]</li>
+<li>Shopify 2.0 redesigned the theme customizer, so the editor looks different from earlier versions. Drag-and-drop sections across the whole page work only on themes whose developers have updated them to support it, and at launch very few themes did. (Older, 2021-22.) [L0949.013]</li>
+<li>Dawn supports the Shopify 2.0 drag-and-drop sections feature, and at launch it was one of very few themes to do so. Check which themes support the feature before planning a redesign around it. (Older, 2021-22.) [L0949.065]</li>
+<li>Before switching to a Shopify 2.0 theme, ask your theme developer for their timeline for supporting the update. Themes from developers who rarely update may never gain the new features. (Older, 2021-22.) [L0949.014]</li>
+<li>Updating a theme usually wipes customizations, including custom code for SEO and custom front-end elements that customers see. Before updating, record where each piece of code was inserted and how, so you can restore it. (Older, 2021-22.) [L0949.015]</li>
+<li>A lightly customized store can switch to a new theme with little work. A store with years of layered changes needs a developer or a careful audit. A theme update can also be a good chance to rebuild the store from a clean slate. (Older, 2021-22.) [L0949.016]</li>
+<li>Hard-coded edits made directly in theme code are not carried over when a new theme version is migrated. Plan to reapply custom code changes after a theme upgrade, and keep a record of them. [L0709.018]</li>
+<li>A Chrome extension migrates a store's theme changes into a new theme version, except for hard-coded edits. It is a helpful tool when a theme update is released. [L0709.019]</li>
+<li>Theme licensing emails claiming a problem are often phishing. Check that the sender ends in @shopify.com, but note that emails can be spoofed, so verify through the Shopify support page instead of replying to the email. (2025.) [L0472.032]</li>
+</ul>
+<h2 id="backups-and-exporting">Backups and exporting</h2>
+<ul>
+<li>Create a backup before editing the store code, because a deleted product page can disrupt daily sales. Ask for help with code changes rather than experimenting on the live store. [L0832.038]</li>
+<li>Editing theme code without a full backup can break a live product page with no easy way back. Copy the complete original file into a document before changing anything. (Older, 2019.) [L0960.002]</li>
+<li>Rewind Backups is a Shopify backup app that stores copies of store data such as products, themes and orders, so the store can be restored after accidental changes or deletions. (2024.) [L1007.002]</li>
+<li>Before switching the theme (older, 2019):</li>
+</ul>
+<ol type="1">
+<li>Back up the store before switching the theme.</li>
+<li>Change the theme in Shopify. Products do not need to be uploaded again.</li>
+<li>Redo all custom code and customizations from the old theme, because they are removed with it.</li>
+</ol>
+<p>[L0356.021]</p>
+<ul>
+<li>Shopify theme code can be exported from one store and imported into another to keep the same design. Look up Shopify theme export for the steps. (Older, 2021.) [L0247.090]</li>
+<li>To go back, republish the previous theme in the Theme library. The previous theme remains available as a draft or in the library after a switch. [L0272.012, L0360.091, L1292.040]</li>
+</ul>
+<h2 id="theme-support-and-safety">Theme support and safety</h2>
+<ul>
+<li>A discount code that cannot be removed should be handled by the theme's support team if the theme is their own. For other Shopify themes, Shopify support can access and change the store directly. (Older, 2021.) [L0469.042]</li>
+<li>A store built on a Shopify theme such as Dawn can look different on Windows and Mac, and custom code changes can break the store. A problem with a store connection can take a long time to diagnose, and the Shopify support team can send a fix video. [L0552.016]</li>
+<li>Shopify support can help with store problems by sending a video that shows how to fix the issue. This option can save hours compared with troubleshooting alone. [L0552.017]</li>
+<li>If a styling option such as a tab border color cannot be found in the Shopify theme settings, do not guess at code changes. Ask the theme provider's support, since the change may need the designer. (Older, 2020.) [L0664.090]</li>
+<li>Theme code is edited under the edit.html and edit.css files in the Shopify theme editor. This is the route for HTML and CSS changes that fall outside the Customizer's built-in options. [L0595.004]</li>
+<li>The Source A Manhattan theme is the Shopify theme used in this store build. Its Customizer offers built-in settings for font, colors, layout and content. [L0595.007]</li>
+<li>Edit theme code only after testing on a duplicate theme. The storefront theme in the demo was the live theme, and a broken Liquid edit on the live theme affects real customers immediately. (Source E, 2025-26.) [L0557.018]</li>
+<li>Before adopting a third-party theme, check community discussions about the vendor's support quality. (Older, 2019.) [L0356.066]</li>
+<li>Shopify's approach to theme safety is to buy only from the Shopify Theme Store or established vendors, and to check each theme's developer and update history before choosing it. [L0853.087, L0853.007]</li>
+<li>Editing theme code, the safety checklist:
+<ul>
+<li>Back up the complete original file first. [L0960.002]</li>
+<li>Create a backup before editing the store code. [L0832.038]</li>
+<li>Test on a duplicate theme before editing the live one. [L0557.018]</li>
+<li>Ask for help with code changes rather than experimenting on the live store. [L0832.038]</li>
+<li>Avoid editing the site's code early on. [L1292.003]</li>
+</ul></li>
+</ul>
+<h2 id="shrine-pro-setup">Shrine Pro setup</h2>
+<ul>
+<li>Premium themes are worth choosing when they include conversion elements, so the store needs fewer paid apps. [L1330.001]</li>
+<li>Shrine Pro was chosen because it has the most sections of the Shrine theme versions. One license is enough for one store. [L1330.004]</li>
+<li>The email address entered at checkout for a Shrine license must be correct, because the license keys are delivered to that address. A wrong address can prevent access to the keys. [L1330.007]</li>
+<li>Set up a premium Shrine Pro theme in Shopify, in this order:</li>
+</ul>
+<ol type="1">
+<li>Open the Shrine Pro page and click Get started.</li>
+<li>Select one license, because only one store is being built, and click Add to cart.</li>
+<li>Click Checkout.</li>
+<li>Check that the email address entered at checkout is correct.</li>
+<li>Accept the terms and conditions, click Complete purchase, and then click Continue.</li>
+<li>Open the email from Shrine that contains the license keys, and click Open Shrine Dashboard.</li>
+<li>If there is no Shrine account yet, click register and create an account, then log in.</li>
+<li>Click Next step, then click Add key, and enter the license key to activate it.</li>
+<li>In Shopify, go to Settings &gt; Domains and copy the myshopify.com URL.</li>
+<li>In Shrine, go to Settings &gt; Accounts &gt; Whitelist your URLs and paste the myshopify.com URL into the Shopify URL field, with https:// in front.</li>
+<li>Copy the custom domain of the store from Shopify Settings &gt; Domains and paste it into the Main URL field, with https:// in front. If a second website URL exists, add it in the Secondary URL field the same way.</li>
+<li>Click Save and generate token, then copy the authentication token and store it safely.</li>
+<li>Download the theme zip file from Shrine.</li>
+<li>In Shopify, go to Online Store &gt; Themes, click Import theme, upload the zip file, and select the Shrine Pro theme file. Wait until the upload has finished. To import the theme, go to Online Store &gt; Themes, click Import theme, upload the zip file of the Shrine Pro theme, and wait for the upload to finish.</li>
+<li>Click Publish to make the theme live, even though the store is still password protected.</li>
+<li>Click Customize to open the theme editor and add sections.</li>
+</ol>
+<p>[L1330.005, L1330.013]</p>
+<h2 id="choosing-a-theme">Choosing a theme</h2>
+<ul>
+<li>Start with a free Shopify theme and keep the store simple: a clear product page, a short homepage, and clean images. [L1380.035]</li>
+<li>A beginner should start with a simple, quickly built store theme, such as a basic version of Shrine, rather than spending time on advanced themes. [L1454.006]</li>
+<li>Elixir suits operators who already know how to build a proper website. [L1454.006]</li>
+<li>Beautify is a popular paid theme, but its look is common among dropshipping stores, so it is not required. [L1380.035]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Cost</th>
+<th>Look</th>
+<th>When it fits</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free Shopify theme</td>
+<td>Free</td>
+<td>Simple, with a clear product page and short homepage</td>
+<td>Starting point for a new store</td>
+<td>L1380.035</td>
+</tr>
+<tr>
+<td>Shrine (basic version)</td>
+<td>Not stated in the source</td>
+<td>Used by a large share of stores, so it stands out less</td>
+<td>Beginners who need a store built quickly</td>
+<td>L1454.005, L1454.006</td>
+</tr>
+<tr>
+<td>Elixir</td>
+<td>About half the price of Shrine when bought without a discount code</td>
+<td>More branded</td>
+<td>Operators who already know how to build a proper website</td>
+<td>L1454.005, L1454.006</td>
+</tr>
+<tr>
+<td>Beautify</td>
+<td>Paid</td>
+<td>Popular, but common among dropshipping stores</td>
+<td>Not required</td>
+<td>L1380.035</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The choice of theme matters much less than launching fast. Small custom code changes on a simple theme are enough to make a store look distinct from the average store. [L1454.008]</li>
+</ul>
+<h2 id="buying-themes-safely">Buying themes safely</h2>
+<ul>
+<li>Cracked or pirated store themes carry a risk of hidden bugs or malicious code that can break the store. Buy themes from the official source or a verified reseller. [L1454.007]</li>
+</ul>
+<h2 id="uploading-a-theme-zip-file">Uploading a theme zip file</h2>
+<ul>
+<li>After a Shrine Pro zip file is uploaded to Shopify, it appears in the theme library as shrine-theme-pro, version 1.5.4, labeled Just added. [L1330.024]</li>
+<li>Shopify states that uploaded themes are visible only to the store team until one of them is published. [L1330.024]</li>
+</ul>
+<h2 id="draft-and-published-themes-and-password-protection">Draft and published themes and password protection</h2>
+<ul>
+<li>A theme can be published while the store is still password protected, so the theme can be prepared before the store opens to visitors. The password protection stays active until it is removed. [L1330.014]</li>
+<li>In Shopify, the password protection of a store is managed on the theme card under Online Store &gt; Themes. [L1330.015]</li>
+<li>The theme card shows the buttons Edit password and Remove password, and displays Password protected while the protection is active. [L1330.015]</li>
+</ul>
+<h2 id="moving-to-a-new-shopify-store-while-reusing-content">Moving to a new Shopify store while reusing content</h2>
+<p>Moving to a new Shopify store while reusing content:</p>
+<ol type="1">
+<li>Create the new store with another email. [L1382.061]</li>
+<li>Export the theme from the online store section and import it into the new store. [L1382.061]</li>
+<li>Export and import the customer and SMS lists, and set up the email settings and apps again (Shopify's export and import buttons handle the data). [L1382.061]</li>
+<li>Rebuild any settings that do not transfer, such as logos and notification email settings. [L1382.061]</li>
+</ol>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/06-legal-pages-policies-and-trust-pages/"><span class="k">&larr; Previous</span><span class="v">Legal pages, policies and trust pages</span></a><a class="nx" href="../../04-store-build-and-shopify/08-brand-assets-logo-colors-fonts-and-image-production/"><span class="k">Next &rarr;</span><span class="v">Brand assets: logo, colors, fonts and image production</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

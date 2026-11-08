@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Getting product data and uploading the catalog | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 3.12: Getting product data and uploading the catalog.">
+<link rel="canonical" href="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/12-getting-product-data-and-uploading-the-catalog/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Getting product data and uploading the catalog | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 3.12: Getting product data and uploading the catalog."><meta property="og:url" content="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/12-getting-product-data-and-uploading-the-catalog/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">3. Suppliers and fulfillment</a> &rsaquo; <a href="../../../ecom/03-suppliers-and-fulfillment/12-getting-product-data-and-uploading-the-catalog/">Plain version</a></div><h1>3.12 Getting product data and uploading the catalog</h1><article><h2 id="before-the-upload-data-to-expect">Before the Upload: Data to Expect</h2>
+<ul>
+<li>Each approved supplier normally provides three kinds of data: product images, a price list (with model numbers, SKU numbers and barcode numbers), and product data (descriptions, technical specifications such as size and weight, user manuals and possibly videos). The format varies by supplier. [L1163.003]</li>
+<li>Product images usually arrive through a file-sharing link (Dropbox, Google Drive or WeTransfer) or are downloaded from a supplier website. Price lists come as a spreadsheet (Excel or Google Sheets) or must be copied from the supplier website. [L1163.004]</li>
+<li>The minimum data per product is images, descriptions, technical specifications and prices. Barcode numbers must be used if the supplier provides them. Videos and user manuals are optional. [L1163.005]</li>
+<li>Suppliers send price lists as PDFs, spreadsheets, emails or log-in portals and rarely share a standard format. Transfer each supplier's prices into the same pricing sheet so products can be compared consistently. [L1148.008]</li>
+<li>After approval, expect a package with the price list, stock descriptions with features, and product images. Suppliers often send only one photo, poor photos, or none, so plan to source missing images and rewrite weak feature text yourself. [L1130.036]</li>
+<li>Check that each supplier provides the details customers need: assembled product dimensions, BPA-free status and country of manufacture. If any is missing from the spreadsheet or member area, ask before listing the product. <em>Older advice (2019).</em> [L1069.010]</li>
+</ul>
+<p>Template for that request (<em>older, 2019</em>):</p>
+<pre><code>Hi [Supplier name],
+
+We have just received your spreadsheet for [product name or SKU] and are preparing the product pages. Could you please send us the product dimensions of the assembled product, whether the product is BPA free, and the country of manufacture? These details are needed for our customers.
+
+Thank you,
+[Your name]
+[Company name]</code></pre>
+<p>[L1069.020]</p>
+<ul>
+<li>Ask suppliers for product information and images before entering them into your catalog. Some suppliers require you to rewrite descriptions, which you can do with an AI copy tool or manually. [L0468.052]</li>
+<li>Supplier descriptions are often only a few sentences. Unique descriptions can be built with AI but must be checked against the supplier information before publishing. [L0666.036]</li>
+<li>When a supplier asks what you need instead of providing an application form, request: 1) a spreadsheet with all product information, including prices, and 2) online access to download all product images. <em>Older advice (2024 call, stated as a step).</em> [L0276.068]</li>
+<li>Ask the supplier how it prefers to send product files, since most suppliers already have a standard system for this. <em>Older advice (2018).</em> [L1274.028]</li>
+<li>Dealer portal logins give access to product images, descriptions and prices. Without a portal, expect a zip file of product images and a spreadsheet with product data. <em>Older advice (2018).</em> [L1274.027]</li>
+<li>Dealer portal login, Excel product sheet, or shared Dropbox or Google Drive folder are the usual formats suppliers use for product data and photos after approval. <em>Older advice (2021).</em> [L0962.021]</li>
+<li>Product data must reach your store before anything else happens with that supplier, so ask for it as early as possible after approval. You cannot do further work with a supplier until its products are on your site. <em>Older advice (2021-22).</em> [L0929.020]</li>
+<li>Once you are authorized to sell a brand, its post-agreement information (descriptions, product names, SKU numbers, GTINs, prices and photos) can be uploaded to the store. [L0836.038]</li>
+<li>Ask each supplier whether it has a CSV or spreadsheet of its products that can be uploaded in bulk. Such a file saves large amounts of manual data entry. [L0808.008]</li>
+<li>When a supplier's data is in a usable format, use the supplier's own product file and modify it to Shopify's standard. Paper catalogs and PDFs must be entered manually, so the data format depends on each supplier. [L1114.020]</li>
+<li>Turning supplier data into uploadable listings involves checking prices, adding meta fields and categories, and reviewing content. Because each supplier packages data differently, there is no single standard process. [L0970.053]</li>
+</ul>
+<h2 id="supplier-data-formats-and-connection-methods">Supplier Data Formats and Connection Methods</h2>
+<ul>
+<li><p>Suppliers may send product data as an Excel file or CSV. There is no EDI setup. Each supplier formats its feed differently, so expect to map each one. <em>Older advice (2023).</em> [L0855.058]</p></li>
+<li><p>Some suppliers provide FTP access: a host (usually an IP address), a username and a password to download the catalog and images from their server. <em>Older advice (2023).</em> [L0855.059]</p></li>
+<li><p>Connecting to a supplier's FTP server with FileZilla (free version):</p>
+<ol type="1">
+<li>Download and install FileZilla for your operating system.</li>
+<li>Enter the host (the IP address the supplier gave you) in the Host field.</li>
+<li>Enter the username and password exactly as the supplier provided them.</li>
+<li>Click Quick Connect.</li>
+<li>Open the supplier's folders and download the catalog and product images to your computer.</li>
+</ol>
+<p><em>Older advice (2023).</em> [L0855.060]</p></li>
+<li><p>Prefer suppliers that provide product CSV files. Other formats, such as dealer portals, print catalogs or copy-paste, are slower and work as fallbacks. [L0856.051]</p></li>
+<li><p>Supplier data is easiest to work with as a spreadsheet, which can be reformatted into the Shopify CSV format. If the data exists only on a supplier website, a freelance data scraper (for example on Upwork) can extract it into a CSV. <em>Older advice (2023).</em> [L0835.041]</p></li>
+<li><p>Bulk CSV uploads are the best starting method for loading products. [L0941.031]</p></li>
+<li><p>Uploading supplier products is the most manual part of the business. A supplier CSV is usually the fastest route, while manual copy-and-paste or one-by-one uploads take the most time. Hire help and double-check its work. <em>Older advice (2023).</em> [L0970.052]</p></li>
+<li><p>Product uploads take about 10 minutes when a supplier sends a well-packaged spreadsheet and hours when it sends PDFs, because suppliers have no standard data format. Plan time or budget for this work. <em>Older advice (2024).</em> [L0806.030]</p></li>
+</ul>
+<h3 id="standard-csv-procedures-older">Standard CSV procedures (older)</h3>
+<ul>
+<li><p>Bulk CSV upload, <em>older advice (2019)</em>:</p>
+<ol type="1">
+<li>Prepare a CSV file with product data from the supplier (3,000+ products are feasible).</li>
+<li>If the supplier data format is compatible, use Shopify's native CSV upload tool.</li>
+<li>If the supplier format is incompatible or the upload is complex, use the freelancer option instead of manual entry.</li>
+</ol>
+<p>[L0243.016]</p></li>
+<li><p>If a supplier does not provide a CSV product feed, <em>older advice (2020)</em>:</p>
+<ol type="1">
+<li>Manually scrape the supplier's website data, or hire a VA to do so.</li>
+<li>Find a competitor publicly selling the same supplier's products and extract their feed.</li>
+<li>Hire a VA to compile the product information into a CSV file.</li>
+</ol>
+<p>[L0245.076]</p></li>
+<li><p>Product upload procedure, <em>older advice (2021)</em>:</p>
+<ol type="1">
+<li>Build the supplier product list in Excel or Google Sheets.</li>
+<li>Save or export it as CSV, not XLS.</li>
+<li>Upload the CSV to Shopify.</li>
+<li>Repeat the same steps for each supplier file.</li>
+</ol>
+<p>Manual entry of products is avoided this way. [L0962.001]</p></li>
+<li><p>Use no more than one supplier per CSV file, so each supplier's products stay separate and easier to manage. You can upload as many CSV files as you need. <em>Older advice (2021).</em> [L0962.002]</p></li>
+<li><p>For large catalogs, split the product list into several smaller CSV files, for example a 1,000-product catalog into 100-product files, and upload each file separately. <em>Older advice (2021).</em> [L0962.003]</p></li>
+<li><p>Sources differ on file size. The 2019 advice says a CSV of 3,000+ products is feasible in one import (L0243.016). The 2021 advice says to split large catalogs into smaller files (L0962.003). Both can apply: use one file if it imports cleanly, and split it if the file is hard to manage.</p></li>
+</ul>
+<h3 id="testing-a-csv-import">Testing a CSV import</h3>
+<ul>
+<li><p>Procedure for a first test import, <em>older advice (2019)</em>:</p>
+<ol type="1">
+<li>Obtain the supplier's product CSV file, which is the preferred upload method when the supplier provides one.</li>
+<li>Make a copy of the file.</li>
+<li>Upload only five products first.</li>
+<li>Check that the imported products match what you expect.</li>
+<li>If anything does not match, delete the five products, correct the file and try again.</li>
+<li>Upload the full CSV once the test import works.</li>
+</ol>
+<p>[L0663.073]</p></li>
+</ul>
+<h3 id="bulk-updates-in-shopify">Bulk updates in Shopify</h3>
+<ul>
+<li><p>Process for a bulk product update in Shopify via CSV:</p>
+<ol type="1">
+<li>Export all products from Shopify as CSV.</li>
+<li>Open the CSV in Google Sheets or Excel and make the edits.</li>
+<li>Save the CSV to the computer.</li>
+<li>Import it into Shopify. Existing products are updated instead of new products being added.</li>
+</ol>
+<p><em>Older advice (2024).</em> [L0856.052]</p></li>
+</ul>
+<h2 id="upload-methods-and-when-to-use-each">Upload Methods and When to Use Each</h2>
+<ul>
+<li><p>Choose the upload method by supplier data format and product count, not by a single fixed method:</p>
+<ul>
+<li>Manual method for small counts (20 products) when the supplier data must be scraped from its website.</li>
+<li>Fiverr outsourcing for large catalogs (500+ products), to avoid spending days on manual uploads.</li>
+<li>CSV bulk import when the supplier provides a ready-made spreadsheet.</li>
+</ul>
+<p>Mix methods across suppliers as needed. [L0106.008]</p></li>
+<li><p>Costs and time per method are set out under "Costs of Manual and Outsourced Upload" below. [L1275.013]</p></li>
+</ul>
+<h2 id="choosing-which-products-to-list">Choosing Which Products to List</h2>
+<h3 id="approval-does-not-mean-listing-everything">Approval does not mean listing everything</h3>
+<ul>
+<li>Approval to sell does not oblige you to list all of a supplier's products. Select only the items that fit your niche to keep topical focus and conversion rates. <em>Older advice (2022).</em> [L0272.004]</li>
+<li>After approval, you choose which of a supplier's products to list. You do not have to list the full catalog. <em>Older advice (2020).</em> [L1088.022]</li>
+<li>You may choose which products from an approved supplier you sell. You do not need to carry its whole range. <em>Older advice (2022).</em> [L0854.018]</li>
+<li>Approved accounts usually get access to the full catalog, so you select what you want to sell from it. Listing all niche products is still worth it even when the supplier has only two matching products. <em>Older advice (2018).</em> [L1274.023]</li>
+<li>Supplier approval gives access to the full catalog, but a store needs only the products that match its niche. Uploads are done supplier by supplier because each sends product data in its own format. <em>Older advice (2024).</em> [L0805.021]</li>
+<li>Being approved does not require listing all of a supplier's products. Pick the products worth selling and skip those whose price spread is too small to justify listing. <em>Older advice (2024).</em> [L0666.023]</li>
+<li>Only the products a store wants to sell need to be listed from an approved supplier. The full catalog is not required, and variants that fall below the target price point can be left off the store entirely. <em>Older advice (2023).</em> [L1114.019]</li>
+</ul>
+<h3 id="niche-filter">Niche filter</h3>
+<ul>
+<li><p>Upload only the products from each supplier that fit your niche criteria. For example, if a supplier makes pool tables and ping pong tables and you only sell pool tables, upload only the pool tables. <em>Older advice (2023).</em> [L0470.080]</p></li>
+<li><p>Upload only products that belong to your niche, even when an approved supplier also makes unrelated items. Leave out the unrelated catalog, such as dining tables for a kitchen island store. <em>Older advice (2021).</em> [L0801.031]</p></li>
+<li><p>After approval, upload only the supplier's products that belong to the niche into that niche store. Other products from the same supplier can be used in a future store. <em>Older advice (2021).</em> [L0853.036]</p></li>
+<li><p>Do not upload all products from a supplier's list. Upload only the products that fit your niche, and do not upload products that are unprofitable. <em>Older advice (2021).</em> [L0671.043]</p></li>
+<li><p>Do not upload all SKUs from a supplier's price list. Select only products that:</p>
+<ol type="1">
+<li>Fit your niche criteria.</li>
+<li>Have healthy margins (MAP at least 2X wholesale).</li>
+<li>Are priced above your niche's average.</li>
+<li>Match customer expectations for your store.</li>
+</ol>
+<p>Upload a subset and add more over time based on performance. <em>Older advice (2023).</em> [L0251.037]</p></li>
+<li><p>Products that are too technical to use without support should be avoided, as should items where customers ask post-purchase setup questions. Pre-sale questions are acceptable: take the customer's name, email and phone number, research the answer, reply, and add it to the FAQ. <em>Older advice (2025).</em> [L0472.027]</p></li>
+<li><p>Remove unwanted items from a supplier catalog, <em>older advice (no year given)</em>:</p>
+<ol type="1">
+<li>When the supplier sends its price list or CSV, mark only the products that match your niche and criteria.</li>
+<li>Remove the rest from your upload, including cheap replacement parts and products outside your niche.</li>
+<li>Suppliers expect this, so it is normal and does not need explanation.</li>
+</ol>
+<p>[L0941.017]</p></li>
+<li><p>Filter a supplier's product list in Google Sheets, <em>older advice (2024)</em>:</p>
+<ol type="1">
+<li>Import the supplier product list into Google Sheets.</li>
+<li>Turn on the filter for the product type column.</li>
+<li>Filter by keywords for product types that do not belong to your niche.</li>
+<li>Select all visible rows and delete them at once.</li>
+<li>Continue working only with the remaining products.</li>
+</ol>
+<p>[L0965.036]</p></li>
+<li><p>Only upload real products from approved suppliers in the niche and remove demo products before turning on ads. <em>(See "Demo Products and Upload Sequencing".)</em> [L1094.013]</p></li>
+</ul>
+<h3 id="catalog-breadth-the-sources-disagree">Catalog breadth: the sources disagree</h3>
+<ul>
+<li>Recent advice (2021-2025) says to filter for the niche and skip unprofitable or off-topic items (L0251.037, L0470.080, L0671.043, L0801.031, L0853.036, L1114.019).</li>
+<li>Older advice (2020) and undated advice say to upload all quality products from every quality supplier, and to omit a product only if its quality is poor, such as many negative reviews, or if the supplier charges an access fee, which marks a bronze supplier (L0358.022). Undated advice says to upload as many products as you can find from every approved supplier (L0582.008).</li>
+<li>For non-MAP suppliers, the advice is to upload immediately while waiting for approval from preferred suppliers, because store credibility rises with the number of brands and products on the site (L0294.004).</li>
+<li>Use the niche filter for a focused store. Use the broader approach when you are building early store credibility or when a supplier's products all fit your niche. [L0358.022, L0582.008, L0294.004, L0251.037]</li>
+</ul>
+<h3 id="starting-small">Starting small</h3>
+<ul>
+<li>Ten test products are enough to start contacting suppliers. Begin with a small set of products to test before building a large catalog. <em>Older advice (2020).</em> [L0551.014]</li>
+<li>Before contacting more suppliers, upload the products of your first three approved suppliers and remove the demo products. This increases store credibility when you approach the rest. <em>Older advice (2025).</em> [L0966.022]</li>
+</ul>
+<h3 id="products-to-avoid-or-to-keep-for-later">Products to avoid or to keep for later</h3>
+<ul>
+<li>Only products sold from approved suppliers should be listed. Products you are not authorized to sell must be removed when the store is posted to suppliers for approval. <em>Older advice (2023).</em> [L0855.066]</li>
+<li>Confirm that the brand authorizes you to resell a product, and that it comes from a verified supplier, before listing it. Demo, fake or unauthorized products can cause Google Merchant Center and Google Ads account problems. [L0167.023]</li>
+<li>Upload only products from suppliers who approved you as an authorized reseller. These are live, sellable items, not demo products. [L0128.001]</li>
+<li>After approval, upload all products from the approved supplier that meet your pricing criteria into the initial alpha beta campaigns. Let Google data show which products get clicks, impressions and sales, then optimize from there instead of guessing winners. <em>Older advice (2022).</em> [L0854.017]</li>
+<li>Silver suppliers often send a generic product CSV that cannot simply be uploaded and left running on one generic Shopping campaign. These products need an optimized feed and campaign structure to be profitable. <em>Older advice (2018).</em> [L1085.034]</li>
+<li>Suppliers often have the strongest sellers in their range and can name them when asked. This helps set a bestseller list before any sales data exists. Asking which products sell best is a quick way to decide which products get the larger ad budget. <em>Older advice (2024).</em> [L0360.011]</li>
+</ul>
+<h2 id="price-and-margin-filters">Price and Margin Filters</h2>
+<ul>
+<li>When a supplier provides both MSRP and MAP, check that MAP is profitable. Show MSRP as the strike-through compare-at price and sell at MAP, which is only a minimum, so a higher price is also allowed. <em>Older advice (2020).</em> [L1088.021]</li>
+<li>Set the niche's price filter in the product selection. Sources give different thresholds, which apply to different stores:
+<ul>
+<li>Products priced above $400 from a supplier's full catalog are acceptable to list. Suppliers do not require you to list everything they offer. <em>Older advice (2025 call).</em> [L0278.027]</li>
+<li>On a 2024 call, the example was to list only the 10 products over $200, or only the 50 massage chairs from a 1,000-product catalog. [L0805.020]</li>
+<li>The 2023 rule is to upload products priced above the niche average and with a MAP at least 2X wholesale. [L0251.037]</li>
+</ul></li>
+<li>Before listing a supplier's product, check whether other sellers mark it up at all. If other sellers mark it up only slightly, for example around 10 percent, drop that supplier. If margins are strong, go ahead. <em>Older advice (2021).</em> [L0801.036]</li>
+</ul>
+<h2 id="bundles-add-ons-and-pairs">Bundles, Add-ons and Pairs</h2>
+<ul>
+<li><p>Source physical product bonuses from the same supplier as the main product whenever possible. Both items then ship together in one order, which removes extra fulfillment work and reduces coordination. <em>Older advice (no year given).</em> [L0314.003]</p></li>
+<li><p>Add-on products should come from the same brand as the main product where possible. This simplifies shipping and keeps margins higher. Look in the same supplier's catalog first, and search other suppliers only when no related product exists. <em>Older advice (2023).</em> [L0964.031]</p></li>
+<li><p>If suppliers and products are sold as a pair or set, upload them as sold, with photos showing the pair or set. <em>Older advice (2021).</em> [L0671.170]</p></li>
+<li><p>Procedure for a bundle offer, <em>Source C</em>:</p>
+<ol type="1">
+<li>Agree with the supplier on a dedicated SKU for the bundle offer.</li>
+<li>Make sure the supplier ships all items of that bundle in one package.</li>
+<li>Add that specific SKU to the store so every bundle order triggers the single-package shipment.</li>
+<li>Check the bundle's cost of goods and shipping cost before running ads.</li>
+</ol>
+<p>[L0502.019]</p></li>
+<li><p>Market labels in bundle rows: do not use a cost or price row labelled for another market, such as UK, for USA pricing. Change the market label to US before entering any values in a bundle row. [L1182.013]</p></li>
+</ul>
+<h2 id="product-identifiers-gtin-upc-mpn-and-sku">Product Identifiers: GTIN, UPC, MPN and SKU</h2>
+<h3 id="which-identifier-to-use">Which identifier to use</h3>
+<ul>
+<li>Use the supplier's UPC as the product identifier when it exists, since it lets Shopify and Google Merchant Center match your listing against identical products. Use the MPN when there is no UPC. <em>Older advice (2023).</em> [L0934.155]</li>
+<li>Use the supplier's SKU only when the supplier has no GTIN (a product identifier that competitors and Google use to index products). If the supplier has a GTIN, use the GTIN. <em>Older advice (2023).</em> [L0835.037]</li>
+<li>Do not create a made-up SKU to fill in the product identifier field. SKUs are retailer-specific and not universal, so use the supplier's UPC or MPN instead. <em>Older advice (2023).</em> [L0934.156]</li>
+<li>Use the identifier the supplier actually has, and do not invent codes. A supplier without GTIN codes can be used with its MPN or SKU as the identifier. <em>Older advice (2023).</em> [L0855.065]</li>
+<li>Google Merchant Center requires a GTIN for listings. If a supplier provides none, use the manufacturer part number (MPN) in that field and generate your own internal identifier for these products. <em>Older advice (2021).</em> [L1279.037]</li>
+<li>If a product has no GTIN and Google Merchant Center reports an error for it, use the MPN, as Google's own guidance describes. An MPN does not hurt Google Shopping when no GTIN exists. <em>Older advice (2023).</em> [L0835.039]</li>
+<li>Enter the supplier's model or part number as the SKU, and never invent your own. The SKU appears on the internal order sheet, and the supplier needs that exact number to fulfil the order. <em>Older advice (2021-22).</em> [L1166.015]</li>
+<li>Only ask suppliers for barcode numbers (UPC, GTIN or EAN) when Merchant Center product diagnostics show a barcode problem, not for every product upfront. Products with no barcode from the manufacturer do not need one and should not be suspended for that. <em>Older advice (2021-22).</em> [L0727.029]</li>
+</ul>
+<h3 id="sources-disagree-on-the-supplier-sku">Sources disagree on the supplier SKU</h3>
+<ul>
+<li>Older advice (2020) says to use the supplier's SKU number as the MPN, and to create an internal identifier for products with no SKU, GTIN or UPC (L0664.021).</li>
+<li>Older advice (2020) says that when a SKU is missing, you create an internal identifier from the MPN and record it consistently (L1111.045).</li>
+<li>The 2023 advice orders the identifiers: UPC first, then MPN when no UPC exists, and the supplier SKU only when no GTIN exists (L0934.155, L0835.037).</li>
+<li>The 2021 advice says to use the MPN in the GTIN field when no GTIN exists, and to generate an internal identifier for these products (L1279.037).</li>
+<li>The newest advice (2023) is the most specific. Use it first, and use the older rules only for stores set up under them. [L0664.021, L1111.045, L0934.155, L0835.037, L1279.037]</li>
+</ul>
+<h3 id="finding-a-missing-gtin-or-upc">Finding a missing GTIN or UPC</h3>
+<ul>
+<li><p>Procedure to find a GTIN or UPC that the supplier does not provide, <em>older advice (2024)</em>:</p>
+<ol type="1">
+<li>Search the supplier's product name or brand name plus product name on Google Shopping.</li>
+<li>Open the product pages of the stores that appear and look for a UPC, part number or SKU in the description.</li>
+<li>Search that code on Google and check whether other stores list the same product under it.</li>
+<li>If other stores confirm the code, use it.</li>
+<li>If no code can be found at all, use the MPN instead, following Google's documentation on MPN.</li>
+</ol>
+<p>[L0965.035]</p></li>
+<li><p>Procedure to identify a product by the supplier's SAKU-style SKU, <em>older advice (2023)</em>:</p>
+<ol type="1">
+<li>Take the SKU the supplier gives you, which may be its GTIN, and search for it on Google.</li>
+<li>Check the results to see which competitors sell from the same supplier.</li>
+<li>If competitors use that number as the product identifier, use it too.</li>
+<li>If there is no GTIN, use the SKU as the product identifier. It will not affect Google Ads.</li>
+</ol>
+<p>[L0835.038]</p></li>
+</ul>
+<h2 id="images-descriptions-and-content-rights">Images, Descriptions and Content Rights</h2>
+<h3 id="get-permission-before-using-supplier-content">Get permission before using supplier content</h3>
+<ul>
+<li>Use a supplier's product photos on your store only after the supplier has confirmed in writing, even when the photos come from the supplier's own website. Asking first avoids disputes. <em>Older advice (2025).</em> [L0972.012]</li>
+<li>You may use product images from a supplier's website after authorization. Email the supplier contact to confirm this is acceptable before uploading images to your store. <em>Older advice (2024).</em> [L0276.028]</li>
+<li>Before using a supplier's product descriptions or lifestyle photos, ask which content you may use. If unsure, email for a yes or no on each part. <em>Older advice (2023).</em> [L0934.044]</li>
+<li>Ask suppliers which product photos and descriptions you may use before copying them. Get a simple yes or no on each part of their content. <em>Older advice (2023).</em> [L0934.150]</li>
+</ul>
+<p>Template for that request (<em>older, 2025</em>):</p>
+<pre><code>Hi [supplier contact name],
+
+We are close to sending traffic to our product pages, and Google Shopping requires a main product photo on a white background for each product. We can see photos on your website that would work for this. Could you confirm in writing that we may use them for [product names]? If you have a white-background photo of each product, sending those would also be very helpful.
+
+Thank you,
+[your name]
+[your store name]</code></pre>
+<p>[L0972.097]</p>
+<ul>
+<li>Do not use photos taken from other sellers. Ask the supplier for product photos or for the rights to use its images, and check its website, social pages and events for material. <em>Older advice (2018).</em> [L0466.040]</li>
+<li>Do not use product photos from Alibaba or AliExpress unless the supplier has given permission for them. Photos from non-approved sources should not be used. <em>Older advice (2022).</em> [L1113.030]</li>
+<li>Product photos and videos on AliExpress or Alibaba listings can be used for ads only after confirming with the supplier that the content is its own. Some sellers copy custom content from others, which creates copyright risk. [L0693.018]</li>
+<li>Product photos taken from AliExpress are hard to use on their own. A seller who shows the product in its own real setting and photos has a stronger store. [L0530.014]</li>
+<li>A product that is new on AliExpress with few sellers has few competitor listings to study. Product images may then need to come from the supplier listing. [L1194.049]</li>
+<li>Ask a supplier for high-resolution product images through the sales rep or contact first, and also ask for older images, such as from trade shows. Do not take images from other websites. [L0359.034]</li>
+<li>Supplier spec sheets, lifestyle images or videos can replace the supplier's copy. When a supplier tells you to build product pages by copying its own website content, its operations are probably weak, but this is not a dealbreaker. Ask the sales rep for other content sources such as spec sheets, lifestyle images or videos, and use them to build product pages that go beyond the supplier's copy. <em>Older advice (2020).</em> [L0358.001]</li>
+<li>Installation guides, PDF manuals or videos from the supplier can be added to the product page as download links or embeds. Do not create such manuals yourself. <em>Older advice (2020).</em> [L0664.020]</li>
+</ul>
+<h3 id="photo-sourcing">Photo sourcing</h3>
+<ul>
+<li><p>Do not take your own product photos. Use supplier or stock images, except for rare trade show photos. <em>Older advice (2022).</em> [L0969.099]</p></li>
+<li><p>For resellers and dropshippers without the physical product, photographing products at manufacturer or dealer showrooms creates unique images that competitors relying on stock photography or generic supplier images will not have. <em>Older advice (2021-22).</em> [L0301.033]</p></li>
+<li><p>Sources differ on taking your own photos. The 2022 rule allows only rare trade show photos (L0969.099). The 2021-22 example recommends showroom photos for resellers without the product (L0301.033). Use the 2022 rule as the baseline, and treat the showroom example as older.</p></li>
+<li><p>Once suppliers are connected, upload their product photos to Canva and crop them to the same size as the other store images. Uniform sizes keep the homepage collection tiles and banners looking consistent. <em>Older advice (no year given).</em> [L0342.043]</p></li>
+<li><p>When supplier images are unlabeled, identify the products in this order, <em>older advice (2025)</em>:</p>
+<ol type="1">
+<li>Ask the supplier for a set of images where file names or SKU numbers match the products.</li>
+<li>If none exist, go to google.com, click the Search by image icon (Google Lens), upload the supplier photo, and click search.</li>
+<li>Use the matching product pages to identify the product. Do not copy images found on other sites because of copyright.</li>
+</ol>
+<p>[L0972.008]</p></li>
+<li><p>Steps to gather product images when the supplier sends too few or poor ones:</p>
+<ol type="1">
+<li>After approval, request the product images together with the price list from the supplier.</li>
+<li>If the supplier sends only one photo, bad photos, or none, search Google Image Search by product name or SKU and collect every high-quality image you find.</li>
+<li>Ask your supplier contact whether it has attended trade shows and, if so, request photos of its best-selling products set up there.</li>
+<li>Upload all images as additional product images and mix them with the supplier's stock photos.</li>
+</ol>
+<p>[L1130.015]</p></li>
+<li><p>Trade show photos show products set up and displayed as a real range, which makes the offer look bigger and more professional. Mixing them with stock photos makes the product page stand out. [L1130.016]</p></li>
+</ul>
+<h2 id="reviews-and-warranties">Reviews and Warranties</h2>
+<ul>
+<li><p>Suppliers want you to make sales, so ask before displaying their product reviews on your site. Most suppliers agree, but never display reviews without asking first. <em>Older advice (2020).</em> [L0551.019]</p></li>
+<li><p>Ask suppliers for existing reviews and use them on the store only with the brand's explicit permission. These reviews come from the supplier, not from other retailers. <em>Older advice (2025).</em> [L0667.062]</p></li>
+<li><p>Procedure to get reviews for new product pages, <em>older advice (2020)</em>:</p>
+<ol type="1">
+<li>Ask the brand's sales rep for reviews of the brand and its products.</li>
+<li>Check the supplier's own website for reviews first.</li>
+<li>If reviews exist, ask permission to use them.</li>
+<li>If none exist, ask whether the supplier has any reviews to share.</li>
+</ol>
+<p>[L0967.029]</p></li>
+<li><p>Brand names should be included on product pages, because brand names are search terms that drive traffic to the store. <em>Older advice (2020).</em> [L0967.030]</p></li>
+<li><p>A supplier can approve you without the store name appearing on pages. Naming brands on product pages helps the store rank for the brand names it sells. <em>Older advice (2020).</em> [L0967.031]</p></li>
+<li><p>Reviews from a supplier's brand may be used on your store only with the supplier's explicit permission. If the supplier agrees, the reviews can be used on your site, or on its Trustpilot page where they are published. If the supplier has no reviews or declines, rely on reviews from your own customers. [L1245.009]</p></li>
+<li><p>Procedure for using supplier reviews:</p>
+<ol type="1">
+<li>Contact the brands you are already authorized to sell and ask whether they have product reviews you can use on your website.</li>
+<li>Continue only if the supplier gives explicit permission to use the reviews. Without it, do not use them.</li>
+<li>If permission is given, open the product page on your store as a customer would.</li>
+<li>Enter the supplier's review there, the same way a customer would enter a review.</li>
+<li>The review is published to the product page after submission.</li>
+</ol>
+<p>[L1245.010]</p></li>
+<li><p>Using reviews copied from a supplier's brand or website without permission is a mistake. Permission must be confirmed before any supplier review is placed on your store. [L1245.011]</p></li>
+<li><p>Show a supplier's warranty on the product pages of products from suppliers that offer one. <em>Older advice (2020).</em> [L1088.014]</p></li>
+</ul>
+<h2 id="sizing-for-apparel-and-footwear">Sizing for Apparel and Footwear</h2>
+<h3 id="why-sizes-go-wrong">Why sizes go wrong</h3>
+<ul>
+<li>Chinese sizes are usually smaller than US and European sizes, so a size that fits a Chinese buyer may not fit a US or European buyer. Check the supplier's size charts against the target market before listing clothing or shoes. [L1128.013]</li>
+<li>Putting the size chart in the product description did not stop buyers from ordering the wrong size, even when the text was highlighted and buyers were told to order larger. Make size selection easier with a clear size chart, and expect fit problems with winter clothing and jackets. [L1128.016]</li>
+<li>For fashion products with sizing, verify the size chart with the supplier before selling. Size charts on competitor stores were often weak, so a better chart is an advantage. [L1161.013]</li>
+<li>Trusting the supplier's size labels for shoes leads to wrong-size orders, refunds and complaints. The manual conversion work is slow at the start but is necessary. [L1219.004]</li>
+</ul>
+<h3 id="checks-before-listing">Checks before listing</h3>
+<ul>
+<li><p>Check after the ad validation step, before testing:</p>
+<ol type="1">
+<li>Source the product and confirm a good price from the supplier.</li>
+<li>For fashion items, confirm correct sizing and a reliable size chart with the supplier, such as CJ or another dropshipping supplier.</li>
+<li>Only then start the test.</li>
+</ol>
+<p>[L1161.014]</p></li>
+<li><p>For fashion products, CJ and Best Dealer are examples of suppliers from which to get a verified size chart before listing. Use the chart from the supplier that actually fulfills the order, since sizing differs between suppliers. [L1161.051]</p></li>
+<li><p>Footwear sizing check before listing, <em>Source C</em>:</p>
+<ol type="1">
+<li>Ask the supplier to send the length in centimeters for each size.</li>
+<li>Compare each centimeter length with the size standard of the target market, for example EU sizes for Europe.</li>
+<li>If the supplier advertises a size that does not match its centimeters, sell it under the size that matches the measurement. For example, sell an EU 34 measurement as 34 rather than 36.</li>
+<li>Repeat this check for each target market.</li>
+</ol>
+<p>[L0661.014]</p></li>
+<li><p>For footwear, ask the supplier for the real length of each size in centimeters, because supplier size labels do not match EU, UK or US sizing. Convert those centimeter values yourself for the target market instead of trusting the labels. [L1219.001]</p></li>
+<li><p>Chinese shoe size labels usually run one to two sizes smaller than European sizes. The lesson's example is Chinese 34 corresponding to about EU 32. Convert sizes manually before you publish a size chart. [L1219.002]</p></li>
+<li><p>Build a shoe size guide in this order:</p>
+<ol type="1">
+<li>Get the centimeter length of every size from the supplier.</li>
+<li>Check in the target country which shoe size matches that length.</li>
+<li>Adjust the size numbers manually for that market.</li>
+<li>Publish the resulting size guide on the product page.</li>
+</ol>
+<p>[L1219.003]</p></li>
+<li><p>Procedure to avoid size chargebacks when selling shoes across markets:</p>
+<ol type="1">
+<li>Ask the supplier for its size chart with the exact length in centimeters for each size, for example size 6.</li>
+<li>Ask for the European, Australian (or other local market) and American size charts.</li>
+<li>Compare each size with the local market chart and adjust the sizes you list.</li>
+<li>Double-check before publishing, because the same size number can differ between suppliers and markets.</li>
+</ol>
+<p>[L1214.011]</p></li>
+</ul>
+<h2 id="demo-products-and-upload-sequencing">Demo Products and Upload Sequencing</h2>
+<h3 id="demo-products">Demo products</h3>
+<ul>
+<li>Start a new store with a handful of demo products, then remove them once the first supplier approval arrives. Continue working through the supplier list for more approvals. <em>Older advice (2020).</em> [L1111.044]</li>
+<li>Upload demo products to the store while waiting for supplier approval, then replace them with real brand products once approved. Do not leave products from low-quality suppliers on the store. <em>Older advice (2024).</em> [L0806.031]</li>
+<li>Remove demo products from the store as soon as the first live supplier products are uploaded. <em>Older advice (2020).</em> [L1088.025]</li>
+<li>Remove all demo products in Shopify after the first supplier approval, before uploading that supplier's products. <em>Older advice (2023).</em> [L0934.043]</li>
+<li>Upload only real, live products from approved suppliers, and remove demo products before turning on ads. Get at least a second supplier approval before running any traffic. <em>Older advice (2023).</em> [L1094.013]</li>
+<li>Upload only real products from approved suppliers and remove demo products before turning on ads. Secure a second supplier approval before buying any traffic. Do not open paid ad accounts until live products are on the store, because doing so early can be read as a red flag by Google. <em>Older advice (2023).</em> [L1094.118]</li>
+<li>Find 4 to 5 demo products from a store in another country, using a VPN, and upload them into the Shopify account the same way as shown before moving on to the next step. <em>Older advice (2021-22).</em> [L0452.023]</li>
+<li>Real supplier products will later be uploaded with the same method once suppliers have been contacted and their products are available, so this process is useful later as well. <em>Older advice (2021-22).</em> [L0452.024]</li>
+</ul>
+<h3 id="upload-timing">Upload timing</h3>
+<ul>
+<li><p>Upload a supplier's products to the store immediately after approval and product information arrive, not in a batch later. Each delay between approval and upload leaves the store without products to sell. <em>Older advice (no year given).</em> [L0495.003]</p></li>
+<li><p>Start uploading products as soon as the first supplier is approved and has sent product data, without waiting for all supplier contacts to be made. Slow or unresponsive suppliers should not delay the upload work. <em>Older advice (2021-22).</em> [L1163.001]</p></li>
+<li><p>While waiting for approval from preferred suppliers, immediately upload products from authorized non-MAP suppliers to your store, even over a weekend. Non-MAP suppliers typically approve faster than MAP-enforcing brands. Although you will not run paid ads to non-MAP products, their presence significantly boosts store credibility. When a decision maker from a preferred supplier visits your site, they see 3+ brands with hundreds of products, which dramatically increases your odds of approval on subsequent outreach. Pricing non-MAP items for profit margins without ad spend ensures you capture revenue if customers buy organically while protecting cash flow if they don't. [L0294.004]</p></li>
+<li><p>Keep a supplier's product pages live at launch only after approval. Before approval, a store may be shown unlocked without active purchase capability, and products are added only once real suppliers are approved. <em>Older advice (2021).</em> [L0834.022]</p></li>
+<li><p>Product uploads sequenced by the first-approval rule, <em>older advice (2023)</em>:</p>
+<ol type="1">
+<li>Get approved by the first supplier.</li>
+<li>Remove all demo products in Shopify.</li>
+<li>Upload all products from that supplier.</li>
+<li>Contact the remaining suppliers on your list.</li>
+</ol>
+<p>[L0934.043]</p></li>
+<li><p>Sources differ on when to contact more suppliers. The 2023 advice says to contact the remaining suppliers after the first approval (L0934.043). The 2025 advice says to upload the first three approved suppliers' products and remove demo products before contacting more (L0966.022). Use the 2025 rule when you can reach three approvals, and the 2023 rule as the minimum.</p></li>
+<li><p>Get at least five approved suppliers before the module is complete. This creates an ongoing cycle of supplier outreach, approval, product integration, and store scaling. <em>Older advice (no year given).</em> [L0128.013]</p></li>
+<li><p>Upload the top products first at launch, <em>older advice (2021)</em>:</p>
+<ol type="1">
+<li>For each approved supplier, open the top three competitor stores in tabs.</li>
+<li>Search each brand name there and sort by best sellers.</li>
+<li>Upload the best sellers first at launch.</li>
+<li>Upload the remaining catalog over time.</li>
+</ol>
+<p>[L0834.023]</p></li>
+<li><p>Choose which products from each approved supplier to upload first, <em>older advice (2024)</em>:</p>
+<ol type="1">
+<li>Find the top future competitors' stores.</li>
+<li>Sort their product lists by best sellers (or featured or recommended).</li>
+<li>Upload the top 20 percent of best sellers from each approved supplier first.</li>
+<li>Upload the remaining 80 percent in the background over time.</li>
+<li>Optionally, ask each supplier rep for their current best-selling SKUs.</li>
+</ol>
+<p>[L0856.062]</p></li>
+<li><p>Sources differ on the first upload: the 2021 procedure uploads the best sellers at launch and the rest over time, and the 2024 procedure uploads the top 20 percent first and the other 80 percent in the background. Both apply the same logic; use the 2024 split if you need a fixed ratio.</p></li>
+</ul>
+<h1 id="shopify-setup">Shopify Setup</h1>
+<h2 id="store-structure">Store structure</h2>
+<ul>
+<li>Check whether each Shopify store uses a separate Shopify Payments account. Separate accounts make it easier to track each store's payments. <em>Older advice (2020).</em> [L0852.112]</li>
+<li>On Shopify, you can list 1,000 products on day one without restrictions. [L0280.009]</li>
+</ul>
+<h2 id="product-fields">Product fields</h2>
+<ul>
+<li>Set the Weight field in the Shopify Shipping section, with a unit selector such as kg. It is used to calculate shipping rates at checkout and to price shipping labels during fulfillment. Demo products can leave it empty, but real supplier products need it filled in correctly. <em>Older advice (2021-22).</em> [L0452.026]</li>
+<li>Enter stock levels on each product page when the supplier provides them. If the supplier gives no stock data, mark the product as in stock with a placeholder quantity, and confirm availability with the supplier. <em>Older advice (2021-22).</em> [L1145.034]</li>
+<li>If no stock figure is available, enter 10 as a placeholder in Track quantity. A quantity of 0 shows the product as out of stock and blocks sales. <em>Older advice (2021-22).</em> [L1166.016]</li>
+<li>Sources differ on the placeholder stock value. Both rules use a placeholder. The 2021-22 Source B advice names 10 as the Track quantity value (L1166.016), and the same course's note on the Stock field advises a placeholder quantity (L1145.034). Use 10 when the setting is Track quantity.</li>
+<li>Tick "This is a physical product" for physical goods. Weight and customs fields can be left empty when shipping domestically only. Customs details matter only for cross-border shipping: the country of origin, usually where the product is made, and the HS code used by border officers. <em>Older advice (2021-22).</em> [L1166.017]</li>
+<li>Mark shipped items as physical products and enter their weight. For cross-border sales, add customs information on the product page. <em>Source D 2026.</em> [L1167.024]</li>
+</ul>
+<h2 id="microsoft-merchant-center-feed-via-the-shopify-app">Microsoft Merchant Center feed via the Shopify app</h2>
+<ul>
+<li><p>Submit a Shopify product feed to Microsoft Merchant Center through the feed app 'Feed for Google Shopping', in this order:</p>
+<ol type="1">
+<li>In Shopify admin, open the app 'Feed for Google Shopping' and go to the header menu item 'Integrations'.</li>
+<li>Under 'Bing Shopping', click the green 'Connect' button (if not yet connected).</li>
+<li>Click 'Continue with integration'.</li>
+<li>Select the Microsoft Advertising account to use.</li>
+<li>Select the Microsoft Merchant Center store to use.</li>
+<li>Click 'Confirm your account' and check that the status shows connected and turned on.</li>
+<li>In Microsoft Advertising, go to Feeds and refresh the page. Two feeds should appear: the empty default catalog and the new feed named like 'US Bing Shopping Feed by <app name>'.</li>
+<li>Wait for the products to be imported. They show as 'pending' in Merchant Center when set up correctly.</li>
+</ol>
+<p>[L1036.001]</p></li>
+<li><p>A default catalog is created automatically when a new store is set up. The feed app's automatic feed is named 'US Bing Shopping Feed by <app name>' and is the feed that carries the Shopify products. The default catalog stays empty and can be ignored for this setup. [L1036.002]</p></li>
+<li><p>In Feeds, the button 'Create feed' allows naming a feed and choosing an upload method. Products can also be imported directly from a Google Merchant Center account. The Shopify feed app route was used instead of the direct import. [L1036.003]</p></li>
+</ul>
+<h2 id="google-shopping-variants">Google Shopping variants</h2>
+<ul>
+<li>Variant submission to Google Shopping: submit all variants if you want to run ads for all of them, or only the main variant if you want to run ads for one product. <em>Older advice (2021).</em> [L1090.034]</li>
+</ul>
+<h1 id="outsourcing-uploads">Outsourcing Uploads</h1>
+<h2 id="oversight-and-the-first-uploads">Oversight and the first uploads</h2>
+<ul>
+<li><p>Outsourced product uploads need full oversight, because a single misaligned row can put the wrong price on thousands of products. [L0359.037]</p></li>
+<li><p>Using Fiverr or external freelancers, never share your Shopify admin username and password. Generate a collaborator code instead, which gives limited access: freelancers can upload products but cannot access payment settings or restricted account areas. [L0106.004]</p></li>
+<li><p>Do not outsource product uploads blindly, because mistakes can make pricing wrong. Upload products yourself via CSV, and add a helper only after you can show the process by recording five to ten products. <em>Older advice (2022).</em> [L0665.025]</p></li>
+<li><p>Procedure to outsource product uploads for approved suppliers, in this order:</p>
+<ol type="1">
+<li>Treat each approved supplier as its own separate project.</li>
+<li>Create one document per supplier with where its products are accessed, a link to its product feed, CSV or Excel file, and an SOP for the workflow.</li>
+<li>Upload the first 10 products yourself while recording your screen (a free tool such as Loom, Google Meet or QuickTime works), and add each step to the SOP as you do it.</li>
+<li>Note how long the 10 uploads took, as a baseline for the cost of hiring.</li>
+<li>Hire a freelancer on Upwork or onlinejobs.ph for the rest.</li>
+<li>Share the project folder with the SOP and recording with the freelancer.</li>
+<li>Spot-check every upload: product images must match the right product, and prices and titles must match the right product.</li>
+</ol>
+<p>[L0359.036]</p></li>
+<li><p>Procedure to hand off product uploads when supplier formats differ, <em>older advice (2021)</em>:</p>
+<ol type="1">
+<li>Do a few uploads yourself to learn the process.</li>
+<li>Record your screen with Loom while uploading 10 to 20 products from one supplier.</li>
+<li>Send the recording to whoever will do the uploads.</li>
+<li>Treat each supplier as a separate job, because the work differs even when product counts are the same.</li>
+</ol>
+<p>[L0671.219]</p></li>
+<li><p>Loom is a free Chrome extension that records your browser, microphone and optional webcam with one click. Use it to record a sample task, such as uploading five products, then send the recording to a virtual assistant for training. <em>Older advice (2021).</em> [L0801.037]</p></li>
+</ul>
+<h2 id="freelancer-procedures">Freelancer procedures</h2>
+<ul>
+<li><p>Outsourcing supplier CSV and product upload work when supplier files are messy, <em>older advice (2024)</em>:</p>
+<ol type="1">
+<li>Search Upwork or Fiverr for a Shopify CSV expert.</li>
+<li>Send the freelancer your starting data (PDFs, spreadsheets) and tell them the exact format you need.</li>
+<li>Ask for a ready-to-upload CSV file.</li>
+<li>Review the CSV before uploading it.</li>
+<li>Do not give the freelancer access to your store.</li>
+</ol>
+<p>[L0806.029]</p></li>
+<li><p>Freelance product upload help can be found on Upwork by searching for Shopify product upload. Review the freelancer's reviews and past work before hiring, and check every upload for crossed details. <em>Older advice (no year given).</em> [L0941.032]</p></li>
+<li><p>Procedure for a supplier without a product list, <em>older advice (2021)</em>:</p>
+<ol type="1">
+<li>Search the supplier's products on Google as a customer and check what other sellers charge.</li>
+<li>If other sellers mark them up only slightly, for example around 10 percent, drop that supplier.</li>
+<li>If margins are strong, record one product upload on video with a free screen recording extension and hire a virtual assistant to upload the rest.</li>
+</ol>
+<p>[L0801.036]</p></li>
+</ul>
+<h2 id="how-many-products-to-upload-yourself-first">How many products to upload yourself first</h2>
+<p>Sources differ on the sample size before outsourcing:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Year</th>
+<th>Upload yourself first</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0663.073</td>
+<td>2019 (older)</td>
+<td>5 products, then test import</td>
+</tr>
+<tr>
+<td>L0665.025</td>
+<td>2022 (older)</td>
+<td>Record 5 to 10 products before adding a helper</td>
+</tr>
+<tr>
+<td>L0359.036</td>
+<td>undated</td>
+<td>First 10 products, recorded</td>
+</tr>
+<tr>
+<td>L0671.219</td>
+<td>2021 (older)</td>
+<td>10 to 20 products from one supplier, recorded</td>
+</tr>
+<tr>
+<td>L1275.016</td>
+<td>2019 (older)</td>
+<td>Roughly the first 100 products, or all products from the first supplier</td>
+</tr>
+<tr>
+<td>L0801.036</td>
+<td>2021 (older)</td>
+<td>One product upload recorded on video</td>
+</tr>
+</tbody>
+</table></div>
+<p>The 100-product figure is the oldest and largest. Use the 5 to 10 product test to start, because the sources agree that you should learn the process yourself before handing it off. [L0663.073, L0665.025, L0359.036, L0671.219, L1275.016, L0801.036]</p>
+<h2 id="quality-checks-and-hiring">Quality checks and hiring</h2>
+<ul>
+<li>Check every upload carefully, because wrong prices, images, descriptions or SKU numbers can get mixed between products. [L0941.031]</li>
+<li>Uploads of supplier products should be spot-checked on images, prices and titles before going live. The procedure is in "Outsourcing Uploads" above. [L0359.036]</li>
+</ul>
+<h1 id="costs-of-manual-and-outsourced-upload">Costs of Manual and Outsourced Upload</h1>
+<h2 id="pricing-model-by-data-format">Pricing model by data format</h2>
+<p>Pricing depends on the supplier's data format. <em>Older advice (2019).</em></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Supplier data format</th>
+<th>Category</th>
+<th>How to pay</th>
+<th>Example from the lesson</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSV file (Excel-style sheet with products, prices, descriptions, image links)</td>
+<td>Automated</td>
+<td>Hourly rate or fixed project fee, never a fixed price per product</td>
+<td>Formatting takes about 20 minutes to 1 hour regardless of whether there are 100 or 3,000 products</td>
+</tr>
+<tr>
+<td>PDF, supplier website without a feed, or physical catalog</td>
+<td>Manual</td>
+<td>Fixed cost per product</td>
+<td>About 5 minutes per product by hand</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1275.013]</p>
+<ul>
+<li>Paying a fixed price per product for a CSV feed overpays. Reformatting the file takes roughly the same time whether it has 100 or 3,000 products. <em>Older advice (2019).</em> [L1275.014]</li>
+<li>Manual upload hours = number of products x minutes per product / 60. For example, 3,000 products at 5 minutes each equals 250 hours of work, which is the basis for a fair per-product price. <em>Older advice (2019).</em> [L1275.015]</li>
+</ul>
+<h2 id="preparing-supplier-data">Preparing Supplier Data</h2>
+<ul>
+<li>Use one CSV file per supplier, because each supplier formats its data differently. [L1285.024.001]</li>
+<li>Open each supplier file and rename its columns to the exact headers of the Shopify product CSV template. [L1285.024.002]</li>
+<li>Add or delete columns until they match the template. [L1285.024.003]</li>
+<li>Copy and paste whole columns, not row by row. [L1285.024.004]</li>
+<li>Import the CSV for each supplier separately. [L1285.024.005]</li>
+</ul>
+<h2 id="rights-to-photos-and-price-lists">Rights to Photos and Price Lists</h2>
+<ul>
+<li>Supplier photos and a price list are generally low risk to use when the supplier gives written permission, even without a signed contract. [L1283.012]</li>
+<li>Ask for that permission in writing before you publish any photos. [L1283.012]</li>
+</ul>
+<h2 id="product-identifiers-sku-mpn-gtin">Product Identifiers (SKU, MPN, GTIN)</h2>
+<ul>
+<li>Some products have no SKU or barcode. In that case, create an MPN with this procedure (older advice, from 2022):
+<ol type="1">
+<li>Take the abbreviation of the brand name, for example ABT for AB Tables. [L1281.013]</li>
+<li>Add a sequential number for each product, for example ABT123, ABT124, ABT125. [L1281.013]</li>
+<li>Enter this code as the manufacturer part number in the product data. [L1281.013]</li>
+</ol></li>
+</ul>
+<h2 id="choosing-which-products-to-list-1">Choosing Which Products to List</h2>
+<ul>
+<li>Once you are authorized to sell a brand, you do not have to list its whole catalog. [L1287.014]</li>
+<li>Choose the products that give you the best margin. These are often the higher-priced items. [L1287.014]</li>
+</ul>
+<h2 id="uploading-to-shopify">Uploading to Shopify</h2>
+<ul>
+<li>Use Shopify's native CSV import for bulk product uploads and edits. [L1285.025]</li>
+<li>Do not add a third-party bulk upload app for this. [L1285.025]</li>
+</ul>
+<h2 id="inventory-settings">Inventory Settings</h2>
+<ul>
+<li>For dropshipping products, set the inventory quantity to 9999 so the product does not show as out of stock. [L1331.011]</li>
+<li>Confirm with the supplier that the stock actually exists, especially if you work with a private agent. [L1331.011]</li>
+</ul>
+<h2 id="shopify-setup-for-meta-connections">Shopify Setup for Meta Connections</h2>
+<ul>
+<li>The Shopify setup screens for Facebook and Meta connections were recorded in late 2022, so menu names and button labels may have changed since then. [L1318.015]</li>
+<li>Match each step to the label that is actually on screen instead of following the recorded wording word for word. [L1318.015]</li>
+</ul>
+<h2 id="outsourcing-product-questions-to-writers">Outsourcing Product Questions to Writers</h2>
+<p>Older advice, recorded 2021 to 2022: [L1396.070]</p>
+<ol type="1">
+<li>Send the manufacturer's contact an introduction email that names the writer and the page or blog being written. [L1396.070]</li>
+<li>Tell the writer that they may call that contact directly with product questions. [L1396.070]</li>
+<li>Keep these calls away from the project manager, who otherwise handles them on top of CSV uploads. [L1396.070]</li>
+</ol>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>Ask suppliers for a CSV, Excel or product feed when possible, because a structured file makes product uploads much faster than manual entry. [L0359.032]</li>
+</ul>
+<ol type="1">
+<li>After approval, receive the product data, pricing and other information the supplier provides.</li>
+<li>Load the product data onto your store.</li>
+<li>Clean up the website design so the products look neat and consistent.</li>
+<li>Check the store is complete and ready to take orders.</li>
+<li>Launch the store and start the traffic funnel. [L0458.040]</li>
+</ol>
+<ul>
+<li><p>When suppliers provide product data through a CSV template, make sure the product information in the file matches what should appear on your store. [L0468.053]</p></li>
+<li><p>Duplicate products from two suppliers, for example one at MAP and one without MAP, should not both be listed in the same store because it confuses customers. [L1113.026]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../03-suppliers-and-fulfillment/11-pricing-margin-and-profitability-checks-per-supplier/"><span class="k">&larr; Previous</span><span class="v">Pricing, margin and profitability checks per supplier</span></a><a class="nx" href="../../03-suppliers-and-fulfillment/13-shipping-setup-policies-and-delivery-expectations/"><span class="k">Next &rarr;</span><span class="v">Shipping setup, policies and delivery expectations</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Finance, tax and business admin tools | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 5.20: Finance, tax and business admin tools.">
+<link rel="canonical" href="https://dlichters.com/aiecom/05-apps-and-tools/20-finance-tax-and-business-admin-tools/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Finance, tax and business admin tools | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 5.20: Finance, tax and business admin tools."><meta property="og:url" content="https://dlichters.com/aiecom/05-apps-and-tools/20-finance-tax-and-business-admin-tools/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">5. Apps and tools</a> &rsaquo; <a href="../../../ecom/05-apps-and-tools/20-finance-tax-and-business-admin-tools/">Plain version</a></div><h1>5.20 Finance, tax and business admin tools</h1><article><h2 id="break-even-and-margin-checks-before-ads">Break-even and margin checks before ads</h2>
+<ul>
+<li>The Dropship Toolkit calculator takes a product cost and a selling price and shows the profit margin and break-even ROAS, so you can check a product before running ads [L0440.023].</li>
+<li>A dropshipping break-even calculator takes two inputs: COGS (product cost plus shipping to the customer) and the selling price. It returns the break-even ROAS for the product, so it can be used before launching ads [L0875.027].</li>
+<li>A calculator such as Drop Ship Toolkit computes break-even ROAS from the COGS and selling price you enter, which lets you compare candidate products quickly [L1174.034].</li>
+<li>The Ecom Margin Calculator has three input fields [L0987.017]:
+<ul>
+<li>LISTING PRICE: the price the product shows on the store.</li>
+<li>COGS + SHIPPING: the total cost per unit.</li>
+<li>AD SPEND PER ORDER: optional.</li>
+</ul></li>
+<li>Its outputs are GROSS MARGIN, PRODUCT MARGIN, PRODUCT ROI, TARGET ROAS and TARGET CPA, plus a tier badge (Elite, Sweet Spot, Workable or Insufficient) with a short status message [L0987.017].</li>
+<li>A Sweet Spot result means the product is ready to scale. An Insufficient result means it needs work and suggests a bundle or a higher-margin product [L0987.018].</li>
+<li>An Insufficient result also shows the hint "Low margin? Try adding a bundle offer" [L0987.018].</li>
+<li>The source does not describe the status messages for the Elite and Workable tiers [L0987.018].</li>
+<li>The Source D margin spreadsheet (named KPIs Margin Net Profit BE ROAS) calculates per product: product cost, credit card fees, merchant account fees, shipping costs, fulfilment cost per unit, total cost of product plus fulfilment, percentage cost, expected gross profit per order, gross margin, net profit, break-even ROAS, and target ROAS at 10%, 15% and 20% margins [L1182.014].</li>
+<li>Use the margin spreadsheet for each market and quantity row to check that the selling price meets the margin target [L1182.014].</li>
+</ul>
+<h3 id="pricing-procedure-for-one-product-in-the-margin-spreadsheet">Pricing procedure for one product in the margin spreadsheet</h3>
+<ol type="1">
+<li>Open the margin spreadsheet and create your own copy with File &gt; Make a copy [L1182.004].</li>
+<li>Confirm that the market row is set to USA with quantity 1 [L1182.004].</li>
+<li>Get the USA product cost from the supplier [L1182.004].</li>
+<li>Enter only the two input cells: the product cost and the selling price (AOV). Do not touch any cell marked in red [L1182.004].</li>
+<li>Adjust the selling price until the gross profit margin shows 70% [L1182.004].</li>
+<li>If 70% is not reachable, accept 69%, 68% or 67% as the minimum [L1182.004].</li>
+</ol>
+<h2 id="profit-trackers">Profit trackers</h2>
+<ul>
+<li>Google Sheets is a free way to track product costs, prices and profits if no dedicated app is used. Enter prices manually and compare them over time [L0806.046].</li>
+<li>A profit tracking spreadsheet records the net profit for each sale. Google Sheets, Excel or Numbers can be used [L0970.095].</li>
+<li>Google Sheets is a free tool for tracking profit per sale, and it can use a sales automation [L0856.071].</li>
+<li>Put the profit formula in the first cell of each column, then drag it down [L1115.059].
+<ol type="1">
+<li>Use the spread column for MAP minus wholesale [L1115.059].</li>
+<li>Use a later column for spread minus shipping [L1115.059].</li>
+</ol></li>
+<li>The Order Profit Tracker is a Google Sheets spreadsheet with a Profit Per Order tab and a Setup tab. Colored cells calculate automatically, and only the white, uncolored cells are filled in by hand [L1201.015].</li>
+<li>To get your own copy of the Order Profit Tracker [L1201.016]:
+<ol type="1">
+<li>Open the shared link, which gives read-only or view-only access [L1201.016].</li>
+<li>Go to File &gt; Make a copy and save it to your Google Drive [L1201.016].</li>
+</ol></li>
+<li>A Shopify backend app can store the wholesale cost on each product, so margin is tracked in the back end while shoppers see nothing (2019, older) [L0663.062].</li>
+<li>B-Profit is installed as follows [L0445.027]:
+<ol type="1">
+<li>Open the recommended apps section, which links to the B-Profit listing in the Shopify App Store [L0445.027].</li>
+<li>Click Install [L0445.027].</li>
+<li>After creating an account, the B-Profit dashboard opens and shows the profit numbers once setup is finished [L0445.027].</li>
+</ol></li>
+<li>Before connecting Facebook, Instagram and Klaviyo accounts to BeProfit, pause any active ad blocker on the BeProfit website. Otherwise the account connection steps may not load correctly [L0477.036].</li>
+</ul>
+<h2 id="bookkeeping-and-accounting">Bookkeeping and accounting</h2>
+<p>Choose the tool by stage and order volume.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Tool</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand-new store, low volume</td>
+<td>Spreadsheet (Google Sheets, Excel or Numbers)</td>
+<td>[L0970.084, L0970.095]</td>
+</tr>
+<tr>
+<td>Early stage, no high transaction volume</td>
+<td>Google Sheets (free, less sophisticated)</td>
+<td>[L0245.035]</td>
+</tr>
+<tr>
+<td>Growing volume, many transactions</td>
+<td>Xero</td>
+<td>[L0245.034, L0835.122]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Use Excel to track profit and loss from the beginning. Shopify does not know your expenses, so Excel or a third-party bookkeeping service fills that gap (2021, older) [L0834.054].</li>
+<li>The first years were run on Excel with well over $5 million in sales before switching (2021, older) [L0834.054].</li>
+<li>Google Sheets can serve as basic accounting and reconciliation software for early-stage businesses without high transaction volume. It is free but less sophisticated than dedicated accounting software (2020, older) [L0245.035].</li>
+<li>Google Sheets can handle profit tracking at an early stage and was used for over $10 million in sales before switching to Xero (2023). Note that the source gives a different switch point for Excel above [L0835.122, L0834.054].</li>
+<li>Xero provides centralized bookkeeping with access for accountants, bookkeepers and business owners. It costs approximately £25/month (2020, older). It is superior to Google Sheets for businesses with significant transaction volume [L0245.034].</li>
+<li>Xero is a common accounting platform for e-commerce businesses [L0835.122].</li>
+<li>Xero is a bookkeeping and accounting tool that pulls in transaction data. It is not required at the start, and a spreadsheet is enough while order volume is low [L0970.084].</li>
+<li>Xero is the accounting software used by the bookkeeper [L0856.071].</li>
+<li>A brand-new store does not need Xero or QuickBooks. Once money flows through the business, bookkeeping software makes accountant review cheaper (2019, older). Xero is the example given, and QuickBooks is an alternative [L1086.058].</li>
+<li>In the source's setup, operating subscriptions such as Shopify, Grasshopper and Bonjoro are charged to the Capital One card together with supplier orders. Keeping these subscriptions on one card keeps operating expenses in one statement (2021-22, older) [L0903.039].</li>
+<li>A Google Sheets allocation chart can model the Profit First system (2021-22, older) [L1200.038]:
+<ol type="1">
+<li>Enter the sales for a period, the COGS percentage, and the percentage for each account [L1200.038].</li>
+<li>The sheet calculates the COGS amount, real revenue, and each account's amount [L1200.038].</li>
+<li>Check that the percentage column totals 100% before using it [L1200.038].</li>
+</ol></li>
+<li>The Profit First planning model is built in Google Sheets, so the owner can share the allocations and staff planning tabs with the team. It is edited and viewed in a browser, so no separate software is needed (2021-22, older) [L1334.048].</li>
+</ul>
+<h2 id="sales-tax-with-taxjar">Sales tax with TaxJar</h2>
+<ul>
+<li>TaxJar is a Shopify app for automatic tax calculation and filing. Set it up once, and it handles tax in all registered states (2023) [L0274.029].</li>
+<li>TaxJar is used to manage sales tax across several US states. Other tax apps with good reviews in the Shopify app store can also be used (2024) [L0360.074].</li>
+<li>To find it, search for TaxJar in the Shopify app store (2023) [L0970.083].</li>
+<li>TaxJar is a Shopify app that calculates state sales tax and tracks sales thresholds across states, so you know when to register in another state (2023) [L0855.109].</li>
+<li>TaxJar is a provider of e-commerce tax and law information with a large resource section of guides, videos and blog posts. Its app connects to Shopify and can collect and remit sales tax, but using the app is optional (2020, older) [L0551.032].</li>
+<li>TaxJar offers a Shopify app and a resource center with detailed sales tax information. Use it to understand sales tax rules, nexus thresholds and collection requirements (2025) [L0972.032].</li>
+<li>TaxJar offers free resources on e-commerce sales tax and a Shopify app for tax calculation. Use its resources to look up exact nexus thresholds for each state (2020, older) [L0961.020].</li>
+<li>TaxJar provides sales tax and nexus information, including a resource center and an app for Shopify. It is used to check sales thresholds per state (2020, older) [L0967.056].</li>
+<li>TaxJar provides current sales tax information by US state and is a reliable resource for nexus thresholds. Check it before assuming how much tax to collect in each state (2021, older) [L1279.044].</li>
+<li>TaxJar is recommended for sales tax handling in the US and integrates with Shopify. Economic nexus thresholds for each state are on its guide, commonly 100,000 dollars in sales or 200 transactions per year, depending on the state (2022, older) [L0665.043].</li>
+<li>TaxJar is a Shopify app and service that calculates, collects and remits sales tax for states where the business has to collect it (2022, older) [L1281.089].</li>
+<li>TaxJar is a resource for looking up state-by-state sales tax rules, including whether shipping charges are taxable. Check the state rules before setting shipping tax (2020, older) [L1088.066].</li>
+<li>TaxJar is a website and Shopify app that collects sales tax and also files it for you. It is the option for a fully hands-off tax service on a Shopify store (2018, older) [L1274.053].</li>
+<li>The sources differ on how optional TaxJar is. One describes the app as optional (2020) [L0551.032]. The other calls it the fully hands-off option (2018) [L1274.053]. Choose the hands-off app if you want the filing handled for you. Use the resources alone if you only need to look up rules.</li>
+</ul>
+<h2 id="payment-processors-and-checkout-financing">Payment processors and checkout financing</h2>
+<ul>
+<li>Shopify Payments is the preferred payment processor where it is supported in the seller's country. Check Shopify's supported-countries list, which included roughly 15 to 20 countries at the time [L0359.049].</li>
+<li>Shopify Payments support includes many European countries (2023). The two sources give different country counts, so check the current list before relying on either [L0855.114, L0359.049].</li>
+<li>2Checkout is a payment processor that can be used as a fallback when Shopify Payments is not available [L0359.050].</li>
+<li>PayPal can be used as a secondary payment method, not the main one (2023) [L0855.114].</li>
+<li>PayPal Credit can be enabled on a store that already accepts PayPal, which makes financing simple to add. It is one of several financing options for high-ticket orders (2020, older) [L1111.081].</li>
+<li>Shopify's built-in financing through Shop Pay Installments and Klarna is available with Shopify Payments. Use it so customers can split payments for expensive products (2024) [L0806.044].</li>
+<li>Affirm, a pay-over-time financing provider, integrates with Shopify and shows the financing option on product pages next to the Buy It Now button. It can be offered as an alternative to PayPal Credit for customers who prefer financing (2019, older) [L1086.059].</li>
+<li>Currency conversion apps from the Shopify App Store show prices in the local currency based on the visitor's IP address. Shopify also planned a built-in version for fall 2018, and Shopify Payments accepts the converted payments (2018, older) [L1274.071].</li>
+</ul>
+<h2 id="international-banking-and-transfers">International banking and transfers</h2>
+<ul>
+<li>Wise is used for international bank transfers and direct deposit to contractors in other countries, such as the Philippines [L0337.037].</li>
+<li>Mercury and Silicon Valley Bank were mentioned as banking options for doing business abroad in the US (2022, older) [L0665.053].</li>
+</ul>
+<h2 id="business-registration-and-virtual-mailing-addresses">Business registration and virtual mailing addresses</h2>
+<ul>
+<li>LegalZoom is used to form an LLC and gives a virtual forwarding address that some suppliers accept as a business address (2022, older) [L0854.078].</li>
+<li>Stripe Atlas can set up a US business entity and a US bank account for non-US residents, and the account integrates with Shopify. It is a workable route for non-US sellers who need a US entity (2021, older) [L1279.045].</li>
+</ul>
+<h3 id="anytime-mailbox-us-us-plans-prices-in-us-verify-before-buying-2021-22-older">Anytime Mailbox US (US plans, prices in US$, verify before buying; 2021-22, older)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Monthly</th>
+<th>Yearly</th>
+<th>Incoming mail included</th>
+<th>Recipients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bronze (basic)</td>
+<td>9.99</td>
+<td>109.99</td>
+<td>20 items per month, each extra item US$ 3.00</td>
+<td>not stated</td>
+</tr>
+<tr>
+<td>Silver</td>
+<td>14.99</td>
+<td>164.99</td>
+<td>30 items per month</td>
+<td>Unlimited</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1434.013]</p>
+<ul>
+<li>Anytime Mailbox also includes open and scan of mail as PDFs with free unlimited online storage, and it offers check deposit and mail forwarding. These features are optional for a registered-address-only use (2021-22, older) [L1434.014].</li>
+</ul>
+<h3 id="gordon-executive-centre-sydney-north-shore-australia-aud-verify-before-buying-2021-22-older">Gordon Executive Centre (Sydney North Shore, Australia; AUD, verify before buying; 2021-22, older)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Price excl. GST</th>
+<th>Price incl. GST</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly</td>
+<td>50 per month</td>
+<td>55</td>
+<td>Plus GST</td>
+</tr>
+<tr>
+<td>3 months</td>
+<td>145 per 3 months (about 11.15 per week)</td>
+<td>159.50</td>
+<td>Plus GST</td>
+</tr>
+<tr>
+<td>6 months</td>
+<td>270 per 6 months (about 10.38 per week)</td>
+<td>297</td>
+<td>Plus GST</td>
+</tr>
+<tr>
+<td>6 months with 1 month off</td>
+<td>225 (about 8.65 per week)</td>
+<td>247.50</td>
+<td>Special for the six-month plan</td>
+</tr>
+<tr>
+<td>Set-up charge</td>
+<td>not stated</td>
+<td>not stated</td>
+<td>Check before signing</td>
+</tr>
+<tr>
+<td>Deposit for international clients</td>
+<td>55.00</td>
+<td>not stated</td>
+<td>One-time</td>
+</tr>
+<tr>
+<td>Extra names</td>
+<td>10 each per month, or 35 per block of five names per month</td>
+<td>not stated</td>
+<td>Plus GST</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1434.016]</p>
+<ul>
+<li>Gordon Executive Centre forwards mail on every business day. Standard post within Australia is charged at postage plus 10%. Courier within Australia is charged at cost plus 10% plus GST. International postage or courier carries no GST. Scanning and emailing costs 3 for the first page and 0.50 for each further page, up to 10 per 10 minutes, plus GST [L1434.019].</li>
+<li>Gordon Executive Centre offers a Lite plan for businesses that need only one name and receive little mail. Use it if the address is only needed for registration and contact details [L1434.020].</li>
+<li>Australian virtual address providers that appear in search results for "virtual mailing address" are listed below. Compare prices on each provider's own page, as search snippets may be outdated (2021-22, older) [L1434.021].
+<ul>
+<li>Virtual Headquarters (advertised from about AUD 12 per week, 60 locations)</li>
+<li>Gordon Executive Centre (from 5.97 per week for a single name)</li>
+<li>Aussie Mailman (mail scanning and redirection, Sydney-based, pay per use)</li>
+<li>Servcorp</li>
+<li>Regus</li>
+<li>Lawpath</li>
+<li>Alliance Virtual Offices</li>
+<li>ABN Australia</li>
+<li>Mail Boxes Etc.</li>
+</ul></li>
+</ul>
+<h2 id="supplier-admin">Supplier admin</h2>
+<ul>
+<li>When a supplier asks for a signed account application form by fax, send it from Gmail using a fax-to-email service, which avoids needing a physical fax machine. Search for the service in a quick web search when a supplier requests an outdated method [L1441.016].</li>
+</ul>
+<h2 id="cost-of-testing-a-second-store">Cost of testing a second store</h2>
+<ul>
+<li>A discounted Shopify trial offer (1 USD per month for three months, through an affiliate link) can reduce the cost of testing a second store. Use it only after the first store is profitable [L1316.043].</li>
+</ul>
+<h2 id="due-diligence-and-valuation">Due diligence and valuation</h2>
+<ul>
+<li>Shopify analytics are useful, but buyers still want Google Analytics for store traffic data. Empire Flippers requires Google Analytics for every listing [L0554.028].</li>
+<li>Buyers check backlinks for spam and manipulation. Moz Open Site Explorer (written as "boz.com open site explorer" in the source) shows backlinks to your site, including links you built yourself [L1468.027].</li>
+<li>Centurica publishes due diligence reports that buyers can order on a site. A seller can order the basic report six months out to find weak spots and fix them first [L1468.028].</li>
+<li>The Empire Flippers online valuation tool takes the inputs below. It gives a range that the broker compares with previously sold businesses [L0554.027].</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Effect on valuation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seller hours per week (seller only, not team)</td>
+<td>Fewer hours are more valuable: 5 hours is better than 50</td>
+</tr>
+<tr>
+<td>Company start date</td>
+<td>Older company is more valuable</td>
+</tr>
+<tr>
+<td>Average monthly revenue</td>
+<td>Bigger businesses usually get higher multiples</td>
+</tr>
+<tr>
+<td>Average monthly expenses</td>
+<td>Profit margin affects valuation</td>
+</tr>
+<tr>
+<td>Number of products</td>
+<td>More products mean lower risk</td>
+</tr>
+<tr>
+<td>Traffic</td>
+<td>Minor factor</td>
+</tr>
+<tr>
+<td>Email subscribers</td>
+<td>Minor factor</td>
+</tr>
+<tr>
+<td>Social channels and followers</td>
+<td>Minor factor</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0554.027]</p>
+<h2 id="annual-review-and-goals">Annual review and goals</h2>
+<ul>
+<li>The annual review spreadsheet has four tabs: Business Questions, Business Answers, Personal Questions and Personal Answers. Each question in a Questions tab has its matching answer area in the corresponding Answers tab. Write answers only in the Answers tabs. Use the Numbers file on Mac or the Excel file on Windows (2021-22, older) [L0800.024].</li>
+<li>The Course B Goals and Rocks Tracker is a Google Sheets template that puts the 10-year picture, 3-year picture and 1-year plan on one page as a roadmap. It can be downloaded to Excel or CSV for those who work on desktop or do not use Google Drive (2021-22, older) [L1519.009].</li>
+<li>To set up your own goals tracker [L1519.011]:
+<ol type="1">
+<li>Do not edit the shared template directly [L1519.011].</li>
+<li>In Google Sheets, click File and then Make a copy, which places a copy in your Google Drive [L1519.011].</li>
+<li>Rename the copy to your business name [L1519.011].</li>
+<li>Alternatively, download the template as Microsoft Excel or CSV and edit it on your desktop [L1519.011].</li>
+</ol></li>
+</ul>
+</article><nav class="pn"><a href="../../05-apps-and-tools/19-orders-automation-fraud-and-operations/"><span class="k">&larr; Previous</span><span class="v">Orders, automation, fraud and operations</span></a><a class="nx" href="../../05-apps-and-tools/21-affiliates-outreach-and-promotion-channels/"><span class="k">Next &rarr;</span><span class="v">Affiliates, outreach and promotion channels</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

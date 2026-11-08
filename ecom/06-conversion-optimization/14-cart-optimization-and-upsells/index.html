@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cart optimization and upsells | Ecommerce Playbook</title>
+<meta name="description" content="- Keep shoppers on the page: open a cart drawer (a box that slides out) when they press Add to Cart. - Put a one-click button in the cart that goes straight to checkout, with no extra questions before it. - Test every add-on and extra offer before ...">
+<link rel="canonical" href="https://dlichters.com/ecom/06-conversion-optimization/14-cart-optimization-and-upsells/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Cart optimization and upsells | Ecommerce Playbook"><meta property="og:description" content="- Keep shoppers on the page: open a cart drawer (a box that slides out) when they press Add to Cart. - Put a one-click button in the cart that goes straight to checkout, with no extra questions before it. - Test every add-on and extra offer before ..."><meta property="og:url" content="https://dlichters.com/ecom/06-conversion-optimization/14-cart-optimization-and-upsells/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../06-conversion-optimization/">6. Conversion optimization</a></div><h1>Cart optimization and upsells</h1><p class="meta">Section 6.14 &middot; 14 of 22 in this chapter &middot; 24 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Keep shoppers on the page: open a <strong>cart drawer</strong> (a box that slides out) when they press Add to Cart.</li>
+<li>Put a <strong>one-click</strong> button in the cart that goes straight to checkout, with no extra questions before it.</li>
+<li>Test every add-on and extra offer before you keep it. Unasked cross-sells wait until the store is growing.</li>
+<li>Show extra offers <strong>after payment</strong>. Buyers say yes more often at that point.</li>
+<li>Show <strong>one extra offer after payment</strong>. This is a post-purchase upsell <span class="ex">(an offer to buy a bigger or better version)</span>.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li><strong>Test</strong> two or more offers and keep the one most customers say yes to.</li>
+<li>Keep extra offers <strong>optional</strong>. Forced offers make customers angry.</li>
+<li><strong>Check</strong> the numbers in your own store data before you trust any figure from this text.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 14 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="cart-drawer-and-cart-page-design"><summary><h2>Cart drawer and cart page design</h2><span class="pm">4 min</span></summary>
+<ul>
+<li>Replace the Buy Now button with an <strong>Add to Cart</strong> button and use a cart drawer <span class="ex">(a box that slides open over the page)</span>. Shoppers stay on the product page, can close the drawer, and keep shopping without losing their place.</li>
+<li>Open a <strong>slide-out cart</strong> when the customer presses add to cart, instead of sending them to a separate cart page. This removes one step between the product page and checkout <span class="ex">(the page where the customer pays)</span>. It also keeps the customer on the page while they read.</li>
+<li>Build the cart and checkout for simplicity:
+<ol type="1">
+<li>Use a cart drawer (AJAX cart: a cart that updates without reloading the page) that opens on add to cart.</li>
+<li>Put a <strong>one-click button</strong> in the cart that leads directly to checkout.</li>
+<li><strong>Do not</strong> show extra steps or questions before checkout.</li>
+<li>Place the terms and conditions on the checkout page itself, using the Shopify option for this (Shopify is the online store platform). Do not make them a required step earlier in the flow.</li>
+</ol></li>
+<li>Use this element order in a slide cart <span class="ex">(a cart drawer that slides out)</span>:
+<ol type="1">
+<li><strong>TrustPilot rating</strong> (a review site's score) and payment badges <span class="ex">(small logo images)</span> placed under the cart.</li>
+<li>Urgency message <span class="ex">(a line that pushes buying now)</span>: "Your order reserved for 5-10 minutes."</li>
+<li><strong>Free shipping bar</strong> (a bar showing how close the customer is to free shipping).</li>
+<li>Progress bar <span class="ex">(a bar showing how far the customer is toward a goal)</span>.</li>
+<li>Optional cross-sell <span class="ex">(an offer of a related product)</span>, added only with care.</li>
+</ol></li>
+<li>Slide-cart apps: <strong>UpCart</strong> is the default. AMP Slide Cart is another solid option. Some themes <span class="ex">(store designs)</span>, such as Shrine, include their own slide cart.</li>
+<li>Choose a <strong>single or double column</strong> layout <span class="ex">(how many columns the cart uses)</span> based on target market <span class="ex">(the customers you aim at)</span> and product mix <span class="ex">(the kinds of products you sell)</span>. Do not choose it because it is trending. Double column carts were popular for a time but are used less often now.</li>
+<li>Components <span class="ex">(cart parts such as boxes and bars)</span> can be moved by drag and drop <span class="ex">(dragging them with the mouse)</span> anywhere in the cart. This means placements can be A/B tested later <span class="ex">(two versions shown to different visitors to see which one sells more)</span>.</li>
+<li>A <strong>login button</strong> in the cart can drive sign-ups <span class="ex">(new account creations)</span> and segmentation <span class="ex">(sorting customers into groups)</span>. For example, it can link to a loyalty program <span class="ex">(a reward scheme for repeat buyers)</span> form on the customer account page. Customer rules <span class="ex">(store rules that act on shoppers)</span> can use login status <span class="ex">(whether the shopper is logged in)</span> and customer account tags <span class="ex">(labels on a customer account)</span> to target promotions <span class="ex">(special deals)</span>.</li>
+<li>The checkout area can show a <strong>view cart</strong> button that links to a full-page cart. This is useful for products with delivery date rules. A continue shopping button closes the cart modal <span class="ex">(the pop-up window)</span>, and its label can be edited to match the brand voice <span class="ex">(the store's tone of speech)</span>.</li>
+<li>On desktop <span class="ex">(computer screens)</span>, shoppers may not know that the X or a click outside the cart closes it. A visible <strong>continue shopping</strong> button helps. Change its label to match the brand voice and target market.</li>
+<li>A <strong>discount code</strong> input in the cart lets customers enter a code and see its effect on the subtotal <span class="ex">(the total of the items)</span> before checkout. A code entered in the cart is already applied at checkout, so it does not need to be entered again.</li>
+<li>Example of a checkout cart: a free shipping progress message, a free product unlock at $40.06 added as a line item <span class="ex">(a separate row on the order)</span>, a subscription upgrade offer saving 20%, an SMS sign-up offer <span class="ex">(joining text message updates)</span> of 10% off, and an order notes field. The subtotal of $59.94 was shown with <strong>two interest-free installments</strong> of $29.97 through Shop Pay, Klarna or Afterpay. These are payment services that split a price into parts paid over time.</li>
+<li>A cart can show that an order includes a <strong>free gift</strong>. This signals value before checkout and makes the buyer feel they get a lot for the price.</li>
+<li><strong>Kaching Cart</strong> (a cart app for Shopify) warning message: set it under Kaching Cart &gt; Cart settings &gt; Top bar. Write it as a stock-scarcity statement <span class="ex">(a line saying stock is running low)</span> that includes a <strong>sold-out count</strong> and a call to order now.</li>
+<li>Trust badges in Kaching Cart: under Kaching Cart &gt; Cart settings &gt; Trust badges, <strong>upload</strong> a custom badge image <span class="ex">(your own picture)</span> in PNG or JPEG format <span class="ex">(two picture file types)</span>. The image shows the rating and the Trustpilot logo. Name it "Trustpilot". Set it to show under the checkout button, and adjust the Logo size, Icon size and Text size fields. The example badge width is 150 px <span class="ex">(pixels, the width of the picture)</span>.</li>
+<li>Name custom trust badges clearly so they are easy to find in the badge list. Examples are "Trustpilot" or "Choice by Trustpilot", matching the uploaded image.</li>
+</ul>
+</details><details class="part" id="cart-page-recommendations-and-reminders"><summary><h2>Cart-page recommendations and reminders</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>A "Your cart is ready" reminder box <span class="ex">(a box that reminds shoppers of items they left)</span> on the homepage shows cart items, total price and a "Continue to checkout" button. It generates a <strong>+9.2%</strong> conversion rate lift <span class="ex">(a rise in the share of visitors who buy)</span>.</li>
+<li>The homepage reminder delivers stronger lift when visitors have <strong>multiple items</strong> in the cart rather than a single item. The biggest improvement comes from returning customers.</li>
+<li>Product recommendations on cart pages with zoom and add-to-cart buttons keep customers on the cart page. They generate a <strong>+4.5%</strong> conversion rate lift.</li>
+<li>Customers who click cart recommendations to open a full product page interrupt their checkout flow <span class="ex">(the steps from cart to payment)</span> and add friction <span class="ex">(anything that slows buying)</span>. Keeping zoom and add-to-cart on the cart page maintains purchase momentum.</li>
+<li>Recommendations driven by customer behavior and purchase history <span class="ex">(what shoppers looked at and bought)</span> <strong>outperform</strong> manual picks based on bestsellers or store assumptions. They match individual interests rather than store preferences.</li>
+<li>Example: Oodie replaced its 2-item PDP <span class="ex">(product detail page)</span> recommendation slider <span class="ex">(a sliding row of suggested products)</span> with a <strong>2x3 grid</strong>. It used Visually's behavior-based engine <span class="ex">(a recommendation tool that uses browsing history plus purchase history)</span>. This increased CVR <span class="ex">(conversion rate)</span> and revenue per session. It then replaced SearchSpring <span class="ex">(another recommendation app)</span> with Visually recommendations across all product detail page and cart regions.</li>
+<li>Cross-sell widgets <span class="ex">(small boxes that offer related products)</span> can sit at different points in the cart. Options include the top, to draw attention, or just above the checkout button, so shoppers do not forget free samples. This is the main way to build a <strong>selectable gift with purchase</strong> (a free gift the shopper picks when buying).</li>
+<li>A new <strong>Smart Cart</strong> (a cart tool) automatically creates and installs a cross-sell widget, so the cart has recommendations from the start. Duplicating a cart keeps the same widget ID <span class="ex">(a unique code for each widget)</span>. The data source <span class="ex">(where the products come from)</span> or layout is edited in the widget settings, not the cart settings.</li>
+<li>Several cross-sell widgets can be added to one cart. Use separate widgets to show different recommendations to different customer groups, or to run customer-based discounts that need their own widget ID.</li>
+<li>Cart-page offers convert well because the customer is already in buying mode <span class="ex">(ready to buy)</span>. <strong>Upsells</strong> (offers of a bigger or better version of a product) placed there are worth testing.</li>
+<li>The cart page is a strong place for <strong>pre-checkout upsells</strong> (offers shown before the payment page), because buyers there are close to paying and in a buying mood. The product page suits bundles <span class="ex">(sets of items sold together)</span> and buy-one-get-one offers <span class="ex">(buy one, get one free or discounted)</span>.</li>
+<li>Tiered cart goals <span class="ex">(rewards at several cart values)</span> with a progress bar in the cart drawer: at about <strong>$15</strong> cart value, free shipping unlocks. At $30 a free gift, and at $60 to $70 a 20% discount.</li>
+<li>Free-shipping upsell: show the amount still needed to unlock free shipping. For example, "add $20 to unlock free shipping" when the cart is under $40, or "add $3.99 for free shipping". This makes customers add an item.</li>
+<li>Checkout message: show the <strong>amount needed</strong> to qualify for free shipping, for example "Add $11 more to qualify for free shipping", with a suggested product. This encourages customers to raise order value <span class="ex">(the total spent per order)</span> to reach the threshold <span class="ex">(the minimum needed)</span>.</li>
+</ul>
+</details><details class="part" id="pre-selected-add-ons-and-cart-cross-sells-conflicting-advice"><summary><h2>Pre-selected add-ons and cart cross-sells: conflicting advice</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Pre-selected add-ons <span class="ex">(extras already ticked on the cart page)</span>, such as priority processing, shipping protection or a warranty, are rarely unticked. The reported rate is about <strong>80%</strong> of the time. Keep add-on prices low, for example $3.90 to $5 or under $5. About 60% of orders may accept an extra $3 to $5 this way.</li>
+<li>Source D (2026) advises caution. Cart cross-sells can lower conversions and cause complaints about products that were added automatically. Test them carefully. Keep cart upsells <strong>off</strong> until the store is scaling <span class="ex">(growing sales fast)</span>.</li>
+<li>Both values apply in different situations. Pre-selected, low-priced protection and add-ons suit a store that tests them with a clear benefit and a small price. Unrequested automatic cross-sells belong after the store is scaling and has measured their effect.</li>
+<li>Source A says upsell recommendations can be placed before the cart rather than at checkout. This reduces clutter at checkout. Test this with an upsell app before removing anything.</li>
+<li>Source B says <strong>not</strong> to add a pre-checkout upsell to a cart page that already carries several extra elements beyond the standard Shopify cart. Add one only when the cart page is otherwise empty. Upsells must not deter the purchase or overload the page.</li>
+<li>Too many cart extensions <span class="ex">(add-on tools that add features to the cart)</span> crowd the cart and distract shoppers. If a store already runs <strong>two or three</strong> cart extensions, weigh carefully before adding Checkout Plus <span class="ex">(an app that adds offers to checkout)</span> or package protection <span class="ex">(optional cover for lost or damaged parcels)</span>.</li>
+</ul>
+</details><details class="part" id="upsell-and-cross-sell-placements"><summary><h2>Upsell and cross-sell placements</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>Upsells can be deployed at <strong>three moments</strong>: on the product page before checkout, in the shopping cart, or on a post-purchase page before the thank-you confirmation. Post-purchase means after payment.</li>
+<li>Upsells and cross-sells can be placed at <strong>four points</strong>: pre-sell <span class="ex">(an early page that builds interest before the product)</span>, the product page, the cart page, and a post-purchase funnel <span class="ex">(a chain of offers shown one after another)</span> after checkout. Each placement can raise AOV <span class="ex">(average order value, the average amount per order)</span> and profit margin <span class="ex">(the share of each sale kept as profit)</span>.</li>
+<li>Pre-checkout offers appear on the product page or in the cart before payment. Post-purchase offers appear after payment and before the thank-you page.</li>
+<li>Pre-purchase upsell and cross-sell offers can appear on the collection page <span class="ex">(a page listing products of one type)</span>, product page, cart drawer, cart page or checkout. <strong>Test each placement separately.</strong></li>
+<li>Post-purchase offers appear after payment and before the thank-you page. The buyer has already entered card and address details, so they can accept with <strong>one click</strong>. This is why this stage is a must-have funnel.</li>
+<li>Post-purchase upsells convert better than pre-checkout upsells because the buyer has already decided to buy. They also need <strong>no new card details</strong>, only one click on a Pay Now button.</li>
+<li>Post-purchase upsells convert better than pre-purchase offers because the buyer has already committed to the store. Stores with only <strong>1 to 5 orders per day</strong> should implement them.</li>
+<li>Post-purchase upsells are worth setting up even for a store with only one to five orders per day. A customer who has just paid is more likely to accept an extra offer than one still browsing.</li>
+<li>A complementary product <span class="ex">(an item that goes with the one bought)</span>, added in the cart drawer, works well because the buyer is already in buying mode. A supplement or closely related item, such as a matching tool set, is more likely to be added than an unrelated one.</li>
+<li>Complementary items convert better than unrelated ones. A <strong>second funnel</strong> can add another offer on a product compatible with the item the customer is buying.</li>
+<li>Offer add-ons <strong>before checkout, on the product page</strong>, because customers decide early. Pre-checkout add-ons such as a $200 paddle or $100 case increase order value.</li>
+<li>Add-ons on the product page: add-on product options, bold text highlighting customizable features, and optional product bundles can be built into Shopify without external apps.</li>
+<li>Product page upsell apps with options should be added to product pages. Do not use them to split product variants <span class="ex">(versions of one item, such as sizes)</span> into separate products when you need one shared product page with different options.</li>
+<li>Show a <strong>single clear image</strong> on the product page for buy-one-get-one offers and bundles. Cross-selling an unrelated product through a free-item offer lowers conversion unless the product is simple and easy to understand at a glance.</li>
+<li>Free ebooks or guides with purchases, and $1 upsells on nominally free products <span class="ex">(products listed as free)</span>, raise perceived value <span class="ex">(how valuable the customer thinks the deal is)</span> and goodwill. They do this without eroding margins through percentage discounts.</li>
+<li>Source A's sales sequence for upgrades:
+<ol type="1">
+<li>Display <strong>comparison charts</strong> on product pages, showing feature and benefit differences between standard and premium versions.</li>
+<li>Offer shoppers the option to <strong>upgrade</strong> to a premium version directly in their cart before checkout.</li>
+<li>Present an <strong>extended warranty</strong> option at checkout.</li>
+<li>Offer <strong>priority or expedited shipping</strong> (faster delivery) as an upgrade.</li>
+<li>Follow up with a <strong>phone call</strong> after purchase to recommend complementary services such as installation, design consultation, or membership programs.</li>
+</ol></li>
+<li>Source A's cross-sell pop-up setup (2025):
+<ol type="1">
+<li>In Shopify, go to Online Store &gt; Themes &gt; Customize &gt; Theme settings and scroll to the cross sell pop-up settings.</li>
+<li>Turn the cross sell option on and enter a heading.</li>
+<li>For the first option, choose a collection that contains at least one product, for example a wetsuit collection.</li>
+<li>Save the settings.</li>
+<li>Open each product that should trigger the cross sell and add the tag <code>cross-sell-1</code>, then <strong>save</strong>.</li>
+<li>Preview the product, add it to the cart and confirm the pop-up appears.</li>
+</ol></li>
+<li>Gift-with-purchase: a cross-sell widget at the right point in the cart is the <strong>main way</strong> to build a selectable gift with purchase.</li>
+</ul>
+</details><details class="part" id="multi-channel-and-customer-group-upsells"><summary><h2>Multi-channel and customer-group upsells</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Make each upsell offer through <strong>more than one channel</strong> at the same time. Customers engage with different formats, and some only act after hearing the same offer several times.</li>
+<li>Upsells can be presented on-site <span class="ex">(on the website)</span>, by email, and through customer service <span class="ex">(phone or chat)</span>. Using <strong>all three</strong> is recommended. A single on-site position can be skipped if other page elements already fill the site.</li>
+<li>Among the three channels, email and phone or chat customer service have been reported as the highest-converting. They are the priority when time or resources are limited.</li>
+<li>A <strong>post-checkout upsell</strong> is the most consistently effective on-site position. The sale is already completed and the customer is in a buying mood. It interrupts the purchase less than other positions.</li>
+<li>Hyperspenders <span class="ex">(customers who buy again and again from the same business)</span> keep buying after a first purchase. They are the main audience for upsells. For this group, <strong>several upsells in a row</strong> can work well.</li>
+<li>On-site upsell setup steps:
+<ol type="1">
+<li><strong>Decide</strong> which on-site positions to use <span class="ex">(product page, cart page, post-purchase)</span> based on what already runs on the site.</li>
+<li><strong>Install</strong> Frequently Bought Together <span class="ex">(an app that shows items bought together)</span> and place its box under the Add to cart button on the product page.</li>
+<li><strong>Attach</strong> each core product's related upsell products exactly as listed in the upsell planner sheet <span class="ex">(a spreadsheet of which upsells go with which product)</span>.</li>
+<li><strong>Install</strong> One-Click Upsell <span class="ex">(an app for post-purchase offers)</span> and assign the post-purchase upsells to each top product.</li>
+<li>If the cart page has room, add pre-checkout upsells in the same app.</li>
+<li><strong>Design</strong> the upsell page and set the offers and quantities per product, using split tests (A/B tests) where useful.</li>
+<li><strong>Let the apps run</strong> and check which upsells appear and convert over time.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="bundles"><summary><h2>Bundles</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Bundle offers <span class="ex">(sets sold together at one price)</span> with strong discounts, for example <strong>two items for $30</strong> when one costs $25, drive customers to buy multiple units. This works even for simple products, and it increases AOV significantly.</li>
+<li>Bundle Bear <span class="ex">(a bundle app)</span> sends customers directly to checkout without an intermediate bundle-selection page. This reduces friction compared with apps that require a separate step. The advantage benefits simple two-unit offers.</li>
+<li>Dynamic bundle widget on a product page: the current product is listed as "This item". Each additional bundle item shows its price and a selection control <span class="ex">(a tick box or button to pick it)</span>. A "Total Price" line sits above the Add to Cart button. The shopper can deselect any item before adding the bundle. A separate "What's Trending" section can sit below the bundle.</li>
+<li><strong>Savings labels need a visible saving.</strong> A saving of only $0.05 in the SAVE label does nothing for conversion. The compare-at price <span class="ex">(the higher "was" price shown next to the sale price)</span> must be set higher than the bundle price, around $30 to $40 or about 50 percent above the price <span class="ex">(for example, for a bottle selling near $20)</span>.</li>
+<li>Showing the saved amount next to the price helps customers see the value of buying more units. It raises the chance they move from one unit to two. The compare-at price is the reference point for that saving.</li>
+<li>Savings label pattern: show the amount saved against a higher compare-at price. Use the saved-total variable <span class="ex">(a placeholder that fills in the saved amount automatically)</span> in a label such as "SAVE" followed by the saved amount. It works because customers see the gap between the most expensive reference price and what they pay now.
+<ul>
+<li>Example 1: a label reading "SAVE $20.00" on a two-pack priced at $29.99 against a $50 compare price.</li>
+<li>Example 2: a label reading "SAVE $15.00" on a three-pack priced at $44.95 against a $60 compare price.</li>
+</ul></li>
+<li>Pricing options in bundle settings: Show prices per item, Use product compare-at price, Show prices without decimals, and Price rounding. Cart option: Skip cart and go to checkout directly.</li>
+<li>Badge styles per bar <span class="ex">(each row of bundle choices)</span>: "Simple" for the one-unit bar, "Most Popular" for the two-unit bar, and a "Best Value" badge text for the three-unit bar. The "Show quantity selector" option controls whether the customer can change the quantity on a bar.</li>
+<li>Kaching Bundles <span class="ex">(a bundle app)</span> has a "Setup A/B test" option in the bundle editor for testing two versions of a deal. Use <strong>Save as draft</strong> and check Product preview and Country preview before publishing <span class="ex">(making the bundle live)</span>.</li>
+</ul>
+</details><details class="part" id="add-ons-replacement-offers-and-expedited-shipping"><summary><h2>Add-ons, replacement offers and expedited shipping</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Add-ons that raise AOV include an expedited shipping upgrade <span class="ex">(faster delivery for a fee)</span>, an extended warranty <span class="ex">(longer cover against faults)</span>, or a related physical product. The best option depends on the product and on what the <strong>niche buyers</strong> (a small, specific group of customers) want.</li>
+<li>Replacement-item upsell: after the customer clicks Add to Cart, a pop-up offers a larger or better version of the same product. For example, a 2 lb bag of coffee instead of a 1 lb bag for $3 more. The buttons are "Replace item", which swaps the cart item, and "No, thanks", which keeps the original.</li>
+<li>Offer expedited shipping upgrades, such as <strong>24-hour delivery</strong> for an extra $50, only when the supplier <span class="ex">(the company that supplies the product)</span> can actually deliver at that speed. Confirm the supplier's capacity before offering it.</li>
+</ul>
+</details><details class="part" id="extended-service-and-protection-offers"><summary><h2>Extended service and protection offers</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>An extended service guarantee bought from a supplier at about $20 per year can be resold to the customer for about $100 per year. This works <strong>only</strong> with a supplier that agrees to the deal, and it is rarely done.</li>
+<li>A guaranteed free return gives shoppers confidence to add an item they are unsure about, which raises AOV. The effect is strongest when the shopper knows a return costs nothing.</li>
+<li>Checkout Plus case: a US apparel brand <span class="ex">(a clothing company)</span> with about $12 million in annual revenue ran a <strong>50/50 A/B test</strong> over two weeks. Half of its shoppers saw the Checkout Plus option in the cart. Half had a normal cart and checkout. The Checkout Plus group showed a 2.7% increase in checkout conversion, a 2.4% decrease in cart abandonment <span class="ex">(customers who leave the cart without buying)</span> and a 4% increase in AOV. These are relative changes, not percentage points. A relative change is a percent change of the old number.</li>
+<li>Package protection in the cart: the source reported that conversion rate was not adjusted in <strong>99%</strong> of cases. About 70% of checkouts that offered package protection accepted it. Treat these vendor-reported figures <span class="ex">(figures reported by the seller of the tool)</span> as indicative, meaning a rough guide and not proof.</li>
+<li>Formula for cart offers: state a clear benefit in a few words and attach a <strong>small fixed price</strong>, so the shopper sees the trade-off at a glance. It works because it turns a vague future cost into a visible, cheap choice now.
+<ul>
+<li>Examples: "Add free returns for $3.50 before you check out" and "Pay $2.99 now to skip the $12 return fee later".</li>
+</ul></li>
+</ul>
+</details><details class="part" id="post-purchase-funnels-structure-and-discounts"><summary><h2>Post-purchase funnels: structure and discounts</h2><span class="pm">2 min</span></summary>
+<p>Post-purchase funnel stages and discounts <span class="ex">(example structure, Source D 2026)</span>. A downsell is a cheaper offer shown after the customer says no.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Offer</th>
+<th>Discount</th>
+<th>If accepted</th>
+<th>If declined</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Upsell 1 (Dynamic)</td>
+<td>Same product as bought, second unit <span class="ex">(buy two)</span></td>
+<td>25%</td>
+<td>Go to Upsell 2</td>
+<td>Go to Downsell</td>
+</tr>
+<tr>
+<td>Upsell 2 (AI Generated)</td>
+<td>Recommended product, bundle of three units <span class="ex">(buy three)</span></td>
+<td>35%</td>
+<td>Customer adds the bundle; funnel continues</td>
+<td>Go to Downsell</td>
+</tr>
+<tr>
+<td>Downsell (AI Generated)</td>
+<td>Upsell product as the final best offer</td>
+<td>40%</td>
+<td>Order gets the added item</td>
+<td>Customer goes to the Thank You or Order Status page</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The first post-purchase offer on a different item is typically set at <strong>30-40% off</strong>, so it reads as an add-on deal. The discounted price must also make sense next to the product page price for the same total quantity.</li>
+<li>Source C uses a different ladder <span class="ex">(a set of offers in steps)</span>. A single-item buyer gets the same product at <strong>15% off</strong> as the first upsell. If declined, they get the same product at 30% off as a downsell.</li>
+<li>Post-purchase funnels can have several levels. If the buyer accepts an offer, such as a product at 30% off, the next offer can be a different item at 50% off. Typically <strong>two to three</strong> post-purchase offers are shown in sequence.</li>
+<li>The thank-you page after an upsell can carry aggressive offers, such as 30 to 60% off, alongside the order, address and payment details. The buyer is already in purchase mode, so these deals convert well.</li>
+<li>Showing the <strong>same price again</strong> after purchase is a weak post-purchase offer and is unlikely to convert. The offer needs a visible discount that is clearly better than the original price.</li>
+<li>Offering the same item at a discount tends to convert best, even for expensive or heavy products. Test this before assuming the buyer will not repurchase the same item.</li>
+<li>The final downsell line concedes that this is the best deal available. It is shown with the highest discount and a countdown <span class="ex">(a timer counting down the time left)</span>. The last offer feels like a fair final price instead of pressure.
+<ul>
+<li>Examples of the pattern: "Okay, this is our final price on the second copy, and it is the lowest we can offer." and "Last chance: this is the best deal we can give you on this add-on."</li>
+</ul></li>
+</ul>
+</details><details class="part" id="funnel-triggers-branching-and-timing"><summary><h2>Funnel triggers, branching and timing</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>A <strong>funnel</strong> is a set of offers a customer sees in order. A <strong>trigger</strong> is the event that starts it. Funnel triggers in Source D' setup are: <strong>Product variant</strong> (is any), which means a version of a product such as a size or colour, and <strong>Advanced trigger settings</strong>.</li>
+<li>The trigger points are: <strong>Product Page Upsell</strong> (customer is on the product page), <strong>Shopping Cart</strong> (checkout button clicked), <strong>Page with Product Buy Box</strong> (Add To Cart button clicked; the buy box is the area holding the buy button), and <strong>Cart Drawer Upsell</strong> (the side panel that shows the cart).</li>
+<li><strong>Cart Drawer Upsell</strong> can only be placed on the OCU Slide Cart Drawer, which is a sliding cart panel.</li>
+<li><strong>Product Page Upsell</strong> does not support the Product Variant trigger.</li>
+<li>A <strong>Catch-All Funnel</strong> is a backup funnel. It <strong>triggers when no other funnel conditions match</strong>. Pre-purchase offers come before buying, and post-purchase offers come after buying. So every customer sees both.</li>
+<li>Funnels have a <strong>Priority</strong> setting. It decides <strong>which funnel wins</strong> when several funnels match.</li>
+<li><strong>Post-purchase upsell</strong> offers appear on the Thank You page <span class="ex">(the page shown after payment)</span> or the Order Status page <span class="ex">(the page showing the order's progress)</span>, after checkout.</li>
+<li>The funnel can also show the offer to a <strong>percentage of traffic volume</strong>. Traffic volume means how many visitors come to the store.</li>
+<li>Trigger conditions for an upsell funnel can be set under <strong>product purchase data</strong>. You can choose a specific product or the entire order.</li>
+<li>An order details condition such as <strong>unit or items total item count equals 1</strong> targets single-item buyers.</li>
+<li><strong>Branch</strong> the post-purchase upsell by the <strong>number of units ordered</strong>. Branch means split into different paths.</li>
+<li>A single-unit buyer gets the <strong>same product at a discount</strong>.</li>
+<li>A buyer of two or more units gets a <strong>different companion product</strong>. A companion product is one that goes well with the item bought.</li>
+<li>The trigger can be a <strong>specific product in the order</strong>.</li>
+<li>Each trigger product can get its own <strong>first upsell</strong>. So a buyer of one product sees a related offer, not a generic one. A generic offer is the same offer for everyone.</li>
+<li>In the post-purchase upsell app <span class="ex">(the tool that shows offers after payment)</span>, set a <strong>countdown timer</strong> on the upsell page.</li>
+<li>For example, use <strong>10 minutes</strong>, so the offer expires quickly.</li>
+<li>The timer is a <strong>field in the offer settings</strong>. A field is one box you fill in. It works alongside the discount and button text.</li>
+<li>Single-item buyer path: offer the <strong>same product at 15% off</strong> as the first upsell.</li>
+<li>If the customer <strong>accepts</strong> (says yes), offer a <strong>different product from the same niche</strong> as a cross-sell. A cross-sell is a different, related product. A niche is a narrow market.</li>
+<li>If the customer <strong>declines</strong> (says no), offer the <strong>same product at 30% off</strong> as a downsell. A downsell is a cheaper version offered after a no.</li>
+<li>Accept and decline buttons: the post-purchase offer should show a <strong>prominent Pay now button</strong>. Prominent means big and easy to see.</li>
+<li>The offer should also show a <strong>small Decline offer option</strong>.</li>
+<li>The decline option should be a <strong>small, low-visibility text link</strong>. Low-visibility means hard to notice. The accept button stays prominent.</li>
+<li><strong>Mandatory</strong> upsell screens are screens the customer must pass before finishing an order. These <strong>draw complaints</strong>.</li>
+<li><strong>Keep add-ons optional</strong>. An add-on is an extra item added to the order.</li>
+<li><strong>Clearly label</strong> every add-on.</li>
+</ul>
+</details><details class="part" id="thank-you-page-content"><summary><h2>Thank-you page content</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The thank-you page can show <strong>product recommendations</strong>, a share button, a collection section <span class="ex">(a group of products)</span>, and more offers.</li>
+<li>These elements can be <strong>edited in the app's thank-you page settings</strong>.</li>
+<li>These settings are <strong>on by default</strong>.</li>
+<li>The default thank-you page in ReconvertUpsell <span class="ex">(a post-purchase app)</span> already includes <strong>product recommendations</strong> and a share button.</li>
+<li>The products and collections shown can be <strong>changed</strong> in the app's thank-you page settings.</li>
+<li>A <strong>birthday form</strong> on the post-purchase page collects customers' birthdays.</li>
+<li>This lets you send a <strong>small gift</strong>, such as an Amazon or store gift card.</li>
+<li>This is an <strong>optional</strong> way to build loyalty, meaning getting customers to come back.</li>
+<li>A ReconvertUpsell thank-you page can <strong>ask the buyer for a birthday</strong>.</li>
+<li>The seller can then <strong>send a gift card</strong> as a birthday gift.</li>
+</ul>
+</details><details class="part" id="testing-funnels-and-offers"><summary><h2>Testing funnels and offers</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Test multiple offer variations</strong> and multiple products. The best complementary item <span class="ex">(one that goes well with the order)</span> is not known in advance.</li>
+<li><strong>Compare the acceptance rate</strong> of each offer before you choose the one to keep. Acceptance rate is the share of customers who say yes.</li>
+<li>Each offer in a Rebuy flow <span class="ex">(the sequence of offers in the Rebuy app)</span> can run as an <strong>A/B test</strong>. An A/B test shows two versions to different customers to see which wins.</li>
+<li>The flow view lists each offer with its own <strong>conversion</strong> (the share of customers who buy), revenue, and revenue per user <span class="ex">(money earned per customer)</span>.</li>
+<li>You can compare these figures to <strong>choose the winning version</strong>.</li>
+<li>Create a variant <span class="ex">(another version for a test)</span> by <strong>copying an existing upsell or downsell widget</strong>. A widget is a small offer box.</li>
+<li>In the example initial offer test <span class="ex">(the first offer shown)</span>, traffic is split <strong>25% to one variant and 75% to the other</strong>.</li>
+<li>In the example merchant's dashboard <span class="ex">(the store owner's summary screen)</span>, the initial offer converts at about <strong>16.20%</strong>.</li>
+<li>In the same dashboard, the downsell row shows about <strong>15.42%</strong> conversion.</li>
+<li>These figures are read from a screenshot. Check them <strong>against the live report</strong> before quoting them.</li>
+<li>Bundle and cart test procedure. A bundle is several products sold together.
+<ol type="1">
+<li><strong>Run a 7-day test</strong> with the bundle strategy.</li>
+<li>Then <strong>run a parallel 3-7 day test</strong> of Monster Card <span class="ex">(another tool)</span> and other tools, such as ReConvert post-purchase (ReConvert's after-payment offers). Parallel means at the same time.</li>
+<li><strong>Compare final AOV</strong> (average order value, the average money per order) to find which approach works best.</li>
+</ol></li>
+<li><strong>Post-purchase upsells are worth setting up</strong> even for small stores.</li>
+<li>A store should <strong>compare offers by acceptance rate</strong>, not by guessing.</li>
+</ul>
+</details><details class="part" id="aov-effects"><summary><h2>AOV effects</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Upsells and cross-sells <strong>raise average order value (AOV)</strong> and profit margin. Profit margin is the money left after costs.</li>
+<li>This works best when they are <strong>placed at the right point in the purchase path</strong>. The purchase path is the steps from browsing to paying.</li>
+<li><strong>Add-ons</strong> can raise average order value.</li>
+<li>Examples of add-ons are an expedited shipping upgrade <span class="ex">(faster delivery)</span>, an extended warranty <span class="ex">(a longer guarantee)</span>, or a related physical product <span class="ex">(a real item that ships with the order)</span>.</li>
+<li><strong>Checkout Plus</strong> (a tool for the checkout page) raised AOV by <strong>4%</strong> in the reported case. This is a relative figure, meaning a percentage of the old number.</li>
+<li>Checkout Plus came with a <strong>2.7%</strong> relative increase in checkout conversion.</li>
+<li><strong>Bundles with strong discounts</strong> raise AOV significantly. This works even for simple products.</li>
+<li><strong>Pre-selected</strong> low-priced add-ons are extras already ticked for the customer.</li>
+<li>About <strong>60%</strong> of orders may accept an extra $3 to $5 this way.</li>
+<li>A cart reminder box <span class="ex">(a message about items left in the cart)</span> produced a conversion lift of <strong>+9.2%</strong>. A lift is an increase.</li>
+<li>Cart recommendations produced a lift of <strong>+4.5%</strong>.</li>
+<li>These changes also <strong>support basket size</strong>, meaning the number of items per order.</li>
+<li>Figures from sellers and presenters in this section are <strong>indicative</strong>, meaning rough guides only.</li>
+<li>These include Checkout Plus, package protection <span class="ex">(insurance for shipped parcels)</span>, pre-selected add-on acceptance, and Oodie results.</li>
+<li>Verify them <strong>against your own store data</strong> before using them as targets.</li>
+</ul>
+</details><details class="part" id="further-details"><summary><h2>Further details</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Add the product to the cart</strong> on the main product page before the customer starts checkout.</li>
+<li>This early filling of the cart is called pre-warming the cart. For <strong>proven concepts</strong> (ideas that already sell), pre-warming <strong>works better</strong> than sending the customer straight to checkout.</li>
+<li>Post-purchase automation email sequences <span class="ex">(a series of automatic emails sent after the sale)</span> are the <strong>strongest way</strong> to raise average order value after the sale.</li>
+<li>These sequences work alongside cross-sells, upsells, faster shipping options, and extended warranties.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/06-conversion-optimization/14-cart-optimization-and-upsells/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../06-conversion-optimization/13-checkout-payments-and-shipping-friction/"><span class="k">&larr; Previous</span><span class="v">Checkout, payments and shipping friction</span></a><a class="nx" href="../../06-conversion-optimization/15-email-and-phone-capture-pop-ups-opt-ins-and-lead-magnets/"><span class="k">Next &rarr;</span><span class="v">Email and phone capture: pop-ups, opt-ins and lead magnets</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

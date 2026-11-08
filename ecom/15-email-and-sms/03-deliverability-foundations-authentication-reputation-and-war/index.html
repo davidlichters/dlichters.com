@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Deliverability foundations: authentication, reputation and warm-up | Ecommerce Playbook</title>
+<meta name="description" content="- Send cold or bought lists from a second domain, so your main domain&#x27;s trust score stays safe. - Before the first send, set up SPF, DKIM and DMARC, three checks that prove your emails are really from you. - A new domain or new email provider starts ...">
+<link rel="canonical" href="https://dlichters.com/ecom/15-email-and-sms/03-deliverability-foundations-authentication-reputation-and-war/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Deliverability foundations: authentication, reputation and warm-up | Ecommerce Playbook"><meta property="og:description" content="- Send cold or bought lists from a second domain, so your main domain&#x27;s trust score stays safe. - Before the first send, set up SPF, DKIM and DMARC, three checks that prove your emails are really from you. - A new domain or new email provider starts ..."><meta property="og:url" content="https://dlichters.com/ecom/15-email-and-sms/03-deliverability-foundations-authentication-reputation-and-war/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../15-email-and-sms/">15. Email and SMS</a></div><h1>Deliverability foundations: authentication, reputation and warm-up</h1><p class="meta">Section 15.3 &middot; 3 of 17 in this chapter &middot; 14 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Send cold or bought lists from a <strong>second domain</strong>, so your main domain's trust score stays safe.</li>
+<li>Before the first send, set up <strong>SPF, DKIM and DMARC</strong>, three checks that prove your emails are really from you.</li>
+<li>A new domain or new email provider starts with <strong>zero trust</strong>, so warm it up slowly for about three to four weeks.</li>
+<li>Before switching providers, <strong>clean your list</strong> and tag people who opened or clicked in the last 90 days.</li>
+<li>If open rates fall, <strong>send less</strong> and check your wording for spam-like content.</li>
+</ul>
+</div><article><div class="parts-bar"><span>This section has 16 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="separate-sending-domains-by-list-type"><summary><h2>Separate sending domains by list type</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Send existing brand subscribers from the main domain. Send cold purchased lists <span class="ex">(people who never asked for your emails)</span> and re-engagement campaigns <span class="ex">(emails that try to wake up inactive people)</span> from a <strong>secondary sending domain</strong> or a separate email service, such as Send in Blue. Do this to protect the main domain's reputation.</li>
+<li>If a cold list has low engagement <span class="ex">(few people open or click)</span>, ISPs <span class="ex">(the mail services that deliver to inboxes)</span> flag the domain as spam.</li>
+</ul>
+</details><details class="part" id="authenticate-the-sending-domain-before-the-first-send"><summary><h2>Authenticate the sending domain before the first send</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A campaign that warns that its emails are not authenticated using DNS records <span class="ex">(the domain's settings list, stored at your domain host)</span> must be fixed <strong>before sending</strong>. Authentication through DNS records is required for providers such as Gmail or Outlook to show a sender identity.</li>
+<li>The three authentication methods are <strong>SPF, DKIM and DMARC</strong>. SPF <span class="ex">(a list of approved sending servers)</span> checks whether the sending server is on the domain's list of approved senders and flags the email if it is not. DKIM <span class="ex">(a digital signature)</span> checks that the email has not been altered in transit <span class="ex">(on its way to the inbox)</span>. The sources name DMARC <span class="ex">(a rule that tells providers what to do with failing email)</span> but do not explain how to set it up.</li>
+<li>An SPF TXT record and a DKIM TXT record <span class="ex">(short text notes stored in DNS)</span> let receiving servers verify that mail from your domain is legitimate. This raises deliverability <span class="ex">(the share of emails that reach the inbox)</span>. **</li>
+</ul>
+</details><details class="part" id="google-workspace-spf-and-dkim-setup"><summary><h2>Google Workspace SPF and DKIM setup</h2><span class="pm">3 min</span></summary>
+<p>Before you start, check that the setup is ready:</p>
+<ol type="1">
+<li>In the Google Admin console (Google's control panel for company accounts), go to Apps &gt; G Suite &gt; Settings for Gmail and <strong>open Authenticate email</strong>. G Suite is the older name for Google Workspace. Before this, check under Apps &gt; G Suite that the Gmail service shows ON for everyone in the organisation.</li>
+<li>The Authenticate email section may not appear until 24 hours after a new G Suite sign-up. <strong>Do not panic</strong> if it is missing.</li>
+</ol>
+<p>Then add the records:</p>
+<ol type="1">
+<li><strong>Open the DNS settings</strong> of your domain at your domain host <span class="ex">(the company where you bought the domain)</span>. The layout differs by provider, but the method is the same.</li>
+<li><strong>Copy the existing TXT record</strong> that starts with <code>v=spf1 include:_spf.google.com</code>. G Suite adds this record automatically when it is connected to the domain.</li>
+<li><strong>Add a new TXT record</strong> with host <code>SPF</code> in uppercase <span class="ex">(the host is the name field of the record)</span> and paste the copied value as the TXT value.</li>
+<li><strong>Click Save.</strong></li>
+<li>In the Google Admin console, go to Apps &gt; G Suite &gt; Settings for Gmail and <strong>open Authenticate email</strong>.</li>
+<li>Select your sending domain and set the DKIM key bit length <span class="ex">(the size of the signing key)</span> to <strong>1024</strong>.</li>
+<li><strong>Click Generate</strong> to create the new DKIM TXT record.</li>
+<li>Back in the DNS settings, add a new TXT record with host <code>google._domainkey</code> and <strong>paste the whole generated value</strong> into the TXT value field. Click Save.</li>
+<li>Return to Authenticate email and <strong>click Start authentication</strong>. Leave it running while DNS updates.</li>
+</ol>
+<p>Rules for the setup:</p>
+<ul>
+<li>DKIM key length: The source sets the key bit length to <strong>1024</strong> and stresses changing it from the default. The screen showed 2048 as the default. Do not keep that default when following this setup.</li>
+<li>DKIM record format: The DKIM record host is <code>google._domainkey</code>, and the value begins with <strong><code>v=DKIM1; k=rsa; p=</code></strong>.</li>
+<li>Do not regenerate during authentication: Generating a new DKIM TXT record stops email authentication until you <strong>click Start authentication again</strong> and DNS has updated. Do not regenerate the key while authentication is running unless you are prepared to restart it.</li>
+<li>Propagation time <span class="ex">(how long changes take to spread across the internet)</span>: After Start authentication, DNS changes can take <strong>up to 48 hours</strong> to propagate. The status shows Authenticating email while it runs.</li>
+<li>One SPF record per domain: A domain should publish only <strong>one</strong> SPF TXT record. If a record starting with <code>v=spf1</code> already exists, edit it instead of adding a second one. Two SPF records can make SPF checks fail. This check is an addition to the source's steps, not something the source teaches.</li>
+<li>SPF qualifier <span class="ex">(the ending rule that says what to do with failing mail)</span>: The Google SPF value is <code>v=spf1 include:_spf.google.com</code> followed by a qualifier. The screens show <code>~all</code> (soft fail, accept but mark as suspicious) before the change and <code>-all</code> (hard fail, reject) after it. <strong>Choose the qualifier your policy needs</strong> and keep only one SPF record per domain.</li>
+<li>Keep the verification record: <strong>Keep</strong> the existing <code>google-site-verification</code> TXT record <span class="ex">(a proof-of-ownership note)</span> in the DNS zone <span class="ex">(the full list of your domain's records)</span>. It proves domain ownership to Google, and removing it can break the G Suite domain verification.</li>
+<li>Keep the mail routing records: <strong>Leave the MX records in place</strong> (the addresses that route mail to your inbox) when adding the SPF and DKIM TXT records. They route incoming mail to Google.</li>
+</ul>
+<p>Google Workspace mail routing (MX) records, as shown in the DNS panel of a G Suite domain at GoDaddy in 2021-2022:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Host</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aspmx.l.google.com</td>
+<td>1</td>
+</tr>
+<tr>
+<td>alt1.aspmx.l.google.com</td>
+<td>5</td>
+</tr>
+<tr>
+<td>alt2.aspmx.l.google.com</td>
+<td>5</td>
+</tr>
+<tr>
+<td>aspmx2.googlemail.com</td>
+<td>10</td>
+</tr>
+<tr>
+<td>aspmx3.googlemail.com</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+</details><details class="part" id="keep-the-domains-history-clean"><summary><h2>Keep the domain's history clean</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>If a domain is blacklisted <span class="ex">(listed as a known spam sender)</span> before use, <strong>check its history</strong> with the Wayback Machine <span class="ex">(an archive of old websites)</span>. Also search the domain name for reviews before buying a premium domain <span class="ex">(a costly, already-registered name)</span>.</li>
+</ul>
+</details><details class="part" id="understand-sender-reputation"><summary><h2>Understand sender reputation</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Sender reputation <span class="ex">(how much email providers trust you)</span> has four levels: bad, low, medium and high. <strong>Aim for medium or high at all times</strong>, because low and bad scores send most mail to spam.</li>
+<li>A new provider does not assign a starting grade such as bad. The score is empty at first and needs <strong>a few weeks</strong> of sending to fill in. The goal of the warm-up <span class="ex">(sending small amounts first and growing slowly)</span> is to reach a positive reputation that you can carry forward before opening larger segments <span class="ex">(groups of subscribers)</span> and volume.</li>
+<li>Switching to a new email service provider <span class="ex">(the company that sends your emails)</span> <strong>resets your sender reputation to zero</strong>, even if you have mailed the same list for years. The reset applies at domain level, so the old reputation does not carry over to the new platform.</li>
+<li>A newly registered sending domain also <strong>starts with no reputation</strong>, even when it uses the same IP addresses <span class="ex">(numbered internet addresses of your mail server)</span> and infrastructure <span class="ex">(the technical setup)</span> as before. A new domain needs its own warm-up.</li>
+<li>The reset happens because the new provider sends through different servers and IP addresses. Mailbox providers have never seen this combination of domain, IP and infrastructure. They cannot use past performance, so the sender must <strong>build a new history</strong> through positive signals such as opens, clicks and replies.</li>
+<li>Most email platforms with shared IPs <span class="ex">(addresses that many senders share)</span>, such as Klaviyo or ActiveCampaign, already manage warmed IP addresses <span class="ex">(addresses with a good sending history)</span>, so IP warming is normally <strong>not needed</strong>. Only a business that manages its own dedicated IP <span class="ex">(its own private address)</span> or server needs a separate IP warm-up strategy, which should follow the provider's advice closely.</li>
+<li>Each email provider publishes its own onboarding guidance <span class="ex">(setup instructions)</span> for new domains, such as Klaviyo, Mailchimp or SendGrid. <strong>Follow that guidance</strong>, verify the domain and set up authentication protocols, because they differ by provider.</li>
+<li>Google shows a domain reputation level, such as High or Medium, for each sending domain. During the warm-up, <strong>check this level</strong> alongside the email provider's own numbers, since the provider's metrics are not always fully accurate.</li>
+<li>Continuously follow deliverability best practices <span class="ex">(proven habits for reaching the inbox)</span> after the warm-up. <strong>Keep cleaning the list</strong>, avoid spammy or misleading content, respect subscriber preferences, and make unsubscribing easy. These habits keep the sender reputation strong.</li>
+</ul>
+</details><details class="part" id="prepare-the-list-before-a-provider-switch"><summary><h2>Prepare the list before a provider switch</h2><span class="pm">2 min</span></summary>
+<p>Procedure before closing the old email provider:</p>
+<ol type="1">
+<li><strong>Record the deliverability baseline</strong> (your starting numbers to compare later) for 30, 60 and 90 days: open rate <span class="ex">(share of people who opened)</span>, click rate <span class="ex">(share who clicked)</span>, bounce rate <span class="ex">(share of emails that failed to deliver)</span>, unsubscribe rate <span class="ex">(share who unsubscribed)</span> and spam complaints <span class="ex">(people who marked you as spam)</span>.</li>
+<li><strong>Run all lists through a third-party email validator</strong> (an outside tool that checks whether addresses are real). Do this if the list has not been cleaned in the last six months.</li>
+<li><strong>Remove invalid addresses</strong> and addresses that cannot be reached, including hard bounces <span class="ex">(emails that failed permanently)</span>, before importing <span class="ex">(loading the list into the new provider)</span>.</li>
+<li><strong>Export the engagement data</strong> from the old provider: segments, suppression list <span class="ex">(the do-not-email list)</span> and performance history.</li>
+<li><strong>Tag every subscriber</strong> who opened or clicked in the last 90 days as engaged <span class="ex">(active)</span>. A tag is a label attached to a person. Record behaviour <span class="ex">(opens, clicks)</span> and product interests where available.</li>
+<li><strong>Import the list together with the tags</strong> so the new provider can separate engaged from unengaged subscribers.</li>
+<li><strong>Set up email authentication</strong> (SPF, DKIM and DMARC) for the new provider, following its setup guide.</li>
+</ol>
+<p>Reasons behind the steps:</p>
+<ul>
+<li><strong>Clean the list before import.</strong> Email addresses go invalid, mailboxes fill up, and Microsoft and Google delete inactive mailboxes. Bounces to such addresses count against your reputation, even if the list was double opt-in <span class="ex">(people confirmed twice that they wanted mail)</span> or verified at signup.</li>
+<li>Old, unverified addresses cause <strong>bounces</strong>, which count negatively against your reputation. Mailboxes that Microsoft or Google have deleted for inactivity will bounce as well.</li>
+<li><strong>Migrating segments and engagement history</strong> matters because a new provider knows nothing about your subscribers beyond what you import. Without tags, the new list is one undifferentiated block <span class="ex">(one mixed group)</span> and you cannot target the engaged group first.</li>
+<li>Failing to migrate engagement data forces a <strong>random first send</strong>. This lowers opens and clicks and weakens the new reputation. Without history, the provider cannot separate engaged from unengaged subscribers.</li>
+<li>Engaged subscribers are those who opened or clicked within the last 90 days. They should receive the <strong>first campaign</strong> on the new platform. Targeting the most engaged group gives the highest open and click rates, which rebuilds trust fastest.</li>
+</ul>
+</details><details class="part" id="warm-up-a-new-domain-or-provider"><summary><h2>Warm up a new domain or provider</h2><span class="pm">2 min</span></summary>
+<p>Procedure after switching providers or registering a new domain:</p>
+<ol type="1">
+<li><strong>Ask the new provider</strong> for its onboarding or warm-up guidance. For a very large list, request a custom warm-up plan that states the daily send volumes <span class="ex">(how many emails go out per day)</span>.</li>
+<li>On day one, <strong>send only to the most engaged segment</strong> so the first send stays under the provider's limit. Klaviyo's first send is below 3,000 recipients. Provider limits are usually below 10,000.</li>
+<li>Increase the volume each day by the percentage the provider allows. This is typically <strong>10 to 15 percent</strong> and sometimes up to 50 percent. Never increase faster than that.</li>
+<li>Optionally connect an automated warm-up tool such as Warmup Inbox to the domain and let it run for <strong>a couple of months</strong>.</li>
+<li>Monitor open rate, click rate and inbox placement <span class="ex">(where your emails land: inbox, Promotions tab or spam)</span> <strong>every day</strong>. If they drop or red flags <span class="ex">(warning signs)</span> appear, reduce the volume and review the content.</li>
+<li>After about <strong>three to four weeks</strong> of gradual increase, move to your usual email strategy and send to the full list.</li>
+</ol>
+<p>Volume and timing rules:</p>
+<ul>
+<li>Daily increase, two sources: The usual safe increase cited is <strong>10 to 15 percent per day</strong>, occasionally up to 50 percent. Some providers allow the daily send volume to roughly double each day. Follow the exact criteria your provider gives you, because they reflect what is safe for that platform.</li>
+<li>Full warm-up duration: The full warm-up period for a switch or a new domain takes about three to four weeks. <strong>Do not move to the full list</strong> before that period ends.</li>
+<li>Gradual plan: A gradual volume plan over three to four weeks protects the new provider's reputation and avoids underperformance. A business that <strong>skips the plan</strong> and sends to a 100,000-subscriber list straight away is likely to run into trouble.</li>
+<li>Full list on day one: <strong>Sending the full list on the first day</strong> after a switch, especially when open rates are already weak, leads to deliverability problems. Skipping the gradual ramp also makes the damage to reputation longer and harder to repair later.</li>
+<li>Non-linear curve: The warm-up is not linear <span class="ex">(not a straight, steady line)</span>, so every business may need to adjust its schedule. <strong>Monitor it week by week</strong> and expect changes depending on list and content.</li>
+<li>Red flags: Watch for falling open rates or click rates. If they drop, reduce the volume, check content for spammy or misleading elements, and then <strong>increase again more slowly</strong>.</li>
+<li>Recovery after a switch: After a provider switch, open rates should <strong>recover gradually</strong> toward the levels recorded in the old provider's 30-, 60- and 90-day baseline. This recovery depends on the domain building positive interactions, which lets more mail reach the inbox instead of spam.</li>
+</ul>
+</details><details class="part" id="control-send-timing-and-batching"><summary><h2>Control send timing and batching</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Campaign send mode: use Gradual send <span class="ex">(sending in parts over time)</span> over several hours, starting at 11 am Eastern, with <strong>20 percent of recipients per hour</strong>, instead of sending the whole list at once.</li>
+<li>Sending a campaign to the whole list at one moment can overload the mail server <span class="ex">(the computer that sends your emails)</span> and reduce deliverability. <strong>Spreading the send over several hours</strong> avoids this.</li>
+<li>Build sends in engagement buckets (groups sorted by how recently people engaged, for example 0-14, 15-30, 31-60 and 31-90 days engaged) and <strong>send them in batches</strong>. Smaller batches make it easier to see where opens begin to fall.</li>
+</ul>
+</details><details class="part" id="write-content-for-the-primary-inbox"><summary><h2>Write content for the primary inbox</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Email deliverability depends heavily on content quality. If emails are landing in spam, <strong>control content quality first</strong>.</li>
+<li><strong>Text-based emails</strong> with personalization generally land in the primary inbox <span class="ex">(the main inbox tab)</span> more often than image-heavy emails. Image-heavy emails can go to the Promotions tab and be left unopened. A brand logo, footer and a few supporting images can still be added on top of text-heavy designs.</li>
+<li><strong>Send more personalized emails</strong> that look less like ads, and include offers people want to open. Watch engagement, because opens signal to the inbox provider that subscribers want the mail.</li>
+<li>A <strong>high click-through rate</strong> (share of people who clicked a link) signals relevance to inbox providers such as Gmail. This supports deliverability and keeps emails in the primary inbox instead of the Promotions tab or spam folder. Opens without clicks over time signal that the email delivers little value. **</li>
+<li>Spam includes <strong>buying an email list</strong>, or emailing addresses that never opted in <span class="ex">(never agreed to get mail)</span>, such as contacts from an old address book. **</li>
+<li>Newsletters must include a <strong>working unsubscribe link</strong>. Missing or broken unsubscribe options and re-subscribing people by other means are the main causes of blacklisting. **</li>
+</ul>
+</details><details class="part" id="troubleshoot-spam-placement"><summary><h2>Troubleshoot spam placement</h2><span class="pm">1 min</span></summary>
+<p>Procedure if confirmation or order emails land in spam **:</p>
+<ol type="1">
+<li><strong>Remove images</strong> from the affected emails and test again.</li>
+<li><strong>Remove one trigger word at a time</strong>, such as "free" (a word spam filters watch for), and send a test to a new address that is not in Klaviyo.</li>
+<li>Ask customers in early welcome emails to <strong>add the sender to their primary inbox</strong>.</li>
+<li>Ask early emails to elicit a reply <span class="ex">(get a response)</span> with a <strong>specific question</strong>.</li>
+<li>Add a <strong>reply request</strong> to order confirmation emails to build engagement.</li>
+</ol>
+<p>Related rules:</p>
+<ul>
+<li>Sending to <strong>many bouncing addresses</strong> makes email providers such as Gmail treat the sender as a spammer. That lowers deliverability, so more emails end up in spam folders. **</li>
+</ul>
+</details><details class="part" id="understand-gmail-tabs"><summary><h2>Understand Gmail tabs</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Emails often land in Gmail's <strong>Promotions tab</strong> or in spam. General tips are to send more personalized emails that look less like ads, include offers people want to open, and watch engagement.</li>
+<li><strong>Image-heavy emails</strong> can go to the Promotions tab and be left unopened.</li>
+<li>A <strong>high click-through rate</strong> keeps emails in the primary inbox instead of the Promotions tab or spam folder.</li>
+</ul>
+</details><details class="part" id="measure-opens-and-clicks-with-apple-mpp"><summary><h2>Measure opens and clicks with Apple MPP</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Apple Mail Privacy Protection (MPP) <strong>opens emails automatically</strong> through a proxy <span class="ex">(a middleman server)</span> to prevent user tracking. This breaks open tracking.</li>
+<li><strong>Track both opens and clicks</strong> instead. Opens measure non-MPP engagement <span class="ex">(engagement from users who do not use MPP)</span>. Clicks prove real user action and bypass the proxy for MPP users.</li>
+</ul>
+</details><details class="part" id="benchmarks-for-open-rates"><summary><h2>Benchmarks for open rates</h2><span class="pm">1 min</span></summary>
+<p>The sources give no general open-rate benchmark. The figures below are examples from individual sources, not targets.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Meaning</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gmail 21% open rate, Yahoo 11.5%</td>
+<td>In one example, the source treats Yahoo as clearly struggling. Any provider far below the others should be isolated and worked on separately.</td>
+<td></td>
+</tr>
+<tr>
+<td>Hotmail open rate around 4%</td>
+<td>A warning sign. Unsubscribes after a large send may come mostly from that provider, so check the unsubscribe rate per provider.</td>
+<td></td>
+</tr>
+<tr>
+<td>Provider open rate above 30%</td>
+<td>The threshold for widening a temporary exclusion segment <span class="ex">(a group paused from sending)</span> gradually.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</details><details class="part" id="diagnose-a-provider-whose-deliverability-is-failing"><summary><h2>Diagnose a provider whose deliverability is failing</h2><span class="pm">1 min</span></summary>
+<p>Procedure:</p>
+<ol type="1">
+<li>Open the campaign's Deliverability tab and check <strong>Performance by inbox provider</strong> (open rates grouped by the company that runs each mailbox, such as Gmail or Yahoo). This shows whether the weak engagement is limited to one provider.</li>
+<li>Open <strong>Performance by domain</strong> to pinpoint the provider or domain with the low open rate.</li>
+<li><strong>Create an exclusion segment</strong> for that provider's unengaged profiles <span class="ex">(no opens or clicks between 15 and 365 days ago)</span>.</li>
+<li><strong>Add this segment to the Don't send to field</strong> of the next campaigns. Clone a campaign <span class="ex">(make a copy of it)</span> to reuse the recipient settings if needed.</li>
+<li><strong>Keep the segment excluded for about 7 days.</strong> Then check the provider's open rate again in the Deliverability tab after each send.</li>
+<li>When the provider's open rate <strong>rises above 30%</strong>, widen the segment gradually by editing its definition <span class="ex">(for example, changing the 15-day window to 25 days)</span>. Check again after a few days rather than changing it immediately.</li>
+</ol>
+<p>Principles:</p>
+<ul>
+<li>Excluding inactive profiles from a provider for a short period lets their sender reputation recover. This improves inbox placement for the active profiles. Excluding them is a <strong>temporary fix</strong>, so the exclusion has to be reviewed and loosened as metrics improve.</li>
+</ul>
+</details><details class="part" id="recover-from-a-blacklisting"><summary><h2>Recover from a blacklisting</h2><span class="pm">1 min</span></summary>
+<p>Procedure if a domain is blacklisted for email **:</p>
+<ol type="1">
+<li><strong>Identify which blacklist</strong> is listing it.</li>
+<li><strong>Search</strong> for how to remove it from that specific provider.</li>
+<li>Follow their <strong>free delisting process</strong> (the steps to be taken off the list).</li>
+</ol>
+</details><details class="part" id="run-the-deliverability-audit"><summary><h2>Run the deliverability audit</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The deliverability audit needs the brand's domain with <strong>DNS access</strong> (the ability to edit its settings) and test accounts at Gmail, Hotmail and Yahoo.</li>
+<li>The /email-domain-audit skill <span class="ex">(a ready-made command)</span> then produces a <strong>deliverability health report</strong> with recommended fixes.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/15-email-and-sms/03-deliverability-foundations-authentication-reputation-and-war/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../15-email-and-sms/02-platform-choice-account-setup-and-sender-identity/"><span class="k">&larr; Previous</span><span class="v">Platform choice, account setup and sender identity</span></a><a class="nx" href="../../15-email-and-sms/04-list-building-and-opt-in-capture/"><span class="k">Next &rarr;</span><span class="v">List building and opt-in capture</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Technical SEO: crawling, indexing, speed and mobile | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 14.6: Technical SEO: crawling, indexing, speed and mobile.">
+<link rel="canonical" href="https://dlichters.com/aiecom/14-seo-and-content/06-technical-seo-crawling-indexing-speed-and-mobile/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Technical SEO: crawling, indexing, speed and mobile | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 14.6: Technical SEO: crawling, indexing, speed and mobile."><meta property="og:url" content="https://dlichters.com/aiecom/14-seo-and-content/06-technical-seo-crawling-indexing-speed-and-mobile/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">14. SEO and content</a> &rsaquo; <a href="../../../ecom/14-seo-and-content/06-technical-seo-crawling-indexing-speed-and-mobile/">Plain version</a></div><h1>14.6 Technical SEO: crawling, indexing, speed and mobile</h1><article><h2 id="technical-seo-role-in-the-overall-process">Technical SEO: Role in the Overall Process</h2>
+<ul>
+<li>Technical SEO covers the work that lets search engine crawlers reach, understand and index a website. If a crawler cannot properly access a site, the quality of on-page content or on-page SEO does not matter, because the pages will never appear in search results. <em>Older advice (2021-22).</em> [L1362.001]</li>
+<li>Technical SEO is the first layer to fix before on-page SEO and content work, since indexing is a prerequisite for ranking. Crawlers also decide which pages belong in the index, so some pages should be kept out of it on purpose. <em>Older advice (2021-22).</em> [L1362.002]</li>
+<li>Fixing access and crawl problems is part of crawl optimization, not just a separate technical issue. If the crawler has trouble accessing pages, it may cover only part of a site on a given visit, leaving some pages uncrawled until a later pass. <em>Older advice (2021-22).</em> [L1333.013 is not in scope; see L1362.001] [L1397.013]</li>
+</ul>
+<h2 id="crawl-budget">Crawl Budget</h2>
+<ul>
+<li>Search engines allocate a limited amount of crawl time and a limited number of pages per visit, so they rarely crawl an entire large site in one pass. Pages can be crawled incompletely or skipped, which delays indexing of new pages and updates. <em>Older advice (2021-22).</em> [L0397.001]</li>
+<li>Crawl budget only matters for larger sites, such as e-commerce stores with hundreds, thousands or tens of thousands of pages. A site with about five pages is crawled completely on every visit and needs no crawl budget work. <em>Older advice (2021-22).</em> [L0397.002]</li>
+<li>If a large site contains many low-value pages, the crawler may spend its budget on them and miss the optimized, high-priority pages. The crawler does not follow your priorities by default, so the goal is to make its time as efficient as possible. <em>Older advice (2021-22).</em> [L0397.003]</li>
+<li>Low-value pages that absorb crawl time can push well-optimized pages out of a crawl. Because the same pattern tends to repeat on each later visit, priority pages may be indexed late or missed for a long period. <em>Older advice (2021-22).</em> [L0397.012]</li>
+<li>You cannot increase, reduce or see the exact value of a site's crawl budget. The only lever is to remove obstacles so the crawler works more efficiently. <em>Older advice (2021-22).</em> [L0397.004]</li>
+<li>The overall aim of crawl optimization is to make sure crawl time goes to pages that matter for SEO, and that the site is easy to navigate for crawlers. Pages that add no value should not consume crawl time that better pages need. <em>Older advice (2021-22).</em> [L0397.011]</li>
+</ul>
+<h3 id="factors-that-make-crawling-more-efficient">Factors That Make Crawling More Efficient</h3>
+<ul>
+<li><strong>Internal links:</strong> They give crawlers paths between pages and help them understand site structure. Few internal links leave some pages hard to reach and less likely to be found. <em>Older advice (2021-22).</em> [L0397.006]</li>
+<li><strong>Flat structure:</strong> A flat site structure, where important pages are reachable within few clicks from the main navigation, makes crawling considerably easier. Site architecture and menu structure both influence how effectively a site is crawled. <em>Older advice (2021-22).</em> [L0397.007]</li>
+<li><strong>Page speed:</strong> Slow page speed increases the time a crawler needs to get through a site, so faster-loading pages let more of the site be crawled in the same budget. Slow loading and slow-to-process pages both lengthen each crawl pass, so a site with heavy pages gets fewer pages crawled in the same time budget. <em>Older advice (2021-22).</em> [L0397.005, L0397.014]</li>
+<li><strong>Redirect batches:</strong> Large batches of redirects, for example from mass URL changes that were not strictly necessary, slow down crawling. <em>Older advice (2021-22).</em> [L0397.008]</li>
+</ul>
+<h2 id="site-audits-and-indexation-checks">Site Audits and Indexation Checks</h2>
+<h3 id="free-crawlers">Free Crawlers</h3>
+<ul>
+<li>Screaming Frog SEO Spider is a free website crawler for up to 500 URLs, useful for on-page SEO audits. Xenu's Link Sleuth is another free, similar crawler. [L0575.017]</li>
+</ul>
+<h3 id="checking-indexation-with-a-site-search">Checking Indexation With a Site Search</h3>
+<ol type="1">
+<li>Search <code>site:yourdomain.com</code> in Google.</li>
+<li>Check the number of indexed pages:
+<ul>
+<li>The count should roughly match the number of pages on your site.</li>
+<li>Too few suggests an indexation issue, such as a robots.txt or robots meta tag problem.</li>
+<li>Too many suggests a canonical problem. This is common on large CMSs such as Magento or self-hosted platforms and less common on Shopify.</li>
+</ul></li>
+<li>Check that title tags are not missing, duplicated or unprofessional.</li>
+<li>Check that product titles and descriptions are optimized. [L0575.019]</li>
+</ol>
+<h3 id="ahrefs-site-audit">Ahrefs Site Audit</h3>
+<ul>
+<li>The Ahrefs Site Audit report menu includes Internal pages, Indexability, Links, Redirects, On page, Social tags, Duplicate content, Localization, Performance, Images, JavaScript, CSS and External pages. For finding thin and duplicate pages, the Indexability and Duplicate content reports are the relevant ones. <em>Older advice (2021-22).</em> [L1372.028]</li>
+<li>The audit overview shows Health Score (share of internal URLs without errors), Issues distribution (errors, warnings, notices) and Top issues. Top issues include Orphan page (no incoming internal links), 404 page, 4XX page, Meta description tag missing or empty, Page has links to broken page, Page has no outgoing links, Title tag missing or empty, Duplicate pages without canonical and Redirected page has no incoming internal links. Click View all issues and then View affected URLs to export the list. <em>Older advice (2021-22).</em> [L1372.020]</li>
+<li>Procedure for working through an audit:
+<ol type="1">
+<li>Open the Ahrefs site audit overview and read the Health Score, Issues distribution and Top issues.</li>
+<li>Click View all issues.</li>
+<li>Open the issue you need, for example Orphan page (has no incoming internal links).</li>
+<li>Click View affected URLs.</li>
+<li>Export the list of affected URLs and their values.</li>
+<li>Paste the export into the audit spreadsheet, then check each URL for internal links or content and fix it. <em>Older advice (2021-22).</em> [L1372.029]</li>
+</ol></li>
+<li>Example audit of a drop-shipping store with about 5,337 internal URLs crawled. <em>Older advice (2021-22).</em> [L1372.021]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Finding</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duplicate pages without canonical</td>
+<td>49</td>
+</tr>
+<tr>
+<td>Orphan pages (no incoming internal links)</td>
+<td>330</td>
+</tr>
+<tr>
+<td>404 pages</td>
+<td>275</td>
+</tr>
+<tr>
+<td>Pages with missing or empty meta descriptions</td>
+<td>248</td>
+</tr>
+<tr>
+<td>Pages with missing or empty title tags</td>
+<td>49</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The orphan and duplicate lists were exported into the tracker for review. <em>Older advice (2021-22).</em> [L1372.021]</li>
+<li>Another example audit of an e-commerce store with 5,337 internal URLs had 24,702 issues in total: 1,517 errors, 13,058 warnings and 10,127 notices. Of the internal URLs, 4,502 had no errors and 835 had errors. <em>Older advice (2021-22).</em> [L1372.031]</li>
+<li>The same audit found 406,554 links in total, of which 345,992 were crawled, 55,556 were uncrawled and 5,006 were blocked by robots.txt. Read crawl totals with the uncrawled and blocked share in mind. <em>Older advice (2021-22).</em> [L1372.032]</li>
+<li>Automated audit tools are not always fully accurate, so relying only on them can miss issues. A manual review is recommended to be certain nothing is missed. <em>Older advice (2021-22).</em> [L1372.026]</li>
+</ul>
+<h2 id="crawl-control-robotstxt-noindex-and-redirects">Crawl Control: robots.txt, noindex and Redirects</h2>
+<h3 id="robotstxt">robots.txt</h3>
+<ul>
+<li>Only robots.txt directives block crawling. A noindex tag does not stop crawling. <em>Older advice (2021-22).</em> [L1372.006]</li>
+<li>Editing robots.txt on Shopify:
+<ul>
+<li>Current (2024): robots.txt can be edited by adding a theme template named robots.txt.liquid. Go to Online Store &gt; Themes &gt; Edit code, then add the template under Templates. Check the changes in Google Search Console after saving. [L1105.014]</li>
+<li>Older (2021-22): robots.txt cannot be edited by the merchant on Shopify, so noindex is the practical tool there. This statement reflects older platform behaviour and conflicts with the 2024 method above. [L1372.006]</li>
+</ul></li>
+<li>Procedure for a 'Submitted URL blocked by robots.txt' error in Google Search Console:
+<ol type="1">
+<li>Click the page in the Examples table to open the side panel, then click 'Test robots.txt blocking'.</li>
+<li>The robots.txt tester highlights the rule that blocks the URL.</li>
+<li>Click 'See live robots.txt' in the tester to see where the file is located.</li>
+<li>Edit the rule only if the block is unwanted. If you lack permission to edit the file, contact your hosting provider or check its documentation. [L1333.020]</li>
+</ol></li>
+</ul>
+<h3 id="noindex">noindex</h3>
+<ul>
+<li>Place this tag in the head of a page to keep it out of the index:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">&quot;robots&quot;</span><span class="ot"> content</span><span class="op">=</span><span class="st">&quot;noindex&quot;</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>[L1372.007]</p>
+<ul>
+<li>Google treats noindex as a suggestion that keeps the page out of the index. The page can still be crawled. <em>Older advice (2021-22).</em> [L1372.007]</li>
+<li>Adding noindex by editing theme code can accidentally noindex the whole site. One such error went unnoticed for about two weeks, and recovery requires re-indexing from scratch. <em>Older advice (2021-22).</em> [L1372.025]</li>
+</ul>
+<h3 id="redirects">Redirects</h3>
+<ul>
+<li>Use redirects only where they are needed, such as when a page is deleted and should point to a replacement. Large batches of unnecessary redirects slow down crawling. <em>Older advice (2021-22).</em> [L0397.008]</li>
+<li>Minimize redirects as part of Shopify speed work. <em>Older advice (2021-22).</em> [L1266.014]</li>
+</ul>
+<h2 id="handling-404-errors">Handling 404 Errors</h2>
+<ul>
+<li>A 404 error means the URL points to a page that does not exist. Every 404 found on the store should be resolved, usually by updating the link or setting up a redirect. Smart SEO reports these errors so they can be fixed. [L1271.002]</li>
+<li>In Search Console, 404 errors mean the page no longer exists. They often remain because the old URL is still listed in the sitemap. Submitting a fresh sitemap usually removes them. [L0835.091]</li>
+<li>Use Google Webmaster Tools (called Google Search Console in the 2022-2025 units) to find indexing errors:
+<ol type="1">
+<li>Check the Coverage section for 404 errors, server errors and excluded pages.</li>
+<li>Review the Performance section to see which queries drive clicks and impressions.</li>
+<li>Monitor for manual penalties or security issues.</li>
+<li>Submit sitemaps to ensure all pages are crawlable. [L0226.026]</li>
+</ol></li>
+</ul>
+<h2 id="getting-pages-indexed">Getting Pages Indexed</h2>
+<h3 id="submitting-new-pages">Submitting New Pages</h3>
+<ul>
+<li>Submit new product pages, blog posts and optimized URLs directly to Google for faster indexing. Without this, Google may take weeks or months to discover and index new pages. [L0226.019]</li>
+<li>Request indexing in Google Search Console (older version, 2022):
+<ol type="1">
+<li>Go to search.google.com/search-console.</li>
+<li>Log in with your Google account.</li>
+<li>Select your property.</li>
+<li>Paste the new page URL.</li>
+<li>Click 'Request Indexing'.</li>
+<li>Google will crawl and index it immediately or very quickly. <em>Older advice (2022).</em> [L0249.064]</li>
+</ol></li>
+<li>Request indexing with URL Inspection (2025):
+<ol type="1">
+<li>Go to Google Search Console.</li>
+<li>Open URL Inspection from the left sidebar.</li>
+<li>Paste the product page URL in the search field.</li>
+<li>Click 'Request Indexing' to add the page to Google's crawl queue.</li>
+<li>Google will recrawl the page faster than waiting for random indexing. [L0278.015]</li>
+</ol></li>
+</ul>
+<h3 id="pages-crawled-but-not-indexed">Pages Crawled but Not Indexed</h3>
+<ul>
+<li>For pages marked crawled but currently not indexed, confirm that they are real pages you want indexed and not duplicates. Only then look for a fix. [L0835.094]</li>
+</ul>
+<h3 id="sitemaps">Sitemaps</h3>
+<ul>
+<li>Submit sitemaps to ensure all pages are crawlable. [L0226.026]</li>
+<li>A fresh sitemap usually clears old 404 entries from Search Console. [L0835.091]</li>
+</ul>
+<h2 id="page-speed-ranking-conversion-and-crawling">Page Speed: Ranking, Conversion and Crawling</h2>
+<h3 id="speed-as-a-ranking-factor">Speed as a Ranking Factor</h3>
+<p>The sources disagree on how strongly speed ranks. Both views are given below, with the conditions under which each applies.</p>
+<ul>
+<li><strong>Strong view:</strong> Site speed directly affects Google organic search rankings, and faster pages rank higher. This is independent of Shopify's hosting and depends on theme lightness, app efficiency and image optimization. <em>Older advice (2020).</em> [L0245.046]</li>
+<li><strong>Strong view:</strong> Google uses page loading speed as a signal when deciding how high to rank a product page, so a slow page can lose organic position to faster competitors. Speed fixes are among the quickest SEO gains because their effect can show within days. [L1190.001]</li>
+<li><strong>Strong view:</strong> Website speed is a ranking factor, and slow pages lose conversions. [L0226.020]</li>
+<li><strong>Weak view:</strong> Page speed is a Google ranking factor, but it is a weak one. Relevant, high-quality content and search intent match outweigh it, and a slow page can still rank first if its content is better than competitors'. <em>Older advice (2021-22).</em> [L1266.001]</li>
+<li><strong>When each applies:</strong>
+<ul>
+<li>Speed matters most when competing product pages have similar content, because then experience becomes the tiebreaker. <em>Older advice (2021-22).</em> [L1266.001]</li>
+<li>The 2018 mobile speed update affects only the slowest pages and a small share of queries. It applies the same standard whatever platform the site is built on. Google has tracked page performance signals since about 2010. <em>Older advice (2021-22).</em> [L1266.029]</li>
+</ul></li>
+<li>Site speed must be good enough that a mobile visitor on a weak connection still gets the page. Google treats a blank page after a click as a negative ranking signal. [L1227.025]</li>
+<li>Page speed on Shopify pages and blog posts depends first on the theme and the installed apps. Image optimization is an additional lever on top of a suitable theme and a lean app setup. [L1321.001]</li>
+</ul>
+<h3 id="how-much-speed-is-enough">How Much Speed Is Enough</h3>
+<ul>
+<li>A store does not need the fastest page online or a perfect score in speed tools. It only needs to load faster than the sites it competes with in the search results for the same queries. Judge speed relative to those competitors before deciding it is a problem. <em>Older advice (2021-22).</em> [L1266.002]</li>
+<li>Benchmark against competitors:
+<ol type="1">
+<li>Enter each main competitor's domain into Google PageSpeed Insights.</li>
+<li>Compare FCP, LCP and CLS with your own results.</li>
+<li>Only the gap to the sites you rank against matters for SEO. <em>Older advice (2021-22).</em> [L1266.032]</li>
+</ol></li>
+</ul>
+<h3 id="speed-and-conversion">Speed and Conversion</h3>
+<ul>
+<li>Page speed matters for conversion rate separately from SEO. A visitor who can see and use the page after about three to four seconds is usually fine. Conversion may start to drop once the usable point goes beyond roughly four seconds. <em>Older advice (2021-22).</em> [L1266.012]</li>
+<li>Fully loaded time (often 7 seconds or more) is less relevant, because customers can use the page before everything has finished loading. <em>Older advice (2021-22).</em> [L1266.012]</li>
+</ul>
+<h3 id="speed-case-study">Speed Case Study</h3>
+<ul>
+<li>A store had a GT Metrics performance score of 99, a structure score of 95 and an LCP under one second before any changes. After compressing images with Smart SEO and adding descriptive alt text to the product images, scores rose to a performance of 100, a structure of 96 and an LCP of 678 ms, with only small changes. [L1190.014]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Before</th>
+<th>After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GT Metrics performance score</td>
+<td>99</td>
+<td>100</td>
+</tr>
+<tr>
+<td>GT Metrics structure score</td>
+<td>95</td>
+<td>96</td>
+</tr>
+<tr>
+<td>LCP</td>
+<td>under 1 second</td>
+<td>678 ms</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="measuring-page-speed">Measuring Page Speed</h2>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>Test page speed with at least three tools, because each reports different data:
+<ul>
+<li>Google PageSpeed Insights: Google's own tool, the one that matters most for search. Free at developers.google.com/speed. It analyzes page load time and gives recommendations for optimization. Use it to identify performance bottlenecks and track improvements. [L1266.003, L0226.025]</li>
+<li>GTmetrix: technical waterfall and Yahoo-developed YSlow scores. [L1266.003]</li>
+<li>WebPageTest.org: real browser runs from chosen locations and devices, e.g. Android or iPhone, with three runs per test. [L1266.003]</li>
+<li>Pingdom is similar to GTmetrix and optional. [L1266.003]</li>
+</ul></li>
+</ul>
+<h3 id="test-order-and-scope">Test Order and Scope</h3>
+<ol type="1">
+<li>Test the homepage.</li>
+<li>Test a random sample of three or four product pages to confirm results are consistent.</li>
+<li>Test collection pages.</li>
+<li>Identify which problems to fix based on the results. <em>Older advice (2021-22).</em> [L1266.005]</li>
+</ol>
+<ul>
+<li>Always test each page type separately. A fast homepage does not mean fast product or collection pages. A page-speed test of the homepage URL only tests the homepage. <em>Older advice (2021-22).</em> [L1266.006]</li>
+<li>Always look at both mobile and desktop results in PageSpeed Insights. Mobile scores are usually lower on Shopify, and mobile matters more because most visitors arrive on mobile. <em>Older advice (2021-22).</em> [L1266.007]</li>
+</ul>
+<h3 id="reading-scores">Reading Scores</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>PageSpeed Insights score</th>
+<th>Colour</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-49</td>
+<td>Red</td>
+<td>Poor. Priority.</td>
+</tr>
+<tr>
+<td>50-89</td>
+<td>Orange</td>
+<td>Needs improvement</td>
+</tr>
+<tr>
+<td>90-100</td>
+<td>Green</td>
+<td>Good</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Scores in red are the priority. A low score alone is not a reason to panic if competitors score similarly. <em>Older advice (2021-22).</em> [L1266.008]</li>
+</ul>
+<h3 id="waterfall-charts">Waterfall Charts</h3>
+<ul>
+<li>Each row in a waterfall chart is one asset loaded (HTML, CSS, JS, images, fonts). Long bars and blocking segments show what delays the page. Beige/sandy colour in GTmetrix means waiting for the asset to load. Orange in WebPageTest shows a connection problem. Filter by HTML, CSS, JS or image to isolate the cause. <em>Older advice (2021-22).</em> [L1266.013]</li>
+</ul>
+<h2 id="core-web-vitals">Core Web Vitals</h2>
+<h3 id="metrics-and-thresholds">Metrics and Thresholds</h3>
+<ul>
+<li>LCP (Largest Contentful Paint) should be under 2.5 seconds for good. This is Google's threshold. <em>Older advice (2021-22).</em> [L1266.009]</li>
+<li>Practical LCP target on Shopify: under 4 seconds. Shopify limits control over some parts of the stack, so the practical goal is 4 seconds even though Google's good threshold is 2.5 seconds. <em>Older advice (2021-22).</em> [L1266.009, L1266.010]</li>
+<li>CLS (Cumulative Layout Shift) above 0.25 on mobile is flagged as a problem. [L1266.009]</li>
+<li>FID (First Input Delay) is the third metric, measured as input responsiveness. [L1266.009]</li>
+<li>Field data (real users, 28-day Chrome User Experience collection) and lab data (simulated test run) can differ for the same page. Read both, and treat field data as what Google measures for ranking. <em>Older advice (2021-22).</em> [L1266.011]</li>
+</ul>
+<h3 id="core-web-vitals-in-search-console">Core Web Vitals in Search Console</h3>
+<ul>
+<li>The Core Web Vitals report in Google Search Console groups URLs as Poor, Need improvement or Good. It is based on Chrome UX Report field data. It names the failing issue per group, such as LCP longer than 4s on mobile or CLS above 0.25 on mobile, and offers a validation step after fixes. <em>Older advice (2021-22).</em> [L1266.004, L1266.031]</li>
+<li>Core Web Vitals and Page experience data only appear in Search Console about one week after the store is set up. A brand-new store will show no data at first. Once data appears, check for errors and resolve any critical issues. [L1271.009]</li>
+<li>After you submit a sitemap, Core Web Vitals data takes time to appear. If it is still empty after a while, resubmit the sitemap. [L0965.078]</li>
+<li>Status of Core Web Vitals as a ranking signal:
+<ul>
+<li>In the 2020 to 2021 guidance, Core Web Vitals were reported in Search Console and PageSpeed Insights but were not yet a confirmed ranking signal. Google usually gives reporting 6 to 12 months before a metric becomes one. <em>Older advice (2020-21).</em> [L1266.030]</li>
+<li>Core Web Vitals were framed as mobile-focused user experience metrics. <em>Older advice (2021-22).</em> [L1266.030]</li>
+</ul></li>
+</ul>
+<h2 id="fixing-page-speed-on-shopify">Fixing Page Speed on Shopify</h2>
+<h3 id="fix-order">Fix Order</h3>
+<p>Work through these steps in order:</p>
+<ol type="1">
+<li>Compress images as far as possible in a lossy way, up to the point where quality starts to suffer. Do this offline before uploading, using a bulk offline tool such as ImageOptim, instead of relying on compression apps that may run JavaScript or compress less.</li>
+<li>Load videos in a thin way so their JavaScript only loads when the user clicks play. Use the provided code snippet or a lightweight app. Code is the preferred option.</li>
+<li>Implement lazy loading for images so they load only when the user scrolls near them.</li>
+<li>Remove unused apps and their leftover code from the theme.</li>
+<li>Use a theme with minimal, clean code.</li>
+<li>Minimize redirects.</li>
+<li>Minimize JavaScript, e.g. do not use homepage sliders or quick view on collection pages. <em>Older advice (2021-22).</em> [L1266.014]</li>
+</ol>
+<h3 id="images-and-media">Images and Media</h3>
+<ul>
+<li>Remove slideshows, carousels and heavy media elements from product pages if they slow page load time. Website speed is a ranking factor, and slow pages lose conversions. [L0226.020]</li>
+<li>Videos placed in the product description should use a thin (lazy) load so they do not noticeably slow down the product page. <em>Older advice (2021-22).</em> [L1191.015]</li>
+<li>The default Shopify video embed adds at least 1 MB to the page size and a large amount of JavaScript, which significantly hurts page speed and therefore SEO. <em>Older advice (2021-22).</em> [L1191.016]</li>
+</ul>
+<h3 id="apps-and-code">Apps and Code</h3>
+<ul>
+<li>Installing unnecessary apps or plugins on your Shopify store increases load time, because each app adds to it. Only keep apps that are essential to store function. [L0226.021]</li>
+</ul>
+<h2 id="mobile-optimization">Mobile Optimization</h2>
+<ul>
+<li>Mobile visitors and mobile results matter most. Mobile scores are usually lower on Shopify, so review mobile results first. <em>Older advice (2021-22).</em> [L1266.007]</li>
+<li>Mobile optimization steps:
+<ol type="1">
+<li>Test your store on mobile devices (phones, tablets).</li>
+<li>Ensure images, banners, titles and CTA buttons render correctly on small screens.</li>
+<li>Check mobile page speed using Google PageSpeed Insights.</li>
+<li>Optimize font sizes and touch targets (buttons) for mobile users. [L0226.024]</li>
+</ol></li>
+<li>Check mobile Core Web Vitals in Search Console, where the report names failing mobile issues such as LCP longer than 4s on mobile or CLS above 0.25 on mobile. <em>Older advice (2021-22).</em> [L1266.004]</li>
+<li>A site must load well enough on mobile that a visitor on a weak connection still gets the page, because a blank page after a click counts as a negative ranking signal. [L1227.025]</li>
+</ul>
+<h2 id="removing-deleted-pages-and-old-urls-from-google">Removing Deleted Pages and Old URLs From Google</h2>
+<h3 id="after-a-site-rebuild">After a Site Rebuild</h3>
+<p>Older procedure (2021):</p>
+<ol type="1">
+<li>Submit the site map to Google.</li>
+<li>Request a recrawl so Google re-examines the store.</li>
+<li>Google then removes the old pages from its index and adds the new ones. <em>Older advice (2021).</em> [L0853.079]</li>
+</ol>
+<h3 id="after-deleting-products">After Deleting Products</h3>
+<ol type="1">
+<li>Delete the product from your store. The sitemap updates automatically at yourstore.com/sitemap.xml.</li>
+<li>Wait for Google to re-crawl the sitemap. The deleted page then drops out of it and no longer shows as an error in Search Console.</li>
+<li>Optional: open Google Search Console, click Sitemaps and resubmit yourstore.com/sitemap.xml to request an immediate re-scan.</li>
+<li>Google Merchant Center also stops receiving deleted products, because the feed resubmits on its schedule and skips missing pages. [L0965.076]</li>
+</ol>
+<h3 id="redirects-for-deleted-pages">Redirects for Deleted Pages</h3>
+<ul>
+<li>Use redirects where a deleted page should point to a replacement. Do not redirect in large batches that are not needed. <em>Older advice (2021-22).</em> [L0397.008]</li>
+<li>Every 404 found on the store should be resolved, usually by updating the link or setting up a redirect. [L1271.002]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>If the crawler has trouble accessing pages, it may cover only part of a site on a given visit, leaving some pages uncrawled until a later pass. Fixing access and crawl problems is therefore part of crawl optimization, not just a separate technical issue. [L0397.013]</li>
+</ul>
+</article><nav class="pn"><a href="../../14-seo-and-content/05-site-structure-navigation-and-internal-linking/"><span class="k">&larr; Previous</span><span class="v">Site structure, navigation and internal linking</span></a><a class="nx" href="../../14-seo-and-content/07-duplicate-and-thin-content-canonicals-and-urls/"><span class="k">Next &rarr;</span><span class="v">Duplicate and thin content, canonicals and URLs</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

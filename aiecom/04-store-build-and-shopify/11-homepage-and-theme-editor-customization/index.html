@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Homepage and theme editor customization | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.11: Homepage and theme editor customization.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/11-homepage-and-theme-editor-customization/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Homepage and theme editor customization | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.11: Homepage and theme editor customization."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/11-homepage-and-theme-editor-customization/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/11-homepage-and-theme-editor-customization/">Plain version</a></div><h1>4.11 Homepage and theme editor customization</h1><article><h2 id="theme-editor-access-and-basic-rules">Theme editor access and basic rules</h2>
+<ul>
+<li>The Theme Customizer is Shopify's built-in visual editor for changing a theme without touching code. It adjusts the website font, color scheme, layout and store content from a side panel on the customized themes page. [L0595.001]</li>
+<li>Use the Customizer's built-in settings for everyday look changes first. Go into the theme's HTML/CSS only for structural changes the Customizer cannot make. [L0595.002]</li>
+<li>Avoid editing theme code unless a change truly cannot be made in the Customizer. Opening the code editor by accident means you are in the wrong place for ordinary design work. [L0595.003]</li>
+<li>Admin path: Online Store &gt; Themes &gt; Customize. The Source A Manhattan theme must be installed to use this path. [L0595.006]</li>
+<li>Steps to open the theme customization pages:
+<ol type="1">
+<li>Log in to the Shopify account. [L0595.005]</li>
+<li>Click Online Store in the Shopify admin. [L0595.005]</li>
+<li>Click Themes. [L0595.005]</li>
+<li>Find the installed theme named Source A Manhattan. [L0595.005]</li>
+<li>If it is the currently published theme, click the Customize button. [L0595.005]</li>
+<li>If you are upgrading from another theme and Manhattan is not yet published, find it in the list of unpublished themes further down the page and click Customize. [L0595.005]</li>
+<li>The side menu that opens lists the elements you can edit, and changes made there alter what visitors see on the store. [L0595.005]</li>
+</ol></li>
+<li>Before opening the theme customization pages, the basic store should already have its menus, some collections and a demo product in place. The Customizer then turns that bare structure into the finished look. [L0595.008]</li>
+<li>To open the homepage editor, go to Online Store &gt; Themes, confirm the active theme is the one you are building, and click Customize. Check that the page dropdown at the top of the editor says Homepage before making changes. [L0775.002]</li>
+<li>In the sidebar, hovering a section highlights it on the page, and clicking an element in the preview opens its settings. Each section can be hidden with the eye icon or removed with delete, and sections can be reordered by dragging the six-dot handle. [L0775.003]</li>
+<li>The left sidebar mirrors the homepage layout from top to bottom. Hovering a section name highlights it on the live preview, and clicking an element on the preview jumps to that section in the sidebar. [L0101.018]</li>
+<li>Click Save after every change in the theme editor, then reload the live product page to confirm the change appears, because the preview does not always show the final result (for example end dates or hidden blocks). [L0976.015]</li>
+<li>Theme settings apply to the whole store, including fonts, buttons and header. Section settings only affect the section they belong to. Each section's color scheme dropdown uses the color schemes defined in Theme settings &gt; Colors, so one color change updates every section that uses that scheme. [L0775.063]</li>
+<li>Collection pickers in the collection list and featured collection sections only show collections that already exist. Create and fill the collections under Products &gt; Collections first, then add them to the homepage. [L0775.064]</li>
+</ul>
+<h2 id="order-of-work-and-time-budget">Order of work and time budget</h2>
+<ul>
+<li><p>Budget 60 minutes to complete the full homepage customization when image assets are already created, because the work is primarily asset placement. [L0101.013]</p></li>
+<li><p>Work through the homepage in this order:</p>
+<ol type="1">
+<li>Upload all images to Files. [L0775.062]</li>
+<li>Set logo and favicon. [L0775.062]</li>
+<li>Set colors and typography. [L0775.062]</li>
+<li>Set layout and buttons. [L0775.062]</li>
+<li>Set header, sticky header and menu colors. [L0775.062]</li>
+<li>Configure slideshow, collection list, featured collection, pre-footer and email signup. [L0775.062]</li>
+<li>Hide unused sections. [L0775.062]</li>
+</ol>
+<p>After each step, save and check the preview on desktop and mobile. [L0775.062]</p></li>
+<li><p>The same work can also be read as an outline of four blocks: homepage and general customizations, menu customizations (header and footer menus), collection page customizations (layout and visuals), and product page customizations (layout and settings). [L0100.002]</p></li>
+<li><p>Theme customization transforms a Shopify store from its default basic template (gray/white/black appearance) into a branded store by applying image assets and making layout and settings adjustments within the theme editor. [L0100.001]</p></li>
+<li><p>Advanced web design changes are optional final tweaks for a store that already performs well and needs extra gains. They are not necessary to get initial results. [L0544.007]</p></li>
+<li><p>Shopify's native editor is moving toward more page-builder flexibility, such as moving elements without code. This reduces the developer work needed for simple layout changes. [L0709.007]</p></li>
+</ul>
+<h2 id="full-manhattan-homepage-procedure-initial-setup">Full Manhattan homepage procedure (initial setup)</h2>
+<p>The complete homepage walkthrough, in order, as taught for the Manhattan theme:</p>
+<ol type="1">
+<li>Upload all image assets: Shopify Admin &gt; Content &gt; Files, click Upload files, select all Canva assets at once, confirm upload completes. [L0101.001]</li>
+<li>Open theme customizer: Shopify Admin &gt; Online Store &gt; Themes, select Manhattan theme, click Customize, confirm Homepage is selected in the top dropdown. [L0101.001]</li>
+<li>Hide announcement bar: hover over Announcement bar in sidebar, click eye icon. [L0101.001]</li>
+<li>Add logo: Theme settings (gear icon) &gt; Logo, select uploaded logo file, keep desktop logo width around 200. [L0101.001]</li>
+<li>Add favicon: Theme settings &gt; Favicon image, select small logo variation file. [L0101.001]</li>
+<li>Set global colors: Theme settings &gt; Colors, use brand hex codes, keep palette to 2-4 colors: Accent 1 (primary brand color), Accent 2 (secondary brand color), Text (black), Background (white), Background 2 (light gray), click Save. [L0101.001]</li>
+<li>Set typography: Theme settings &gt; Typography, set Heading font to display font, set Body font to readable clean font (example: Montserrat), optionally increase Font size scale to 110%, click Save. [L0101.001]</li>
+<li>Adjust layout: Theme settings &gt; Layout, increase page width to 1600 if desired, click Save. [L0101.001]</li>
+<li>Remove social media defaults: Theme settings &gt; Social media, remove default URLs if no active accounts yet, save. [L0101.001]</li>
+<li>Enable sticky header: Header &gt; Sticky header, turn on Always on, save, preview to confirm header stays visible on scroll. [L0101.001]</li>
+<li>Set header menu: leave Menu as Main menu, set Desktop menu type to Mega menu. [L0101.001]</li>
+<li>Add header contact details: Header &gt; Contact details, add service hours (optional), add email (example: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>), replace with phone in later module. [L0101.001]</li>
+<li>Customize header colors: Header &gt; Navigation menu color, update Background color, Link colors, Dropdown background, Dropdown link colors, Border colors using only brand palette, save. [L0101.001]</li>
+<li>Configure slideshow: use 1 slide only, delete blank slides, Slideshow &gt; Slide height select Adapt to first image, keep full width, add hero image asset, add Heading (example: primary collection focus), add Subheading (benefit-oriented), Button label (example: Shop Now), link button to relevant collection, position content (example: bottom right), align text (example: right), adjust button colors if needed, save. [L0101.001]</li>
+<li>Set up collection list: change heading to Shop Our Featured Collections, Image ratio Adapt to image, Columns 3, optional text overlay, add 6 collections (example: Best Sellers, Staff Picks, Top Rated, New Arrivals, On Sale Now, Under $1000), go to Shopify Admin &gt; Products &gt; Collections, open each, add Image, save, refresh theme customizer. [L0101.001]</li>
+<li>Hide rich text section (not needed for supplier approval). [L0101.001]</li>
+<li>Configure featured collection: change heading (example: What's Trending in Surfing), select collection (example: Best Sellers), Products to show 4, Columns 4, toggle Vendor/Ratings/Secondary image/Quick View as preferred, choose color scheme, save. [L0101.001]</li>
+<li>Configure email signup: change headline to branded text (example: Join Shaka Nation), leave default form, choose matching color scheme, save. [L0101.001]</li>
+<li>Configure pre-footer: add 4 columns with icon and short benefit headline (example headlines: Free Shipping $100+, Surfer Owned &amp; Operated, Fast &amp; Secure Checkout, Easy Returns), add links only if pages exist, set background to white if cleaner, save. [L0101.001]</li>
+<li>Hide blog posts section (not needed for supplier approval). [L0101.001]</li>
+<li>Refresh homepage, scroll through, confirm store looks legitimate, no dead links, consistent branding, clean supplier-ready sections. [L0101.001]</li>
+</ol>
+<h2 id="global-settings-logo-favicon-colors-typography-and-layout">Global settings: logo, favicon, colors, typography and layout</h2>
+<ul>
+<li>Set desktop logo width to 200 pixels in Theme settings &gt; Logo. The default is usually acceptable. [L0101.009]</li>
+<li>Increase page layout width to 1600 pixels in Theme settings &gt; Layout for a wider, more spacious presentation. [L0101.010]</li>
+<li>To make the page narrower instead, go to Online Store &gt; Themes &gt; Customize, click the gear icon for Theme settings, and open Layout. Type a value into Page width or drag the slider. Spacing and padding are controlled in the same theme editor section. [L0471.007]</li>
+<li>Note on width (2024 advice versus the 1600 setting): the 1600 value is for a wider look, while the Page width field from the same Layout section is the way to narrow it. [L0101.010, L0471.007]</li>
+<li>Keep the global palette to 2-4 colors, using brand hex codes and the roles in the Colors list. [L0101.001]</li>
+<li>Keep the color changes in Theme settings &gt; Colors, since every section's color scheme draws from there. [L0775.063]</li>
+</ul>
+<h2 id="theme-settings-search-pop-ups-and-custom-css">Theme settings: search, pop-ups and custom CSS</h2>
+<ul>
+<li>Open the theme customizer, click the gear icon labelled Theme settings to reach the additional features, and work through the settings in the order they appear in the panel. [L0973.003]</li>
+<li>In the Manhattan theme settings panel, the sections appear in this order: Search behavior, Email pop-up settings, Exit pop-up, Cross-sell, Social proof pop-up, the Source A tracking option, and Custom CSS. Review them from top to bottom, and click save after changing the tracking option. [L0973.016]</li>
+<li>Search behavior: keep search suggestions enabled and turn on showing the product price within those suggestions. This setting controls what happens when visitors click the magnifying glass and search the store. [L0973.004]</li>
+<li>Custom CSS field: paste code here to change how the store looks when the theme editor has no native option for it. Use it only for appearance changes that cannot be made in the normal theme settings. [L0973.014]</li>
+</ul>
+<h2 id="social-media-links">Social media links</h2>
+<ul>
+<li>Remove default social media URLs from Theme settings &gt; Social media if you do not have active accounts, because suppliers must not click social icons that lead to Shopify default pages. [L0101.003]</li>
+<li>Turn off footer social media icons if you do not have real social profiles yet. Never send suppliers to a store with dead or placeholder social links. [L0102.008]</li>
+<li>Footer social icons in the Manhattan theme only appear for social channels that have a full URL entered in the theme customizer. Check each link, including the full https:// address, and save. [L0836.050]</li>
+<li>Footer &gt; Show social media can stay enabled even with no links, because the social icons only show real links. Add links later through the gear icon, in the social media fields, and make sure the show-link option is on. If no social pages exist yet, delete the empty links. [L0680.005]</li>
+<li>Do not lead the header navigation with social media links such as Facebook, Instagram, Twitter, YouTube or Pinterest. Shoppers who came to buy should first see shop pages, collections and product categories. [L1098.010]</li>
+</ul>
+<p>Conflict on footer social icons, by situation:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No real social profiles yet</td>
+<td>Off (footer social media icons off) [L0102.003, L1018.006]</td>
+</tr>
+<tr>
+<td>Turning on before accounts exist</td>
+<td>Do not do it; visitors reach pages that do not exist [L1018.009]</td>
+</tr>
+<tr>
+<td>Profiles exist, full URLs entered</td>
+<td>On; icons show only for entered links [L0836.050, L0680.005]</td>
+</tr>
+<tr>
+<td>Show-social toggle on with no links</td>
+<td>Allowed; icons simply do not show [L0680.005]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Source A's 2025 Manhattan footer reference value is off until social accounts exist. [L1018.006, L0102.003]</p>
+<h2 id="header">Header</h2>
+<ul>
+<li>In Shopify Admin, navigate to Online Store &gt; Themes &gt; Customize. Select Header from the left sidebar. Ensure your Menu setting references Main menu. Confirm that your Desktop menu type is configured to Mega menu, the standard theme default. [L0102.001]</li>
+<li>Header &gt; Sticky header with the Always on option keeps the menu bar visible while visitors scroll. A related option shrinks the logo on scroll and is useful when the logo file is large. [L0775.020]</li>
+<li>Sticky header set to Always on keeps navigation visible while scrolling, because customers can always access the menu without scrolling back to the top. [L0101.007]</li>
+<li>Header &gt; Desktop logo position offers Top left, Top center, Middle left and Middle center. Top left is the common default for most stores. [L0775.021]</li>
+<li>Header &gt; Show separator line adds a thin line under the header and is on by default. Turn it off if you want a cleaner header. [L0775.024]</li>
+<li>Header mobile layout lets you move the logo to a different position on phones, such as center or left, separately from the desktop position. Always save, then open the store on a phone to check the result. [L0775.032]</li>
+<li>The header in the Source D theme editor has a Menu type setting (for example Sticky header), a Separator line option, an Enable top border option with a color set to Use Theme Colors, and a Middle left position set to Main Menu. Scroll up behaviour is controlled by the On scroll up option. [L1013.014]</li>
+<li>Header contact details, as in the default setup: add service hours (optional), add an email, and replace with a phone number in a later module. [L0101.001]</li>
+<li>Customize header colors: Header &gt; Navigation menu color, update Background color, Link colors, Dropdown background, Dropdown link colors, Border colors using only brand palette, save. [L0101.001]</li>
+<li>A large header logo that pushes content down wastes vertical space. Use the empty header space for a short message that helps the buyer, such as free personalized note cards included with every order. [L0355.008]</li>
+<li>A header that only says "welcome to our store" is lazy and generic and wastes the top of the page. Replace it with a call to action or a scarcity message. [L0530.019]</li>
+<li>Fast themes often ship with demo homepages and headers that are not built for conversion, such as social media icons first in the header and oversized hero slideshows. Right after installing a theme, reconfigure the header, homepage and collection layout for shopping instead of keeping the demo structure. [L1098.025]</li>
+<li>Older method (2020): changing the header so the logo sits in the same row as the menu was done by editing code. Open the theme editor and the code editor, change the header code by copying and pasting the required code, or hire a Shopify developer on Upwork if not comfortable with code. [L0852.089]</li>
+<li>Native option versus older code method: the 2020 approach used header code, while the current Desktop logo position setting in the Header section offers Top left, Top center, Middle left and Middle center without code. [L0852.089, L0775.021]</li>
+</ul>
+<h2 id="announcement-bar">Announcement bar</h2>
+<ul>
+<li>Default setup hides the announcement bar by hovering over it in the sidebar and clicking the eye icon. [L0101.001]</li>
+<li>If the theme has a built-in announcement bar section, build the bar there by entering the text and the code in the theme's customization settings. Use a separate app only when the theme does not offer this or when another solution is preferred. [L0531.009]</li>
+<li>An announcement bar at the top of the store can show a sitewide promotion, for example a 10 percent discount. Competitor stores use it to push a current offer on every page. [L0600.011]</li>
+<li>Use the Quick Announcement Bar app only if you want different promotions shown on different supplier pages. A theme's built-in announcement bar is enough otherwise. Older advice (2021). [L0834.049]</li>
+<li>The coupon code bar at the top of the store is edited in Shopify admin under Store, then Store settings. If it still appears after the theme is changed, check the store settings first. Older advice (2020). [L0468.064]</li>
+<li>In the header bar editor, the text font size can be increased, but the bar height cannot be set directly. If no adjustment is possible at all, the app or theme should be checked for a problem. Older advice (2019). [L0960.003]</li>
+</ul>
+<p>Conflict on announcement bar, by purpose:</p>
+<ul>
+<li>Hide it while building, if there is no promotion yet [L0101.001]</li>
+<li>Use the built-in bar for a single sitewide message [L0531.009, L0600.011]</li>
+<li>Use an app only for different messages per page [L0834.049]</li>
+</ul>
+<h2 id="homepage-structure-and-what-to-show">Homepage structure and what to show</h2>
+<ul>
+<li>Homepage structure, in order:
+<ol type="1">
+<li>Show one hero value proposition at the top that states the core benefit for the target audience. [L0524.014]</li>
+<li>Link straight to best sellers and the product range. [L0524.014]</li>
+<li>Give a short explanation of what the product does and how it differs from alternatives. [L0524.014]</li>
+<li>Offer bundles and subscriptions to lift average order value. [L0524.014]</li>
+<li>Add testimonials and social proof. [L0524.014]</li>
+<li>Add authority logos from recognised media in the niche, placed higher up the page. [L0524.014]</li>
+</ol></li>
+<li>Arrange the homepage sections in the same order as the demo store of the theme. Copying the working layout reduces setup time. Older advice (2020). [L0664.039]</li>
+<li>The home page should not replace the product page. If the home page is the only page a visitor sees, the shop is set up wrong and conversion suffers, so the product should be the main page of a single-product store. [L0530.016]</li>
+<li>Group the homepage around one clear store theme. A homepage that mixes unrelated categories, such as gag gifts, surf, apparel and novelties with no gift theme, looks random and makes navigation hard. [L0355.006]</li>
+<li>A store must make sense within seconds to visitors arriving from a Facebook ad, a Google ad or any other source. Navigation, logo and copy should together show who the store is for and what it sells. [L0355.012]</li>
+<li>For a single-category fashion store, organize the homepage into collections by dress type, each with a hero image showing a person wearing the items. This gives visitors a clear path into the collections and makes the store look like one focused range. [L0838.023]</li>
+<li>A homepage layout example uses square collection images in rows of three, followed by a row of three more, with a best-sellers collection placed next to the main product collections. Six square homepage images are needed for that layout. [L0342.027]</li>
+<li>Homepage collection tiles can be arranged in rows of three, for example six tiles in two rows, with the most popular collections such as a best sellers collection placed where customers see them first. [L1045.031]</li>
+<li>Unused default Shopify sections, such as an empty video section or a promotions box with no content, should be removed from the homepage. Leftover empty sections add clutter and signal an unfinished store. [L0355.011]</li>
+<li>Competitor layouts will not map one to one onto a different theme. Rebuild the same section type with your own theme's settings, and keep the purpose of each section, such as proof, FAQ or transformation, even when the design changes. [L0600.009]</li>
+<li>Video carousels and slider sections are built into almost every Shopify theme, especially Atlas and Shrine. Use the sections your theme already offers rather than custom development when recreating a competitor layout. [L0600.008]</li>
+<li>Quick navigation section above the main banner, as taught for the Source E course:
+<ol type="1">
+<li>Display 5-6 visual category shortcuts. [L0197.021]</li>
+<li>Style them to resemble Instagram story cards, a visual pattern shoppers recognize. [L0197.021]</li>
+<li>Include current sales and new product promotions. [L0197.021]</li>
+<li>Position the section above the fold for immediate visibility. [L0197.021]</li>
+</ol></li>
+<li>Recently viewed products can be enabled in the theme editor under the Recently viewed products section (Settings &gt; Enable recently viewed products). This setting applies to both collection pages and product pages. It is useful for returning customers but shows nothing until a visitor has viewed products. Older advice (2021-22, Source B's theme). [L0370.002]</li>
+</ul>
+<h2 id="slideshow-hero">Slideshow (hero)</h2>
+<ul>
+<li>Steps to set up the homepage slideshow:
+<ol type="1">
+<li>Open the Slideshow section in the editor. [L0775.033]</li>
+<li>Delete extra blank slides and keep one. [L0775.033]</li>
+<li>Click the first slide, select an image, click Done. [L0775.033]</li>
+<li>Enter the heading, subheading, button label and button link, then set the desktop and mobile content position. [L0775.033]</li>
+</ol></li>
+<li>Full default slideshow steps: use 1 slide only, delete blank slides, Slideshow &gt; Slide height select Adapt to first image, keep full width, add hero image asset, add Heading (example: primary collection focus), add Subheading (benefit-oriented), Button label (example: Shop Now), link button to relevant collection, position content (example: bottom right), align text (example: right), adjust button colors if needed, save. [L0101.001]</li>
+<li>A new Shopify slideshow comes with three blank slides. For a supplier demo store, one slide is enough, and you can add more later with Add a slide for new suppliers or seasonal sales. [L0775.034]</li>
+<li>Slideshow settings include Full width or Grid layout, Slide height set to adapt to first image (or small, medium, large), and pagination as dots or numbers. Auto rotate can be set to change slides every 3, 5 or 9 seconds, and animation style controls the transition. [L0775.035]</li>
+<li>Slideshow accessibility field holds a short description of the slideshow, which screen readers announce to visually impaired visitors. Something like a slideshow about your brand is sufficient. [L0775.036]</li>
+<li>Slide content settings include Heading, Subheading, Button label, Button link, Desktop content position, Desktop alignment, Show container on desktop, Button color, Button text color, and mobile alignment. In the example, the content sits bottom right, aligned right, and the button label is Shop, linked to a collection. [L0775.037]</li>
+<li>Button text must contrast with the button color. If you change the button color to a dark brand color, also set Button text color to white. Otherwise the label becomes unreadable on the slide. [L0775.038]</li>
+<li>Preview the slideshow on a phone after making changes and adjust the mobile alignment if the text covers the image. Save only after the mobile view looks right. [L0775.039]</li>
+<li>Slideshow images that are cut off on the store are usually the wrong size for the slot. Crop or resize images to the required dimensions before uploading them. Older advice (2019). [L0960.048]</li>
+<li>A hero image is one image shown on both mobile and desktop, so you cannot upload separate versions. To enlarge it on mobile, make the image taller in pixels, which also enlarges it on desktop. [L0972.020]</li>
+<li>Hero slideshows should follow the conversion layout above, not the demo structure. Oversized hero slideshows are a demo default to replace. [L1098.025]</li>
+</ul>
+<h2 id="logo-list">Logo list</h2>
+<ul>
+<li>Homepage logo list: in the theme customizer, choose the homepage, click Add section, then select Logo list. Enter a heading such as Brands loved by our customers or Featured brands, upload supplier logos, and link each logo to the matching collection. Use the three-dot menu and Duplicate to add more logos. [L0966.057]</li>
+<li>Section spacing: padding adds space inside a section around its content, while margin adds space between sections. In the header example the bottom margin is 0 and the top and bottom padding are 20 px each. Adjust padding to change space inside a section and margin to change space between sections. [L0966.058]</li>
+<li>For a horizontally scrolling logo list created with an AI prompt, use the following prompt unchanged:</li>
+</ul>
+<pre><code>I&#39;m looking to add a logo list for the brands I sell for on my homepage that scrolls horizontally. Please create the code. I would need to create a new section in Shopify, so please send step-by-step installation instructions and show exactly where to put the code. My store link is [STORE URL]. Brand logo files: [LOGO FILES].</code></pre>
+<p>[L1116.021]</p>
+<h2 id="collection-list">Collection list</h2>
+<ul>
+<li>Collection list section settings include Heading (example: Shop our featured collections), Heading size (small in the example), Image ratio set to adapt to image, Collection description (off by default), Number of columns on desktop (3 in the example), Text overlay with position bottom left, and Overlay color. [L0775.040]</li>
+<li>Set collection list grid to 3 columns when displaying multiple featured collections on the homepage. [L0101.012]</li>
+<li>Collection list &gt; Enable view all lets mobile visitors swipe through extra collections. Turn it on if you add more collections than fit on the screen. [L0775.041]</li>
+<li>With 3 columns on desktop, six collections fill two rows on the homepage, which is the count used in the example. Add more collections only if they fit the layout and will be filled with products. [L0775.042]</li>
+<li>Example names for 6 collections: Best Sellers, Staff Picks, Top Rated, New Arrivals, On Sale Now, Under $1000. These convey an organized, actively managed store to suppliers and customers. [L0101.017]</li>
+<li>To add collections to the list:
+<ol type="1">
+<li>Click Collection in the collection list section. [L0775.043]</li>
+<li>Click Select collection and pick a collection created earlier. [L0775.043]</li>
+<li>Click Add collection to add the next row. [L0775.043]</li>
+<li>Repeat until the list is complete, then click Save. [L0775.043]</li>
+</ol></li>
+<li>Default setup step: change heading to Shop Our Featured Collections, Image ratio Adapt to image, Columns 3, optional text overlay, add 6 collections, then go to Shopify Admin &gt; Products &gt; Collections, open each, add Image, save, refresh theme customizer. [L0101.001]</li>
+</ul>
+<h2 id="featured-collection">Featured collection</h2>
+<ul>
+<li>Featured collection section settings include Heading (example: What's trending in surfing), Collection (example: Best sellers), Number of products (4) and Number of columns (4), so four products show in one row. [L0775.046]</li>
+<li>Display 4 products in 4 columns in the featured collection section on the homepage for balanced visual proportion. [L0101.011]</li>
+<li>A featured collection section displaying real products directly on the homepage makes the store appear like an active, inventory-carrying business, which is necessary for both supplier approval and customer confidence. [L0101.008]</li>
+<li>Product card options in the featured collection let you show or hide a secondary image, vendor and product rating. The sale badge position and its color scheme are set here. Quick view opens a product in place with an add to cart button when turned on, or sends the visitor to the product page when turned off. [L0775.047]</li>
+<li>Use 5 to 10 products for best sellers, top rated and staff picks sections on the homepage. This is 2023 advice and differs from the 4-product featured collection setup above, so apply it to those sections specifically. [L0964.098, L0101.011]</li>
+</ul>
+<h2 id="image-banner">Image banner</h2>
+<ul>
+<li>Image Banner section on the homepage: hide if you don't have content ready. If using it, select image, add heading (example: Buyer's Guide), add description text and button labels, add button links only if destination pages exist, optionally enable ambient movement for subtle motion effect, save. Use this section for buyer's guides or featured content. [L0101.020]</li>
+<li>Image banner section settings include the image, Banner height (adapt to first image), Desktop position (middle center), a Container toggle that adds a background box behind the text (off makes text sit directly on the image), heading, description, two buttons with labels and links, and Image behavior (None or ambient movement). [L0775.050]</li>
+<li>Image banner buttons without a link appear transparent and look broken. Add a link before the store goes live, or hide the banner until a real destination page exists. [L0775.051]</li>
+<li>Image behavior None keeps the banner image still, while ambient movement makes it move very slightly. Movement is an optional effect that can draw attention to the banner. [L0775.052]</li>
+</ul>
+<h2 id="blog-posts-section">Blog posts section</h2>
+<ul>
+<li>Blog posts on the homepage are not needed unless you commit to content marketing for the long term. Hide the section until content exists. [L0775.055]</li>
+<li>Hide blog posts section (not needed for supplier approval). [L0101.001]</li>
+</ul>
+<h2 id="email-signup-homepage">Email signup (homepage)</h2>
+<ul>
+<li>Configure email signup: change headline to branded text (example: Join Shaka Nation), leave default form, choose matching color scheme, save. [L0101.001]</li>
+</ul>
+<h2 id="pre-footer-trust-columns">Pre-footer trust columns</h2>
+<ul>
+<li>Pre-footer section holds several columns, each with an image, header, description and optional link. Set the color scheme to Background 1 (white) for a clean look on a white page. [L0775.056]</li>
+<li>Configure pre-footer: add 4 columns with icon and short benefit headline (example headlines: Free Shipping $100+, Surfer Owned &amp; Operated, Fast &amp; Secure Checkout, Easy Returns), add links only if pages exist, set background to white if cleaner, save. [L0101.001]</li>
+<li>Only link pre-footer columns to pages that already exist. Leave a column unlinked until its page is created, because broken or placeholder links look unprofessional when a supplier clicks through. [L0775.057]</li>
+<li>Link policy pages such as shipping and returns in the pre-footer once they exist. Until then, a temporary link to an existing page such as terms of service is an acceptable fallback, and should be replaced later. [L0775.058]</li>
+<li>Pre-footer trust column pattern: a short benefit headline followed by one reassuring sentence about how the benefit is delivered. The headline is 2 to 4 words, and the description names the concrete promise. [L0775.059]
+<ul>
+<li>Example: Free returns for 30 days, Refunds go back to the original payment method within 5 business days.</li>
+<li>Example: Secure payment, Checkout is encrypted and card details are never stored on our site.</li>
+</ul></li>
+<li>The Source A theme supports up to seven USP icons in the pre-footer section, and fewer can be used. Each USP should state something that sets the store apart, for example free shipping, a price match guarantee, a women-owned or veteran-owned business, a secure checkout, or 24/7 customer service. [L1045.033]</li>
+<li>Conflict on pre-footer column count: the Source A homepage procedure uses 4 columns, while the Source A theme supports up to seven USP icons. Use 4 for the standard setup and up to 7 when that theme is in use. [L0101.001, L1045.033]</li>
+</ul>
+<h2 id="footer-placement-structure-and-rules">Footer: placement, structure and rules</h2>
+<ul>
+<li>The footer is a global section that appears on every page of the Shopify store, including the home page. It is edited in the theme editor under the Footer section. Its menu blocks, payment icons, language and currency selectors, small footer text and rich text blocks are all configured from there. Older advice (2021-22, Source B's theme). [L0681.002]</li>
+<li>Footer setup in Shopify, using the Manhattan theme:
+<ol type="1">
+<li>Open Shopify admin, go to Online Store &gt; Themes, click Customize. [L0680.001]</li>
+<li>Confirm the theme is Manhattan. [L0680.001]</li>
+<li>Stay on the homepage view, scroll to the bottom and click the footer section. [L0680.001]</li>
+<li>Set the main footer settings (color scheme, localization, payment icons, social media). [L0680.001]</li>
+<li>Set the top and bottom padding. [L0680.001]</li>
+<li>Edit the first column as Contact us. [L0680.001]</li>
+<li>Edit the second column with the store name and its linked menu. [L0680.001]</li>
+<li>Edit the third column as Quick Links and link its menu. [L0680.001]</li>
+<li>Edit the fourth column as the newsletter signup. [L0680.001]</li>
+<li>Click Save, open the live store, refresh it and check the footer. [L0680.001]</li>
+<li>Adjust the logo size if needed, save again, then exit the admin. [L0680.001]</li>
+</ol></li>
+<li>Footer setup in the theme editor, in this order (alternative sequence with the same goal):
+<ol type="1">
+<li>Open the footer section in the left navigation. The footer has four blocks: Contact us, store name, Quick links and newsletter signup. [L1018.005]</li>
+<li>Block 1 (Contact us): open it in the left navigation, so its settings appear in the right sidebar. Set the heading to Contact us and the text to Reach out, or a more playful line that fits the store. [L1018.005]</li>
+<li>Block 1: enter the support email address in the email field, for example <a href="mailto:support@yourstore.com">support@yourstore.com</a>. [L1018.005]</li>
+<li>Block 1: delete the placeholder phone number, since a phone number is not needed when contacting suppliers. [L1018.005]</li>
+<li>Footer image: click the image box, choose the same logo used as the main logo in the header, and set the image width in percentage to 50%. [L1018.005]</li>
+<li>Click save, then go back to the store and refresh the preview to check the result. [L1018.005]</li>
+<li>Footer styling: choose the color scheme, set the heading size to small, set top padding to 40 and bottom padding to 40. [L1018.005]</li>
+<li>Footer styling: keep payment icons switched on and switch social media icons off. [L1018.005]</li>
+<li>Block 2: rename the block to your store name and choose the footer menu as its menu. [L1018.005]</li>
+<li>Block 3: title the block Quick links and choose the quick links menu as its menu. [L1018.005]</li>
+<li>Block 4 (newsletter signup): replace the default newsletter text with your own wording and click save. [L1018.005]</li>
+<li>Refresh the store and check that all four blocks show the right content. [L1018.005]</li>
+</ol></li>
+<li>Footer reference values from this setup:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Footer image width</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Heading size</td>
+<td>small</td>
+</tr>
+<tr>
+<td>Top padding</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Bottom padding</td>
+<td>40</td>
+</tr>
+<tr>
+<td>Payment icons</td>
+<td>on</td>
+</tr>
+<tr>
+<td>Social media icons</td>
+<td>off until social accounts exist</td>
+</tr>
+<tr>
+<td>Block 1 heading</td>
+<td>Contact us</td>
+</tr>
+<tr>
+<td>Block 1 text</td>
+<td>Reach out, or a playful alternative</td>
+</tr>
+<tr>
+<td>Block 2</td>
+<td>store name, menu: footer menu</td>
+</tr>
+<tr>
+<td>Block 3</td>
+<td>Quick links, menu: quick links menu</td>
+</tr>
+<tr>
+<td>Block 4</td>
+<td>newsletter signup with custom text</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1018.006]</p>
+<ul>
+<li><p>Footer setup, summarised as two workflows: the Manhattan procedure [L0680.001] and the alternative sequence [L1018.005] reach the same end result, with the same reference values [L1018.006].</p></li>
+<li><p>Footer layout is typically a set of four columns: contact details with logo, store name with a menu of shopping links, a quick-links menu with legal pages and contact, and a newsletter signup. Use legal pages such as Privacy Policy and Terms of Service so they are easy to find, which supports trust and compliance. [L0680.016]</p></li>
+<li><p>The Manhattan footer is set up in four blocks, so the layout uses 4 of the available blocks. [L0102.010]</p></li>
+<li><p>Customize four footer blocks: contact block, store-name menu block (Footer menu), quick links menu block, and newsletter signup block. [L0102.010]</p></li>
+<li><p>A store that suppliers visit should show contact details, the store name, quick links and a newsletter signup in the footer. Together these make the store look ready for supplier outreach. [L1018.012]</p></li>
+<li><p>The footer limit in Source B's theme is 5 content blocks, so one must be deleted before another can be added. A footer with three menu blocks already fills the layout, so a fourth menu is usually unnecessary. Older advice (2021-22). [L0370.026, L0681.007]</p></li>
+<li><p>Footer demo limit note: the static footer section allows a maximum of 5 content blocks; the theme's additional menu block (for example a search element) can be removed by clicking Remove so only the copyright text remains. Older advice (2021-22). [L0681.007]</p></li>
+<li><p>Once the footer is set up on the home page, it does not need further changes until launch. The next step is to edit collection and product page layouts. Older advice (2021-22). [L0681.014]</p></li>
+<li><p>Theme demo content in the footer, such as placeholder phone numbers, sample addresses, default text and demo menus, must be replaced before launch because it stays visible on the live store. Check every footer block on the home page against the real business details before going live. Older advice (2021-22). [L0681.019]</p></li>
+<li><p>Each footer menu assignment needs a menu that already exists. Create the footer menu and the quick links menu before assigning them to blocks 2 and 3. [L1018.013]</p></li>
+<li><p>Preparation before editing the footer:</p>
+<ol type="1">
+<li>Create the main shopping menu (Search, main product category, New Arrivals, On Sale). [L0680.017]</li>
+<li>Create the Quick Links menu (About Us, Privacy Policy, Terms of Service, Contact Us). [L0680.017]</li>
+<li>Create a business email address. [L0680.017]</li>
+<li>Upload the store logo. [L0680.017]</li>
+</ol>
+<p>Only then open the footer editor. [L0680.017]</p></li>
+<li><p>Save every footer change before refreshing the preview, because an unsaved change does not appear on the store. [L1018.014]</p></li>
+<li><p>In the theme editor, a footer block can be edited in two ways: select it in the left navigation so its settings open in the right sidebar, or click the block directly in the store preview. Both routes change the same settings, so use whichever is faster. [L1018.016]</p></li>
+<li><p>Do not judge footer size and layout only in the theme editor. The preview can show overlapping elements that do not appear on the full-screen live store, so always refresh and check the live store before changing settings. [L0680.013]</p></li>
+<li><p>The preview can show the footer email text as oversized and overlapping. This is a preview artifact, so check the live store before changing the settings. [L1018.010]</p></li>
+</ul>
+<h2 id="footer-block-1-contact-us">Footer block 1: Contact us</h2>
+<ul>
+<li>Contact/Contact Us footer block, procedure:
+<ol type="1">
+<li>Click the Contact / Contact Us footer block in Theme Customizer. [L0102.002]</li>
+<li>Set Title to Contact Us. [L0102.002]</li>
+<li>Set Subheading text to something simple (example: Reach out). [L0102.002]</li>
+<li>Set Email to <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>. [L0102.002]</li>
+<li>Remove phone number placeholder if you do not have one yet; add the phone number later when available. [L0102.002]</li>
+<li>Set Footer image to the same logo used in the header. [L0102.002]</li>
+<li>Set Image width to 50%. [L0102.002]</li>
+<li>Save and refresh the storefront preview. [L0102.002]</li>
+</ol></li>
+<li>Footer first column (Contact us section): set the heading to Contact us and enter a short text such as Reach out, followed by a business email address and optionally a phone number. Upload the store logo as the footer image. [L0680.007]</li>
+<li>Footer contact block: add a heading "Contact us" with a short prompt line such as "have a question", then list the business email address and the phone number below it. These two contact methods satisfy the requirement for two contact methods in the footer. [L0377.028, L0377.019]</li>
+<li>Footer should show a contact us block with both a business email address and a phone number. [L0377.019, L0377.028]</li>
+<li>Create the business email addresses (for example info@ or support@ on the store domain) before contacting suppliers, and place them in the footer contact section. [L0680.014]</li>
+<li>A phone number in the footer is optional at the start of a store. It can be left out or deleted until the business has a phone line ready for supplier contact. [L0680.015]</li>
+<li>A phone number in the footer is expected on a customer-facing store, but it can be left out of a store whose only purpose is contacting suppliers. Delete the placeholder number before saving in that case. [L1018.018]</li>
+<li>Leaving a placeholder phone number in the footer contact block is unnecessary for a store used only to contact suppliers. Remove it before saving. [L1018.008]</li>
+<li>Block 1 phone: delete the placeholder phone number, since a phone number is not needed when contacting suppliers. [L1018.005]</li>
+<li>Conflict on the footer phone number, by use:
+<ul>
+<li>Customer-facing store: include email and phone [L0377.019, L0377.028]</li>
+<li>Supplier-contact-only store, or no phone line yet: optional, delete the placeholder [L0680.015, L1018.018, L1018.008]</li>
+</ul></li>
+<li>Contact block sample for the Source B theme (older, 2021-22): open the Rich text block in the footer, set the Heading (e.g. Get in touch), write a call to action such as "Get in touch with us today on any of the contact details below" in the Text field, then add the phone number, email in capitals and postal address on separate lines, save and check the live home page. [L0681.013]</li>
+</ul>
+<h2 id="footer-block-2-store-name-menu">Footer block 2: store name menu</h2>
+<ul>
+<li>Second footer menu block, procedure:
+<ol type="1">
+<li>Click the second footer menu block. [L0102.004]</li>
+<li>Set Title to your Store Name (example: Shaka Surfboards). [L0102.004]</li>
+<li>Set Menu to Footer menu. [L0102.004]</li>
+</ol></li>
+<li>Footer second column: replace the default heading with the store name and link it to a menu that holds Search, the main product category, New Arrivals and On Sale. Create this menu beforehand alongside the collections. [L0680.009]</li>
+<li>Conflict on this block: the procedure in [L0102.004] sets the menu to Footer menu, while [L0680.009] specifies the menu contents (Search, main product category, New Arrivals, On Sale). Use both: name the menu Footer menu and fill it with those items. [L0102.004, L0680.009]</li>
+</ul>
+<h2 id="footer-block-3-quick-links">Footer block 3: Quick Links</h2>
+<ul>
+<li>Third footer menu block, procedure:
+<ol type="1">
+<li>Click the third footer menu block. [L0102.005]</li>
+<li>Set Title to Quick Links. [L0102.005]</li>
+<li>Set Menu to Quick Links. [L0102.005]</li>
+<li>Include these links: About Us, Returns / Exchanges, Shipping, Privacy Policy, Terms of Service, Contact Us. [L0102.005]</li>
+</ol></li>
+<li>Footer third column: rename the default Main menu to Quick Links and link a menu containing About Us, Privacy Policy, Terms of Service and Contact Us. Create that menu before editing the footer. [L0680.010]</li>
+<li>Conflict on the quick links menu: [L0102.005] lists six links, including Returns / Exchanges and Shipping. [L0680.010] lists four, without them. Use the six-link list when those pages exist, and the four-link list as the minimum. [L0102.005, L0680.010]</li>
+</ul>
+<h2 id="footer-block-4-newsletter-signup">Footer block 4: newsletter signup</h2>
+<ul>
+<li>Newsletter signup block in the footer, procedure:
+<ol type="1">
+<li>Click the Newsletter signup block in the footer. [L0102.006]</li>
+<li>Change the headline to something more engaging (examples: Join [Brand Name], Get Updates, Join Shaka Nation). [L0102.006]</li>
+<li>Keep it simple and brand-appropriate. [L0102.006]</li>
+<li>Save and refresh the storefront preview. [L0102.006]</li>
+</ol></li>
+<li>Footer fourth column (newsletter signup): keep the default layout and change only the headline to a short, catchy line. Write the headline yourself, in the same style as the example pattern described in the unit below. [L0680.011]</li>
+<li>Newsletter headline pattern: a short, playful, lowercase line that gives a reason to join and sounds like a community, not a sales pitch. [L0680.012]
+<ul>
+<li>Formula: [action verb] + [group or identity] + [small benefit or hook]. [L0680.012]</li>
+<li>New examples in this pattern: join the surf crew and get the first drops; be first in line for new arrivals. [L0680.012]</li>
+<li>Keep it under about six words. [L0680.012]</li>
+</ul></li>
+<li>Block 4 (newsletter signup): replace the default newsletter text with your own wording and click save. [L1018.005]</li>
+</ul>
+<h2 id="footer-settings-and-styling">Footer settings and styling</h2>
+<ul>
+<li>Footer global settings, procedure (Click Footer in the Theme Customizer, not a block):
+<ol type="1">
+<li>Click Footer in Theme Customizer (not a block) to access global footer settings. [L0102.003]</li>
+<li>Set Heading size to Small. [L0102.003]</li>
+<li>Set Padding top to 40. [L0102.003]</li>
+<li>Set Padding bottom to 40. [L0102.003]</li>
+<li>Turn Payment icons ON. [L0102.003]</li>
+<li>Turn Social media icons OFF. [L0102.003]</li>
+</ol></li>
+<li>Footer color scheme: click through the available schemes and pick the one that matches the brand colors chosen earlier. The lesson used background two. [L0680.002]</li>
+<li>Footer padding: set the padding above and below the footer to 40 each. Changing it only moves the footer content further down, so only change it if you want finer control. [L0680.006]</li>
+<li>Padding conflict: the reference values in [L0102.003, L1018.006] set 40 top and 40 bottom as standard. [L0680.006] treats padding as a finer-control option. Apply 40 as the standard value and adjust only when the live store needs it. [L0102.003, L1018.006, L0680.006]</li>
+<li>Footer localization (country/region selector): leave it off unless the store sells in several countries or regions. Turn it on only in that case. [L0680.003]</li>
+<li>Language selector: in the Manhattan theme footer settings, the Language selector toggle sits next to the Localization (country/region) toggle and should stay off for a store that sells in one language and one market. Turn it on only when the store actually serves several languages. [L0680.018]</li>
+<li>Footer &gt; Show payment icons: keep it enabled. Turning it off removes the payment icons from the footer, and turning it on brings them back. [L0680.004]</li>
+<li>Payment icons only appear after payment gateways are connected. Visa, MasterCard and American Express show up with connected gateways, and Apple Pay or Google Pay appear only if those are accepted. Older advice (2021-22). [L0681.003]</li>
+<li>Footer settings also include Mobile alignment (Left or Center), Show payment icons, Show language selector and Show currency selector. Older advice (2021-22). [L0681.003, L0370.026]</li>
+<li>Footer logo size: the image width is set as a percentage. The lesson went from 80% to 65% and finally to 50%, which looked best on the live store. Test a few sizes on the live store and pick the one that looks right, since the editor preview can overlap and looks different at full screen. [L0680.008]</li>
+<li>The footer logo should be the same file as the main header logo so the brand looks consistent. Use it with the image width set to 50%. [L1018.007]</li>
+<li>Copyright and small text: the copyright year in the footer updates automatically each year, so the year does not need manual changes. The text under the copyright line is set in the field Small footer text, where the default theme credit (theme developer name and Powered by Shopify) can be deleted. Older advice (2021-22). [L0681.005]</li>
+<li>Removing the Powered by Shopify and theme developer credit from the footer is a branding choice to keep only the store's own brand visible. Leaving Powered by Shopify is considered acceptable now because Shopify is widely known, but it is optional. Older advice (2021-22). [L0681.006]</li>
+<li>Keep the footer settings in Theme settings consistent with the color decisions above. [L0775.063]</li>
+</ul>
+<h2 id="footer-text-rule-summary-checks-before-launch">Footer text rule summary (checks before launch)</h2>
+<ul>
+<li>Check every footer block on the live store, not only in the editor, against the real business details. [L0681.019, L0680.013]</li>
+<li>Keep social media off until accounts exist, and turn it on only with full URLs. [L0102.008, L0836.050, L1018.009]</li>
+<li>Keep the footer phone number only if the business has a phone line for suppliers or customers. [L0680.015, L1018.018]</li>
+</ul>
+<h2 id="hiding-vs-deleting-sections">Hiding vs deleting sections</h2>
+<ul>
+<li>Use hide instead of delete when customizing sections in the theme editor while building. Hide removes the section from view without deleting it, allowing you to undo or reconfigure later, while delete removes it permanently. [L0101.002]</li>
+<li>Each section can be hidden with the eye icon or removed with delete. [L0775.003]</li>
+<li>Hide the rich text section (not needed for supplier approval). [L0101.001]</li>
+<li>Hide the image banner until content exists, or add links before it goes live. [L0101.020, L0775.051]</li>
+<li>Hide blog posts until content exists. [L0775.055, L0101.001]</li>
+<li>Unused default Shopify sections, such as an empty video section or a promotions box with no content, should be removed from the homepage. [L0355.011]</li>
+</ul>
+<h2 id="links-and-dead-ends">Links and dead ends</h2>
+<ul>
+<li>Only add hyperlinks or button links to sections if the destination pages already exist, because broken links damage the appearance of a legitimate, professionally managed store. [L0101.004]</li>
+<li>Include a search bar and continue shopping button on your store. Customers who cannot easily search or navigate to other products abandon the site immediately. Older advice (2020). [L0245.074]</li>
+</ul>
+<h2 id="search-bar">Search bar</h2>
+<ul>
+<li>On stores with many products, place a large search bar in the header of every page. It should be easy to find and large enough to use comfortably on desktop and mobile. Older advice (2021-22). [L0409.048]</li>
+<li>Moving the search bar in the theme requires editing theme code. Copy and paste the original code before editing so the change can be reversed, and preferably have a developer do it. Older advice (2022). [L0963.046]</li>
+</ul>
+<h2 id="cart-page">Cart page</h2>
+<ul>
+<li>Customizing the cart page natively in Shopify (older advice, 2020):
+<ol type="1">
+<li>Open the Shopify admin. [L0664.033]</li>
+<li>Go to Online Store. [L0664.033]</li>
+<li>Select Cart from the drop-down menu. [L0664.033]</li>
+<li>Edit elements such as the logo, reviews or contact info. [L0664.033]</li>
+</ol></li>
+</ul>
+<h2 id="checkout-branding">Checkout branding</h2>
+<ul>
+<li>Checkout customization options available without Shopify Plus include changing the checkout background, the logo and adding a banner at the top of the checkout. A banner with a phone number or support text can be effective in some industries, such as weight-loss products. [L0390.046]</li>
+<li>Shopify admin: Settings &gt; Checkout &gt; Editor &gt; Header &gt; Logo. Click Logo and upload the logo formatted with the Trustpilot badge, and it appears in the checkout header. [L0560.027]</li>
+<li>Shopify admin: Online Store &gt; Themes &gt; Edit default theme content. Search for checkout, then find the field Checkout alternative payment method banner and enter the low-stock message there. Save the change so it shows at checkout. [L0560.028]</li>
+<li>Settings &gt; Checkout &gt; Editor &gt; Color palette: set the Main, Accent and Error colors. The Accent and buttons field controls the color of links, selections and buttons on the checkout page. [L0560.038]</li>
+</ul>
+<h2 id="mobile-and-preview-checks">Mobile and preview checks</h2>
+<ul>
+<li>Theme editor &gt; mobile view: adjust colors and other mobile theme settings and check that the layout still looks clean. Deeper mobile changes require custom code or a developer. Older advice (2019). [L0663.023]</li>
+<li>Mobile logo position is now set natively in the header settings, separately from the desktop position. Always save, then open the store on a phone to check the result. [L0775.032]</li>
+<li>Preview the slideshow on a phone after making changes, and save only after the mobile view looks right. [L0775.039]</li>
+<li>Refresh the homepage, scroll through, confirm the store looks legitimate, has no dead links, has consistent branding, and has clean supplier-ready sections. [L0101.001]</li>
+</ul>
+<h2 id="custom-code-developers-and-page-builders">Custom code, developers and page builders</h2>
+<ul>
+<li>Avoid editing theme code unless a change truly cannot be made in the Customizer. [L0595.003]</li>
+<li>Shopify sanitizes raw HTML, so when the theme editor cannot produce a custom page, a Shopify specialist on Upwork can build the fix for a one-time fee. Third-party landing page builders are usually monthly subscriptions, and some cost more than Shopify itself. Older advice (2024 point of view, applies to the developer choice). [L0666.060]</li>
+<li>Native editor versus code: the older mobile and header advice required code [L0663.023, L0852.089], while the current editor moves elements natively [L0709.007, L0775.032]. Start with the editor and use code or a developer only for changes it cannot make. [L0595.002]</li>
+</ul>
+<h2 id="floating-widget-source-e-course">Floating widget (Source E course)</h2>
+<ul>
+<li>Add the floating widget to the Shopify homepage:
+<ol type="1">
+<li>In the Shopify admin, go to Online Store &gt; Themes and click Customize. [L0959.006]</li>
+<li>Open the homepage and click Add section. [L0959.006]</li>
+<li>Search for Custom Liquid or HTML (the name depends on the theme) and add the section. [L0959.006]</li>
+<li>Set Section padding for Top padding and Bottom padding to 0px. [L0959.006]</li>
+<li>Make the section background invisible (use the section settings in the theme editor). [L0959.006]</li>
+<li>Paste the widget code into the Custom Liquid field. [L0959.006]</li>
+<li>Click Save, then refresh the storefront to see the floating widget. [L0959.006]</li>
+</ol></li>
+<li>The section name differs between themes: some call it Custom Liquid, others HTML. If you cannot find the Custom Liquid section, search for HTML in the section list instead. [L0959.010]</li>
+</ul>
+<h2 id="theme-editor-workflow">Theme editor workflow</h2>
+<h3 id="opening-and-saving-the-editor">Opening and saving the editor</h3>
+<ul>
+<li>Open the theme editor through Online Store &gt; Themes &gt; Customize on the active theme. [L1371.001, L1265.002]</li>
+<li>Homepage content is built from sections that can be added, removed and reordered in the editor. [L1371.001, L1371.002]</li>
+<li>Store changes are kept only after you click Save. Unsaved edits are lost when you leave the editor. [L1371.001, L1309.010, L1371.033]</li>
+<li>Save after every change or set of changes, and before moving to another settings area. The preview updates in real time, but only Save keeps the edit. [L1309.010, L1371.033, L1371.043]</li>
+<li>Before you edit, check that the dropdown at the top reads Homepage. Theme settings and section edits for the homepage must be made on the Homepage template. [L1309.004, L1309.001]</li>
+<li>The customizer shows the homepage preview on the left and the editing sidebar on the right. Hovering over a section highlights it on the page, and clicking it opens its settings. [L1309.006]</li>
+</ul>
+<h3 id="preview-and-device-checks">Preview and device checks</h3>
+<ul>
+<li>Always switch the editor to mobile preview before saving. A page can look finished on desktop while the mobile layout is broken. [L1188.047, L1219.021]</li>
+<li>Check the header and footer separately in each view, because their layouts differ between desktop and mobile. [L1188.047]</li>
+<li>When testing a store, prioritise the mobile layout over the desktop layout. If a banner or section does not fit, adjust it in the page builder instead of forcing the same image. [L1219.021]</li>
+<li>Device preview steps:
+<ol type="1">
+<li>Click the device preview button.</li>
+<li>Choose Mobile, Desktop or Full screen from the dropdown.</li>
+<li>Select the same logo image for mobile if needed, then adjust the mobile logo size separately. [L1371.037]</li>
+</ol></li>
+<li>Mobile traffic is most of the total, so check the header on mobile. [L1371.037]</li>
+<li>The Ask for changes button accepts a plain-language request to edit the current section and suits small layout changes. Review the result in the preview before saving, because the change can affect more than the block you meant. [L1188.051]</li>
+</ul>
+<h3 id="adding-removing-and-reordering-sections">Adding, removing and reordering sections</h3>
+<ul>
+<li>Shopify themes build the homepage from sections, and each section adds a specific block such as a slideshow, featured collection or grid. The default demo sections are placeholders, and most should be removed for a new store. [L1371.002]</li>
+<li>To add a homepage section:
+<ol type="1">
+<li>Click Add section.</li>
+<li>Choose the section type, for example Featured product.</li>
+<li>Select the new section, add the content, and choose the product or details it should show. New sections are added at the bottom of the page first. [L1371.003]</li>
+</ol></li>
+<li>To remove a homepage section:
+<ol type="1">
+<li>Click into the section.</li>
+<li>Click the three dots at the top of the section panel.</li>
+<li>Choose Remove section. [L1371.004]</li>
+</ol></li>
+<li>To change section order, click and hold the six-dot handle of a section and drag it to a new position. [L1309.007]</li>
+<li>In the Manhattan theme, the Add section option is available on every template and offers the same section types as the homepage. Each one can be previewed before it is added. [L1450.017]</li>
+<li>In the Manhattan theme, any section available on the homepage can also be added to a page template through Add section. This lets a page carry more than rich text. [L1265.010]</li>
+</ul>
+<h3 id="global-theme-settings">Global theme settings</h3>
+<ul>
+<li>Logo: go to Theme settings &gt; Logo &gt; Select image, choose the uploaded logo from the Files list, and click Done. The Desktop logo width defaults to 200 and should only be changed if the file is much larger or smaller. [L1309.011]</li>
+<li>Favicon: go to Theme settings &gt; Favicon &gt; Select image. The favicon replaces the default Shopify icon in the browser tab and should be a small version of the logo or a symbol for the store. [L1309.012]</li>
+<li>Layout width: the default is 1200 px and can be raised to a maximum of 1600 px so the site looks wider on large monitors. [L1309.013]</li>
+<li>Buttons: border thickness, opacity, corner radius and transparency of all buttons are set in Theme settings &gt; Buttons. The defaults are fine for most stores. [L1309.015]</li>
+<li>Variant pills, Inputs, Product cards and Collection cards sit next to Buttons. For a supplier-stage demo they can stay at their defaults and be styled later. [L1309.069]</li>
+<li>Theme settings order for an early-stage high-ticket dropshipping store (Superstore theme, 2021-2022, older advice):
+<ol type="1">
+<li>Layout: change the header layout from Minimal to Traditional.</li>
+<li>Colors: enter the three brand colors and keep the page background white.</li>
+<li>Typography: set the base font size to 18 px, Body font to Helvetica, and the heading font to one simple, readable font.</li>
+<li>Icons: change the cart icon from Bag to Shopping cart if preferred.</li>
+<li>Products: set Sale badge style to Save $10, Option style to Selectable boxes, Display stock levels to Hidden, Quick shop button to Disabled, Add to cart button to Enable on desktop only, Show dynamic checkout button on, and enable color swatches.</li>
+<li>Social media: leave until launch, then add Facebook, Pinterest, email address and Instagram.</li>
+<li>Favicon: upload the favicon PNG.</li>
+<li>Cart: no change needed.</li>
+<li>Custom styles and scripts and Advanced: leave untouched.</li>
+<li>Performance: keep the preset defaults.</li>
+<li>Checkout: upload the logo as a custom image, set logo size to Medium, change the button color to match the site buttons and the accent color to the main brand color, and leave error messages red.</li>
+<li>Click Save before leaving the editor or moving to another settings area. [L1371.043]</li>
+</ol></li>
+</ul>
+<h2 id="header-1">Header</h2>
+<h3 id="header-layout-and-settings">Header layout and settings</h3>
+<ul>
+<li>Header settings include Logo position, Menu type, Header borders and a Top Border Style option that can use the theme color or a global section gradient. [L1188.003]</li>
+<li>Desktop and mobile font sizes are set separately in the theme settings, so check both views. [L1188.003]</li>
+<li>Sticky header set to always on keeps the logo, menu and contact information visible while the visitor scrolls. An option also shrinks the logo on scroll. [L1309.016]</li>
+<li>Desktop logo position: top left is the default. Other options are top center, middle left and middle center, which rearranges the header elements. [L1309.017]</li>
+<li>Separator line: a thin line under the header, on by default, can be turned off. [L1309.019]</li>
+<li>Menu font size 14 and font weight 500 are the typical values. Change the size only if the chosen font looks too small or too large. [L1309.020]</li>
+<li>Contact details: set opening hours for customer service, and add a phone number and email address once they exist. An email alone is acceptable at the supplier stage. [L1309.021]</li>
+<li>Mobile layout: logo position can be set separately for phones, for example center or left. Preview on a phone after saving. [L1309.023]</li>
+<li>Menu field: the default is Main menu. To use another navigation menu, click Change, then Change menu, and select a menu created earlier in Shopify. [L1309.062]</li>
+<li>The header should contain the brand logo, the main menu links, the search function and the cart. Shopify adds search and cart to the header by default, so for a new store you only need to select the menu to show. Customer login or account links are optional. [L1326.006]</li>
+<li>Make the logo smaller and place it on the left side of the navigation bar. Visitors care more about the products than the logo, so a large logo wastes space. [L1325.009]</li>
+</ul>
+<h3 id="header-layout-and-mobile-search-superstore-theme-2021-2022-older-advice">Header layout and mobile search (Superstore theme, 2021-2022, older advice)</h3>
+<ul>
+<li>Set the header layout in theme settings under Layout to Traditional instead of Minimal, because only the Traditional header shows a search bar. Changing the layout means header section settings are no longer applied, so check the header after switching. [L1371.007]</li>
+<li>In the Traditional header layout, the search bar stays visible on mobile in this theme, which many themes do not do. Check on the mobile preview that the search bar and logo still fit the header. [L1371.048]</li>
+<li>Enable the sticky header in the static header settings, select the logo image in the header so it displays, and adjust the logo height so it is readable without being too large or too small. [L1371.036]</li>
+<li>Enable the utility bar in theme settings and add a top bar menu to it. Use a background matching the footer, white link color and yellow link hover color. A secondary menu can be placed on the right side. [L1371.034]</li>
+</ul>
+<h2 id="announcement-bar-and-promo-bar">Announcement bar and promo bar</h2>
+<ul>
+<li>Edit the announcement bar under Online Store &gt; Themes &gt; Customize by clicking the announcement bar section. Change the message text there and add an icon such as a shipping symbol if needed. [L1326.004]</li>
+<li>The header can carry a scrolling promo bar for savings or shipping lines, plus a top row with Track Your Order and Support links and a country and currency selector. [L1188.053]</li>
+<li>Set the currency selector so buyers see prices in the currency they will pay in. [L1188.053]</li>
+<li>Hide the announcement bar until it is needed. [L1309.001]</li>
+<li>Older advice (2021-2022) states that in a Shopify theme the announcement bar is fixed and cannot be removed. The Manhattan setup above hides it instead. Use hiding rather than deleting if you are unsure. [L1371.005, L1309.001]</li>
+</ul>
+<h2 id="slideshow-and-hero-banner">Slideshow and hero banner</h2>
+<h3 id="hero-banner-principles">Hero banner principles</h3>
+<ul>
+<li>A homepage banner should show the customer's outcome or passion, so a visitor immediately sees they are in the right place. Its main job is to state what the business does for the customer, and a temporary promotion is a secondary use. [L1310.001]</li>
+<li>A hero banner needs four elements: a title, a subheader, social proof such as review counts or numbers of items saved, and a call to action. A missing call to action is one of the most serious gaps. [L1225.025]</li>
+<li>Homepage banner pattern:
+<blockquote>
+<p>[Store name] introducing [top-rated or number one rated] [product] for [customer type] in [country], paired with a benefit-driven image, followed by a short section on why the product helps and what the store stands for. It works because the visitor instantly sees the brand, the product and a clear benefit. Example one: Lumora introducing the top rated travel pillow for frequent flyers in Germany. Example two: Brinelo introducing the best rated desk mat for home offices in the UK. [L1217.040]</p>
+</blockquote></li>
+<li>Homepage structure for a niche store begins with a banner that matches the feeling of the exact customer. Most traffic arrives via ads directly to product pages, so keep the page clean and branded. [L1158.028]</li>
+</ul>
+<h3 id="slideshow-settings-manhattan-and-superstore-themes">Slideshow settings (Manhattan and Superstore themes)</h3>
+<ul>
+<li>Slideshow layout: full width (used in the example) or grid. Slide height set to Adapt to first image so the image is sized correctly. Options small, medium and large exist. [L1309.025]</li>
+<li>Pagination can be dots or numbers. Auto rotate can change slides every 3, 5 or 9 seconds. Set mobile content to show below images, and give the slideshow a short accessibility description. [L1309.026]</li>
+<li>Slide content: heading and subheading go on top of the image, the button label is Shop, and the button link points to a collection. Desktop content position bottom right and alignment right were used in the example. [L1309.027]</li>
+<li>Slideshow content settings let you set the button colour and the button text colour separately. A container background can be shown behind the text on desktop. Choose a button text colour that contrasts with the button colour so the label stays readable. [L1309.071]</li>
+<li>Slideshow section margins add space above or below the whole section. Use them to adjust the gap between the slideshow and the sections around it. [L1309.067]</li>
+<li>Keep one slide for the demo store. Delete the blank default slides and add more with Add slide later for new suppliers or sales events. [L1309.028]</li>
+<li>Buttons in image banners and slideshows look faded or nearly transparent while they have no link. Their full colour shows only after a real destination, such as a collection, is set in the button link field. [L1309.063]</li>
+<li>Slideshow settings in the Shopify theme editor include Enable slideshow, Autoplay slideshow, Autoplay slide duration and Slideshow height. The image field recommends 1800 x 1000 px. (Superstore theme, 2021-2022, older advice.) [L1310.017]</li>
+<li>A slide's BUTTON 1 has the fields Label, Button, Link and Style, and Style is set to Primary. Clearing the Label field hides the button. The same panel holds the Heading, Subheading, Text color and Text alignment (Left) fields. (Superstore theme, 2021-2022, older advice.) [L1310.037]</li>
+<li>Older advice (2021-2022) states that homepage sliders should not be used. JavaScript slows the page, and the cited figure says about 96% of customers never see the second slide. A single hero image at the top of the homepage is enough. [L1266.023]</li>
+<li>Older advice (2021-2022) for the early-stage store: the slideshow is used as a single static hero image, which is fixed in the section list. [L1371.006]</li>
+<li>Conflict: the older no-slider advice [L1266.023] and the single-static-hero advice [L1371.006] both point toward one image, while the Manhattan setup keeps a slideshow with one slide [L1309.028]. A one-slide slideshow matches both; a multi-slide rotation is what the older advice warns against. [L1266.023, L1371.006, L1309.028]</li>
+<li>Four small images side by side on desktop should stack vertically on mobile. On a phone they become too small to read and can trigger Search Console accessibility errors. Keep the stacking instead of forcing a side-by-side layout on mobile. [L1287.024]</li>
+</ul>
+<h2 id="collection-lists-and-featured-collections">Collection lists and featured collections</h2>
+<h3 id="collection-list-1">Collection list</h3>
+<ul>
+<li>Collection list settings (Manhattan theme): heading "Shop our featured collections" in a small heading size, image ratio set to Adapt to image so mixed image sizes fit, and desktop columns set to 3. [L1309.029]</li>
+<li>Text overlay on, placed bottom left, overlay colour teal from the brand palette, text white. Enable view all lets mobile visitors swipe through extra collections. [L1309.030]</li>
+<li>Adding collections:
+<ol type="1">
+<li>Click Collection and choose a collection with Select.</li>
+<li>Click Add collection to create a new row for more items.</li>
+<li>Repeat until all collections are set, then Save. The example used six collections in rows of three. [L1309.031]</li>
+</ol></li>
+<li>Superstore theme setup (2021-2022, older advice):
+<ol type="1">
+<li>Add the Collection list section and set the heading to Our Featured Collections.</li>
+<li>Set Desktop section spacing to 100 px (the maximum) and Mobile section spacing to 60 px.</li>
+<li>Keep four collections per row and delete any extra blocks.</li>
+<li>For each block, click Change, select a collection that has products, and click Select so its product image loads automatically.</li>
+<li>If a collection has no products, upload a custom image of a similar product type. Otherwise it shows a blank image.</li>
+<li>The collection title fills in automatically. Overwrite it with a custom title if needed.</li>
+<li>Click Save. [L1310.028]</li>
+</ol></li>
+<li>A collection without products shows a blank image in the featured collections section. Use a custom image as a temporary placeholder and replace it with real supplier products when the store goes live. (Superstore theme, 2021-2022, older advice.) [L1310.029]</li>
+<li>A simple homepage can feature the newest collection and a section with trending products. These two sections give a first-time visitor a clear starting point. [L1325.016]</li>
+</ul>
+<h3 id="featured-collection-1">Featured collection</h3>
+<ul>
+<li>Featured collection (Manhattan theme): change the heading to a short phrase such as What's trending, select a collection such as Bestsellers, and show 4 products in 4 columns. Product card options include secondary image, vendor and rating. [L1309.033]</li>
+<li>Quick view shows a button that opens product details in place with an add-to-cart option. If turned off, the button leads straight to the product page. [L1309.034]</li>
+<li>Sale badge: the product card settings include a sale badge position, a sale badge colour and an editable badge text. The badge defaults to a dark gray background and can be switched to a theme accent colour such as the pink accent. [L1309.065]</li>
+<li>Keep featured collections linked only to collections that exist and contain products. [L1310.029, L1309.009]</li>
+<li>The Featured collection section in the Superstore theme started with a beige background set by the theme. A white background is acceptable, and a light contrasting background can break up a long white homepage. Either can be changed in section settings. (2021-2022, older advice.) [L1310.042]</li>
+</ul>
+<h2 id="image-banners-and-image-with-text-sections">Image banners and image-with-text sections</h2>
+<ul>
+<li>Image banner (Manhattan theme): set the image as background, banner height Adapt to first image, desktop position middle center, container turned off so text sits directly on the image, and buttons linked to a collection once it exists. [L1309.035]</li>
+<li>Image banner &gt; Image behavior: None keeps the image still. Ambient movement makes the image move very slowly, which draws the eye to the banner. [L1309.036]</li>
+<li>Highlights banner (Superstore theme, 2021-2022, older advice): desktop section spacing starts at 36 px and mobile at 20 px, with banner text centered. The tested build raised desktop spacing to 60 px. [L1310.039]</li>
+<li>Create the destination pages first, such as Shipping, Contact us, Returns and Price match guarantee, before building Highlights banner blocks. Each block link must point to an existing store page. (2021-2022, older advice.) [L1310.038]</li>
+<li>Shrine theme Image with text settings: Heading, Text, Link button, Image or Video, Media height (Adapt to media), Color schemes (Content color scheme and Section color), Desktop layout (Full page width) and Remove section. Use autoplay mp4 video that is muted and looping instead of GIFs or animated WEBPs. [L1331.025]</li>
+<li>Icon Bar: each icon uses the Check available icons search, so search for a soft word like pillow first. If no icon matches, scroll to the custom icon option and paste the icon code to replace the icon. [L1331.026]</li>
+<li>Shrine sections such as Image with text have a Display section ID field. Paste that ID into any button link so the button scrolls to the section, or use it to merge two sections. [L1331.042]</li>
+<li>Logo list for shipping carriers as proof: go to Online store, open Customize for the theme, click Add section, search for Logo list and add it, then upload the logos. You can delete the text to make it smaller, change the size, background and padding, and drag it to any position. [L1287.025]</li>
+<li>Logo lists can show well-known customers. This is useful for business-to-business products. [L1265.008]</li>
+</ul>
+<h2 id="pre-footer-trust-columns-1">Pre-footer trust columns</h2>
+<ul>
+<li>Each pre-footer column has an image, a header, an optional description and a link. The example used a gray background, changed to background 1 (white) for a cleaner look. [L1309.037]</li>
+<li>Pre-footer trust column pattern: each column pairs an icon image with a short benefit header that tells the visitor why the store is reliable, such as shipping threshold, origin or checkout security. Example 1: Free shipping over 75 dollars. Example 2: Secure payment at checkout. [L1309.059]</li>
+<li>Security cues such as trust badges belong on the cart and checkout pages as well. They reassure shoppers at the point where they decide to pay. [L1522.021]</li>
+<li>Homepage section for a single-niche store includes trust signals and a risk-free message. [L1363.055]</li>
+</ul>
+<h2 id="footer">Footer</h2>
+<h3 id="footer-structure-and-content">Footer structure and content</h3>
+<ul>
+<li>Footer structure in the theme editor: Brand description, Text column (contact information), Useful links column, and Legal links column with Privacy Policy, Shipping policy, Refund policy, Terms of service and Contact information. Upload a footer logo from the library and link each policy page. [L1188.042]</li>
+<li>Add footer text by opening the footer section, clicking Add block, and choosing Text. Write the About Us text with the brand mission, email address and business address, then click Save. [L1326.013]</li>
+<li>Add a footer logo by clicking Add block in the footer section and choosing the Image block. Upload the logo, increase its size so it is clearly visible, and click Save. [L1326.016]</li>
+<li>The footer should contain a customer care section with the links visitors look for, plus an about section. Visitors who land on a product page see the navigation first and scroll to the footer next, so it must support them. [L1325.022]</li>
+<li>The footer should contain a get-in-touch section, support hours, support email addresses, a live chat link and links to social media pages. Footer links to unrelated pages make the store look untrustworthy. [L1346.011]</li>
+<li>Footer editing is done in the same customizer sidebar and is a separate step. Cookie consent is a pop-up set in the same sidebar and can be switched on or off. [L1309.039]</li>
+<li>Do not link any section or footer item to a page that does not exist yet. Suppliers clicking dead links see a broken store, so leave link fields empty until the target page is created. [L1309.009]</li>
+<li>Repeat the Highlights banner near the bottom of the homepage with a different background color than the footer, so two identical colors do not sit next to each other. Use a second color from the brand palette. (Superstore theme, 2021-2022, older advice.) [L1310.035]</li>
+</ul>
+<h2 id="pages-and-blog-manhattan-theme">Pages and blog (Manhattan theme)</h2>
+<h3 id="editing-a-page-template">Editing a page template</h3>
+<ul>
+<li>Open the theme editor, click the template dropdown at the top, switch from home page to Pages, and select the default page (the About Us page) to edit it. A separate Contact page template also exists. [L1265.002]</li>
+<li>In each page's settings in the Shopify admin, adjust padding, margin and width (full width or narrower, centered). [L1265.002]</li>
+<li>Each page type has its own template in the theme editor. To give a page different sections than the default page or the contact page, create an additional page template instead of changing the existing ones. [L1265.009]</li>
+<li>Add a logo list with a heading such as "Brands we've worked with" by clicking Add section and adding logos one by one. [L1265.002]</li>
+</ul>
+<h3 id="blog-listing-and-posts">Blog listing and posts</h3>
+<ul>
+<li>Make sure blog posts are published and visible, because hidden posts do not show in the listing. [L1265.002]</li>
+<li>Blog listing settings: choose Grid or Collage layout. Collage shows the newest post at the top, while Grid shows posts evenly. Featured images are recommended to be shown, and image height can be set. Show or hide date and author, and set card or standard layout in theme settings. [L1265.002, L1265.004]</li>
+<li>Card or standard layout and the background colour under post titles are set in the theme settings and are separate from the grid or collage choice. [L1265.011]</li>
+<li>Blog posts template: adjust padding, margin, page width, featured image size (Adapt to image keeps the uploaded size), title, date and author visibility, and the share link. [L1265.002]</li>
+<li>With Adapt to image, the featured image becomes full size based on the uploaded image size. Keep the page width unchanged so it matches the rest of the site. [L1265.003]</li>
+<li>Keep the blog post page width at the theme default. A narrower width makes the post text noticeably less wide on large monitors and stops it from matching the rest of the site. [L1265.013]</li>
+<li>Blog post pages show a share link by default that lets readers copy the post URL. Keeping it visible is recommended. Hiding it is possible but not advised. [L1265.012]</li>
+<li>Add an Email signup section to the blog posts template: enter a heading, click Save, optionally change the accent color, then Save again. [L1265.002]</li>
+<li>Hide Rich text and Blog posts sections in the first version of a store with no content yet. Enable them later when content exists. [L1309.038, L1309.001]</li>
+</ul>
+<h2 id="cart-page-1">Cart page</h2>
+<h3 id="manhattan-theme-cart-setup">Manhattan theme cart setup</h3>
+<ul>
+<li>To edit the cart, open the Theme Customizer, click the page dropdown at the top and scroll to the cart entry. The checkout entry is in the same dropdown but cannot be edited; only the cart can be changed. [L1450.001]</li>
+<li>Customers reach the cart either by clicking the cart icon after adding a product or by being sent straight to the cart, depending on the add-to-cart behaviour in the product page settings. The cart page must therefore work as a standalone step before checkout. [L1450.002]</li>
+<li>The default cart page keeps the header, the mega menu built earlier and the footer. These global elements can stay without changes. [L1450.003]</li>
+<li>Items section: shows the products the customer has added. Its padding and margin controls move the content up or down. No changes are needed in a default setup. [L1450.004]</li>
+<li>Subtotal section: shows the subtotal, the checkout button and the order special instructions field. Its padding and margin can be adjusted the same way as the Items section. [L1450.005]</li>
+<li>Cart note: in the cart's theme settings it can be enabled or disabled. When disabled, the order special instructions text disappears from the cart page after saving and reloading the store. [L1450.006]</li>
+<li>Keep the cart note enabled. Customers sometimes write notes there, and these are saved to the Shopify order information. Disabling it removes a channel for useful customer requests. [L1450.007]</li>
+<li>Do not modify or hide the checkout button, because customers with items in the cart must always be able to proceed to checkout. [L1450.008]</li>
+<li>Additional blocks such as a countdown timer or a coupon are added inside the cart template through the add block option. Each block is placed by moving it in the customizer, and its colours and text are set in its own settings. [L1450.010]</li>
+<li>Adding extra content such as rich text sections to the cart page is usually unnecessary and can distract buyers from checkout. Add sections only when there is a clear reason. [L1450.018]</li>
+<li>Cart page setup order:
+<ol type="1">
+<li>Open the Theme Customizer and select cart in the page dropdown.</li>
+<li>Check the Items and Subtotal sections and adjust padding or margin only if spacing needs fixing.</li>
+<li>Open Theme settings and keep the cart note enabled.</li>
+<li>Leave the checkout button unchanged.</li>
+<li>Add any optional blocks such as the urgency timer or the coupon only when they are needed.</li>
+<li>Click save and reload the storefront to check the result. [L1450.009]</li>
+</ol></li>
+</ul>
+<h3 id="cart-page-content-and-checks">Cart page content and checks</h3>
+<ul>
+<li>Check the cart page by adding a product from the storefront and opening View cart, because the cart page is empty until a product is added. Text on the cart page can be changed through the theme's default content settings. [L1326.021]</li>
+<li>Optimise the cart page, which many stores neglect, because it is where shoppers start to doubt the purchase. Add USP messaging, shipping details and upsells there, presented the same way as on the product page. (2021-2022, older advice.) [L1522.019]</li>
+<li>Reconfirm unusual shipping requirements on the cart page as well as on the product page. Upsells that some shoppers missed on the product page can also be shown on the cart page. [L1522.020]</li>
+<li>Cart in the Superstore theme needed no change in the early-stage settings order. [L1371.043]</li>
+</ul>
+<h3 id="smart-cart-source-e-2025-2026">Smart Cart (Source E, 2025-2026)</h3>
+<ul>
+<li>Layout choice at creation is Single Column or Double Column. A Double Column cart gives cart line items a dedicated area, which suits carts with long item lists such as parts and accessories. The layout can be switched later without starting over. [L1231.011]</li>
+<li>Advanced settings pull typography from the Shopify theme's typography settings. The title heading level can be changed, for example from H1 to H2, to get the wanted font without custom CSS. The cart title can also be hidden entirely, for example to place a store logo with custom CSS. [L1231.014]</li>
+<li>The country field in Smart Cart v2 suggests matching countries as you type, so merchants do not need to know the two-letter ISO code. In v1 this code had to be typed in directly. [L1231.029]</li>
+<li>The order notes component collects a gift message or special instructions. These notes appear in the order attribution section on the right side at the top of the Shopify order, not under the line items. [L1231.052]</li>
+<li>The cart subtotal has singular and plural label fields, and the item count can be inserted with a variable. Keep the subtotal label simple, since heavy changes are rarely needed. [L1231.054]</li>
+<li>The Express checkout block in the Smart Cart editor is only a placeholder and does not appear as text on the live store. The buttons that show depend on the accelerated checkout methods connected in the Shopify admin and the express checkout preferences set there. They can display as separate buttons in a row instead of one combined block. [L1231.061]</li>
+</ul>
+<h2 id="homepage-structure-and-order-of-work">Homepage structure and order of work</h2>
+<h3 id="principles">Principles</h3>
+<ul>
+<li>The homepage is the first page visitors see on the root domain and the hub of the site. It should introduce the business, state what is good about it, give reasons to buy, and introduce the products sold. It connects to all other pages through the main menu, the bottom navigation and the search bar. (2021-2022, older advice.) [L1463.003]</li>
+<li>In high-ticket dropshipping the reseller sells the same products as other sites, so the homepage must sell the business as well as the products. Customers compare where to buy as well as what to buy. At launch the competition is on identical products; a brand's own products come later. (2021-2022, older advice.) [L1463.002]</li>
+<li>A weak store design holds back sales even when ads perform. Improve the store before running ads, with better images and a clear layout. [L1439.039]</li>
+<li>Homepage imagery must match the store's product type. Show people using the products and link to the category collections of that product type. [L1346.008]</li>
+<li>A homepage that mixes lifestyle photos unrelated to the products confuses visitors and makes the store look incoherent. [L1346.009]</li>
+<li>Shopify core components are the announcement bar, header, footer and the main page types (home, product, collection, cart, blog and checkout). Set up these components before adding more content. [L1326.001]</li>
+<li>The home page can stay simple with two or three sections: a banner related to the current product, the product itself, and a benefits section with badges such as priority shipping and money-back guarantee. [L1412.049]</li>
+</ul>
+<h3 id="homepage-structures-by-store-type">Homepage structures by store type</h3>
+<ul>
+<li>Niche store (procedure, as the lesson describes it):
+<ol type="1">
+<li>A banner that matches the feeling of the exact customer.</li>
+<li>An About Us or mission section telling the brand story.</li>
+<li>One or two sections for the main product.</li>
+<li>A collection of products. Keep it clean and branded, since most traffic arrives via ads directly to product pages. [L1158.028]</li>
+</ol></li>
+<li>Single-niche store, in this order:
+<ol type="1">
+<li>Headline with the offer and a big benefit, such as a percentage discount.</li>
+<li>Striking product visuals.</li>
+<li>Review badge that links to the reviews section.</li>
+<li>One customer testimonial.</li>
+<li>More product images.</li>
+<li>A best-sellers section with a link to each product the visitor can choose.</li>
+<li>Trust signals and a risk-free message.</li>
+<li>Benefit copy describing what the product does for the customer. [L1363.055]</li>
+</ol></li>
+<li>Tested Superstore theme homepage section order (2021-2022, older advice):
+<ol type="1">
+<li>Utility bar</li>
+<li>Header</li>
+<li>Slideshow</li>
+<li>Highlights banner</li>
+<li>Featured collections (Collection list)</li>
+<li>Image with text overlay</li>
+<li>Featured collection (product grid)</li>
+<li>Search</li>
+<li>Highlights banner (repeated near the bottom)</li>
+<li>Footer [L1310.034]</li>
+</ol></li>
+<li>Early-stage high-ticket dropshipping store section list (2021-2022, older advice):
+<ol type="1">
+<li>Announcement bar (fixed).</li>
+<li>Utility bar (fixed).</li>
+<li>Header (fixed).</li>
+<li>Slideshow used as a single static hero image (fixed).</li>
+<li>Highlights banner.</li>
+<li>Collection list.</li>
+<li>Image with text overlay.</li>
+<li>Featured collection.</li>
+<li>Footer (fixed). All other default sections such as Grid, Rich Text and Testimonials can be removed. [L1371.006]</li>
+</ol></li>
+<li>Conflict between structures: the tested Superstore order has 10 positions and the niche procedure has 4 (plus banner). The early-stage order has 9. Use the niche structure for a single-product ad landing store [L1158.028, L1363.055] and the Superstore order as an example of a full multi-section homepage [L1310.034]; the older 2021-2022 orders are examples, not requirements. [L1310.034, L1371.006, L1158.028]</li>
+<li>Start a new Shopify store's public home page from the basic template, which has an Image with text overlay section and no images or design. It is changed from the storefront preview using the Edit home page option, as part of the design work after account setup. [L1314.022]</li>
+</ul>
+<h3 id="supplier-ready-demo-store-setup-manhattan-theme">Supplier-ready demo store setup (Manhattan theme)</h3>
+<ul>
+<li>Time: a full homepage customization of a new Shopify theme takes about one hour when the brand images are already finished. [L1309.002]</li>
+<li>At the supplier-approval stage the homepage only needs to look credible and work. Advanced mega menu, product card and blog settings can wait until the store is live. [L1309.003]</li>
+<li>Procedure:
+<ol type="1">
+<li>Upload all prepared images in one batch under Content &gt; Files &gt; Upload files, select them all and click Open.</li>
+<li>Go to Online Store &gt; Themes and confirm the Manhattan theme is active.</li>
+<li>Click Customize and check that the dropdown at the top reads Homepage.</li>
+<li>Open Theme settings (gear icon) and set logo, favicon, colors, typography, layout, buttons, social media and contact details.</li>
+<li>Open Header and set sticky header, logo position, menu, menu type, separator line, menu fonts and navigation colors.</li>
+<li>Edit the Slideshow: keep one slide, add image and text, link the button to a collection.</li>
+<li>Edit the Collection list: heading, columns, overlay, then add collections and their images.</li>
+<li>Edit the Featured collection, Image banner (only if needed), Email signup and Pre-footer.</li>
+<li>Hide Rich text, Blog posts and the Announcement bar until they are needed.</li>
+<li>Edit the footer and cookie consent, click Save after each section and check the homepage on desktop and on a phone. [L1309.001]</li>
+</ol></li>
+<li>Uploading images to Content &gt; Files does not link them to any section. Each image still has to be selected inside its section; the upload only makes them available in the picker. [L1309.005]</li>
+<li>Imagery and sections should be finished in a supplier-approval demo as credible placeholders; the full store can be refined after launch. [L1309.003]</li>
+</ul>
+<h3 id="build-order-for-the-initial-site-superstore-theme-2021-2022-older-advice">Build order for the initial site (Superstore theme, 2021-2022, older advice)</h3>
+<ol type="1">
+<li>Set up the homepage with the business message and links to the main sections.</li>
+<li>Set up the collection page template once so every collection uses the same settings.</li>
+<li>Set up the product page template once so every product uses the same settings.</li>
+<li>Create all single pages (About Us, Contact Us, policies, terms) and link them into the navigation.</li>
+<li>Leave the blog untouched until after the business has launched. When steps 1 to 4 are done, the site is ready for the next stage. [L1463.014]</li>
+</ol>
+<h2 id="social-links">Social links</h2>
+<ul>
+<li>Add social media links in theme settings, next to the logo, colors and contact details. Social media is part of the Supplier-ready demo procedure at step 4. [L1309.001]</li>
+<li>Leave social media until launch, then add Facebook, Pinterest, email address and Instagram. (2021-2022, older advice.) [L1371.043]</li>
+<li>The footer should link to social media pages, and links to unrelated pages make the store look untrustworthy. [L1346.011]</li>
+</ul>
+<h2 id="hiding-vs-deleting-sections-1">Hiding vs deleting sections</h2>
+<ul>
+<li>Deleting or hiding a section is reversible in the customizer, but deleting removes its settings. For a first version it is safer to hide sections with the eye icon than to delete them. [L1309.008]</li>
+<li>While building a theme, hide a section you are unsure about with its visibility toggle instead of deleting it, so you can restore it without rebuilding. Delete a section only when you are sure you will not need it. (Shrine theme.) [L1331.044]</li>
+<li>Hide Rich text and Blog posts in the first version of a store with no content yet, and enable them later when content exists. [L1309.038]</li>
+<li>Removing a section: click into it, click the three dots at the top of the panel, and choose Remove section. [L1371.004]</li>
+<li>In a Shopify theme the header, announcement bar, utility bar and slideshow sections are fixed and cannot be removed, and the footer is always part of the site. Only the optional sections in between can be removed. (Superstore theme, 2021-2022, older advice.) [L1371.005]</li>
+<li>The Shrine theme editor's Add section panel has a Search sections box that filters the whole list of section groups. A section can be found by typing its name instead of scrolling through the Header, Footer, Sections, Others and Apps groups. [L1330.028]</li>
+</ul>
+<p>Sections available in the Shrine Pro theme editor, grouped as shown in Customize &gt; Add section:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Section names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Horizontal Ticker, Announcement bar, Header</td>
+</tr>
+<tr>
+<td>Cart drawer</td>
+<td>Cart drawer</td>
+</tr>
+<tr>
+<td>Home page template</td>
+<td>Slideshow, Comparison table, Icon Bar, Results, Contact Form, Instagram stories, Promo Pop-Up, Scroll to Top Button, Global Music Player</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td>Section divider, Footer</td>
+</tr>
+<tr>
+<td>Sections (main list)</td>
+<td>Featured product, Collection list, Rich text, Image with text, Image banner, Slideshow, Collage, Multicolumn, Multirow, Collapsible content</td>
+</tr>
+<tr>
+<td>Others</td>
+<td>Email signup, Contact form, Video, Blog posts</td>
+</tr>
+<tr>
+<td>Apps</td>
+<td>3D Parallax hero, Announcement bar, Before &amp; After slider, Bundle deals, Comparison table, Content tabs, Custom Columns V2, Facebook testimonials, Featured on, Horizontal Ticker, Icons with content, Image/Video Slider, Instagram stories, Music Player, OLD Custom columns, Page scroll progress, Custom Liquid, Page</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1330.016]</p>
+<h2 id="checkout-branding-1">Checkout branding</h2>
+<h3 id="what-can-be-changed">What can be changed</h3>
+<ul>
+<li>The Shopify checkout cannot be fully redesigned because Shopify controls it for security, using 256-bit encryption. Store owners can only add a custom logo, a background image of about 1000 x 400 px, and some color and button changes. (Older advice, 2021-2022.) [L1371.031]</li>
+<li>Shopify Plus (about 2,500 USD per month) is required to customize the checkout. Otherwise the checkout is the same for all Shopify stores. Within that limit, upload the brand font in Shopify so it appears at checkout, set the logo in the checkout settings, and use a logo with trust signals such as free shipping or a money-back guarantee. [L1363.030]</li>
+<li>Conflict on access: one source says full checkout customization requires Shopify Plus [L1363.030], while another describes adding a checkout banner under Settings &gt; Checkout without naming a plan [L1259.034, L1260.041]. Check your plan before you promise a custom checkout.</li>
+<li>Conflict on size: the checkout banner is 1500 × 300 px [L1259.034, L1260.041], while the older source gives a background image of about 1000 × 400 px [L1371.031]. Use 1500 × 300 px for the checkout banner under Settings &gt; Checkout; use the 1000 × 400 px background only where the older Superstore-era guidance applies. [L1259.034, L1260.041, L1371.031]</li>
+</ul>
+<h3 id="checkout-banner-and-trust-elements">Checkout banner and trust elements</h3>
+<ul>
+<li>Shopify checkout image: go to Settings &gt; Checkout and add an image (checkout banner). Recommended size is 1500 × 300 px. Create it in Canva with custom size 1500 × 300, add the logo, and add trust badges such as Privacy Protected, Secure Checkout and Satisfaction Guaranteed from Canva's Elements section. Add payment icons (Visa, Mastercard, PayPal) and optionally a 30-day money-back guarantee. [L1259.034, L1260.041]</li>
+<li>Case: a store that changed nothing except adding checkout trust elements (secure checkout, guarantee, payment logos) moved from a conversion rate of 0.29% to 2.15% in one day, with an Add to Cart rate around 8%. [L1260.042]</li>
+</ul>
+<h3 id="checkout-settings-procedure-superstore-theme-2021-2022-older-advice">Checkout settings procedure (Superstore theme, 2021-2022, older advice)</h3>
+<ol type="1">
+<li>Open Checkout in the theme settings.</li>
+<li>Upload the logo as a custom image, set it to Medium size, and place it in the center.</li>
+<li>Leave error messages red.</li>
+<li>Change the button color to match the site buttons and the accent color to the main brand color.</li>
+<li>Click Save before leaving the editor, because unsaved changes are lost. [L1371.032]</li>
+</ol>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/10-navigation-and-menus/"><span class="k">&larr; Previous</span><span class="v">Navigation and menus</span></a><a class="nx" href="../../04-store-build-and-shopify/12-demo-store-for-supplier-approval/"><span class="k">Next &rarr;</span><span class="v">Demo store for supplier approval</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

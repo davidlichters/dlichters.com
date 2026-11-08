@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Upsells, bundles, cart and post-Purchase offers | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 5.15: Upsells, bundles, cart and post-Purchase offers.">
+<link rel="canonical" href="https://dlichters.com/aiecom/05-apps-and-tools/15-upsells-bundles-cart-and-post-purchase-offers/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Upsells, bundles, cart and post-Purchase offers | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 5.15: Upsells, bundles, cart and post-Purchase offers."><meta property="og:url" content="https://dlichters.com/aiecom/05-apps-and-tools/15-upsells-bundles-cart-and-post-purchase-offers/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">5. Apps and tools</a> &rsaquo; <a href="../../../ecom/05-apps-and-tools/15-upsells-bundles-cart-and-post-purchase-offers/">Plain version</a></div><h1>5.15 Upsells, bundles, cart and post-Purchase offers</h1><article><h2 id="choosing-the-offer-stack">Choosing the offer stack</h2>
+<ul>
+<li>Bundles, quantity breaks, upsells and cross-sells are usually built with dedicated apps, and several apps exist for each job, so compare them before choosing one [L0435.018].</li>
+<li>Bundle and upsell apps are an option once the store has more than one product [L0774.019]. Complementary-bundle apps work best when the store has a strong product that can be sold as an upsell [L0650.070].</li>
+<li>Older advice (Source A, 2021): add post-purchase and cross-sell apps only once the store grows and average order value matters, because they are not needed on day one [L0968.046].</li>
+<li>Older advice (Source A, 2021): do not use urgency timers or urgency apps unless there is a specific real deadline, such as a delivery date before Christmas [L0968.048].</li>
+<li>Timer values in the sources differ by context. Kaching Cart and OCU setups use a 3-minute timer [L0560.012, L1141.016]. A 20-minute deadline appears as an example in post-purchase SMS and email text [L0789.033]. Use any timer only with a real deadline, as the older rule states [L0968.048].</li>
+<li>For free-gift content, use ChatGPT to brainstorm bundle names, offer copy and persuasive framing before you build offers in the store [L0232.020].</li>
+<li>For free-gift content, use ChatGPT to create instructional eBooks, email sequences, guides and digital resources. They cost nothing to produce but add perceived value to higher-tier bundles [L0232.026].</li>
+<li>A native Shopify discount system can apply a discount automatically when a customer adds 2 or 3 units. The discount appears without codes or third-party apps, which reduces friction in multi-buy decisions [L0233.015].</li>
+<li>Planning helper: the BSGR Product Upsell Planner (Google Sheets) can be exported via File &gt; Download as.xlsx,.ods,.pdf,.html (zipped),.csv (current sheet only) or.tsv (current sheet only) [L0448.024].</li>
+</ul>
+<h2 id="bundle-bear">Bundle Bear</h2>
+<h3 id="what-it-does">What it does</h3>
+<ul>
+<li>Bundle Bear creates product bundles, volume discounts and free-gift offers in Shopify [L0634.025].</li>
+<li>Offer types, as described by the app: volume discount (more items, bigger discount), mix and match (discount for different products bought together) and cart goal (discount when the cart reaches a set value, e.g. $50) [L0477.028].</li>
+<li>Bundle and volume discount are the two most-used types [L0476.029].</li>
+<li>Volume discount example: buy 2 and save 10%, buy 3 and save 15% [L1220.025].</li>
+<li>Bundle option for two complementary products: save 10 dollars when buying both, or save 20 dollars when buying two items [L0476.029, L0634.025].</li>
+<li>Free-gift bundle: set the second product as a free gift and select which product is the gift [L0476.029, L1220.026].</li>
+<li>Bundle link with no discount: shows that both items can be bought together [L0476.029, L1220.026].</li>
+<li>Example offer from one store: buy two, get 20% off plus a free gift [L0549.027].</li>
+<li>Discount formats differ by source. Fixed-dollar amounts (10 or 20 dollars) are used for the two-item bundle, and percentages (10% and 15%) for volume tiers. Use the format the offer type requires [L0634.025, L1220.025].</li>
+<li>The lesson used the Bundle and Volume discount options. Advanced settings include a must-choose-option rule, country limits, start and end dates and rounded prices [L0634.025].</li>
+<li>Economics reported in the lesson: a 40 to 50 percent bundle take rate and roughly $40 extra profit per order. Treat these as reported results, not guarantees [L0650.049, L0650.070].</li>
+</ul>
+<h3 id="setup-procedure">Setup procedure</h3>
+<ol type="1">
+<li>Install Bundle Bear from the Shopify App Store and click Install app.</li>
+<li>Click Create offer.</li>
+<li>Choose the offer type. Bundle and volume discount are the two most-used types.</li>
+<li>For a bundle, select the first product and the second product. Choose the discount: save 10 when buying both items, or save 20 when buying two items. Alternatively, set the second product as a free gift and select which product is the gift. Or choose no discount to show that both items can be bought together.</li>
+<li>Open advanced settings. Choose whether the customer must choose an option, limit the offer to a country, set a start date and end date, and enable Round discounted prices with.99 as the ending.</li>
+<li>Save the offer.</li>
+<li>Open Design to change alignment, colors, and the button color to match your store. Change the text if the ads target a country with a different language.</li>
+<li>Click save.</li>
+<li>Open Embeds in the theme editor, check the installed apps, and switch Bundle Bear on.</li>
+<li>Open the product section, click Add block, and choose Bundle Bear. Drag it below the buy buttons.</li>
+<li>Check the layout on a mobile phone, then save. [L0476.029]</li>
+</ol>
+<ul>
+<li>Offer options: click Add option to add tiers. Advanced settings include custom badges, start and end time for urgency, and rounding of discounted prices (e.g. to 50 cents or per dollar). Click save and activate [L0477.028].</li>
+<li>Placement by source (sources differ, so test them):</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Placement</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0477.028</td>
+<td>Below the quantity selector on the product page</td>
+<td>Offer block placement in the app's setup</td>
+</tr>
+<tr>
+<td>L0476.029 (step 10), L0634.027</td>
+<td>Below the buy buttons, not below the discount</td>
+<td>Theme block placement via Embeds and Add block</td>
+</tr>
+<tr>
+<td>L0549.027</td>
+<td>Below product image and title, above the regular Buy Now button</td>
+<td>One store reported this position drove most of its sales and raised average order value</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Mobile is the most important view, so check the layout on a phone before publishing [L0634.027, L0476.029].</li>
+</ul>
+<h2 id="kaching-bundles">Kaching Bundles</h2>
+<ul>
+<li>Kaching Bundles is a Shopify app for building product bundles with quantity breaks, Buy X Get Y deals, subscriptions and free gifts [L0861.001, L0862.016].</li>
+<li>It creates quantity-break tiers, such as 2-pack and 3-pack offers with percentage discounts, directly on the product page. It is the tool used to build bundle tiers [L0860.019].</li>
+<li>Use it for all bundle offers, starting with a basic setup [L1299.001]. It is also listed as the bundle tool in the build [L1149.012].</li>
+<li>Find it by searching the Shopify App Store, install it and approve the billing permissions [L0861.001].</li>
+<li>Billing: the app bills from the first customer checkout that uses a bundle, with a fee of about $15 in the setup shown [L0861.002]. Reported as $15 from the first checkout made through the app [L0862.016]. Verify the current price and billing terms inside the app before publishing live bundles [L0861.002, L0862.016].</li>
+<li>The dashboard shows Added revenue, Orders with bundles, visitors and AOV for each bundle deal. Filters for 24 hours, 7 days, 30 days and All time show deal performance. The Store widget status must read enabled [L0861.021].</li>
+<li>The optional store widget displays the bundle offers in the store [L0862.016].</li>
+<li>Kaching suite: Kaching Cart, Kaching Bundles, Kaching Upsell, Kaching Popup and Kaching Subscriptions are separate apps. Each adds its own blocks to the product page or cart drawer in the theme editor [L0560.010, L1188.020].</li>
+</ul>
+<h2 id="rebuy-dynamic-bundles">Rebuy dynamic bundles</h2>
+<h3 id="creating-the-bundle-widget">Creating the bundle widget</h3>
+<ol type="1">
+<li>In Rebuy, go to Widgets &gt; Product Page &gt; New Widget.</li>
+<li>Scroll to Dynamic Bundle, click Create new, name it Dynamic Bundle Offer and confirm with Create it! [L0557.001]</li>
+</ol>
+<ul>
+<li>The default data source rule for a new dynamic bundle is "if anything, return recommended AI". It compares the main product with products other customers bought together with it [L0557.002].</li>
+<li>A purchase-based recommendation rule works well as a starting point for bundles because it needs no manual product picking. It relies on what customers actually buy alongside the main product [L0557.003].</li>
+<li>To create or edit a dynamic bundle, go to the product page tile in the Rebuy app and select the widget. If none exists, create the dynamic bundle widget there first, then open its Data Sources page from the widget [L0559.025].</li>
+</ul>
+<h3 id="widget-id">Widget ID</h3>
+<ul>
+<li>The widget ID appears in the widget header (e.g. Dynamic Bundle Offer (ID: 117326)) and as the number in the edit page address, /widgets/id/<ID>/edit. Copy this number for the Shopify app block field or the manual div [L0557.021, L0557.005].</li>
+</ul>
+<h3 id="installing-with-shopify-app-blocks">Installing with Shopify App Blocks</h3>
+<ol type="1">
+<li>Copy the widget ID shown in the widget header (e.g. Dynamic Bundle Offer (ID: 117326)).</li>
+<li>Click Install (top right) in the Rebuy widget editor, then click add block to my online store.</li>
+<li>In Shopify's theme customizer, open the product page template.</li>
+<li>Add a block (new section or existing section) and choose Rebuy Widget under APP BLOCKS.</li>
+<li>Paste the widget ID into the Widget ID field.</li>
+<li>Click Save.</li>
+<li>Open a product page to confirm the bundle shows. [L0557.005]</li>
+</ol>
+<ul>
+<li>The Rebuy Widget app block has these fields: Enable Widget (on), Widget ID, Enable Product ID (lets the widget use the product ID to return products based on the data source) and Enable Collection ID (lets the widget use the collection ID for the same purpose) [L0557.006].</li>
+<li>App blocks only appear in themes built for Shopify Online Store 2.0. Use the manual code method if the app block cannot be installed [L0557.007].</li>
+</ul>
+<h3 id="installing-manually-in-theme-files">Installing manually in theme files</h3>
+<ol type="1">
+<li>In the widget editor, open Placement, expand Manual installation and copy the widget div.</li>
+<li>Open the theme's three-dot menu and click Edit Code.</li>
+<li>Open layout/theme.liquid.</li>
+<li>Add the line RenderRebuyExtensions to theme.liquid, checking the exact Liquid call against Rebuy's install guide.</li>
+<li>Create a new file snippets/rebuyExtensions.liquid.</li>
+<li>In that file, write an "if product" block that contains the copied widget div and close it with "end if".</li>
+<li>Save, open a product page and scroll down to check the widget. [L0557.009]</li>
+</ol>
+<h3 id="editor-layout">Editor layout</h3>
+<ul>
+<li>Widget editor tabs: General, Language, Data Source, Discount, Timer, Layout, Placement and Images. Preview toggles between Desktop and Mobile, Live Mode is available, and Install and Save sit at the top right [L0557.008].</li>
+</ul>
+<h2 id="rebuy-data-sources-for-bundles">Rebuy data sources for bundles</h2>
+<h3 id="setting-up-a-data-source">Setting up a data source</h3>
+<ol type="1">
+<li>Open the Widgets section in Rebuy and select the dynamic bundle widget (create one first if none exists).</li>
+<li>Open the widget's Data Sources page.</li>
+<li>Click Add Rule and choose the rule type: Product Tags, Collection or Specific Products.</li>
+<li>Set the condition: for tags use Contains Any and enter the tag; for a collection select the collection; for specific products select the products.</li>
+<li>Enter the rule title that shoppers will see.</li>
+<li>If the bundle should show a discount, set Widget Discount to Percentage and enter the value.</li>
+<li>Turn on Exit if Matched if rules below this one should be ignored when it matches.</li>
+<li>Click Save and confirm the message that the data source was saved.</li>
+<li>Create the matching automatic discount in Shopify (see the Shopify procedure) and test the bundle on the storefront. [L0559.002]</li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rule type</th>
+<th>Use it to</th>
+<th>Example</th>
+<th>Condition used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Tags</td>
+<td>Pull in every product that carries a shared tag</td>
+<td>Tea products</td>
+<td>Contains Any + tag name (tea)</td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Pull in all items of one collection</td>
+<td>Jewelry collection</td>
+<td>Collection selected</td>
+</tr>
+<tr>
+<td>Specific Products</td>
+<td>Build a fixed set around one product</td>
+<td>Supercharge drink plus accessory products</td>
+<td>Individually selected products</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0559.003]</p>
+<ul>
+<li>Tag rule example: Product Tags, Contains Any, value tea makes every tea product appear as bundle items on a tea product page. The shopper picks which teas to include before adding the bundle to the cart [L0559.004].</li>
+<li>Collection rule example: a jewelry collection fills the bundle with options from that collection. Adding the bundle puts all selected items in the cart at once, which reduces shopper fatigue on large ranges [L0559.005].</li>
+<li>Specific-products rule example: a hand-picked set, such as a main product plus complementary accessories, suits a single high-margin product that should always be sold with the same add-ons [L0559.006].</li>
+<li>The rule editor shows the rule type, a condition field with operators such as Contains Any, a title field, a sort option (Smart Sort or Recommended (AI)) and the Exit if Matched toggle. Further buttons are Add Before, Add After, Duplicate, Remove and Collapse. Save the data source with Save [L0559.007].</li>
+<li>Rules are evaluated in order. When Exit if Matched is enabled on a rule, every rule after it is ignored if that rule matches. Put narrow or specific rules above broad ones so the broad rule does not swallow them [L0559.008].</li>
+<li>Each rule's conditions can be joined with AND or OR. Add rules at a position with Add Before or Add After. Use connectors to combine several tags or products in one rule instead of building many separate rules [L0559.009].</li>
+<li>Under the data source's filter settings, Filter out of stock products and Filter out of stock variants keep unavailable items out of the bundle. An Add Exclusion filter option removes specific items from the input [L0559.010].</li>
+<li>The data source name is only visible internally, so use a name that makes the bundle purpose clear to your team. A Clear Cache button on the data source page helps if the widget does not update after changes [L0559.011].</li>
+<li>Mistake: testing before the Shopify automatic discount is active shows the widget discount but no discount in the cart, which looks like a bug. Create and activate the Shopify discount first, then test in a cleared cart [L0559.021].</li>
+<li>Bundle items are added to the cart as separate products, not as one bundle SKU, so there is no separate bundle inventory. Stock is managed per item as usual [L0559.023].</li>
+<li>Shopify automatic discounts apply without a code. They are the method used to make a Rebuy widget discount real, and they can combine with other active discounts if that option is enabled [L0559.024].</li>
+<li>Rebuy on a product page lets shoppers tick several products and variants and bundle them together. When this builder adds too many clicks, replace it with ready-made bundles that carry a fixed extra discount [L1225.089].</li>
+</ul>
+<h2 id="rebuy-product-page-widgets">Rebuy product-page widgets</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Widget type</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI Recommendations</td>
+<td>Shows items customers also bought, based on the product being viewed</td>
+</tr>
+<tr>
+<td>Recently Viewed</td>
+<td>Shows cross-device browsing history so customers can buy previously viewed products</td>
+</tr>
+<tr>
+<td>Add to Cart Upsell (Popup)</td>
+<td>Popup at add-to-cart offering a higher-value alternative</td>
+</tr>
+<tr>
+<td>Add to Cart Subscription Upsell (Popup)</td>
+<td>Popup at add-to-cart offering a subscription instead of a one-time purchase</td>
+</tr>
+<tr>
+<td>Add to Cart Cross-Sell (Popup)</td>
+<td>Popup at add-to-cart asking if extra items should be added</td>
+</tr>
+<tr>
+<td>Product Add-Ons</td>
+<td>Lets customers add accessories to the cart when the main product is added</td>
+</tr>
+<tr>
+<td>Featured Items</td>
+<td>Shows specific products or collections, e.g. new products, top sellers or sale items</td>
+</tr>
+<tr>
+<td>Buy It Again</td>
+<td>Shows previously purchased items, falling back to top-selling items</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0557.004]</p>
+<h2 id="rebuy-as-a-platform">ReBuy as a platform</h2>
+<ul>
+<li>ReBuy is a Shopify app that uses AI to personalize product recommendations across the shopping journey. Stated goals: higher average order value, conversion rate and customer lifetime value [L0593.001].</li>
+<li>According to the vendor, ReBuy can be set up on a Shopify store in minutes without coding or developer skills. Treat this as a vendor claim and verify it on your own store [L0593.002].</li>
+<li>Custom rules can be stacked on top of each other to control which products appear where and how often. This supports a deliberate merchandising strategy instead of default recommendations [L0593.003].</li>
+<li>ReBuy connects directly to other tools in the store's tech stack and works with several third-party integrations. Check the integration list against your own apps before installing [L0593.009].</li>
+</ul>
+<h2 id="product-page-upsells-and-cross-sells-bold-and-related-apps">Product-page upsells and cross-sells (Bold and related apps)</h2>
+<h3 id="bold-apps">Bold apps</h3>
+<ul>
+<li>Bold Upsell, sold by Bold under the name Product Upsell, adds upsell products to product pages to present complementary items at the point of sale [L0247.080].</li>
+<li>Bold Product Upsell is a paid Shopify app that shows related accessories to shoppers. It offers a 14-day free trial, then costs just under $10 per month [L0469.056] (Source A, 2021, older).</li>
+<li>Bold Upsell costs 10 to 90 dollars per month depending on how many people see the upsells. A store with low traffic typically pays 10 to 20 dollars per month. Each upsell takes about 15 to 30 minutes to configure [L1076.043].</li>
+<li>Different app, same kind of offer: the Shopify product upsell app shows add-on offers after an item is added to cart and at checkout. It has a 30-day free trial, then costs about 10 to 60 dollars per month, depending on traffic and sales volume [L0923.038].</li>
+<li>Bold Product Options and Bold Product Upsell are the cross-selling and product-option apps recommended for upsell and variant-option needs [L0429.018] (Source A, 2022, older). Both are apps for cross-sell and upsell offers in the Shopify app store [L0963.050] (Source A, 2022, older).</li>
+<li>Bold Product Options and Bold Product Upsells let customers add options and extra items to the order. They are preferred over creating new bundle SKUs in Shopify [L0967.053] (Source A, 2020, older).</li>
+<li>Bold Upsell is used for upselling and Bold Product Options for cross-selling bundles [L1113.033] (Source A, 2022, older).</li>
+<li>Bold Upsell is used for post-purchase upsells. Bold Product Options is used for cross-sells [L0968.046] (Source A, 2021, older).</li>
+<li>Bold Upsell adds upsell and add-on products, and is used to increase average order value [L1087.003] (Source A, 2020, older). The speaker reported long-term use without issues [L1088.067] (Source A, 2020, older).</li>
+<li>Bold Cross Sell shows add-on products as add-to-cart options on the product page, which raises cart value. Use it for add-ons the buyer needs that are too expensive to give away. Example: a 200 USD product with 30 USD straps and a 50 USD cover raises the cart to 280 USD [L1110.027] (Source A, 2019, older).</li>
+<li>Upsells and cross-sells on the product and post-purchase pages were built with custom code on Shopify, with Bold Upsell for upsell functions [L1109.039] (Source A, 2018, older).</li>
+<li>Rule: enable the cross-sell app only after you have selected a collection for it, otherwise it has nothing to show. It is not needed on a demo store and is covered once the store has live products [L0976.013].</li>
+</ul>
+<h3 id="bold-sales-motivator-threshold-display">Bold Sales Motivator (threshold display)</h3>
+<ul>
+<li>Bold Sales Motivator shows a shopper how close they are to a free bonus, for example in a spend X to get X offer, so the threshold is visible and encourages the shopper to reach it [L0757.030].</li>
+<li>It shows how far shoppers are from a cart threshold as they add items. Use it for offers such as a free gift over 1,000 dollars, and turn it off as soon as the promotion ends [L1204.050].</li>
+</ul>
+<h2 id="cart-drawers-and-cart-stage-upsells">Cart drawers and cart-stage upsells</h2>
+<h3 id="cart-drawers">Cart drawers</h3>
+<ul>
+<li>Slide Cart (Slide Cart Drawer) slides the cart out over the current page. Its cart function is free, while its upsell function is paid [L0339.005].</li>
+<li>The cart drawer opens on the same page as the product, so customers do not need to go to a separate cart page and press back. Cart and checkout feel faster and more fluid [L0339.006].</li>
+<li>Monster Cart Upsell is a cart app that shows complementary product offers and slide-out cart blocks. It works best when the store has several complementary products [L0871.048].</li>
+<li>Upcart automates upsell prompts at checkout when the cart value reaches set thresholds, encouraging customers to add items or upgrade to higher bundles, which increases AOV [L0232.007].</li>
+<li>After a customer clicks add to cart, a product recommendation app can show related items on the cart step to raise average order value. Use it alongside a post-purchase upsell page, not instead of one. The app named in the lesson for the post-purchase upsell is AfterSell [L1131.060].</li>
+</ul>
+<h3 id="free-gift-threshold-messages">Free-gift threshold messages</h3>
+<ul>
+<li>Shopify apps can show a cart message that says how much more is needed to unlock a free gift. Search the Shopify App Store for free gift threshold apps [L1094.060] (Source A, 2023).</li>
+<li>Monster App adds free gift offers to orders, but its usage fees are high. Operators may look for a theme with built-in free gift options to replace it [L1173.015].</li>
+</ul>
+<h3 id="kaching-cart">Kaching Cart</h3>
+<ul>
+<li>Kaching Cart is a Shopify app that controls the cart and checkout entry point. It adds urgency messages, timers, promotion progress bars, upsells and trust badges [L0560.010].</li>
+<li>Cart settings sections in the left menu: General, Top bar, Timer, Promotions progress bar, A/B test, Edit translations, Product upsell, Products in cart, Side product upsell, Footer, Discount, Sticky Cart and Kaching Upsell [L0560.011].</li>
+<li>Make sure Cart is enabled is on. Cart mode is set to Previewing items in this setup, and Cart is enabled must be switched on before any other cart setting takes effect [L0560.011, L0560.036].</li>
+<li>Side product upsell: on mobile, the side upsell appears inside the cart drawer and can be dragged into position. Options include Hide upsell if product already in cart, Automatically remove when the cart is empty, Automatically add the upsell product and Show Saved N badge [L0560.025].</li>
+<li>Upsell toggles (used for shipping protection): set Display mode to Standard in checkout button. Fill Text when is not in the cart with ((upsell_toggle_price)) ((upsell_toggle_title)) and Text when is in the cart with Includes ((upsell_toggle_price)) ((upsell_toggle_title)). The add-on then appears as a toggle next to the checkout button [L0560.035].</li>
+</ul>
+<h3 id="kaching-cart-setup-sequence">Kaching Cart setup sequence</h3>
+<ol type="1">
+<li>Open Apps &gt; Kaching Cart &gt; Cart settings and confirm Cart is enabled.</li>
+<li>Under Top bar, enter a warning message about stock scarcity.</li>
+<li>Under Timer, set the countdown to 3 minutes and turn on Reset timer when products are added to cart.</li>
+<li>Under Promotions progress bar, set the threshold, the reward and any tiers.</li>
+<li>Under Trust badges, upload the Trustpilot badge image and set it to show under the checkout button.</li>
+<li>Switch off Shipping protection and Footer while testing a product.</li>
+<li>Go to Settings &gt; Checkout &gt; Editor &gt; Header &gt; Logo and upload the Trustpilot-formatted logo.</li>
+<li>Go to Online Store &gt; Themes &gt; Edit default theme content, search for checkout, find Checkout alternative payment method banner and enter a low-stock message. [L0560.012]</li>
+</ol>
+<h2 id="rebuy-smart-cart">Rebuy Smart Cart</h2>
+<h3 id="what-it-is">What it is</h3>
+<ul>
+<li>Rebuy Smart Cart is an app-based, conversion-focused cart that replaces the default cart of a Shopify theme, either a full-page cart or a slide-out cart. It adds features the theme may lack, such as personalized recommendations, progress bars, upsells and subscription options [L1231.001].</li>
+<li>The recommendations block is powered by Rebuy data sources and its AI recommendation engine. The merchant defines the rules that decide which products appear. The cart also contains a tiered progress bar and an announcement bar, and recommendations can be adjusted in the Rebuy admin [L1231.002].</li>
+<li>The in-cart cross-sell widget is created automatically with each new smart cart and recommends products in the cart. Recommendations are powered by Rebuy's AI technology by default [L1230.018]. A new smart cart automatically gets a cross-sell widget [L1230.002].</li>
+</ul>
+<h3 id="versions">Versions</h3>
+<ul>
+<li>Rebuy no longer lets merchants create new v1 Smart Carts. Existing v1 carts are marked with a Legacy label. A v1 cart can still be duplicated and the duplicate can be edited, but a new cart built from scratch will be v2 [L1231.009].</li>
+<li>The new cart starts as v2 [L1231.008].</li>
+</ul>
+<h3 id="creating-a-smart-cart-v2">Creating a Smart Cart (v2)</h3>
+<ol type="1">
+<li>Open Smart Cart in the left navigation under Merchandising Widgets.</li>
+<li>Click New Smart Cart; the new cart starts as v2.</li>
+<li>Choose either Single Column or Double Column as the layout.</li>
+<li>Click Create.</li>
+<li>Configure the cart from top to bottom.</li>
+<li>Use the preview to check the mobile and desktop views.</li>
+<li>Toggle Live only when the cart is ready. [L1231.008]</li>
+</ol>
+<ul>
+<li>Older procedure, same flow with more detail: 1) In the Rebuy admin, open Smart Cart in the left menu and click New Smart Cart. 2) Give the smart cart a name. 3) Choose Single Column or Double Column layout and click Create. 4) Work through the editor's five sections: Fixed Top Bar, Header, Goal Box, Body, Footer. 5) In the Fixed Top Bar, adjust the cart title and the login button. 6) In the Header, click Add and select Announcement Bar. 7) In the Goal Box, click Add and select Tiered Progress Bar. 8) In the Body, click into the Cart Items block for its advanced options. 9) In the Footer, click Add and select Discount Code Input. 10) Drag any draggable component to reposition it. 11) Confirm all changes are saved using the top-right control. 12) Switch the toggle to make the smart cart live. 13) Test the cart on the storefront. [L1230.001]</li>
+<li>Layout choice is Single Column or Double Column. The cart is named before it is created [L1230.002].</li>
+<li>The Smart Cart list shows all drafts with Preview, Live toggle and Duplicate options. Use Duplicate to copy an existing cart instead of building a new one [L1231.010].</li>
+</ul>
+<h3 id="cart-anatomy-v2">Cart anatomy (v2)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed top bar</td>
+<td>Cart title, login button, mobile/desktop preview, Live toggle</td>
+</tr>
+<tr>
+<td>Header</td>
+<td>Announcement bar, tiered progress bar, discount code input, order notes, custom code block, cross-sell widget (components added via Add Component to Header)</td>
+</tr>
+<tr>
+<td>Goal box</td>
+<td>Area between header and body where the tiered progress bar is typically placed</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>Cart items, empty cart language, subscription upgrade options, cross-sell widgets</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td>Cart subtotal with singular and plural labels</td>
+</tr>
+<tr>
+<td>Checkout area</td>
+<td>Terms and conditions, pre-purchase pop-up, view cart button, continue shopping button, Shop Pay, accelerated checkout buttons, installment payment links</td>
+</tr>
+<tr>
+<td>Global settings</td>
+<td>Custom CSS input, event callbacks (JavaScript event listeners)</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1231.020]</p>
+<h3 id="editing-components">Editing components</h3>
+<ul>
+<li>Fixed Top Bar &gt; Cart Title: rename the default title to fit the store's wording or theme, e.g. a brand-specific cart title instead of a generic one [L1230.003].</li>
+<li>Fixed Top Bar &gt; Login Button: enabled by default so customers can log in from the cart. To remove it, use the Hide option on the button [L1230.004]. The login button can be shown to logged-out customers, or used with customer rules based on login status or account tags for segment-specific promotions [L1231.018].</li>
+<li>Add components via Add Component to Header. Options: Announcement Bar, Cross-Sell Widget, Custom Code Block, Discount Code Input, Order Notes, Tiered Progress Bar and Smart Cart Apps from partner integrations [L1231.021].</li>
+<li>Smart Cart &gt; Goal Box &gt; Add Component to Goal Box lists Announcement Bar, Cross-Sell Widget, Custom Code Block, Discount Code Input, Order Notes and Tiered Progress Bar. When no Smart Cart apps are installed, the same panel shows an Add Smart Cart App button instead [L1230.027].</li>
+<li>Discount Code Input: add it in the Footer via Add and Discount Code Input [L1230.001] (see procedure above).</li>
+<li>Body &gt; Cart Items &gt; Empty Cart Language: sets the heading and text shown when the cart is empty. A Shop Now link can send customers to a chosen page so they can start shopping immediately [L1230.013].</li>
+<li>Cart Items &gt; Use Product Metafields: a developer option that lets the cart pull custom product data. It is only useful if custom metafield data is already in use [L1230.016].</li>
+<li>Switch to Subscription, Product Metafields and Buy More Save More need additional configuration in the editor before they can be published. Keep them disabled until that setup is complete, and follow their setup guides before enabling them [L1230.017].</li>
+<li>Every component has a Custom Template toggle. When on, the template code is visible and editable inside Rebuy, so customizations are stored in Rebuy rather than the Shopify theme, which makes support easier [L1231.016].</li>
+<li>Every component has a hide icon that hides it without deleting it, so it can be shown again later. This works like the Shopify theme customizer [L1231.017].</li>
+<li>Cart subtotal wording: click Cart Subtotal in the footer, open LANGUAGE OPTIONS, and edit Subtotal Label (singular) and Subtotal Label (plural). The item count can be inserted as a variable. Keep the other settings under ADVANCED unchanged unless you need them [L1231.065].</li>
+<li>Global settings: custom CSS input for styling the cart, and event callbacks for JavaScript event listeners to run custom behavior [L1231.055].</li>
+<li>Partner integrations extend the cart with social proof and other functions. Examples are reviews apps such as Loox, Yotpo and Judge.me. The partner list includes Klaviyo and Route for better performance [L1231.056].</li>
+</ul>
+<h3 id="checkout-area-and-footer">Checkout area and footer</h3>
+<ul>
+<li>Smart Cart footer &gt; Checkout Area Options: under Pre-Checkout Options you can turn on Terms &amp; Conditions and Pre-Purchase Pop-Up. Standard Buttons holds the Checkout Button. Labels and Routing holds the View Cart Button and Continue Shopping Button. Express Checkout Buttons holds Shop Pay and Accelerated Checkout. Additional Options holds Installments [L1230.025].</li>
+</ul>
+<h3 id="tiered-progress-bar-and-free-products">Tiered progress bar and free products</h3>
+<ul>
+<li>Keep Use Shopify Functions (Recommended) switched on. It is on by default under Advanced Bar Settings, powers both product tiers and discount tiers, and is the basis for turning full-priced products into free gifts. The gift area has its own title field under Free Gifts [L1230.011, L1308.001]. Keep it on unless you have a specific reason to switch it off [L1308.001].</li>
+<li>The Use Shopify Functions toggle on a Free Product tier creates a Shopify Functions based discount automatically. This removes the need for a Shopify automatic discount with custom logic or a Shopify Script [L1231.032].</li>
+<li>Shopify Scripts are being phased out, so discounts that need custom logic should move to Shopify Functions. Rebuy's Functions-based discounts can replace an extra third-party discount app for free product and discount tiers [L1231.058].</li>
+<li>Mistake: a free shipping tier in the progress bar does not make shipping free by itself. Shipping rates must also be changed in Shopify shipping settings, or free shipping will not apply at checkout [L1230.010].</li>
+<li>The free shipping tier is a visual element only, with no link to Shopify Functions, so it creates no discount. To give a real free reward, change the tier to a free product tier [L1308.002].</li>
+<li>Mistake: a product tier with no product selected causes the Tiered Progress Bar to be omitted from the Smart Cart, and an error message appears. Select a product for every product tier, or hide the component [L1308.004].</li>
+<li>Path: Smart Cart V2 (Main) &gt; Tiered Progress Bar &gt; Configure Tiers &gt; Tier 1. Under Tier 1, use Search Products to pick the product, set the Unlock Price (example: $50), and use Add New Tier to create more tiers. Save the Smart Cart after each change [L1308.005].</li>
+<li>Free-product reward procedure:</li>
+</ul>
+<ol type="1">
+<li>Open the Smart Cart, go to the gold box section and add a Tiered Progress Bar.</li>
+<li>Keep Use Shopify Functions (Recommended) switched on.</li>
+<li>Switch the free shipping tier to a free product tier.</li>
+<li>Search for an active, in-stock product that is available on the online store, select it and set the Unlock Price.</li>
+<li>Save, then preview the Smart Cart and add items until the unlock price is reached.</li>
+<li>Open the checkout and confirm the reward product is fully discounted. [L1308.006]</li>
+</ol>
+<ul>
+<li>Product Discount Text: path Tiered Progress Bar &gt; Configure Labels &amp; Text &gt; Product Discount Text. Enter the text that should appear at checkout for the free product reward. If empty, Shopify shows the default name product discount [L1308.007].</li>
+<li>Mistake: on checkout, the product discount text is taken only from the first product tier, even when several product tiers exist. Give the first tier a generic text such as free gift, because a specific name such as a sandwich will be wrong for the other tiers. Check the tooltip in the tier settings to see this behavior [L1308.012].</li>
+<li>Emojis can be typed into any text field, including the discount text. On Mac press Control+Command+Space, on Windows press the Windows key and period, then search for the emoji (for example a sandwich emoji) [L1308.008].</li>
+<li>Discount text update procedure:</li>
+</ul>
+<ol type="1">
+<li>Save the changed discount text in the Smart Cart.</li>
+<li>Refresh the checkout page, because the new text only shows after a reload.</li>
+<li>Check that the text appears next to the discounted item. [L1308.009]</li>
+</ol>
+<ul>
+<li>Label wording under Configure Labels &amp; Text: the Amount Remaining Label carries a sentence such as "you are ((remaining_amount)) short of ((discount_amount)) off the whole order". The Amount Reached Label is shown once the goal is met, e.g. "you have earned ((discount_amount)) off the full order". Product-tier entries insert ((product_title)), while discount-tier entries insert ((discount_amount)) [L1308.018].</li>
+<li>Toggles Use Custom Tier Label, Use Amount Remaining Label and Use Amount Reached Label control whether custom texts appear. Enable them to replace the default messages [L1308.019].</li>
+</ul>
+<h3 id="preview-and-go-live">Preview and go-live</h3>
+<ul>
+<li>Save all changes before switching the smart cart live, since the live toggle publishes the current configuration. The toggle is in the top-right area of the editor [L1230.023].</li>
+<li>Simulate Products in Cart adds test products to the editor preview, so components that only appear with items in the cart, such as the footer and subtotal, can be seen while editing. It also shows how the progress bar reacts without placing real orders [L1230.022, L1308.020].</li>
+<li>The Preview button opens the live online store showing the draft cart, with a bar across the bottom indicating Rebuy preview mode. The visual editor may show fonts and global CSS differently than the store, so check the final result on the store [L1231.013].</li>
+<li>Mistake: the Smart Cart editor preview does not show how Functions discounts change the cart total. Test discounts on the checkout page or in the storefront preview of the cart instead [L1308.021].</li>
+<li>To preview a specific Smart Cart on the storefront, use the store URL with the parameters preview_smart_cart=<smart cart ID>, viewcart=true and cart_version=2. This shows that cart's discounts even when it is not the live cart [L1308.022].</li>
+<li>Troubleshooting: if the smart cart does not appear, the theme's native cart drawer still shows, or both the theme's cart and the smart cart show at once, the cart is not set up correctly. Rebuy provides a separate troubleshooting walkthrough for these cases [L1230.024].</li>
+<li>Mobile and desktop views should both be checked before going live [L1231.008].</li>
+</ul>
+<h2 id="post-purchase-offers">Post-purchase offers</h2>
+<h3 id="tools">Tools</h3>
+<ul>
+<li>OCU by Zipify is a post-purchase funnel builder considered the best-in-class option, with premium pricing [L0291.011]. One Click Upsell is an alternative with similar functions that may cost more [L0693.027].</li>
+<li>One Click Upsell is a Shopify app that shows extra offers right after checkout, on the thank-you and order-status pages. Customers accept with one click, which raises average order value (AOV) per customer [L1141.001].</li>
+<li>OCU is a post-purchase upsell app that shows extra offers after checkout. It can sell more of the same product or add other products to the order [L1107.033].</li>
+<li>AfterSell is a budget-friendly post-purchase funnel platform with all essential features for building upsell and downsell sequences [L0291.012].</li>
+<li>Reconvert is a post-purchase funnel builder for constructing upsell funnels [L0291.013]. It is also a post-purchase upsell app used to offer extra products after checkout [L0693.027].</li>
+<li>ReConvert is a post-purchase app for upsells and a post-purchase survey. The survey asks buyers why they bought and which use cases matter to them. It is repeated weekly to reveal the strongest marketing angle [L1218.021].</li>
+<li>KickFunnels is a one-time offer upsell funnel builder with built-in downsell features, used for product funnels with multiple upsells and conversion-optimized pages. Shopify alternative: Zipify Pages OCU (one-click upsell app) [L0307.020].</li>
+<li>Zipify is a post-purchase funnel tool that can offer a discounted repeat purchase right after checkout [L0363.028]. Zipify and Convert are apps used to build post-purchase upsell and cross-sell funnels after checkout [L0871.049].</li>
+</ul>
+<h3 id="ocu-funnel-setup">OCU funnel setup</h3>
+<ol type="1">
+<li>Install One Click Upsell from the Shopify app store and open its dashboard.</li>
+<li>Go to Upsell Funnels and click Add New Funnel, or create a Catch-All Funnel in one click.</li>
+<li>Choose what is sold after checkout: an ebook or other digital product, a similar product, or the same product the customer just bought.</li>
+<li>Set the triggers that open the funnel (see the trigger settings).</li>
+<li>Add Post-Purchase Upsell Offer 1 and set its discount, usually 30-40% off the added item.</li>
+<li>Add Upsell 2 (recommended product) and the Post-Purchase Downsell as the final step.</li>
+<li>Edit each offer: heading, countdown timer, product, shipping and buttons.</li>
+<li>Check the preview and run the price check before going live.</li>
+<li>Enable the funnel and track its views, conversion and revenue. [L1141.002]</li>
+</ol>
+<h3 id="offer-editor">Offer editor</h3>
+<ul>
+<li>Blocks in the Post-Purchase Upsell Editor: Display Offer, Heading, Countdown Timer, Upsell Product and Add Content Block. Fields include Background Color, Full width, Image Size, Image Resizing, Fit, Image Border, Badge Label, Badge Color, Badge Position (Above Product Title), Discount (Percentage), Savings Label, Hide Quantity Selector, Predefined Quantity, Buttons Position (set to Accept above decline) and Payment Disclaimer [L1141.015].</li>
+<li>Countdown Timer block: set Time Limit to 3 minutes. This gives urgency without feeling rushed [L1141.016].</li>
+<li>Price block: the original price is struck through, followed by the discounted price and a savings label such as 25% Savings (Discount set to Percentage, with a Savings Label field). The accept button reads Pay now followed by the discounted total. The countdown label reads Exclusive offer expires in: above the timer [L1141.034].</li>
+<li>Post-purchase offers inherit the Shopify checkout styles automatically, so set checkout branding in Shopify before judging how an offer looks. The offer editor preview uses a product placeholder until a real product is selected in the upsell product block. Preview settings can be adjusted to match the checkout more closely [L1141.035].</li>
+</ul>
+<h3 id="digital-upsell-as-funnel-2">Digital upsell as Funnel 2</h3>
+<ol type="1">
+<li>Create the PDF or ebook as its own product in Shopify.</li>
+<li>In the upsell funnel, click Add Product(s) and select that product.</li>
+<li>Add a further upsell with a compatible product that complements what the customer is buying. [L1141.020]</li>
+</ol>
+<h3 id="follow-up-across-channels">Follow-up across channels</h3>
+<ol type="1">
+<li>Show the one-time upsell offer on the post-purchase page immediately after checkout.</li>
+<li>Send an SMS through an SMS app such as SMS Bump at the same time, reminding the buyer that the order is being prepared and that the upsell is available for a limited time.</li>
+<li>Send an email through Klaviyo at the same time with the same offer and a countdown.</li>
+<li>Retarget the buyers with Facebook ads for the upsell offer. [L0789.032]</li>
+</ol>
+<ul>
+<li>SMS and email text should state a deadline, such as 20 minutes left to buy the upsell at 14 dollars instead of 49 dollars, and the remaining stock count, such as only five left [L0789.033].</li>
+<li>Post-purchase discount ranges differ by example: 30 to 40% off the added item in the OCU setup [L1141.002], and a 14 dollar price against a 49 dollar original in the follow-up example [L0789.033].</li>
+</ul>
+<h2 id="checkout-replacement">Checkout replacement</h2>
+<ul>
+<li>Better Cart is a third-party checkout app that replaces the Shopify checkout. It is worth considering when monthly sales exceed about 20,000 USD. Its monthly fee then costs less than Shopify checkout fees, and it allows upsells and bump offers that Shopify's checkout does not [L0387.004].</li>
+<li>Switching from Shopify's checkout to a replacement checkout app is typically cheaper once monthly revenue is above roughly 20,000 USD, because you pay the app's monthly fee instead of Shopify checkout fees [L0387.005].</li>
+<li>Below that revenue level, keep Shopify checkout and use the cart and post-purchase tools above, since upsells and bump offers can be added at the cart and after purchase [L0387.004, L0789.032].</li>
+</ul>
+<h2 id="retention-and-subscription-platforms">Retention and subscription platforms</h2>
+<ul>
+<li>ReCharge is an all-in-one app platform that combines subscriptions, product bundles, rewards programs and customer analytics in one place. It is used to raise average order value, reduce churn and increase lifetime value [L1232.001].</li>
+<li>Procedure:</li>
+</ul>
+<ol type="1">
+<li>Run all retention programs (subscriptions, bundles, rewards) inside one platform.</li>
+<li>Test quickly to see which program moves the key metric.</li>
+<li>Keep the programs that work for the specific store and drop the rest.</li>
+<li>Use the unified customer data and analytics view to optimize offers continuously. [L1232.006]</li>
+</ol>
+<h2 id="choosing-an-upsell-or-bundle-app">Choosing an upsell or bundle app</h2>
+<ul>
+<li>Choose by budget first. AfterSell suits a budget under $20 per month, ReConvert comes next, and Zipify OCU is the choice for advanced features. Post-purchase upsell apps such as ReConvert, AfterSell and Zipify OCU offer similar plans with 30-day free trials. [L1411.020]</li>
+<li>Most of these upsell and bundle apps start with a 14-day or 30-day free trial, then charge a monthly fee. Compare the monthly price against your budget before installing, because the cheapest option can be under $10 per month and the advanced option can cost $35 per month. [L1411.029]</li>
+<li>Install a bundle app when you sell bundles, since bundles are a core part of the store's average order value approach. [L1327.031]</li>
+<li>Kaching's post-purchase upsell is an advanced tool. Install it when scaling, not at the foundation stage. [L1327.033]</li>
+<li>Some sellers prefer single-purpose apps. Vitals bundles many apps, including upsell tools, in one package, and it is a good choice if it covers all the upsell and cross-sell features you need. [L1410.010, L1412.025]</li>
+<li>Vitals is an app suite that bundles upsells and cross-sells into one subscription. It suits a store that wants many apps together, but some sellers prefer a single-purpose app. [L1412.025]</li>
+<li>Some post-purchase upsell app support teams will build a funnel for you if you send them your requirements. This reduces setup time for non-technical sellers. [L1410.049]</li>
+</ul>
+<h2 id="bundle-apps">Bundle apps</h2>
+<h3 id="comparison">Comparison</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>What it does</th>
+<th>Trial and price</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bundle Bear</td>
+<td>Volume-discount bundles, with revenue shown per offer</td>
+<td>14-day trial; plans from $24.99 per month</td>
+<td>L1345.020, L1411.011, L1411.012</td>
+</tr>
+<tr>
+<td>Wide Bundle / Wide Bundles</td>
+<td>Bundle layout, labels and discount display</td>
+<td>14-day trial, then $16 per month (Wide Bundles)</td>
+<td>L1345.026, L1411.010</td>
+</tr>
+<tr>
+<td>Catching Bundle (called Coaching Bundles in other lessons)</td>
+<td>Simple bundle app, described as the cheapest of the three</td>
+<td>14-day trial; $9 per month billed yearly or $14.99 per month billed monthly</td>
+<td>L1411.013, L1410.006, L1412.012</td>
+</tr>
+<tr>
+<td>White Bundles</td>
+<td>Labels such as free shipping and custom savings text</td>
+<td>Not stated</td>
+<td>L1410.006, L1412.011</td>
+</tr>
+<tr>
+<td>Kaching Bundles</td>
+<td>Product bundles with quantity breaks and a highlighted best-selling bundle</td>
+<td>Not stated</td>
+<td>L1324.008, L1327.031</td>
+</tr>
+<tr>
+<td>Frequently Bought Together (older advice, 2021-2022)</td>
+<td>Bundle box on the product page</td>
+<td>Not stated</td>
+<td>L1409.008, L1409.031</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The sources spell the Catching Bundle app two ways, "Catching Bundle" and "Coaching Bundles". Confirm the exact name in the Shopify App Store before you search. [L1411.013, L1410.006, L1412.012]</li>
+</ul>
+<h3 id="bundle-bear-1">Bundle Bear</h3>
+<ul>
+<li>Bundle Bear is a Shopify app for volume-discount bundles, such as buy-two-get-a-percentage-off deals (for example 40% off). It is one of the common apps for this offer type. [L1345.020]</li>
+<li>Bundle Bear creates product bundles with volume discounts and editable offer text. You can change the button text, for example from "Add to cart" to "Get my deal". The lesson reports high conversion with it and calls it simple to use. [L1412.010]</li>
+<li>Bundle Bear shows revenue per offer, so you can see which offer performs. [L1411.011]</li>
+<li>Example tiers from Bundle Bear are buy 2 get 10% off and buy 3 get 15% off. [L1411.012]</li>
+<li>Bundle Bear can combine products on the same product page or with items from another collection, for example a ring with a matching necklace. One store reported a clear rise in average order value after adding it. [L1428.022]</li>
+<li>Bundle Bear's drawback is that it creates a discount for every order that already has a discount, which one seller found annoying. [L1428.022]</li>
+<li><strong>Installation conflict:</strong> The sources disagree. Two lessons say Bundle Bear needs a code line pasted into the Shopify product page template. [L1410.006, L1412.010] A third says it needs no added code, installs on any theme and works with page builders such as PageFly. [L1411.012] Use the code-line route if you edit the product template directly. Use the no-code route if you build the page with a page builder. [L1410.006, L1412.010, L1411.012]</li>
+</ul>
+<h3 id="procedure-first-volume-discount-offer">Procedure: first volume-discount offer</h3>
+<ol type="1">
+<li>Install a bundle or volume-discount app from the Shopify App Store. No code is needed, and it works on most themes and page builders. [L1411.028]</li>
+<li>Create a volume-discount offer, for example buy 2 get 10% off and buy 3 get 15% off. [L1411.028]</li>
+<li>Customize the label and layout of the offer. [L1411.028]</li>
+<li>Place the offer on the product page or in the cart drawer. [L1411.028]</li>
+<li>Check revenue per offer in the app's analytics and compare offers before keeping one. [L1411.028]</li>
+</ol>
+<h3 id="procedure-compare-bundle-apps-and-layouts">Procedure: compare bundle apps and layouts</h3>
+<ol type="1">
+<li>Search the Shopify App Store for "bundle" or "bundle offer". [L1345.091]</li>
+<li>Sort or pick the apps with the most reviews. [L1345.091]</li>
+<li>Open each app and check its demo layout. [L1345.091]</li>
+<li>Compare the layout with the competitor's bundle layout to find the closest match. [L1345.091]</li>
+</ol>
+<h3 id="wide-bundle-and-wide-bundles">Wide Bundle and Wide Bundles</h3>
+<ul>
+<li>Wide Bundle is a Shopify bundle app that shows a bundle layout and volume discount. Its layout can be compared with a competitor's bundle layout to find an inspiration template. [L1345.026]</li>
+<li>Wide Bundles is a Shopify app for bundle and volume-discount offers, with a customizable layout, labels and discount display. It has a 14-day free trial and costs $16 per month after that. [L1411.010]</li>
+</ul>
+<h3 id="white-bundles-and-the-catching-or-coaching-bundle-app">White Bundles and the Catching or Coaching Bundle app</h3>
+<ul>
+<li>White Bundles adds labels such as free shipping and savings text such as "you save $35". [L1410.006]</li>
+<li>White Bundles offers more options than the simpler alternatives, such as custom text like "you save X dollars". [L1412.011]</li>
+<li>The Coaching Bundles app is cheaper and simpler than Bundle Bear, and it needs no code pasted into the page template. [L1410.006, L1412.012]</li>
+<li>Catching Bundle has a 14-day free trial and costs $9 per month billed yearly or $14.99 per month billed monthly. It was described as the cheapest of the three bundle apps. [L1411.013]</li>
+</ul>
+<h3 id="kaching-bundles-1">Kaching Bundles</h3>
+<ul>
+<li>Kaching Bundles is a Shopify app for creating product bundles with quantity breaks. It highlights a best-selling bundle option on the product page. [L1324.008]</li>
+<li>Install Kaching Bundles when you sell bundles, since bundles are a core part of the store's average order value approach. [L1327.031]</li>
+</ul>
+<h3 id="frequently-bought-together-older-advice-2021-2022">Frequently Bought Together (older advice, 2021-2022)</h3>
+<ul>
+<li>Frequently Bought Together is a Shopify app that adds a bundle box to the product page. The box shows the core product with related products and a bundled price. It can be placed anywhere on the page, usually below the Add to cart button. [L1409.008]</li>
+<li>In the box, the core product is labelled "THIS ITEM" and each related product has a selectable checkbox. The customer ticks the add-ons and presses "Add Selected to Cart". The box shows a bundled price for the selected items, and each product can show a sale price beside its regular price. [L1409.031]</li>
+<li>Other on-page bundle apps exist and can be used if they work well. Any on-page app should let each core product have its own specific upsells, matching the upsell planner sheet. [L1409.011]</li>
+</ul>
+<h2 id="product-page-cross-sells-older-advice-2021-2022">Product-page cross-sells (older advice, 2021-2022)</h2>
+<ul>
+<li>Use a "customers who bought this also bought this" style recommendation widget on product pages to drive upsells and multi-product purchases. Shopify apps exist that provide this feature. [L1522.016]</li>
+<li>Shopify apps can provide both recommendation widgets and product bundles on product pages and on standalone bundle pages. Use them to set up cross-sells and value bundles without custom development. [L1522.018]</li>
+</ul>
+<h2 id="free-gifts-and-cart-progress">Free gifts and cart progress</h2>
+<h3 id="free-gift-apps">Free gift apps</h3>
+<ul>
+<li>Easy Gift is a Shopify app that adds a free gift automatically when a product is added to the cart. It shows a pop-up and size selection. [L1315.033]</li>
+<li>Monster Cart is a cart app that can add free gifts and bundles. It opens in the cart and offers the free gift for adding to the order. [L1315.033, L1363.020]</li>
+<li>Free gift apps are optional. The lesson's alternative is to show the free gift in an image on the landing page, with the text "your order comes with a free gift, automatically added to cart" and the gift's title. [L1363.020]</li>
+<li>Free gift apps are not interchangeable. Use the one that fits your store and check its behaviour on the product and cart pages. [L1315.036]</li>
+<li>Two cart apps may conflict. A pop-up from one free gift app may not work with another cart app's own cart. Test the combination before running traffic. [L1315.035]</li>
+</ul>
+<h3 id="checking-the-savings-display">Checking the savings display</h3>
+<ul>
+<li>Some gift apps show savings from the full compare-at price instead of the price you actually charge. This overstates the saving and makes the value look inflated. Check that the displayed saving matches the price charged. [L1315.034]</li>
+<li>Monster Cart shows savings based on the compare-at price, which some gift apps do not do. [L1315.033]</li>
+</ul>
+<h3 id="cart-progress-and-free-shipping">Cart progress and free shipping</h3>
+<ul>
+<li>Monster Cart Upsell offers free-shipping thresholds, free gifts, percent-off tiers, cross-sells, bundles and pre-selected extras. [L1412.021]</li>
+<li>Monster Cart Upsell includes free-shipping upsells as one of its cart offers. [L1410.007]</li>
+<li>Monster Cart Upsell can add shipping offers alongside cross-sell items. [L1411.015]</li>
+</ul>
+<h2 id="cart-drawers-and-cart-upsells">Cart drawers and cart upsells</h2>
+<h3 id="monster-cart-upsell">Monster Cart Upsell</h3>
+<ul>
+<li>Monster Cart Upsell is a cart drawer app for cart upsells, free-shipping upsells, tiered offers, pre-selected add-ons and bundles on the cart page. It has a 10-day free trial and chat support. It is somewhat complex and suits simple funnels. [L1410.007]</li>
+<li>Monster Cart Upsell is a Shopify app for the cart drawer. It adds cross-sell items, several products at once, and shipping offers, and it allows detailed customization of the cart messages. [L1411.015]</li>
+<li>Monster Cart Upsell supports multiple conditions. It is more complex than simple bundle apps, but its chat support can help build funnels. [L1412.021]</li>
+</ul>
+<h2 id="post-purchase-upsell-apps">Post-purchase upsell apps</h2>
+<h3 id="zipify-one-click-upsell-ocu">Zipify One-Click Upsell (OCU)</h3>
+<ul>
+<li><em>Older advice, 2021-2022:</em> One-Click Upsell (Zipify OCU) handles pre-purchase and post-purchase upsells, including cart-page upsells. It lets you design the upsell page, set specific upsells per product, and split test offers and quantities. [L1409.012]</li>
+<li>Zipify OCU is built by the company Zipify, and Shopify promotes it as part of its own platform. It still has to be installed from the Shopify App Store. [L1409.030]</li>
+<li><strong>Price conflict:</strong> The 2021-2022 source says One-Click Upsell is a paid app from $24.99 per month with a 30-day free trial. Additional charges may apply, and the cost is considered reasonable once the app handles meaningful sales volume. [L1409.013] The Source C lesson says Zipify OCU has a 30-day free trial and then costs $35 per month, and it is the more advanced option with features such as custom sections. [L1411.017] The lessons do not say which plan each figure belongs to, so check the current App Store listing before budgeting. [L1409.013, L1411.017]</li>
+<li>Zipify OCU is somewhat more expensive than ReConvert and AfterSale, and it is an alternative to both. [L1412.024]</li>
+<li>Other post-purchase upsell apps exist in the Shopify App Store. Search for "post-purchase upsell" and compare them with One-Click Upsell before choosing. [L1409.014]</li>
+</ul>
+<h3 id="reconvert-upsell">ReConvert Upsell</h3>
+<ul>
+<li>ReConvert Upsell is a post-purchase upsell app with 24/7 chat support. Its funnel can be duplicated for other offers. [L1410.008]</li>
+<li>ReConvert offers post-purchase surveys to learn why a customer bought and their use case, which is useful for Facebook interest targeting. It also offers birthday gift options. [L1410.008]</li>
+<li>ReConvert Upsell and Cross Sell builds post-purchase funnels in which each offer leads to a different offer, depending on whether the customer accepts. It supports page and section customization, tutorials and customer support. [L1411.018]</li>
+<li>Reconvert lets you duplicate a finished funnel and reuse it for other offers. It also supports post-purchase surveys, a birthday gift option, thank-you page customization and 24/7 support. [L1412.022]</li>
+</ul>
+<h3 id="aftersell">AfterSell</h3>
+<ul>
+<li>AfterSell is a cheaper post-purchase upsell app at about $7.99 per month with a 30-day free trial. Each funnel must be built from scratch, unlike ReConvert's duplication feature. [L1410.009, L1412.023]</li>
+<li>AfterSell is a budget option, suggested for a budget under $20 per month. Its features are similar to ReConvert and Zipify OCU. [L1411.019]</li>
+<li>The sources spell the app AfterSell, AfterSale and After Sale. They refer to the same app. [L1410.009, L1411.019, L1412.023]</li>
+</ul>
+<h3 id="post-purchase-comparison">Post-purchase comparison</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>App</th>
+<th>Price and trial</th>
+<th>Main points</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AfterSell</td>
+<td>About $7.99 per month, 30-day trial; suggested budget under $20 per month</td>
+<td>Funnels built from scratch</td>
+<td>L1410.009, L1412.023, L1411.019</td>
+</tr>
+<tr>
+<td>ReConvert</td>
+<td>Price not stated in the sources</td>
+<td>Duplicable funnels, surveys, birthday gifts, 24/7 support</td>
+<td>L1410.008, L1412.022, L1411.018</td>
+</tr>
+<tr>
+<td>Zipify OCU</td>
+<td>30-day trial; $35 per month (Source C). From $24.99 per month with 30-day trial (2021-2022 source)</td>
+<td>Advanced features, custom sections, cart-page upsells</td>
+<td>L1411.017, L1409.013, L1409.012</td>
+</tr>
+<tr>
+<td>Kaching post-purchase upsell</td>
+<td>Not stated</td>
+<td>Advanced tool, installed when scaling</td>
+<td>L1327.033</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="rebuy-smart-cart-and-post-purchase-flows">Rebuy: Smart Cart and post-purchase flows</h2>
+<h3 id="clean-up-old-smart-cart-discounts">Clean up old Smart Cart discounts</h3>
+<ol type="1">
+<li>Set a Smart Cart without product or discount tiers as the live cart. [L1308.023]</li>
+<li>Confirm that the discounts no longer apply, because Functions follows the settings of the live cart. [L1308.023]</li>
+<li>Open Shopify Admin &gt; Discounts and delete the old Rebuy discounts there. Clicking one redirects to the Rebuy admin. [L1308.023]</li>
+</ol>
+<ul>
+<li>Deleting or switching a Smart Cart does not remove the old Functions discounts from Shopify Admin automatically. Leftover entries stay in the Discounts list but do not apply when the active cart has no tiers. Delete them manually to keep the list clean. [L1308.024]</li>
+</ul>
+<h3 id="test-a-smart-cart-copy-without-affecting-live-customers">Test a Smart Cart copy without affecting live customers</h3>
+<ol type="1">
+<li>Duplicate the live Smart Cart in the Rebuy admin. The test copy has the same layout but no effect on live customers. [L1308.027]</li>
+<li>Change the discount tiers in the copy, for example to 4% order discount tiers, and save it. [L1308.027]</li>
+<li>Open the store with <code>preview_smart_cart=&lt;Smart Cart ID&gt;</code>, <code>viewcart=true</code> and <code>cart_version=2</code> in the URL. This shows that copy's discounts at checkout, without switching the live cart. [L1308.027]</li>
+</ol>
+<h3 id="post-purchase-flows-how-they-work">Post-purchase flows: how they work</h3>
+<ul>
+<li>In Rebuy, upsells are offers shown right after a customer accepts an earlier offer. Downsells are offers shown after the customer declines one. Both live inside a post-purchase flow, and the flow pulls in widgets that hold the actual offers. [L1413.001]</li>
+<li>In the Rebuy admin, open the Post Purchase section in the left navigation. It has two areas. Post Purchase Flows is where the complete upsell and downsell sequences are built. Post Purchase Widgets is where the individual offers are created and then referenced inside flows. [L1413.003]</li>
+<li>The Rebuy admin left menu lists Dashboard, Widgets, Products, Landing Pages, Data Sources, Reports and Integrations, plus a Post Purchase section. Under Post Purchase, the three areas are Post Purchase Flows, Post Purchase Widgets and Post Purchase Analytics. Help Docs sits under Support. [L1413.017]</li>
+<li>Each flow in the Post Purchase Flows list shows a status of LIVE or NOT LIVE. Only the flow marked LIVE is shown to customers, so test and draft flows stay NOT LIVE until you switch them on. [L1413.018]</li>
+</ul>
+<h3 id="procedure-build-a-post-purchase-flow">Procedure: build a post-purchase flow</h3>
+<ol type="1">
+<li>Open the Rebuy admin and go to Post Purchase &gt; Post Purchase Flows. [L1413.004]</li>
+<li>Open an existing flow or create a new one. [L1413.004]</li>
+<li>Set the initial offer, the first widget shown to every customer who reaches the checkout confirmation. [L1413.004]</li>
+<li>Add a downsell branch that appears when the initial offer is declined. [L1413.004]</li>
+<li>Add an upsell branch that appears when the initial offer is accepted. [L1413.004]</li>
+<li>Chain further upsells and downsells off any accepted or declined offer to create multi-layer flows. [L1413.004]</li>
+</ol>
+<h3 id="when-offers-appear">When offers appear</h3>
+<ul>
+<li>The initial offer in a post-purchase flow is shown in the Shopify checkout as soon as the customer clicks the Pay Now button. Widget settings and data sources decide which exact offer each customer sees. [L1413.005]</li>
+<li>Rebuy flows show offers only on the checkout confirmation page. They add revenue without changing the customer's original order. Keep upsell and downsell offers separate in the flow so the customer always sees the next logical step. [L1413.016]</li>
+</ul>
+<h3 id="example-bogo-initial-offer-and-downsell">Example: BOGO initial offer and downsell</h3>
+<ul>
+<li>A simple initial offer can be a buy-one-get-one deal with 25% off the second product. Its rule can trigger when the cart contains the input product, and it is set up as the first widget in the flow. [L1413.006]</li>
+<li>Downsell setup: after a customer declines the 25% BOGO initial offer, show a second BOGO offer at 50% off with the message "Last chance, grab it 50% off". This second offer is a downsell because it appears only after a decline. [L1413.007]</li>
+</ul>
+</article><nav class="pn"><a href="../../05-apps-and-tools/14-reviews-social-proof-and-surveys/"><span class="k">&larr; Previous</span><span class="v">Reviews, social proof and surveys</span></a><a class="nx" href="../../05-apps-and-tools/16-product-feeds-google-merchant-center-and-shopping-feed-apps/"><span class="k">Next &rarr;</span><span class="v">Product feeds, Google merchant center and shopping feed apps</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

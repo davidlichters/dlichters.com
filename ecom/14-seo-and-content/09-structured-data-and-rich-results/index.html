@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Structured data and rich results | Ecommerce Playbook</title>
+<meta name="description" content="JSON-LD, schema types, Smart SEO setup, rich snippets, testing tools, and their effect on CTR.">
+<link rel="canonical" href="https://dlichters.com/ecom/14-seo-and-content/09-structured-data-and-rich-results/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Structured data and rich results | Ecommerce Playbook"><meta property="og:description" content="JSON-LD, schema types, Smart SEO setup, rich snippets, testing tools, and their effect on CTR."><meta property="og:url" content="https://dlichters.com/ecom/14-seo-and-content/09-structured-data-and-rich-results/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../14-seo-and-content/">14. SEO and content</a></div><h1>Structured data and rich results</h1><p class="meta">Section 14.9 &middot; 9 of 20 in this chapter &middot; 8 min read</p><article><div class="parts-bar"><span>This section has 10 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="why-structured-data-matters-for-ctr"><summary><h2>Why structured data matters for CTR</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Structured data, schema markup and rich snippets all refer to the same thing: code added to a website that gives search engines extra data about the business, products and stock, which search results can display.</li>
+<li>Schema markup can pull review ratings, product price and stock status into search results, and search engines show this data alongside the normal listing.</li>
+<li>Structured data is installed separately from the meta title and description.</li>
+<li>Product listings can show star ratings from reviews, the product price and the category. These details make a listing stand out and can raise click-through rate.</li>
+<li>Structured data passes store information to Google in the format Google expects, so product listings can show more details. Shown details can include the product title, URL, star ratings, price and stock status.</li>
+<li>Structured data helps a result look more trustworthy and informative, which tends to lift CTR.</li>
+<li>Rich results raise CTR, which signals to Google that the page should rank higher.</li>
+<li>CTR from search results is a relevance signal for Google, so more clicks on a listing with strong reviews can also support organic rankings. Review markup is one way to make a listing stand out.</li>
+<li>A result with rich snippets draws more attention and clicks than competing results without markup, so it can indirectly help rankings.</li>
+<li>Add rich snippets, meaning Schema.org structured data markup, to product pages so that price, availability and ratings appear directly in search results, which increases click-through rate.</li>
+<li>Use rich snippet data <span class="ex">(reviews, price and stock)</span> in search results.</li>
+<li>CTR improves most when the URL, the title, the meta description and the structured data work together. JSON-LD lets organic listings and blog posts show rich snippets, which can raise CTR on pages and blog posts.</li>
+<li>The more business information you enter in the Organization schema, such as email, description, address, social profiles and logo, the more Google can pass along to search results. Complete entries help raise CTR.</li>
+</ul>
+</details><details class="part" id="ranking-effect-sources-disagree"><summary><h2>Ranking effect: sources disagree</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Claim</th>
+<th>When it applies</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source B</td>
+<td>Structured data is not a direct Google ranking factor. Adding it does not raise rankings by itself. Its benefit comes indirectly through more clicks.</td>
+<td>Always, per this source</td>
+<td></td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>Higher CTR from rich results signals that the page should rank higher.</td>
+<td>Where rich results are shown</td>
+<td></td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>CTR from richer results can support rankings.</td>
+<td>Where rich results are shown</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Use the indirect view as the baseline. Expect ranking support only through clicks.</p>
+</details><details class="part" id="what-the-rich-snippet-looks-like"><summary><h2>What the rich snippet looks like</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A product search result can show a star rating with review count, the price and an "In stock" status. The stars come from Review schema, the price and stock status from Product schema. The review data may come from a review app, while the markup code is separate.</li>
+<li>Review schema displays yellow star ratings that stand out strongly from the rest of a search listing and attract the eye. This only helps when the product's rating is good.</li>
+<li>Product schema lets Google show price, stock status, review stars, delivery and return information for product pages in organic results. Smart SEO includes schema, and judge.me adds review stars.</li>
+<li>The handling days, transit days, return policy and shipping details entered in structured data should match what is shown on the store's own pages. Different values can create inconsistent information for Google.</li>
+</ul>
+</details><details class="part" id="schema-types-to-enable"><summary><h2>Schema types to enable</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Use</th>
+<th>Condition</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Website</td>
+<td>Enable as the first step of the setup</td>
+<td>Always</td>
+<td></td>
+</tr>
+<tr>
+<td>Organization</td>
+<td>Enable with business name, URL, contact and logo</td>
+<td>Always</td>
+<td></td>
+</tr>
+<tr>
+<td>Product</td>
+<td>Main type for product pages, enabled after Organization</td>
+<td>Always for product pages</td>
+<td></td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Star ratings in results <span class="ex">(yellow stars)</span></td>
+<td>Only when the product has good ratings</td>
+<td></td>
+</tr>
+<tr>
+<td>Local business</td>
+<td>Location data</td>
+<td>Only when the business has a physical local presence. Online-only stores keep it off</td>
+<td></td>
+</tr>
+<tr>
+<td>Collection</td>
+<td>Lets Google recognise the page as a collection</td>
+<td>Turn on after Product schema</td>
+<td></td>
+</tr>
+<tr>
+<td>Breadcrumbs</td>
+<td>Navigation path in results</td>
+<td>Turn on after Product schema</td>
+<td></td>
+</tr>
+<tr>
+<td>Article</td>
+<td>Blog posts</td>
+<td>Turn on after Product schema</td>
+<td></td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>Questions and answers in results</td>
+<td>Only once the store has a growing set of questions and answers, for example from a Q&amp;A app. Not needed at launch</td>
+<td></td>
+</tr>
+<tr>
+<td>Recipe and How-to</td>
+<td>Recipe and instructional content</td>
+<td>Keep off unless the store publishes that kind of content</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Only enable structured data types that match real content on the store.</li>
+<li>For most e-commerce stores, Review schema and Product schema are the main types. Local business schema is mainly relevant to businesses with a physical location, and only some of their pages need it.</li>
+</ul>
+</details><details class="part" id="choosing-the-implementation-app-or-theme-code"><summary><h2>Choosing the implementation: app or theme code</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Some Shopify themes include schema markup in the Liquid code for product pages. Check the theme for existing markup before adding anything, to avoid duplicating or conflicting with it.</li>
+<li>Most Shopify themes have rich snippet data on by default. Verify that it is turned on.</li>
+<li>JSON-LD structured data is added to a Shopify store with an app, not by theme code alone. The app originally recommended for it was rebranded in 2023. Stores that already use JSON-LD can keep it in place.</li>
+<li>Writing schema markup by hand and keeping it updated is a recurring burden, because schema formats change and outdated markup stops showing in search results. Most store owners who are not coders would need to pay a developer for every update.</li>
+<li>On Shopify, the recommended way to implement schema markup is a dedicated schema app, not a manual developer job. The app's developers update the markup automatically, so the store owner does not need to request updates.</li>
+<li>Even if a Shopify theme already includes some structured data, install a schema app. Theme developers often do not maintain that markup, so a managed app is more reliable. Schema apps cost money, but the course presents them as a worthwhile investment.</li>
+</ul>
+</details><details class="part" id="smart-seo-setup"><summary><h2>Smart SEO setup</h2><span class="pm">1 min</span></summary>
+<p>Enable JSON-LD in Smart SEO and check each part:</p>
+<ol type="1">
+<li>Go to Apps &gt; Smart SEO &gt; JSON-LD.</li>
+<li>Check that structured data is valid for blogs and articles and covers every place where rich snippets are needed.</li>
+<li>In the Collections setting, tick the Collections checkbox so the collection structured data is added. [L368.018]</li>
+</ol>
+<p>Follow this procedure for the Pro plan:</p>
+<ol type="1">
+<li>Open the JSON-LD section of the app.</li>
+<li>Turn on Website schema.</li>
+<li>Turn on Organization schema.</li>
+<li>Enter the business name written as words, not as a domain. For example, enter the brand name, not a.com address.</li>
+<li>Enter the store URL.</li>
+<li>Fill in email, description, address and social profiles. These fields are optional but should be filled out as completely as possible.</li>
+<li>Upload the store logo.</li>
+<li>Click Save.</li>
+<li>Keep Local business turned off for a non-local online store.</li>
+<li>Turn on Product schema.</li>
+<li>Click Configure and link your Judge.me product reviews. This requires Judge.me installed on the store.</li>
+<li>Click Save.</li>
+</ol>
+<p>Then turn on the additional types:</p>
+<ol type="1">
+<li>Turn on Collection schema.</li>
+<li>Turn on Breadcrumbs.</li>
+<li>Turn on Article schema for the blog.</li>
+</ol>
+<p>Case: after one setup in Smart SEO, the store has its logo, social URLs, price range, phone number display and Judge.me review connection. Product listings can then show the star rating, price and category directly in Google results, which makes them more attractive than competitor listings.</p>
+</details><details class="part" id="reviews-in-rich-results"><summary><h2>Reviews in rich results</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>In Judge.me, the review widget title can be set to load with the product title through a setting in the app's settings area. In Stamp.io, this requires adding a small piece of code to the site, which the vendor provides.</li>
+<li>A review widget title containing the product name, for example "product reviews", can help the product page rank for searches for that product's reviews. This only works when the product actually has reviews to show.</li>
+<li>Reviews from supplier websites can be used even if they are 2 to 3 years old. Hiding review dates is not a known policy violation. [L964.135]</li>
+<li>In Google Search Console under Review snippets, all product pages with reviews should be valid <span class="ex">(green)</span>. Invalid review snippets usually mean a code problem on the site. When reviews come from an app such as Judge.me, valid snippets allow review stars to show with product pages in search results.</li>
+</ul>
+</details><details class="part" id="testing-and-verification"><summary><h2>Testing and verification</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Google's free Structured Data Testing Tool checks whether Google can read the structured data on a given page URL. It is the reliable way to verify schema installation, instead of judging by search results.</li>
+<li>Procedure to check a page:
+<ol type="1">
+<li>Open Google's free Structured Data Testing Tool.</li>
+<li>Enter the URL of the page you want to check.</li>
+<li>Read whether Google reports that it can see structured data on that page.</li>
+<li>If Google detects the structured data, the implementation is working, even if the rich snippet does not show in search results.</li>
+<li>If Google does not detect it, the schema is not installed correctly and needs to be fixed.</li>
+</ol></li>
+<li>The Structured Data Testing Tool named in the lesson has been replaced by newer Google tools, such as the Rich Results Test. Before following the steps above, confirm the current tool Google offers for checking structured data in 2026.</li>
+<li>After a JSON-LD app is installed, resubmit and recrawl the sitemap. If Search Console still shows few snippets after that, contact the app's own support, who can check the settings.</li>
+</ul>
+</details><details class="part" id="limits-and-common-mistakes"><summary><h2>Limits and common mistakes</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Google does not always show structured data in search results, even when it is installed correctly. Results can differ by query and by searcher. Searching your own product and not seeing the rich snippet does not prove that the schema is broken.</li>
+<li>Only turn on Local business for product schema if the business has a physical local presence. Online-only stores keep it off.</li>
+<li>Recipe and How-to schema should stay off unless the store publishes that kind of content.</li>
+<li>FAQ schema is not needed at launch. Turn it on only when the store has a growing set of questions and answers.</li>
+</ul>
+</details><details class="part" id="more-rules-worth-knowing"><summary><h2>More rules worth knowing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><p>Smart SEO app &gt; JSON-LD &gt; Enable structured data: make sure the Collections checkbox is ticked. This adds collection structured data so Google can recognise the page as a collection.</p></li>
+<li><p>Use the reviews from supplier websites, even if they are 2 to 3 years old. Hiding review dates is not a known policy violation.</p></li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/14-seo-and-content/09-structured-data-and-rich-results/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../14-seo-and-content/08-search-listings-titles-meta-descriptions-and-snippets/"><span class="k">&larr; Previous</span><span class="v">Search listings: titles, Meta descriptions and snippets</span></a><a class="nx" href="../../14-seo-and-content/10-product-page-seo/"><span class="k">Next &rarr;</span><span class="v">Product Page SEO</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

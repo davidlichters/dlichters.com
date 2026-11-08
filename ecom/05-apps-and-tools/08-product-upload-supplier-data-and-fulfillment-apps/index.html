@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Product upload, supplier data and fulfillment apps | Ecommerce Playbook</title>
+<meta name="description" content="CSV and bulk upload, bulk editors, ChatGPT CSV reformatting, outsourcing uploads, supplier directory, fulfillment/dropshipping apps (AutoDS, CJ, DSers, Zendrop), stock sync, Amazon/FBA tools, order forwarding, freight brokers, and the course&#x27;s ...">
+<link rel="canonical" href="https://dlichters.com/ecom/05-apps-and-tools/08-product-upload-supplier-data-and-fulfillment-apps/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Product upload, supplier data and fulfillment apps | Ecommerce Playbook"><meta property="og:description" content="CSV and bulk upload, bulk editors, ChatGPT CSV reformatting, outsourcing uploads, supplier directory, fulfillment/dropshipping apps (AutoDS, CJ, DSers, Zendrop), stock sync, Amazon/FBA tools, order forwarding, freight brokers, and the course&#x27;s ..."><meta property="og:url" content="https://dlichters.com/ecom/05-apps-and-tools/08-product-upload-supplier-data-and-fulfillment-apps/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../05-apps-and-tools/">5. Apps and tools</a></div><h1>Product upload, supplier data and fulfillment apps</h1><p class="meta">Section 5.8 &middot; 8 of 22 in this chapter &middot; 12 min read</p><article><div class="parts-bar"><span>This section has 12 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="supplier-directories-sourcing-search-and-outreach"><summary><h2>Supplier Directories, Sourcing Search and Outreach</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Source A membership includes a free drop shipping supplier directory in the Bonuses section. Log in with your membership credentials and do not buy external drop shipping directories.</li>
+<li>TSNN.com is a worldwide trade show directory. Search by keyword or industry, open the trade show websites, and use their exhibitor lists to find manufacturers and suppliers to contact. **</li>
+<li>The AliExpress camera <span class="ex">(image search)</span> finds matching products from a photo. Use it on product images from a competitor store to find the same items on AliExpress.</li>
+<li>AliTool is a Chrome extension that runs an image search on AliExpress from a competitor's product image. Use it to find the AliExpress listing and supplier price without searching manually.</li>
+<li>Taobao is a Chinese marketplace linked to AliExpress that recently added English conversion inside the app. Sorting books by highest number of purchases gives a usable demand signal, since purchase volume counts even on a Chinese platform.</li>
+<li>Avoid Spocket for US suppliers. Overlo, which Shopify once promoted, was shut down and is also not recommended.</li>
+</ul>
+<h3 id="supplier-contact-plan-tool">Supplier contact plan tool</h3>
+<ol type="1">
+<li>Open your completed master supplier list.</li>
+<li>Open the supplier contact plan tool through the link below the lesson.</li>
+<li>In the top section, enter your name, company name <span class="ex">(include the LLC name if you formed one)</span>, store name, store URL, business phone number and email address. Use the email format <a href="mailto:firstname@yourstorename.com">firstname@yourstorename.com</a>.</li>
+<li>In the bottom section, enter the supplier company name, supplier website, supplier phone number <span class="ex">(if available)</span> and supplier tier.</li>
+<li>Set the supplier tier to Silver.</li>
+<li>Click the button labeled generate my contact plan and wait a few seconds.</li>
+<li>Review the day-by-day schedule, which lists what to say and what to do each day.</li>
+<li>Click the button labeled download contact plan before contacting the first supplier, to keep a saved copy.</li>
+<li>For each further supplier, create another plan in the tool. Your top-section details are stored, so you only replace the supplier fields.</li>
+</ol>
+</details><details class="part" id="preparing-supplier-product-data"><summary><h2>Preparing Supplier Product Data</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Converting supplier product data into CSV files for upload to the store is the most time-consuming part of store operation. **</li>
+<li>A supplier CSV is not synced automatically with the store. Prices, images and stock must be updated by hand or by re-uploading the reformatted file. **</li>
+<li>Use Google Sheets, Excel or Apple Numbers to edit CSV files before importing into Shopify, and download the result as a CSV. Use Excel for very large files.</li>
+<li>ChatGPT can write spreadsheet formulas for Google Sheets or Excel. Upload the spreadsheet, describe the result you want, and it returns the formulas or a reformatted spreadsheet.</li>
+<li>Canva is a simple tool for editing documents such as spec sheets, for example to remove supplier contact details.</li>
+</ul>
+<h3 id="manual-preparation-of-a-supplier-spreadsheet">Manual preparation of a supplier spreadsheet</h3>
+<ol type="1">
+<li>Take the spreadsheet the supplier sends.</li>
+<li>Rename or rearrange the columns to match the Shopify product CSV standard.</li>
+<li>Check that images, prices and inventory data are included in the file.</li>
+<li>Upload the file to the store.</li>
+</ol>
+<p>If all required data is present, this takes less than an hour. If images must be collected product by product from the supplier's website, the work takes far longer. **</p>
+</details><details class="part" id="chatgpt-csv-reformatting"><summary><h2>ChatGPT CSV Reformatting</h2><span class="pm">1 min</span></summary>
+<h3 id="procedure-version-a">Procedure <span class="ex">(version A)</span></h3>
+<ol type="1">
+<li>Obtain the 'reformat.csv product upload prompt'.</li>
+<li>Open ChatGPT or your preferred AI tool.</li>
+<li>Attach both files: the supplier's original CSV and Shopify's blank template CSV.</li>
+<li>Paste the complete prompt text.</li>
+<li>Send for processing <span class="ex">(typically 2-3 minutes)</span>.</li>
+<li>Review the generated import-ready checklist, which notes AI assumptions <span class="ex">(for example, inventory set to 0 if missing from source data)</span>.</li>
+<li>Ask ChatGPT to correct any assumptions before download if needed.</li>
+<li>Download the converted spreadsheet, ready for Shopify upload.</li>
+</ol>
+<h3 id="procedure-version-b-same-workflow">Procedure <span class="ex">(version B, same workflow)</span></h3>
+<ol type="1">
+<li>Copy the provided AI prompt and paste it into ChatGPT.</li>
+<li>Attach the supplier's CSV and Shopify's template CSV as files.</li>
+<li>Run the prompt.</li>
+<li>Review the AI's output CSV and assumptions checklist.</li>
+<li>Ask the AI to update any missing or incorrect fields.</li>
+<li>Refine until the CSV is fully correct.</li>
+</ol>
+<h3 id="example">Example</h3>
+<ul>
+<li>Converting a misformatted supplier spreadsheet to Shopify template format took 2 minutes 26 seconds. The AI flagged assumptions made during conversion <span class="ex">(inventory defaulting to 0, vendor field left blank)</span> in an import-ready checklist, allowing manual correction before final download and Shopify upload.</li>
+</ul>
+<h3 id="principle-refine-before-downloading">Principle: refine before downloading</h3>
+<ul>
+<li>After ChatGPT converts a supplier CSV to Shopify format, keep asking ChatGPT to refine the spreadsheet within the same conversation rather than downloading immediately.</li>
+<li>Address multiple flagged assumptions together, for example 'set inventory to [quantities]' and 'fill vendor with [brand name]', before downloading the final version.</li>
+<li>This iterative refinement through ChatGPT resolves most CSV issues without requiring post-download manual spreadsheet editing.</li>
+</ul>
+</details><details class="part" id="bulk-editing-tools"><summary><h2>Bulk Editing Tools</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Bulk Edit Shopify Products is a free or paid app for bulk tagging, bulk editing and CSV management without exporting and reimporting files.</li>
+<li>Bulk tag editor apps such as Power Tools can change product tags across many Shopify products at once. Before installing one, read recent reviews and search community reports, because some users have reported that the app blocked editing of their products. <em>(Older, 2024 entry; treat as a current warning.)</em></li>
+<li>The Able Star Bulk Product Editor is a Shopify app that can write product descriptions from basic product details using ChatGPT.</li>
+<li>Matrixify is an Excel-based app for bulk product uploads and updates, collections and metafields. When checked in this lesson it had 549 reviews and a 4.8 star rating.</li>
+<li>Matrixify is a Shopify app for bulk importing and exporting products, collections and other store data through spreadsheets. It is useful for managing large catalogs.</li>
+</ul>
+<h3 id="bulk-price-changes">Bulk price changes</h3>
+<ul>
+<li>Bulk price changes can be done by exporting the product CSV from Shopify, editing it, and importing it back to update everything at once. Discount scheduling can be done inside Shopify without extra apps.</li>
+</ul>
+</details><details class="part" id="outsourcing-uploads"><summary><h2>Outsourcing Uploads</h2><span class="pm">1 min</span></summary>
+<h3 id="fiverr">Fiverr</h3>
+<ul>
+<li>Fiverr is a freelance marketplace for outsourcing Shopify product uploads. Freelancers post services with transparent pricing, star ratings and product counts.</li>
+<li>Example: a freelancer with a 4.9-star rating from 204 reviews offers 50-product uploads for $10. Fiverr Shopify product upload pricing starts at $10 per service.</li>
+<li>You provide the supplier's product data. The freelancer handles store uploads while you maintain security by issuing a collaborator code instead of login credentials.</li>
+<li>Search for 'Shopify product uploads' and review ratings and pricing.</li>
+</ul>
+<h3 id="procedure-for-outsourcing-on-fiverr">Procedure for outsourcing on Fiverr</h3>
+<ol type="1">
+<li>Find a service provider with good reviews.</li>
+<li>Record a video of your process using Loom.com.</li>
+<li>Send the Loom video to the freelancer so they understand your exact process.</li>
+<li>The freelancer uploads products according to your method.</li>
+<li>Double and triple check their work before publishing.</li>
+<li>Verify that no information is mixed up between products.</li>
+</ol>
+<h3 id="other-hiring-options">Other hiring options</h3>
+<ul>
+<li>Upwork and onlinejobs.ph are used to hire people for product uploads or customer service. Check their work, since outsourced uploads can carry pricing mistakes. **</li>
+<li>If the format is unfamiliar or the upload volume is large, a freelancer can be hired to handle CSV bulk uploads.</li>
+<li>If a freelancer needs more than about two hours to upload a complete supplier CSV with images to Shopify, the work is taking too long and the scope or quote should be questioned. **</li>
+</ul>
+</details><details class="part" id="native-shopify-import-and-troubleshooting"><summary><h2>Native Shopify Import and Troubleshooting</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify does not need an extra app or connector to import supplier products. A CSV in Shopify's product format can be uploaded directly through the Shopify admin.</li>
+<li>Shopify's help pages on importing and exporting products cover Using CSV files, Importing products, Exporting products and Solutions to common import problems. Check the troubleshooting section when a CSV import fails. **</li>
+<li>If the data comes from the Oberlo app, follow Shopify's separate guide on dropshipping with Oberlo instead of the standard CSV steps. **</li>
+</ul>
+<h3 id="if-a-large-csv-fails-to-upload">If a large CSV fails to upload</h3>
+<ol type="1">
+<li>Split the file into smaller files.</li>
+<li>Upload the first 200 rows first and test.</li>
+<li>Upload the rest in smaller parts.</li>
+<li>If it still fails, contact Shopify live chat.</li>
+</ol>
+</details><details class="part" id="stock-and-price-sync"><summary><h2>Stock and Price Sync</h2><span class="pm">1 min</span></summary>
+<h3 id="approaches">Approaches</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When the sources use it</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manual stock checks</td>
+<td>Check inventory on the 20 percent of products that sell consistently, not all listings.</td>
+<td></td>
+</tr>
+<tr>
+<td>Supplier-specific sync app</td>
+<td>Check the Shopify app store for a tool built for your supplier, because each supplier uses a different inventory system. No universal app updates stock from every supplier. **</td>
+<td></td>
+</tr>
+<tr>
+<td>Multi-supplier sync app</td>
+<td>Stock Sync updates Shopify stock from supplier feeds, including weekly spreadsheet uploads, and can keep stock accurate across multiple suppliers.</td>
+<td></td>
+</tr>
+<tr>
+<td>Stocksync</td>
+<td>Keeps product inventory synced with supplier stock levels, which helps prevent selling items that are out of stock.</td>
+<td></td>
+</tr>
+<tr>
+<td>Spreadsheet import app</td>
+<td>When a supplier sends messy Excel or CSV files, search the Shopify App Store for an app that imports spreadsheet stock levels. Several apps do this, so compare their features before installing one. **</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The sources differ on whether one app fits all: one says no universal app exists, while another describes a sync app that works across several suppliers. Use the supplier-specific option when the supplier has its own tool, and a multi-supplier app when you manage several feeds.</li>
+<li>Without a sync app, a supplier CSV does not update the store on its own.</li>
+</ul>
+<h3 id="troubleshooting-sync-apps">Troubleshooting sync apps</h3>
+<ul>
+<li>If a product sync app sends repeated 'file format not supported' emails from Shopify, message its live chat while logged into the store admin. These apps usually sync through an API, so the support team can check the account settings.</li>
+</ul>
+<h3 id="price-monitoring">Price monitoring</h3>
+<ul>
+<li>Price-monitoring services track competitor and supplier prices and send alerts when prices change. They reduce manual checks of MAP compliance across many SKUs.</li>
+</ul>
+</details><details class="part" id="fulfillment-and-dropshipping-apps"><summary><h2>Fulfillment and Dropshipping Apps</h2><span class="pm">3 min</span></summary>
+<h3 id="fulfillment-providers">Fulfillment providers</h3>
+<ul>
+<li>Unified Dropshipping is a verified fulfillment agent. Minimum order quantities range from 100 to 1,000 units depending on product cost: higher-priced items have lower MOQs. Access is through Skype with a referral introduction.</li>
+<li>Other fulfillment companies mentioned as options are Unified Drop Shipping, USA Drop and Zendrop. The lesson only demonstrates CJ Drop Shipping and Hyper Rescue.</li>
+<li>CJ Dropshipping is used as a product source and fulfillment supplier, with a processing time of about three days and delivery of about two weeks. AliExpress is used to source products and compare suppliers, and it often has more variety.</li>
+<li>DSers and CJ Dropshipping can set up automatic size conversion on the back end, so the supplier ships a size that fits the customer's order. Check whether your supplier and app combination supports this setting before relying on it.</li>
+</ul>
+<h3 id="installing-a-fulfillment-app">Installing a fulfillment app</h3>
+<ol type="1">
+<li>Go to Apps &gt; Sales channel settings &gt; Shopify App Store.</li>
+<li>Search for the app, for example CJ Dropshipping or Hyper Rescue.</li>
+<li>Click Install.</li>
+<li>Create the supplier account when the app prompts you.</li>
+</ol>
+<h3 id="autods">AutoDS</h3>
+<p>AutoDS is an automation app that lists supplier products in the Shopify store, imports them and fulfills incoming orders automatically, notifying the supplier when an order arrives. It can map add-on variants so that orders from multiple items are sent to the supplier together.</p>
+<p>It works as an automation system rather than a support system, so it offers little help with refunds, returns or damaged packages. A fulfillment company app with live agent support is preferred for those cases.</p>
+<p><strong>Setup: connecting the store and importing products</strong></p>
+<p>Method A: Chrome extension</p>
+<ol type="1">
+<li>Search Google for 'AutoDS dropshipping helper' and add that extension to Chrome.</li>
+<li>After installing the app, connect the store in AutoDS. Then install the AutoDS dropshipping helper Chrome extension.</li>
+<li>On the supplier product page, click the extension button that appears.</li>
+<li>Choose your Shopify store in the extension and click Save.</li>
+<li>Wait for the import. The product then appears under Drafts in AutoDS.</li>
+</ol>
+<p>Method B: single product by URL</p>
+<ol type="1">
+<li>In AutoDS, click Add products at the top left, then Single product.</li>
+<li>Choose your store and click Next.</li>
+<li>Paste the supplier product URL.</li>
+<li>Click Publish to store.</li>
+</ol>
+<p><strong>Editing a product in AutoDS before import <span class="ex">(saves time)</span></strong></p>
+<p>Before importing, edit the product in AutoDS:</p>
+<ol type="1">
+<li>Open the draft with the arrow on the left side.</li>
+<li>Set the title <span class="ex">(from a prepared list)</span>, collection and tags.</li>
+<li>Delete the default description and paste your prepared description.</li>
+<li>Make sure monitoring is on for stock, price and auto order.</li>
+<li>Deselect variants you do not want <span class="ex">(for example the UK or EU plug)</span> and variants that are out of stock.</li>
+<li>Select which images to import, and add more with add image if needed.</li>
+<li>Check the item specifications.</li>
+<li>Click Save and import. The product then appears on the store product page.</li>
+</ol>
+<p><strong>Shipping methods and automatic fulfillment</strong></p>
+<ul>
+<li>Shipping methods are found under Settings &gt; Lister and offer three options: cheapest, cheapest with tracking, and fastest with tracking. Pick the option your supplier actually offers. The other settings can be left alone at the start.</li>
+<li>Under Settings &gt; Orders, turn on both boxes so that orders are marked as fulfilled by AutoDS automatically. The question mark icons next to these options explain what happens.</li>
+</ul>
+<p><strong>Funding automatic fulfillment</strong></p>
+<ul>
+<li>Automatic fulfillment is paid from a balance, so the account needs funds. Either link a credit card or top up the balance under Balance, because each automatically fulfilled order is charged to it.</li>
+</ul>
+<p><strong>Notifications</strong></p>
+<ul>
+<li>Turn on all order notifications under Notifications: failed orders, tracking numbers received, new orders, and successfully processed orders.</li>
+<li>Also turn on stock and price change notifications and set the email frequency to daily.</li>
+</ul>
+</details><details class="part" id="middleman-apps-the-courses-position"><summary><h2>Middleman Apps: The Course's Position</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Position A <span class="ex">(direct supplier model)</span>:</strong> Shopify dropshipping apps are not used or recommended in this model because they act as middlemen between the store and the supplier. The store should instead work with direct supplier relationships and the tools covered in the store setup.</li>
+<li><strong>Position B <span class="ex">(app-based fulfillment)</span>:</strong> Source C builds the workflow around AutoDS, CJ Dropshipping and similar fulfillment apps, which automate listing, importing and order forwarding.</li>
+<li><strong>When each applies:</strong> Position A fits when you work with suppliers directly and want no intermediary between store and supplier. Position B fits when you want orders forwarded automatically, accepting that the app is an automation system and not a support system, so refunds, returns and damaged packages need a fulfillment company app with live agent support.</li>
+<li>Paying for a supplier integration app is worth it only when the brand ranks high on competitor sites and sells well. Check the monthly price first and judge it against expected sales.</li>
+</ul>
+</details><details class="part" id="order-forwarding-and-supplier-order-emails"><summary><h2>Order Forwarding and Supplier Order Emails</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>An order forwarding app works independently of the store theme. A store can change its theme without changing its order forwarding setup. **</li>
+<li>Shopify Email and Shopify automations may be able to send supplier order emails natively, but this is untested. A separate email platform such as Klaviyo can also handle this, so check both options before choosing one.</li>
+</ul>
+</details><details class="part" id="freight-and-shipping-quotes"><summary><h2>Freight and Shipping Quotes</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What the sources say</th>
+<th>Sources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Freightcenter.com <span class="ex">(quote aggregator)</span></td>
+<td>Returns quotes from several carriers based on origin, destination, package size and weight.</td>
+<td></td>
+</tr>
+<tr>
+<td>Freightcenter.com <span class="ex">(shipments and BOL)</span></td>
+<td>Used to create freight shipments and generate the Bill of Lading (BOL) for supplier-shipped freight.</td>
+<td></td>
+</tr>
+<tr>
+<td>Freight Center <span class="ex">(heavy products)</span></td>
+<td>Enter a warehouse address or zip code and several destination zip codes to get estimates for shipping heavy products.</td>
+<td></td>
+</tr>
+<tr>
+<td>Freight Club and Freight Center</td>
+<td>Described as freight carriers that quote the same carriers with different markups. Compare both quotes. **</td>
+<td></td>
+</tr>
+<tr>
+<td>Red Hawk and freightcenter.com</td>
+<td>Provide shipping quotes that can be compared against supplier shipping prices.</td>
+<td></td>
+</tr>
+<tr>
+<td>Interparcel (Australian example)</td>
+<td>Online freight broker for booking pickup and delivery of shipments you arrange yourself, with a quick quote showing price options.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Freight broker and freight quote sites, for example freightcenter.com, can reduce freight shipment costs considerably. The speaker reported savings of about 100 dollars or more per shipment. **</li>
+<li>The sources describe Freight Center differently: as a quote aggregator for several carriers and as a carrier whose quotes differ in markup from Freight Club. Compare its quote with the other option before choosing a carrier.</li>
+</ul>
+</details><details class="part" id="marketplaces-and-print-on-demand"><summary><h2>Marketplaces and Print on Demand</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify has built-in multi-channel selling that can list products on marketplaces such as eBay and Amazon. Before using it, check every brand's agreement, because many brands prohibit selling through third-party platforms. **</li>
+<li>Printful is a large print on demand provider with a reputation for good product quality. It is an option if print on demand products are added to a store.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/05-apps-and-tools/08-product-upload-supplier-data-and-fulfillment-apps/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../05-apps-and-tools/07-store-building-themes-page-builders-and-store-settings/"><span class="k">&larr; Previous</span><span class="v">Store building: themes, page builders and store settings</span></a><a class="nx" href="../../05-apps-and-tools/09-product-options-personalization-and-digital-products/"><span class="k">Next &rarr;</span><span class="v">Product options, personalization and digital products</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

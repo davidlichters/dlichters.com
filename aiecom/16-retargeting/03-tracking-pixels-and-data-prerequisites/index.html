@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tracking, pixels and data prerequisites | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.3: Tracking, pixels and data prerequisites.">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/03-tracking-pixels-and-data-prerequisites/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Tracking, pixels and data prerequisites | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.3: Tracking, pixels and data prerequisites."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/03-tracking-pixels-and-data-prerequisites/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/03-tracking-pixels-and-data-prerequisites/">Plain version</a></div><h1>16.3 Tracking, pixels and data prerequisites</h1><article><h2 id="prerequisites-for-tracking-and-data">Prerequisites for Tracking and Data</h2>
+<h3 id="setting-up-pixels-and-tags">Setting Up Pixels and Tags</h3>
+<ul>
+<li>Retargeting pixels and tracking codes from Google Ads, Facebook and Google Analytics must be installed on all content pages of the site. [L0493.002]</li>
+<li>Retargeting only works after tracking is set up on each ad network you plan to use. Cookies placed on visitors who view pages or take actions on your site become the basis for the audiences you target. [L1390.001]</li>
+<li>The Google Ads retargeting pixel must be installed on the Shopify store before a website visitor audience can fill with visitors. Without it the audience stays empty. [L1242.009]</li>
+<li>Add the remarketing tag through the Feeds for Google Shopping app before launch so that visitors are tracked from their first visit. The remarketing campaigns themselves are set up after the store goes live. [L1145.048]</li>
+<li>Every visitor should be pixeled on every store you own, so you can retarget them on Facebook and Google later. Stores you own can carry the pixel because you control their code, but you cannot track visitors through affiliate links. [L0923.011]</li>
+</ul>
+<h3 id="avoiding-duplicate-installs">Avoiding Duplicate Installs</h3>
+<ul>
+<li>Install each tag or pixel only once, because duplicate installs of the same tag distort tracking. [L0493.003]</li>
+<li>Installing the Google Shopping feed app's tracking events twice creates duplicate events with the same names in the tag list. Choose the one labeled 'purchase in category' and keep only one copy of each event in the account. [L0420.011]</li>
+</ul>
+<h2 id="verifying-firing">Verifying Firing</h2>
+<ul>
+<li>Pixels and tracking codes often exist in an existing store but are set up incorrectly or not firing, so verify that they register site visits. [L0493.003]</li>
+</ul>
+<h2 id="data-sharing-settings">Data Sharing Settings</h2>
+<ul>
+<li>Since 2023, GA4 remarketing audiences require data sharing settings to be enabled, or audiences show a 'not eligible' status. [L0274.026]</li>
+<li>Enable the following settings:
+<ol type="1">
+<li>Granular location and device data</li>
+<li>Google insights</li>
+<li>Ads personalization</li>
+<li>Acknowledgement of user data collection [L0274.026]</li>
+</ol></li>
+</ul>
+<h2 id="privacy-and-ad-blocker-losses">Privacy and Ad-Blocker Losses</h2>
+<ul>
+<li>A remarketing audience can show zero impressions even with daily clicks, because ad blockers and browser privacy prevent tracking of part of the visitors. Estimate the trackable share first; for example, about 40 of 50 daily clicks may be trackable. [L0470.010]</li>
+<li>Visitors who block tracking in their browser are excluded from Google and Meta remarketing audiences, and repeat visits from the same person count only once. [L1283.109]</li>
+<li>Remarketing audiences built on advanced privacy blocking still work using platform-owned data such as link clicks, comments and shares. Platforms with their own data, such as Google-owned YouTube, can still target viewers. [L1112.027]</li>
+</ul>
+<h2 id="traffic-minimums">Traffic Minimums</h2>
+<ul>
+<li>Each advertising platform requires a minimum amount of traffic, usually within a 30-day window, before a retargeting audience can be built and activated. [L0493.004]</li>
+<li>A low-traffic store can keep its audiences below the 100-person minimum for weeks, so check audience size before changing bids or budgets. [L1283.109]</li>
+<li>A new store with low traffic can still create audiences in Google Ads and Facebook ahead of time. Such an audience stays inactive until enough visitors fill the pool, then it can be used straight away and ads can run on it automatically. [L0493.005]</li>
+</ul>
+<h2 id="filtering-low-quality-visits">Filtering Low-Quality Visits</h2>
+<ul>
+<li>Add a minimum session duration rule to each audience, or delay pixel firing with a trigger rule in Google Tag Manager. Set the delay to 30 seconds so bouncing visitors stay out of the cookie pool. [L1390.018]</li>
+</ul>
+</article><nav class="pn"><a href="../../16-retargeting/02-when-to-start-and-how-much-to-spend/"><span class="k">&larr; Previous</span><span class="v">When to start and how much to spend</span></a><a class="nx" href="../../16-retargeting/04-planning-audiences-funnel-stages-segmentation-and-windows/"><span class="k">Next &rarr;</span><span class="v">Planning audiences: funnel stages, segmentation and windows</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

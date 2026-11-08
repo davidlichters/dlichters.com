@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Performance Max and Automation | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.20: Performance Max and Automation.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/20-performance-max-and-automation/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Performance Max and Automation | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.20: Performance Max and Automation."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/20-performance-max-and-automation/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/20-performance-max-and-automation/">Plain version</a></div><h1>10.20 Performance Max and Automation</h1><article><h2 id="performance-max-and-automation">Performance Max and Automation</h2>
+<h2 id="humans-and-machines">Humans and Machines</h2>
+<ul>
+<li>The effective approach combines humans and machines. The marketer sets goals, campaign structure, tests and feed quality, while automation calculates bids across many dimensions. Manual control alone leaves dimension value untapped, and trusting automation blindly leaves no check on results. [L0454.009]</li>
+<li>Systems that learn from outcomes can find patterns that rules written by humans miss. An early drop in ROAS during the learning phase is normal and should not trigger an immediate reversal. Judge automated bidding only after it has had time to learn. [L0454.013]</li>
+<li>Keep a human in control of bids, budgets and structure, and use AI mainly for research and analysis. Do not hand a live Google Ads account to an AI agent to run unattended. [L0876.001]</li>
+<li>Errors compound at scale: one bad bid or budget change applied across an account can burn a lot of money before anyone notices. Some account mistakes take weeks or months to repair. [L0876.002]</li>
+<li>Current AI models handle short, single tasks well but fail on long chains of steps, repeated tasks and tasks requiring exact steps. They may skip a step or enter details incorrectly, which is costly in a live ad account. [L0876.004]</li>
+</ul>
+<h2 id="account-maturity-and-starting-point">Account Maturity and Starting Point</h2>
+<ul>
+<li>Standard Shopping is preferred over Performance Max for most merchants. Performance Max gives Google full control of targeting, placements and bidding with less transparency. (Older, 2022.) [L0272.033]</li>
+<li>Standard Shopping campaigns are preferred over Performance Max for non-impulse products because they provide control over keywords and clear data on what is performing. [L0255.041]</li>
+<li>Standard Shopping stays the core of the account. Performance Max, if tested, sits beside it. [L0854.051, L0969.056, L0941.070]</li>
+<li>For most new stores, start with Alpha Beta standard Shopping campaigns and run Performance Max alongside them rather than replacing them. (Older, 2022.) [L1113.057]</li>
+<li>In a new account with no conversion history, do not use Smart Shopping for all products. Use standard Shopping campaigns with individual bids until Google has conversion data. (Older, 2021.) [L1112.014]</li>
+<li>Smart Shopping and other automated bidding are not recommended for new accounts, because Google has no store data yet and will spend money broadly. Start with manual bidding and controlled setup, then consider automation once the account has a history of profitable data. (Older, 2021.) [L1090.095]</li>
+<li>Automated bidding works best when the account already has a large history of conversions, since the platform then knows which clicks are likely to buy. Without that history, automation mainly spends on random clicks. (Older, 2021.) [L1090.096]</li>
+<li>For most accounts, scaling manual campaigns gives a higher return on ad spend more easily than experimenting with smart campaigns. Scaling the manual campaigns is therefore the default choice. (Older, 2022.) [L0963.003]</li>
+<li>Switching a working account to Smart Shopping while raising budgets can make the numbers unreadable. If an agency did this during a scale-up, revert to manual campaigns and scale there. (Older, 2022.) [L0963.007]</li>
+</ul>
+<p>Prerequisites named in the sources:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign or step</th>
+<th>Condition</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Performance Max</td>
+<td>Start after about 30 to 40 sales; before that, begin with Search and Shopping campaigns around the product keywords</td>
+<td>L0788.014</td>
+</tr>
+<tr>
+<td>Performance Max</td>
+<td>Needs at least 50 conversions to optimize well</td>
+<td>L1213.003</td>
+</tr>
+<tr>
+<td>Performance Max</td>
+<td>Use only with a store already profitable on standard Shopping</td>
+<td>L0969.056</td>
+</tr>
+<tr>
+<td>Performance Max</td>
+<td>Test only if Smart Shopping already worked profitably for the account (older, 2022)</td>
+<td>L0272.032</td>
+</tr>
+<tr>
+<td>Performance Max</td>
+<td>Works well only with a large history of past conversions</td>
+<td>L0970.116</td>
+</tr>
+<tr>
+<td>Smart Shopping rollout, per brand</td>
+<td>Brand has more than 20 conversions per month and 100 or fewer products</td>
+<td>L0454.036, L1033.005</td>
+</tr>
+<tr>
+<td>Smart Shopping, per product group</td>
+<td>Product groups hold 100 or fewer products, and each small group generates more than 20 conversions per month</td>
+<td>L1033.005</td>
+</tr>
+<tr>
+<td>Smart Shopping</td>
+<td>Most worth running when the account already has a high impression share</td>
+<td>L1033.006, L0454.036</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="performance-max-behavior-and-decline">Performance Max: Behavior and Decline</h2>
+<ul>
+<li>Performance Max campaigns initially target the hottest existing audiences, people who visited the store, and produce high ROAS. As these audiences see the ads repeatedly and become exhausted, Google expands targeting to wider, colder audiences who are less likely to convert, so ROAS drops significantly. Performance Max, including feed-only campaigns, often performs well for a few weeks or months and then return on ad spend drops sharply, because it increasingly retargets existing visitors until those audiences run out. When this happens, add other Google traffic sources. It typically starts strong, first remarketing heavily to the warmest visitors, and it is not recommended as a core approach. [L0255.040, L0667.006, L0965.006, L1015.007]</li>
+<li>As of April 2025, Performance Max campaigns are not recommended. They show strong performance initially but decline over time as audiences exhaust. [L0255.039]</li>
+<li>Performance Max remains a black box. Remarketing lists inflate its early results before performance slows once those lists max out. [L1283.032]</li>
+<li>Performance Max is not recommended for dropship products. The lack of data visibility and declining performance over time make it unsuitable. [L0255.042]</li>
+<li>Use Standard Shopping rather than Performance Max for Google Shopping campaigns, because Performance Max has not shown consistent results. [L1115.038]</li>
+<li>Performance Max results are inconsistent: some accounts lose money with it. It is not recommended for this store model. [L0855.016]</li>
+<li>Performance Max is not recommended for this business model, because it did not perform consistently across several accounts where it was tested. A campaign that is getting impressions can still produce poor-quality traffic, since impressions alone do not show whether they lead to sales. [L1015.006]</li>
+<li>Performance Max is not recommended for the store types taught in the course as of March 2023. Standard Shopping campaigns outperform it, so do not run Performance Max. [L0964.051]</li>
+<li>Performance Max was not used by the team because results were inconsistent across stores. The team uses Shopping Alpha/Beta and other campaign types instead. [L0971.058]</li>
+<li>Performance Max is a newer Google campaign type that Google pushes heavily. It does not replace standard Shopping campaigns, so test it with about 10% of the budget only and keep the proven Shopping campaigns as the main spend. (Older, 2022.) [L0854.051]</li>
+<li>Performance Max results vary widely, and there is no fixed set of rules that works in all accounts. Creating more asset groups segmented by product category, brand or best-selling products is the most reliable adjustment seen so far. (Older, 2022.) [L1281.101]</li>
+<li>Performance Max has not replaced Standard Shopping in the owner's accounts. It sometimes targets people who click a lot but do not buy, so stick with Standard Shopping unless tests show otherwise. [L0941.070]</li>
+<li>Performance Max shows products across Google Shopping and other Google inventory such as YouTube and Gmail, and uses built-in AI to choose placements. It helps control spend because the system places ads where it expects a return. [L1508.005]</li>
+<li>After moving from Smart Shopping to Performance Max, one seller reported sales from YouTube and Gmail placements that the earlier setup did not bring in. Performance Max therefore added incremental sales through Google's other channels. [L1508.017]</li>
+<li>Google Shopping moved from regular Shopping, where higher bids raised placement, to Smart Shopping, which balanced toward a target return, and now to Performance Max. Shopping-based campaigns are still described as the strongest return on ad spend among Google formats. [L1508.004]</li>
+<li>Performance Max automatically handles retargeting. After setup it needs little work once it has been given enough time, which the mentor said could be more than two weeks. [L1107.016]</li>
+</ul>
+<h2 id="performance-max-results-seen-in-sources">Performance Max: Results Seen in Sources</h2>
+<ul>
+<li>Performance Max campaigns across several accounts returned about 6 to 9 in return on ad spend. Results were not clearly better than manual campaigns, so underperforming campaigns were turned off and the others kept running. [L0970.117]</li>
+<li>An agency-managed Google Ads account with Performance Max returned about 4x to 5x ROAS, with the main returns coming from that campaign type. [L1213.009]</li>
+<li>Performance Max worked for some accounts but failed for others with the same setup. (Older, 2022.) [L1113.057]</li>
+<li>A Google Ads account was shown with about 450,000 spend over several years in Performance Max campaigns; the speaker estimated the spend at about 450,000 in the shown view. [L1440.034]</li>
+<li>In an already optimized Performance Max campaign, add budget to scale. Remove products that keep consuming spend without producing sales. (Older, 2022.) [L1113.058]</li>
+</ul>
+<h2 id="performance-max-brands-negatives-and-setup">Performance Max: Brands, Negatives and Setup</h2>
+<ul>
+<li>Google Ads for brands (not dropshipping) works best when there is branded search intent. Performance Max campaigns received most of their sales from brand search terms, so they had to be adjusted. [L0577.051]</li>
+<li>Performance Max negative keywords cannot be added directly. You need to contact Google support to add them manually. Brand-term share can be checked under Insights, which only looks back 28 days. [L0577.052]</li>
+<li>For a product store on Google, use Performance Max rather than standard Shopping or Smart Shopping campaigns. Performance Max pulls from the shopping feed and runs across Search, Display, YouTube and Shopping. [L1251.023]</li>
+<li>Once Performance Max and the Google Merchant Center feed are set up, the campaign runs largely hands-off, because Google handles much of the optimization. The main work is in the initial setup and the assets. [L1251.025]</li>
+<li>Start Google Ads for e-commerce with Performance Max, since it automates distribution across Search, Shopping, YouTube and Display from Google data. It needs a week or two before manual changes, and it needs consistent budget to optimize. [L1440.032]</li>
+<li>Performance Max is harder to set up for beginners because it needs money to optimize. Do not micromanage it the way TikTok or Facebook is managed. Search and shopping ads are harder to run than Performance Max for beginners. [L1440.033]</li>
+<li>Performance Max is an AI-driven campaign type that needs a couple of weeks before its results can be judged. Once it runs, the main job is to adjust budgets every one or two weeks. [L0694.037]</li>
+<li>Start Performance Max only after the account has about 30 to 40 sales. Before that, begin with Search and Shopping campaigns using keywords around the product. [L0788.014]</li>
+<li>Performance Max needs at least 50 conversions to optimize well. The account also needs about two weeks to collect data and warm up before results stabilize. [L1213.003]</li>
+</ul>
+<h2 id="smart-shopping-status-and-campaign-types">Smart Shopping: Status and Campaign Types</h2>
+<ul>
+<li>Smart Shopping campaigns were sunset by the end of Q3 2022. Merchants migrated to either Standard Shopping or Performance Max. [L0272.031]</li>
+<li>Smart Shopping is being sunset and replaced by Performance Max. Standard Shopping is the campaign type taught as the core. (Older, 2022.) [L0969.057]</li>
+<li>Smart Shopping campaigns are generally not recommended. Performance Max may be tested with about 10% of the ad budget, but it only works well with a large history of past conversions. [L0970.116]</li>
+<li>Shopping campaign types include standard Shopping, Dynamic ads on the Google network, YouTube shopping, Gmail shopping and product listing retargeting on the display network. Smart Shopping is Google's automated campaign type and automatically includes retargeting, dynamic retargeting, YouTube ads and Gmail ads. [L0454.033]</li>
+<li>Smart Shopping is most worth running when the account already has a high impression share. It covers Shopping, retargeting, dynamic retargeting, YouTube ads and Gmail ads, and is valued for simplicity, performance and reach. [L1033.006]</li>
+<li>Smart Shopping gives little control. You cannot see placements, performance by dimension such as gender, location or income, or the split between cold and retargeting traffic, and negative keywords are not available. Placement exclusions can only be set at the account level. [L0454.034]</li>
+<li>Smart Shopping works best with one brand per campaign. Product groups should contain 100 or fewer products, and each small product group should generate more than 20 conversions per month. [L1033.005]</li>
+</ul>
+<h2 id="smart-shopping-learning-time-and-stability">Smart Shopping: Learning Time and Stability</h2>
+<ul>
+<li>Pausing a new Smart Shopping campaign before it has enough conversions cuts off its learning. Google suggests giving it about one month to learn. Judge it only after that period. [L0454.035]</li>
+<li>Frequent changes to Smart Shopping campaigns disrupt the automated learning, so settings should be left alone for a stable period. Make adjustments deliberately rather than on a daily basis. [L1033.007]</li>
+<li>The lesson estimated Smart Shopping succeeds about 50 to 60% of the time. Sometimes it performs very well, sometimes it needs more learning, and sometimes it must be turned off in favor of Alpha Beta. Plan for all three outcomes. [L0454.037]</li>
+<li>Automated Google recommendations and Smart features mainly raise spend rather than performance. For high-ticket dropshipping, managing settings manually performs better, so use your own judgment. (Older, 2021-22.) [L0742.016]</li>
+</ul>
+<h2 id="smart-shopping-rollout-procedure">Smart Shopping Rollout Procedure</h2>
+<p>Procedure to roll out Smart Shopping safely [L0454.036, L1033.005]:</p>
+<ol type="1">
+<li>Start with one brand at a time.</li>
+<li>Exclude that brand from the standard Alpha Beta campaign.</li>
+<li>Place the brand in a Smart Shopping campaign.</li>
+<li>Prefer brands with 100 or fewer products, since smaller sets are easier for Google to learn.</li>
+<li>Confirm the brand already has more than 20 conversions per month.</li>
+<li>Prioritize brands that already convert well and have a high search impression share, because they gain the most clicks and conversions.</li>
+<li>Do not change the campaign frequently; allow about one month for learning.</li>
+</ol>
+<p>Build the shopping structure in a hierarchy: keep Alpha Beta as the baseline, peel one brand into Smart Shopping, then test Bing, other product listing ads, YouTube shopping ads and Gmail shopping ads. Compare each new element against the Alpha Beta baseline before expanding it. [L0454.039]</p>
+<h2 id="testing-automation-safely">Testing Automation Safely</h2>
+<p>Procedure to test a change safely with Drafts and experiments [L0454.023]:</p>
+<ol type="1">
+<li>Open Drafts and experiments in the left sidebar of Google Ads.</li>
+<li>Create a draft from the campaign; the draft lets you change the campaign without affecting live traffic.</li>
+<li>Make the changes to test in the draft, for example grouping products instead of segmenting by product ID, turning on automated bidding, or adding negative keywords.</li>
+<li>Run an experiment from the draft.</li>
+<li>Set how much traffic or budget goes to the test, for example a 50/50 split or a smaller share of 20, 30 or 40%.</li>
+<li>Compare the results and decide based on the experiment outcome.</li>
+</ol>
+<p>Procedure to test automated bidding on an existing Shopping campaign [L1033.003]:</p>
+<ol type="1">
+<li>In Google Ads, open Drafts and Experiments.</li>
+<li>Create a draft from the original campaign.</li>
+<li>In the draft, turn on bid automation.</li>
+<li>Run the draft as an experiment against the original campaign and compare the results.</li>
+</ol>
+<p>An experiment tests automated bidding on a share of traffic instead of the whole campaign. If the automated version wins, the test shows where to scale; if the manual campaign wins, that result confirms the existing setup beats automation. Either outcome is useful. [L0454.024]</p>
+<p>A couple of years before the lesson, automated bidding beat manual setups only about 10 to 20% of the time, and that share was rising. Test automated bidding on your own account instead of assuming either outcome. [L0454.025]</p>
+<p>With a large amount of account data, a smart campaign can be tested at a small budget in parallel with the manual campaigns. The manual campaigns stay switched on during the test. (Older, 2022.) [L0963.002]</p>
+<h2 id="case-switching-a-shopping-account-to-smart-shopping">Case: Switching a Shopping Account to Smart Shopping</h2>
+<p>A client's Shopping product listing ads were slowly declining. The campaign manager switched the account from the standard Alpha Beta shopping setup to Smart Shopping. Afterwards the chart showed large daily swings, with revenue peaks around $25,000 on some days and a reference line near $12,500 that many days exceeded. Cost and conversions were high but volatile, and the recent period clearly outperformed the older period on sales and ROI. [L0454.049]</p>
+<h2 id="ai-for-keyword-and-search-term-work">AI for Keyword and Search Term Work</h2>
+<ul>
+<li>Use AI for keyword research, search term analysis and negative keyword lists rather than for managing the ad account itself. These tasks carry the least risk and give the biggest time saving. [L0876.005]</li>
+<li>Any large language model can be used for the negative keyword and search term prompts. The lesson used Gemini in a browser chat for these tasks. [L0876.030]</li>
+<li>For a large search terms export, attach the full file to an AI chat together with the audit prompt and wait for it to finish. A file of about 13,000 rows took a few minutes to process in Gemini, so review the output only after the run is complete. [L0876.038]</li>
+<li>AI generates plausible-looking keywords without knowing whether anyone searches for them, so it can produce long lists of terms with zero search demand. Never build campaigns on AI keyword ideas before validating their search volume. [L0876.007]</li>
+</ul>
+<p>Keyword validation procedure [L0876.006]:</p>
+<ol type="1">
+<li>Use AI to generate keyword ideas and group them by theme and intent.</li>
+<li>Take the keyword groups into Google Keyword Planner.</li>
+<li>Check each group for real average monthly search volume and keep only terms that people actually search.</li>
+<li>Feed the validated set back to the AI as seed keywords to find more ideas, then validate again.</li>
+</ol>
+<p>Keyword and campaign prompt [L0876.008]:</p>
+<pre class="text"><code>Act as a senior Google Ads strategist working for eCommerce and DTC brands.
+
+1. Business summary from the website alone: Describe what the company sells, its main product category, the problems its customers face, its core benefits and unique selling points, its trust signals, current offers, pricing and guarantees, and any compliance limits (claims that cannot appear in ads).
+
+2. High-volume keyword themes: Using that summary, group keyword themes by product sold, priority and search intent. Keep each ad group narrow enough that matching ad copy can be written for it. For every theme, state its intent stage and priority. Never invent keywords nobody searches for. Mark every theme that still needs search volume confirmation.</code></pre>
+<h2 id="where-sources-disagree">Where Sources Disagree</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>One source says</th>
+<th>Other source says</th>
+<th>When each applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is Performance Max worth running?</td>
+<td>Not recommended for dropshipping, black box, declines over time, or for this store model [L0255.039, L0255.042, L1115.038, L0855.016, L1015.006]</td>
+<td>Start a product store on Performance Max; an agency account returned about 4x to 5x ROAS [L1251.023, L1440.032, L1213.009]</td>
+<td>The negative view covers dropshipping and the store model taught in the course. The positive view covers a product store on Google, with branded intent in the brand case [L0577.051, L1251.023]. Test in your own account [L0454.025]</td>
+</tr>
+<tr>
+<td>Size of a Performance Max test</td>
+<td>About 10% of the budget, with Standard Shopping as the main spend (older, 2022) [L0854.051]</td>
+<td>About 10% of the ad budget (2023) [L0970.116]; a small budget in parallel with manual campaigns still on (older, 2022) [L0963.002]</td>
+<td>Same test size in both; the proven Shopping campaigns stay on in every version</td>
+</tr>
+<tr>
+<td>Time before judging Performance Max</td>
+<td>8+ weeks to reach Smart Shopping performance; results not guaranteed (older, 2022) [L0272.032]</td>
+<td>About two weeks to collect data and warm up [L1213.003, L0694.037, L1440.032]; more than two weeks [L1107.016]</td>
+<td>The 8+ week figure compares to Smart Shopping; the two-week figures cover stabilization</td>
+</tr>
+<tr>
+<td>Start Performance Max or not</td>
+<td>Start only after about 30 to 40 sales [L0788.014]</td>
+<td>Start Performance Max as the first campaign [L1440.032]</td>
+<td>Use the sales count as the gate; below it, begin with Search and Shopping [L0788.014]</td>
+</tr>
+<tr>
+<td>Automation in new accounts</td>
+<td>Start manual; no Smart Shopping for all products (older, 2021) [L1090.095, L1112.014]</td>
+<td>Roll out Smart Shopping one brand at a time once conversions exist [L0454.036, L1033.005]</td>
+<td>New or thin accounts: manual. Accounts with conversion history: staged rollout</td>
+</tr>
+<tr>
+<td>Smart Shopping status</td>
+<td>Sunset by end of Q3 2022 [L0272.031]</td>
+<td>Rollout steps and hierarchy in undated lessons [L0454.036, L0454.039]</td>
+<td>The dated sunset outranks the undated steps; read the steps as a method for a staged test</td>
+</tr>
+<tr>
+<td>Smart Shopping success</td>
+<td>About 50 to 60% of the time [L0454.037]</td>
+<td>Automated bidding beat manual setups about 10 to 20% of the time, rising [L0454.025]</td>
+<td>Different measures: the first is for Smart Shopping, the second for automated bidding against manual setups</td>
+</tr>
+<tr>
+<td>Performance Max ROAS</td>
+<td>About 6 to 9 across several accounts, not clearly better than manual (2023) [L0970.117]</td>
+<td>About 4x to 5x in one agency-managed account [L1213.009]</td>
+<td>Different accounts; the 6 to 9 figure was measured against manual campaigns</td>
+</tr>
+<tr>
+<td>Hands-off or hands-on</td>
+<td>Largely hands-off after setup; do not micromanage [L1251.025, L1107.016, L1440.033]</td>
+<td>Adjust budgets every one or two weeks; add or remove products and asset groups [L0694.037, L1113.058, L1281.101]</td>
+<td>Hands-off refers to optimization after setup; budgets and assets still need a person</td>
+</tr>
+</tbody>
+</table></div>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/19-youtube-demand-gen-and-display-prospecting/"><span class="k">&larr; Previous</span><span class="v">YouTube, demand gen and display prospecting</span></a><a class="nx" href="../../10-google-ads-and-shopping/21-microsoft-bing-ads/"><span class="k">Next &rarr;</span><span class="v">Microsoft/Bing Ads</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

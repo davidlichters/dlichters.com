@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Campaign structure: CBO, ABO, objectives and budget setup | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.9: Campaign structure: CBO, ABO, objectives and budget setup.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/09-campaign-structure-cbo-abo-objectives-and-budget-setup/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Campaign structure: CBO, ABO, objectives and budget setup | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.9: Campaign structure: CBO, ABO, objectives and budget setup."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/09-campaign-structure-cbo-abo-objectives-and-budget-setup/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/09-campaign-structure-cbo-abo-objectives-and-budget-setup/">Plain version</a></div><h1>9.9 Campaign structure: CBO, ABO, objectives and budget setup</h1><article><h2 id="account-hierarchy-and-levels">Account Hierarchy and Levels</h2>
+<ul>
+<li>Ads Manager has three levels: campaign (objective and budget strategy), ad set (budget, audience, placements and message destinations), and ad (identity, creative and ad name). Settings must be made at the correct level, so a destination or audience change made at campaign level will not apply to the ad set. [L0614.016]</li>
+<li>The ad account holds campaigns, campaigns hold ad sets, and ad sets hold the ads. Each campaign has one objective, and each ad set holds one audience. [L0649.015]</li>
+<li>At campaign level the optional budget is set. At ad set level the countries, age, gender, interests, placements, schedule and, under ABO, the budget are set. At ad level the media, copy, headline and destination link are set. One campaign holds many ad sets, and each ad set holds many ads. [L0647.001]</li>
+<li>The campaign defines the objective (sales, traffic or leads), the ad set holds targeting (countries, audiences, placements, start date and time), and the ad combines the creative (video, image or carousel) with the ad copy. [L1024.005]</li>
+<li>Settings are entered from the top level down, so campaign settings are set before the ad set and the ad. [L1029.022]</li>
+<li>Settings made at a higher level affect everything below it, so the structure must be understood before building. [L0865.003]</li>
+<li>In the Power Editor hierarchy, the campaign represents the industry or theme, each ad set targets one precise interest, and each ad holds the creative shown in the feed. [L0641.004]</li>
+<li>Older advice (2019): in a Facebook campaign, ad sets sit inside the campaign, ads sit inside the ad sets, and the audience is chosen at the ad set level. Name ad sets after their audience, for example website visitors within 7 days. [L1086.023]</li>
+</ul>
+<h3 id="ad-level-hierarchy-table-source-a">Ad Level Hierarchy Table (Source A)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What you set there</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campaign</td>
+<td>The offer you want to sell (for example resistance bands) and the optimization objective (for example Conversions)</td>
+</tr>
+<tr>
+<td>Ad set</td>
+<td>The target audience, budget, schedule, placement (mobile, desktop, iPhone, iPad and so on), and bidding for clicks</td>
+</tr>
+<tr>
+<td>Ad</td>
+<td>The creative: image, video and copy</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0643.012]</p>
+<h2 id="campaign-objective-and-buying-type">Campaign Objective and Buying Type</h2>
+<ul>
+<li>For new Meta sales campaigns, choose the Sales objective. Awareness, traffic, engagement, leads and app promotion are not recommended for direct-response ad accounts that aim to make money. [L0865.001]</li>
+<li>Set the objective that matches the real goal, such as conversions for leads or sales, or catalog sales for product sales. Choosing another objective, such as traffic or engagement while wanting sales, to steer delivery is outdated. [L0649.003]</li>
+<li>Campaign objective: set Conversions, unless you are driving traffic for retargeting. [L0643.014]</li>
+<li>Choosing the purchase conversion objective targets audiences with high purchase intent, so CPMs are higher than in engagement campaigns. Interest targeting determines the first sales in early testing. [L1217.047]</li>
+<li>Create &gt; Choose a buying type: Auction. Keep Auction for new sales campaigns and do not switch to Reach and frequency or other manual buying types. [L0865.002]</li>
+<li>Campaign details: keep Buying type on Auction, keep Campaign objective on Sales, and leave Product information untouched, because it only makes Meta suggest products to people and is not needed for a basic setup. [L0865.006]</li>
+<li>Reach and frequency campaigns use buying type Reach and Frequency and objective Reach. When asked, set how many impressions per person per day and over how many days. [L0649.019]</li>
+<li>Total impressions per person = impressions per day multiplied by number of days. Example: 2 impressions per day for 7 days equals 14 impressions in total. [L0649.020]</li>
+</ul>
+<h3 id="campaign-types-source-a">Campaign Types (Source A)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign Type(s)</th>
+<th>Purpose</th>
+<th>Creative Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cold Traffic: Lead Generation &amp; Warm Traffic: Lead Generation</td>
+<td>Collect names and emails from target market audience that has never engaged with your business</td>
+<td>3-4 unique ads used in all lead generation ad sets</td>
+</tr>
+<tr>
+<td>Hot Traffic: Dynamic</td>
+<td>Recover lost sales by showing website visitors ads for specific products they viewed on your store</td>
+<td>3-4 dynamic ads with unique copy</td>
+</tr>
+<tr>
+<td>Hot Traffic: Static</td>
+<td>Recover lost sales by showing website visitors ads that build authority and trust</td>
+<td>3-4 unique ads for authority, trust, and closing sales</td>
+</tr>
+<tr>
+<td>Customers: Goodwill</td>
+<td>Strengthen customer relationships, reduce buyer's remorse, build authority and trust</td>
+<td>1 video ad</td>
+</tr>
+<tr>
+<td>Promotions</td>
+<td>Generate additional sales during limited-time periods (Labor Day Sale, Cyber Monday, etc.)</td>
+<td>3-4 unique ads per promotion</td>
+</tr>
+<tr>
+<td>Sandbox</td>
+<td>Split-test creatives to identify winners without affecting core campaign performance</td>
+<td>2 ads per test: 1 control (proven winner), 1 variation (potential new winner)</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0238.008]</p>
+<h3 id="seven-campaign-account-table-source-a">Seven-Campaign Account Table (Source A)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Buying type</th>
+<th>Objective</th>
+<th>CBO</th>
+<th>Audiences</th>
+<th>Ads per set</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cold Traffic Lead Gen</td>
+<td>Auction</td>
+<td>Conversions (leads)</td>
+<td>On</td>
+<td>Interests and lookalikes</td>
+<td>3-4 lead magnet ads</td>
+<td>Collect names and emails from people who never engaged with the business</td>
+</tr>
+<tr>
+<td>Warm Traffic Lead Gen</td>
+<td>Auction</td>
+<td>Conversions (leads)</td>
+<td>On</td>
+<td>Website visitors 180 days, Facebook engagement 180 days, Instagram engagement 180 days</td>
+<td>3-4 lead magnet ads</td>
+<td>Collect names and emails from people who did engage</td>
+</tr>
+<tr>
+<td>Hot Traffic Dynamic</td>
+<td>Auction</td>
+<td>Catalog Sales</td>
+<td>On</td>
+<td>Website visitors 7 days who did not buy</td>
+<td>3-4 dynamic product ads</td>
+<td>Recover lost sales by showing products viewed on the store</td>
+</tr>
+<tr>
+<td>Hot Traffic Static</td>
+<td>Reach and Frequency</td>
+<td>Reach</td>
+<td>Not stated</td>
+<td>Website visitors 7 days who did not buy</td>
+<td>3-4 trust and authority ads</td>
+<td>Build authority and trust alongside dynamic ads</td>
+</tr>
+<tr>
+<td>Customers Goodwill</td>
+<td>Reach and Frequency</td>
+<td>Reach</td>
+<td>Not stated</td>
+<td>Purchasers in the last 7 days</td>
+<td>1 thank-you video</td>
+<td>Thank new buyers and build the relationship</td>
+</tr>
+<tr>
+<td>Promotions</td>
+<td>Reach and Frequency</td>
+<td>Reach</td>
+<td>Not stated</td>
+<td>Warm audiences (180 days) including past customers</td>
+<td>3-4 sale ads</td>
+<td>Seasonal sales and supplier promotions</td>
+</tr>
+<tr>
+<td>Sandbox</td>
+<td>Split test (creative)</td>
+<td>Leads (per example)</td>
+<td>Not stated</td>
+<td>Best-performing cold audience</td>
+<td>2 per test (control and variation)</td>
+<td>Test new creatives without touching core campaigns</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0649.016]</p>
+<h3 id="sales-campaign-creation-procedure-source-d">Sales Campaign Creation Procedure (Source D)</h3>
+<ol type="1">
+<li>In Ads Manager, confirm you are working in the correct ad account.</li>
+<li>Click Create campaign.</li>
+<li>Choose Sales as the campaign objective.</li>
+<li>Choose Manual sales campaign instead of Advantage+ shopping campaign.</li>
+<li>Name the campaign with today's date, the product name and CBO.</li>
+<li>Turn on campaign budget optimization (CBO).</li>
+<li>Set the total test budget.</li>
+<li>Set the campaign bid strategy to highest volume.</li>
+<li>Continue to the ad set level.</li>
+</ol>
+<p>[L1193.008]</p>
+<h3 id="sales-campaign-creation-procedure-source-c">Sales Campaign Creation Procedure (Source C)</h3>
+<ol type="1">
+<li>Click Create.</li>
+<li>Choose the Sales objective, because the main goal is driving sales.</li>
+<li>Click Continue and start with a manual sales campaign.</li>
+<li>Scroll down and switch off Advantage campaign budget, so no budget is set at campaign level during testing.</li>
+<li>Name the campaign: product name followed by 'audience testing campaign'.</li>
+</ol>
+<p>[L0647.007]</p>
+<h3 id="full-launch-procedure-for-a-new-store-source-c">Full Launch Procedure for a New Store (Source C)</h3>
+<ol type="1">
+<li>Create a campaign with the objective Sales, choose Manual campaign setup (not Advantage+/CBO), and name it after the store. [L0642.001]</li>
+<li>Set budget optimization to ABO (budget set per ad set) so each interest test gets the same budget. [L0642.001]</li>
+<li>Confirm the Meta pixel is connected and that the pixel ID (last three digits) matches the one shown in the Shopify Facebook app. [L0642.001]</li>
+<li>Set the conversion event to Purchase. [L0642.001] 4a. Set the daily budget per ad set to $5 and schedule the start for the next day at 6:00 a.m. (the presenter's own choice; 12 p.m. or 12 a.m. also work). [L0642.001]</li>
+<li>Set location to Switzerland, age minimum 25+, and leave the first ad set as Broad (no interests) with German as the language, because the ads are in German. [L0642.001]</li>
+<li>Leave placements on Advantage+ placements. [L0642.001]</li>
+<li>Select the correct Facebook Page and do not connect an Instagram account, so clicks go directly to the landing page. [L0642.001]</li>
+<li>Use manual upload (not a catalog) with a single image or video, write primary text, headline with the offer, and description, and set the CTA. [L0642.001]</li>
+<li>Duplicate the ad set to create four ad sets with the same creative setup, each testing a different interest, then review and publish. [L0642.001]</li>
+</ol>
+<h3 id="campaign-setup-for-creative-and-audience-tests-source-d">Campaign Setup for Creative and Audience Tests (Source D)</h3>
+<ul>
+<li>Recommended testing budget and structure: start with the recommended testing budget from the Meta ads module, and follow its campaign structure, creatives and budgets. Do not improvise the structure on the first launch. [L0491.021]</li>
+<li>Keep one product per Meta ad campaign; every additional product you sell needs its own separate campaign so the algorithm can optimize for that product. [L0874.001]</li>
+</ul>
+<h2 id="budget-optimization-cbo-versus-abo">Budget Optimization: CBO Versus ABO</h2>
+<h3 id="definitions">Definitions</h3>
+<ul>
+<li>CBO (Campaign Budget Optimization, now called Advantage campaign budget): one budget is set on the campaign, and Meta distributes it across the ad sets. [L0865.007, L1021.009, L0647.002]</li>
+<li>ABO (Ad set Budget Optimization): a budget is set on each ad set, and each ad set spends its own budget. [L0647.002, L0524.065, L1021.009]</li>
+<li>Principle (Source D): CBO is used for scaling because Meta distributes one campaign budget across the best-performing ad sets. ABO is used for testing because it forces a fixed budget into each ad set. [L0348.014]</li>
+<li>Principle (Source C): ABO keeps spending under your control because a new pixel has no purchase data for Meta to optimize with. [L0647.002]</li>
+<li>CBO works by sending several copies of the same interest to different pockets of the audience, so the campaign can shift budget to the pocket that performs best. For example, a $10 daily budget at a $10 CPM reaches about 1,000 people per day, which is a tiny share of a 30 million audience. [L0645.012]</li>
+<li>Under CBO, after about a week the campaign shifts most budget to the best interest ad set. If that ad set drops off, budget flows back to the others. [L0649.029]</li>
+</ul>
+<h3 id="when-each-structure-applies-sources-agree-and-differ">When Each Structure Applies (Sources Agree and Differ)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Recommended structure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single product test</td>
+<td>CBO</td>
+<td>[L0348.015]</td>
+</tr>
+<tr>
+<td>Several different products tested at once</td>
+<td>ABO, not as a beginner</td>
+<td>[L0348.015]</td>
+</tr>
+<tr>
+<td>Beginners and mid-stage accounts</td>
+<td>CBO as the default</td>
+<td>[L1019.012, L1019.013]</td>
+</tr>
+<tr>
+<td>Scaling proven winners</td>
+<td>CBO</td>
+<td>[L0348.015, L0645.013]</td>
+</tr>
+<tr>
+<td>Testing new interests or a new store</td>
+<td>ABO</td>
+<td>[L0642.002, L0645.013, L0647.002]</td>
+</tr>
+<tr>
+<td>Creative testing with a fixed budget per creative</td>
+<td>ABO</td>
+<td>[L0398.059]</td>
+</tr>
+<tr>
+<td>Multi-interest tests on a new store, German-speaking markets</td>
+<td>ABO with several similar interests in one ad set at $5</td>
+<td>[L0646.054]</td>
+</tr>
+<tr>
+<td>Default Source E course recommendation</td>
+<td>CBO; ABO advised against</td>
+<td>[L0865.007, L0865.008]</td>
+</tr>
+<tr>
+<td>Lead generation with Source A's campaigns</td>
+<td>CBO on</td>
+<td>[L0649.016]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>ABO is not a scaling method and should not be used by beginners to scale, because it burns the budget fast. Scaling with ABO is a mistake; move winners to a CBO for scaling. [L0348.024]</li>
+<li>ABO only makes sense with a large budget reserve. [L1019.012]</li>
+<li>Use CBO only for scaling with known winning interests and creatives, because CBO would otherwise concentrate spend on one interest and starve the rest of the test. [L0645.013]</li>
+<li>A new store that tests interests should use ABO rather than CBO, so that each interest receives the same fixed budget for a fair comparison. CBO is better used later when scaling winners. [L0642.002]</li>
+<li>To decide between CBO and ABO for your account, run the same proven interest in both structures for a set test period and compare ROAS and purchases. Keep ABO for testing new interests, and use CBO for scaling only once an interest is already profitable on ABO. [L0645.051]</li>
+<li>Test both CBO and ABO in your own account, since the better structure depends on the specific ad account. [L0693.038]</li>
+<li>Use ABO campaigns for creative testing, because the budget is fixed per ad set and each creative can be read on its own. When a winner is scaled into CBO or cost-cap campaigns, Meta controls the spend allocation, so put at least two to three creatives in each ad set to keep delivery from concentrating on a single ad. [L0398.059]</li>
+<li>In a separate ABO test campaign the budget is set at ad set level, so every creative gets spend regardless of early results. In a scaling CBO, some new creatives may get little or no spend, so you cannot tell whether they work. [L1107.024]</li>
+<li>Running an ABO scaling ad set alongside a separate testing ad set that targets the same interest usually makes the testing sets lose delivery. [L0524.065]</li>
+<li>Stay on CBO while testing, because ABO means funding every ad set manually, which takes a large budget. Let the algorithm allocate spend, and add bid or cost caps later once the pixel has data. [L1195.023]</li>
+<li>Switch to ABO only after the pixel has real purchase data. [L1019.015]</li>
+<li>Switch from CBO to ABO only after around 80-100 website purchases from the CBO, with rich data from custom ads and high-intensity testing. [L1195.024]</li>
+<li>Move from ABO to CBO or other campaign types only after the pixel has collected good purchase data, because Meta can then identify likely buyers and allocate spend itself. [L0647.003]</li>
+<li>Use ABO only when testing several different products at once, and not as a beginner, because ABO uses up the budget quickly. Use CBO for a single product test and for scaling. [L0348.015]</li>
+<li>Lifetime budget optimization is hardly ever recommended. It has specific uses, such as some Black Friday setups, and is only used in those cases. [L0865.011]</li>
+</ul>
+<h3 id="conflicting-position-on-the-test-budget-structure">Conflicting Position on the Test Budget Structure</h3>
+<ul>
+<li>Source D and other sources recommend a CBO test (Sales objective, CBO, highest volume) as the standard test structure. [L1193.008, L0865.007]</li>
+<li>Source C recommends ABO for testing and says CBO was unreliable for one product: CBO broke even or lost money, so ad set budgets were used instead. [L0999.029]</li>
+<li>Source C's Advantage+ campaign note: Advantage+ campaigns are scaled with the same strategy used for other campaigns. [L1107.025]</li>
+<li>Testing a CBO that holds only one winning creative limits ad delivery; add two to three creatives even when one ad keeps producing sales. [L0645.015]</li>
+</ul>
+<h3 id="case-cbo-failed-abo-worked-source-c">Case: CBO Failed, ABO Worked (Source C)</h3>
+<ul>
+<li>Starting point: a profitable ad with a ROAS of roughly 2 to 3, and a testing-phase CPA of about 10 to 50 dollars. [L0999.078]</li>
+<li>Step 1: the ad was duplicated into a CBO with three ads and a $200 budget, and CPA rose with almost no sales. [L0999.078]</li>
+<li>Step 2: a second CBO with a $20 budget and the same ads also failed. [L0999.078]</li>
+<li>Step 3: the ad in a separate testing campaign with a $5 budget performed well. [L0999.078]</li>
+<li>Result: CBO was unreliable for this product because Facebook shifts budget between ads and removing weaker ads disrupted delivery, so ABO was used instead. [L0999.078]</li>
+</ul>
+<h3 id="case-budget-flow-in-a-sellers-cbo-source-c">Case: Budget Flow in a Seller's CBO (Source C)</h3>
+<ul>
+<li>The seller used campaign budget optimization (CBO) on Facebook instead of ad set budgets (ABO). Most of the spend flowed to the broad interest and online-shopper audiences. [L1127.023]</li>
+</ul>
+<h3 id="mistakes-with-per-ad-set-budgets-source-a">Mistakes With Per-Ad-Set Budgets (Source A)</h3>
+<ul>
+<li>Budgets set per ad set make a profitable ad set stop at its daily cap while break-even ad sets keep spending. This forces constant manual reallocation, so use CBO in campaigns that need it. [L0649.011]</li>
+<li>With ABO, a budget set per ad set is fixed, for example 25 dollars for each of four ad sets. Meta offers a setting that lets it move part of an ad set budget to other ad sets, which undermines manual control, so ABO is not recommended. [L0865.008]</li>
+</ul>
+<h2 id="cbo-settings-and-budget-figures">CBO Settings and Budget Figures</h2>
+<h3 id="setting-procedure">Setting Procedure</h3>
+<ul>
+<li>Set one total daily budget across all targeting groups and let Facebook automatically allocate spending to the most profitable audiences and placements; for example, allocate $100/day and Facebook distributes where it performs best. [L0238.003]</li>
+<li>Campaign level: turn on Advantage+ campaign budget (CBO), enter the test budget there, since Meta then distributes that single campaign budget across the ad sets. [L1193.024]</li>
+<li>Budget &gt; Budget strategy: choose Advantage+ campaign budget (CBO). Enter the daily amount in Daily budget in USD. Choosing CBO removes the ad set budget suggestions shown in Ads Manager. [L0865.009]</li>
+<li>The CBO toggle is off by default in the lead generation setup and must be turned on. [L0649.010]</li>
+<li>Ad set &gt; Budget: check that the budget shown is the campaign budget, because an ad set still set to ABO will show its own budget. If so, go back and change it to Campaign budget optimization before continuing. [L0865.025]</li>
+<li>The Advantage+ sales campaign toggle is shown as on in the recommended setup for new sales campaigns, and the campaign-level budget is used. If an ad set shows that Advantage+ is off for Budget, that ad set is not using the campaign budget and should be checked before publishing. [L0865.060]</li>
+<li>Campaign level CBO test: choose the Sales objective, switch Campaign budget to Advantage+ campaign budget, and set the daily budget to a test amount. Use $50 for a normal test, with $75 or $100 for a more aggressive test; more spend yields data faster and bad campaigns can be cut earlier. [L0348.004]</li>
+<li>CBO campaign-level settings: turn off the Advantage+ sales campaign recommendations, leave Campaign bid strategy at its default, and set the Performance goal to Maximize number of conversions. Use Conversion event purchase and confirm the correct pixel dataset is selected. [L0348.005]</li>
+<li>Set the campaign to CBO and allow Meta to share the budget across the ad sets in the testing campaigns. This lets Meta move spend toward the ad sets that perform best. [L1021.022]</li>
+</ul>
+<h3 id="signals-meta-reads-under-cbo">Signals Meta Reads Under CBO</h3>
+<ul>
+<li>Meta's Advantage campaign budget (CBO) continuously reads signals such as CTR, CPA, CPC, conversion volume and ROAS. It moves budget toward ads converting at lower cost and reduces budget for underperformers throughout each day. Spend is therefore treated as Meta's confidence signal for each ad. [L0613.043]</li>
+<li>With CBO turned on, Meta spreads the campaign budget across the ad sets to find more results. This makes the single campaign budget the one control you set for the test. [L1193.011]</li>
+</ul>
+<h3 id="budget-spend-behaviour">Budget Spend Behaviour</h3>
+<ul>
+<li>With a daily budget of 500 USD, Ads Manager shows an average spend of about 500 USD per day, a maximum daily spend of 875 USD (175 percent of the daily budget) and a maximum weekly spend of 3,500 USD (seven times the daily budget). Meta can spend more on some days and less on others, but it stays within the weekly cap. [L0865.010]</li>
+<li>With an Advantage campaign budget, the maximum weekly spend equals seven times the daily budget. Daily spend can vary above or below the average within the week, but the weekly total cannot exceed the cap. The example shows a maximum daily spend of $43.75 and a maximum weekly spend of $175, which matches a $25 daily budget. [L1029.010]</li>
+<li>Facebook has no minimum budget, and a daily budget of $1 is enough to keep a campaign active. Keep it running at this level until you have money to scale it back up. [L0643.017]</li>
+</ul>
+<h3 id="budget-figures-by-source">Budget Figures by Source</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Context</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1/day</td>
+<td>Minimum to keep a campaign active</td>
+<td>[L0643.017]</td>
+</tr>
+<tr>
+<td>$5 per ad set</td>
+<td>Source C new-store ABO test, one interest per ad set</td>
+<td>[L0642.001, L0646.054]</td>
+</tr>
+<tr>
+<td>$10 to $15 per ad set per day</td>
+<td>Source C initial product test, ABO, 6 to 10 ad sets</td>
+<td>[L0375.001, L0376.001]</td>
+</tr>
+<tr>
+<td>$15 per ad set</td>
+<td>Source C testing structure, ABO, 7 to 8 ad sets</td>
+<td>[L0645.001]</td>
+</tr>
+<tr>
+<td>$10 daily</td>
+<td>Source C CBO example, reaches about 1,000 people per day at $10 CPM</td>
+<td>[L0645.012]</td>
+</tr>
+<tr>
+<td>$10 in account currency per ad set</td>
+<td>Example ad set with three ads</td>
+<td>[L0353.061]</td>
+</tr>
+<tr>
+<td>$50 per day minimum</td>
+<td>Learning-phase minimum; lower budgets do not gather enough learnings to leave the learning phase</td>
+<td>[L1016.055]</td>
+</tr>
+<tr>
+<td>$50 per ad set</td>
+<td>Common ABO starting budget for one product with three creatives</td>
+<td>[L0348.017]</td>
+</tr>
+<tr>
+<td>$25, $50 or $100 per product</td>
+<td>ABO budget depending on how aggressively each product is tested</td>
+<td>[L0348.017]</td>
+</tr>
+<tr>
+<td>$50 CBO</td>
+<td>Beginner test budget</td>
+<td>[L1107.028]</td>
+</tr>
+<tr>
+<td>$50 normal, $75 or $100 aggressive</td>
+<td>CBO test amount</td>
+<td>[L0348.004]</td>
+</tr>
+<tr>
+<td>$75 start, then $150, $300, $500, $750, $1,000</td>
+<td>Aggressive testing CBO scaling steps; continue higher if results hold</td>
+<td>[L1021.018]</td>
+</tr>
+<tr>
+<td>$200 to $300 CBO</td>
+<td>Budget after sales are reliable</td>
+<td>[L1107.028]</td>
+</tr>
+<tr>
+<td>$200 CBO</td>
+<td>Failed case: CPA rose with almost no sales</td>
+<td>[L0999.078]</td>
+</tr>
+<tr>
+<td>$20 CBO</td>
+<td>Failed second CBO in case</td>
+<td>[L0999.078]</td>
+</tr>
+<tr>
+<td>$5 ABO</td>
+<td>Working separate testing campaign in case</td>
+<td>[L0999.078]</td>
+</tr>
+<tr>
+<td>$100/day</td>
+<td>Example total daily budget across audiences</td>
+<td>[L0238.003]</td>
+</tr>
+<tr>
+<td>$500/day</td>
+<td>Example in Ads Manager budget display</td>
+<td>[L0865.010]</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="lifetime-and-ad-set-spending-limits">Lifetime and Ad Set Spending Limits</h3>
+<ul>
+<li>Ad set &gt; Ad set spending limits: tick the box and enter a daily minimum or a daily maximum for the ad set. Use this only when a specific spend limit is needed. [L0865.029]</li>
+<li>Meta's existing customer budget cap can no longer be applied to new campaigns. To get a similar effect, use Campaign budget optimization together with ad set spending limits, and campaigns that already use the cap keep working. [L0865.059]</li>
+</ul>
+<h2 id="testing-architecture">Testing Architecture</h2>
+<h3 id="testing-structures">Testing Structures</h3>
+<ul>
+<li>Starting test on Meta: one ABO campaign with 6-10 ad sets, each targeting a single interest, at $10-15 per day per ad set. Each ad set runs 3-5 different creatives. [L0375.001, L0376.001]</li>
+<li>Testing campaign structure: an ABO campaign with 7 to 8 ad sets, each targeting one single interest, starting at about $15 budget per ad set, and three ads with different creatives inside each ad set. [L0645.001]</li>
+<li>Testing structure: one ABO campaign with five ad sets, each ad set targeting exactly one interest, and at least three creatives (image or video) per ad set, which makes 15 ads in total. [L0647.004]</li>
+<li>Test three CBO campaigns, each with the amount you are willing to spend. When one CBO campaign wins, increase its budget to reach more people from the same audience. [L1212.013]</li>
+<li>Launch three CBOs with the same budget and targeting, put four ad sets in each CBO with identical settings, and after a few days keep the one or two CBOs that perform and turn off the rest. [L0693.036]</li>
+<li>Launch the same ads in two separate CBO campaigns, turn on budget sharing so Meta can split the budget across ad sets, give each ad set one main concept, add 3 to 5 variations per ad set using different hooks, scripts or angles, start with a $75 budget, and scale the budget aggressively in steps of $150, $300, $500, $750 and $1,000, continuing higher if the results hold. The goal of this phase is to identify the winning creatives and angles. [L1021.018]</li>
+<li>Testing campaign setup for two CBO testing lanes: Main CBO prepared for bid cap stays unpublished; CBO 1 for Kalo rips and CBO 2 for custom ads. [L1019.007]</li>
+<li>Testing lane: ABO testing campaign on cost cap with tROAS or tCPA, one ad set per creative batch, and per creative 3 primary texts, 3 headlines and 1 description. [L1019.041]</li>
+<li>Set up the main CBO plus one testing CBO, with one concept per ad set and 3-5 creatives in each ad set. [L1019.011]</li>
+<li>The base Meta testing unit is one ad set holding one concept with 3-5 creatives, all inside one CBO. [L1019.005]</li>
+</ul>
+<h3 id="country-based-test-structures-source-c">Country-Based Test Structures (Source C)</h3>
+<ul>
+<li>For English-speaking markets such as the US, Australia, New Zealand and Canada, starting with a single-interest ad set at 5 dollars worked better, while several similar interests in one ad set at 5 dollars worked better for German-speaking markets. Choose the test structure per country rather than using one template everywhere. [L0646.054]</li>
+</ul>
+<h3 id="testing-principles">Testing Principles</h3>
+<ul>
+<li>Launching a CBO campaign with only one winning creative limits the ad delivery, so add two to three creatives even when one ad keeps producing sales. More creatives give Facebook more options and usually improve overall performance. [L0645.015]</li>
+<li>Use ABO for testing because it gives control over how much budget each interest gets. Use CBO only for scaling with known winning interests and creatives. [L0645.013]</li>
+<li>Facebook prefers the older creative with more engagement and sales data, so a new creative placed beside a proven winner will receive little spend; always split them into separate ad sets. [L1177.041]</li>
+<li>Use separate ad sets for each new creative test, and keep the winning ad set as a control, so the spend follows the new creative results rather than the old winner. [L1177.044]</li>
+<li>Testing a product with ABO for multi-product tests: all products in the same campaign and pixel should belong to the same category (for example all construction books, not a mix of nursing and plumbing). Mixing categories under one pixel makes the test harder to read, although Meta's algorithm is capable of handling it. [L0348.019]</li>
+<li>Testing campaigns are meant to run for a short window. [L1195.022]</li>
+<li>Testing both structures in your own account, with automatic rules running overnight so that no manual checks are needed. [L0693.038]</li>
+<li>Source A's Sandbox campaign: 2 ads per test (1 control, 1 variation) to split-test creatives without affecting core campaigns. [L0238.008, L0649.016]</li>
+<li>Mistake: Using a single creative inside a CBO test limits delivery. See [L0645.015].</li>
+<li>Power Five framework: start with the recommendations and adjust only where they fail to produce profit. [L0649.004]</li>
+</ul>
+<h3 id="multi-product-abo-setup">Multi-Product ABO Setup</h3>
+<ol type="1">
+<li>Create one campaign with Campaign budget off (Advantage+ campaign budget off) and set the budget at ad set level. [L0348.016]</li>
+<li>Set the Budget strategy to Ad set budget, and leave Ad set budget sharing and Advantage+ options at default unless a test calls for changes. [L0348.016]</li>
+<li>A common starting budget is $50 per ad set for one product with three creatives, so the money is divided per creative (for example $50 divided by 3 creatives). Products can be set at $25, $50 or $100 depending on how aggressively you test each product. [L0348.017]</li>
+</ol>
+<h3 id="ad-set-budget-sharing-abo">Ad Set Budget Sharing (ABO)</h3>
+<ul>
+<li>When ad set budget sharing is turned on, Meta shares up to 20% of an ad set's budget with other ad sets in the same campaign when it is likely to improve performance. Turn it off if you want the budget to stay strictly in each ad set for testing. [L0348.018]</li>
+<li>Conflicting setting: Source D' CBO testing structure turns budget sharing on, while Source D' ABO test turns it off for strict testing. Use budget sharing on for CBO tests and off for strict ABO tests. [L1021.022, L0348.018]</li>
+</ul>
+<h2 id="scaling-architecture">Scaling Architecture</h2>
+<ul>
+<li>Stay on CBO while scaling with known winning concepts; Main CBO holds only proven concepts, stable spend, winners folded back in. [L1195.020]</li>
+<li>Scale proven concepts in the main CBO and test ripped winners in CBO 2. [L1195.020]</li>
+<li>Advantage+ campaigns are scaled with the same strategy used for other campaigns. They use a single ad set, so you add new creatives when old ones die out. [L1107.025]</li>
+<li>Scaling with ABO is a mistake; move winners to a CBO for scaling. [L0348.024]</li>
+<li>Use CBO only for scaling with known winning interests and creatives, because CBO would otherwise concentrate spend on one interest and starve the rest of the test. [L0645.013]</li>
+<li>Once an interest is already profitable on ABO, use CBO for scaling. [L0645.051]</li>
+<li>When a winner is scaled into CBO or cost-cap campaigns, Meta controls the spend allocation. [L0398.059]</li>
+<li>Testing with Meta's recommended budget first, then scale. [L0491.021]</li>
+</ul>
+<h2 id="campaign-counts-and-account-structure">Campaign Counts and Account Structure</h2>
+<ul>
+<li>Meta's guidance prefers a simple account structure with about 2-5 campaigns. The source's practical setup is 1 campaign, 1 ad set and 1 ad, so avoid many complicated ad structures. [L0637.032]</li>
+<li>Use a simplified account structure with a few campaigns and very broad targeting, not dozens or hundreds of hyper-segmented ad sets. Let the pixel find the buyers through its data. [L0649.007]</li>
+<li>Hyper-stacked targeting with interest, online-shopper behavior, household income above $100,000, cities, gender, age brackets and single placements produced huge numbers of ad sets. It needed about 50 hours per week from three people. [L0649.002]</li>
+<li>Use one CBO with one broad campaign. Do not test different interests or add multiple account strategies. [L0037.002]</li>
+<li>Conflicting guidance: Source C's new-store procedure tests several interests in ABO ad sets inside one campaign, which contradicts the single-campaign rule in [L0037.002]. Apply [L0037.002] for a mature account with proven broad targeting; apply the ABO interest tests when a new store must compare interests. [L0037.002, L0642.001]</li>
+<li>Meta's Power Five framework has five parts: auto advanced matching, a simplified account structure with few broad campaigns, campaign budget optimization, automatic placements, and dynamic ads for remarketing. Apply all five first, then change only the parts that fail to produce profit. [L0649.069]</li>
+</ul>
+<h3 id="testing-campaign-counts-source-d">Testing Campaign Counts (Source D)</h3>
+<ul>
+<li>Recommended campaign structure: a main CBO prepared for bid cap that stays unpublished, plus CBO 1 for Kalo rips and CBO 2 for custom ads. Each additional CBO fragments the data further. [L1019.007]</li>
+<li>Running two or more testing CBOs cannibalises CPC and CPM in the short term, but it is still the fastest route to a winning creative. [L1019.008]</li>
+<li>Running several CBOs at once causes short-term cannibalization: your campaigns compete in the same auctions and CPC and CPM rise. Accept this as a temporary cost for faster winner discovery, since testing campaigns are meant to run for a short window. [L1195.022]</li>
+<li>Run at most two testing CBOs in parallel to avoid data fragmentation. Opening more than three CBOs in total fragments the data across the account. [L1195.021]</li>
+<li>Keep the number of CBOs low. Start with the main CBO and CBO 2, and open CBO 3 only when budget allows. Never run four or five CBOs, because that fragments the data. [L1195.020]</li>
+<li>Testing campaign for two separate CBOs: the same ads launched in two separate CBO campaigns. [L1021.018]</li>
+</ul>
+<h3 id="campaign-structure-table-source-d">Campaign Structure Table (Source D)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>CBO</th>
+<th>Purpose</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main CBO</td>
+<td>Scale proven concepts</td>
+<td>Only proven concepts, stable spend, winners folded back in</td>
+</tr>
+<tr>
+<td>CBO 2 (Kalodata rips)</td>
+<td>Test ripped winners</td>
+<td>Kalodata winners, ripped and re-cut, 3-5 creatives per concept</td>
+</tr>
+<tr>
+<td>CBO 3 (custom ads)</td>
+<td>Test new messaging</td>
+<td>VSLs or statics built from your research: new pain point, avatar, or messaging</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1195.020]</p>
+<h2 id="ad-sets-per-campaign-creatives-per-ad-set-and-concepts">Ad Sets per Campaign, Creatives per Ad Set and Concepts</h2>
+<h3 id="ad-sets-and-creative-counts">Ad Sets and Creative Counts</h3>
+<ul>
+<li>Creative count per ad set: a typical CBO test ad set holds 3 creatives, and the first round of a product test uses about 9 creatives in total across ad sets. Creatives are added by duplicating the ad set; a test with 4 products would be repeated for each product. [L0348.012]</li>
+<li>Maximum 20-25 ads per Facebook ad set; when adding new creatives to an existing ad set, do not exceed 20 ads total. [L0207.002]</li>
+<li>Add at least two to three creatives to each ad set in a CBO so delivery is not concentrated on a single ad. [L0398.059, L0645.015]</li>
+</ul>
+<h3 id="ad-set-naming-and-duplication-for-cbo-test-source-d">Ad Set Naming and Duplication for CBO Test (Source D)</h3>
+<ol type="1">
+<li>Create one CBO campaign with one ad set and three creatives. [L0348.010]</li>
+<li>Name the first ad set AdSet 1 for reference. [L0348.010]</li>
+<li>Duplicate the ad set as AdSet 2 and rename the ads B1 to B6, testing the first six creatives. [L0348.010]</li>
+<li>Continue with the same method on day 3 with the next creatives, giving a total of nine creatives in the first round (B1 to B9). [L0348.010]</li>
+<li>Keep the same CBO and duplicate it for each further batch of creatives: AdSet 4, AdSet 5, AdSet 6, AdSet 7. [L0348.010]</li>
+</ol>
+<h3 id="duplicating-the-ad-set-source-c">Duplicating the Ad Set (Source C)</h3>
+<ol type="1">
+<li>Tick the first ad set and click Duplicate, choosing four copies. [L0647.011]</li>
+<li>In each copy, change only the audience: open Suggestions, pick one new related interest, and remove the previous interest so only one remains. [L0647.011]</li>
+<li>Rename the ad set to match the new interest. [L0647.011]</li>
+<li>Leave the ads and all other settings as they are, because the duplicate already carries them. [L0647.011]</li>
+</ol>
+<h3 id="concepts-per-ad-set">Concepts per Ad Set</h3>
+<ul>
+<li>One ad set holds one concept, defined by one avatar and one angle, with 3-5 creatives inside. Never mix different concepts in one ad set, because you will not know which message did the work. [L1195.018, L1019.010]</li>
+<li>The base Meta testing unit is one ad set holding one concept with 3-5 creatives, all inside one CBO. [L1019.005]</li>
+<li>Never mix two concepts inside one ad set, because then you cannot tell which message caused the result. [L1019.010]</li>
+<li>A concept can be a specific pain point or promise, a distinct messaging angle, a demographic cut (ethnicity, age group, life stage), or an avatar with different objections. Variations of the same message share one ad set, while a new message gets its own ad set. [L1195.019]</li>
+<li>Per creative in the ABO testing lane: 3 primary texts, 3 headlines and 1 description. [L1019.041]</li>
+<li>Tests with two CBOs: one concept per ad set and 3-5 creatives in each ad set. [L1019.011]</li>
+<li>Creative tests with 3-4 ads per dynamic campaign and 3-4 unique ads per promotion, as in the campaign type table. [L0238.008]</li>
+</ul>
+<h3 id="ad-set-creation-source-c">Ad Set Creation (Source C)</h3>
+<ol type="1">
+<li>Name the ad set: date first, then audience, then country, then placement. [L0647.008]</li>
+<li>Under Conversion, choose Website. [L0647.008]</li>
+<li>Performance goal: Maximize number of conversions. [L0647.008]</li>
+<li>Pixel: select the pixel connected to your Shopify store. [L0647.008]</li>
+<li>Conversion event: Purchase. [L0647.008]</li>
+<li>If Meta shows a warning about choosing another conversion event and your Purchase tracking is set up correctly, ignore it and continue. [L0647.008, L0647.016]</li>
+<li>Turn off Dynamic creative for the testing phase. [L0647.008]</li>
+<li>Budget and schedule: set the daily budget for the ad set from the price tier. Start date: the next day, at midnight. [L0647.008]</li>
+<li>Locations: click Edit and target the top four or five countries, e.g. United States, Canada, Australia, New Zealand and United Kingdom. [L0647.008]</li>
+<li>Advantage+ audience: click Switch to original audience. [L0647.008]</li>
+<li>Age: 18 to 65+. Gender: select all unless the product is for one gender only. [L0647.008]</li>
+<li>Detailed targeting: add one interest only. [L0647.008]</li>
+<li>Placements: choose Advantage+ placement. [L0647.008]</li>
+</ol>
+<h3 id="ad-level-setup-source-c">Ad Level Setup (Source C)</h3>
+<ol type="1">
+<li>Name the ad after its video or its angle (e.g. Video 1 if nothing better fits). [L0647.009]</li>
+<li>Select the Facebook Page that represents the brand. If the store has its own Instagram account, use it too; otherwise a Facebook Page can also show ads on Instagram. [L0647.009]</li>
+<li>Click Create ad, then Manual upload, then Single image or video. [L0647.009]</li>
+<li>Under Ad media, click Add video and upload the file from your computer. Trimming is optional. Check that the dimensions are shown as fine. [L0647.009]</li>
+<li>Click Next, then Done. [L0647.009]</li>
+<li>Fill in primary text, headline, description and the call to action button (Shop now). [L0647.009]</li>
+<li>Destination: paste the product page URL. [L0647.009]</li>
+<li>Set up the URL parameters in the Tracking section. [L0647.009]</li>
+</ol>
+<h3 id="advantage-campaign-creation-source-c">Advantage+ Campaign Creation (Source C)</h3>
+<ol type="1">
+<li>Duplicate the campaign. [L1161.025]</li>
+<li>When asked, choose Advantage+ instead of manual settings. [L1161.025]</li>
+<li>The result is one ad set containing several ads, and the budget is set on that ad set. [L1161.025]</li>
+</ol>
+<h2 id="bid-strategy-and-performance-goal">Bid Strategy and Performance Goal</h2>
+<ul>
+<li>Campaign bid strategy: start with Highest volume or value. Other options are Cost per result goal, ROAS goal and Bid cap. Those options change how Meta bids in auctions and should only be used once you know why you need them. [L0865.012]</li>
+<li>Set the campaign bid strategy to highest volume. [L1193.008]</li>
+<li>CBO campaign level: leave Campaign bid strategy at its default. [L0348.005]</li>
+<li>Ad set &gt; Conversion &gt; Performance goal: use Maximize number of conversions for nearly all accounts. Maximize value conversions is only for specific cases, and the other options in the dropdown are not used for standard sales campaigns. [L0865.016]</li>
+<li>Performance goal: Maximize number of conversions. [L0647.008, L1193.013]</li>
+<li>Testing lane: ABO testing campaign on cost cap with tROAS or tCPA. [L1019.041]</li>
+<li>Bidding to clicks at ad set level while the campaign has fewer than 30 conversions. [L0643.014]</li>
+<li>Optimizing an ad set for Conversions only makes sense after it has about 30 conversions. Below that threshold Facebook does not have enough data, so optimize for clicks instead. [L0643.019]</li>
+<li>Value rules let Meta value different audiences differently. It is complex and not needed for standard setups, so leave it disabled. [L0865.020]</li>
+</ul>
+<h2 id="conversion-event-and-conversion-location">Conversion Event and Conversion Location</h2>
+<ul>
+<li>Ad set &gt; Conversion &gt; Conversion location: choose Website. The old Website and shop option no longer exists, so traffic from ads goes to the website where checkout happens. [L0865.015]</li>
+<li>Use Website as the conversion location and Purchase as the objective. Other objectives such as engagement, traffic or link clicks deliver cheap traffic that rarely converts and gives weak data. [L0648.009]</li>
+<li>Ad set &gt; Conversion &gt; Conversion event: select Purchase every time for sales campaigns. [L0865.018]</li>
+<li>Ad set conversion event: set to Purchase, and make sure the conversion location is website. [L0348.006]</li>
+<li>Pick your own pixel and set the conversion event to Purchase. [L0375.007, L0376.008]</li>
+<li>Optimizing for Add to Cart, Initiate Checkout or Traffic produces many of those events but few purchases, because these attract lower-intent users. For testing, always choose Purchase as the conversion event. [L0647.015]</li>
+<li>Choosing a purchase conversion goal gives fewer events than choosing add to cart, but the events are more useful for a dropshipping business. [L0353.024]</li>
+<li>If Meta shows a warning to choose another conversion event and your Purchase event is set up correctly, the warning can be ignored. [L0647.016]</li>
+<li>Confirm the correct pixel dataset is selected at campaign level. [L0348.005]</li>
+<li>Select the new pixel for the ad set. [L1193.013]</li>
+</ul>
+<h2 id="ad-set-audience-and-targeting">Ad Set Audience and Targeting</h2>
+<h3 id="locations-and-age">Locations and Age</h3>
+<ul>
+<li>Ad set audience: choose the top 4 countries by sales (for example only the United States if the product ships only there), set the age range wide, and leave Advantage+ audience on. [L0348.006]</li>
+<li>Target ePacket or T5 countries (US, UK, CAN, AU, NZ). [L0375.007, L0376.008]</li>
+<li>Usually the age range begins at 21. [L0375.007]</li>
+<li>Age normally 21 and above. [L0376.008]</li>
+<li>Locations: United States, United Kingdom, Australia, New Zealand and Canada. [L1193.013]</li>
+<li>Locations: United States, Canada, Australia, New Zealand and United Kingdom. [L0647.008]</li>
+<li>Age 18 to 65+. Gender: select all unless the product is for one gender only. [L0647.008]</li>
+<li>Test location example: Switzerland, age minimum 25+, with German as the language because the ads are in German. [L0642.001]</li>
+</ul>
+<h3 id="interests-and-audience-structure">Interests and Audience Structure</h3>
+<ul>
+<li>Use one interest only per ad set; each ad set targets exactly one interest. [L0647.008, L0645.001, L0647.004]</li>
+<li>Leave the audience settings broad. [L1193.013]</li>
+<li>Leave the first ad set as Broad (no interests) with German as the language. [L0642.001]</li>
+<li>Testing with interests versus broad: Source A's practice is simplified, very broad targeting; Source C's tests use one interest per ad set. [L0649.007, L0647.008]</li>
+<li>Example ad set with three ads, so the platform compares three creatives against the same audience. Testing several creatives in one ad set is a common way to find which ad gets engagement and conversions. [L0353.061]</li>
+<li>Use placement and device targeting at ad set level to show ads only on mobile, desktop, iPhone or iPad, and even on specific device models. Combined with interest targeting, this makes the message very specific, for example a Star Wars phone case shown only to people with the matching phone model who like Star Wars. [L0643.013]</li>
+<li>Hyper-stacked targeting produced huge numbers of ad sets and needed about 50 hours per week from three people. [L0649.002]</li>
+<li>Facebook ad campaigns run on Facebook and Instagram together, so a product tested on Facebook also reaches Instagram placements by default. [L1212.010]</li>
+<li>Under ABO test campaigns, each ad set targets one precise interest. [L0641.004]</li>
+<li>Expand the audience to the broadest set and let the pixel find the buyers. [L0649.007]</li>
+</ul>
+<h3 id="advantage-audience">Advantage+ Audience</h3>
+<ul>
+<li>Advantage+ audience: leave it on. [L0348.006]</li>
+<li>Advantage+ audience: click Switch to original audience. [L0647.008]</li>
+<li>Advantage+ audience and manual interests produce conflicting instructions: Source D keeps Advantage+ audience on, while Source C's ad set procedure switches to the original audience to keep one interest per ad set. Use Advantage+ audience on for broad-audience accounts and switch to the original audience when a single interest test is required. [L0348.006, L0647.008]</li>
+</ul>
+<h2 id="placements">Placements</h2>
+<ul>
+<li>Start on automatic placement. After a few days with sales, break down by placement and, if Facebook Feed and Instagram Feed perform best, switch from automatic to manual placement and choose only Facebook Feed and Instagram Feed. Story ads should be kept only if they show traffic or sales. [L0773.029]</li>
+<li>Placements must stay on Automatic with Advantage+ placements on. Choosing individual placements manually restricts delivery and should not be done. [L0865.033]</li>
+<li>Use Advantage+ placements by default. Switch to manual placements only when you know your audience uses specific placements, for example Facebook feed only for a product aimed at people aged 50+ with knee pain. [L0648.021]</li>
+<li>Advantage+ placements let Meta test feeds, Instagram, Marketplace and other placements, then move budget to the best-performing placement after one to two days of data. This removes the need to find the best placement manually. [L0648.022]</li>
+<li>Manual placements restrict delivery to the placements you pick, such as only Facebook Feed and Instagram Feed, and Meta does not recommend this. Advantage+ placement lets Meta find the best placements automatically across feeds, stories, Messenger and Reels. [L0647.018]</li>
+<li>Leave placements on Automatic (ad set level). [L0375.007, L0376.008]</li>
+<li>Automatic placements: let Meta distribute one ad across all placements instead of building separate ad sets per placement. Meta moves budget to the placement where return is highest and pulls it back when that return drops. [L0649.012]</li>
+<li>Meta placements include Facebook desktop and mobile news feed, the right-hand column, Facebook Stories, Instagram Stories, Audience Network (ads on partner apps and websites), Marketplace, Messenger and WhatsApp. [L0649.013]</li>
+<li>Ad previews list the placements where the ad can appear: Feeds, In-stream ads for reels, Stories, Status, Reels, Apps and sites, and Facebook Search results. Advantage+ placements chooses these automatically, so the preview is the quickest check of where the warm-up ad will be shown. [L0614.025]</li>
+<li>Leave placements on Advantage+ placements. [L0642.001]</li>
+</ul>
+<h2 id="schedule-and-start-time">Schedule and Start Time</h2>
+<ul>
+<li>Do not restrict Facebook ads to particular hours. Facebook learns the best times within about 1-2 days and spends very little, about a dollar, in low-converting hours. [L0363.057]</li>
+<li>Launch Facebook ads about 3-4 hours before the scheduled start time so that the review can finish. The start time is set at the ad set level. [L0363.058]</li>
+<li>Ad delivery can be scheduled around the hours when sales come in. The seller's best hours were 12 AM to 6 AM and 4 PM to 12 AM, and automatic rules paused ads during the midday hours. [L1127.024]</li>
+<li>Set the start date to the next day at 12:00 AM in the ad account time zone. A midnight start spreads budget over all 24 hours, while other start times can leave the ad set unspent for hours and then spend the whole budget in one hour. [L0648.011]</li>
+<li>Starting a campaign late in the evening (for example 10 pm or 11 pm) makes spending abrupt, and the budget can be used up within two to three hours. Set the start date to the next day at midnight so Meta can pace the budget across the day. [L0647.017]</li>
+<li>Set the start date and time to 12am in your local time on the next day. This is the start setting for new test ad sets. [L0376.009]</li>
+<li>Schedule the start for midnight, local time, on the following day. [L0375.007]</li>
+<li>Ad set &gt; Schedule: leave the start date empty to launch when Meta approves the ad. To launch at a set time, such as midnight on a sale day, enter that start date and time in the Start date field. [L0865.026]</li>
+<li>Scheduled start and end times use the time zone of the ad account, not the time zone of the user or the website. When the ad account and the website are in different time zones, convert the times so the ad starts when the website change goes live. [L0865.027]</li>
+<li>Ad set &gt; Schedule &gt; End date: set an end date for time-limited sales, such as a sale from Saturday midnight to Tuesday midnight. Leave it off for evergreen campaigns. [L0865.028]</li>
+<li>Budget scheduling: leave it untouched. Keep the A/B test off until you set one up on purpose. [L0865.013]</li>
+<li>The seller's best-hour practice is a case; the rule against hour restrictions applies to standard setups. [L0363.057, L1127.024]</li>
+</ul>
+<h2 id="advantage-settings">Advantage+ Settings</h2>
+<ul>
+<li>Turn off the Advantage+ sales campaign recommendations at CBO campaign level. [L0348.005]</li>
+<li>Advantage+ campaign budget: turn on for CBO and enter the budget at campaign level. [L1193.024, L0865.009]</li>
+<li>Advantage+ audience: leave on for broad audiences. [L0348.006]</li>
+<li>Advantage+ placements: keep on. [L0642.001, L0865.033]</li>
+<li>Advantage+ placements: use by default. [L0648.021]</li>
+<li>Advantage+ placement at ad set level in Source C's ad set procedure. [L0647.008]</li>
+<li>Advantage+ campaigns: one ad set, several ads, budget on the ad set. [L1161.025]</li>
+<li>Advantage+ sales campaign toggle: shown on in the recommended setup. [L0865.060]</li>
+<li>Advantage+ campaigns scale with the same strategy as other campaigns. [L1107.025]</li>
+<li>Show more settings contains Budget scheduling, A/B test, Audience segment reporting and Special ad categories. Leave Budget scheduling untouched, keep the A/B test off until you set one up on purpose, and only declare a special ad category if the ads are political, employment or finance related, which is rare. [L0865.013]</li>
+</ul>
+<h2 id="learning-phase">Learning Phase</h2>
+<ul>
+<li>Meta's learning phase: the algorithm tests the ad's creative, text and video against audiences and shifts delivery toward people who engage. Choosing a purchase conversion goal gives fewer events than choosing add to cart, but the events are more useful for a dropshipping business. [L0353.024]</li>
+<li>Start Facebook ads at a minimum of $50 per day; lower daily budgets do not gather enough learnings to leave the learning phase, so scaling takes longer. [L1016.055]</li>
+<li>Optimizing for conversions only after about 30 conversions. Below that, optimize for clicks. [L0643.019]</li>
+<li>New creatives in a scaling CBO may receive little or no spend, so they cannot be judged. [L1107.024]</li>
+<li>Under CBO, after about a week the campaign shifts most budget to the best interest ad set. [L0649.029]</li>
+<li>Learning-phase guidance for a new pixel: ABO keeps spending under control because a new pixel has no purchase data for Meta to optimize with. [L0647.002]</li>
+</ul>
+<h2 id="ad-level-identity-creative-destination-and-previews">Ad Level: Identity, Creative, Destination and Previews</h2>
+<ul>
+<li>Ad &gt; Identity &gt; Facebook Page: choose the page the ad runs from. If an Instagram account is linked to the page, Meta selects it automatically. Threads can be connected or the Instagram account can be used for it. Branding can be ignored. [L0865.035]</li>
+<li>Do not connect an Instagram account to the Facebook ad, because if a viewer taps the brand name and finds a neglected Instagram profile with few followers, the brand may look like a scam; without the connection, clicks go straight to the landing page. [L0642.003]</li>
+<li>Ad &gt; Ad setup &gt; Create ad with Manual upload: upload your own image or video files from the computer. The option Products from your catalog is for showing catalog products, and Use existing post is for boosting a post that already exists. [L0865.037]</li>
+<li>Ad &gt; Destination: enter the website URL people go to after clicking. Use a collection page or a product page. Leave the phone number empty for call options unless calls are wanted. [L0865.040]</li>
+<li>Ad &gt; Destination &gt; Use shop: keep it Default off. Shop checkout is an extra step that keeps people on the platform, and checkouts happen on the website anyway. [L0865.041]</li>
+<li>Ad &gt; Creative &gt; Source URL: leave empty. Meta can pull promo codes, email signup offers and site links from the website, which is usually not needed. [L0865.042]</li>
+<li>Ad &gt; Creative &gt; Product catalog: turn off the catalog section if the catalog is not fully optimized. Catalog products should only show below the ad when the catalog is optimized. [L0865.043]</li>
+<li>Ads Manager autosaves each change and shows 'All edits saved' or 'Verifying your edits' at the bottom of the screen. Wait for the saved message before leaving the page, so that the last change is not lost. [L0614.026]</li>
+<li>Draft campaigns and ads always show at the top of Ads Manager, no matter which campaign is selected. They do not mean the account is wrong, but they can make the list hard to read. [L0865.057]</li>
+<li>Ads Manager shows a campaign score next to new campaigns. A score of 100 with the note that the recommended setup is in use means the current campaign settings match Meta's suggested configuration. It is a setup check, not a measure of performance. [L0865.058]</li>
+</ul>
+<h2 id="creative-count-and-copy-units">Creative Count and Copy Units</h2>
+<ul>
+<li>Testing lane copy per creative: 3 primary texts, 3 headlines and 1 description. [L1019.041]</li>
+<li>Fill in primary text, headline, description and the call to action button (Shop now). [L0647.009]</li>
+</ul>
+<h2 id="meta-account-management-principles">Meta Account Management Principles</h2>
+<ul>
+<li>Meta Ads Manager is used to create and manage the campaign, ad set and ad levels. [L1029.022]</li>
+<li>Start with the recommended setup, not an improvised one. Meta's Power Five framework: apply the recommendations first, then change only where they fail to produce profit. [L0649.004, L0491.021]</li>
+<li>Stay on the recommended structure for a first launch. [L0491.021]</li>
+<li>Keep the campaign on the default settings that Meta recommends, except where a test calls for a change. [L0348.005, L0348.016]</li>
+<li>Audience: Meta's learning is driven by the pixel's purchase data. [L0647.003]</li>
+<li>Placements and schedule: let Meta optimize with automatic defaults. [L0648.021, L0863? ]</li>
+</ul>
+<p>Remove any broken reference above and rely on the individual units cited.</p>
+<h2 id="where-the-sources-disagree">Where the Sources Disagree</h2>
+<ul>
+<li><strong>Budget per ad set:</strong> $50 per ad set for a single product with three creatives [L0348.017]; $10-15 per ad set for initial product tests [L0375.001, L0376.001]; $15 per ad set [L0645.001]; $5 per ad set for a new-store ABO test [L0642.001, L0646.054]; $1/day is the minimum to keep a campaign active [L0643.017]; $50/day is the minimum for learning [L1016.055]. Use the higher budgets for multi-creative tests and the lower budgets for interest-by-interest tests on ABO.</li>
+<li><strong>CBO versus ABO:</strong> CBO is the default for beginners, mid-stage accounts and scaling [L1019.012, L1019.013, L0865.007]; ABO is recommended for testing new interests, new stores and creative tests [L0642.002, L0645.013, L0398.059]; Source E advises against ABO entirely [L0865.008].</li>
+<li><strong>Switching direction:</strong> Move from ABO to CBO after purchase data [L0647.003]; switch to ABO after real purchase data [L1019.015]; switch from CBO to ABO after around 80-100 purchases [L1195.024]. Read these as different phases: CBO→ABO after the CBO has rich data for cost-cap control [L1195.024], and ABO→CBO once Meta can use the purchase data for allocation [L0647.003].</li>
+<li><strong>Number of testing CBOs:</strong> Two separate CBOs for the test [L1021.018]; up to two testing CBOs in parallel [L1195.021]; three CBO campaigns in parallel [L1212.013, L0693.036]; a main CBO plus CBO 1 and CBO 2 [L1019.007]. Keep at most two testing CBOs in parallel and no more than three in total [L1195.021].</li>
+<li><strong>Campaign count:</strong> one CBO with one broad campaign [L0037.002]; 2-5 campaigns as Meta's guidance [L0637.032]; a seven-campaign account structure [L0649.016]; a single product per campaign [L0874.001]. Use one campaign per product (for multi-product, one campaign per product) [L0874.001], and keep the account structure small.</li>
+<li><strong>Ad sets per test:</strong> 6-10 interest ad sets [L0375.001, L0376.001]; 7-8 [L0645.001]; 5 [L0647.004]; 4 per CBO [L0693.036]; 4 duplicates to make five [L0642.001]. Use 5 ad sets for a single-interest test with 15 ads [L0647.004].</li>
+<li><strong>Creatives per ad set:</strong> 3 [L0348.012, L0645.001]; 3-5 [L1019.005, L0375.001, L0376.001]; at least 3 [L0647.004]; 2-3 minimum in CBO [L0398.059, L0645.015].</li>
+<li><strong>Age:</strong> usually 21 and above [L0375.007, L0376.008]; 18 to 65+ [L0647.008]; 25+ for a Swiss German test [L0642.001].</li>
+<li><strong>Start time:</strong> midnight local time or 12:00 AM [L0375.007, L0376.009, L0647.017, L0648.011]; 6:00 a.m. as the presenter's own choice with 12 p.m. or 12 a.m. also working [L0642.001].</li>
+<li><strong>Hour restrictions:</strong> do not restrict hours [L0363.057]; seller's best hours were 12 AM to 6 AM and 4 PM to 12 AM [L1127.024].</li>
+<li><strong>Campaign-level audience:</strong> keep one broad campaign with no interest tests [L0037.002]; test one interest per ad set in ABO [L0647.008].</li>
+<li><strong>Advantage+ audience:</strong> leave on [L0348.006]; switch to the original audience to keep one interest per ad set [L0647.008].</li>
+<li><strong>Placements:</strong> Automatic or Advantage+ placements as the default [L0865.033, L0648.021, L0642.001]; manual placements only when data shows a specific placement wins [L0773.029, L0648.021].</li>
+<li><strong>Conversion objective:</strong> Purchase for every test [L0647.015, L0865.018]; Clicks while below 30 conversions [L0643.014, L0643.019].</li>
+</ul>
+<h2 id="account-structure-and-objectives">Account Structure and Objectives</h2>
+<ul>
+<li>The Sales objective is the setting for Advantage+ shopping campaigns. Select Sales, then Advantage+ shopping campaign [L1335.028].</li>
+<li>For cold traffic selling products on Facebook, conversion campaigns are the usual objective (older, Source B 2021-22) [L1342.048].</li>
+<li>Retargeting is often run as a traffic campaign, because conversion campaigns need a steady number of conversions in a set period before the algorithm optimizes well (older, Source B 2021-22) [L1342.048].</li>
+</ul>
+<h2 id="advantage-shopping-campaigns">Advantage+ Shopping Campaigns</h2>
+<h3 id="eligibility">Eligibility</h3>
+<ul>
+<li>Use Advantage+ shopping campaigns only with more than 400 purchases over the last couple of months [L1335.029].</li>
+<li>Include the existing-customer setting in account settings once the account has solid sales [L1335.029].</li>
+<li>Advantage+ shopping campaigns require a minimum budget of at least $50 [L1335.030].</li>
+<li>They are based on the account's own purchase and engagement history (pixel data) and use broad targeting [L1335.030].</li>
+</ul>
+<h3 id="field-settings">Field Settings</h3>
+<ul>
+<li>Conversion location: website. Use website and shop only if Shop is enabled [L1335.028].</li>
+<li>Countries: select the top 5 countries by performance [L1335.028].</li>
+<li>Custom audience: add a custom purchase audience of the last 180 days when the account has enough sales [L1335.028].</li>
+<li>Budget and start: set a minimum budget of $50 and a start time of the next day at midnight [L1335.028].</li>
+<li>Ads: add at least 3 to 5 of the best-performing ads [L1335.028].</li>
+</ul>
+<h3 id="setup-from-a-proven-campaign">Setup From a Proven Campaign</h3>
+<p>Setting up an Advantage+ campaign from a proven campaign:</p>
+<ol type="1">
+<li>Choose the campaign that is performing best with your strongest ads. [L1316.018]</li>
+<li>Duplicate that campaign. [L1316.018]</li>
+<li>When Facebook offers a manual setup or Advantage+, select Advantage+. [L1316.018]</li>
+<li>Set only the country, age and gender targeting. [L1316.018]</li>
+<li>Leave all other targeting decisions to Facebook. [L1316.018]</li>
+</ol>
+<h2 id="cbo-and-abo-choosing-the-budget-level">CBO and ABO: Choosing the Budget Level</h2>
+<ul>
+<li>Use CBO when it works for the account. The platform then shifts budget to the best-performing audience pocket [L1335.002].</li>
+<li>If CBO does not perform, ABO is the fallback [L1335.002].</li>
+<li>Campaign-level budgets hand control to the algorithm. Ad-set budgets keep control with the advertiser [L1335.002].</li>
+<li>Use ABO when testing, because it gives control over spend per ad set [L1345.075].</li>
+<li>CBO works when the account already has winning audiences and winning creatives. It may fade after about a week [L1345.075].</li>
+</ul>
+<h2 id="testing-campaign-architecture">Testing Campaign Architecture</h2>
+<h3 id="abo-product-test">ABO Product Test</h3>
+<ul>
+<li>A product-testing ABO campaign with five ad sets at 8 GBP daily budget each (UK) gives a total daily spend of 40 GBP [L1220.002].</li>
+<li>The campaign-level daily spending limit must also be at least that amount, or it will cap spend [L1220.002].</li>
+</ul>
+<h3 id="cbo-creative-test">CBO Creative Test</h3>
+<ul>
+<li>If you run creative testing as a CBO campaign to spend more, set a minimum ad spend per ad set of 3 to 5 USD [L1316.013].</li>
+<li>This forces Meta to spend roughly evenly on each ad, so every creative gets enough data [L1316.013].</li>
+</ul>
+<h3 id="cbo-audience-test-on-a-small-budget">CBO Audience Test on a Small Budget</h3>
+<ul>
+<li>When testing with a CBO campaign on a budget of about $50 to $100 per day, set a minimum spend per ad set of roughly $15 to $20 [L1345.100].</li>
+<li>This ensures each audience gets enough spend to show its performance and stops one audience from taking the whole budget before the others are tested [L1345.100].</li>
+<li>The goal of this kind of test is to find winning audiences and creatives, not to be profitable yet [L1345.100].</li>
+</ul>
+<p>Which minimum applies: use 3 to 5 USD per ad set for creative tests [L1316.013]. Use roughly $15 to $20 per ad set when the CBO budget is about $50 to $100 per day and the test is for audiences [L1345.100].</p>
+<h2 id="pockets-and-audience-splitting">Pockets and Audience Splitting</h2>
+<ul>
+<li>In a CBO (Advantage campaign budget) or ABO setup, a pocket is the slice of an ad set's audience the platform is currently delivering to [L1335.039].</li>
+<li>The algorithm moves spend toward the pockets that perform best on a given day [L1335.039].</li>
+<li>For this reason, one broad audience can be split across several ad sets to reach different pockets [L1335.039].</li>
+</ul>
+<h2 id="editing-launch-dates-and-budgets-in-cbo">Editing Launch Dates and Budgets in CBO</h2>
+<ul>
+<li>To change the launch date of several ad sets in a CBO campaign at once, click the first ad set, hold Shift and click the last ad set, then edit the date. The change applies to all of them [L1335.043].</li>
+<li>Leave ad-set budgets empty, because the budget is set at campaign level [L1335.043].</li>
+</ul>
+<h2 id="learning-phase-and-edits">Learning Phase and Edits</h2>
+<ul>
+<li>The ad algorithm keeps optimizing in the background [L1445.005].</li>
+<li>Changing campaigns too early resets that optimization [L1445.005].</li>
+<li>Let a campaign finish learning before judging or editing it [L1445.005].</li>
+</ul>
+<h2 id="retargeting-settings-source-b-2021-22-older">Retargeting Settings (Source B, 2021-22, older)</h2>
+<ul>
+<li>For a traffic retargeting test, set Settings &gt; Campaign &gt; Campaign Budget Optimization to Off. Campaign Spend Limit is optional and was left unset in this setup [L1342.025].</li>
+<li>Set Settings &gt; Ad set &gt; Optimization for ad delivery to Link clicks. Other options such as Landing page views, Impressions or Unique daily reach exist, but link clicks is the setting used here [L1342.027].</li>
+<li>Set Settings &gt; Ad set &gt; Dynamic creative and offers: leave dynamic creative off and do not add an offer for standard static retargeting. An offer such as a coupon can be tested later in an irresistible offer ad [L1342.028].</li>
+<li>Set Settings &gt; Ad set &gt; Schedule: for ordinary retargeting, run continuously from the start date. For a time-limited campaign, such as a Black Friday offer, use a start and end date that matches the promotion length [L1342.029].</li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/08-attribution-settings-and-the-march-2026-changes/"><span class="k">&larr; Previous</span><span class="v">Attribution settings and the march 2026 changes</span></a><a class="nx" href="../../09-meta-and-facebook-ads/10-bidding-cost-cap-bid-cap-and-automated-rules/"><span class="k">Next &rarr;</span><span class="v">Bidding: cost cap, bid cap and automated rules</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

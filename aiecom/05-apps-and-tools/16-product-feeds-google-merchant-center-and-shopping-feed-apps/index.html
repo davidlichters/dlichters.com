@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Product feeds, Google merchant center and shopping feed apps | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 5.16: Product feeds, Google merchant center and shopping feed apps.">
+<link rel="canonical" href="https://dlichters.com/aiecom/05-apps-and-tools/16-product-feeds-google-merchant-center-and-shopping-feed-apps/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Product feeds, Google merchant center and shopping feed apps | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 5.16: Product feeds, Google merchant center and shopping feed apps."><meta property="og:url" content="https://dlichters.com/aiecom/05-apps-and-tools/16-product-feeds-google-merchant-center-and-shopping-feed-apps/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">5. Apps and tools</a> &rsaquo; <a href="../../../ecom/05-apps-and-tools/16-product-feeds-google-merchant-center-and-shopping-feed-apps/">Plain version</a></div><h1>5.16 Product feeds, Google merchant center and shopping feed apps</h1><article><h2 id="before-connecting-anything-store-readiness-and-policy-checks">Before Connecting Anything: Store Readiness and Policy Checks</h2>
+<ul>
+<li>Google Gemini can pre-check the store and its policy pages before submission to Google Merchant Center and Google Ads. It is aligned with Google's own requirements and can flag placeholders, missing information and unclear policy wording that Google's crawlers would catch. [L0167.017]</li>
+<li>Use Gemini, not ChatGPT, to check a Shopify store against Google Ads and Merchant Center policies. Give it the store's home page URL, ask it to check every policy page, and ask whether the store is fully compliant. [L0808.026]</li>
+<li>An AI assistant such as Gemini can compare the website's shipping and return policy text against the answers entered in Merchant Center to check compliance before saving. Use it as a cross-check, then verify the match yourself. [L0729.017]</li>
+</ul>
+<p><strong>Policy-by-policy check with Gemini:</strong></p>
+<ol type="1">
+<li>Start with the Returns/Refunds policy and paste the full text into Gemini. [L0167.018]</li>
+<li>Apply Gemini's recommended changes in Shopify. [L0167.018]</li>
+<li>Repeat the same process for the Shipping, Privacy, Terms and Contact pages. [L0167.018]</li>
+<li>After all updates, ask Gemini to re-check and confirm that the pages are clean. [L0167.018]</li>
+</ol>
+<p><strong>Prompt for the policy review:</strong></p>
+<pre><code>Hi, I run YOURDOMAIN.com and am getting ready to send the website to Google Merchant Center and Google Ads for review. Please go through the site and the policy pages I share and point out anything that breaks the rules or looks doubtful. For each issue, state what it is and what update you recommend. Pay particular attention to stand-in text, text in square brackets used as filler, made-up or placeholder contact information (such as dummy phone numbers), vague return or delivery terms, missing or unclear shipping charge details, and absent quick-glance summary information. Where you can, supply the exact replacement wording. Once I have made the changes, I&#39;ll paste the revised text back to you, so please tell me whether the page is then fully compliant.</code></pre>
+<p>[L0167.019]</p>
+<p><strong>Compliance checklist, in this order, before setting up any Google accounts:</strong></p>
+<ol type="1">
+<li>Remove every sample product under Shopify Admin &gt; Products. [L0167.021]</li>
+<li>Click through every header, homepage, collection and footer link and repair any 404 errors. [L0167.021]</li>
+<li>Take out placeholder pictures and incomplete sections so the storefront appears finished. [L0167.021]</li>
+<li>Go through all Shopify policy pages under Settings &gt; Policies and strip out any placeholder text. [L0167.021]</li>
+<li>Put real email, phone and opening hours into the contact details on the policy pages. [L0167.021]</li>
+<li>Pass each policy page through Google Gemini and implement every fix it recommends. [L0167.021]</li>
+<li>Revise the Contact Us page so it shows phone, email and hours in addition to the form. [L0167.021]</li>
+<li>Recheck with Gemini until it reports everything as compliant, and only then create the Google accounts. [L0167.021]</li>
+</ol>
+<h2 id="choosing-a-feed-app">Choosing a Feed App</h2>
+<p><strong>Principles</strong></p>
+<ul>
+<li>Product feeds to Google Merchant Center should be sent with a separate dedicated app, because it gives more control than the Google &amp; YouTube app's Merchant Center section. [L0722.010]</li>
+<li>A paid feed app gives more control over product data than a free one. Better product data generally leads to better results in Google Shopping, so the monthly fee is usually worth it as sales grow. [L1165.006]</li>
+<li>Feed management apps for Merchant Center typically cost a few dollars per month. The fee is considered worth it for reliable, automatically updated feeds. [L732.014]</li>
+<li>Software prices for product feed tools can often be negotiated, so ask the vendor before accepting list pricing. [L454.044]</li>
+<li>Compare tools on pricing model and features rather than picking one only by reputation. [L454.044, L454.026]</li>
+<li>Feed apps for Google, Bing and Facebook are sold separately because each platform has slightly different feed requirements. [L762.010]</li>
+<li>A feed management app that communicates with Merchant Center can find more errors than Google's diagnostics alone, and it tells you exactly which field to fix. Using such an app speeds up error correction and improves product visibility in Google Shopping. [L732.022]</li>
+</ul>
+<p><strong>Native Shopify Google channel versus dedicated app (sources differ)</strong></p>
+<ul>
+<li>Older advice (2022): Google is taking over the native channel; a feed app provides better control. [L272.016]</li>
+<li>Older advice (2021-22): Shopify's native Google sales channel misses some useful feed data points and is harder to edit when feed changes are needed. Switch to a dedicated feed app instead. [L1170.026]</li>
+<li>The free Google Shopping app published by Shopify has few customization options and a 3.6-star rating in the Shopify App Store. It only makes sense for a quick start and is not suited to growing a Google Shopping business. [L1165.002]</li>
+<li>The free Google Merchant Center account connects directly to Shopify through the Google sales channel, following a setup process similar to the Facebook sales channel. [L1251.026]</li>
+<li>Use the feed app's submission path, not the Google sales channel's Merchant Center listing option. [L835.133]</li>
+<li>Avoid the old native Shopify Google feed plugin, which had poor reviews. It only worked for US currency, failed for customers in Canada, submitted the highest shipping cost instead of the lowest, and was poorly maintained. [L732.006]</li>
+</ul>
+<p><strong>Naming and look-alike apps</strong></p>
+<ul>
+<li>Many apps in the Shopify App Store have nearly identical names, such as Google Shopping. Check the developer before installing, because the Shopify-made app and third-party apps can look the same in search results. [L1165.003]</li>
+<li>The sources spell the feed vendor in several ways (Simprosys, Someprocess, Some Process, Symprosis). Simprosys InfoMedia is named as the maker of "Feeds for Google Shopping". [L731.020, L272.016, L255.056, L732.007]</li>
+<li>"Feed for Google Shopping" (not made by Shopify) is the paid app most sources recommend. [L1165.005, L1165.007]</li>
+</ul>
+<p><strong>Prices and trials</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Price stated</th>
+<th>Trial</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Feed for Google Shopping (paid third-party app)</td>
+<td>$4.99/month up to 500 products; $8.99/month up to 1,000 products; higher above that</td>
+<td>21 days</td>
+<td>[L1165.005]</td>
+</tr>
+<tr>
+<td>Feed for Google Shopping (2020 recording)</td>
+<td>About $5/month</td>
+<td>21 days</td>
+<td>[L1277.065]</td>
+</tr>
+<tr>
+<td>Feeds for Google Shopping (Simprosys InfoMedia, 2021-22 recording, older)</td>
+<td>About $5/month after trial (price at time of recording)</td>
+<td>22 days (older)</td>
+<td>[L731.030]</td>
+</tr>
+<tr>
+<td>Some Process</td>
+<td>$4.99/month up to 500 products</td>
+<td>21 days</td>
+<td>[L255.057]</td>
+</tr>
+<tr>
+<td>Symprosis Google Shopping Feed</td>
+<td>$4.99/month</td>
+<td>Free trial to start</td>
+<td>[L1168.001]</td>
+</tr>
+<tr>
+<td>Symprosis (other source)</td>
+<td>Small monthly fee</td>
+<td>Not stated</td>
+<td>[L732.007]</td>
+</tr>
+<tr>
+<td>Google Shopping Feed (feed tool)</td>
+<td>$5/month</td>
+<td>Not stated</td>
+<td>[L1033.009]</td>
+</tr>
+<tr>
+<td>Google Shopping Feed app (Source C)</td>
+<td>Around $3 to $4/month, or free</td>
+<td>Not stated</td>
+<td>[L788.025]</td>
+</tr>
+<tr>
+<td>Go Data Feed</td>
+<td>Around $60-70/month for three feeds, more above that</td>
+<td>Not stated</td>
+<td>[L575.007]</td>
+</tr>
+<tr>
+<td>Dedicated feed services (Data Feed Watch, Feedonomics)</td>
+<td>From about 50 USD/month up to several hundred USD/month (older, 2021-22)</td>
+<td>Not stated</td>
+<td>[L1170.025]</td>
+</tr>
+<tr>
+<td>Google Merchant Center default feed</td>
+<td>Free</td>
+<td>Not applicable</td>
+<td>[L575.007]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Shopify feed apps are a cheaper option than dedicated feed services for most stores. [L1170.024, L1170.025]</li>
+<li>Feed for Google Shopping handles feed functions that paid feed services offer at a fraction of their cost. [L1170.024]</li>
+</ul>
+<p><strong>Other feed tools named in the sources</strong></p>
+<ul>
+<li>Feed tools named as product feed apps for the Shopify store and Google Merchant Center are Flexify (a free plugin with a Facebook feed focus), Data Feed Watch, Feed Optimize, Feedonomics and Go Data Feed. One popular app costs about $5 per month. Choose by pricing model and features. [L454.026]</li>
+<li>Common product feed tools for Shopping and social channels are Flexify (Facebook product feed), Datafeed Watch, Feedoptimise, Feedonomics and Godatafeed. The lesson treats these as largely interchangeable. [L1033.010]</li>
+<li>Shopping feed management tools such as Feed Optimise, DataFeedWatch and GoDataFeed are used to optimize the product feed, including titles and product data, to improve CTR. [L1031.025, L510.031]</li>
+<li>Go Data Feed distributes the feed to hundreds of channels such as Amazon, eBay and price comparison sites, and lets you set rules to optimize and enrich feed data. [L575.007]</li>
+</ul>
+<p><strong>Symprosis (Some Process / Symprosis / Someprocess)</strong></p>
+<ul>
+<li>Symprosis is a paid Shopify app with a small monthly fee that syncs products to Google Merchant Center. It is recommended for keeping feed data current and reliable. [L732.007]</li>
+<li>Symprosis is the app used to correct product feed errors that Google flags in Merchant Center. It is not the place to diagnose the error first. [L1015.003]</li>
+<li>Symprosis is a manual control tool for Google Shopping feed management used alongside the Google &amp; YouTube app. [L856.073]</li>
+<li>Some Process (or SomeProcess) is used to sync the Shopify product catalog to Google Merchant Center. [L255.056]</li>
+<li>Some Process shows product status (red/green), errors, and allows contacting support for issue resolution. [L274.033]</li>
+<li>Advanced Symprosis features (custom labels, additional attributes, feed segmentation) are designed for high revenue scaling. Start with the app's default settings and basic product category reviews; add advanced features only when they become necessary for managing large inventories or complex feed rules. [L182.010]</li>
+</ul>
+<p><strong>Google Shopping Feed app (Source C)</strong></p>
+<ul>
+<li>The Google Shopping Feed app checks each product manually and submits it to Google Merchant Center, helping avoid bans and fix suspensions. It is recommended before starting Google Ads and costs around $3 to $4 per month or is free. [L788.025]</li>
+</ul>
+<h2 id="feed-for-google-shopping-simprosys-setup">Feed for Google Shopping (Simprosys): Setup</h2>
+<p><strong>What it does</strong></p>
+<ul>
+<li>Feeds for Google Shopping formats Shopify product data to Google Merchant Center's required format and sends it automatically. Manual spreadsheet feeds are error-prone and time-consuming, so an app is used instead. [L731.020]</li>
+<li>Feed for Google Shopping connects the Shopify product feed to Google Merchant Center via the API. It updates stock status, price, title, description, SKU, photos and promotions within about 20 minutes. It is preferred over the Google channel app. <em>(older advice, 2021)</em> [L962.004]</li>
+<li>Set to auto update, changes in Shopify flow through the content API to Merchant Center and Google Ads in near real time. <em>(older advice, 2021)</em> [L247.082]</li>
+<li>It offers more control than the built-in Google channel. <em>(older advice, 2021)</em> [L801.109]</li>
+<li>It handles the Google product feed and provides conversion tracking. It is the recommended tool for connecting Shopify to Google. <em>(older advice, 2020)</em> [L852.074]</li>
+<li>It publishes products to Google Merchant Center when the product availability box is checked. Use one Google Shopping app and avoid mixing duplicates. <em>(older advice, 2020)</em> [L664.075]</li>
+<li>Feed for Google Shopping is a paid app of about 5 USD per month, with a free 21-day trial. It connects directly to Google Merchant Center to send the product feed automatically. <em>(older advice, 2020)</em> [L1277.065]</li>
+<li>It is the recommended tool for managing your product feed to Google. It is more reliable and customizable than Shopify's native Google Shopping Channel. Google is taking over the native channel; the feed app provides better control. <em>(older advice, 2022)</em> [L272.016]</li>
+<li>A product CSV uploaded directly to Google Merchant Center does not update automatically and only holds the data from that file. An API-based feed pushes every store change to Merchant Center in near real time, which is why price and stock changes need it. <em>(older advice, 2021)</em> [L962.005]</li>
+</ul>
+<p><strong>Installing</strong></p>
+<p>Install steps (2021-22 recording, older) [L731.021]:</p>
+<ol type="1">
+<li>Open the Shopify App Store from the Apps section of the Shopify menu.</li>
+<li>Search for "feeds for google shopping".</li>
+<li>Select Feeds For Google Shopping by Simprosys InfoMedia.</li>
+<li>Click Install app.</li>
+</ol>
+<p>Install step from the 2026 recording [L1165.007]:</p>
+<ol type="1">
+<li>Install Feed for Google Shopping from the Shopify App Store (search for the name, the app is not made by Shopify) and open it under Apps.</li>
+</ol>
+<p><strong>Connecting to Merchant Center (Simprosys / Source B, 2021-22, older)</strong> [L731.022]</p>
+<ol type="1">
+<li>Log in with the Google account used to create the Merchant Center account.</li>
+<li>Allow the app access to the account.</li>
+<li>Select the Merchant Center ID, checking it matches the ID shown in the top right corner.</li>
+<li>Confirm the account.</li>
+<li>In Merchant Center, go to Growth &gt; Manage programs and click Get started under Shopping ads.</li>
+<li>Return to the app and confirm that programs have been enabled.</li>
+</ol>
+<p><strong>Connecting to Merchant Center (2026 recording)</strong> [L1165.007]</p>
+<ol type="1">
+<li>Install Feed for Google Shopping from the Shopify App Store (search for the name, the app is not made by Shopify) and open it under Apps.</li>
+<li>Select the Google Merchant Center account to link. Use the same email address for the app as for the Merchant Center account, because that address links everything.</li>
+<li>Click confirm your account.</li>
+<li>Read the notice inside the app about required Merchant Center programs. In Google Merchant Center, enable every program you plan to use, for example dynamic remarketing.</li>
+<li>Back in the app, confirm that the programs are enabled. The app then verifies the stored data.</li>
+<li>Check that the connection shows your primary domain and your merchant ID.</li>
+<li>Open Feed settings to configure the feed.</li>
+</ol>
+<p><strong>Permissions and trial</strong></p>
+<ul>
+<li>The feed app needs permission to manage Google Ads campaigns, product listings and Google Shopping accounts. Access must be allowed during sign-in, or the app cannot link Google Ads or insert the remarketing and conversion tags. [L731.041]</li>
+<li>The app has a free trial of 22 days in the 2021-22 recording (older), after which it costs about $5 per month. The 2020 and 2026 recordings give a 21-day trial. [L731.030, L1277.065, L1165.005]</li>
+<li>The app must be activated before the trial ends, or it stops sending product data and the ads stop running. [L731.030]</li>
+<li>A free sign-up for additional attributes submits rich product data, including to Facebook and Instagram Shops. [L747.019]</li>
+<li>A get support button in the bottom right of the screen helps when setup gets stuck or a change does not go through. [L1165.022]</li>
+<li>Support is included. If the product feed shows as empty after import, contact Someprocess support directly from within the app; they can diagnose configuration issues quickly. <em>(older advice, 2022)</em> [L272.017]</li>
+</ul>
+<p><strong>Initial configuration</strong></p>
+<ul>
+<li>After the Merchant Center connection succeeds, the app shows Quick Sync Settings for product submission. A SWITCH TO ADVANCE INTEGRATION button leads to the more detailed feed optimization settings, which are only needed for a non-standard setup. [L731.038]</li>
+<li>Quick Sync Settings (2021-22, older): choose All Products for which products are submitted, Default Product Title and Default Product Description, and All Variants for variant submission. Set tax to "Yes, prices include tax" if the shown prices include tax, and enter a notification email. [L731.024]</li>
+<li>Which products are submitted: All Products or Products from a Collection. [L747.018]</li>
+<li>Product Title Preference and Product Description Preference: Default or SEO. [L747.018, L402.014]</li>
+<li>Variant Submission Preference: First Variant Only or All Variants. [L747.018, L402.014]</li>
+<li>Append Variant Name to Product Title: Yes or No. [L747.018, L402.014]</li>
+<li>Inventory Policy: Follow or Ignore. [L747.018, L402.014]</li>
+<li>Product Image Option: use second image for a product with no variant. [L747.018]</li>
+<li>Submit Additional Images (checkbox). [L747.018, L402.014]</li>
+<li>Submit a Rich Product Description (checkbox, uses HTML tags). [L747.018, L402.014]</li>
+<li>Product Image Option and Submit Additional Images are the sync options for images. [L402.014]</li>
+<li>Settings menu contents: Sync Settings From Shopify, Google Shopping Settings, Google Shopping Actions, Bing Shopping Settings, Facebook Catalog Settings, XML Feed Settings and Google Local Inventory. [L747.022]</li>
+<li>Sync Settings From Shopify is the page that pulls Shopify field changes into the feed. [L747.022]</li>
+<li>Channel Submission Control: keep Google Shopping, Google Display Ads and Surface Across Google ticked. Google Display Ads enables dynamic remarketing, and Surface Across Google covers YouTube, Google Discover and Shopping Actions. [L1170.028]</li>
+<li>Custom Attributes in the feed app: Color, Size, Material, Pattern and COGS. They are sent to connected channels only, do not write back to Shopify, and are used only when the same attribute is not defined in Shopify. [L1170.030]</li>
+</ul>
+<p><strong>Default settings</strong></p>
+<ul>
+<li>The Default Settings section sets fallback values for Default Google Product Category, Default Age Group, Default Gender, Default Product Condition and Default Product Identifier Management. These defaults apply to products that do not have their own value in Shopify, so they should be checked before the first feed submission. [L747.023]</li>
+</ul>
+<p><strong>Product ID formats</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Example</th>
+<th>When to use</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Format (default)</td>
+<td>shopify_US_123456_987654</td>
+<td>Choose the global format unless one of the exceptions applies</td>
+<td>[L731.025]</td>
+</tr>
+<tr>
+<td>SKU as Product ID</td>
+<td>,</td>
+<td>Used when Judge.me reviews are installed</td>
+<td>[L731.025]</td>
+</tr>
+<tr>
+<td>Variant ID as Product ID</td>
+<td>,</td>
+<td>Needed for the Facebook product catalog feed</td>
+<td>[L731.025]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Shopping Actions (only after approval)</strong></p>
+<ul>
+<li>After approval, Feeds for Google Shopping hosts the switch that enables Google Shopping Actions and where the additional Shopping Actions feed data is submitted. [L738.023]</li>
+<li>Order Sync for Google Shopping (by Simprosys) brings Shopping Actions orders from Merchant Center into Shopify. Without it, orders are visible only inside Merchant Center and no notification reaches the merchant, so install it only after approval. [L738.024]</li>
+</ul>
+<p><strong>Symprosis connection procedure</strong> [L732.008]</p>
+<ol type="1">
+<li>Install the app and choose to sync your data.</li>
+<li>Enter your Merchant Center ID (a numeric ID shown in Merchant Center) and confirm the account.</li>
+<li>Check the warnings the app shows, especially a missing default shipping rate for the country.</li>
+<li>Wait a few minutes for the data to be processed and check that products appear in Merchant Center.</li>
+</ol>
+<h2 id="data-fields-identifiers-and-categories">Data Fields, Identifiers and Categories</h2>
+<p><strong>Fields sent to Merchant Center</strong></p>
+<ul>
+<li>A Shopify product feed sends these fields to Google Merchant Center: product title, description, price, image, brand, MPN (SKU), GTIN barcode, unique product ID, variant data and product type. Most of them come directly from the Shopify product record, so complete them when the product is created. [L1170.048]</li>
+<li>Complete product details so Google can match your products with search queries and generate impressions. <em>(older advice, 2021)</em> [L834.056]</li>
+<li>A product feed app should fill in as many columns as possible so Google can match products to searches better. <em>(older advice, 2022)</em> [L665.050]</li>
+<li>Shopping feed identifiers are set in the Google Shopping feed app with settings for brand, MPN, SKU and GTIN handling. <em>(2023)</em> [L855.112]</li>
+<li>Feed tools flag issues that Google Merchant Center does not, such as HTML in product descriptions or special characters like the ampersand, which can export as broken characters. Use a feed grade check to catch these problems automatically. [L454.029]</li>
+</ul>
+<p><strong>Editing data</strong></p>
+<ul>
+<li>Manage Products &gt; select product &gt; EDIT PRODUCT changes details in the Shopify admin. SYNC FROM SHOPIFY pulls Shopify changes into the feed. Fields such as title, description, product type and vendor (brand) come from Shopify. [L1170.027]</li>
+<li>Feed for Google Shopping lets you modify the product data sent to Google and Facebook. Use it to send only part of a long description or to adjust fields instead of editing product pages. <em>(older advice, 2022)</em> [L963.048]</li>
+<li>Feed apps let you change product data before sending it to Google and Facebook. [L510.031]</li>
+</ul>
+<p><strong>Product IDs and offer IDs</strong></p>
+<ul>
+<li>In Merchant Center each variant gets its own offer ID, following the pattern shopify_[country code]<em>[Shopify product ID]</em>[variant ID], for example shopify_DE_1001_2002. Use this ID to find the exact variant when checking its status or diagnosing a suspension. [L1170.049]</li>
+</ul>
+<p><strong>Google Product Category</strong></p>
+<ul>
+<li>Google Product Category values in the feed must be the full Google taxonomy path with " &gt; " between each level, for example Health &amp; Beauty &gt; Personal Care &gt; Hair Care. A category that is only the last word, or a path from a different taxonomy version, does not match the Google category list. [L747.024]</li>
+<li>For the Facebook product feed, the Google product category uses the same taxonomy as Google Merchant Center. Search for the Google Merchant Center product category list and choose the category that best fits your product. <em>(older advice, 2019)</em> [L1068.051]</li>
+</ul>
+<p><strong>Currency and tax</strong></p>
+<ul>
+<li>The product feed is submitted in the same currency as the Shopify store's default currency. To change the feed currency, change the currency in the Shopify store settings. [L402.015, L747.018]</li>
+<li>Tax is set in Quick Sync Settings: choose "Yes, prices include tax" if the shown prices include tax. [L731.024]</li>
+</ul>
+<p><strong>Images</strong></p>
+<ul>
+<li>If a Facebook feed rejects a product for exceeding character limits, shorten what is submitted through the feed app. Do not delete the content from the product page to make it fit. <em>(older advice, 2022)</em> [L963.049]</li>
+<li>When a product feed app pulls the wrong image, check its settings for image selection, since many feed apps let you choose which image to submit. [L1277.066]</li>
+<li>In Smart SEO, enable the additional images option so that images from the Shopify media section are submitted to the Google feed; for products without variants this is enough. For products with variants, set the variant name or SKU as the alt text of each variant image in Shopify, so the images map to the correct variant in the feed. [L1097.021]</li>
+</ul>
+<p><strong>Title and description preference</strong></p>
+<ul>
+<li>When syncing the Google Shopping feed app, choose the search engine optimized title and search engine optimized description options rather than the standard product title and product description. The difference was not seen as decisive, but the SEO options are used. <em>(older advice, 2019)</em> [L1068.052]</li>
+</ul>
+<p><strong>Reviews</strong></p>
+<ul>
+<li>Judge.me is a review collection app used to pull reviews into Google Shopping star ratings. A minimum of 50 store reviews is needed. It is a free app integration with Shopify. <em>(2023)</em> [L274.028]</li>
+</ul>
+<h2 id="re-sync-sync-timing-and-meta-fields">Re-Sync, Sync Timing and Meta Fields</h2>
+<p><strong>How often data reaches Google</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Timing</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content API with auto update on</td>
+<td>Near real time</td>
+<td>[L247.082] (older, 2021)</td>
+</tr>
+<tr>
+<td>Content API via Feed for Google Shopping</td>
+<td>Stock, price, title, description, SKU, photos and promotions within about 20 minutes</td>
+<td>[L962.004] (older, 2021)</td>
+</tr>
+<tr>
+<td>Feed pulled on a schedule</td>
+<td>Once a day</td>
+<td>[L967.054] (older, 2020), [L671.084] (older, 2021), [L762.011]</td>
+</tr>
+<tr>
+<td>Manual CSV upload to Merchant Center</td>
+<td>Does not update automatically</td>
+<td>[L962.005] (older, 2021)</td>
+</tr>
+<tr>
+<td>Manual Excel export</td>
+<td>Not reliable, see below</td>
+<td>[L671.084]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Feed apps update the feed about once a day with stock status, price changes, new images and new titles. Optimizations made to products on the store, such as better titles, then reach Google Ads automatically. [L762.011]</li>
+<li>Connect the product feed to Google Merchant Center through an app that refreshes it every 24 hours. Do not rely on manual Excel exports, since a price change that is not updated in the feed causes mismatches. <em>(older advice, 2021)</em> [L671.084]</li>
+<li>Depending on the settings, the feed can be pushed to campaigns manually or imported automatically, for example once every 24 hours. <em>(older advice, 2020)</em> [L967.054]</li>
+<li>Use the connection option that selects the Content API as the input method, rather than Google Sheets or scheduled fetch. [L470.050]</li>
+<li>Check the app's settings for automatic daily sync. [L972.029]</li>
+</ul>
+<p><strong>Meta fields that do not sync on their own</strong></p>
+<ul>
+<li>Shopify does not notify the app when SEO title, SEO description, custom labels, age group, gender or similar fields change. These must be re-synced manually in the app. <em>(older advice, 2021-22)</em> [L747.017]</li>
+<li>Re-syncing meta fields overwrites any meta field changes that were made inside the app, except custom titles and custom descriptions. Check the app-side values before running the re-sync, because they are replaced. <em>(older advice, 2021-22)</em> [L402.011]</li>
+<li>Keep the browser window open while the app is syncing meta fields. Closing it can leave the sync incomplete. Keep the window open until the app shows that syncing has finished. <em>(older advice, 2021-22)</em> [L402.012]</li>
+<li>The re-sync pop-up offers these fields as checkboxes, with a Select All option: Age Group, Custom Labels, Google Product Category, Pattern, SEO Description, Size, Size Type, Color, Gender, Material, Product Condition, SEO Title, Size System, Unit Pricing Measure and Unit Pricing Base Measure. Tick Custom Labels for custom label changes, and tick the other fields only if they were also changed in the CSV. <em>(older advice, 2021-22)</em> [L402.013]</li>
+</ul>
+<h2 id="merchant-center-errors-reviews-and-support">Merchant Center: Errors, Reviews and Support</h2>
+<p><strong>Account basics</strong></p>
+<ul>
+<li>Google Merchant Center is required to list products on Google Shopping. It is separate from Google Ads, which is the account used to run the paid ads. <em>(older advice, 2020)</em> [L1111.082]</li>
+<li>Google Merchant Center is a free account that holds the product feed for Google Shopping and ads. [L1251.026]</li>
+<li>Google Merchant Center holds the product feed used for free product listings and paid Google Shopping ads. Products that are approved there can appear in free listings, which start giving data within days. <em>(older advice, 2021)</em> [L968.050]</li>
+<li>Google Merchant Center holds product data for Google Shopping. Custom labels in the feed can be used to group products so that a campaign can be bulk edited. [L966.069]</li>
+<li>Google Merchant Center is required to upload a product feed to Google Shopping. Check for warnings, errors, and GTIN/product identifier issues. <em>(2023)</em> [L274.034]</li>
+<li>Google Shopping (formerly Product Listing Ads) is described as the highest-quality, cheapest traffic for e-commerce, and every store should run it. Its main threats are the product feed going offline, prices being disapproved, or poor data quality. [L575.004]</li>
+<li>Promotion setting: the Feed for Google Shopping promotion setting applies only to Google Shopping campaigns. It does not carry promotions over to Facebook or other connected accounts, so those must be set up separately. <em>(older advice, 2021)</em> [L962.151]</li>
+</ul>
+<p><strong>Error panel and checks</strong></p>
+<ul>
+<li>The Feed for Google Shopping product list has tabs for Submitted, Submitted with Warnings and Excluded. Above them is a panel titled Errors from Merchant Center with a Refresh Product Errors button, and it shows when the error data was last refreshed, so refresh it before acting on an older error list. [L747.021]</li>
+<li>The dashboard's Google Status panel lists errors from Merchant Center, with a "Refresh Product Errors" button and a timestamp showing when the list was last refreshed. Before acting on the list, check that timestamp, because an old refresh can show errors that no longer exist. [L1170.053]</li>
+<li>Check Google Merchant Center for product feed errors (corrupt data or products not being sent) when Google Ads shows no clicks; the product feed is the source of all Shopping ads. <em>(older advice, 2019)</em> [L357.055]</li>
+<li>Some Process shows product status (red/green), errors, and allows contacting support for issue resolution. <em>(2023)</em> [L274.033]</li>
+<li>The app's shipping and store checks are a further source of errors. Check the warnings the app shows, especially a missing default shipping rate for the country. [L732.008]</li>
+<li>Symprosis is the app used to correct product feed errors that Google flags in Merchant Center. It is not the place to diagnose the error first. [L1015.003]</li>
+<li>GMCDoctors is a service for fixing Google Merchant Center product feed and account issues, such as disapprovals. <em>(2024)</em> [L1105.010]</li>
+</ul>
+<p><strong>Review times</strong></p>
+<ul>
+<li>Google Merchant Center product review usually takes 1 to 3 days from pending to approved, and the first review after a product submission is short. Products can show as needs review while the check is running. <em>(2023)</em> [L1114.039]</li>
+</ul>
+<p><strong>Contacting Google Merchant Center support (live chat)</strong> <em>(2023)</em> [L1114.034]</p>
+<ol type="1">
+<li>Scroll to the bottom of Google's Merchant Center help page.</li>
+<li>Click Contact us, marked with the headset icon.</li>
+<li>Choose live chat rather than phone.</li>
+<li>Let the agent review the store while you explain the error.</li>
+</ol>
+<p><strong>Publishing and linking</strong></p>
+<ul>
+<li>Products are published to Merchant Center when the product availability box is checked. <em>(older advice, 2020)</em> [L664.075]</li>
+<li>The Google Shopping Feed app is used to submit product identifiers, with settings for brand, MPN, SKU and GTIN handling. <em>(2023)</em> [L855.112]</li>
+<li>Use the feed app's submission path, not the Google sales channel's Merchant Center listing option. [L835.133]</li>
+</ul>
+<h2 id="custom-labels">Custom Labels</h2>
+<ul>
+<li>Google Shopping allows five custom label slots per product. These labels are invisible to customers and exist only in the product feed data submitted to Google. [L224.003]</li>
+<li>Custom labels added in Shopify require approximately four hours or longer to appear in Google Ads after applying bulk edits. [L224.004]</li>
+<li>Custom labels can be added either in the Feed for Google Shopping app or through the Shopify CSV bulk upload. The CSV method is the quicker option for many products, because the Shopify CSV template already includes the Google custom label fields. <em>(older advice, 2021-22)</em> [L747.016]</li>
+<li>The product detail page has a Product Labels section with Custom Label 0 to Custom Label 4, Ads Label, Ads Grouping, Shipping Label and Tax Category. Custom Labels are used to group products for campaign structure, and Shipping Label links a product to a shipping rate created in Merchant Center. Ads Label and Ads Grouping have no real function in current Google Ads. <em>(older advice, 2021-22)</em> [L1170.051]</li>
+<li>Custom labels in the feed can be used to group products so that a campaign can be bulk edited. [L966.069]</li>
+</ul>
+<h2 id="google--youtube-app-and-merchant-center-connection">Google &amp; YouTube App and Merchant Center Connection</h2>
+<ul>
+<li>In the Google &amp; YouTube app on Shopify, connect only your Google Analytics 4 property. If the feed app already manages the Merchant Center connection, the Merchant Center connection should not be linked inside the Google &amp; YouTube app. <em>(2023)</em> [L470.049]</li>
+<li>The Google &amp; YouTube app should be used only to connect the Shopify store to Google Analytics. Product feed management is handled separately through a dedicated feed app. <em>(2025)</em> [L972.028]</li>
+<li>Symprosis is a manual control tool for Google Shopping feed management used alongside the Google &amp; YouTube app. <em>(2024)</em> [L856.073] (Note: this describes Symprosis as used alongside the app, while L972.028 says the app is only for Google Analytics.)</li>
+<li>A product feed management app connected to Shopify is used to submit products to Google Merchant Center and to manage the tracking tags. <em>(2025)</em> [L472.040]</li>
+<li>To disconnect Merchant Center from the Google &amp; YouTube app <em>(2025)</em> [L972.027]:
+<ol type="1">
+<li>Open the app in Shopify.</li>
+<li>Find Merchant Center under Connected services.</li>
+<li>Click the three dots, then click Manage settings.</li>
+<li>Disconnect it. Keep the Google Analytics connection active, since it is used for sales tracking.</li>
+</ol></li>
+<li>A dedicated product feed app gives more control over the feed, such as including or excluding certain products, than the default Google feed. [L972.029]</li>
+</ul>
+<h2 id="bing-microsoft-and-facebook-feeds">Bing, Microsoft and Facebook Feeds</h2>
+<p><strong>Bing Shopping</strong></p>
+<ul>
+<li>Shopify apps can generate and sync a Bing shopping feed from inside the store. The workflow matches the Google feed setup, so the same app and steps can be reused. [L866.008]</li>
+<li>Bing Shopping Settings is a separate page in the feed app's Settings menu. [L747.022]</li>
+</ul>
+<p><strong>Microsoft Advertising import</strong></p>
+<ol type="1">
+<li>Install and confirm the Microsoft connection in the Shopify feed app. [L1036.013]</li>
+<li>Check that the connected state shows the Microsoft Advertising email, the Merchant Center account, the product catalog name, and the primary domain. [L1036.013]</li>
+<li>The connection status should read connected and turned on, and the charge should read free. [L1036.013]</li>
+<li>Verify the store's domain for Microsoft Merchant Center with Bing Webmaster Tools. Set it up with the store's destination URL before the validation step can be completed. [L1037.003]</li>
+</ol>
+<p><strong>Facebook and Instagram</strong></p>
+<ul>
+<li>Feed tools can export one product feed to Google Shopping, Facebook Shop, Instagram product posts, Pinterest buyable pins, eBay, Bing, Amazon and affiliate networks such as ShareASale. They also handle currency conversion and multi-country export. Amazon is only an option where the supplier allows dropshipping there. [L454.030]</li>
+<li>Feed tools can use one feed for several channels, including Instagram product posts that show products inside the post, Pinterest buyable pins, and feeds for other countries, Google Shopping, Bing and eBay. They can also support product and seller ratings. [L1033.012]</li>
+<li>Shopping feed workflow: send the same optimized feed to Facebook for dynamic product ads. [L510.032]</li>
+<li>The Facebook Catalog Settings page is in the feed app's Settings menu. [L747.022]</li>
+<li>Variant ID as Product ID is needed for the Facebook product catalog feed. [L731.025]</li>
+<li>If a Facebook feed rejects a product for exceeding character limits, shorten what is submitted through the feed app. <em>(older advice, 2022)</em> [L963.049]</li>
+<li>Separate apps exist for Google, Bing and Facebook because each platform has slightly different feed requirements. [L762.010]</li>
+</ul>
+<p><strong>TikTok</strong></p>
+<ul>
+<li>A built-in TikTok shop feed was offered as a theme feature to replace a paid tool. The speaker claimed that the paid tool costs $10,000 a year, a figure that was not verified during the lesson. [L709.042]</li>
+</ul>
+<h2 id="feed-optimization-for-ctr-and-competitor-monitoring">Feed Optimization for CTR and Competitor Monitoring</h2>
+<p><strong>Optimization process</strong> [L510.032]</p>
+<ol type="1">
+<li>Take product data from Shopify.</li>
+<li>Modify the fields that influence CTR, such as images, titles, descriptions and review data.</li>
+<li>Send the optimized feed to Google Shopping.</li>
+<li>Send the same feed to Facebook for dynamic product ads.</li>
+</ol>
+<ul>
+<li>A product feed tool should be used to optimize product titles, which increases traffic and makes data analysis and optimization faster. Feeds can also be distributed to second and third tier shopping sites to improve return on ad spend. [L1033.011]</li>
+<li>Feed tools can pool data from Google Ads and Bing Ads to show a combined CTR. [L510.031]</li>
+<li>Feed tools can scan competitor product pages and search results to detect MAP pricing violations and alert you. They can also help manage product ratings and seller ratings. The manual alternative is to have an assistant check for violations. [L454.032]</li>
+<li>Competitor pricing alerts from feed tools notify the seller about possible MAP (minimum advertised price) violations. This helps monitor pricing without manual checks. [L1033.013]</li>
+<li>Feed apps update the feed about once a day with stock status, price changes, new images and new titles. Optimizations made to products on the store, such as better titles, then reach Google Ads automatically. [L762.011]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Advanced Symprosis features-custom labels, additional attributes, and feed segmentation-are designed for high revenue scaling scenarios. Start with the app's default settings and basic product category reviews; add advanced features only when they become necessary for managing large inventories or complex feed rules. [L0182.010]</p></li>
+<li><p>Google Shopping allows five custom label slots per product. These labels are invisible to customers and exist only in the product feed data submitted to Google. [L0224.003]</p></li>
+<li><p>Custom labels added in Shopify require approximately four hours or longer to appear in Google Ads after applying bulk edits. [L0224.004]</p></li>
+<li><p>The Feed for Google Shopping app sends product data from Shopify to Google Merchant Center. Set to auto update, changes in Shopify flow through the content API to Merchant Center and Google Ads in near real time. [L0247.082]</p></li>
+<li><p>Some Process (or SomeProcess) is used to sync Shopify product catalog to Google Merchant Center. [L0255.056]</p></li>
+<li><p>Some Process pricing: $4.99 per month for up to 500 products; 21-day free trial available. [L0255.057]</p></li>
+<li><p>Feed for Google Shopping app (by Someprocess) is the recommended tool for managing your product feed to Google. More reliable and customizable than Shopify's native Google Shopping Channel. Google is taking over the native channel; feed app provides better control. [L0272.016]</p></li>
+<li><p>Someprocess's Feed for Google Shopping app includes support access. If product feed shows as empty after import, contact Someprocess support directly from within the app; they can diagnose configuration issues quickly. [L0272.017]</p></li>
+<li><p>Judge.me: review collection app used to pull reviews into Google Shopping star ratings. Minimum 50 store reviews needed. Free app integration with Shopify. [L0274.028]</p></li>
+<li><p>Some Process: Google Shopping feed management app. Shows product status (red/green), errors, and allows contacting support for issue resolution. [L0274.033]</p></li>
+<li><p>Google Merchant Center (GMC): required to upload product feed to Google Shopping. Check for warnings, errors, and GTIN/product identifier issues. [L0274.034]</p></li>
+<li><p>Google Merchant Center is checked for product feed errors (corrupt data or products not being sent) when Google Ads shows no clicks; the product feed is the source of all Shopping ads. [L0357.055]</p></li>
+<li><p>Re-syncing meta fields in the Feed for Google Shopping app overwrites any meta field changes that were made inside the app, except custom titles and custom descriptions. Check the app-side values before running the re-sync, because they are replaced. [L0402.011]</p></li>
+<li><p>Closing the browser window while the feed app is syncing meta fields can leave the sync incomplete. Keep the window open until the app shows that syncing has finished. [L0402.012]</p></li>
+<li><p>The re-sync pop-up in the Feed for Google Shopping app offers these fields as checkboxes, with a Select All option: Age Group, Custom Labels, Google Product Category, Pattern, SEO Description, Size, Size Type, Color, Gender, Material, Product Condition, SEO Title, Size System, Unit Pricing Measure and Unit Pricing Base Measure. Tick Custom Labels for custom label changes, and tick the other fields only if they were also changed in the CSV. [L0402.013]</p></li>
+<li><p>The feed app's Sync Settings page has product submission options: Variant Submission Preference (First Variant Only or All Variants), Append Variant Name to Product Title (Yes or No), Inventory Policy (Follow or Ignore), Product Title Preference (Default Product Title or SEO Title), Product Description Preference (Default Product Description or SEO Description), Product Image Option, Submit Additional Images, and Submit a Rich Product Description with HTML tags. These options control what the Google Shopping feed sends to Merchant Center for each product. [L0402.014]</p></li>
+<li><p>The product feed is submitted in the same currency as the Shopify store's default currency. To change the feed currency, change the currency in the Shopify store settings. [L0402.015]</p></li>
+<li><p>Product feed apps work between the Shopify store and Google Merchant Center to optimize product feeds. Options named in the lesson are Flexify (a free plugin with a Facebook feed focus), Data Feed Watch, Feed Optimize, Feedonomics and Go Data Feed, and one popular app costs about $5 per month. Choose by pricing model and features. [L0454.026]</p></li>
+<li><p>Feed tools flag issues that Google Merchant Center does not, such as HTML in product descriptions or special characters like the ampersand, which can export as broken characters. Use a feed grade check to catch these problems automatically. [L0454.029]</p></li>
+<li><p>Feed tools can export one product feed to Google Shopping, Facebook Shop, Instagram product posts, Pinterest buyable pins, eBay, Bing, Amazon and affiliate networks such as ShareASale. They also handle currency conversion and multi-country export. Amazon is only an option where the supplier allows dropshipping there. [L0454.030]</p></li>
+<li><p>Feed tools can scan competitor product pages and search results to detect MAP pricing violations and alert you. They can also help manage product ratings and seller ratings. The manual alternative is to have an assistant check for violations. [L0454.032]</p></li>
+<li><p>Software prices for product feed tools can often be negotiated, so ask the vendor before accepting list pricing. Compare tools on pricing model and features rather than picking one only by reputation. [L0454.044]</p></li>
+<li><p>In the Google &amp; YouTube app on Shopify, connect only your Google Analytics 4 property. If the feed app already manages the Merchant Center connection, the Merchant Center connection should not be linked inside the Google &amp; YouTube app. [L0470.049]</p></li>
+<li><p>To reconnect a product feed through a feed app such as Simprosys, use the feed app's connect option for Google Merchant Center and select the Content API as the input method, rather than Google Sheets or scheduled fetch. [L0470.050]</p></li>
+<li><p>A product feed management app connected to Shopify is used to submit products to Google Merchant Center and to manage the tracking tags. [L0472.040]</p></li>
+<li><p>Shopping feed management tools such as Feed Optimize, Data Feed Watch and GoDataFeed let you change product data before sending it to Google and Facebook. They can also pool data from Google Ads and Bing Ads to show a combined CTR. [L0510.031]</p></li>
+</ul>
+<p>Shopping feed management process:</p>
+<ol type="1">
+<li>Take product data from Shopify.</li>
+<li>Modify the fields that influence CTR, such as images, titles, descriptions and review data.</li>
+<li>Send the optimized feed to Google Shopping.</li>
+<li>Send the same feed to Facebook for dynamic product ads. [L0510.032]</li>
+</ol>
+<ul>
+<li><p>Google Shopping (formerly Product Listing Ads) is described as the highest-quality, cheapest traffic for e-commerce, and every store should run it. Its main threats are the product feed going offline, prices being disapproved, or poor data quality. [L0575.004]</p></li>
+<li><p>Google Merchant Center's default feed is free; Go Data Feed is a paid feed-management tool (around $60-70 per month for three feeds, more above that). It distributes the feed to hundreds of channels such as Amazon, eBay and price comparison sites, and lets you set rules to optimize and enrich feed data. [L0575.007]</p></li>
+<li><p>The Shopify Google Shopping app publishes products to Google Merchant Center when the product availability box is checked. Use one Google Shopping app and avoid mixing duplicates. [L0664.075]</p></li>
+<li><p>A product feed app should fill in as many columns as possible so Google can match products to searches better. [L0665.050]</p></li>
+<li><p>Connect the product feed to Google Merchant Center through an app that refreshes it every 24 hours. Do not rely on manual Excel exports, since a price change that is not updated in the feed causes mismatches. [L0671.084]</p></li>
+<li><p>A built-in TikTok shop feed was offered as a theme feature to replace a paid tool. The speaker claimed that the paid tool costs $10,000 a year, a figure that was not verified during the lesson. [L0709.042]</p></li>
+<li><p>The app 'Feeds for Google Shopping' by Simprosys InfoMedia formats Shopify product data to Google Merchant Center's required format and sends it automatically. Manual spreadsheet feeds are error-prone and time-consuming, so an app is used instead. [L0731.020]</p></li>
+<li><p>To install the feed app, open the Shopify App Store from the Apps section of the Shopify menu, search for 'feeds for google shopping', select Feeds For Google Shopping by Simprosys InfoMedia, then click Install app. [L0731.021]</p></li>
+<li><p>Connect the feed app to Merchant Center: 1. Log in with the Google account used to create the Merchant Center account. 2. Allow the app access to the account. 3. Select the Merchant Center ID, checking it matches the ID shown in the top right corner. 4. Confirm the account. 5. In Merchant Center, go to Growth &gt; Manage programs and click Get started under Shopping ads. 6. Return to the app and confirm that programs have been enabled. [L0731.022]</p></li>
+<li><p>In the feed app's Quick Sync Settings, choose All Products for which products are submitted, Default Product Title and Default Product Description, and All Variants for variant submission. Set tax to 'Yes, prices include tax' if the shown prices include tax, and enter a notification email. [L0731.024]</p></li>
+<li><p>Product ID format options in the feed app are Global Format (e.g. shopify_US_123456_987654, the default), SKU as Product ID (used when Judge.me reviews are installed), and Variant ID as Product ID (needed for the Facebook product catalog feed). Choose the global format unless one of the exceptions applies. [L0731.025]</p></li>
+<li><p>The feed app has a free trial of 22 days, after which it costs about $5 per month (price at time of recording in 2021). The app must be activated before the trial ends, or it stops sending product data and the ads stop running. [L0731.030]</p></li>
+<li><p>After the Merchant Center connection succeeds, the Feeds for Google Shopping app shows Quick Sync Settings for product submission. A SWITCH TO ADVANCE INTEGRATION button leads to the more detailed feed optimization settings, which are only needed for a non-standard setup. [L0731.038]</p></li>
+<li><p>The feed app needs permission to manage Google Ads campaigns, product listings and Google Shopping accounts. Access must be allowed during sign-in, or the app cannot link Google Ads or insert the remarketing and conversion tags. [L0731.041]</p></li>
+<li><p>Avoid the old native Shopify Google feed plugin, which had poor reviews. It only worked for US currency, failed for customers in Canada, submitted the highest shipping cost instead of the lowest, and was poorly maintained. [L0732.006]</p></li>
+<li><p>Symprosis is a paid Shopify app with a small monthly fee that syncs products to Google Merchant Center. It is recommended for keeping feed data current and reliable. [L0732.007]</p></li>
+</ul>
+<p>Connect a feed app such as Symprosis to Merchant Center:</p>
+<ol type="1">
+<li>Install the app and choose to sync your data.</li>
+<li>Enter your Merchant Center ID (a numeric ID shown in Merchant Center) and confirm the account.</li>
+<li>Check the warnings the app shows, especially a missing default shipping rate for the country.</li>
+<li>Wait a few minutes for the data to be processed and check that products appear in Merchant Center. [L0732.008]</li>
+</ol>
+<ul>
+<li><p>Feed management apps for Merchant Center typically cost a few dollars per month. The fee is considered worth it for reliable, automatically updated feeds. [L0732.014]</p></li>
+<li><p>A feed management app that communicates with Merchant Center can find more errors than Google's diagnostics alone, and it tells you exactly which field to fix. Using such an app speeds up error correction and improves product visibility in Google Shopping. [L0732.022]</p></li>
+<li><p>Feeds for Google Shopping is the Shopify app used to submit product feeds. After approval, it hosts the switch that enables Google Shopping Actions and where the additional Shopping Actions feed data is submitted. [L0738.023]</p></li>
+<li><p>Order Sync for Google Shopping, made by Simprosys, brings Shopping Actions orders from Merchant Center into Shopify. Without it, orders are visible only inside Merchant Center and no notification reaches the merchant, so install it only after approval. [L0738.024]</p></li>
+<li><p>Custom labels can be added either in the Feed for Google Shopping app or through the Shopify CSV bulk upload. The CSV method is the quicker option for many products, because the Shopify CSV template already includes the Google custom label fields. [L0747.016]</p></li>
+<li><p>The Feed for Google Shopping app does not automatically pick up changes to certain Shopify meta fields. Shopify does not notify the app when SEO title, SEO description, custom labels, age group, gender or similar fields change, so these must be re-synced manually in the app. [L0747.017]</p></li>
+<li><p>Feed for Google Shopping &gt; Settings options: Which Products Needs to be Submitted in Feed (All Products or Products from a Collection); Product Title Preference (Default Product Title or SEO Title); Product Description Preference (Default Product Description or SEO Description); Variant Submission Preference (First Variant Only or All Variants); Append Variant Name to Product Title (Yes or No); Inventory Policy (Follow or Ignore); Product Image Option (use second image for a product with no variant); Submit Additional Images (checkbox); Submit a Rich Product Description (checkbox, uses HTML tags). The feed currency follows the Shopify store default currency and is changed in the Shopify store settings. [L0747.018]</p></li>
+<li><p>The Feed for Google Shopping app offers a free sign-up for additional attributes to submit rich product data, including to Facebook and Instagram Shops. [L0747.019]</p></li>
+<li><p>The Feed for Google Shopping product list has tabs for Submitted, Submitted with Warnings and Excluded. Above them is a panel titled Errors from Merchant Center with a Refresh Product Errors button, and it shows when the error data was last refreshed, so refresh it before acting on an older error list. [L0747.021]</p></li>
+<li><p>The Feed for Google Shopping app's Settings menu holds Sync Settings From Shopify, Google Shopping Settings, Google Shopping Actions, Bing Shopping Settings, Facebook Catalog Settings, XML Feed Settings and Google Local Inventory. Sync Settings From Shopify is the page that pulls Shopify field changes into the feed. [L0747.022]</p></li>
+<li><p>The Feed for Google Shopping Default Settings section sets fallback values for Default Google Product Category, Default Age Group, Default Gender, Default Product Condition and Default Product Identifier Management. These defaults apply to products that do not have their own value in Shopify, so they should be checked before the first feed submission. [L0747.023]</p></li>
+<li><p>Google Product Category values in the feed must be the full Google taxonomy path with ' &gt; ' between each level, for example Health &amp; Beauty &gt; Personal Care &gt; Hair Care. A category that is only the last word, or a path from a different taxonomy version, does not match the Google category list. [L0747.024]</p></li>
+<li><p>Product feed apps automate sending your product data to advertising platforms. Separate apps exist for Google, Bing and Facebook because each platform has slightly different feed requirements. [L0762.010]</p></li>
+<li><p>Feed apps update the feed about once a day with stock status, price changes, new images and new titles. Optimizations made to products on the store, such as better titles, then reach Google Ads automatically. [L0762.011]</p></li>
+<li><p>The Google Shopping Feed app checks each product manually and submits it to Google Merchant Center, helping avoid bans and fix suspensions. It is recommended before starting Google Ads and costs around $3 to $4 per month or is free. [L0788.025]</p></li>
+<li><p>Google Merchant Center is used to receive the product feed for Google Shopping. The store feed is connected through the API so product data stays current. [L0801.108]</p></li>
+<li><p>Feed for Google Shopping is the Shopify app that sends product data to Google Merchant Center and offers more control than the built-in Google channel. [L0801.109]</p></li>
+<li><p>Google Merchant Center holds product data for Google Shopping; product details must be complete so Google can match your products with search queries and generate impressions. [L0834.056]</p></li>
+<li><p>The feed app for Google Shopping is Simprosys, which connects the store to Google Merchant Center and submits the product feed. Use the feed app's submission path, not the Google sales channel's Merchant Center listing option. [L0835.133]</p></li>
+<li><p>Feed for Google Shopping is a Shopify App Store app that handles the Google product feed and provides conversion tracking. It is the recommended tool for connecting Shopify to Google. [L0852.074]</p></li>
+<li><p>Google Shopping feed app is used to submit product identifiers, with settings for brand, MPN, SKU and GTIN handling. [L0855.112]</p></li>
+<li><p>Symprosis is a manual control tool for Google Shopping feed management used alongside the Google &amp; YouTube app. [L0856.073]</p></li>
+<li><p>Shopify apps can generate and sync a Bing shopping feed from inside the store. The workflow matches the Google feed setup, so the same app and steps can be reused. [L0866.008]</p></li>
+<li><p>Feed for Google Shopping connects the Shopify product feed to Google Merchant Center via the API. It updates stock status, price, title, description, SKU, photos and promotions within about 20 minutes. It is preferred over the Google channel app. [L0962.004]</p></li>
+<li><p>A product CSV uploaded directly to Google Merchant Center does not update automatically and only holds the data from that file. An API-based feed pushes every store change to Merchant Center in near real time, which is why price and stock changes need it. [L0962.005]</p></li>
+<li><p>The Feed for Google Shopping promotion setting applies only to Google Shopping campaigns. It does not carry promotions over to Facebook or other connected accounts, so those must be set up separately. [L0962.151]</p></li>
+<li><p>Feed for Google Shopping lets you modify the product data sent to Google and Facebook. Use it to send only part of a long description or to adjust fields instead of editing product pages. [L0963.048]</p></li>
+<li><p>If a Facebook feed rejects a product for exceeding character limits, shorten what is submitted through the feed app. Do not delete the content from the product page to make it fit. [L0963.049]</p></li>
+<li><p>Google Merchant Center holds the product feed for Google Shopping. Custom labels in the feed can be used to group products so that a campaign can be bulk edited. [L0966.069]</p></li>
+<li><p>Shopify apps that connect the store to Google Merchant Center pull product data automatically. Depending on the settings, the feed can be pushed to campaigns manually or imported automatically, for example once every 24 hours. [L0967.054]</p></li>
+<li><p>Google Merchant Center holds the product feed used for free product listings and paid Google Shopping ads. Products that are approved there can appear in free listings, which start giving data within days. [L0968.050]</p></li>
+<li><p>To disconnect Merchant Center from the Google &amp; YouTube app: open the app in Shopify, find Merchant Center under Connected services, click the three dots, click Manage settings, and disconnect it. Keep the Google Analytics connection active, since it is used for sales tracking. [L0972.027]</p></li>
+<li><p>The Google &amp; YouTube app should be used only to connect the Shopify store to Google Analytics. Product feed management is handled separately through a dedicated feed app. [L0972.028]</p></li>
+<li><p>A dedicated product feed app gives more control over the feed, such as including or excluding certain products, than the default Google feed. Check its settings for automatic daily sync. [L0972.029]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../05-apps-and-tools/15-upsells-bundles-cart-and-post-purchase-offers/"><span class="k">&larr; Previous</span><span class="v">Upsells, bundles, cart and post-Purchase offers</span></a><a class="nx" href="../../05-apps-and-tools/17-advertising-platforms-tracking-and-attribution/"><span class="k">Next &rarr;</span><span class="v">Advertising platforms, tracking and attribution</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

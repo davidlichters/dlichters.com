@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Google merchant center setup and verification | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.5: Google merchant center setup and verification.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/05-google-merchant-center-setup-and-verification/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Google merchant center setup and verification | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.5: Google merchant center setup and verification."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/05-google-merchant-center-setup-and-verification/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/05-google-merchant-center-setup-and-verification/">Plain version</a></div><h1>10.5 Google merchant center setup and verification</h1><article><h2 id="merchant-centers-role-in-the-setup">Merchant Center's role in the setup</h2>
+<ul>
+<li>Google Merchant Center connects your Shopify store to Google's ecosystem. It pulls product data from Shopify and makes those products eligible for free Google Product Listings, organic Google Shopping results and paid Google Shopping Ads. [L0181.001]</li>
+<li>Merchant Center is the account that receives product data from the Shopify store and passes it to Google Ads, where Shopping campaigns are built. Its free listings show products in Google surfaces without paid ads, but bring only limited traffic. (older, 2021-22) [L0731.001]</li>
+<li>It is required before Shopping campaigns can run, and the product feed is built there. It stores product data and formats it for Google Shopping ads. (older, 2021-22) [L0726.001]</li>
+<li>It is the interface that passes your store's product data to Google so products can appear in free product listings and Shopping ads. It takes product data from Shopify and is set up separately from the Google &amp; YouTube app. [L0729.002]</li>
+<li>It is the connection between a Shopify store and Google. It pulls product data such as images, descriptions, titles, prices, barcode numbers and manufacturer part numbers into the product feed used for Shopping ads. (older, 2021-22) [L0739.015]</li>
+<li>Google builds the product feed from the connected Shopify store through Merchant Center, pulling images, titles, descriptions, prices, barcodes (GTIN) and manufacturer part numbers. Google matches these data points against searches to decide where ads are eligible. (older, 2021-22) [L0741.007]</li>
+<li>Your product feed is sent to Merchant Center, and from there it is used by Google Ads. [L0762.008]</li>
+<li>All products are entered in Merchant Center, and active listings, shopping announcements, tax and shipping are configured there. Some Merchant Center functions were being moved into the Google Ads interface, so a future setup may run through Google Ads alone. [L0732.001]</li>
+<li>Merchant Center holds the product feed Google uses for Shopping listings. Its tips cover correct product data so that listings are approved and shown. (older, 2020) [L1087.006]</li>
+</ul>
+<h2 id="accounts-identity-and-ownership">Accounts, identity and ownership</h2>
+<h3 id="login-and-email">Login and email</h3>
+<ul>
+<li>Use the same Google Workspace email address to log in to Merchant Center that you use for Google Analytics and Google Search Console. This makes all Google platforms connect properly. [L0181.003]</li>
+<li>Use the same email address for Google Analytics, Google Ads and Merchant Center. (older, 2019) [L0467.021]</li>
+<li>Sign in with the same Google Workspace email used for Google Analytics and Google Search Console before starting the sign-up. [L0729.001]</li>
+<li>For the business sign-up, use the business email address, for example the store's sales mailbox. (older, 2021-22) [L0726.006]</li>
+</ul>
+<h3 id="account-structure">Account structure</h3>
+<ul>
+<li>Each store should have its own Google Merchant Center account. Separate accounts keep each store's product feed, approvals and suspension issues independent. [L1114.071]</li>
+<li>Only one website can be linked per Merchant Center account. A second website requires an advanced account. (older, 2021-22) [L0731.016]</li>
+<li>Before clicking Link in Merchant Center, confirm that the Google Ads customer ID shown there is the account meant for Shopping campaigns. Linking the wrong account pulls the Merchant Center product data into it. (older, 2021-22) [L0731.040]</li>
+</ul>
+<h3 id="business-country-and-time-zone">Business country and time zone</h3>
+<ul>
+<li>The business country cannot be changed after the account is opened. Set it to the country you sell in, which is not necessarily the country where you live. (older, 2021-22) [L0726.004]</li>
+<li>The business country should be the country where the business is headquartered or legally registered and where it sells. It is fixed once the account is opened, so confirm it before submitting. The owner's personal location does not decide this field. (older, 2021-22) [L0726.024]</li>
+<li>The registered country must be the country where the business operates. [L0729.005]</li>
+<li>The Merchant Center time zone is used to calculate and report performance. Choose the time zone of the business, not necessarily your own location. (older, 2021-22) [L0726.005]</li>
+<li>Set the time zone to the business's time zone when creating the account. (older, 2021-22) [L0726.006]</li>
+</ul>
+<h3 id="domain-verification-and-claim">Domain verification and claim</h3>
+<ul>
+<li>Google requires proof that you own the website before you can sell products through Merchant Center. Website ownership cannot be verified through the default Google Analytics setup. [L0732.002]</li>
+<li><strong>Sources differ:</strong> L0732.002 says the default Google Analytics setup cannot verify ownership. L0728.012 and L0467.021 (2019) describe verifying through Google Analytics with the same email. Both are stated as given. L0732.003 presents the HTML tag route without tying it to a condition. [L0732.002, L0728.012, L0467.021, L0732.003]</li>
+</ul>
+<h4 id="verification-methods">Verification methods</h4>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Steps</th>
+<th>Source</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Analytics</td>
+<td>Use the same email as the Analytics account and select the existing Analytics account when prompted</td>
+<td>L0728.012</td>
+<td>Verifies automatically if Analytics confirms domain ownership</td>
+</tr>
+<tr>
+<td>Google Analytics (older)</td>
+<td>Choose verify through Google Analytics, click Next</td>
+<td>L0467.021 (older, 2019)</td>
+<td>Analytics code is already on the site and the domain matches</td>
+</tr>
+<tr>
+<td>HTML tag</td>
+<td>Copy the Google verification code from Merchant Center and paste it into theme.liquid</td>
+<td>L0732.003</td>
+<td>Paste in the head section</td>
+</tr>
+<tr>
+<td>Google Tag Manager</td>
+<td>Alternative if already installed on the site</td>
+<td>L0732.004</td>
+<td>The verification tag must stay in the head section so ownership keeps being recognised</td>
+</tr>
+<tr>
+<td>Google Workspace domain</td>
+<td>Meta tag method first, or DNS records method, which can be updated directly in Shopify</td>
+<td>L1094.046</td>
+<td>Check the pasted code for missing characters such as brackets, since that can stop verification</td>
+</tr>
+</tbody>
+</table></div>
+<h4 id="verify-and-claim-through-google-analytics">Verify and claim through Google Analytics</h4>
+<ol type="1">
+<li>Enter the website URL in Google Merchant Center. [L0728.012]</li>
+<li>Use the same email address as the Google Analytics account, and select the existing Google Analytics account when prompted. [L0728.012]</li>
+<li>Click Verify URL. If Google Analytics confirms domain ownership, the URL is verified automatically. [L0728.012]</li>
+<li>Click Claim to claim the domain. [L0728.012]</li>
+</ol>
+<h4 id="verify-and-claim-through-an-html-tag-source-a-undated">Verify and claim through an HTML tag (Source A, undated)</h4>
+<ol type="1">
+<li>Sign up for Google Merchant Center and enter your business name and website URL. [L0732.003]</li>
+<li>Copy the Google verification code (HTML tag) from Merchant Center. [L0732.003]</li>
+<li>In Shopify, go to Themes and edit the code of theme.liquid. [L0732.003]</li>
+<li>Find the head section of the file (search for the head tag) and paste the verification code there. [L0732.003]</li>
+<li>Save the theme and wait about 5 minutes for the change to be picked up. [L0732.003]</li>
+<li>Return to Merchant Center and click Verify. [L0732.003]</li>
+</ol>
+<h4 id="placing-the-tag-in-the-editor">Placing the tag in the editor</h4>
+<ul>
+<li>To place the verification tag, open Themes, edit theme.liquid, and use the editor's find function to search for the closing head tag. Paste the verification code just above it, save the file, and then click Verify in Merchant Center. [L0732.023]</li>
+<li>In the example theme, the tag was pasted directly before the closing head tag on line 68. (older, 2019 to 2022 cases are not dated in this unit; the procedure is from Source A) [L0728.014]</li>
+</ul>
+<h4 id="workaround-for-the-malformed-error">Workaround for the "malformed" error</h4>
+<ul>
+<li>The error "Google Analytics tracking code on your site looks malformed" can appear when verifying through Google Analytics, even when the tracking code is correct. It often happens with custom or test themes. [L0728.013]</li>
+<li>Workaround (HTML tag verification):
+<ol type="1">
+<li>In Google Merchant Center, choose the option that you have access to your server and copy the HTML verification tag to the clipboard. [L0728.014]</li>
+<li>In Shopify admin, go to Online Store &gt; Themes, open the theme (customize it, for example a copy of the live theme), and click Edit code. [L0728.014]</li>
+<li>Open the file theme.liquid. [L0728.014]</li>
+<li>Paste the copied HTML tag directly before the closing <code>&lt;/head&gt;</code> tag. [L0728.014]</li>
+<li>Click Save. [L0728.014]</li>
+<li>Open the website to check that nothing is broken. [L0728.014]</li>
+<li>Return to Google Merchant Center, click Verify URL, then click Claim. [L0728.014]</li>
+</ol></li>
+<li>Test the storefront after adding a verification tag to theme.liquid to confirm the page still loads without broken code, before returning to Google Merchant Center. [L0728.015]</li>
+</ul>
+<h4 id="claim-and-checks">Claim and checks</h4>
+<ul>
+<li>Verify and claim the website in Merchant Center: (older, 2021-22) [L0731.017]
+<ol type="1">
+<li>Enter the website URL and click Continue. [L0731.017]</li>
+<li>Wait until Merchant Center shows the site as verified, which confirms the site is live. [L0731.017]</li>
+<li>Click Claim website. Claiming stops other accounts from using the same URL. [L0731.017]</li>
+</ol></li>
+<li>Enter the website URL with its full address beginning with https:// or http://. [L0731.016]</li>
+<li>Check in Merchant Center that the website is verified and claimed before finishing business information. (older, 2021-22) [L0730.007]</li>
+<li>Check that the website is claimed and verified in Business information before moving on to branding or other settings. (older, 2021-22) [L0727.027]</li>
+<li>If Merchant Center asks to verify a site that was verified before, the usual cause is that another Google login or person verified the store name, or someone edited the site and removed the verification code. Check who has access to the site first. (older, 2019) [L0467.020]</li>
+</ul>
+<h2 id="choosing-the-shopify-connection-path">Choosing the Shopify connection path</h2>
+<ul>
+<li>When Google detects your Shopify store, do not click <strong>Connect to Shopify</strong> and do not use the Google &amp; YouTube app for product submission. Click <strong>Continue to Merchant Center</strong> instead. [L0181.004]</li>
+<li>When Merchant Center offers to connect to Shopify, decline it and choose <strong>Continue to Merchant Center</strong>. The Shopify connection uses the Google &amp; YouTube app, which is not the method used to submit products. [L0729.004]</li>
+<li>Do not follow the Shopify-guided option during Merchant Center sign-up. Skip it and connect Shopify to Merchant Center afterwards. (older, 2021-22) [L0726.007]</li>
+<li>Skip the Shopify option at sign-up and connect Shopify later. (older, 2021-22) [L0726.006]</li>
+</ul>
+<h2 id="sign-up-procedures">Sign-up procedures</h2>
+<p>Four procedures from the sources are kept complete. They differ in length and detail. Use the one that fits the account type and tooling of the store.</p>
+<h3 id="sign-up-sequence-a-source-a-11-steps">Sign-up sequence A (Source A, 11 steps)</h3>
+<ol type="1">
+<li>Open the Google Merchant Center signup page and click <strong>Start now</strong>. [L0181.008]</li>
+<li>Answer the initial questions: select <strong>Yes</strong> for selling products online, enter your store website URL, select <strong>No</strong> for having a physical store, then click <strong>Continue</strong>. [L0181.008]</li>
+<li>When Google detects your Shopify store, do NOT click <strong>Connect to Shopify</strong> and do NOT use the Google &amp; YouTube app for product submission; click <strong>Continue to Merchant Center</strong> instead. [L0181.008]</li>
+<li>Confirm your business name (it should match your store name) and select your registered business country, then click <strong>Continue to Merchant Center</strong>. [L0181.008]</li>
+<li>Enter your registered business address (home address if sole proprietor, business address if you have one). This address is not shown to customers. Click <strong>Continue</strong>. [L0181.008]</li>
+<li>Verify your domain, which should already be verified via Search Console; confirm ownership verification and click <strong>Continue</strong>. [L0181.008]</li>
+<li>Select only the countries where you actually sell (example: United States). Click <strong>Continue</strong>. [L0181.008]</li>
+<li>Select <strong>Enter delivery times manually</strong>. Choose your store's order cutoff time. Enter your handling time and transit time to match your shipping policy, ensuring totals match what is stated on your site. Select <strong>Free shipping</strong> if applicable. Click <strong>Save</strong>. [L0181.008]</li>
+<li>Paste the URL of your Returns &amp; Refunds policy. Select the countries you accept returns from. Confirm acceptance of both defective and non-defective products. Enter your return window to match your policy (example: 30 days). Select <strong>mail</strong> as the return method. Specify return shipping responsibility to match your policy. Select <strong>No cost</strong> for restocking fee if applicable. Enter refund processing time to match your policy. Review and click <strong>Save</strong>. [L0181.008]</li>
+<li>Skip linking Google Ads for now; it will be set up later after your products are approved. [L0181.008]</li>
+<li>Go to Settings &gt; Data Sources, locate <strong>Found by Google</strong>, and click <strong>Hide all automatically found products</strong>. [L0181.008]</li>
+</ol>
+<h3 id="sign-up-sequence-b-source-a-19-steps">Sign-up sequence B (Source A, 19 steps)</h3>
+<ol type="1">
+<li>Sign in with the same Google Workspace email used for Google Analytics and Google Search Console. [L0729.001]</li>
+<li>Open the Merchant Center sign-up page and click <strong>Start now</strong>. [L0729.001]</li>
+<li>Answer <strong>Do you sell products online?</strong> with Yes and enter the store's website URL. [L0729.001]</li>
+<li>Answer <strong>Do you have a physical store?</strong> with No, then click <strong>Continue</strong>. [L0729.001]</li>
+<li>Confirm that the store's compliance fixes are finished before continuing. [L0729.001]</li>
+<li>When offered two connection options, do not click <strong>Connect to Shopify</strong>. Click <strong>Continue to Merchant Center</strong>. [L0729.001]</li>
+<li>Confirm that you sell products (not services) and continue. [L0729.001]</li>
+<li>Keep the business name equal to the store name, and set the registered country to the country where you do business. Click <strong>Continue</strong>. [L0729.001]</li>
+<li>Enter the registered business address and continue. [L0729.001]</li>
+<li>Accept the automatic domain verification, which Search Console already completed, and continue. [L0729.001]</li>
+<li>Select only the countries where you sell, for example the United States. [L0729.001]</li>
+<li>For shipping, set order cutoff time, handling time and transit time manually and match them to the shipping policy page. Enter the handling and transit times, then continue. [L0729.001]</li>
+<li>Choose free shipping for all customers with no conditional values, then click <strong>Save</strong>. [L0729.001]</li>
+<li>Paste the return policy URL, select whether returns are accepted for defective and non-defective products, and state whether exchanges are accepted, all exactly as the website's return policy says. [L0729.001]</li>
+<li>Enter the return window, return method, who pays return shipping, restocking fee and refund processing time, matching the policies, then click <strong>Next</strong>. [L0729.001]</li>
+<li>Review the summary, confirm it is accurate, and click <strong>Save</strong>. [L0729.001]</li>
+<li>Skip linking Google Ads for now. [L0729.001]</li>
+<li>Open <strong>View products</strong>. Products show "processing" first and lose that label once approved. [L0729.001]</li>
+<li>Go to Settings &gt; Data sources, open <strong>Actions</strong> and choose <strong>Hide all automatically found products</strong> so that the "Provided by you" source is used. [L0729.001]</li>
+</ol>
+<h3 id="account-creation-for-shopping-ads-source-a-11-steps">Account creation for Shopping ads (Source A, 11 steps)</h3>
+<ol type="1">
+<li>Open the Google Merchant Center page and click <strong>Get started</strong>, then <strong>Get started</strong> again. [L0728.002]</li>
+<li>Enter the country, the business display name (for example the store name), and the time zone, then click <strong>Continue</strong>. [L0728.002]</li>
+<li>Accept the terms of service and choose whether to receive updates, then click <strong>Continue</strong>. [L0728.002]</li>
+<li>Select the programs that fit your goals. Select Shopping actions only if you want it, knowing it needs more business history and product understanding, then click <strong>Continue</strong>. [L0728.002]</li>
+<li>Confirm your choices and create the account. [L0728.002]</li>
+<li>In the setup guides, start with the shopping ads setup (listed first, most important). [L0728.002]</li>
+<li>Configure tax (see tax section), then shipping (see shipping section). [L0728.002]</li>
+<li>Add the store website URL, verify it and claim the domain (see verification section). [L0728.002]</li>
+<li>Upload the logo and set branding (accent color, square and rectangular logo). [L0728.002]</li>
+<li>Link the Google Ads account to Google Merchant Center and approve the link request in Google Ads. [L0728.002]</li>
+<li>Upload the product feed (covered in the next step of the course; this lesson does not include it). [L0728.002]</li>
+</ol>
+<h3 id="account-creation-for-google-shopping-source-b-9-steps-older-2021-22">Account creation for Google Shopping (Source B, 9 steps; older, 2021-22)</h3>
+<ol type="1">
+<li>Open the Google Merchant Center sign-up page using the business email address, for example the store's sales mailbox. [L0726.006]</li>
+<li>Click <strong>Get started</strong>. [L0726.006]</li>
+<li>Enter the business name. Customers see it in product listings, and it becomes the Merchant Center account name. [L0726.006]</li>
+<li>Select the business country, which is the country where you sell. [L0726.006]</li>
+<li>Select the time zone of the business. [L0726.006]</li>
+<li>Skip the Shopify option at this stage and connect Shopify later. [L0726.006]</li>
+<li>Decide whether to receive marketing emails. This is optional. [L0726.006]</li>
+<li>Accept the Merchant Center terms of service and create the account. [L0726.006]</li>
+<li>Leave the remaining setup questions open. They are completed when the product feed is built. [L0726.006]</li>
+</ol>
+<h2 id="business-information">Business information</h2>
+<h3 id="where-to-find-it">Where to find it</h3>
+<ul>
+<li>In Merchant Center, open the cogwheel (Settings) at the top right and go to Business information. Complete all of its fields, verify the domain and phone number, and add your branding. Incomplete business information can get the account suspended. [L1145.041]</li>
+<li>Business information is under the Tools section of the left menu, next to Shipping and returns, Regions and Sales tax. (older, 2021-22) [L0727.026]</li>
+<li>The left menu holds these groups (older, 2021-22) [L0730.019]:
+<ul>
+<li>Overview</li>
+<li>Products: All products, Feeds, Diagnostics</li>
+<li>Performance</li>
+<li>Marketing</li>
+<li>Growth</li>
+<li>Tools: Shipping and returns, Regions, Sales tax, Shopping ads setup, Free listings setup, Comparison Shopping Services</li>
+<li>Settings: Account settings, Account access, Preferences, Linked accounts, Automatic improvements, SFTP / FTP / GCS, Content API</li>
+<li>Business information is one of the settings pages and holds the About your business and Branding tabs.</li>
+</ul></li>
+<li>If the interface is missing a menu such as Manage programs or Growth, the account may be in a Google test. Contact Merchant Center support, state the missing menu, and ask to be removed from the test or shown where to find it. (2023) [L0970.119]</li>
+</ul>
+<h3 id="fields-in-about-your-business">Fields in About your business</h3>
+<ul>
+<li>The About your business page contains: Business display name, Business address (Address line 1, Address line 2, City, State/Province, Postal/ZIP code, Country), Phone number, Website, and Customer service contact (URL, E-mail, Phone). (older, 2021-22) [L0730.020, L0727.026]</li>
+<li>Click Save after entering the address. Complete the phone verification and customer service contact in the same tab. (older, 2021-22) [L0730.020]</li>
+<li>The page for Shopping ads customer service contact fields is: Website, E-mail and Phone. (older, 2021-22) [L0730.006]</li>
+</ul>
+<h3 id="business-display-name">Business display name</h3>
+<ul>
+<li>Keep the business name equal to the store name, and do not change it. [L0729.005]</li>
+<li>Changing the business display name requires re-submitting product data before the new name takes effect. (older, 2021-22) [L0727.027, L0730.021]</li>
+</ul>
+<h3 id="business-address">Business address</h3>
+<ul>
+<li>The registered business address must match where the business is actually set up. A sole proprietor uses their home address, while an LLC may enter a business address. The address is not shown to customers. [L0729.006]</li>
+<li><strong>Sources differ:</strong> L0729.006 and L0181.008 accept a home address for a sole proprietor. A 2020 unit reports that a residential home address on a Merchant Center account or website may cause problems, with one reported case asking for photos of a warehouse. The cause is not confirmed, so use a commercial address such as a UPS store address where possible. (older, 2020) [L0729.006, L0181.008, L1111.177]</li>
+<li>The business address entered in Business information must match exactly the address shown on the website. A mismatch can lead to a Merchant Center suspension. (older, 2021-22) [L0730.001]</li>
+<li>The address in Merchant Center must be the same as the address shown on the Shopify store and on the business documents. (2024) [L0971.066]</li>
+</ul>
+<h3 id="phone-number">Phone number</h3>
+<ul>
+<li>The phone number entered in Merchant Center must match the number on the website and must be verified. An unverified number can lead to a Merchant Center suspension. (older, 2021-22) [L0730.002]</li>
+<li>Enter the business phone number under Business information, which must match the phone number on the website. (older, 2021-22) [L0727.015]</li>
+<li>After a phone number is entered, it shows an <strong>Unverified</strong> label until verified. The <strong>Verify number</strong> button starts the process. The phone field uses a country code prefix (for an Australian store, +61), and the example format is (02) 1234 5678. The verification method screen has a <strong>Change my number</strong> link to correct the number before a code is sent. The website URL also shows an <strong>Unverified</strong> label. (older, 2021-22) [L0730.022]</li>
+</ul>
+<h3 id="customer-service-contact">Customer service contact</h3>
+<ul>
+<li>For Shopping ads, enter the contact-us page URL, the customer service email and the business phone number. The phone number should match the one on the website. (older, 2021-22) [L0727.016]</li>
+<li>The Customer service contact for Shopping ads (Business information &gt; Customer service contact) takes the contact-us page URL, a support email and the verified business phone number. (older, 2021-22) [L0730.006]</li>
+</ul>
+<h3 id="consistency-across-the-store">Consistency across the store</h3>
+<ul>
+<li>Information entered in Merchant Center (prices, tax, shipping, contact details, policies) must match the website exactly at all times. If it does not match, Google can suspend the account. (older, 2021-22) [L0731.003]</li>
+<li>Merchant Center tax rate, shipping policy, return policy and contact information must match what the store shows. Mismatches can lead to limited performance or suspension for misrepresentation. (2023) [L0804.047]</li>
+</ul>
+<h2 id="phone-verification">Phone verification</h2>
+<p>Steps (older, 2021-22):</p>
+<ol type="1">
+<li>Open Business information &gt; About your business and click <strong>Verify number</strong>. [L0730.003]</li>
+<li>Choose <strong>Voice call</strong> or <strong>Text message</strong>. For most phone providers, choose <strong>Voice call</strong>, because text messages often do not reach business numbers. [L0730.003]</li>
+<li>The automated call reads a verification code. Enter the code in the field, then click <strong>Continue</strong>. The status changes to Verified. [L0730.003]</li>
+<li>Enter the code exactly as heard. The code is a six-character code of letters and digits, not only digits. [L0730.005]</li>
+<li>Enter the business phone number under Business information, then click <strong>Verify number</strong>, choose <strong>Voice call</strong> (text messages often do not work for business numbers), then enter the six-digit alphanumeric code from the automated call. [L0727.015]</li>
+</ol>
+<p>Why it matters:</p>
+<ul>
+<li>Google verifies the phone number so it can confirm the business is reachable through the customer service number and that the account owner is genuine. Skipping verification makes Google suspect the account owner is not the real business owner. (older, 2021-22) [L0730.004]</li>
+<li>Phone verification confirms the business owner and ensures customer contact works. (older, 2021-22) [L0727.015]</li>
+</ul>
+<h2 id="branding">Branding</h2>
+<ul>
+<li>Branding is optional. Leaving it empty does not cause suspension. [L0727.028, L0730.008]</li>
+<li>If you fill it in, the main color should match the background color of your logo, and the accent color should differ from the main color. [L0727.028]</li>
+<li>Logos only appear after Google approves them, and only in some Shopping ad placements, not all. [L0727.028, L0730.008]</li>
+<li>Branding is found under Business information &gt; Branding. [L0730.008]</li>
+<li>Set up branding: open Branding, upload the logo, choose the accent color, and upload the square logo and rectangular logo. Shopping actions branding is not needed while Shopping actions is not used. [L0728.016]</li>
+<li>Merchant Center preferences: enable receiving opportunities to get Google's improvement suggestions. You can also upload a business logo, which Google may show during shopping sessions. [L0732.012]</li>
+</ul>
+<p>Branding requirements:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Requirement</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Square logo format</td>
+<td>PNG or SVG</td>
+<td>L0727.017, L0730.008</td>
+</tr>
+<tr>
+<td>Maximum file size</td>
+<td>5 MB</td>
+<td>L0727.017, L0730.008</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>Minimum 500 x 500 pixels, maximum 2,000 x 2,000 pixels</td>
+<td>L0727.017, L0730.008</td>
+</tr>
+<tr>
+<td>Ratio, square logo</td>
+<td>1:1</td>
+<td>L0727.017, L0730.008</td>
+</tr>
+<tr>
+<td>Rectangular logo</td>
+<td>Also uploaded; appears on small screens</td>
+<td>L0730.008</td>
+</tr>
+<tr>
+<td>Main color</td>
+<td>Matches the logo background color; hex format (for example #FFFFFF) or rgba</td>
+<td>L0730.008, L0727.028</td>
+</tr>
+<tr>
+<td>Accent color</td>
+<td>Optional; must differ from the main color</td>
+<td>L0730.008, L0727.028</td>
+</tr>
+</tbody>
+</table></div>
+<p>(older, 2021-22 for all rows above except where noted in the source list; the L0728.016 and L0732.012 units are undated or from Source A)</p>
+<h2 id="tax">Tax</h2>
+<ul>
+<li>Enter your tax configuration under the tax section, using the tax categories that match your situation. The setup depends on where you are registered and sell. [L0732.010]</li>
+<li>Tax setup: go to the tax section and choose <strong>Configure no nexus for all states</strong>, then click <strong>Save</strong>. Choose this only if the business is not set up with tax nexus in its registered state. The tax setup should mirror the tax settings configured in Shopify. [L0728.003]</li>
+<li>For Google Shopping tax, set your store and Merchant Center tax rates to zero if the business is incorporated outside the US, so the product price does not appear higher than competitors' taxed prices. (2023) [L0964.063]</li>
+<li><strong>Sources differ:</strong> L0728.003 sets no nexus when the business has no nexus in its registered state and mirrors Shopify. L0964.063 sets zero rates when the business is incorporated outside the US. Both apply to their own situation as stated. [L0728.003, L0964.063]</li>
+<li>Tax and shipping are labelled optional in the free listings setup, but for this business model they were treated as required. The steps are completed in order, with Website and Products following tax and shipping. (older, 2021-22) [L0731.009]</li>
+</ul>
+<h2 id="shipping">Shipping</h2>
+<h3 id="shipping-service-setup">Shipping service setup</h3>
+<ul>
+<li>Shipping setup: click the plus icon, enter a shipping service name (for example "domestic shipping"), select only the countries you ship to, set the order cutoff time, and set the handling time. [L0728.005]</li>
+<li>Set the handling time in Eastern time. For free shipping, enter a service named free shipping as well. It is required even when shipping is free. [L0728.005]</li>
+<li><strong>Sources differ on time zone:</strong> L0728.005 gives Eastern time for handling time in the example. L0728.020 says the cutoff is set in the time zone used for the account, and L0726.005 says the time zone is the business's. [L0728.005, L0728.020, L0726.005]</li>
+<li>Enter shipping information even when shipping is free, because a shipping setup is mandatory for Shopping ads eligibility. [L0728.006]</li>
+<li>Set the shipping rates for each destination, set shipping time zones and whether shipping is free. Shipping settings are found in the shipping section of Merchant Center. [L0732.011]</li>
+<li>A default shipping rate must be set up for every country you sell to, and a default shipping method must be selected. Merchant Center shows a warning when a country has no default shipping rate. [L0732.009]</li>
+</ul>
+<p>Procedure to set up a shipping service (older, 2021-22):</p>
+<ol type="1">
+<li>Click <strong>Add shipping service</strong>. [L0731.010]</li>
+<li>Enter a name for the service (for example Australia shipping or US shipping). [L0731.010]</li>
+<li>Select the country. [L0731.010]</li>
+<li>Select the service area, which is the delivery destination (the customer's address). [L0731.010]</li>
+<li>Select the currency, matching the currency used for the business and the delivery location. [L0731.010]</li>
+<li>Click <strong>Next</strong>. [L0731.010]</li>
+<li>Enter the order cutoff time (optional), handling time and transit time under Delivery times. [L0731.010]</li>
+<li>Click <strong>Next</strong>. [L0731.010]</li>
+<li>Keep the default free shipping rate. [L0731.010]</li>
+<li>Click <strong>Save</strong>. [L0731.010]</li>
+</ol>
+<h3 id="choosing-the-countries">Choosing the countries</h3>
+<ul>
+<li>Select only the countries where you actually sell in Merchant Center. Shipping and return details are then set up for each selected country. [L0729.007]</li>
+<li>Select only the countries in the shipping destination list that you actually ship to, because the setting controls where Shopping ads may be shown. [L0728.007]</li>
+</ul>
+<h3 id="handling-and-transit-times">Handling and transit times</h3>
+<p>Sources give different values for different cases. Use the case that matches the store.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Handling time</th>
+<th>Transit time</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Example store (policy: processing 3 to 5 days, maximum 5; typical delivery 3 to 7 days, up to 12)</td>
+<td>1 to 5 days</td>
+<td>1 to 12 days</td>
+<td>The store's own policy text, entered manually</td>
+<td>L0729.009</td>
+</tr>
+<tr>
+<td>Print-on-demand products</td>
+<td>2 to 4 days, Monday through Saturday</td>
+<td>Not stated</td>
+<td>Print-on-demand fulfilment</td>
+<td>L0728.008</td>
+</tr>
+<tr>
+<td>Free shipping (2023)</td>
+<td>1 to 2 days</td>
+<td>5 to 7 days</td>
+<td>Free shipping set in Merchant Center</td>
+<td>L835.064</td>
+</tr>
+</tbody>
+</table></div>
+<p>Notes:</p>
+<ul>
+<li>Enter order cutoff time, handling time and transit time so they match the shipping policy page. [L0729.001, L0181.008]</li>
+<li>Handling time is the time from order to dispatch. [L0728.008]</li>
+<li>The order cutoff time sets the time of day after which an order counts as shipping the next day. Choose a cutoff that matches the store's real dispatch routine. [L0728.020]</li>
+<li>Automated shipping rules from carriers such as UPS or FedEx are not used in this setup. Delivery times are entered manually, so they must be kept up to date when the policy changes. [L0729.010]</li>
+<li>Cross-check the shipping and return fields against the policy pages, as follows: [L0729.018]
+<ol type="1">
+<li>Open the shipping policy page and note the stated order processing time, typical delivery time and maximum transit time. [L0729.018]</li>
+<li>In Merchant Center, enter the order cutoff time, handling time and transit time so they match those figures. [L0729.018]</li>
+<li>Open the return policy page and copy its URL into the return policy URL field. [L0729.018]</li>
+<li>Compare the accepted return conditions (defective and non-defective products) and whether exchanges are accepted with the page text. [L0729.018]</li>
+<li>Enter the return window, return method, party paying return shipping, restocking fee and refund processing time exactly as the page states them. [L0729.018]</li>
+<li>Before clicking Save, check the summary against both pages. [L0729.018]</li>
+</ol></li>
+<li>Merchant Center shipping and return values must match the policy pages word for word in substance. A mismatch, such as choosing exchanges when the policy refuses them, causes Google to flag the account. [L0729.008]</li>
+<li>The shipping policy link in the product data section needs the exact URL of the shipping policy page on the store. Save it after the shipping page has been created. (older, 2021-22) [L0731.018]</li>
+</ul>
+<h3 id="free-shipping">Free shipping</h3>
+<ul>
+<li>If the store offers free shipping on all orders, setting the shipping rate to 0 for all orders in Merchant Center is sufficient. No other shipping options need to be added. Paid shipping options are only added when the store charges for shipping. [L0728.011]</li>
+<li>Create a shipping rate named free shipping with a single rate for all orders and a fixed rate of 0, then click <strong>Continue</strong> and <strong>Save</strong>. [L0728.010]</li>
+<li>Choose free shipping for all customers with no conditional values, then click <strong>Save</strong>. (older, 2021-22 for the source's procedure) [L0729.001]</li>
+<li>Keep the default free shipping rate. (older, 2021-22) [L0731.010]</li>
+<li>Advanced shipping settings include free shipping thresholds (for example free shipping from a minimum order value) and holiday shipping exceptions. These are optional and only needed if the store uses them. [L0728.009]</li>
+<li>The shipping settings in Merchant Center must match what the Shopify store charges at checkout. If the store offers free shipping on all orders, the Merchant Center shipping rate must also be 0. A paid shipping option should only be added when the store charges for shipping. [L0728.019]</li>
+<li>Showing free shipping in Merchant Center while charging shipping at checkout can trigger warnings or suspensions, because Google bots crawl stores and test the cart. (2024) [L0360.046]</li>
+<li>Merchant Center shipping settings must match the Shopify shipping settings exactly. Mismatches can trigger warnings or a suspension, because Google bots check the two against each other. (2022) [L1092.070]</li>
+<li>To show free shipping on the Google ad label, set shipping prices in Shopify and then set the same shipping prices in the Merchant Center settings. [L0941.073]</li>
+<li>The estimated delivery date shown under a Shopping ad is set in the shipping section of Merchant Center. (older, 2021) [L0671.079, L0671.215]</li>
+</ul>
+<h3 id="special-shipping-cases">Special shipping cases</h3>
+<ul>
+<li>For Black Friday with a flat shipping fee for one supplier only, create the matching shipping rate in Shopify and set the same rule in Merchant Center. Free shipping for all other products can stay as is. (2022) [L1092.071]</li>
+<li>Heavy items can be shipped curbside and advertised on Google Shopping with free shipping. The shipping approach should still be checked against Merchant Center policies and confirmed with Google if a policy seems to restrict it. (2023) [L0835.066]</li>
+<li>For items whose shipping cost depends on destination (LTL or freight items), contact Google Merchant Center help through the help page and describe the issue. Save the conversation or the answer in case the question comes up again. (2023) [L0835.067]</li>
+<li>When Google Merchant Center asks for a ship-from address, enter your own business account address rather than each supplier's warehouse address. Supplier warehouse locations do not need to be listed separately for every supplier. (2022) [L0854.112]</li>
+<li>Warehouse locations need to be entered in Merchant Center only if you calculate shipping rates using zip codes. (2023) [L0835.064]</li>
+</ul>
+<h2 id="returns">Returns</h2>
+<ul>
+<li>Return settings in the example store: return window 30 days, return method by mail with a return label, return shipping paid by the customer only if the policy says so, no restocking fee if none exists, and refund processing time 7 days after the return is received. [L0729.011]</li>
+<li>Return settings in the sign-up sequence: paste the Returns &amp; Refunds policy URL, select the countries you accept returns from, confirm acceptance of defective and non-defective products, enter the return window (example: 30 days), select <strong>mail</strong> as the return method, specify return shipping responsibility, select <strong>No cost</strong> for restocking fee if applicable, and enter refund processing time. [L0181.008]</li>
+<li>Enter the return window, return method, who pays return shipping, restocking fee and refund processing time to match the policies, then click <strong>Next</strong>. Check whether exchanges are accepted. [L0729.001]</li>
+</ul>
+<h2 id="google-ads-linking">Google Ads linking</h2>
+<ul>
+<li>Do not link Google Ads to your Merchant Center account during initial setup. Google Ads will be configured later after your products are approved. [L0181.007]</li>
+<li>Do not link a Google Ads account to Merchant Center until your products have been approved for the first time in Merchant Center. [L0729.012]</li>
+<li><strong>Sources differ:</strong> L0181.007 and L0729.012 say to link only after first approval. L1165.001 lists a linked Google Ads account among the requirements the account must meet before products can be submitted. The sources do not state how to reconcile the two. The first two are the step order of the setup flow, and L1165.001 is a checklist of what must be in place before submission. [L0181.007, L0729.012, L1165.001]</li>
+<li>Before products can be submitted to Google Merchant Center, the account needs taxes, shipping rules, a verified store URL and a linked Google Ads account. Only the product data is missing at that point. [L1165.001]</li>
+</ul>
+<p>Linking procedure (older, 2021-22):</p>
+<ol type="1">
+<li>In the Merchant Center linking step, select the Google Ads customer ID that should be used and click <strong>Link</strong>. [L0731.029]</li>
+<li>In Google Ads, go to Tools and settings &gt; Linked accounts. [L0731.029]</li>
+<li>Find Google Merchant Center and click <strong>Details</strong>. [L0731.029]</li>
+<li>Click <strong>View details</strong> on the pending request, check the Merchant Center ID and website, then click <strong>Approve</strong>. [L0731.029]</li>
+<li>Refresh Merchant Center and confirm the link status shows as active. [L0731.029]</li>
+</ol>
+<p>Linking steps from other sources:</p>
+<ul>
+<li>Link Google Ads to Merchant Center: in Merchant Center, click <strong>Link</strong>, sign in to the Google Ads account with the same email, and approve the linking request that appears in Google Ads. Linking happens automatically after approval. [L0728.017]</li>
+<li>Link Merchant Center to Google Ads under the account linking section by clicking <strong>Link account</strong>. Once linked, Merchant Center can be used for daily feed management while campaigns run in Google Ads. [L0732.016]</li>
+<li>Link the Merchant Center account to Google Ads and select the correct Merchant Center account when adding products to the campaign. [L0743.012]</li>
+<li>Link Merchant Center to Google Ads: open the cogwheel settings in Merchant Center and choose <strong>Linked accounts</strong>. Without this link you cannot create campaigns that include your products. [L1145.044]</li>
+</ul>
+<h2 id="programs-free-listings-and-shopping-ads">Programs: free listings and Shopping ads</h2>
+<ul>
+<li>In Merchant Center, go to Growth &gt; Manage Programs and enable both Free listings and Shopping ads. These are the two channels that display your products to shoppers. Shopping ads must be enabled here before you can run Shopping campaigns in Google Ads. [L1145.042]</li>
+<li>Select the programs that fit your goals when creating the account. Shopping actions is optional and needs more business history and product understanding. [L0728.002]</li>
+<li>The free listings setup has Tax and Shipping items, which are optional, and the steps are completed in order. (older, 2021-22) [L0731.009]</li>
+<li>Free listings show products in Google surfaces without paid ads, but bring limited traffic. (older, 2021-22) [L0731.001]</li>
+<li>Merchant Center Buy with Google listings are optional. Disapprovals there are not a cause for concern if Shopping ads and dynamic remarketing are active without error. (2022) [L0969.070]</li>
+</ul>
+<h2 id="country-availability">Country availability</h2>
+<ul>
+<li>Across every surface, Google Merchant Center can be used only in the United States and India. In New Zealand the sole option offered is Google Ads, which means Google Shopping cannot be operated there in the identical manner. (older, 2020) [L0961.061]</li>
+<li>Select only the countries where you actually sell. [L0181.008, L0729.007]</li>
+<li>Set shipping and return details for each selected country. [L0729.007]</li>
+<li>Set a default shipping rate for every country you sell to. [L0732.009]</li>
+<li>Shopping Actions in the US market in 2020 had its own dedicated ad space. (older, 2020) [L0738.015]</li>
+</ul>
+<h2 id="product-source-control-and-avoiding-duplicate-feeds">Product source control and avoiding duplicate feeds</h2>
+<ul>
+<li>To stop Google from importing products on its own, go to Settings &gt; Data sources, open <strong>Actions</strong>, and choose <strong>Hide all automatically found products</strong>. Products then come through the "Provided by you" source, which you control. [L0729.013]</li>
+<li>Hide automatically found products in Settings &gt; Data Sources by locating <strong>Found by Google</strong> and clicking <strong>Hide all automatically found products</strong>. This prevents Google from pulling products without your control. Your products will be submitted under "Provided by you." [L0181.006]</li>
+<li>Hiding automatically found products reduces your visibility in the Shopping tab, Google Maps and YouTube. This is accepted because you then control which products are submitted, and the feed is the source of your product data. [L0729.014]</li>
+<li>Duplicate-prevention checks: [L1114.071, L0731.016, L0731.017, L0731.040]
+<ul>
+<li>One Merchant Center account per store.</li>
+<li>One website per account; a second website requires an advanced account. (older, 2021-22)</li>
+<li>Claiming the website stops other accounts from using the same URL. (older, 2021-22)</li>
+<li>Confirm the correct Google Ads customer ID before linking. (older, 2021-22)</li>
+</ul></li>
+</ul>
+<h2 id="starting-the-feed">Starting the feed</h2>
+<ul>
+<li>You can start a Google Shopping feed with about 30 products, but keep adding products continuously. Starting early lets data and sales begin to build while the catalog grows. (older, 2020) [L0358.008]</li>
+<li>If Merchant Center has a feed issue, check the product data first: correct product data is the basis of approval. (older, 2020) [L1087.006]</li>
+</ul>
+<h2 id="pay-button-and-payment-methods">Pay button and payment methods</h2>
+<ul>
+<li>Enabling the Google Pay button in Merchant Center: if using Shopify Payments, Apple Pay and Google Pay are usually enabled by default. If not, enable them in Shopify payment settings. (2025) [L0255.044]</li>
+<li>The Add to checkout feature in Merchant Center is not recommended for dropship products due to lower conversion rates. (2025) [L0255.045]</li>
+<li>In Merchant Center, under payment method settings, check the boxes for all payment methods accepted on your site (Apple Pay, Google Pay, Shop Pay, credit cards). This must match what is enabled in Shopify. (2025) [L0255.046]</li>
+</ul>
+<h2 id="shopping-actions-and-buy-on-google">Shopping Actions and Buy on Google</h2>
+<h3 id="what-it-is">What it is</h3>
+<ul>
+<li>Google Shopping Actions, also called Buy on Google, are product ads that let shoppers complete a purchase on Google without visiting the merchant's website. The format changes quickly, so the rules described for 2020 should be verified against current Merchant Center documentation before making decisions. (older, 2021-22) [L0738.001]</li>
+<li>Buy on Google is a checkout feature that lets people buy without leaving Google Shopping. It is a separate policy and is not the same as the standard Google Shopping setup. (2023) [L0835.068]</li>
+<li>Shopping Actions ads carry a Buy on Google icon over the product image, and often an Add to cart button. Clicking adds the item to the shopper's Google cart and leads to a checkout hosted by Google, which sends the order and payment to the merchant to process. (older, 2021-22) [L0738.019]</li>
+<li>In the Google Shopping tab, a Buy it on Google filter can appear on many results. Shoppers who apply it see only Shopping Actions ads, and all pay-per-click ads are hidden. (older, 2021-22) [L0738.021]</li>
+<li>Do not let customers buy directly through Google. Use free Google product listings but send shoppers to your own store for checkout. (2021) [L0962.071]</li>
+</ul>
+<h3 id="history-and-cost">History and cost</h3>
+<ul>
+<li>Shopping Actions developed from Google Express, an app-based Google marketplace that was not adopted by customers. Google then moved the same buy-on-Google ads into its existing Search, Images, Shopping, Discover and Lens interfaces. (older, 2021-22) [L0738.002]</li>
+<li>Originally Shopping Actions were not cost-per-click ads. The merchant paid a commission only on completed sales, similar to Amazon or eBay. (older, 2021-22) [L0738.004]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Cost to merchant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Before mid-2020</td>
+<td>Commission on completed sales; averaged about 12%, varied by product type and category, ranged from roughly 8% up to above 12%</td>
+<td>L0738.004 (older, 2021-22)</td>
+</tr>
+<tr>
+<td>From mid-2020</td>
+<td>No commission; selling became free. Google presented this as a COVID-19 measure for advertisers, and it also increases the number of users on the platform</td>
+<td>L0738.006 (older, 2021-22)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Shopping Actions listings are not pay-per-click ads, but they sit in the same ad slots as paid Shopping ads, so they push paid listings down. Even first position among ads may not be the first thing the shopper sees when Shopping Actions appear above it. (older, 2021-22) [L0738.020]</li>
+<li>Shopping Actions listings appear in the same positions as paid Shopping ads, in Search, Image search and other placements. As they grow, they take space from pay-per-click listings and can push them lower. (older, 2021-22) [L0738.013]</li>
+<li>Merchant Center renamed the Shopping Actions labels: Shopping Actions became Buy on Google listings, surfaces across Google became free listings, and local surfaces across Google became free local listings. (older, 2021-22) [L0738.033]</li>
+</ul>
+<h3 id="control-and-placement">Control and placement</h3>
+<ul>
+<li>With Shopping Actions, the merchant has little control over the checkout experience or the ad placement, and there is no optimisation tool. Google's aim of keeping users on its own properties means fewer visits to the merchant's own website, which weakens a sales funnel that depends on site traffic. (older, 2021-22) [L0738.003]</li>
+<li>Merchants cannot optimise Shopping Actions ads. They can only submit an additional feed on top of their existing Merchant Center feed, and Google decides whether and when the products are shown. (older, 2021-22) [L0738.007]</li>
+<li>In 2020, Shopping Actions listings could appear on Google Search, Google Images, the Shopping tab, Google Discover, Google Lens, the online Google Shopping homepage and the Google Shopping app (formerly Google Express). Google decides where each listing is shown, and the merchant cannot select individual placements. (older, 2021-22) [L0738.036]</li>
+<li>Shopping Actions ads only display when at least one competitor for the same product is also participating. If no competitor in the market has joined, a merchant will see no Shopping Actions ads even when approved. (older, 2021-22) [L0738.037]</li>
+<li>Large national retailers that sell high-ticket products, such as Walmart, Costco and Target, can occupy Shopping Actions slots if they join. Their entry can push smaller high-ticket dropshipping listings further down in the same results. (older, 2021-22) [L0738.038]</li>
+<li>Google's algorithm ranks and promotes sellers according to their seller score. A low score reduces traffic and sales, which leaves fewer orders to rebuild the score, so the damage compounds. (older, 2021-22) [L0738.017]</li>
+</ul>
+<h3 id="risk-and-decision">Risk and decision</h3>
+<ul>
+<li>Shopping Actions requires more business history and a deeper product understanding than standard Shopping ads, so it is not a starting priority. Selecting it in the program choice is optional and can be ignored. (Source A, undated) [L0728.018]</li>
+<li>Stock shortages, which were common for high-ticket dropshippers during COVID-19, make Shopping Actions risky because delivery time commitments are hard to keep. Do not join while order fulfilment times are unpredictable. (older, 2021-22) [L0738.012]</li>
+<li>Start with Shopping Actions when you can reliably meet your delivery times, because the platform is useful for getting into the program. If stock and delivery are unpredictable, wait, but monitor the channel because it is expected to become more important. (older, 2021-22) [L0738.018]</li>
+<li>If traditional Shopping ads become harder to get seen, a merchant may be forced to use the Shopping Actions interface. This is both a risk and an opportunity when competitors are not using it. (older, 2021-22) [L0738.014]</li>
+<li>In the US market in 2020, when few competitors take part, a merchant can gain extra ad positions by joining. (older, 2020) [L0738.015]</li>
+</ul>
+<h3 id="setup-and-reporting">Setup and reporting</h3>
+<p>Procedure (older, 2021-22):</p>
+<ol type="1">
+<li>Check whether Shopping Actions is visible as an option in Google Merchant Center. [L0738.022]</li>
+<li>If it is not visible, submit the Google application form linked from Google's Shopping Actions page and describe the business. [L0738.022]</li>
+<li>Wait for Google's approval. After approval, the Shopping Actions sections are added to Merchant Center. [L0738.022]</li>
+<li>Submit the additional feed data through the Feeds for Google Shopping app in Shopify and switch on Google Shopping Actions in that app's menu. [L0738.022]</li>
+<li>Only after approval, install the Order Sync for Google Shopping app so orders are brought into Shopify. [L0738.022]</li>
+<li>Manage the orders in Shopify, where they are synced, and fulfil them. [L0738.022]</li>
+</ol>
+<ul>
+<li>Shopping Actions reporting is under Performance &gt; Dashboard &gt; Shopping Actions. Retailer Standards and Shopping Actions promotions are under Performance, and disapproval details are under Diagnostics &gt; Products after changing the destination to Shopping Actions. (older, 2021-22) [L0738.025]</li>
+<li>The Merchant Center Overview page (merchants.google.com) includes a Shopping Actions box that shows how many products in the feed are approved for Shopping Actions. It is listed separately from the boxes for Shopping ads, Dynamic Remarketing and surfaces across Google. (older, 2021-22) [L0738.039]</li>
+<li>The Growth tab's Shopping Actions insights were in beta and added little value at the time. Promotions can be attached to Shopping Actions listings to highlight sale events on particular items. (older, 2021-22) [L0738.034]</li>
+</ul>
+<h2 id="why-merchant-center-comes-first">Why Merchant Center Comes First</h2>
+<ul>
+<li>Google Shopping ads cannot run without a product feed created in Google Merchant Center. [L1287.037]</li>
+<li>The Shopping campaign pulls its products from that feed, so Merchant Center must be set up before the Shopping campaign. [L1287.037]</li>
+<li>Google Merchant Center receives the store's product feed and is needed before products can appear in Google Shopping. [L1437.014]</li>
+<li>Submit the feed right after uploading products, because approval takes time. [L1437.014]</li>
+</ul>
+<h2 id="setup-sequence">Setup Sequence</h2>
+<p>Source C procedure:</p>
+<ol type="1">
+<li>Create a free Google Merchant Center account. [L1251.027]</li>
+<li>In Shopify, install the Google sales channel and follow its step-by-step setup, which takes about 10 minutes. [L1251.027]</li>
+<li>Wait about 3 to 5 days while Google audits the products, which is required for a new account. [L1251.027]</li>
+<li>In Google Merchant Center, open linked accounts and link your Google Ads account. [L1251.027, L1251.028]</li>
+<li>Once linked, run the campaign hands-off with Performance Max. [L1251.027]</li>
+</ol>
+<p>Source A procedure:</p>
+<ol type="1">
+<li>Upload all products to the store. [L1437.015]</li>
+<li>Submit the store's product feed to Google Merchant Centre. [L1437.015, L1437.014]</li>
+<li>While the feed is waiting for approval, launch Search text ads so the store can start getting sales. [L1437.015]</li>
+</ol>
+<p>Sources differ on sequence and campaign type:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Point</th>
+<th>Source C [L1251.027]</th>
+<th>Source A [L1437.015, L1287.037]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>When Google Ads is linked</td>
+<td>After the Merchant Center audit is complete [L1251.028]</td>
+<td>Not stated as a linking step; Search text ads launch while the feed waits for approval [L1437.015]</td>
+</tr>
+<tr>
+<td>Campaign type named</td>
+<td>Performance Max, run hands-off once linked [L1251.027]</td>
+<td>Shopping campaign, which pulls products from the feed [L1287.037]</td>
+</tr>
+<tr>
+<td>Shared point</td>
+<td>Merchant Center feed comes first [L1287.037, L1437.014]</td>
+<td>Merchant Center feed comes first [L1287.037, L1437.014]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="linking-merchant-center-to-google-ads">Linking Merchant Center to Google Ads</h2>
+<ul>
+<li>Connect the Google Ads account under Google Merchant Center &gt; Linked accounts, after the Merchant Center audit is complete. [L1251.028]</li>
+<li>The link lets Google Ads use the product feed for Shopping and Performance Max campaigns. [L1251.028]</li>
+</ul>
+<h2 id="audit-and-approval-timing">Audit and Approval Timing</h2>
+<ul>
+<li>A new account needs an audit of about 3 to 5 days before the link step. [L1251.027]</li>
+<li>Approval of the feed takes time, so the feed is submitted right after products are uploaded. [L1437.014]</li>
+<li>Waiting time for feed approval can be used to launch Search text ads. [L1437.015]</li>
+</ul>
+<h2 id="verifying-shipping-and-tax-settings">Verifying Shipping and Tax Settings</h2>
+<ul>
+<li>The shipping and tax rate calculator in Merchant Center previews the rates that will show for a product delivered to a chosen destination. [L1170.043]</li>
+<li>Use it to verify shipping and tax settings before the feed goes live. [L1170.043]</li>
+<li>Older source (Source B, 2021-22): treat this as older advice and check it against the current Merchant Center interface. [L1170.043]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>All shipping and return settings must match exactly what is stated on your website policies. If settings do not match, Google may reject your products. [L0181.005]</p></li>
+<li><p>Fill in company information and shipping information in your Google Merchant Center account when setting it up. [L0671.066]</p></li>
+<li><p>Fill in company information and shipping information in your Google Merchant Center account when setting it up. [L0671.203]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/04-setting-up-google-accounts-ads-analytics-search-console-tag-/"><span class="k">&larr; Previous</span><span class="v">Setting up Google accounts: ads, analytics, search console, tag tracking</span></a><a class="nx" href="../../10-google-ads-and-shopping/06-product-feed-setup-and-feed-apps/"><span class="k">Next &rarr;</span><span class="v">Product feed setup and feed apps</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

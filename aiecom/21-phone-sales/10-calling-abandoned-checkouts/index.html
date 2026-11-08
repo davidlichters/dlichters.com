@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Calling abandoned checkouts | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 21.10: Calling abandoned checkouts.">
+<link rel="canonical" href="https://dlichters.com/aiecom/21-phone-sales/10-calling-abandoned-checkouts/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Calling abandoned checkouts | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 21.10: Calling abandoned checkouts."><meta property="og:url" content="https://dlichters.com/aiecom/21-phone-sales/10-calling-abandoned-checkouts/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">21. Phone sales</a> &rsaquo; <a href="../../../ecom/21-phone-sales/10-calling-abandoned-checkouts/">Plain version</a></div><h1>21.10 Calling abandoned checkouts</h1><article><h2 id="why-speed-decides-the-outcome">Why speed decides the outcome</h2>
+<ul>
+<li>Contacting a lead within minutes of abandonment, instead of 30 minutes after, makes contact about 100 times more likely, because memory and task focus degrade quickly. [L0281.001]</li>
+<li>Contacting within 5 minutes, instead of 30 minutes after cart abandonment, makes lead qualification about 21 times more likely. [L0281.002]</li>
+<li>Immediate contact, within minutes, lets the customer assume a legitimate checkout issue. They are less likely to perceive aggressive marketing and more likely to complete the purchase. [L0286.034]</li>
+</ul>
+<h2 id="catching-abandoned-checkouts-in-real-time">Catching abandoned checkouts in real time</h2>
+<ul>
+<li><strong>Mistake:</strong> Checking abandoned carts manually in Shopify Admin (Orders &gt; Abandoned Orders) every few hours or days. Compared with immediate real-time notification, this delay cuts contact likelihood by 100 times and qualification likelihood by 21 times. [L0281.013]</li>
+<li><strong>Principle:</strong> Orders valued at $2,000-$3,000 or higher nearly require a phone conversation to close. Use automation to identify these abandoned carts and send immediate alerts to the sales team. [L0286.017]</li>
+<li><strong>Slack alert:</strong> A notification goes to the phone team as soon as a new abandoned cart arrives, so calls can start quickly. [L0737.015]</li>
+<li><strong>Slack alert content:</strong> Customer name, products left in the cart, and phone number. [L1092.086] <em>(Older: 2022)</em></li>
+<li><strong>Sheet:</strong> The same data also lands in the tracking sheet, where the team logs results. [L0737.015]</li>
+</ul>
+<h2 id="capturing-the-phone-number-at-checkout">Capturing the phone number at checkout</h2>
+<ul>
+<li>Roughly half or more of abandoned checkouts can yield a phone number, so the checkout should ask for one. Capturing it is what makes the follow-up call possible. [L1522.024] <em>(Older: 2021-22)</em></li>
+<li>Handle abandoned checkouts in this order: [L1522.025] <em>(Older: 2021-22)</em>
+<ol type="1">
+<li>Ask for and capture the shopper's phone number during checkout.</li>
+<li>Call every abandoned checkout with a phone number as soon as possible.</li>
+<li>Send the abandoned checkout email flow to all abandoned checkouts, including those without a phone number.</li>
+</ol></li>
+<li>When you have the customer's phone number, combine email follow-up with a call or text. Many carts can still be converted into sales this way. [L1285.066] <em>(2024)</em></li>
+</ul>
+<h2 id="timing-the-call">Timing the call</h2>
+<ul>
+<li>Contact every abandoned checkout as soon as possible, ideally straight away, by phone. The call aims to find and fix the problem that stopped the sale. [L1522.023] <em>(Older: 2021-22)</em></li>
+<li>Call customers who abandoned checkout to ask why they did not finish the order, except on Sundays. [L1090.139] <em>(Older: 2021)</em></li>
+</ul>
+<h2 id="working-each-row-phone-team-routine">Working each row (phone team routine)</h2>
+<p>For each abandoned cart row: [L0737.013]</p>
+<ol type="1">
+<li>Call the customer and record in the Notes column what happened: whether the person picked up, whether it was a wrong number, whether they bought, and what was said on the call.</li>
+<li>Set the row color according to the call outcome so that results can be read at a glance.</li>
+<li>If a paid order later comes in from the same email, the Recovered column is filled automatically with the purchase date.</li>
+</ol>
+<p>Alternative call procedure from the 2022 course: [L1092.086] <em>(Older: 2022)</em></p>
+<ol type="1">
+<li>Receive a Slack notification showing the customer's name, the products left in the cart and the phone number.</li>
+<li>Call from a business number such as Mighty Call or Google Voice.</li>
+<li>Say that you saw they were on the store, did not finish the order, and ask whether you can help.</li>
+</ol>
+<h2 id="call-scripts">Call scripts</h2>
+<p>Phone script for an unfinished checkout. Adjust it to your store, and stay warm and never pushy. [L1522.026] <em>(Older: 2021-22)</em></p>
+<pre><code>When a customer leaves a checkout unfinished, use this phone script, adjusted to your store, and stay warm and never pushy. Greet the customer by first name, introduce yourself and your store, and say you noticed they started an order but did not complete it. Ask whether anything went wrong during checkout and whether there is something you can fix or help with. Say you would be glad to have them as a customer. If a problem came up, write down exactly what it was, then either fix it or escalate it, and confirm the result back to the customer. If no problem came up, thank them, ask whether they have questions about the product or shipping, and end the call politely. Log the outcome and the reason for the abandonment in your notes.</code></pre>
+<p>Opening script (2021). Two identical copies in the course; the text is unchanged. [L0671.021, L0671.297] <em>(Older: 2021)</em></p>
+<pre><code>Hi, this is [your name] from [store name].com. We noticed you were just about to complete your order for [product name] but did not finish checking out. I just wanted to follow up quickly to see if you ran into any trouble or if there is anything I can help you with. If they are ready to buy, offer to send them a direct link back to checkout.</code></pre>
+<p>Message script (2024). [L1285.065] <em>(2024)</em></p>
+<pre><code>Hi, this is [Your name], the owner of [Store name]. I noticed you started the checkout for [product name] but did not complete your order. If you have any questions about this product, I am happy to help, so just text me back and I will take care of you.</code></pre>
+<h2 id="voicemail-and-text-follow-up">Voicemail and text follow-up</h2>
+<ul>
+<li>Phone calls after abandoned checkouts are often unanswered, so pair each call with a voicemail and a later text. [L0806.096] <em>(2024)</em></li>
+<li>Plan the follow-up over about a week to measure whether it recovers sales. [L0806.096] <em>(2024)</em></li>
+<li>The call comes first. The voicemail and text follow after it, as the second step of the same sequence. [L0806.096, L0737.013] <em>(2024)</em></li>
+</ul>
+<h2 id="tracking-sheet-setup">Tracking sheet setup</h2>
+<ul>
+<li>Color-code the tracking sheet rows by call result so outcomes are visible at a glance. [L0737.014]</li>
+<li>Place the color key at the top of the sheet. [L0737.014]</li>
+<li>Notes column: record pickup, wrong number, purchase, and call content for each row. [L0737.013]</li>
+<li>Recovered column: filled automatically with the purchase date when a paid order arrives from the same email. [L0737.013]</li>
+</ul>
+<h2 id="using-the-answers-as-feedback">Using the answers as feedback</h2>
+<ul>
+<li>Use customers' answers about why they abandoned as qualitative feedback for fixing the store. [L1090.139] <em>(Older: 2021)</em></li>
+<li>Log the outcome and the reason for the abandonment in the notes, so the reasons can be reviewed later. [L1522.026] <em>(Older: 2021-22)</em></li>
+</ul>
+</article><nav class="pn"><a href="../../21-phone-sales/09-quotes-and-quote-follow-up/"><span class="k">&larr; Previous</span><span class="v">Quotes and quote follow-up</span></a><a class="nx" href="../../21-phone-sales/11-post-purchase-confirmation-and-review-calls/"><span class="k">Next &rarr;</span><span class="v">Post-purchase, confirmation and review calls</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

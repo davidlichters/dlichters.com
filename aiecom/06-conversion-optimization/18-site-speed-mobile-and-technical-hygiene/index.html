@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Site speed, mobile and technical hygiene | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 6.18: Site speed, mobile and technical hygiene.">
+<link rel="canonical" href="https://dlichters.com/aiecom/06-conversion-optimization/18-site-speed-mobile-and-technical-hygiene/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Site speed, mobile and technical hygiene | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 6.18: Site speed, mobile and technical hygiene."><meta property="og:url" content="https://dlichters.com/aiecom/06-conversion-optimization/18-site-speed-mobile-and-technical-hygiene/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">6. Conversion optimization</a> &rsaquo; <a href="../../../ecom/06-conversion-optimization/18-site-speed-mobile-and-technical-hygiene/">Plain version</a></div><h1>6.18 Site speed, mobile and technical hygiene</h1><article><h2 id="page-speed-targets">Page speed targets</h2>
+<ul>
+<li><strong>Older target, 2021: fully loaded page under 2 seconds.</strong> Look for performance gains when a page loads slower than about 2 to 2.5 seconds. [L0962.047]</li>
+<li><strong>Older advice, 2021-22: stop at about 5 seconds on average.</strong> Reduce speed work until the store runs at about 5 seconds on average, and move the remaining time to core conversion work. Chasing 1 to 2 second load times usually costs developer time that does not pay back unless a measurable conversion gain shows up. [L1522.043]</li>
+<li><strong>Both values are given because the sources do not reconcile them.</strong> Use the 2-second figure as the aim for individual pages, and the 5-second average as the point where further speed work needs a measured conversion case. [L0962.047, L1522.043]</li>
+<li><strong>Slow mobile connections:</strong> Shoppers on slow mobile connections may leave a page that takes more than about 3 seconds to appear, so paid ad clicks are wasted. Example: a visitor from Google Shopping ads looking at a $2,500 dining table left after a 3-second spinner and bought from a competitor. [L1098.003]</li>
+<li><strong>Judge speed on a weak connection:</strong> Mobile traffic is a large share of ecommerce visits, so mobile load speed matters more than a fast desktop or home Wi-Fi test suggests. Judge store speed by how it performs on a phone with a weak connection, such as an airport network or a slow mobile connection. [L1098.026]</li>
+<li><strong>Already-good stores:</strong> Website speed scores around GTmetrix grade A with a performance score near 97 are considered very good, and further speed work is not a priority compared with competitors. This is a sanity check for stores already at that level and does not replace the targets above. [L0836.011]</li>
+<li><strong>Speed and conversion:</strong> Website load time directly affects conversion rate; slower-loading pages result in fewer purchases, making image file optimization critical to ecommerce profitability. (Older advice, 2021-22.) [L0300.001]</li>
+<li><strong>Speed and bounce:</strong> Product page bounce is reduced by fast load times and clear details. (Older advice, 2021.) [L0801.118]</li>
+<li><strong>Speed and experience:</strong> Page speed affects how users experience a store and how many of them buy. Page speed optimization should be checked and improved on store pages. (Older advice, 2020.) [L1087.007]</li>
+<li><strong>Speed and repeat purchases:</strong> Customers who are dissatisfied with page performance are 79% less likely to buy again. Speed affects repeat purchases and therefore the effect of email and retargeting campaigns. [L0390.032]</li>
+</ul>
+<h2 id="measuring-speed">Measuring speed</h2>
+<ul>
+<li><strong>Test the page as a customer would (older, 2021-22):</strong>
+<ol type="1">
+<li>Load the page on desktop, mobile and tablet.</li>
+<li>Load it on different computers, on cellular data and on home Wi-Fi.</li>
+<li>On each, check the page speed and look for loading problems. [L0473.016]</li>
+</ol></li>
+<li><strong>GTmetrix check (older, 2021):</strong>
+<ol type="1">
+<li>Run the URL in GTmetrix.</li>
+<li>If the scores show a lot of yellow or red, open the waterfall view.</li>
+<li>Find the elements that load furthest to the right.</li>
+<li>Remove or optimize the slowest items, such as images or app code. Third-party trackers that load late, such as an email platform script, can be acceptable. [L0962.048]</li>
+</ol></li>
+<li><strong>Fastest route to the bottleneck (no year given):</strong> Run the store through GTmetrix or Google PageSpeed to find the main bottleneck, which is usually images or GIFs. [L1259.023]</li>
+<li><strong>GTmetrix recommendations on Shopify (older, 2021-22):</strong>
+<ul>
+<li>Recommendations such as leveraging browser caching, reducing DNS lookups, enabling server-side compression and using a CDN are largely controlled by Shopify's hosting, so they can usually be ignored on a Shopify store. Focus on the recommendations about images, scripts, apps and redirects instead. [L1266.042]</li>
+<li>GTmetrix ranks its recommendations by impact, and the top rules improve the overall score most. Not every rule applies to a given page, so treat the list as generic best practice rather than a checklist to complete. [L1266.043]</li>
+<li>Keep total page size and the number of requests low, since GTmetrix reports both alongside the fully loaded time. A page with more than 100 requests and close to 2 MB of total size, as in typical unoptimized Shopify stores, usually has clear app and image problems to fix. [L1266.044]</li>
+<li>Shopify's Largest Contentful Paint (LCP) and CLS are driven mainly by apps and JavaScript (for LCP) and by theme and apps that push page elements around as they load (for CLS). FCP is harder to control and usually not a problem. [L1266.028]</li>
+</ul></li>
+<li><strong>Speed score availability (older, 2021-22):</strong> The Online store speed score is not available while password protection is on. After the password is disabled, it can take 1 to 3 days for the score to be calculated. Installed apps, edited theme code, and the size of images and videos all affect the score. [L0370.025]</li>
+</ul>
+<h2 id="speed-fix-sequence">Speed fix sequence</h2>
+<p>Work from easiest to hardest. Procedure from Source A:</p>
+<ol type="1">
+<li><strong>Reduce homepage slideshows.</strong> Six to ten slides that nobody watches waste resources and annoy visitors, so remove them unless you need them. [L0390.035]</li>
+<li><strong>Reconsider quick-shop functionality.</strong> It is heavy on resources. Keep it where it helps upselling, such as customers buying several low-price items together, and remove it for high-ticket products where it adds little. [L0390.035]</li>
+<li><strong>Choose the right image format.</strong> Use SVG for icons and logos, JPEG for photos such as hero images, and PNG only when a transparent background is needed. [L0390.035]</li>
+<li><strong>Crop and scale product images to the size the site needs.</strong> For example, reduce a 5000 pixel wide supplier image to 2048 pixels, which keeps high definition without loading unnecessary data. [L0390.035]</li>
+<li><strong>Compress images.</strong> Compression tools can reduce file size by up to 70 to 80% without visible loss, using the manual upload tool TinyPNG or an automatic image app such as RushPix. [L0390.035]</li>
+<li><strong>Remove apps you do not need.</strong> Review your app list, since apps are among the heaviest elements after images, and keep only the few that the business truly needs. Replace small functions with simple code where possible, for example a terms-and-conditions checkbox on the cart page. [L0390.035]</li>
+<li><strong>Update the theme if it is old or has been patched by multiple developers.</strong> Check the browser console for JavaScript errors, since broken scripts can stop features like cart upsells from working. [L0390.035]</li>
+<li><strong>Minify and optimize the code.</strong> This usually takes 2 to 4 hours at most for a skilled developer, so treat longer estimates with caution. [L0390.035]</li>
+<li><strong>Back up the theme before any change and test the entire store afterwards.</strong> [L0390.035]</li>
+</ol>
+<p><strong>Source C procedure (no year given):</strong></p>
+<ol type="1">
+<li>Run the store through GTmetrix or Google PageSpeed to find the main bottleneck, which is usually images or GIFs. [L1259.023]</li>
+<li>Compress images with TinyPNG or Photoshop, targeting image files below 300 KB and GIFs below 800 KB, with product images ideally under 50 KB while keeping visual quality nearly unchanged. [L1259.023]</li>
+<li>Remove unused apps and their code, since each active app loads its own JavaScript on every page view. [L1259.023]</li>
+<li>Page builders such as PageFly add an extra layer on top of the theme and slow the page somewhat, but can still be worth it for their conversion features. [L1259.023]</li>
+</ol>
+<p><strong>Image thresholds from both procedures (the sources give different kinds of target and are used together):</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compression reduction without visible loss</td>
+<td>Up to 70-80%</td>
+<td>L0390.035</td>
+</tr>
+<tr>
+<td>Example resize</td>
+<td>5000 px to 2048 px wide</td>
+<td>L0390.035</td>
+</tr>
+<tr>
+<td>Image file target</td>
+<td>Below 300 KB</td>
+<td>L1259.023</td>
+</tr>
+<tr>
+<td>GIF target</td>
+<td>Below 800 KB</td>
+<td>L1259.023</td>
+</tr>
+<tr>
+<td>Product image target</td>
+<td>Ideally under 50 KB</td>
+<td>L1259.023</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="images-media-and-video">Images, media and video</h2>
+<ul>
+<li><strong>Compress selectively (older, 2021-22):</strong> Compress image files selectively during website setup. Focus on larger files and those noticeably affecting page load speed. Compressing every image on the site is unnecessary. This refines the blanket compression step above. [L0300.011]</li>
+<li><strong>Autoplay and loop (older, 2021-22):</strong> Turn off video autoplay and video looping in the product page media settings when the store has no videos yet, and turn them off again whenever videos are added later. Autoplay and loop can distract visitors and slow the page down. [L0370.006]</li>
+<li><strong>Homepage video test (older, 2021):</strong> Before adding a video to the homepage, test the page with GTmetrics. A video can noticeably raise the load time, so remove it if the score drops sharply. [L0962.049]</li>
+<li><strong>Videos on product pages:</strong> Keep videos where they help buyers, but compress images so they do not slow the page. (Older advice, 2021.) [L0801.118]</li>
+<li><strong>Self-host or embed:</strong> Embed product videos from your own YouTube channel instead of self-hosting them, because self-hosting slows the page more. Embedding even from YouTube lowers the page speed score, but the page still loads fine for visitors. [L1094.068]</li>
+<li><strong>Social links in a new tab (older, 2022):</strong> Social media links on the store can be set to open in a new tab so visitors do not leave the site. This needs a small code snippet from the store developer. [L1281.049]</li>
+</ul>
+<h2 id="apps-code-and-theme-minimalism">Apps, code and theme minimalism</h2>
+<ul>
+<li><strong>Less is more:</strong> Add features and apps one at a time and test whether revenue or sales increase after each change. Without testing, it is impossible to know which feature or app improves conversion. [L0709.024]</li>
+<li><strong>Avoid extra apps and custom code (2023):</strong> Avoid adding extra apps or custom code that slow down the store, because page speed affects both conversion and search performance. Remove unused apps and verify that no code is left behind after uninstalling them. [L0835.078]</li>
+<li><strong>Leftover code (2024):</strong> Mobile traffic that does not convert can point to page speed issues. Remove leftover code from uninstalled apps and check speed for mobile before adding more apps. [L0806.051]</li>
+<li><strong>Store speed factors (older, 2021-22):</strong> Shopify store speed depends on how many apps are installed, whether the theme's code has been modified, and how large the images and videos are. To keep the speed score healthy, limit the number of apps, keep custom code lean, and make media files small. [L1371.049]</li>
+<li><strong>Plugins and pop-ups (no year given):</strong> Stores with bugs, errors, unused plugins that slow the site, or several stacked pop-ups for the same offer frustrate visitors and push them away. Remove plugins that do nothing and limit pop-ups to one useful message. [L0390.025]</li>
+</ul>
+<h2 id="hidden-faults-and-pre-launch-checks">Hidden faults and pre-launch checks</h2>
+<ul>
+<li><strong>Case: a faulty app hid behind a healthy-looking store.</strong> A store had substantial traffic, enough revenue to employ a small team, and a conversion rate of 0.24%. The owners did not see the problem because they were too close to their own site. An outside expert checked the store within about five minutes of trying to check out and found a faulty app plus code left three months earlier by an inexperienced developer. After the expert removed the faulty app and corrected the code, conversion rose roughly eightfold within 24 hours. The expert charged only for a review instead of a fee because the fix had taken five minutes. [L0390.018]</li>
+<li><strong>Buy your own product before launch:</strong> Before launching a store or checkout on a new platform, buy a product through it yourself. Walk through the full customer journey and test each payment method to confirm it works end to end. [L1216.036]</li>
+</ul>
+<h2 id="mobile-responsiveness-and-device-split">Mobile responsiveness and device split</h2>
+<ul>
+<li><strong>Share of mobile visits, by traffic source:</strong></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Traffic source</th>
+<th>Mobile share</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook and Instagram ads (heavy traffic)</td>
+<td>70-80% of visits</td>
+<td>L0390.043</td>
+</tr>
+<tr>
+<td>Landing page traffic</td>
+<td>Roughly 80-85% of visitors by smartphone</td>
+<td>L1259.015</td>
+</tr>
+<tr>
+<td>TikTok</td>
+<td>95-99% of users shop on a phone</td>
+<td>L1410.018</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Consequence:</strong> A website that is not responsive will lose most of its potential customers when 70 to 80% of visits come from mobile devices. [L0390.043]</li>
+<li><strong>Responsiveness signal:</strong> A relative mobile conversion rate well below about 30% usually means the website is not responsive. Fix layout and responsiveness problems before drawing conclusions about mobile traffic quality. [L0390.053]</li>
+<li><strong>Landing page top section:</strong> Landing page conversion depends heavily on mobile. The top of the page must convey value within seconds, with product images, star ratings and a benefit-driven headline visible without scrolling. [L1259.015]</li>
+<li><strong>Mobile-first design:</strong> When traffic comes from TikTok, 95-99% of users shop on a phone, so the mobile version of the store should be built first. [L1410.018]</li>
+<li><strong>Pre-launch phone check:</strong> Before launch, check the landing page on a phone-sized preview (such as the iPhone 12 screen size) and scroll the full page, because stacked content on mobile can become very long. Confirm that:
+<ul>
+<li>carousels scroll sideways smoothly,</li>
+<li>the offer and add-to-cart button stay visible near the top,</li>
+<li>accordion sections open correctly. [L0918.036]</li>
+</ul></li>
+<li><strong>Mobile bounce (older, 2021):</strong>
+<ol type="1">
+<li>Compare bounce rate and session time on mobile and desktop in Google Analytics. [L1090.068]</li>
+<li>If mobile is much worse, speed up the site on mobile connections. [L1090.068]</li>
+<li>Optionally set mobile bid adjustments in Google Ads to reduce spend on the weaker device. [L1090.068]</li>
+<li>Check which search terms send traffic and add negatives for terms that do not match your pages. [L1090.068]</li>
+</ol></li>
+<li><strong>Mobile browsing, desktop buying (older, 2021):</strong> Customers often browse on mobile and buy later on desktop. If desktop buying is high, adjust bids by device rather than moving all traffic to desktop. [L0962.052]</li>
+<li><strong>Device review every 30 to 60 days:</strong>
+<ol type="1">
+<li>Set a recurring reminder for the review. [L0510.052]</li>
+<li>Compare the conversion rate for desktop and for mobile in your reports. [L0510.052]</li>
+<li>Group products by price or sales cycle into separate campaigns. [L0510.052]</li>
+<li>Adjust device visibility at the campaign level, since device bids are not set per product. [L0510.052]</li>
+</ol></li>
+</ul>
+<h2 id="bot-traffic-and-quick-exits">Bot traffic and quick exits</h2>
+<ul>
+<li><strong>Investigating visitors who leave within seconds (older, 2021):</strong>
+<ol type="1">
+<li>Find the pages where many visitors leave right away and test their speed. [L0962.050]</li>
+<li>Check the traffic source of those visits. [L0962.050]</li>
+<li>If one source causes the quick exits, adjust or pause those ads. [L0962.050]</li>
+<li>If the visits are direct or from unknown sources, check the IP addresses and look for bots. [L0962.050]</li>
+</ol></li>
+<li><strong>Direct and unpaid visits (older, 2021):</strong> Visitors from direct or unpaid sources who leave within seconds are often bots. Verify by looking up their IP addresses, and do not panic over unpaid traffic. [L0962.051]</li>
+</ul>
+<h2 id="tracking-and-conversion-events">Tracking and conversion events</h2>
+<ul>
+<li><strong>Phone calls count once per person:</strong> When a single person makes multiple calls to your tracked phone number, it counts as one conversion total, not multiple conversions. [L0234.005]</li>
+<li><strong>Revenue value for calls is optional:</strong> Assigning a revenue value to phone call conversions is optional; you can leave this field empty. [L0234.009]</li>
+<li><strong>Bundle discounts skip the add-to-cart event:</strong> Skipping the add to cart step through a bundle discount may not be tracked as an add to cart in Shopify tracking, so check whether the bundle path is counted correctly before judging the page. [L0950.032]</li>
+</ul>
+<h2 id="technical-hygiene-indexing">Technical hygiene: indexing</h2>
+<ul>
+<li><strong>Duplicate URLs in Search Console (2024):</strong> Google Search Console may report pages as not indexed because Shopify generates duplicate variant and collection URLs. Only the main product URL is meant to be indexed, so a count like 204 indexed out of about 5,000 pages can be normal and needs no fix. [L0836.009]</li>
+</ul>
+</article><nav class="pn"><a href="../../06-conversion-optimization/17-live-chat-forms-and-customer-contact/"><span class="k">&larr; Previous</span><span class="v">Live chat, forms and customer contact</span></a><a class="nx" href="../../06-conversion-optimization/19-testing-methodology-and-the-cro-cycle/"><span class="k">Next &rarr;</span><span class="v">Testing methodology and the CRO cycle</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

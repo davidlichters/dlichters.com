@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Blog and content page writing standards | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 14.13: Blog and content page writing standards.">
+<link rel="canonical" href="https://dlichters.com/aiecom/14-seo-and-content/13-blog-and-content-page-writing-standards/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Blog and content page writing standards | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 14.13: Blog and content page writing standards."><meta property="og:url" content="https://dlichters.com/aiecom/14-seo-and-content/13-blog-and-content-page-writing-standards/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">14. SEO and content</a> &rsaquo; <a href="../../../ecom/14-seo-and-content/13-blog-and-content-page-writing-standards/">Plain version</a></div><h1>14.13 Blog and content page writing standards</h1><article><h2 id="choosing-the-page-type-and-focus-keyword">Choosing the Page Type and Focus Keyword</h2>
+<ul>
+<li>Decide per content piece whether it becomes a page or a blog post. Use a page for evergreen tools and static resources, such as a height chart calculator. Use a blog post for evergreen guides and how-to articles, such as how long to stand at a standing desk or how to customize one. Blog or page makes little difference to rankings. [L1321.006]</li>
+<li>Select a focus keyword and identify the relevant search terms before writing. [L0311.002]</li>
+<li>Choose an informational topic rather than a product page when the keyword is informational, because a product page would not rank for it. Example: the keyword <em>lined vs unlined running shorts</em> was handled as an informational article. [L0883.018]</li>
+<li>Take the topic and target keyword from your keyword research worksheet and from popular threads on community sites in your niche. [L1321.029]</li>
+<li>Study a strong reference page for its structure (sections, headings, spacing, link placement) rather than copying its design. The structural elements matter, not custom graphics. (older, 2021-22) [L0462.040]</li>
+<li>There is no one-size-fits-all blog post. The best content depends on the market. A structure checklist defines how the page is built, not what it must say. (older, 2021-22) [L0462.025]</li>
+</ul>
+<h2 id="researching-the-top-results-before-writing">Researching the Top Results Before Writing</h2>
+<p><strong>Setup</strong></p>
+<ul>
+<li>Keyword research setup in Firecrawl: search engine Google, country US, analyze the top 10 organic results, and extract page copy and entities from each result. [L0883.013]</li>
+<li>Firecrawl MCP connected to Claude searches Google, scrapes the top-ranking pages, and returns their copy, headings and entities for Claude to use in the writing. Reddit may block direct scraping. In that case, search snippets and debate articles on the same topic can supply the pain points. [L0883.012]</li>
+<li>When generating page copy with a web research tool, have the model list the entities it extracted from the top 10 Google US results before it writes. Check that list first, then accept or remove topics, so the draft is built on terms you verified. [L0883.032]</li>
+<li>Always make the research step part of the prompt. Without an explicit instruction to research the top 10 results, the AI often skips the crawl and writes a generic article that blends all sources. [L0883.008]</li>
+</ul>
+<p><strong>Pattern analysis</strong></p>
+<ul>
+<li>Build a pattern analysis table from the top 10 results before writing. Record the median word count and the target range (median plus or minus 100 to 200 words) below the table. [L0883.017]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>URL</th>
+<th>Word count</th>
+<th>H2 count</th>
+<th>H3 count</th>
+<th>Bullet points</th>
+<th>Table</th>
+<th>FAQ</th>
+<th>Conclusion</th>
+<th>Main entities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>[URL]</td>
+<td>[number]</td>
+<td>[number]</td>
+<td>[number]</td>
+<td>yes/no</td>
+<td>yes/no</td>
+<td>yes/no</td>
+<td>yes/no</td>
+<td>[list]</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>10</td>
+<td>[URL]</td>
+<td>[number]</td>
+<td>[number]</td>
+<td>[number]</td>
+<td>yes/no</td>
+<td>yes/no</td>
+<td>yes/no</td>
+<td>yes/no</td>
+<td>[list]</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0883.017]</p>
+<ul>
+<li>Match the heading structure of the top 10: count H2s and H3s and note whether competitors use bullet points, tables, FAQs or a conclusion. If all competitors use bullets and you use H2 or H3 headings or a table where they do not, the page can lose ground. [L0883.009]</li>
+<li>Copy the structure of top results, not their text. Aim for the average of the top 10 on length and format, then add a small amount of unique material to pull ahead. [L0883.010]</li>
+<li>Entities are the related terms and topics that top-ranking pages for a keyword cover, such as features, use cases, activities and measurements. For men's running shorts they included liners, anti-chafing, sprinting, long distance, marathons and mileage. Work these into the copy naturally. [L0883.014]</li>
+</ul>
+<p><strong>Pain points and originality</strong></p>
+<ul>
+<li>Forums and Q&amp;A threads (Reddit, Quora, Facebook groups) are a source of real customer concerns and pain points only, never a format to imitate. Use the pain points as substance without mirroring the forum's style. [L0883.011]</li>
+<li>Put your own angle and research into the content. Rewriting a competitor's reviews with a few words changed counts as plagiarism and is not an acceptable way to compete. (older, 2020) [L0961.076]</li>
+<li>Blog and product content must be written in the store's own words and based on its own ideas, even when the topic overlaps with competitors. Guest posts from other writers are acceptable. A comparison article such as a top 10 list should use the store's own selection and copy. (older, 2019) [L1069.094]</li>
+</ul>
+<p><strong>Worked case: lined vs unlined running shorts</strong> [L0883.018]</p>
+<ul>
+<li>Keyword chosen as an informational topic, because a product page would not rank for it.</li>
+<li>Firecrawl pulled the top 10 Google US results. The top informational results ran about 1,200 to 1,800 words: one at about 1,800 words (9 min read), one at about 1,600 words (7 min read), and one at about 1,000 words.</li>
+<li>Median target set at about 1,500 words.</li>
+<li>Reddit blocked direct scraping, so pain points came from search snippets and a long forum-style debate article.</li>
+<li>Shared heading skeleton: short intro, what lined and unlined shorts are, a comparison table, when to choose each by activity, distance and climate, care and durability (competitors cited a liner lifespan of 6 to 12 months versus 2 to 3 years), an FAQ, and a conclusion with a soft call to action.</li>
+<li>Pain points used as substance:
+<ul>
+<li>Short runs favor lined shorts, while ultras of 50K and more favor unlined shorts with your own underwear.</li>
+<li>Liners exist mainly for support and anti-chafing.</li>
+<li>A brief liner edge can chafe.</li>
+<li>A seam in the wrong place can ruin a run for days.</li>
+<li>Changing in and out of lined shorts in public is a hassle.</li>
+<li>Some runners prefer their own boxer briefs to an unknown liner.</li>
+<li>Liners wick moisture and resist odor better than ordinary underwear.</li>
+<li>In winter, runners wear tights under unlined shorts.</li>
+<li>Lined shorts need washing every time and dry more slowly.</li>
+</ul></li>
+<li>One extra angle beyond the top 10 was added.</li>
+<li>The run took about two minutes and produced an article ready for editing.</li>
+</ul>
+<h2 id="length">Length</h2>
+<p><strong>Length by source</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Figure</th>
+<th>Applies when</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A (undated)</td>
+<td>Standard blog article 500 words; about 1,000 words for high-search-volume keywords</td>
+<td>Standard keywords: 500. High volume: about 1,000</td>
+<td>[L0380.013]</td>
+</tr>
+<tr>
+<td>Source A (undated)</td>
+<td>Blog posts at least 1000 words wherever possible</td>
+<td>Style guide baseline</td>
+<td>[L1467.006]</td>
+</tr>
+<tr>
+<td>Source A (undated)</td>
+<td>Articles of 1,000 to 2,000 words rank best. Shorter articles tend to rank poorly.</td>
+<td>The right length depends on the topic. A short article is acceptable when the subject can be fully covered in fewer words.</td>
+<td>[L0382.013]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>At least 1200 words; no upper limit</td>
+<td>Minimum for blog posts</td>
+<td>[L0311.014]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>1800 words or longer performs best in search</td>
+<td>Best-performing content</td>
+<td>[L0311.015]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>At least 1500 words</td>
+<td>Minimum for the checklist</td>
+<td>[L0462.001]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>300 or 500 word posts are almost always a waste of time; written content should generally exceed 1,500 words</td>
+<td>Search results increasingly favor deep content</td>
+<td>[L1461.003, L1461.004]</td>
+</tr>
+<tr>
+<td>Source E 2025-26</td>
+<td>Median of the top 10 results plus or minus 100 to 200 words</td>
+<td>Preferred method for each keyword</td>
+<td>[L0883.006]</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Working rules</strong></p>
+<ul>
+<li>Calculate the median word count of the top 10 ranking pages and aim for the median plus or minus about 100 to 200 words. Example: if the median is 1,700 words, write roughly 1,500 to 1,900 words. [L0883.006]</li>
+<li>Overshooting the median is a mistake. A 4,000-word article when the median is 1,700 merges every competitor's points into one long piece that does not match what ranks, so it will not rank. Undershooting is equally wasteful, so keep the length within the median range. [L0883.007]</li>
+<li>Blog posts are an excellent place to show depth, but the sources differ on the minimum. Apply the median method first. Use the Source B floors (1200 or 1500 words) and the Source A 1,000-word figure as checks, not as separate targets. [L0883.006, L0311.014, L0462.001, L1467.006]</li>
+<li>Top results average about 1,443 words on the page for the number one position. This is an average and a trend, not a fixed target. (older, 2021-22) [L1461.005, L1461.023]</li>
+<li>Pages ranking in positions 1 to 4 on Google had high word counts, and average length fell steadily for lower positions down to page ten. (older, 2021-22) [L1461.023]</li>
+<li>Length does not hurt a post, since readers scroll. What matters is that the structure is easy to scan. (older, 2021-22) [L0462.029]</li>
+<li>Long posts (for example around 5,000 words) are fine if they make the content the most complete on the topic. (older, 2021-22) [L1461.004]</li>
+<li>Avoid thin content and duplicate content. With 1200 or more words of original content, these are not typically concerns, and longer posts tend to be the most comprehensive resource for that search term. (older, 2021-22) [L0311.016]</li>
+<li>Social shares rose with article length. Articles of 3,000 to 10,000 words earned far more shares than those under 1,000 words, although short articles still received some shares. (older, 2021-22) [L1461.022]</li>
+<li>In an Ahrefs and Backlinko analysis, a higher content grade from ClearScope, an online content-quality scoring tool, correlated with higher Google rankings on both desktop and mobile. Check content against a grading tool to see whether its quality is likely to rank. (older, 2021-22) [L1461.025]</li>
+<li>Ranking signals depend primarily on content quality, depth and inbound links, but on-page optimization is still necessary to maximize results. (older, 2021-22) [L0311.001]</li>
+<li>Also "a blog post is any page with more than 500 words of content." (older, 2021-22) [L0311.001]</li>
+</ul>
+<p><strong>Length follows the purchase</strong></p>
+<ul>
+<li>For considered, expensive purchases, a long and detailed explanation sells better than short copy, because buyers want the facts before deciding. Readers who take the time to read long copy are already interested. [L1261.131]</li>
+<li>Short copy works only for simple, low-cost purchases. For complex products, length should cover every important claim. The rule is to make the story reasonably complete, whatever its length. [L1261.132]</li>
+</ul>
+<h2 id="outline-and-structure">Outline and Structure</h2>
+<p><strong>Prompts for the outline</strong></p>
+<p>Prompt for the outline [L0178.005]:</p>
+<pre><code>Develop a structured outline organizing the main topics and sections for a blog post about [Blog Post Name].</code></pre>
+<p>Prompt for a standing desk outline [L1321.010]:</p>
+<pre><code>Prepare an outline for a blog post on tailoring your standing desk. Provide a proposed headline, a short introduction, and the primary sections in their proper sequence. For each section, supply bullet points that a writer can develop using their own phrasing. Leave out the complete article text.</code></pre>
+<p>Prompt for subsection strategies [L1321.011]:</p>
+<pre><code>Please list strategies for [subtopic from the outline]. Give short bullet points that can be used as subsection headings in the blog post.</code></pre>
+<p><strong>Outline procedure with ChatGPT</strong> [L1321.009]</p>
+<ol type="1">
+<li>Put the exact target keyword into the outline request, for example <em>customize your standing desk</em>.</li>
+<li>Send the prompt and review the proposed title, introduction and main sections.</li>
+<li>Check that each section comes with bullet points that can be expanded into paragraphs.</li>
+<li>For a bullet that needs more depth, send a follow-up request for a list of ideas on that subtopic. One bullet can yield around 14 ideas.</li>
+<li>Use the ideas as input only and write the final text yourself, in the Shopify blog editor or in a document editor.</li>
+</ol>
+<p><strong>Research and outline sequence</strong> [L0972.077]</p>
+<ol type="1">
+<li>Ask ChatGPT for an outline of what the post should include.</li>
+<li>For each subsection, search Google for other content covering the same topic.</li>
+<li>Collect statistics and data from those sources, and cite the source where it fits.</li>
+<li>Write your own version of each subsection in your own words, rather than copying any single article.</li>
+</ol>
+<p><strong>Topical authority sequence</strong> [L0971.096]</p>
+<ol type="1">
+<li>Use AI to build a topical authority map for the niche.</li>
+<li>Use AI to brainstorm topic ideas from that map.</li>
+<li>Use AI to create an outline for each piece of content.</li>
+<li>Have a human write the actual article based on the outline.</li>
+<li>Customize the text before publishing it.</li>
+</ol>
+<p><strong>Structure rules</strong></p>
+<ul>
+<li>After the headline, add a short overview of what the reader will learn. This keeps attention on a long post before the detailed sections begin. (older, 2021-22) [L0462.027]</li>
+<li>Split the body at logical points: in a how-to, each step becomes a sub-headline, and in a list, each item becomes one. Many readers scan a post for the section that matters to them. (older, 2021-22) [L0462.008]</li>
+<li>The best structure is the one the market rewards. Use the checklist and the top-10 pattern analysis to decide the skeleton. [L0462.025, L0883.017]</li>
+</ul>
+<p><strong>Example: how-to guide page</strong> [L1099.022]</p>
+<p>A how-to guide page that works well shows a clear headline, a date and a short intro of two paragraphs that states what the reader will learn, all above the fold on desktop and mobile. The hero photo is kept small or omitted, because a photo of generic subject matter tells the reader nothing about the content. The body text sits in a narrow reading column even on a wide screen. The steps move from a numbered list to bullets and then to subheadings for each section. [L1099.022]</p>
+<h2 id="headings">Headings</h2>
+<p><strong>Heading levels</strong></p>
+<ul>
+<li>Use exactly one H1 per page, and make it the headline of the blog post. (older, 2021-22) [L0462.002]</li>
+<li>Use H1 only once per piece of content, for the title. Use H2 tags for secondary headings that separate sections, as many as needed. [L1467.008]</li>
+<li>H1 tags contain the main heading of a page. H2 tags organize subcategories or subtopics within H1. H3 tags further subdivide topics within H2 sections. [L0278.009]</li>
+<li>Use H2 tags for all headings after the post title, not H1. (older, 2021-22) [L0311.009]</li>
+<li>Use H2 tags for the main sub-headlines of the body and H3 tags for sub-headlines nested under an H2. Never leave the body as one large block of text. (older, 2021-22) [L0462.007]</li>
+<li>Use H3 tags only as subheadings inside a section marked by an H2. H4, H5 and lower heading levels should not be needed. [L1467.009]</li>
+</ul>
+<p><strong>Single H2 group (conflict with many H2s)</strong></p>
+<ul>
+<li>Use a single H2 subheading group per page to break content into chunks, since subheadings help SEO. Only at least one H2 needs the focus keyword. [L0881.017]</li>
+<li>Many H2 subheadings are also recommended to chunk long text. Read L0881.017 as one H2 set for the body, and use many H2s for chunking as in the rule below. (older, 2021-22) [L1099.008]</li>
+</ul>
+<p><strong>Shopify heading setup</strong> (older, 2022) [L0429.032]</p>
+<ul>
+<li>Shopify product pages automatically wrap the product name in H1, so no changes are needed for product pages.</li>
+<li>For content pages, select the main title in the WYSIWYG editor and choose H1 from the text dropdown (options: body text, H1, H2, H3, H4). Then use H2 to H4 for subheadings.</li>
+</ul>
+<p><strong>Heading content</strong></p>
+<ul>
+<li>Put keyword variations, synonyms and related search terms from keyword research into sub-headlines. (older, 2021-22) [L0462.009]</li>
+<li>Use synonyms and related keywords in other H2 headings to avoid repetition of the exact focus keyword in every heading. (older, 2021-22) [L0311.010]</li>
+<li>Format some H2 headings as questions to capture question-and-answer featured snippets. (older, 2021-22) [L0311.009]</li>
+<li>Do not place the primary keyword in every sub-headline. Stuffing it into every sub-headline looks unnatural and is seen as overuse. (older, 2021-22) [L0462.009, L0462.031]</li>
+<li>Include the focus keyword in at least one H2 heading. (older, 2021-22) [L0311.009]</li>
+<li>AI output can add headings you did not ask for, such as a fourth H3 under a three-H3 structure. Check each output's heading count against your template and remove or merge extra headings before publishing. [L0883.022]</li>
+</ul>
+<h2 id="title-headline-and-url">Title, Headline and URL</h2>
+<p><strong>Title rules</strong></p>
+<ul>
+<li>Use the post title as an H1 heading and place the focus keyword at the front of the title. (older, 2021-22) [L0311.003]</li>
+<li>The H1 should state clearly what the content covers or what the reader will learn, and include the primary keyword if possible. (older, 2021-22) [L0462.002]</li>
+<li>Avoid hype, power words, over-the-top claims and click-bait headlines. Platforms such as Google and Facebook have anti-click-bait policies, and a headline that promises more than the article delivers works against the page. (older, 2021-22) [L0462.003]</li>
+<li>Include the publication year or an update reference in the title (for example <em>2020 update</em> or <em>updated for 2020</em>), because Google prioritizes fresh content and this signals recency. (older, 2021-22) [L0311.004]</li>
+<li>Append the word updated to the title only after the post has been genuinely revised, and do this at least once a year. (older, 2021-22) [L0658.017]</li>
+</ul>
+<p><strong>Title conflict:</strong> L0311.004 asks for a year or update reference in every title. L0658.017 allows the word updated only after a real revision. Use the year on new posts. Add updated only after a genuine revision.</p>
+<p><strong>Guide headline formula</strong> [L0462.004]</p>
+<ul>
+<li>Formula: [primary keyword] + [content type such as Guide, Checklist or How-to] + optional [reader qualifier such as who it is for], with no filler words.</li>
+<li>Examples: <em>Complete Guide to Standing Desks</em> and <em>Standing Desk Checklist for Small Offices</em>.</li>
+<li>It works because the reader sees the topic, the format and the target audience at once and can judge fit immediately. (older, 2021-22)</li>
+</ul>
+<p><strong>URL</strong></p>
+<ul>
+<li>Create the post URL to include the focus keyword and keep it short. (older, 2021-22) [L0311.020]</li>
+<li>Set the URL handle to the target keyword in lowercase with hyphens. [L1321.029]</li>
+<li>Check the URL and handle, title and description fields before saving. [L1321.014]</li>
+</ul>
+<h2 id="keyword-placement">Keyword Placement</h2>
+<ul>
+<li>The focus keyword must appear within the first 100 words of body text. (older, 2021-22) [L0311.011]</li>
+<li>Stuffing the primary keyword into every sub-headline looks unnatural and is seen as overuse. Use related terms and variations instead. (older, 2021-22) [L0462.031]</li>
+<li>Work the entities from the research step into the copy where they fit, so the page covers the terms top results cover. [L0883.014, L0883.016]</li>
+</ul>
+<h2 id="paragraphs-font-and-readability">Paragraphs, Font and Readability</h2>
+<p><strong>Paragraph length (sources differ)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Rule</th>
+<th>Applies when</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>Use short sentences and short paragraphs</td>
+<td>General readability</td>
+<td>[L0311.013]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>Maximum of four lines, shorter where possible</td>
+<td>Checklist limit</td>
+<td>[L0462.016]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>Short paragraphs of two to three lines</td>
+<td>Content areas and readability</td>
+<td>[L1099.008]</td>
+</tr>
+<tr>
+<td>Source A (undated)</td>
+<td>About 3 lines, never more than 4</td>
+<td>Style guide</td>
+<td>[L1467.007]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Use a short sentence and paragraph structure throughout, with paragraphs of about 3 lines and never more than 4. [L0311.013, L1099.008, L1467.007]</li>
+<li>Avoid dense blocks of text. Dense blocks make reading and comprehension harder. (older, 2021-22) [L0462.016, L0462.030]</li>
+</ul>
+<p><strong>Font size</strong></p>
+<ul>
+<li>Set primary body text to a font size of 18 point. (older, 2021-22) [L0311.012]</li>
+<li>Use a minimum font size of 18 pt for body text, because smaller text becomes hard to read, especially on mobile devices. (older, 2021-22) [L0462.017]</li>
+<li>Set body text to font size 18 so the page has more white space and is easier to read. (older, 2021-22) [L1099.008]</li>
+<li>Small text makes readers give up. The same problem appears on mobile when the font is smaller than 18 pt. (older, 2021-22) [L0462.030]</li>
+</ul>
+<p><strong>White space and column width</strong></p>
+<ul>
+<li>White space around text helps the eye process a page. Generous line spacing is part of the same readability rule. (older, 2021-22) [L0462.018]</li>
+<li>Narrow long text blocks with a CSS max-width so paragraphs do not span a full wide desktop screen. Narrower columns are easier to read because the eyes travel less. (older, 2021-22) [L1099.010]</li>
+</ul>
+<h2 id="lists">Lists</h2>
+<ul>
+<li>Use bulleted lists and numbered lists in the post content. Google favors these formats and they improve user engagement. (older, 2021-22) [L0311.017]</li>
+<li>Use bulleted or numbered lists wherever you make a series of short points. Google often pulls numbered lists and bullet points into featured snippets on the results page. (older, 2021-22) [L0462.019]</li>
+<li>Use plenty of bullet points, numbered lists, images and videos in content areas. Embedded videos in content keep visitors on the page longer and help dwell time. (older, 2021-22) [L1099.009]</li>
+</ul>
+<h2 id="images">Images</h2>
+<p><strong>Image frequency (sources differ)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Rule</th>
+<th>Applies when</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>Insert images or video approximately every 300 words. Do not let difficulty sourcing images prevent publication.</td>
+<td>Default for long posts</td>
+<td>[L0311.018]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>At least one image every 500 words (five in a 1,500-word post). Many publishers prefer one every 300 words. No maximum.</td>
+<td>Minimum floor</td>
+<td>[L0462.005]</td>
+</tr>
+<tr>
+<td>Source B (older, 2021-22)</td>
+<td>An image every 100 words is acceptable. A listicle can place one image per list item followed by a short text block.</td>
+<td>Listicles and image-heavy content</td>
+<td>[L0462.006]</td>
+</tr>
+<tr>
+<td>Source A (undated)</td>
+<td>Blog posts start with a main image where possible, followed by at least one image in every section marked by an H2</td>
+<td>Style guide baseline</td>
+<td>[L1467.010]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Images break up long text, keep readers on the page, and help visual learners understand the content faster. (older, 2021-22) [L0462.006]</li>
+</ul>
+<p><strong>Image production and style</strong></p>
+<ul>
+<li>Blog images should share one size and style so the blog looks consistent. Keep a fixed image set in Canva and add new photos from it each time a blog post is written. [L0342.028]</li>
+<li>Blog header formula: a short headline that names the reader's decision or problem, a one-line benefit subline in smaller text, and a background photo that matches the topic. Examples: <em>Pick Your Perfect Tent</em> with <em>Find the right size for your group and season</em> over a campsite photo, and <em>Choose the Right Running Shoe</em> with <em>Get support that fits your stride</em> over a trail photo. [L0342.029]</li>
+<li>Use unique images whenever possible. Infographics created by freelancers add significant value to blog posts. (older, 2021-22) [L0311.019]</li>
+<li>Images that you personally edit, retouch or modify count as unique assets, even if based on stock photos or other sources. Self-edited images are as valuable as original photography for visual variety. (older, 2021-22) [L0311.030]</li>
+<li>Use a royalty-free image or an AI-generated image for the header. [L1321.014]</li>
+<li>On content pages, a large hero image is less important than a clear headline and introductory copy. (older, 2021-22) [L1099.004]</li>
+</ul>
+<p><strong>Image technical rules</strong></p>
+<ul>
+<li>Compress all images to minimize file size. All images require unique file names and alt text. Place the focus keyword in the file name and alt tag of the first image. (older, 2021-22) [L0311.008]</li>
+<li>Compress existing images in Smart SEO: open Image optimization, click Configure, and optimize the images in the Files and Articles sections. [L1321.029]</li>
+</ul>
+<h2 id="links">Links</h2>
+<p><strong>Internal links</strong></p>
+<ul>
+<li>Blog posts are excellent opportunities for internal linking because of their length. Include internal links to collection pages, product pages and other content pages wherever relevant. This helps Google crawl and understand the site structure and is beneficial for users. (older, 2021-22) [L0311.025]</li>
+<li>Aim for approximately one internal link per 300-word section. For each 300-word segment, include at least one relevant internal link to a product page, collection page or other content page. (older, 2021-22) [L0311.028]</li>
+<li>Add internal links wherever they are relevant, with no fixed number. Link a product type to its collection page, a specific product to its product page, and a topic covered in another post to that post. Cornerstone content follows different linking rules than standard posts. (older, 2021-22) [L0462.013]</li>
+<li>Use the one-per-300-words rule as a working guide and the no-fixed-number rule as the principle. Cornerstone content is excepted. [L0311.028, L0462.013, L0462.023]</li>
+</ul>
+<p><strong>Outbound links (sources differ)</strong></p>
+<ul>
+<li>For a 1200-word blog post, up to 3 outbound links is appropriate. (older, 2021-22) [L0311.026]</li>
+<li>For a 1500-word post, include at least three external links to high-quality sources that extend the topic, including resources you drew inspiration from. (older, 2021-22) [L0462.010]</li>
+<li>The two rules agree at three links, but L0311.026 sets a ceiling and L0462.010 sets a floor. Use three as the working number for a 1,200 to 1,500-word post.</li>
+<li>Always check the domain authority of the target site. Linking to higher-authority sites is acceptable. Common uses for outbound links include crediting image sources, citing statistics and referencing videos. (older, 2021-22) [L0311.026]</li>
+<li>Link out to other reputable sources in articles. It looks natural and shows search engines that the content is part of the wider web. An article without any external links can look suspicious. [L0382.028]</li>
+<li>External links give little direct link value, but linking to credible sources is a minor ranking factor that Google rewards. Sending readers to another site adds value for them. (older, 2021-22) [L0462.011]</li>
+</ul>
+<p><strong>Link behavior</strong></p>
+<ul>
+<li>Configure external links to open in a new window or tab. This keeps the reader's place on your site and their time on site. (older, 2021-22) [L0311.029, L0462.012]</li>
+</ul>
+<h2 id="above-the-fold-and-layout">Above the Fold and Layout</h2>
+<ul>
+<li>Place the most important information above the fold, especially on mobile. On product pages this means the product image and product title. On blog posts it means the headline, possibly an image, and roughly the first paragraph of text. (older, 2021-22) [L1099.003]</li>
+<li>On mobile screens, ensure the post title, featured image and opening paragraphs appear above the fold. Avoid large images at the top that push text down. Consider placing explanatory text first, followed by visuals, so readers immediately understand the topic. (older, 2021-22) [L0311.006]</li>
+<li>Oversized images at the top that push text down should be avoided because they do not explain what the reader will learn. (older, 2021-22) [L1099.004]</li>
+<li>Add user interaction points where possible: comment sections on blog posts, Q&amp;A sections on product pages and review widgets, especially with video or image reviews. These add content and social proof that keep visitors on the page longer. (older, 2021-22) [L1099.012]</li>
+</ul>
+<h2 id="tables-of-contents-and-long-post-navigation">Tables of Contents and Long-Post Navigation</h2>
+<p><strong>Threshold (sources differ)</strong></p>
+<ul>
+<li>For posts of about 3,000 words or more, add anchor links at the top so readers can jump to each section. For a 1,500-word post this navigation is not necessary. (older, 2021-22) [L0462.028]</li>
+<li>Long blog posts (for example around 5,000 words) should get a clickable table of contents at the top that links each heading to its position on the page. A 1,500-word post does not need one. (older, 2021-22) [L1099.013]</li>
+<li>Both sources agree that a 1,500-word post needs no table of contents. The threshold is about 3,000 words in L0462.028 and about 5,000 words in L1099.013. Use the table at about 3,000 words or more, and at least from 5,000 words.</li>
+</ul>
+<p><strong>Build method</strong> (older, 2021-22) [L0462.041]</p>
+<ul>
+<li>On a long post of about 3,000 words or more, add a chapter list at the top where each entry links to a heading on the same page.</li>
+<li>Each heading gets an anchor id, and the link takes the form page-URL#heading-id, so a click scrolls straight to that section.</li>
+<li>On a 1,500-word post this navigation is not needed.</li>
+</ul>
+<h2 id="comments-interaction-and-calls-to-action">Comments, Interaction and Calls to Action</h2>
+<ul>
+<li>Enable an active comment section on the blog post. Encourage comments by posing a question or inviting reader thoughts. Reply to every comment, even briefly, to demonstrate that the business is real and cares about engagement. (older, 2021-22) [L0311.023]</li>
+<li>Allow comments on blog posts, but moderate them to block spam and abusive posts. Visible replies from the business show responsiveness and build trust and social proof. Comments do not harm rankings. (older, 2021-22) [L0462.020]</li>
+<li>Turning off comments on blog posts misses a chance to show responsiveness and build trust. Enable comments with moderation instead of disabling them. (older, 2021-22) [L0462.032]</li>
+<li>End the blog post with a call to action using phrases such as <em>read more</em> or <em>learn more</em>. (older, 2021-22) [L0311.022]</li>
+<li>Offer readers an opportunity to join the audience, such as an email subscription. (older, 2021-22) [L0462.023]</li>
+<li>Use inline opt-in forms or static opt-in forms to capture leads or distribute lead magnets. Do not use pop-ups or interstitials that load within the first 30 seconds of a page visit, because pop-ups are disliked by both users and Google. (older, 2021-22) [L0311.024]</li>
+<li>A conclusion with a soft call to action fits the standard skeleton for informational articles. [L0883.018]</li>
+</ul>
+<h2 id="blog-post-checklist">Blog Post Checklist</h2>
+<p>Blog post checklist, in this order [L0462.023]:</p>
+<ol type="1">
+<li>Write 1500 or more words. [L0462.023, L0462.001]</li>
+<li>Write an engaging H1 headline that clearly explains the content and includes the primary keyword if possible, without hype. [L0462.023, L0462.002, L0462.003]</li>
+<li>Add images at a ratio of at least 1 image per 500 words. [L0462.023, L0462.005]</li>
+<li>Add plenty of sub-headlines, with H2 for main sections and H3 for sub-sections. [L0462.023, L0462.007]</li>
+<li>Include at least 3 external links. [L0462.023, L0462.010]</li>
+<li>Add internal links where relevant (cornerstone content is excepted). [L0462.023, L0462.013]</li>
+<li>Keep paragraphs to no more than 4 lines. [L0462.023, L0462.016]</li>
+<li>Use a minimum font size of 18. [L0462.023, L0462.017]</li>
+<li>Use bulleted or numbered lists wherever you make a series of short points. [L0462.023, L0462.019]</li>
+<li>Allow moderated comments. [L0462.023, L0462.020]</li>
+<li>Offer readers an opportunity to join the audience, such as an email subscription. [L0462.023]</li>
+<li>Run through the whole list again before publishing and before promoting the post. It takes only a few minutes. [L0462.023]</li>
+</ol>
+<ul>
+<li>Give the blog post checklist to freelance writers and content producers so they get the structure right from the start. This reduces the guidance you need to give on each piece. (older, 2021-22) [L0462.024]</li>
+</ul>
+<h2 id="meta-title-and-meta-description">Meta Title and Meta Description</h2>
+<ul>
+<li>The meta title must be unique and include the focus keyword. The meta description must be unique. (older, 2021-22) [L0311.021]</li>
+<li>Prompt for the meta description [L0178.006]:</li>
+</ul>
+<pre><code>Compose a meta description that summarizes the [Blog Post Name] blog post for search engine display.</code></pre>
+<ul>
+<li>In Smart SEO, generate meta titles and descriptions, compare them with your own, keep the stronger version and save. [L1321.029]</li>
+</ul>
+<h2 id="keeping-posts-live-and-updating-them">Keeping Posts Live and Updating Them</h2>
+<ul>
+<li>Keep every blog post live rather than rotating them, because rotation hides pages from search results and loses traffic. Display the top three posts on the homepage and list the rest in the blog section. (older, 2020) [L0468.129]</li>
+<li>Publish at a starting pace of one piece per month, later move to one every two weeks, and then focus on improving the pages and posts that already perform well. [L1321.029]</li>
+</ul>
+<h2 id="publishing-in-shopify">Publishing in Shopify</h2>
+<p><strong>Built-in engine and location</strong></p>
+<ul>
+<li>Shopify accounts come with a built-in blogging engine. Publishing blog posts with valuable content generates organic traffic from Google and Bing. [L0310.001, L0311.001]</li>
+<li>Create a blog post in Shopify: Online store &gt; Blog posts &gt; Add blog post. For a page, use Online store &gt; Pages and the same process applies. [L1321.013]</li>
+</ul>
+<p><strong>Publishing procedure</strong> [L1321.014]</p>
+<ol type="1">
+<li>Go to Online store &gt; Blog posts &gt; Add blog post (or Online store &gt; Pages for a page).</li>
+<li>Enter the title. An AI-suggested title can be pasted here if it fits.</li>
+<li>Write the body in the editor based on the outline, either directly in the Shopify editor or in a document editor such as Microsoft Word or Google Docs, then paste the finished version into the post.</li>
+<li>Add an image using a royalty-free image or an AI-generated image.</li>
+<li>Scroll to the search engine listing preview section at the bottom of the editor.</li>
+<li>Check the URL and handle, title and description fields (see the URL and handle steps).</li>
+<li>Save the post.</li>
+</ol>
+<p><strong>Test content</strong></p>
+<ul>
+<li>Do not publish test or unedited content to a live store. Leave such posts unpublished, where they stay hidden from visitors. [L1321.015]</li>
+</ul>
+<p><strong>Full on-page SEO sequence for a Shopify page or blog post</strong> [L1321.029]</p>
+<ol type="1">
+<li>Compress existing images in Smart SEO: open Image optimization, click Configure, and optimize the images in the Files and Articles sections.</li>
+<li>Decide whether the content is a page (evergreen tool or calculator) or a blog post (evergreen guide or how-to).</li>
+<li>Take the topic and target keyword from your keyword research worksheet and from popular threads on community sites in your niche.</li>
+<li>Ask a free AI chat tool for an outline with bullet points, expand the bullets with ideas as needed, and write the final text yourself in the Shopify editor or a document editor.</li>
+<li>Add a royalty-free or AI-generated image.</li>
+<li>Save the post, then set the URL handle to the target keyword in lowercase with hyphens, set the page title, and delete the description Shopify pulls automatically.</li>
+<li>Generate a meta description with an AI tool, check it against the actual content, paste it into the search engine listing, and save.</li>
+<li>In Smart SEO, confirm that JSON-LD is enabled and valid for blogs and articles.</li>
+<li>Generate meta titles and descriptions in Smart SEO, compare them with your own, keep the stronger version, and save.</li>
+<li>Publish at a starting pace of one piece per month, later move to one every two weeks, and then focus on improving the pages and posts that already perform well.</li>
+</ol>
+<p><strong>Quality first</strong></p>
+<ul>
+<li>Quality content is the base of every page or blog post. Once the content is good, technical steps such as optimized images, a keyword URL, a clear title, a meta description and JSON-LD give an extra edge over competitors. [L1321.025]</li>
+</ul>
+<h2 id="style-guide">Style Guide</h2>
+<ul>
+<li>The website style guide applies to every piece of content produced or edited for the site, including product descriptions, policy pages, images and blog posts. Anyone working on site content must follow it, not only the designers. [L1467.005]</li>
+<li>Write AI copy in active voice, without em dashes and without filler. Keep a blacklist of words typical of AI writing, remove them from every output, and apply a written style guide where one exists. [L0883.019]</li>
+<li>Blog posts should be at least 1000 words wherever possible. [L1467.006]</li>
+<li>Paragraphs should be about 3 lines long and never more than 4 lines, to improve readability. [L1467.007]</li>
+<li>Use the H1 tag only once per piece of content, for the title. Use H2 tags for secondary headings that separate sections, as many as needed. [L1467.008]</li>
+<li>Use H3 tags only as subheadings inside a section marked by an H2. H4, H5 and lower heading levels should not be needed. [L1467.009]</li>
+<li>Blog posts should start with a main image where possible, followed by at least one image in every section marked by an H2 tag. [L1467.010]</li>
+</ul>
+<h2 id="using-ai-and-its-limits">Using AI and Its Limits</h2>
+<p><strong>Role of AI</strong></p>
+<ul>
+<li>Use AI for content outlines and assistance, not copy-paste. Take AI-generated text, refine it with human writing to make it unique. Bulk AI-generated articles no longer rank. Quality weekly content beats 1,000 AI articles. (2023) [L0274.037]</li>
+<li>Do not publish AI-generated text unedited. Search engines may recognize fully AI-written content and rank it lower, so a human should review, rewrite and enrich AI output before publishing. The same editing applies to AI-written product and collection descriptions. [L1321.012]</li>
+<li>AI-generated content carries long-term uncertainty, since search engines may change how they handle it. Using AI drafts as a starting point and rewriting them by hand keeps the content more reliable. (2023) [L0970.128]</li>
+<li>AI tools can create a first draft of a buyer's guide, but all numbers, data and statistics must be double-checked because AI can be wrong. (2023) [L0855.153]</li>
+<li>AI copy is only as accurate as the brand data you give it. Supply the full product catalog with sizes, materials and claims. Without it, the model invents specifications that do not exist. Use placeholders for any fact you have not supplied. [L0883.020]</li>
+</ul>
+<p><strong>Prompt for a full research-based article</strong> [L0883.016]</p>
+<pre><code>You are an ecommerce SEO content writer. Write a blog article for the target keyword [TARGET KEYWORD], pattern-matched to the search results.
+
+Step 1: Search Google US for the target keyword with the Firecrawl MCP and analyze the top 10 ranking results. For each result, record word count, H2 count, H3 count, use of bullet points, tables, FAQ section and conclusion, and the main entities covered.
+
+Step 2: Calculate the median word count of the 10 results. Set the target length to the median plus or minus 100 to 200 words, and state the target length before writing.
+
+Step 3: Match the common heading skeleton and format elements of the top results, but do not copy any text and do not imitate forum formatting.
+
+Step 4: From forum and Q&amp;A results (Reddit, Quora, Facebook groups, debate articles), collect real customer concerns and pain points. Use them as substance only.
+
+Step 5: Write the article in active voice, without em dashes and without unnecessary fluff, avoiding these words: [BLACKLIST OF AI-TYPICAL WORDS]. Work in the entities from Step 1 where they fit. Include [NUMBER] internal links to these URLs: [LIST OF COLLECTION AND BLOG URLS]. Add one unique angle that none of the top 10 results covers, and label it.
+
+Facts: use only facts from [PASTE BRAND AND PRODUCT FACTS]. Write [PLACEHOLDER: missing fact] where a fact is missing.
+
+Output: first the pattern analysis table from Step 1 with the median and target length, then the article, then a list of the pain points used and the unique angle added.</code></pre>
+<p><strong>Prompt for competitor style matching</strong> [L0972.078]</p>
+<pre><code>I&#39;m attaching a blog post I recently wrote for my store at [store URL]. I looked at my competitors, including [competitor link 1], [competitor link 2] and [competitor link 3]. This is a rough draft, and I like their writing style better. Please modify and improve the attached draft so it matches the style of those competitors, while keeping all of my facts, product details and the structure of the post.</code></pre>
+<ul>
+<li>Use the competitor style prompt only with your own facts. Check the output against the research and the style guide before publishing. [L0972.078, L0883.019]</li>
+</ul>
+</article><nav class="pn"><a href="../../14-seo-and-content/12-image-seo-visual-search-and-compression/"><span class="k">&larr; Previous</span><span class="v">Image SEO, visual search and compression</span></a><a class="nx" href="../../14-seo-and-content/14-content-strategy-formats-and-planning/"><span class="k">Next &rarr;</span><span class="v">Content strategy, formats and planning</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Orders, automation, fraud and operations | Ecommerce Playbook</title>
+<meta name="description" content="- Automate a task only after you have done it by hand for a few days to a few weeks. You must understand each step first. - Zapier is the easiest tool to start with. Its Premium plan costs $20 per month. - Zapier can send a Slack alert within 5 ...">
+<link rel="canonical" href="https://dlichters.com/ecom/05-apps-and-tools/19-orders-automation-fraud-and-operations/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Orders, automation, fraud and operations | Ecommerce Playbook"><meta property="og:description" content="- Automate a task only after you have done it by hand for a few days to a few weeks. You must understand each step first. - Zapier is the easiest tool to start with. Its Premium plan costs $20 per month. - Zapier can send a Slack alert within 5 ..."><meta property="og:url" content="https://dlichters.com/ecom/05-apps-and-tools/19-orders-automation-fraud-and-operations/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../05-apps-and-tools/">5. Apps and tools</a></div><h1>Orders, automation, fraud and operations</h1><p class="meta">Section 5.19 &middot; 19 of 22 in this chapter &middot; 29 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Automate a task only after you have done it by hand for a few days to a few weeks. You must understand each step first.</li>
+<li>Zapier is the easiest tool to start with. Its Premium plan costs <strong>$20 per month</strong>.</li>
+<li>Zapier can send a Slack alert <strong>within 5 minutes</strong> after a customer leaves a cart unpaid.</li>
+<li>Use <strong>"Authorize only"</strong> so you check stock before you charge the customer.</li>
+<li>A tracking app like AfterShip sends delivery emails to customers automatically.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>The free AfterShip plan covers 50 shipments a month. Above that, the paid plan costs about one dollar a month.</li>
+<li>Use a checked, trusted app for tracking pages. Random tracking code from the internet slowed one store.</li>
+<li>A fraud flag is a warning, not proof. Check the reasons before you cancel an order.</li>
+<li>Send blog posts only to Facebook and LinkedIn. Wait 5 minutes before posting, and 3 minutes between Facebook pages.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 59 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="automation-principles-and-sequencing"><summary><h2>Automation principles and sequencing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Automate only after</strong> you have processed orders by hand for a few days to a few weeks. Automation means a tool runs a task for you by set rules. Know each step first. Automating steps you do not yet understand gives the wrong logic.</li>
+<li><strong>Use Zapier</strong> for simple automated flows. Zapier is a website that links apps so they pass information to each other. Hand tasks that are too complex to automate, such as detailed product uploads, to virtual assistants (VAs, remote helpers). Use human assistants for multi-step tasks.</li>
+<li>Automation can <strong>recover abandoned sales</strong> through follow-up and retargeting. An abandoned sale is a customer who left before paying. Follow-up means contacting them again. Retargeting means showing ads again to people who left.</li>
+<li>Automation can also monitor order status, trigger customer reviews, distribute content to social channels, instantly complete repetitive tasks, maintain customer records, transcribe media files <span class="ex">(turn audio and video into text)</span>, and generate new content.</li>
+<li>In practice, automation can <strong>recover abandoned carts</strong> (online shopping baskets left unpaid), track all order statuses, automatically request and collect product reviews, post new content to social media without manual work, and execute any repetitive business task in seconds without additional instruction.</li>
+<li><strong>Zapier</strong> is the central automation engine. It connects Shopify <span class="ex">(your online store platform)</span>, Facebook, LinkedIn, Google Sheets <span class="ex">(an online spreadsheet)</span>, Trello <span class="ex">(a visual task board)</span> and Slack <span class="ex">(team chat)</span>. It manages orders, communications, content distribution and customer tracking without manual intervention.</li>
+<li>Zapier connects apps and automates steps. One example used it to send new orders to Trello and to send automatic emails based on quiz results on the website. It looks intimidating at first but <strong>can be learned</strong>.</li>
+<li><strong>Shopify</strong> is the core platform of a dropshipping store <span class="ex">(a store where a supplier ships products to customers for you)</span>. All automations connect to it. Its data <span class="ex">(orders, customers, products)</span> is the starting point for most automation work.</li>
+</ul>
+</details><details class="part" id="platforms-costs-and-choice-of-tool"><summary><h2>Platforms, costs and choice of tool</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="shopify-flow"><summary><h2>Shopify Flow</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify Flow is a <strong>free app</strong>. It makes building and editing automations simpler than the older Messaging app screens. Install it via <strong>Marketing &gt; Automations &gt; Install</strong>.</li>
+</ul>
+</details><details class="part" id="zapier-basics"><summary><h2>Zapier basics</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier <span class="ex">(zapier.com)</span> connects applications with automated workflows called "Zaps".</li>
+<li>A <strong>Zap</strong> is one automation. Each Zap has one trigger <span class="ex">(the event that starts it)</span> and one or more actions <span class="ex">(steps it performs)</span>.</li>
+<li>Zapier has hundreds of ready-made connections, called integrations. <strong>Connect each platform once</strong>, for example by entering your Shopify subdomain <span class="ex">(the first part of your store's web address)</span>. The connection stays active for all future Zaps that use that platform.</li>
+<li>Each platform needs <strong>one login</strong>, called authentication <span class="ex">(giving Zapier permission to use the app)</span>. After that, the connection is maintained permanently.</li>
+<li>Zapier's screens and terms change over time. <strong>Check each step</strong> against the current Zapier and Shopify screens before following older setup instructions. <em>Older (2022).</em></li>
+<li>Zapier's Premium plan costs <strong>$20 per month</strong>.</li>
+<li>The free plan does <strong>not</strong> include the Shopify integration. The plan that includes it costs <strong>$20 per month</strong>. It is the only paid tool in this basic automation stack.</li>
+<li>The 2023 comparison cites Zapier at <strong>$50 per month</strong>. Use $50 as the 2023 price point for that comparison. Use the $20 Premium figure for the plan with the Shopify integration.</li>
+<li>Check the current price <strong>before budgeting</strong>, because the sources differ.</li>
+<li>The 2023 comparison table also lists IntegralMat at <strong>$19.99 per month</strong> and IFTTT <span class="ex">(another connection tool)</span> as alternatives. Both provide similar capabilities: connecting applications, automating email, data transfers and notifications.</li>
+<li><strong>Compare pricing</strong> and the specific integrations you need before choosing.</li>
+<li>One comparison describes Zapier's cost as "<strong>a couple dollars per automation per month</strong>".</li>
+</ul>
+</details><details class="part" id="zapier-gmail-triggers-and-slack-actions"><summary><h2>Zapier Gmail triggers and Slack actions</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier offers four Gmail-based triggers. Gmail is Google's email service. Polling means Zapier checks on a timer for new items.
+<ul>
+<li><strong>New Email &amp; Polling:</strong> activates when messages arrive in your specified mailbox.</li>
+<li><strong>New Email Matching Search Polling:</strong> restricts triggering to emails that meet search criteria you define, such as a specific sender domain <span class="ex">(the part of an address after the @ sign)</span>.</li>
+<li><strong>New Label &amp; Polling:</strong> fires <span class="ex">(runs)</span> when you apply a label <span class="ex">(a tag)</span> to an email.</li>
+<li><strong>New Labeled Conversation &amp; Polling:</strong> triggers <strong>once</strong> when a label is first added to an email thread <span class="ex">(a chain of replies)</span>. It does not re-trigger if more messages appear in that thread.</li>
+</ul></li>
+<li>When you test a Gmail trigger, Zapier automatically loads your <strong>previous emails</strong> from that mailbox as sample data. You do not need to trigger events manually. Zapier retrieves recent past emails so you can check the logic before publishing.</li>
+<li>Slack actions available in Zapier workflows include:
+<ul>
+<li><strong>Retrieve Thread Message:</strong> extracts all messages from a specific conversation.</li>
+<li><strong>Send Channel Message:</strong> posts to public channels <span class="ex">(chat rooms)</span>, with optional delivery scheduling.</li>
+<li><strong>Send Direct Message:</strong> routes private messages to a user or yourself through Slackbot (Slack's built-in bot), and supports scheduled sending.</li>
+<li><strong>Send Private Channel Message:</strong> targets restricted channels.</li>
+<li>The integration also supports message deletion, channel creation, reminder scheduling and channel lookup.</li>
+</ul></li>
+<li>Zapier's Slack integration sends <strong>real-time</strong> private messages containing lead details <span class="ex">(a possible customer's details)</span> when forms are submitted. This gives immediate visibility on mobile or desktop.</li>
+<li>Zapier's <strong>Attachments setting</strong>: when connecting to services that send file attachments, you choose whether attachments auto-open for processing or remain clickable links for manual team review.</li>
+</ul>
+</details><details class="part" id="ai-steps-in-zapier"><summary><h2>AI steps in Zapier</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>In Zapier's AI by Zapier step, models marked with a Lightning icon <span class="ex">(a small lightning-bolt symbol)</span>, such as GPT-4-1 mini and GPT-4-1 nano, are <strong>free to use</strong>.</li>
+<li>You do not need a paid OpenAI API account <span class="ex">(a paid account for AI access)</span> or your own ChatGPT login for them.</li>
+</ul>
+</details><details class="part" id="why-an-api-matters"><summary><h2>Why an API matters</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>An <strong>API</strong> (a connection tool that lets one application command another) is what makes these links work.</li>
+<li>Zapier uses APIs to connect Gmail, ChatGPT and Slack. Each integration works because the API gives the automation platform permission to trigger actions in that app. Examples are creating a task in ClickUp <span class="ex">(a task app)</span>, sending a message in ChatGPT, or posting a Slack message.</li>
+</ul>
+</details><details class="part" id="platform-comparison"><summary><h2>Platform comparison</h2><span class="pm">2 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Best for</th>
+<th>Cost</th>
+<th>Learning curve</th>
+<th>Native integrations <span class="ex">(built-in app connections)</span></th>
+<th>Practical for simple tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zapier</td>
+<td>Beginners</td>
+<td>Most expensive <span class="ex">(couple dollars per automation per month)</span></td>
+<td>Easiest</td>
+<td>Most app connections</td>
+<td>Yes, very intuitive</td>
+</tr>
+<tr>
+<td>Make.com</td>
+<td>Experienced users</td>
+<td>Substantially cheaper than Zapier</td>
+<td>Still accessible but slower to build</td>
+<td>Fewer connections</td>
+<td>No, more annoying setup for basic tasks like text splitting or time conversion</td>
+</tr>
+<tr>
+<td>N8N</td>
+<td>Developers only</td>
+<td>Free or very cheap if self-hosted</td>
+<td>Very steep <span class="ex">(needs API, webhook, JSON, MCP knowledge)</span></td>
+<td>Flexible</td>
+<td>No, designed for low-code development, not business users</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>If you are brand new to automation, <strong>start with Zapier</strong> because it is the most intuitive. After gaining experience with several automations, move to Make.com <span class="ex">(a cheaper tool)</span> to reduce costs.</li>
+<li>Switch to N8N <span class="ex">(a tool for developers)</span> <strong>only</strong> when you have many dozens of automations running at once and want to self-host <span class="ex">(run the platform on your own computer)</span> to eliminate platform fees.</li>
+<li>Plan to switch from Zapier to Make.com when you have <strong>dozens of automations</strong> running at once. At that scale, Zapier's per-automation monthly costs add up significantly. Make.com's pricing becomes more economical.</li>
+<li>Move to N8N only at very large numbers of automations, or if you focus on AI agents (AI programs that carry out tasks on their own).</li>
+<li>Make.com handles basic data transformations <span class="ex">(changing the shape of data)</span> more awkwardly than Zapier.</li>
+<li>Splitting or reformatting text, converting code between formats, and transforming timestamps <span class="ex">(date and time marks)</span> between time zones each require extra steps.</li>
+<li>These small friction points add up in complex automations, so Make.com feels slower despite its lower cost.</li>
+<li>N8N is the <strong>only</strong> one of these platforms that supports self-hosting. You run the whole platform on your own computer or laptop instead of N8N's cloud servers <span class="ex">(computers run by the company)</span>. All processing stays on your device.</li>
+<li>Self-hosting is possible because N8N is open source <span class="ex">(its code is public)</span>. It removes monthly subscription costs, making it free or very inexpensive once you run many automations. Zapier and Make.com charge per automation.</li>
+<li>N8N has the <strong>best AI agent functionality</strong> of the three main platforms.</li>
+<li>If you focus heavily on AI agents, N8N is the superior choice despite its steep learning curve. That curve requires knowledge of APIs, webhooks <span class="ex">(messages one app sends to another when an event happens)</span>, JSON <span class="ex">(a common data format)</span> and MCP <span class="ex">(a standard for connecting AI tools to other apps)</span>.</li>
+<li>Make.com is the mid-tier option and N8N the developer option.</li>
+<li>The platform guidance above applies to IFTTT as well. The 2023 comparison lists IFTTT as a Zapier alternative.</li>
+</ul>
+</details><details class="part" id="cost-and-tool-stack-reference-table"><summary><h2>Cost and tool stack <span class="ex">(reference table)</span></h2><span class="pm">1 min</span></summary>
+<p>Plain meanings for this table: Rev.com turns audio and video into text <span class="ex">(transcription)</span>. Grasshopper gives you a 1-800 business phone number. BuzzSumo finds content and trends. Buffer schedules social media posts.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Cost</th>
+<th>Purpose in Workflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zapier Premium</td>
+<td>$20/month</td>
+<td>Connects Shopify to Slack, Trello, Google Sheets, Rev.com, WordPress, and social platforms via automated Zaps</td>
+</tr>
+<tr>
+<td>Slack Free</td>
+<td>Free</td>
+<td>Receives Zapier alerts and team messaging</td>
+</tr>
+<tr>
+<td>Trello Free</td>
+<td>Free</td>
+<td>Order status board and tracking with five lists</td>
+</tr>
+<tr>
+<td>Google Sheets</td>
+<td>Free</td>
+<td>Automated customer data logging and measurement</td>
+</tr>
+<tr>
+<td>Rev.com</td>
+<td>$1/minute</td>
+<td>Audio and video transcription</td>
+</tr>
+<tr>
+<td>Grasshopper</td>
+<td>Varies</td>
+<td>1-800 business phone number with SMS and calling app</td>
+</tr>
+<tr>
+<td>BuzzSumo</td>
+<td>Varies</td>
+<td>Content research and trend identification</td>
+</tr>
+<tr>
+<td>Buffer</td>
+<td>Varies</td>
+<td>Social media scheduling for non-automated posts</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The basic automation stack is <strong>Shopify, Zapier, Slack, Trello and Google Sheets</strong>. Zapier is the only paid tool in it.</li>
+</ul>
+</details><details class="part" id="abandoned-cart-alerts-to-slack"><summary><h2>Abandoned cart alerts to Slack</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="purpose-and-timing"><summary><h2>Purpose and timing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Slack sends <strong>real-time</strong> notifications <span class="ex">(instant alerts)</span> to desktop and smartphone apps.</li>
+<li>Use it to alert the shop owner or a team member the moment a cart is abandoned. The phone follow-up can then happen <strong>within minutes</strong>.</li>
+<li>A real-time Slack notification each time a customer abandons checkout <span class="ex">(leaves before paying)</span> lets the store owner follow up immediately.</li>
+<li>Slack works like Discord <span class="ex">(another chat app)</span> for team alerts.</li>
+<li>Zapier checks Shopify <strong>every 5 minutes</strong> for new abandoned carts. It forwards customer data directly to Slack.</li>
+<li>The maximum delay <span class="ex">(latency)</span> between cart abandonment and the Slack notification is <strong>5 minutes</strong>.</li>
+<li>Set "Abandoned cart age in hours" to <strong>0</strong> in Zapier's Shopify trigger.</li>
+<li>Setting it to 0 sends the notification immediately on abandonment, with no delay.</li>
+<li>The Zapier wait setting for cart data should also be <strong>0 hours</strong>, so the data arrives immediately.</li>
+</ul>
+</details><details class="part" id="who-receives-the-alert"><summary><h2>Who receives the alert</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The Slack recipient can be anyone on the support team. That can be the shop owner, a virtual assistant, an employee or a family member helping with phone follow-up.</li>
+<li>Choose who receives the Slack message <strong>when you configure the automation</strong>.</li>
+<li>The Slack free plan receives real-time Zapier notifications. These include abandoned cart alerts with customer name, phone number, email, order value and checkout link.</li>
+</ul>
+</details><details class="part" id="slack-message-settings"><summary><h2>Slack message settings</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Auto expand links:</strong> no.</li>
+<li><strong>Link username and channel names:</strong> yes.</li>
+</ul>
+</details><details class="part" id="message-template"><summary><h2>Message template</h2><span class="pm">1 min</span></summary>
+<p>This is the text the alert uses. Square brackets are placeholders. Zapier fills each one with real order data.</p>
+<pre><code>Hi [Customer First Name], [Customer Last Name] just abandoned a cart with the value of [Cart Value]. [Customer First Name] can be reached at [Customer Phone Number]. The order was for [Product Name], and it would be shipping to [Shipping State]. Here is their abandoned checkout URL: [Abandoned Checkout URL]. Good luck on the call.</code></pre>
+</details><details class="part" id="example-message"><summary><h2>Example message</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The Slack bot <span class="ex">(an automatic chat account)</span> can be named <strong>Steve</strong>, with a tuxedo emoji as its profile picture.</li>
+<li>It alerts the team when customers abandon checkouts.</li>
+<li>Each message should include customer name, cart total, phone number, product details, shipping destination and the checkout link.</li>
+<li>Example output: "Hi, [name], John Smith just abandoned a cart with the value of $49. John can be reached at 55555. The order was for an official Source A hoodie, and it would be shipping to New York. Here is their abandoned checkout URL. Good luck on the call."</li>
+</ul>
+</details><details class="part" id="setup-procedure"><summary><h2>Setup procedure</h2><span class="pm">2 min</span></summary>
+<p>Follow these 21 steps in order.</p>
+<ol type="1">
+<li>Create a new Zap in Zapier.</li>
+<li>Select Shopify as the trigger source.</li>
+<li>Choose "New abandoned cart" from Shopify trigger options.</li>
+<li>Authenticate with your Shopify store login credentials.</li>
+<li>Set "Abandoned cart age in hours" to <strong>0</strong>.</li>
+<li>Click "Test this step" to verify connection with an existing abandoned cart from your store. If none exist, manually create and abandon a test order in Shopify.</li>
+<li>Add an action by clicking the plus symbol to create a new step.</li>
+<li>Select Slack as the action platform.</li>
+<li>Choose "Send a channel message" as the Slack action.</li>
+<li>Authenticate with your Slack login and select your Slack workspace <span class="ex">(your team's Slack space)</span>.</li>
+<li>Create a new Slack channel for these notifications <span class="ex">(e.g., "Steve")</span> or select an existing channel. A channel is a chat room.</li>
+<li>Click in the message text area to customize the notification.</li>
+<li>Use the plus button next to the text field to insert dynamic data fields from the abandoned cart <span class="ex">(placeholders filled with real order data)</span>: customer first name, customer last name, cart value, customer phone number, product name, shipping state, and abandoned checkout URL.</li>
+<li>Write the message: Hi [First Name], [Last Name] just abandoned a cart with the value of [Amount]. [First Name] can be reached at [Phone]. The order was for [Product], and it would be shipping to [State]. Here is their abandoned checkout URL: [URL]. Good luck on the call.</li>
+<li>Set "Bot name" to a custom name <span class="ex">(e.g., "Steve")</span>.</li>
+<li>Select a bot icon to represent the automation in Slack.</li>
+<li>Verify that "Auto expand links" is set to no and "Link username and channel names" is set to yes.</li>
+<li>Click "Continue" to preview the message based on your test abandoned cart data.</li>
+<li>Click "Send test to Slack" to verify the message displays correctly in your Slack channel.</li>
+<li>Once verified, <strong>turn the Zap on</strong> by clicking the toggle switch <span class="ex">(an on/off button)</span> at the top. The default is off.</li>
+<li>The automation now runs continuously. Zapier checks for new abandoned carts every 5 minutes and immediately sends a Slack message with all customer data.</li>
+</ol>
+</details><details class="part" id="related-follow-up-options"><summary><h2>Related follow-up options</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier can be used with Shopify abandoned checkout events <span class="ex">(moments when a customer leaves checkout)</span> to trigger notifications alongside email tools such as Klaviyo <span class="ex">(email marketing software)</span> or Shopify Email.</li>
+<li><strong>Before relying on it</strong>, opt in with a test customer and place a test order to confirm each Zap fires <span class="ex">(runs)</span>.</li>
+<li>Zapier can connect Shopify so that an abandoned cart automatically places the customer into a Minichat Messenger sequence <span class="ex">(an automatic series of chat messages)</span>.</li>
+<li>The connection is set up <strong>once</strong> and then runs automatically.</li>
+<li>Zapier automates follow-ups for abandoned checkouts.</li>
+<li><strong>Keep the subscription only if it brings sales.</strong></li>
+<li>If it does not pay for itself after a while, <strong>cancel it</strong> and follow up manually.</li>
+<li>The Shopify and Slack connection for abandoned carts is the setup described above.</li>
+<li>Shopify's abandoned carts report, under Orders, lists customers who started checkout without buying.</li>
+<li>It is useful for <strong>calling those customers</strong> to learn why they left. <em>Older (2021).</em></li>
+</ul>
+</details><details class="part" id="abandoned-cart-logging-in-google-sheets"><summary><h2>Abandoned cart logging in Google Sheets</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="overview"><summary><h2>Overview</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier connects Shopify to Google Sheets <strong>without code</strong> (no programming needed).</li>
+<li>Google Sheets <span class="ex">(free)</span> automatically logs customer information from Zapier when carts are abandoned or orders are placed.</li>
+<li>It captures email, name, phone, creation date, contact status and recovery status for team visibility.</li>
+</ul>
+</details><details class="part" id="first-zap-new-abandoned-cart-creates-a-sheet-row"><summary><h2>First Zap: new abandoned cart creates a sheet row</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>Log into Zapier and create a new zap.</li>
+<li>Set the trigger to Shopify and choose 'new abandoned cart'.</li>
+<li>Connect the Shopify store and select the store to link.</li>
+<li>In the options, set the wait time before data is passed through to <strong>0 hours</strong> so the data arrives immediately.</li>
+<li>Add an action: click the plus, click action, and choose 'create spreadsheet row' in Google Sheets.</li>
+<li>Log into your Google account to connect it to the zap.</li>
+<li>Select the spreadsheet 'abandoned cart tracking sheet' and the worksheet 'abandoned carts'. A worksheet is one tab inside a spreadsheet.</li>
+<li>Map every field (date, name, phone number, email, cart value, products, shipping, link to cart) to the matching data from the test order. Mapping means linking each data item to its column.</li>
+<li>Click continue, then click test this step.</li>
+<li>A successful test pushes the data into the sheet, and the phone team receives a Slack notification at the same time.</li>
+</ol>
+</details><details class="part" id="rules-for-the-sheet"><summary><h2>Rules for the sheet</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier matches each mapped field to a sheet header <span class="ex">(the column name at the top)</span> by name.</li>
+<li><strong>Headers must be typed exactly</strong> as the fields are named in the mapping.</li>
+<li>Mismatched headers stop the correct data from landing in the right column.</li>
+<li>Leave the <strong>Recovered</strong> and <strong>Notes</strong> fields unmapped in the create-row step.</li>
+<li>Team members fill these in by hand. Mapping them would overwrite or pre-fill fields that need human input.</li>
+<li><strong>Run the test step with a test order</strong> before activating a zap. This lets you confirm each field lands in the correct column.</li>
+<li>Fix any mismatch before the automation runs on real carts.</li>
+<li>Choosing the wrong spreadsheet or worksheet in Zapier sends rows to the wrong place.</li>
+<li>A worksheet can have any name, as long as the correct one is selected in the zap.</li>
+</ul>
+</details><details class="part" id="second-zap-paid-order-updates-the-sheet"><summary><h2>Second Zap: paid order updates the sheet</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>Create a new zap and name it along the lines of 'paid order to update abandoned cart Google tracking sheet'.</li>
+<li>Set the trigger to Shopify and choose 'paid order' instead of 'new abandoned cart', then select the store.</li>
+<li>Add a step called Search in Google Sheets to look for an existing row.</li>
+<li>Select the spreadsheet 'abandoned cart tracking sheet' and the worksheet 'abandoned carts'.</li>
+<li>Set the search column to Email and match it against the email of the latest paid order.</li>
+<li>If no matching row is found, nothing happens and the zap ends without changing the sheet.</li>
+<li>If a matching row is found, add an update action for that row and fill the <strong>Recovered</strong> column with the date of the purchase.</li>
+<li>Keep calls and notes manual. Only the Recovered date is automated.</li>
+</ol>
+<ul>
+<li>The paid-order Zap matches the sheet <strong>only by exact email address</strong>.</li>
+<li>A customer who places the paid order with a different email will not have the Recovered column updated.</li>
+<li>In that case, <strong>enter the recovery date by hand</strong>.</li>
+</ul>
+</details><details class="part" id="order-flow-shopify-to-suppliers"><summary><h2>Order flow: Shopify to suppliers</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="trigger-rules"><summary><h2>Trigger rules</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Use the Shopify trigger <strong>"New Paid Orders"</strong> so the automation runs only after an order is marked paid.</li>
+<li>Rejected or unpaid orders do not trigger it.</li>
+<li>Refunds <span class="ex">(money returned to the customer)</span> require cancelling the order separately. <em>Older (2021).</em></li>
+<li>Zap 1 trigger conditions: payment status marked as paid; order status any; fulfilment status any.</li>
+<li>This fires <strong>once</strong>, when payment is first marked as paid, not repeatedly.</li>
+</ul>
+</details><details class="part" id="vendor-filtering"><summary><h2>Vendor filtering</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A vendor is the supplier or brand that sells the product.</li>
+<li>The vendor filter Zap uses Shopify as the order source, Filter by Zapier for vendor matching, and Gmail for sending email.</li>
+<li>You already have Shopify and Gmail. <strong>You only need a Zapier account.</strong></li>
+<li>When you set up the vendor filter, Zapier pulls sample orders from your Shopify store.</li>
+<li>Zapier displays all available data fields in those samples: vendor name, product name, SKU <span class="ex">(the product's code number)</span>, customer details and more.</li>
+<li>Use these samples to build and verify the filter condition <strong>before the Zap processes live orders</strong>.</li>
+<li>Example condition: "line item vendor text exactly matches Source A merch". A line item is one product row in an order.</li>
+</ul>
+</details><details class="part" id="multi-product-orders"><summary><h2>Multi-product orders</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier order processing can handle orders with multiple products.</li>
+<li>The example used a single-product order. <strong>Adjust the workflow</strong> to process each line item in a multi-product order. <em>Older (2020).</em></li>
+</ul>
+</details><details class="part" id="fulfilment-handoff"><summary><h2>Fulfilment handoff</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Zapier is used for most store automations, including order forwarding to suppliers.</li>
+<li>Shopify's <strong>Mark as fulfilled</strong> action and Klaviyo tracking emails complete the process from order to customer notification. <em>Older (2020).</em></li>
+<li>Zapier can automate order processing to suppliers.</li>
+<li>Choose whether it <strong>automatically captures payment</strong> or only pre-authorizes <span class="ex">(checks that the money is there without charging it)</span>.</li>
+<li>Base the choice on <strong>how often you run into inventory issues</strong> (stock problems) with suppliers. <em>Older (2021).</em></li>
+</ul>
+</details><details class="part" id="payment-capture"><summary><h2>Payment capture</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Authorize</strong> means checking that the card has funds. <strong>Capture</strong> means actually charging it.</li>
+<li>Use <strong>"Authorize but not capture"</strong> payments in Shopify's payment settings.</li>
+<li>The card is checked for funds but not charged until the team verifies stock and captures the payment. After that, the order is processed.</li>
+<li>Setting path: <strong>Settings &gt; Payments &gt; Payment capture</strong>.</li>
+<li>Set to <strong>"Authorize only"</strong> (Authorize, do not capture).</li>
+<li>Verify stock, then capture the payment and process the order.</li>
+</ul>
+</details><details class="part" id="order-status-boards-in-trello"><summary><h2>Order status boards in Trello</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="overview-1"><summary><h2>Overview</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Trello (Trello.com) is a free visual project management tool <span class="ex">(a way to track work on boards)</span>.</li>
+<li>It uses a Boards → Lists → Cards hierarchy: boards hold lists, and lists hold cards.</li>
+<li>Cards can be dragged between lists manually or moved via Zapier automation.</li>
+<li>It gives a visual overview of order progress <strong>without daily administrative work</strong>.</li>
+<li>Trello can track orders on cards. Automation can move a card to delivered after a set delay.</li>
+<li>Trello can show where each order sits in the process, from order placed to shipped, as order volume grows.</li>
+<li>Trello can be used to organise tasks as boards and cards.</li>
+<li>In an automated setup, it can track orders and collect customer review requests <strong>so nothing is missed</strong>.</li>
+</ul>
+</details><details class="part" id="five-list-structure"><summary><h2>Five-list structure</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Order</th>
+<th>List name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Paid orders</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sent to supplier</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Shipped orders</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Delivered and pending review</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Reviewed</td>
+</tr>
+</tbody>
+</table></div>
+<p>Orders progress through these lists as fulfilment stages change.</p>
+</details><details class="part" id="two-zap-workflow"><summary><h2>Two-Zap workflow</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Order tracking automation runs Shopify → Zapier → Trello.</li>
+<li>Two Zaps handle the workflow. <strong>Zap 1</strong> creates cards when orders reach paid status. <strong>Zap 2</strong> moves cards to shipped when fulfilment status changes.</li>
+<li>This removes manual card creation and movement.</li>
+<li><strong>Zap 1</strong> (Shopify paid order → create Trello order card): card name "Order [order number] [order date]". Square brackets are placeholders.</li>
+<li>The description includes customer info <span class="ex">(name, email, date placed)</span>.</li>
+<li>It also includes order info <span class="ex">(product name, brand, SKU)</span> and customer notes <span class="ex">(if entered at checkout)</span>.</li>
+<li>It includes ship-to <span class="ex">(full address)</span>.</li>
+<li>Board: select your board. List: <strong>paid orders</strong>. Position: top, so new cards appear above existing cards.</li>
+<li><strong>Zap 2</strong> (Shopify shipped order → move Trello card): trigger "Order update in Shopify", with payment status paid and fulfilment status shipped.</li>
+<li>Action: search for the existing order card in Trello and move it to the shipped orders list.</li>
+<li>Cards move from paid orders to shipped when Shopify marks fulfilment as shipped.</li>
+<li>Card data auto-populates <span class="ex">(fills in automatically)</span> from Shopify with order number, customer details, SKU, notes and shipping address.</li>
+<li>Before activating a Zap, <strong>click Test This Step</strong> to verify it.</li>
+<li>For Zap 1, a successful test creates a sample card on your Trello board, confirming the Shopify-to-Trello connection. For Zap 2, the test demonstrates card movement.</li>
+<li>Review the result, then click <strong>Finish or Turn On</strong>.</li>
+</ul>
+</details><details class="part" id="card-fields-and-comments"><summary><h2>Card fields and comments</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Each Trello card has <strong>two date fields</strong> for follow-up deadlines. Example: "customer will send product photo by October 29".</li>
+<li>When a deadline passes, Trello sends reminders to team members. The reminders ask them to check whether the promised follow-up was completed or needs escalation <span class="ex">(passing to a more senior person)</span>.</li>
+<li>Use the comment section of a card to record order status changes, backorder dates and follow-ups.</li>
+<li>A backorder is an item that is out of stock and will be ordered from the supplier later.</li>
+<li>Example comment: "Contacted supplier on backorder until October 29".</li>
+<li>Each comment is <strong>timestamped</strong> with the team member's name.</li>
+</ul>
+</details><details class="part" id="alternative-board"><summary><h2>Alternative board</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Asana <span class="ex">(a task app)</span> can serve as the order board.</li>
+<li>New orders land automatically in the first column. The VA moves each card to the next column as its status changes.</li>
+<li>Each card carries a due date. Overdue follow-ups show in red, so the owner can spot them without asking.</li>
+<li>Asana also handles task assignment <span class="ex">(giving tasks to people)</span> to team members and to the owner.</li>
+</ul>
+</details><details class="part" id="shipment-tracking-and-customer-notifications"><summary><h2>Shipment tracking and customer notifications</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="aftership-overview"><summary><h2>AfterShip overview</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>AfterShip is a Shopify app <span class="ex">(an add-on program for the Shopify online shop)</span> for delivery tracking. Once it is connected, Klaviyo <span class="ex">(an email tool)</span> can send emails when a <strong>delivery event</strong> happens, so the post-delivery request goes out at the right moment.</li>
+<li>AfterShip (or a similar fulfilment tracking app; fulfilment means packing and shipping orders) connects to Klaviyo and gives order triggers <span class="ex">(events that start an automatic step)</span> such as <strong>shipped</strong>, out for delivery and delivered. These triggers drive the shipping and UGC emails (UGC means user-generated content, such as customer photos and reviews).</li>
+<li>AfterShip is a parcel tracking platform <span class="ex">(a service that follows a package and shows where it is)</span> that shows the status of shipments and can send tracking updates to customers. It is useful when orders ship from suppliers with <strong>limited tracking information</strong>.</li>
+<li>AfterShip automatically emails customers each time tracking updates, for example dispatched, in transit, out for delivery and delivered. Configure how many emails are sent and when in the app, then <strong>enter tracking numbers</strong> (the code that follows one parcel) in the Shopify order dashboard.</li>
+<li>AfterShip sends branded tracking emails <span class="ex">(emails with your own logo and style)</span> at each stage of delivery, such as out for delivery, delayed and delivered. The low-cost plan costs about <strong>one dollar per month</strong> for this store. It is recommended for every store as a way to reduce "where is my order" questions.</li>
+<li>A tracking-notification app such as AfterShip can replace about <strong>four</strong> separate customer contacts per shipment: in transit, arriving in the destination city, out for delivery and delivery attempt missed. Enter the tracking number once, and the automated updates handle these messages for every order.</li>
+<li>AfterShip is used for <strong>order tracking notifications</strong> sent to customers. <em>Older (2022).</em></li>
+<li>AfterShip is a Shopify app that automates tracking emails to customers and provides an embed code <span class="ex">(a small block of code you paste into a web page)</span> for a tracking page on the store. <em>Older (2022).</em></li>
+<li>AfterShip is used as an order status tracker on a store.</li>
+</ul>
+</details><details class="part" id="aftership-plans-and-limits-conflicting-dates"><summary><h2>AfterShip plans and limits <span class="ex">(conflicting dates)</span></h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Free plan: <strong>50 shipments per month</strong>, with paid plans applying above that volume. The 2021 note gives the same limit as the 2025 note.</li>
+<li>The free plan can be started for order tracking emails. <em>2024 note.</em></li>
+<li>The 2021 note describes a branded tracking page where customers enter a tracking or order number.</li>
+<li>Tracking emails can be set up on the free plan; the low-cost paid plan is about <strong>$1 per month</strong>. Apply the free plan first, and move to the paid plan when shipment volume exceeds 50 per month.</li>
+</ul>
+</details><details class="part" id="tracking-page-code-and-store-health"><summary><h2>Tracking page code and store health</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>AfterShip provides a code for a tracking page on the store. Generic tracking code found online slowed one store, so use a <strong>vetted app</strong> (a checked, trusted app) instead.</li>
+<li>Add tracking to Shopify orders directly with a tracking number, or use a tracking app that customers can check. The <strong>tracking app is the better option</strong> for customer visibility.</li>
+<li>Tracking apps such as Tracktor or AfterShip can be synced with Klaviyo <span class="ex">(kept matched with its data)</span>, so fulfilment update emails are sent automatically and can carry offers.</li>
+</ul>
+</details><details class="part" id="shop-and-branded-tracking-page"><summary><h2>Shop and branded tracking page</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The Shop app lets customers track orders from any store, not only Shopify orders, and can show them different products. It is optional and does not drive large sales volume.</li>
+<li>A branded tracking page is <strong>free ad space</strong> that the brand owns. Wonderment's recommendation engine <span class="ex">(the software that picks products to suggest)</span> suggests products based on what the shopper bought.</li>
+</ul>
+</details><details class="part" id="free-tracking-sites-and-carrier-tracking"><summary><h2>Free tracking sites and carrier tracking</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The free tracking site 17Track can be used in its drop-shipping mode <span class="ex">(selling products that the supplier ships straight to the customer)</span> to hide the supplier's origin, such as China or AliExpress, and to replace those words with custom text such as "Express". It does not reliably show <strong>delivery dates</strong>, because most couriers <span class="ex">(delivery companies)</span> do not provide them.</li>
+<li>Track17 and Track123 show tracking numbers to customers. <strong>Check with your supplier</strong> which one they use. This guide chooses Track17 because most parcel carriers are visible there and customers can search tracking there.</li>
+</ul>
+</details><details class="part" id="courier-options-in-australia"><summary><h2>Courier options in Australia</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Couriers Please and Sendle are often <strong>cheaper than Australia Post</strong> for large parcels in Australia. Australia Post's eParcel account manager <span class="ex">(your contact for the eParcel service)</span> can also offer lower rates than advertised. <em>Older (2020).</em></li>
+</ul>
+</details><details class="part" id="zapier-in-customer-forms"><summary><h2>Zapier in customer forms</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>WuFu.com is a form creation tool <span class="ex">(software for building online forms)</span>, available in free and paid versions. It integrates with Zapier <span class="ex">(a tool that connects apps and runs automatic steps between them)</span> to capture custom order requests and trigger automations.</li>
+<li>Typeform creates forms and surveys. It integrates with Zapier as an alternative to WuFu for collecting custom product requests.</li>
+<li>Zapier is an automation platform with thousands of integrations <span class="ex">(ready-made connections to other apps)</span>. It <strong>triggers workflows</strong> when events occur, such as a form submission, and stacks multiple actions in sequence within a single Zap <span class="ex">(one automatic workflow)</span>.</li>
+<li>Google Sheets integrates with Zapier to <strong>populate lead data automatically</strong> (fill in details of potential customers). This creates a searchable, ongoing database of all custom order requests for tracking, analysis and optimisation.</li>
+</ul>
+</details><details class="part" id="content-distribution-and-social-media-limits"><summary><h2>Content distribution and social media limits</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="transcription"><summary><h2>Transcription</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Rev.com <span class="ex">(a service that turns audio or video into text)</span> costs <strong>$1 per minute</strong> of audio or video content.</li>
+<li>Zapier uploads new videos or audio files to Rev.com automatically and notifies the team in Slack <span class="ex">(a team chat app)</span> when transcripts <span class="ex">(text versions)</span> are ready. This removes manual upload and tracking steps.</li>
+</ul>
+</details><details class="part" id="platform-limits"><summary><h2>Platform limits</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Blog automation should target only <strong>Facebook and LinkedIn</strong>, because Zapier templates format content natively <span class="ex">(in each platform's own style)</span> for these platforms. Twitter, Instagram and Pinterest automation produces posts that look non-native and manufactured rather than intentional.</li>
+<li>Zapier automates blog distribution by connecting WordPress or Shopify blogs to Facebook and LinkedIn. New posts <strong>publish automatically</strong> to selected pages, formatted natively for each platform.</li>
+<li>The automation includes a <strong>5-minute delay</strong> after a blog post is published. This gives time to catch and fix errors before the post goes out to social media automatically.</li>
+<li>When posting to multiple Facebook pages in one automation, add a <strong>3-minute delay</strong> between posts to different pages, so followers are not overwhelmed by simultaneous posts.</li>
+</ul>
+</details><details class="part" id="wordpress-procedure"><summary><h2>WordPress procedure</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Create a new zap</strong> with WordPress as the trigger <span class="ex">(the event that starts the workflow)</span>.</li>
+<li>Select the trigger event as <strong>'new blog entry'</strong>.</li>
+<li><strong>Connect your WordPress account</strong> and select your blog or website.</li>
+<li>Add a delay action set to <strong>5 minutes</strong>.</li>
+<li>Add Facebook Pages as an action, and <strong>select 'create a page post'</strong>.</li>
+<li>From the dropdown, <strong>choose which Facebook page</strong> to post to.</li>
+<li><strong>Build the template</strong>: add opening text <span class="ex">(e.g., 'new e-commerce lifestyle podcast')</span>, then use the plus button to insert the blog title, body and URL as dynamic fields <span class="ex">(fields that fill in with each post's details)</span>.</li>
+<li><strong>Select the blog URL</strong> as the link to share.</li>
+<li><strong>Turn on the automation.</strong></li>
+<li>To post to additional Facebook pages, add another action after the first Facebook post with a <strong>3-minute delay</strong>, then add another Facebook Pages action with the same template.</li>
+<li>To add LinkedIn, add another action with LinkedIn as the platform and include the title, body and content URL.</li>
+</ol>
+</details><details class="part" id="shopify-blog-procedure"><summary><h2>Shopify blog procedure</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Zapier's Text Formatter <span class="ex">(a built-in Zapier tool that changes text)</span>, with the event "<strong>convert HTML to markdown</strong>" (turns web code into plain text), removes HTML tags <span class="ex">(the labels that build web pages)</span>, meta tags <span class="ex">(hidden page labels)</span> and code from Shopify's blog summary field, so the content displays cleanly on social media.</li>
+<li>Without converting HTML to markdown, social posts from Shopify blog content <strong>display HTML code</strong> and meta tags, such as charset declarations <span class="ex">(hidden text-encoding labels)</span> and closing HTML tags. The content looks unprofessional and is hard to read.</li>
+<li>The featured image from the blog post is included automatically in the published Facebook post, with no extra configuration in the template.</li>
+</ul>
+<ol type="1">
+<li><strong>Create a new zap</strong> and name it <span class="ex">(e.g., 'Source A merch blog to social')</span>.</li>
+<li>Set Shopify as the trigger.</li>
+<li>Select the trigger event <strong>'new blog entry'</strong>.</li>
+<li>Connect your Shopify account by selecting it from the dropdown.</li>
+<li><strong>Choose which blog category</strong> to monitor for new posts <span class="ex">(default is 'news')</span>; if you have multiple blog categories, select the correct one from the dropdown.</li>
+<li>Click continue and <strong>test the trigger</strong> to verify it finds your blog posts.</li>
+<li>Add Zapier's Text Formatter as the next action.</li>
+<li>Select Text as the formatter type.</li>
+<li>Choose the transform option <strong>'convert HTML to markdown'</strong>.</li>
+<li>Click into the input field, scroll down, and click 'show all options'.</li>
+<li>Select <strong>'summary HTML'</strong> as the input to convert <span class="ex">(this is the blog excerpt shown on your homepage, not the full blog post)</span>.</li>
+<li><strong>Test the formatter action</strong> to confirm the HTML has been removed.</li>
+<li>Add a delay action set to 5 minutes.</li>
+<li>Add Facebook Pages as the next action.</li>
+<li>Select 'create a page post' as the event.</li>
+<li>Choose which Facebook page to post to.</li>
+<li>Build the post template: type static text <span class="ex">(e.g., 'new blog post is live')</span>, add line breaks, then insert the blog title, the converted summary output <span class="ex">(from the Text Formatter step, not the raw summary HTML)</span>, and the URL.</li>
+<li>For the URL: manually copy the base URL up to and including the blog category path <span class="ex">(e.g., 'yoursite.com/blogs/news/')</span> and paste it in the link URL field, then insert the <strong>blog post handle</strong> field from the Shopify trigger to create the complete working URL.</li>
+<li>Click continue and <strong>test the action</strong>.</li>
+<li>Verify the post appears on your Facebook page with the correct text, summary and clickable link.</li>
+</ol>
+</details><details class="part" id="social-scheduling"><summary><h2>Social scheduling</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Buffer <span class="ex">(a tool for scheduling social media posts)</span> handles <strong>scheduling for posts that are not automated</strong> (see the cost table above).</li>
+</ul>
+</details><details class="part" id="fraud-screening-and-chargebacks"><summary><h2>Fraud screening and chargebacks</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="shopifys-built-in-protection"><summary><h2>Shopify's built-in protection</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify's built-in fraud protection (Shopify's own order checks for fraud) screens orders as <strong>low or high risk</strong>. Some merchants add ClearSale for extra protection, though one merchant found Shopify Payments (Shopify's own payment system) sufficient. <em>Older (2020).</em></li>
+<li>Shopify's built-in fraud analysis flags high-risk orders when Shopify Payments is in use. Flagged orders should be <strong>cancelled and refunded</strong> rather than processed. <em>Older (2020).</em></li>
+<li>Shopify's built-in fraud labels flag orders as "high risk" and list the reasons. Stolen cards are not covered by this flag, so a high-risk flag does not prove a fraudulent card. <strong>Check the reasons before cancelling.</strong></li>
+<li>The two notes conflict on flagged orders. The 2020 advice cancels and refunds them. The 2025 caution applies before you act: <strong>a flag is a signal, not proof</strong>.</li>
+</ul>
+</details><details class="part" id="third-party-screening-apps"><summary><h2>Third-party screening apps</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Signifyd is an order-fraud screening app <span class="ex">(software that checks orders for fraud)</span> for Shopify stores. It <strong>approves or declines orders</strong> and can guarantee protection against chargebacks <span class="ex">(forced payment reversals)</span> on approved orders.</li>
+<li>Signifyd is a third-party order guarantee app <span class="ex">(an outside service that promises to cover losses)</span>. It reviews orders for fraud and <strong>reimburses the merchant</strong> for approved orders that turn out to be fraudulent. It is optional and adds cost per order. <em>Older (2020).</em></li>
+<li>Signifyd and ClearSale are third-party fraud screening apps that charge different percentages per order. They are an alternative to Shopify's built-in fraud protection and should be <strong>compared by rate and order volume</strong>. <em>Older (2019).</em></li>
+<li>ClearSale is a Shopify app that checks orders for fraud. If it approves an order that later becomes a chargeback, ClearSale reimburses the seller for a fee. Its protection is <strong>a paid service</strong>.</li>
+<li>ClearSale can be used as chargeback insurance for orders it approves. It reimburses the merchant for fraud chargebacks on approved orders, at about <strong>1 percent per order</strong>. It is optional and was not used by the team that wrote this note. <em>Older (2022).</em></li>
+<li>The 2022 note quotes about <strong>1 percent per order</strong> for ClearSale. The 2025 note gives no rate and describes a paid service. Use the rate quoted in the current ClearSale offer when you compare options.</li>
+</ul>
+</details><details class="part" id="chargeback-insurance"><summary><h2>Chargeback insurance</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A chargeback insurance service <span class="ex">(paid cover against card disputes)</span> that works with Shopify can add protection against unauthorised purchases. The guide recommended it, but its author did not use it personally.</li>
+</ul>
+</details><details class="part" id="chargeback-handling-with-disputely"><summary><h2>Chargeback handling with Disputely</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Disputely alerts <span class="ex">(warnings about a chargeback)</span> appear as fees on the Shopify billing statement rather than as a separate invoice. The alert prices shown were <strong>$16.00 and $25.00</strong> each.</li>
+<li>Disputely is a chargeback handling app <span class="ex">(software that answers card disputes)</span>. <strong>Its charges are lower</strong> and its approach friendlier than the alternative, so this guide uses it. Disputifier (Smart Chargebacks) is the more expensive alternative.</li>
+<li>In Disputely Billing, the RDR section <span class="ex">(a card-network setting for disputes)</span> has fields to add BIN/CAID and ARN entries <span class="ex">(card and merchant reference codes)</span>. The RDR setting must read "<strong>Not active</strong>". Disputely support can change it when asked by email.</li>
+</ul>
+</details><details class="part" id="returns-package-protection-and-checkout-add-ons"><summary><h2>Returns, package protection and checkout add-ons</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="loop-returns-and-checkout-plus"><summary><h2>Loop Returns and Checkout Plus</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Loop Returns is return and exchange software that drives refunds into exchanges and keeps money in the business. Its Checkout Plus add-on <span class="ex">(an extra option at checkout)</span> charges a <strong>return fee</strong> at checkout.</li>
+<li>Checkout Plus used to be named Offset and was renamed. The two names refer to <strong>the same product</strong>.</li>
+<li>Loop provides an <strong>online calculator</strong> for return fee and Checkout Plus economics <span class="ex">(the money side)</span>. Its sales reps can run a deeper analysis of a brand's numbers.</li>
+<li>Package protection <span class="ex">(insurance on a parcel)</span> can be sold as a standalone product through partnerships. Loop has announced an <strong>in-house version</strong> for coming months.</li>
+<li>Gorgias, the help desk <span class="ex">(customer support software)</span>, shows the Checkout Plus line on the order because it is a Shopify product. A support agent can <strong>check whether a customer was charged</strong> a fee they should not have paid.</li>
+</ul>
+</details><details class="part" id="wonderment"><summary><h2>Wonderment</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Wonderment is an order tracking tool that <strong>Loop acquired</strong> about a year before this guide was written. It now sits in Loop's portfolio as Loop order tracking and works with Loop Returns.</li>
+</ul>
+</details><details class="part" id="market-availability"><summary><h2>Market availability</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Checkout Plus and Wonderment are sold mainly to brands in the US, Canada, the UK and Australia, with some use in New Zealand and mainland Europe. <strong>Confirm the app supports your target market</strong> before planning a launch there.</li>
+</ul>
+</details><details class="part" id="store-continuity-and-data"><summary><h2>Store continuity and data</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Rewind backups <span class="ex">(copies of your store data)</span> can <strong>export everything</strong> from a Shopify store, including products as CSV <span class="ex">(a plain spreadsheet file)</span>, before you close or stop paying for the store. The export can later be used to rebuild a similar store.</li>
+</ul>
+</details><details class="part" id="financing"><summary><h2>Financing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify Capital <span class="ex">(a loan product from Shopify)</span> is a cash-flow financing option <span class="ex">(money to cover the gap between paying costs and getting paid)</span> that <strong>can fund stock purchases</strong>. Lending facilities can be tight at times, which can cause cash-flow problems for a brand that must buy a lot of stock.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/05-apps-and-tools/19-orders-automation-fraud-and-operations/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../05-apps-and-tools/18-conversion-testing-site-speed-and-monitoring/"><span class="k">&larr; Previous</span><span class="v">Conversion testing, site speed and monitoring</span></a><a class="nx" href="../../05-apps-and-tools/20-finance-tax-and-business-admin-tools/"><span class="k">Next &rarr;</span><span class="v">Finance, tax and business admin tools</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Inventory, stock-Outs and backorders | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 3.16: Inventory, stock-Outs and backorders.">
+<link rel="canonical" href="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/16-inventory-stock-outs-and-backorders/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Inventory, stock-Outs and backorders | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 3.16: Inventory, stock-Outs and backorders."><meta property="og:url" content="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/16-inventory-stock-outs-and-backorders/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">3. Suppliers and fulfillment</a> &rsaquo; <a href="../../../ecom/03-suppliers-and-fulfillment/16-inventory-stock-outs-and-backorders/">Plain version</a></div><h1>3.16 Inventory, stock-Outs and backorders</h1><article><h2 id="tracking-top-sellers">Tracking top sellers</h2>
+<h3 id="scope-track-only-the-products-that-matter">Scope: track only the products that matter</h3>
+<ul>
+<li>Only track inventory for the top sellers. Most suppliers rarely go out of stock, so tracking every product live is not needed. [L0671.060, L0671.197]</li>
+<li>About 80% of sales typically come from about 20% of products, so focus inventory checks on those top sellers. [L0671.061, L0671.198]</li>
+<li>Example: out of 1,000 products, about 200 may sell consistently, and about 10% of those, roughly 20 products from suppliers with weak stock, need close inventory monitoring. [L0671.062, L0671.199]</li>
+<li>If stock runs low for a frequently sold item from a supplier with weak stock, update its product pages to show the low inventory. [L0671.064, L0671.201]</li>
+<li>Typically 20% or fewer of the products uploaded to a store sell consistently, and those are the ones that need close inventory monitoring. (older advice, 2019) [L1069.012]</li>
+<li>Track best sellers, which are typically about 20 percent of products and produce about 80 percent of sales. If they run low, update stock manually on the website, since automated inventory sync is not required for the whole catalog. (older advice, 2020) [L1088.017]</li>
+<li>Concentrate inventory monitoring on the top 20% of products, which produce about 80% of sales. Update product pages only when a top seller is sold out or about to sell out. (older advice, 2020) [L1111.031]</li>
+<li>Track inventory only for proven bestsellers where stock-outs have historically been a problem, not across the whole catalog. For those items, check supplier stock and update product pages accordingly. (older advice, 2026 source) [L0808.004]</li>
+<li>Inventory tracking: for most products, back-order status is updated manually. Only the top 20 percent of products by sales should be tracked more closely, with inventory updated when stock drops. (2024) [L0856.059]</li>
+<li>Track inventory only for the top 20 percent of products that drive about 80 percent of sales. When those best sellers run low, update the product page delivery note and adjust ad budgets. (2024) [L1285.021]</li>
+<li>Real-time inventory tracking is not practical for a dropship store. Monitor stock levels only for your best-selling products. (2025) [L0966.029]</li>
+<li>Real-time inventory tracking is not needed for most dropship stores, because suppliers rarely offer a uniform inventory feed. A supplier inventory tool is only worth looking into if certain suppliers keep running out of stock. (2023) [L1114.021]</li>
+<li>Inventory syncing with supplier systems is usually not worth it because it requires many workarounds. Instead, monitor inventory only for the top 20 percent of products that generate most of the sales, and do not sync the rest in real time. (2023) [L1283.010]</li>
+<li>Track inventory for your best sellers instead of trying to automate stock sync across dozens or a hundred suppliers, because full automation has rarely been worth the effort. (2021) [L0968.008]</li>
+<li>Full inventory sync with suppliers is not used in the source business. Check supplier stock manually about once a week only for brands from which you sell many SKUs. (2021) [L0962.020]</li>
+<li>There is no automated inventory sync from suppliers. Update product pages manually only for best-selling products, using the inventory sheets suppliers send, and mark them out of stock or back-ordered with a date. (2021) [L1279.023]</li>
+<li>Ask each supplier which products are its best sellers, and focus marketing on those products. (older advice, 2019) [L1069.017]</li>
+<li>Stores with 3,000 or more products often sell only 100 to 200 of them repeatedly. Focus inventory monitoring on products that sell consistently, and skip the rest, including items that have not sold yet. (2020) [L0358.023]</li>
+<li>Monitor inventory levels of your best-selling products closely, especially during supply disruptions. Remove a product from ads once its stock falls to roughly 10 units or less, and add it back once the stock is restocked. (2020) [L0358.025]</li>
+</ul>
+<h3 id="procedure-manage-a-large-catalog">Procedure: manage a large catalog</h3>
+<ol type="1">
+<li>Identify the products that get ad impressions, clicks and actual sales. (2021) [L0968.009]</li>
+<li>Build a list of your best sellers, roughly the top 20 percent. (2021) [L0968.009]</li>
+<li>Monitor stock for those products closely. (2021) [L0968.009]</li>
+<li>When stock runs low, state it clearly on those product pages. (2021) [L0968.009]</li>
+</ol>
+<h3 id="procedure-identify-and-monitor-the-top-20-percent">Procedure: identify and monitor the top 20 percent</h3>
+<ol type="1">
+<li>Identify the top 20 percent of products that generate about 80 percent of sales. (2020) [L0468.037]</li>
+<li>Collect the inventory report from each supplier for those products. (2020) [L0468.037]</li>
+<li>When a top product runs out or runs low, update the product page manually. (2020) [L0468.037]</li>
+<li>Leave the rest of the catalog on the regular inventory cycle. (2020) [L0468.037]</li>
+</ol>
+<h3 id="what-to-watch-when-supply-is-disrupted">What to watch when supply is disrupted</h3>
+<ul>
+<li>During supply disruptions such as factory closures, products with low inventory or no spare stock may sell out for a period. Check stock on your best-selling products first. (2020) [L0961.025]</li>
+<li>Demand for home gym and workout equipment spiked during the 2020 COVID-19 lockdowns, and popular items sold out quickly. Factory backlogs from the Chinese New Year shutdown, plus port congestion, can cause best-selling products to run out of stock for weeks or months. (2020) [L0358.002]</li>
+<li>Running out of inventory means no sales and no income, so the seller must monitor stock levels closely. This matters even more when the order is large and the sales cycle is long. [L1153.050]</li>
+<li>Request a stock list from each supplier you sell heavily, showing inventory for every SKU, since many send these weekly anyway. Use the stock levels to decide how much to advertise each product. (2020) [L0961.024]</li>
+</ul>
+<h2 id="getting-stock-updates-from-suppliers">Getting stock updates from suppliers</h2>
+<h3 id="find-out-how-each-supplier-reports-stock">Find out how each supplier reports stock</h3>
+<ul>
+<li>Ask suppliers how they share stock information, for example through a weekly stock email or a dealer portal login. (2021) [L0968.008]</li>
+<li>Ask each supplier how they communicate stock levels: a dealer portal you log into, a weekly inventory spreadsheet, or a shared Google Sheet that updates automatically. Each supplier works differently, so confirm this for every one. (2024) [L1285.020]</li>
+<li>Inventory tracking is not automated across brands because every supplier uses a different method, such as weekly spreadsheets, a dealer portal or email. Record each supplier's inventory check method in a shared sheet so staff can follow it. (2020) [L1111.030]</li>
+<li>Track how you check inventory with each supplier (daily update, weekly file, online portal, or email request) and document this in a list your team can access. Procedures vary by supplier; normalize them for consistency. (older advice, 2022) [L0272.003]</li>
+<li>Do not send your own spreadsheet of products to a supplier and ask them to fill it in; ask the supplier which inventory report they already produce. Some suppliers send weekly or biweekly inventory emails, some send monthly ones, and others offer a members area. (2020) [L0468.035]</li>
+<li>The inventory report should show units in stock, units on reorder and the date the reorder arrives. Ask whether the supplier can copy you on an existing report or create one for you. (2020) [L0468.036]</li>
+<li>Ask suppliers for stock availability by email, for example asking whether a given SKU is in stock. Each supplier explains its order process when you are approved. (2021) [L0962.019]</li>
+<li>Multi-supplier inventory apps require consistent, reliable data from every supplier. Spreadsheets sent weekly are workable, but supplier dealer portals that show inventory often cannot provide real-time inventory feeds. (2023) [L0835.042]</li>
+</ul>
+<h3 id="procedure-ask-for-the-right-inventory-feed">Procedure: ask for the right inventory feed</h3>
+<ol type="1">
+<li>Ask whether the supplier has a dealer login showing real-time inventory. (2023) [L0964.028]</li>
+<li>If not, ask whether they send a weekly stock spreadsheet. (2023) [L0964.028]</li>
+<li>If they have no way to share it, ask whether they can send low-stock alerts. (2023) [L0964.028]</li>
+<li>Adapt to what each supplier already has rather than sending a template. (2023) [L0964.028]</li>
+</ol>
+<h3 id="procedure-keep-availability-accurate-when-suppliers-send-updates-only-on-request">Procedure: keep availability accurate when suppliers send updates only on request</h3>
+<ol type="1">
+<li>Ask the supplier whether it has an online dealer portal or weekly inventory report that shows stock levels. (2024) [L1115.010]</li>
+<li>If the supplier provides a weekly spreadsheet, use it to decide which products to exclude from ads. (2024) [L1115.010]</li>
+<li>Re-check stock levels before any new ad spend is allocated. (2024) [L1115.010]</li>
+</ol>
+<h3 id="procedure-weekly-reports-for-top-sellers">Procedure: weekly reports for top sellers</h3>
+<ol type="1">
+<li>Request weekly inventory reports from all suppliers in Google Sheets or Excel format. (2020) [L0268.012]</li>
+<li>Include SKU numbers and quantity available. (2020) [L0268.012]</li>
+<li>For best-selling products (top 20% of products), manually update product pages when inventory runs low or item backordered. (2020) [L0268.012]</li>
+<li>Don't use real-time automated inventory tracking for all products; 80/20 rule applies. (2020) [L0268.012]</li>
+</ol>
+<h3 id="email-updates-and-check-frequency">Email updates and check frequency</h3>
+<ul>
+<li>Ask every supplier to add you to their inventory update email list. Keep this list in use so you know about stock changes before customers place orders. (2020) [L0852.032]</li>
+<li>Do not contact suppliers daily for inventory updates if it is not necessary; instead request a batch update at a set frequency (e.g., daily at noon, or weekly on Monday/Friday) to integrate into their normal schedule. (2020) [L0245.006]</li>
+<li>Supplier updates such as discounts, discontinued items and new SKUs usually arrive by email from your supplier contact, sent to all retailers. Some suppliers also provide a members area, so ask your contact how to be notified of changes. (2024) [L0965.028]</li>
+<li>Suppliers usually announce discontinuations and new price lists by email, so track supplier emails rather than checking all products each week. Check inventory only for best sellers from suppliers known for stock shortages. (older advice, 2022) [L1281.012]</li>
+</ul>
+<h3 id="supplier-stock-timing-and-lead-times">Supplier stock timing and lead times</h3>
+<ul>
+<li>A supplier's stock timing should come from real ETAs (for example a container on the water with a fixed warehouse arrival date) before accepting orders for backordered items. [L0359.035]</li>
+<li>When stock is short, supplier lead times can stretch to 6 to 12 months. Check current availability before you commit to building a store around a product. (older advice, 2021-22) [L0949.008]</li>
+<li>Before bulk ordering, track current stock and project sales so you know when the next order must be placed. Because the lead time is 20-30 days, the reorder date must be calculated ahead of time. [L1217.005]</li>
+</ul>
+<h3 id="do-not-rely-on-the-feed-alone">Do not rely on the feed alone</h3>
+<ul>
+<li>A supplier's system can show stock that does not exist, so do not rely on the inventory feed alone for an order. Verify stock directly with the supplier before you sell or promise delivery. (2026 source; see also case L1472.029) [L1472.030]</li>
+</ul>
+<h2 id="out-of-stock-handling-on-product-pages-and-in-ads">Out-of-stock handling on product pages and in ads</h2>
+<h3 id="stock-thresholds-for-ads-the-sources-compared">Stock thresholds for ads: the sources compared</h3>
+<p>The sources set different thresholds. Each row shows when that rule applies. Use the threshold that matches the ETA you actually have.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>ETA or situation</th>
+<th>Ads</th>
+<th>Product page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L0468.050 (2020)</td>
+<td>No close restock date</td>
+<td>Turn ads off</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>L0468.050 (2020)</td>
+<td>About 1-2 weeks</td>
+<td>Keep running ads</td>
+<td>Show expected ship date</td>
+</tr>
+<tr>
+<td>L0666.028 (2024)</td>
+<td>2-3 week ETA</td>
+<td>Keep running ads and selling</td>
+<td>Note on back order with estimated ship date near Add to Cart</td>
+</tr>
+<tr>
+<td>L0808.005 (2026)</td>
+<td>About 2-3 weeks</td>
+<td>Keep advertising and selling</td>
+<td>Note showing the backorder and ETA (short ETAs only)</td>
+</tr>
+<tr>
+<td>L0805.002 / L0805.003 (2024)</td>
+<td>About 2-3 weeks from warehouse arrival</td>
+<td>Keep running ads</td>
+<td>Show expected ship date</td>
+</tr>
+<tr>
+<td>L1111.032 (2020)</td>
+<td>2-3 weeks</td>
+<td>Keep ads running</td>
+<td>Show shipment ETA</td>
+</tr>
+<tr>
+<td>L1111.032 (2020)</td>
+<td>8 weeks or more, or no ETA</td>
+<td>Remove from ad campaigns</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>L0835.035 (2023)</td>
+<td>About 2 weeks</td>
+<td>Keep selling</td>
+<td>Show ETA on order page</td>
+</tr>
+<tr>
+<td>L0835.035 (2023)</td>
+<td>About 3 months or no ETA</td>
+<td>Stop paid traffic</td>
+<td>Keep page live with out-of-stock notice and list in-stock similar products</td>
+</tr>
+<tr>
+<td>L0808.006 (2026)</td>
+<td>No ETA, or 2 months or more</td>
+<td>Stop advertising</td>
+<td>Note that the product is out of stock until a given date (do not set inventory to zero)</td>
+</tr>
+<tr>
+<td>L0965.034 (2024)</td>
+<td>3 weeks or more</td>
+<td>Stop ads, do not remove product</td>
+<td>Note with out-of-stock status and ETA</td>
+</tr>
+<tr>
+<td>L1277.046 (2020)</td>
+<td>Backorder longer than about 3 weeks</td>
+<td>Pause ads</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>L1277.046 (2020)</td>
+<td>Backorder with no clear date</td>
+<td>Delete from Google Shopping</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>L1115.011 (2024)</td>
+<td>Longer than about 2-3 weeks</td>
+<td>Reduce ad spend until about 2 weeks before restock</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>L1115.011 (2024)</td>
+<td>Several months, or no ETA</td>
+<td>No paid ad budget</td>
+<td>Not stated</td>
+</tr>
+<tr>
+<td>L1113.028 (2022)</td>
+<td>ETA within 3-4 weeks</td>
+<td>Keep selling when out of stock is unchecked</td>
+<td>Clear out-of-stock note with ETA; email buyers that item is backordered</td>
+</tr>
+<tr>
+<td>L1113.028 (2022)</td>
+<td>Longer ETA</td>
+<td>Set Google Shopping cost per click to zero</td>
+<td>Set inventory to zero, and zero stock for all variants</td>
+</tr>
+<tr>
+<td>L0666.029 (2024)</td>
+<td>A couple of months</td>
+<td>No paid traffic; lower cost per click to 1 cent</td>
+<td>Keep product with back-order note and ETA date</td>
+</tr>
+<tr>
+<td>L0834.021 (2021)</td>
+<td>Long backorder</td>
+<td>Stop ads</td>
+<td>Restart a few weeks before next shipment arrives</td>
+</tr>
+</tbody>
+</table></div>
+<p>Where the sources disagree on the 2-3 week and longer ranges, the nearest-matching row applies. The 2026 advice (L0808.006) is the most recent instruction for setting inventory to zero, and it conflicts with the 2022 advice (L1113.028).</p>
+<ul>
+<li>A backorder of more than 2-3 weeks calls for sharply reduced ad spend on that product; the lead time itself is usually the same for every store selling the item because they ship from the same warehouse. (2024) [L0805.003]</li>
+<li>Stop advertising products that are backordered for long periods, and restart ads a few weeks before the next shipment arrives. (2021) [L0834.021]</li>
+<li>Reduce ad spend on a product when its supplier backorder is longer than about 2 to 3 weeks, and keep it reduced until it is about two weeks from being back in stock. Products with no ETA or a backorder of several months should receive no paid ad budget. (2024) [L1115.011]</li>
+<li>Turn off ads for a backordered product when there is no restock date that is reasonably close. If the backorder is about one or two weeks, keep running ads and show the expected ship date on the product page. (2020) [L0468.050]</li>
+<li>If an out-of-stock product has an ETA of about 2 to 3 weeks, keep advertising and selling it and add a product page note showing the backorder and the ETA. Do this only for items whose ETA is short. (2026) [L0808.005]</li>
+<li>If an out-of-stock product has no ETA or an ETA of two months or more, stop advertising it. Do not set its inventory to zero; instead, add a note on the product page saying it is out of stock until a given date. (2026) [L0808.006]</li>
+<li>When a product is out of stock with a restock ETA of 2 to 3 weeks, keep the ads running and show the shipment ETA on the product page. When the restock is 8 weeks or more away, or no ETA is known, remove the product from ad campaigns. (2020) [L1111.032]</li>
+<li>When a product is out of stock everywhere, pause paid ads for that product and add a backorder note with the date on each product page. Keep the product listed so the status is visible, and do not remove the supplier immediately. (2020) [L0852.035]</li>
+<li>Products with a long lead time mean ads stay off; see the procedures below. [L0965.034]</li>
+<li>Update a product page's lead time only when a popular product is back-ordered or out of stock for an extended period, such as three weeks. Do not update every ETA regularly. (2021) [L0469.035]</li>
+</ul>
+<h3 id="procedure-long-backorder-8-10-weeks-in-a-multi-campaign-google-ads-setup">Procedure: long backorder (8-10 weeks) in a multi-campaign Google Ads setup</h3>
+<ol type="1">
+<li>Do not stop all ads; only reduce the default cost per click for the affected products in the alpha/beta campaigns. (2024) [L0805.002]</li>
+<li>Keep reducing ad spend on those products until they are about 2-3 weeks away from being back in stock, then restore it. (2024) [L0805.002]</li>
+<li>Keep selling the backordered products; directly under the add-to-cart button, show a note that the product is out of stock with an estimated ship date. (2024) [L0805.002]</li>
+<li>After a purchase of a backordered item, send an order confirmation email to the buyer asking them to confirm they saw the backorder note and accept the estimated ship date. (2024) [L0805.002]</li>
+<li>If the item is only a few weeks from arriving at the supplier warehouse (e.g. 2-3 weeks), keep running ads and just display the expected ship date on the product page. (2024) [L0805.002]</li>
+</ol>
+<h3 id="procedure-backorder-of-about-2-to-3-weeks">Procedure: backorder of about 2 to 3 weeks</h3>
+<ol type="1">
+<li>Keep the ads running and keep selling the product. (2024) [L0666.028]</li>
+<li>On the product page near the Add to Cart button, add a text block stating that the product is on back order and giving the estimated shipping date. (2024) [L0666.028]</li>
+<li>After the order comes in, manually email the customer to confirm the ETA for shipping. (2024) [L0666.028]</li>
+</ol>
+<h3 id="procedure-backorder-of-a-couple-of-months">Procedure: backorder of a couple of months</h3>
+<ol type="1">
+<li>Keep the product on the site with a back-order note showing the ETA date. (2024) [L0666.029]</li>
+<li>Do not run paid traffic to it. (2024) [L0666.029]</li>
+<li>In the campaigns, lower the cost per click to 1 cent so no real spend goes to it. (2024) [L0666.029]</li>
+</ol>
+<h3 id="procedure-long-backorder-with-a-longer-lead-time-three-weeks-or-more">Procedure: long backorder with a longer lead time, three weeks or more</h3>
+<ol type="1">
+<li>Stop running ads for the product, but do not remove it from the store. (2024) [L0965.034]</li>
+<li>Add a note on the product page stating that the product is currently out of stock and giving the ETA for shipment. (2024) [L0965.034]</li>
+<li>If a customer still orders organically, email them after the order to confirm they accept the ETA. (2024) [L0965.034]</li>
+<li>Restart ads about two weeks before the product is expected to be back in stock. (2024) [L0965.034]</li>
+</ol>
+<h3 id="procedure-out-of-stock-product-with-no-eta">Procedure: out-of-stock product with no ETA</h3>
+<ol type="1">
+<li>Cut paid ad spend for the product page. (2024) [L1115.012]</li>
+<li>Add a note next to the add-to-cart button saying the item is out of stock and showing the ETA if one is known. (2024) [L1115.012]</li>
+<li>Keep the page live so free organic traffic can still arrive. (2024) [L1115.012]</li>
+<li>Below the note, show a section with similar products that are in stock and ship within 24 hours, so organic visitors can still buy. (2024) [L1115.012]</li>
+</ol>
+<h3 id="procedure-eta-of-about-two-weeks-three-months-or-none">Procedure: ETA of about two weeks, three months, or none</h3>
+<ol type="1">
+<li>If the supplier gives a restock date about two weeks away, keep selling and show the ETA on the order page. (2023) [L0835.035]</li>
+<li>If the product will be out of stock for about three months or has no ETA, stop running paid traffic to it. (2023) [L0835.035]</li>
+<li>Keep the product page live with an out-of-stock notice, and list similar products that are in stock. (2023) [L0835.035]</li>
+<li>When the product is almost back in stock, promote it again. (2023) [L0835.035]</li>
+</ol>
+<h3 id="low-stock-thresholds-for-top-sellers">Low-stock thresholds for top sellers</h3>
+<ul>
+<li>Monitor inventory levels of your best-selling products closely, especially during supply disruptions. Remove a product from ads once its stock falls to roughly 10 units or less, and add it back once the stock is restocked. (2020) [L0358.025]</li>
+<li>When a fast-selling product runs low at the supplier, update its product page manually to a back-order status with the expected date and an option to place a deposit. Inventory updates from the supplier are not synced automatically and must be handled by hand. (older advice, 2019) [L1069.013]</li>
+<li>Back-in-stock notification apps can be used to let customers sign up for alerts when a product returns. (older advice, 2022) [L1113.029]</li>
+<li>Check stock on your best-selling products first, and remove them from ads when stock runs low. [L0961.025]</li>
+</ul>
+<h3 id="product-page-display-rules">Product page display rules</h3>
+<ul>
+<li>Do not display the stock count on the product page for a backorder of 8-10 weeks, because a visible number such as three in stock makes buyers assume it ships immediately. (2024) [L0805.001]</li>
+<li>Show the expected ship date on product pages for out-of-stock or backordered items, and link to similar in-stock products that ship within about 24 hours. Never display a normal shipping time on a product that is actually backordered for weeks. (2020) [L1277.047]</li>
+<li>Do not hide, unpublish or delete out-of-stock product pages that will return. Keep them live, state the back-order status and expected return date, and block ordering, because removing pages hurts SEO. (2021) [L1279.022]</li>
+<li>Update product pages only when a supplier reports a change, not on a fixed weekly or monthly schedule. (2026) [L0808.003]</li>
+</ul>
+<h3 id="zero-inventory-and-google-merchant-center">Zero inventory and Google Merchant Center</h3>
+<ul>
+<li>Marking products as sold out with zero inventory while customers can still buy them can lead Google to suspend a Merchant Center account. The store then cannot advertise its products until the problem is fixed. (2021) [L0853.004]</li>
+<li>Set inventory to zero only when the product is not orderable. The 2022 rule sets inventory to zero for longer ETAs and zeroes all variants (older advice, 2022) [L1113.028]. The 2026 rule keeps the product listed with an out-of-stock note and does not set inventory to zero (2026) [L0808.006]. Both can apply: the 2026 rule governs the note and ordering, and the 2022 rule governs the zero setting when the product cannot be ordered.</li>
+</ul>
+<h2 id="backorders-and-customer-communication">Backorders and customer communication</h2>
+<h3 id="accepting-backorders">Accepting backorders</h3>
+<ul>
+<li>Offer back orders for out-of-stock products when a reasonable delivery window can be stated. Many customers will wait for an item they cannot get elsewhere. (older advice, 2021-22) [L1522.029]</li>
+<li>Under-promise and over-deliver on back orders: quote a longer lead time than the expected one. Example: if stock is expected in four weeks, promise six weeks, so early delivery earns better reviews and referrals. (older advice, 2021-22) [L1522.030]</li>
+<li>Backorders can be accepted, but the order confirmation should state that the product is backordered and give the expected ship date. This prevents complaints and refund requests later. (2020) [L1277.048]</li>
+<li>Only pre-sell a backordered product when the supplier has given a reliable ETA, because customers will cancel or complain if a long backorder is not communicated. (2021) [L0942.010]</li>
+<li>Fast-selling products that run low at the supplier can be listed as back-order with a deposit option (see L1069.013 above; older advice, 2019). [L1069.013]</li>
+<li>If a supplier is out of stock and gives no restock date, do not sell or advertise that supplier's products. If restock is coming soon in a meaningful quantity, pre-selling can make sense; decide supplier by supplier. (2021) [L0968.010]</li>
+</ul>
+<h3 id="notice-above-add-to-cart-when-a-supplier-warehouse-closes">Notice above Add to Cart when a supplier warehouse closes</h3>
+<ul>
+<li>When a supplier warehouse closes, place a clear notice above the Add to Cart button stating due to the coronavirus, supplier ABC is currently not shipping until [estimated date] so customers make informed decisions before payment. (2020) [L0245.004]</li>
+<li>Warehouse closures in major hubs can delay shipping and require special arrangements with customers. (2020) [L0967.037]</li>
+</ul>
+<h3 id="procedure-warehouse-closure-follow-up">Procedure: warehouse closure follow-up</h3>
+<ol type="1">
+<li>Place warehouse closure notice above Add to Cart button. (2020) [L0245.005]</li>
+<li>After orders arrive, manually follow up with phone calls and emails to each customer. (2020) [L0245.005]</li>
+<li>Confirm customer willingness to wait for delayed shipment. (2020) [L0245.005]</li>
+<li>Prevent customers from discovering shipping delays after payment. (2020) [L0245.005]</li>
+</ol>
+<h3 id="procedure-handling-a-backordered-product">Procedure: handling a backordered product</h3>
+<ol type="1">
+<li>Check the ETA for the backordered item with the supplier before speaking to the customer. (2020) [L0852.033]</li>
+<li>Look for a similar product in your store, or find one from another supplier at a similar or lower price. A slightly more expensive alternative can also work if the extra cost is small. (2020) [L0852.033]</li>
+<li>Contact the customer by phone, or have the phone team do it, and explain that the ETA applies to every seller of the product. (2020) [L0852.033]</li>
+<li>If the customer will wait, offer to ship first out the door when stock arrives. If the wait is long, give the new ship date and make the same offer. (2020) [L0852.033]</li>
+<li>If the customer needs the product sooner, offer the alternative. A cheaper alternative can come with a partial refund (for example $100) and ship within 24 to 48 hours. A slightly more expensive alternative can ship with no extra charge to the customer. (2020) [L0852.033]</li>
+<li>If no similar product exists, look for similar products even from smaller or less established brands. (2020) [L0852.033]</li>
+</ol>
+<h3 id="procedure-order-check-before-taking-payment">Procedure: order check before taking payment</h3>
+<ol type="1">
+<li>When an order arrives for a product that may be out of stock, check inventory with the supplier or warehouse before taking payment. (2020) [L1111.033]</li>
+<li>If it is unavailable, email or call the customer that the card has not been charged yet. (2020) [L1111.033]</li>
+<li>Tell the customer the backorder length. (2020) [L1111.033]</li>
+<li>Let the customer choose to keep the order pending or cancel it, and release any pending charge. (2020) [L1111.033]</li>
+</ol>
+<h3 id="procedure-out-of-stock-product-with-no-confirmed-eta-offer-a-similar-item">Procedure: out-of-stock product with no confirmed ETA, offer a similar item</h3>
+<ol type="1">
+<li>Ask the supplier for an ETA and relay it to the customer if one exists. (2024) [L0965.030]</li>
+<li>If there is no ETA, look through your own catalog for the closest similar product, matching type, size and color, for example a white standing desk about 80 inches long. (2024) [L0965.030]</li>
+<li>Contact the customer and explain that the warehouse is out of the item with no confirmed return date. (2024) [L0965.030]</li>
+<li>Offer the similar product, state the price difference in dollars, say whether it is in stock and can ship the next day. (2024) [L0965.030]</li>
+<li>Ask whether the customer wants the order changed to the replacement product. (2024) [L0965.030]</li>
+</ol>
+<p>Message to the customer (2024):</p>
+<pre><code>Hi [customer name],
+
+Thank you for your order of [original product name]. Unfortunately, our supplier&#39;s warehouse is out of this item and they cannot confirm when it will be back in stock.
+
+We found a very similar [product type, size, color] from another supplier that is in stock and can ship tomorrow. It costs [amount] dollars [more / less] than your original item.
+
+Would you like us to change your order to this product? Please reply and let us know.
+
+Thank you,
+[your name / store name]</code></pre>
+<p>[L0965.031]</p>
+<h3 id="procedure-pre-selling-a-product-when-a-supplier-gives-an-eta">Procedure: pre-selling a product when a supplier gives an ETA</h3>
+<ol type="1">
+<li>Use the supplier's ETA as the shipping date for the product. (2021) [L0942.009]</li>
+<li>Turn the product's ads back on and let customers know it ships on that date. (2021) [L0942.009]</li>
+<li>Show the shipping date in a clear but not overly loud notice right next to the Add to Cart button. (2021) [L0942.009]</li>
+<li>Once orders come in, place them with the supplier so the goods are ready to ship when stock arrives. (2021) [L0942.009]</li>
+</ol>
+<h3 id="procedure-backorder-strategy-with-suppliers">Procedure: backorder strategy with suppliers</h3>
+<ol type="1">
+<li>Request inventory reports showing stock levels. (2023) [L0804.029]</li>
+<li>Identify the top 20% of SKUs by sales. (2023) [L0804.029]</li>
+<li>Find out when the next reorder arrives. (2023) [L0804.029]</li>
+<li>When stock runs low, place a deposit to secure inventory before competitors run out. (2023) [L0804.029]</li>
+</ol>
+<h3 id="refund-and-alternative-email-to-a-customer-who-asked-for-a-refund">Refund and alternative email to a customer who asked for a refund</h3>
+<p>Use this when the updated ship date is known and the customer has asked for a refund. (2020)</p>
+<pre><code>Subject: Your order [order number] - updated shipping date
+
+Hi [customer name],
+
+Thank you for reaching out about your order [order number]. Before we process a refund, we confirmed with the supplier, and the updated expected ship date for [product name] is [updated ship date].
+
+We understand that waiting is frustrating. If you&#39;re willing to keep your order pending, we guarantee that your item will be among the first to leave the warehouse, and we can offer you a partial refund of [partial refund amount, e.g. 50 USD] as a thank-you. The amount depends on the order value.
+
+If you would still prefer a full refund, just reply to this email and we will process it right away. We can also show you similar products that are in stock and ready to ship now: [links to similar in-stock products].
+
+Please let us know which option you prefer.
+
+Best regards,
+[your name]
+[store name]</code></pre>
+<p>[L1277.050]</p>
+<h3 id="out-of-stock-notice-with-similar-products">Out-of-stock notice with similar products</h3>
+<p>Use this text on the product page for an out-of-stock item. (2023)</p>
+<pre><code>This product is currently out of stock and is expected back on [date] / has no clear restock date. Here are similar products we have in stock and ready to ship today: [product 1 link], [product 2 link], [product 3 link].</code></pre>
+<p>[L0835.036]</p>
+<h3 id="confirming-a-backorder-in-the-order-email">Confirming a backorder in the order email</h3>
+<ul>
+<li>After a purchase of a backordered item, send an order confirmation email to the buyer asking them to confirm they saw the backorder note and accept the estimated ship date. (2024) [L0805.002]</li>
+<li>After the order comes in, manually email the customer to confirm the ETA for shipping. (2024) [L0666.028]</li>
+<li>If a customer still orders organically, email them after the order to confirm they accept the ETA. (2024) [L0965.034]</li>
+</ul>
+<h2 id="handling-payment-for-backorders">Handling payment for backorders</h2>
+<h3 id="shopify-settings-without-an-inventory-app">Shopify settings without an inventory app</h3>
+<p>Use this procedure when no inventory app is installed. (2021)</p>
+<ol type="1">
+<li>Keep a product listed as in stock while it is available or expected back soon, and show an estimated arrival date on its page. (2021) [L0853.106]</li>
+<li>Mark the item out of stock only when its backorder typically lasts a month or more and you do not want new orders. (2021) [L0853.106]</li>
+<li>Set Shopify so checkout preauthorizes the customer's card without charging it. (2021) [L0853.106]</li>
+<li>Capture the payment only after the supplier confirms the item is in stock. (2021) [L0853.106]</li>
+<li>For items with a long lead time, do not capture the payment, which cancels the charge without a refund. (2021) [L0853.106]</li>
+</ol>
+<h2 id="pre-orders-and-made-to-order-products">Pre-orders and made-to-order products</h2>
+<h3 id="pre-orders">Pre-orders</h3>
+<ul>
+<li>Pre-order sales are a workable approach when suppliers are out of stock. Reserve inventory for pre-order customers and set up delivery deals with customers so shipments are not missed. (2020) [L0967.036]</li>
+<li>Pre-order buyers should be informed of shipping timing and warehouse status. Warehouse closures in major hubs can delay shipping and require special arrangements with customers. (2020) [L0967.037]</li>
+<li>Standard stock-based fashion needs a lot of cash because stock must be bought up front. A pre-order model reduces this cash flow pressure. (Source C) [L0660.014]</li>
+<li>When a dropship supplier says stock will arrive in about a week, the seller can start running a pre-order or a "high demand, secure yours before stock runs out" message in the meantime. Ask the supplier whether stock is limited per batch or can be replenished continuously, and whether they will hold inventory for the seller. [L0552.013]</li>
+</ul>
+<h3 id="made-to-order-and-custom-products">Made-to-order and custom products</h3>
+<ul>
+<li>Sell made-to-order products only if they are made fairly close to the customer and customers are told about the lead time before ordering. Presenting the custom production as a benefit works better than presenting it as a delay. (2021) [L0962.024]</li>
+<li>Made-to-order furniture that ships after about 10 days was accepted by customers when the page explained that it was custom made locally. Customers were willing to wait for it. (2021) [L0962.025]</li>
+<li>Products with a long lead time, such as 16 weeks for made-to-order items, should be marked on the product page right by the add-to-cart button, with the production and delivery estimate. Taking full payment at the time of order is appropriate when the item is custom made. (older advice, 2022) [L1281.080]</li>
+</ul>
+<h3 id="procedure-made-to-order-item-with-a-one-to-two-week-production-window">Procedure: made-to-order item with a one-to-two-week production window</h3>
+<ol type="1">
+<li>Put a note beside the add-to-cart button on the product page, quoting the supplier's exact phrasing, such as saying the item is made to order and dispatches within one to two weeks. (2024) [L0965.032]</li>
+<li>Once a buyer places an order, email them by hand to get confirmation that they understand the build time. (2024) [L0965.032]</li>
+<li>After the customer replies with their confirmation, forward the order to the supplier. (2024) [L0965.032]</li>
+</ol>
+<p>Confirmation email for a made-to-order order:</p>
+<pre><code>Subject: Confirming your order [order number]
+
+Hi [customer name],
+
+Thank you for your order of [product name]. Just want to confirm that you&#39;re aware this product is built to order and ships in [lead time, for example one to two weeks].
+
+Please reply to confirm, and we will send your order to production right away.
+
+Thank you,
+[store name]</code></pre>
+<p>[L0965.033]</p>
+<h3 id="deciding-whether-to-pre-sell">Deciding whether to pre-sell</h3>
+<ul>
+<li>If a supplier is out of stock and gives no restock date, do not sell or advertise that supplier's products. If restock is coming soon in a meaningful quantity, pre-selling can make sense; decide supplier by supplier. (2021) [L0968.010]</li>
+<li>Only pre-sell a backordered product when the supplier has given a reliable ETA, because customers will cancel or complain if a long backorder is not communicated. (2021) [L0942.010]</li>
+</ul>
+<h2 id="substitutions-and-replacements">Substitutions and replacements</h2>
+<h3 id="choosing-a-substitute">Choosing a substitute</h3>
+<ul>
+<li>If a supplier is out of stock but the product still shows as available on your store, offer customers compatible alternatives. This can turn orders that would have been lost into sales. Keep the availability status in mind when managing supplier inventory. (2025) [L0837.017]</li>
+<li>When an ordered product is out of stock, handle it in this order: 1) Order a similar product as a replacement. 2) If no similar product is available, find new suppliers that offer an alternative product. [L0920.031]</li>
+<li>When an ordered product goes out of stock, ship the in-stock items first and send the missing bundle component later. Suppliers usually restock accessories quickly, and customers accept the split if they got the deal. [L1357.042]</li>
+<li>Some dropshipping suppliers, when a product runs out, ship a different brand's product without asking the store owner. Check supplier practices early and set rules for substitutions, because this damages the brand and customer trust. (Source C) [L1315.009]</li>
+<li>For an out-of-stock product with no ETA, the replacement offer is the step in the procedure above (see L0965.030). [L0965.030]</li>
+</ul>
+<h3 id="procedure-similar-in-stock-products-on-the-product-page">Procedure: similar in-stock products on the product page</h3>
+<ol type="1">
+<li>Cut paid ad spend for the product page. (2024) [L1115.012]</li>
+<li>Add a note next to the add-to-cart button saying the item is out of stock and showing the ETA if one is known. (2024) [L1115.012]</li>
+<li>Keep the page live so free organic traffic can still arrive. (2024) [L1115.012]</li>
+<li>Below the note, show a section with similar products that are in stock and ship within 24 hours, so organic visitors can still buy. (2024) [L1115.012]</li>
+</ol>
+<h2 id="discontinued-products">Discontinued products</h2>
+<ul>
+<li>When a supplier discontinues a product, keep its product page but mark it as discontinued. Show two or three similar products that are still in stock, and stop running ads to that page. (older advice, 2022) [L1281.011]</li>
+<li>Keep discontinued or unavailable products on the website as not orderable, with no ads, so they still pick up organic search traffic. (2020) [L1277.049]</li>
+<li>Products that are discontinued by a supplier are handled with the substitution steps above. [L1281.011]</li>
+</ul>
+<h3 id="case-discontinued-model-with-a-phantom-stock-unit">Case: discontinued model with a phantom stock unit</h3>
+<p>A store received an order for a discontinued model, and the supplier's inventory system listed a stock unit that did not exist. The store explained the situation to the supplier's representative, who was not responsive at first. The store then renegotiated the price difference, got the old dealer cost, and charged the customer the new price. The store made more profit on that unit than it would have with the correct price. [L1472.029]</p>
+<h3 id="case-a-discontinued-product-on-a-government-order">Case: a discontinued product on a government order</h3>
+<p>A government agency placed a sizable order, but the manufacturer had discontinued the product that same month, so the order could not be fulfilled as planned. Rather than cancel, the seller contacted two manufacturers who had earlier rejected them because they had not been in the industry long enough. Both agreed to fulfill the order. After the customer approved the change, the seller shipped a product of higher quality than the original, kept the customer as a repeat buyer, and added a new supplier with a new catalog. [L1357.041]</p>
+<h2 id="shortages-and-supplier-reliability">Shortages and supplier reliability</h2>
+<ul>
+<li>When a supplier runs short of stock, every seller who uses that supplier pushes the same limited inventory, so shift traffic and ad spend to suppliers that still have stock and strengthen those relationships. Suppliers that stay reliable during shortages tend to become the strongest long-term partners. [L0942.001]</li>
+<li>When supply is limited, work with the available suppliers, upload the approved products, and optimize them. Circle back to the other suppliers once supply normalizes. (2022) [L0963.089]</li>
+<li>If many product pages from one supplier are out of stock across different competitor stores, the supplier may be out of business, and it is worth reconsidering them. A single out-of-stock product is not a warning sign on its own. (2021) [L0853.114]</li>
+<li>Overseas dropshipping shipments can take several months to arrive, which damages trust and repeat purchases. Keeping your top 10 best sellers in stock locally, where possible, shortens delivery and reduces buyer hesitation. [L0390.058]</li>
+<li>In dropshipping, keep your top 10 best sellers in stock locally, if possible, to offer faster delivery to your best customers. This reduces the long wait that makes buyers hesitate. [L0390.028]</li>
+<li>Fitness and hobby niches had the longest supplier lead times around Q4 due to inventory and shipping congestion. Inventory is expected to normalize around Q1 of the following year. (older advice, 2021) [L1112.052]</li>
+<li>Chinese suppliers often have a large backlog and slow replies in the weeks after Chinese New Year. Plan ad spend and stock with delays of two to three weeks in mind. [L1173.029]</li>
+<li>Demand for home gym and workout equipment spiked during the 2020 COVID-19 lockdowns, and popular items sold out quickly. (See also the factory backlog note above.) [L0358.002]</li>
+</ul>
+<h2 id="price-changes">Price changes</h2>
+<ul>
+<li>Price changes from suppliers are communicated by email to all retailers with the new prices and effective dates, so you normally do not need to check prices constantly. (2021) [L0834.020]</li>
+<li>Suppliers normally send price changes by email with an effective date, and product integrations for pricing or stock are often not available. Track price changes by watching supplier emails and their effective dates. (2025) [L0972.013]</li>
+<li>Suppliers usually announce price changes by email to their retailer list, stating the effective date and time and attaching the new price sheet. If a supplier changes prices without notice, ask them to include you in all future price-update emails so you can update prices before they take effect. (2025) [L0837.036]</li>
+<li>Most suppliers update pricing about once a year at most. They usually send a price sheet plus emails about new products or price changes, so weekly price checks are not needed. (2025) [L0966.028]</li>
+<li>Update product pages only when a supplier reports a change, such as a new size, SKU, variation or price change. Create a new product page for the new item and link to it from the old page. (2026) [L0808.003]</li>
+</ul>
+<h3 id="procedure-new-size-sku-variation-or-price-change">Procedure: new size, SKU, variation or price change</h3>
+<ol type="1">
+<li>Wait for the supplier to notify you of a new size, SKU, variation, or price change. (2026) [L0808.003]</li>
+<li>Create a new product page for the new item. (2026) [L0808.003]</li>
+<li>Put a link on the old product page pointing to the new one. (2026) [L0808.003]</li>
+<li>Update the old page as needed. (2026) [L0808.003]</li>
+</ol>
+<h2 id="pre-buying-inventory">Pre-buying inventory</h2>
+<h3 id="principles-and-caution">Principles and caution</h3>
+<ul>
+<li>Do not pre-buy inventory from a supplier just to get a discount. Pre-buy only when your sales volume is high enough that you need to secure stock. (2020) [L0551.017]</li>
+<li>Buying inventory in advance only makes sense once you have a bankroll and a reliable sales history for a product. A common approach is to place a deposit before the busiest season such as Q4, while the supplier keeps the stock in its warehouse and continues to drop ship. (2021) [L0968.011]</li>
+<li>Pre-buying stock keeps inventory secured while you can still dropship the product. Other options are a third-party fulfillment center, which can get expensive, or your own warehouse, which makes you run a separate fulfillment business. (2026) [L0808.012]</li>
+<li>Do not ask a supplier to pre-stock inventory for a new store. Pre-purchasing inventory only makes sense for an established store with years of sales history with that supplier, checked before the Q4 peak season, and only for products where stock is running low. (2024) [L1115.008]</li>
+<li>Do not buy inventory to supply a marketplace such as Walmart. If you want to test it, list only a few brands whose suppliers reliably keep stock, instead of the whole catalog. (older advice, 2019) [L1069.014]</li>
+</ul>
+<h3 id="pre-purchase-before-the-holidays">Pre-purchase before the holidays</h3>
+<ul>
+<li>Pre-purchase inventory from a supplier you sell consistently when stock runs low, such as before the holidays; the supplier holds it in its warehouse and ships when customers order, avoiding the need for own warehousing. (older advice, 2022) [L0665.016]</li>
+</ul>
+<h3 id="procedure-pre-purchased-inventory-for-a-best-selling-product-that-sells-out-often">Procedure: pre-purchased inventory for a best-selling product that sells out often</h3>
+<ol type="1">
+<li>Estimate average monthly units sold, for example 20 units a month that mostly sell in the first 10 days. (2026) [L0808.011]</li>
+<li>Ask the supplier to hold a higher monthly quantity in their warehouse, for example 40 units, and ship orders for you. (2026) [L0808.011]</li>
+<li>Ask for a discount for ordering upfront. Suppliers often agree, since bigger orders give them faster cash and bigger manufacturer orders. (2026) [L0808.011]</li>
+</ol>
+<h2 id="q4-and-holiday-capacity-planning">Q4 and holiday capacity planning</h2>
+<h3 id="why-q4-is-the-hardest-part">Why Q4 is the hardest part</h3>
+<ul>
+<li>During Q4 the hardest part is not getting sales but delivering reliably and on time, since buyers are already in a buying mood. Stock availability and shipping time are the key bottlenecks. [L0780.005]</li>
+<li>During the holiday season, do not add products whose delivery before the holiday cannot be guaranteed. The lesson used mid-December as the cutoff for products that would not arrive in time. [L1172.015]</li>
+</ul>
+<h3 id="procedure-q4-logistics-with-a-supplier-based-approach">Procedure: Q4 logistics with a supplier-based approach</h3>
+<ol type="1">
+<li>Do not jump on products that are already selling strongly without securing supply, because the supply often runs out first. [L0780.006]</li>
+<li>Limit the number of product variants (e.g., reduce from five colors to two). [L0780.006]</li>
+<li>Buy a small stock (roughly 50 to 100 pieces) and place it in a warehouse in China. [L0780.006]</li>
+<li>With guaranteed stock you can predict supply, fulfill orders faster and guarantee shorter shipping times. The same advice applies to Chinese New Year. [L0780.006]</li>
+</ol>
+<h3 id="weekly-supplier-calls-and-communication">Weekly supplier calls and communication</h3>
+<ul>
+<li>Schedule weekly Zoom or Skype calls with your supplier during Q4 planning and sales periods to verify fulfillment capacity, confirm inventory levels, and troubleshoot issues in real time. Missed communication during high-volume periods causes supply chain failures, leading to chargebacks and account suspensions. [L0309.005]</li>
+<li>A $500,000-revenue store was lost in one Q4 when the supplier quietly ran out of stock but did not communicate for 2-3 weeks. Daily sales of $3,000-$4,000 continued but no shipments left the warehouse. Customer chargebacks accumulated, payment processor terminated the account, and Facebook shut down the ad account due to complaint volume. [L0309.006]</li>
+</ul>
+<h3 id="scaling-capacity-and-event-lead-times">Scaling capacity and event lead times</h3>
+<ul>
+<li>Before scaling a product, have the supplier backend ready, including reliable suppliers and stock available to fulfill the orders that ads will generate. [L1469.007]</li>
+<li>Ask the supplier for the maximum number of orders they can handle comfortably per day, and use that number as the scaling threshold. Suppliers often over-promise; set the threshold lower than their stated maximum. [L1363.036]</li>
+<li>Ask the supplier how long processing takes for the actual order volume; processing time can rise sharply (in the lesson from about one week to much longer) during high demand. [L1363.037]</li>
+<li>Running out of stock during scaling causes angry customers and a fall in revenue. Plan supplier capacity before increasing ad budgets. [L1363.039]</li>
+<li>For date-specific events such as Valentine's Day, count the supplier's shipping time, around two weeks in one example. Start ads about four weeks before the event so the product arrives in time and refunds are avoided. [L1469.025]</li>
+</ul>
+<h2 id="mistakes-that-cost-sales">Mistakes that cost sales</h2>
+<ul>
+<li>Running out of inventory means no sales and no income, so the seller must monitor stock levels closely. [L1153.050]</li>
+<li>Running out of stock during scaling causes angry customers and a fall in revenue. [L1363.039]</li>
+<li>Marking products as sold out with zero inventory while customers can still buy them can lead Google to suspend a Merchant Center account. [L0853.004]</li>
+<li>Some dropshipping suppliers, when a product runs out, ship a different brand's product without asking the store owner. [L1315.009]</li>
+<li>A supplier's system can show stock that does not exist, so do not rely on the inventory feed alone for an order. [L1472.030]</li>
+</ul>
+</article><nav class="pn"><a href="../../03-suppliers-and-fulfillment/15-order-processing-and-automation/"><span class="k">&larr; Previous</span><span class="v">Order processing and automation</span></a><a class="nx" href="../../03-suppliers-and-fulfillment/17-returns-damages-and-customer-facing-supplier-issues/"><span class="k">Next &rarr;</span><span class="v">Returns, damages and customer-Facing supplier issues</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

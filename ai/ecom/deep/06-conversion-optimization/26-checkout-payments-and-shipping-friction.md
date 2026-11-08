@@ -1,0 +1,238 @@
+<!-- part of ecom/deep/06-conversion-optimization.md -->
+Part 26 of 40 of "6. Conversion Optimization: full technical reference". Map of all parts: https://dlichters.com/ai/ecom/deep/06-conversion-optimization.md · Previous: https://dlichters.com/ai/ecom/deep/06-conversion-optimization/25-rules-against-fake-urgency.md · Next: https://dlichters.com/ai/ecom/deep/06-conversion-optimization/27-checkout-trust-and-branding.md
+
+## Checkout, payments and shipping friction
+
+### Checkout steps and customization
+
+- Keep checkout to one or two steps, because every extra click before payment lowers conversion. Where possible, use an express payment method such as Apple Pay, which allows a one-click purchase because the delivery address is already linked to it. [L0387, 2022]
+- On Shopify you cannot match express wallets such as Apple Pay or Amazon Pay, because those services already hold the buyer's payment details. The realistic lever is reducing the number of steps and the friction before checkout. [L0387, 2022]
+- Shopify offers two ways to change the checkout:
+  - A third-party checkout app that fully replaces the Shopify checkout.
+  - A theme or app that adds features on top of it.
+
+  Some themes already include a faster checkout option. [L0387, 2022]
+- Fast Checkout and Instant Checkout apps bypass the add-to-cart page and send users directly to checkout, which reduces friction and can improve conversion rate. [L0209, 2023]
+- ** Do not pay for a one-page checkout tool such as CartHook. Add every payment option available to your customers instead, because such a tool is not necessary for these store models. [L0466, 2018]
+- To change the checkout, open Settings > Checkout and click Customize checkout. Newer Shopify stores may show only a one-page checkout option by default. [L1326, undated]
+- Avoid distracting or overwhelming the buyer with extra requests before the main goal is reached. Simplify the checkout as much as possible so the customer can complete the purchase. [L1208, 2025-26]
+- In the checkout customer information section, only last name and company name are set as required fields. Marketing options such as SMS stay disabled by default in all regions. [L1306, 2020-26]
+- Under Customer accounts in Checkout, customer accounts are turned on and Show sign in links is turned on. No other changes are made to that section. [L1306, 2020-26]
+
+### Express wallets and button order
+
+**Apple Pay and Google Pay**
+
+- Apple Pay is a top priority for conversion, because customers tap once and skip manual address and payment entry. Enable it before anything else in the checkout setup. [L0352, 2022]
+- Enable Apple Pay and Google Pay alongside Shop Pay Installments in Shopify Payments to improve checkout speed and conversions. [L0153, undated]
+- ** Enable Apple Pay and Google Pay on Shopify when you accept Shopify Payments. A shopper on an iPhone can then complete a purchase in about 30 seconds. [L0466, 2018]
+- Set up Apple Pay in the Shopify store for any new store. If it does not work, contact Shopify support, since a domain-related fault was fixed within half a day. [L0820, undated]
+- Keep Apple Pay, Google Pay, and Visa and Mastercard credit and debit cards as the main payment options, since most customers pay with these. Apple Pay gives one-click checkout, which speeds up the transaction. [L1381, 2022]
+- Keep Apple Pay as the visible option. One seller reported that disabling Shop Pay helped, because it can hide Apple Pay at checkout, and most of that seller's US customers had Apple Pay. [L1381, 2022]
+- Reduce checkout effort by offering fast payment options such as Apple Pay or PayPal. At the time of recording, Shopify was working on a one-page checkout to replace a multi-click checkout. [L0502, 2020+]
+
+**Button order and visibility**
+
+- Check the payment buttons shown on the product page under Shopify > Settings > Payments. Make sure Apple Pay or a Shop Now button is shown before the Buy with Shop Pay option. [L0530, 2022]
+- Buy with Shop Pay as the first and main checkout button confuses most shoppers who do not have Shop Pay. They hesitate and click add to cart instead. The reviewer advised replacing it with Apple Pay or Shop Now as the first option. [L0530, 2022]
+- If a store's payment methods are limited, contact Shopify support as a worst-case step to get help configuring the checkout buttons. [L0530, 2022]
+- Shop Pay is toggled on by default in the checkout area. Turn it off in markets where Shopify Payments and Shop Pay are not available. [L1231, 2025-26]
+- Accelerated checkout buttons include PayPal, Amazon Pay, Google Pay and Apple Pay, depending on what is integrated in your Shopify admin. The layout can be set to a number of columns so the buttons take up little space, for example three buttons in one row. [L1231, 2025-26]
+- *Older advice:* Turn on "Show dynamic checkout button" on product pages. It displays the payment method a customer usually uses, based on device, shopping history and the options enabled in the store, such as PayPal, Apple Pay or Google Pay. The customer can pay directly without going through the full cart and checkout. The dynamic button only appears for methods that are enabled, so offer these payment options in the store. [L0370, 2021-22]
+- Express checkout buttons such as PayPal or Venmo depend on the visitor's geolocation, so you may see a button that other visitors do not. A payment option customers do not recognize may be skipped, so make sure the common options are clear. [L0363, 2022+]
+- Shop Pay is Shopify's accelerated checkout, provided through Shopify Payments. You can offer it as an extra payment option next to cards and PayPal. It gives buyers a faster way to pay that can support conversion. [L1512, 2023]
+- Use a direct Shop Now button as the main purchase path instead of a PayPal cart button. The hosts said they no longer used PayPal much and found it a headache to manage. [L0657, undated]
+
+**PayPal Express buttons**
+
+- PayPal Express checkout buttons on the product or cart page can break e-commerce tracking. Buyers leave the site to pay on PayPal and do not always return, so orders go untracked. These buttons also bypass your own checkout, your email system and abandoned-cart sequences. [L0575, 2014]
+- Remove these buttons and send all buyers through your checkout, offering the standard PayPal option there. [L0575, 2014]
+
+**Payment icons and visibility**
+
+- Show accepted payment icons, a guaranteed safe checkout note and an accelerated checkout option such as Shop Pay near the buy button. Competitor stores use these to reduce hesitation at checkout. [L0600, 2026]
+- Show payment icons close to Add to Cart so buyers see trusted payment methods before they commit. Include Apple Pay, Google Pay, Shop Pay, PayPal and major cards in the icon row when they are enabled in the store. [L1188, 2026]
+- Show the accepted payment options early, for example in the cart, not only after the shopper fills in the first checkout step. Hiding payment information likely increases abandoned carts. [L0894, 2020-26]
+
+### Payment method coverage
+
+- ** Offer several payment methods, including Shopify Payments, Amazon Pay, Apple Pay, Google Pay, PayPal and PayPal Credit. Amazon Pay accepts credit cards, debit cards, and personal and business cards. Missing options give buyers a reason to leave. [L0356, 2019]
+- ** Offer as many payment methods as possible, including Apple Pay and Google Pay through Shopify Payments, plus Amazon Pay and PayPal. More choices improve conversion. [L0468, 2020]
+- ** The following setup was described for accepting payments:
+  - Shopify Payments (cards).
+  - PayPal, for buyers who only use PayPal.
+  - Amazon Pay, set up in the Shopify back end and paid directly to your bank account.
+  - Google Pay and Apple Pay, both enabled in Shopify Payments in the Shopify admin.
+
+  [L1085, 2018]
+- Accepted payment methods are a basic conversion fix. Each missing method can lose sales from buyers who do not trust the site or use a different wallet. Check the payment methods before changing the offer or the product page. [L1085, 2018]
+- Payment options such as Apple Pay, Amazon Pay, PayPal and a payment plan can increase conversion, because shoppers have different payment preferences. A missing preferred option can lower conversion, so add the options the store can support. [L0970, 2023]
+- A strong offer can produce sales with only a card processor, so PayPal is not strictly needed to start testing a product. Missing well-known payment methods, however, can lower checkout completion and limit scaling. [L1512, 2023]
+- Run at least two payment methods: one card processor, such as Shopify Payments or Stripe, plus PayPal. This helps avoid conversion drops caused by a missing option. PayPal can accept guest checkout without an account, but the store landing page should explain how to do it. [L1512, 2023]
+- Address payment concerns by clearly showing payment security and the payment options available at checkout. Buy-now-pay-later providers such as Klarna, Zip or Afterpay let price-sensitive buyers spread costs, so mention them when cost is the likely blocker. [L1208, 2025-26]
+
+### Financing and buy-now-pay-later
+
+**Why financing helps**
+
+- Removing payment friction through financing options increases conversion by making purchases accessible to cash-constrained buyers who would otherwise abandon. [L0040, 2020-26]
+- Shop Pay Installments significantly increases conversion rates on high-ticket products by reducing the upfront cost and perceived financial risk customers face, which results in higher average order completion rates. [L0153, undated]
+- Instalment payment options, such as four interest-free payments, can overcome price objections by making the purchase feel affordable in smaller payments. [L0919, undated]
+- Offering pay-over-time financing at checkout can raise conversion, because shoppers who would hesitate at a high price are more willing to buy when they see a small first payment. It is especially useful for products priced from several hundred dollars upward. The effect is strongest when the option is visible on product pages, not only at checkout. [L1295, 2020-26]
+- Financing can raise average order value, because shoppers may choose a more expensive upgrade when they can spread the cost over time. This is most relevant for high-ticket stores where customers would otherwise trade down to a cheaper option. [L1295, 2020-26]
+- Offering installments lowers the amount a buyer must pay upfront, which removes a purchase barrier and raises conversion rates. The effect matters most for high-ticket products, where one large upfront payment is most likely to stop a sale. [L1296, 2020-26]
+- ** Offer financing such as Klarna, Affirm or PayPal Credit, as long as the store does not finance the purchase itself. Financing helps with high-ticket items. [L0468, 2020]
+- ** Financing options can help conversion for high-ticket products, especially when customers can pay in four installments. Klarna and Affirm are the main options cited for orders from $500 to $5,000. [L1111, 2020]
+- ** Klarna and Affirm charge no fee to apply or to be approved, so applying to both is free. Application approvals were reported as slow in 2020, so applying early is recommended. [L1111, 2020]
+- Shop Pay Installments is recommended as a payment plan option when using Shopify Payments, and its limits have grown over time. Affirm or Klarna can be used if Shopify Payments is not in use. [L0970, 2023]
+- Shop Pay Installments also appears as a selectable payment method at checkout, next to cards, Apple Pay and Google Pay. Shoppers who choose it complete the purchase through the same flow, so no extra checkout step is needed for the merchant. [L1296, 2020-26]
+
+**Threshold: sources give different values**
+
+Sources disagree on the price point where financing starts to pay off. Use the value that matches your tool and your niche.
+
+| Source | Threshold or rule | When it applies |
+|---|---|---|
+| Affirm, Klarna or PayPal Credit | Show only on high-priced products, typically from about $1,000 upward. The threshold is set by niche and average order value. [L1069, 2019] | Third-party financing in a high-ticket niche |
+| Pay-over-time generally | Especially useful for products priced from several hundred dollars upward. [L1295, 2020-26] | General guidance for pay-over-time at checkout |
+| Klarna and Affirm | Main options cited for orders from $500 to $5,000. [L1111, 2020] | Orders in that range, paid in four installments |
+| one source: buy-now-pay-later options | For high-ticket products above about $100 to $150 USD. One store with an average order value around $120 reported a clear benefit. [L1512, 2023] | Products above that band |
+| Shop Pay Installments | Lower-priced items show two interest-free payments. Higher-priced items typically show four. [L1296, 2020-26] | After activation, on product pages and at checkout |
+
+**Installment messages on low-priced items: a conflict**
+
+- ** An installment message under a low-priced product distracts from the purchase and does more harm than good. For example, four payments of about $20 under a $70 item. [L1069, 2019]
+- Shop Pay Installments shows its own message on product pages, with two payments for lower-priced items and four for higher-priced items. [L1296, 2020-26]
+- Where both apply, check the live product pages to see what customers actually see, and compare with the thresholds in the table above. [L1296, 2020-26]
+
+**Product page messaging**
+
+- ** Customers who choose financing on high-priced products can be offered a financing option that is shown on the product page with the installment amount, using the financing provider's built-in Shopify integration. Set the messaging so that it asks whether the customer wants financing and only appears on expensive products. [L1069, 2019]
+
+```
+Customers who choose financing on high-priced products can be offered a financing option that is shown on the product page with the installment amount, using the financing provider's built-in Shopify integration. Set the messaging so that it asks whether the customer wants financing and only appears on expensive products.
+```
+
+- After activation, product pages display a small installment message. Lower-priced items show two interest-free payments, while higher-priced items typically show four interest-free payments of the price divided by four. [L1296, 2020-26]
+- Formula for the product-page installment message:
+
+```
+pay in [N] interest-free payments of [price divided by N] with Shop Pay
+```
+
+  N is 2 for low-priced items and 4 for higher-priced items. The shopper sees a small per-payment amount instead of the full price, which makes the purchase feel affordable.
+  - Example for a $30 product: "pay in two interest-free payments of $15.00 with Shop Pay".
+  - Example for a $200 product: "pay in four interest-free payments of $50.00 with Shop Pay".
+
+  [L1296, 2020-26]
+- Installment messaging on product pages is part of the offer itself. After enabling it, check the live product pages to verify that customers actually see the options before considering the task complete. [L1296, 2020-26]
+
+### Local payment methods
+
+- Local payment methods can be enabled on Stripe and Shopify Payments:
+  - For Stripe, check the payment methods in your Stripe account and turn on the needed option, or ask Stripe chat support to enable it.
+  - For Shopify Payments, ask Shopify support to turn the method on for you.
+
+  [L1512, 2023]
+- Locally preferred checkout methods named for European markets (verify before use, as preferences change):
+
+| Country | Methods named |
+|---|---|
+| Germany | Klarna, PayPal |
+| Switzerland | Twint |
+| Spain | Google Pay, Apple Pay, credit card |
+| Several European countries | Bancontact (direct bank transfer) |
+
+  [L1512, 2023]
+- Running ads in a European market with only cards limits both conversion and how far ads can scale. Local methods such as Klarna in Germany or PayPal are important in those markets. [L1512, 2023]
+- Adding a local payment method increased sales noticeably. Customers in the local market trust payment providers that they already know. [L0492, 2023+]
+- Show the logo of a local payment method, such as Twint in Switzerland, on the store to build trust. Twint is limited to Swiss companies, and the customer scans a QR code to pay. [L1439, 2024+]
+
+### Currency and price display
+
+- Set the store's main currency to the currency of the target market. Buyers who first see USD and then a local currency at checkout lose trust and leave, even if a currency converter is available. [L1185, 2023]
+- If most visitors come from a country other than the one shown by default, show prices in that visitor's local currency via geo-targeting. At minimum, display prices in USD when the main ad traffic is from the United States. Check the traffic origin in Google Analytics to decide which currency should be the default. [L0838, 2020-26]
+- Which rule applies: use the single target-market currency [L1185, 2023] when the store is built for one market. Use geo-targeting [L0838, 2020-26] when traffic comes mainly from a different country, and USD when the main ad traffic is from the US.
+- Converting prices from a supplier's currency with an app's automatic conversion produces odd, uneven price points such as 42.95, 41.36 and 46.13. These make the store look less trustworthy, so align them to clean USD price points. [L0838, 2020-26]
+- Plain sale prices do not show the original price at checkout. Sale prices show the original price in the cart or checkout only when a coupon code is applied, unless custom code or an app adds it. [L0806, 2024]
+
+### Shipping costs and fees
+
+**Show costs early**
+
+- Show all costs, including shipping, fees and taxes, early in the buying process rather than revealing them at the final checkout step. Unexpected extra charges at the last step lead to abandoned carts. [L0390, 2019]
+- Show shipping costs and the final price before the cart, for example on the product page. When shoppers add to cart but do not buy, a frequent cause is an unexpected total, often shipping. Visitors should not need the cart to discover the total. [L0640, 2023]
+- Shipping costs and fees should be shown before checkout to avoid shock. Customers who return a product because of an unexpected extra payment are a sign of hidden fees. [L0950, 2023]
+- The most common reason for checkout abandonment is a shipping fee that the buyer did not see before reaching the checkout page. Show shipping costs before checkout to prevent this. [L0473, 2021-22]
+- A shipping fee of around $5 at checkout can stop buyers who expected free shipping. Offering free shipping or showing shipping costs earlier can prevent drop-off at checkout. [L0361, 2024]
+- *Older advice:* For buyers who are anxious, state the shipping method and all shipping costs clearly before checkout. Do not use fine print or asterisks whose meaning is hidden, and do not leave any charge undisclosed, because hidden costs create doubt. [L0473, 2021-22]
+- Before sending paid traffic, check at checkout that the shipping cost matches what the store advertises and that any "free shipping" claim holds for the customer's cart. A mismatch at checkout reduces trust and conversion. [L0657, undated]
+
+**Free shipping and offer elements**
+
+- Show free shipping together with an estimated delivery date on the product page. A competitor that displays free shipping without a delivery estimate is at a disadvantage. [L0894, 2020-26]
+- Free shipping, including free worldwide shipping, is a common offer element that removes a purchase barrier. A free-shipping message placed near the price lowers hesitation. [L0919, undated]
+- Shipping language matters. Compare "free tracked shipping" with "standard shipping" when you write the offer. [L0067, 2023]
+
+**Shipping protection**
+
+- Offer shipping protection at checkout only if it is real insurance and not an upsell. Check the wording before you enable it. [L0667, 2025]
+
+**Answering shipping cost questions directly**
+
+- Formula: answer the buyer's direct question, for example about the shipping cost, right away. Then add a true scarcity note, such as low remaining stock. The direct answer removes friction, and the honest scarcity note pushes the buyer to act. Reported results were around 20 to 30 percent of such conversations ending in a sale. [L1437, 2018]
+  - Example 1: "Standard delivery is $7.95 for this item, and there are only four left at this price, so order today."
+  - Example 2: "Shipping to your address is $5 with 5-7 business days, and just two units remain in stock."
+
+  [L1437, 2018]
+
+### Delivery estimates and backorders
+
+**Estimated delivery dates**
+
+- Estimated delivery dates reduce purchase hesitation by communicating clear fulfillment expectations on the product page. They also decrease inbound support requests about shipping timelines. [L0139, undated]
+- Showing an estimated delivery date range on the product page removes doubt about when the product will arrive. This raises conversion and reduces customer messages asking about delivery timing. [L1192, 2020-26]
+- The estimated arrival range on a product page is counted from the day the visitor views it. A shopper who orders today sees the earliest and longest delivery days counted from today. A shopper who visits on a later day sees the same day counts shifted forward. [L1192, 2020-26]
+- Show the delivery estimate on the product page and in the cart as a date window, such as X to Y. Shoppers buying for a fixed date, such as a gift or an event, feel more confident when the window fits their deadline. [L0955, 2025-26]
+- Show estimated arrival dates on the product page so the buyer knows when the product will arrive. Unknown delivery times add doubt for visitors who do not yet trust the store. [L1346, 2020-26]
+- Show the estimated time of arrival (ETA) for each product on the product page, before checkout. Shoppers want to know when the item will arrive before they buy, and few stores show this. [L1130, 2020-26]
+- Estimated delivery answers the common question "when will I receive it" before the visitor asks, which removes an objection to buying. It should be visible on a live store, but it can be hidden on a demo store where nothing is actually shipped. [L0976, 2024+]
+- Shipping time shown on the store can deter buyers. Show a long delivery time, for example two to three weeks, on the product page and in the email instead of hiding it. This sets the expectation before purchase, so customers are not surprised later. [L0650, undated]
+- Being transparent about shipping time and origin helped close a sale when the store did not state it clearly. In the example, the buyer was told about 10 to 20 days from China when they asked. [L0650, undated]
+
+**Lead-time confirmation**
+
+- Setting correct expectations before purchase reduces refunds, complaints and angry emails after the order. A clear lead-time message on the product page is a cheap way to prevent many service problems. [L1472, 2022]
+- Template for a lead-time confirmation before checkout:
+
+```
+We are working hard to get your {product_name} to you, but this item currently takes about {lead_time} to arrive. Please confirm you are happy with this timeline before you continue to checkout.
+
+[Yes, continue to checkout]   [No, keep browsing]
+```
+
+  [L1472, 2022]
+
+**Backorders**
+
+- ** Do not close your store when supplier inventory is uncertain. Instead, notify customers clearly about delays before they purchase, so they make informed decisions and are not surprised after payment. [L0245, 2020]
+- Show a backorder notice in a highlighted block above the Add to Cart button on every backordered product page, including the expected ship date. Use this exact wording style so customers see the date before they buy. [L0359, 2020]
+- Template for the highlighted block above the Add to Cart button on backordered product pages:
+
+```
+This product is currently backordered and is on its way to our warehouse. Expected shipping date: [EXACT SHIP DATE]. [OPTIONAL: This delay is due to REASON.] All orders will ship first come, first served, starting [SHIP START DATE].
+```
+
+  [L0359, 2020]
+- Replace the placeholders in square brackets before use. [EXACT SHIP DATE] is the exact date from the supplier, not a vague month. [SHIP START DATE] is the first date shipments begin. The reason line is optional. [L0359, 2020]
+
+**Payment and inventory check**
+
+1. Authorize the payment at checkout without capturing funds.
+2. Check that the product is in stock.
+3. If it is in stock, capture the payment and proceed with fulfillment.
+
+[L1094, 2023]
+
+
+Part 26 of 40 of "6. Conversion Optimization: full technical reference". Map of all parts: https://dlichters.com/ai/ecom/deep/06-conversion-optimization.md · Previous: https://dlichters.com/ai/ecom/deep/06-conversion-optimization/25-rules-against-fake-urgency.md · Next: https://dlichters.com/ai/ecom/deep/06-conversion-optimization/27-checkout-trust-and-branding.md

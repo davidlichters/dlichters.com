@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Post-Purchase, transactional and retention flows | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.9: Post-Purchase, transactional and retention flows.">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/09-post-purchase-transactional-and-retention-flows/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Post-Purchase, transactional and retention flows | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.9: Post-Purchase, transactional and retention flows."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/09-post-purchase-transactional-and-retention-flows/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/09-post-purchase-transactional-and-retention-flows/">Plain version</a></div><h1>15.9 Post-Purchase, transactional and retention flows</h1><article><h2 id="core-principles-of-the-post-purchase-flow">Core Principles of the Post-Purchase Flow</h2>
+<ul>
+<li>Transactional emails, meaning order and shipping confirmations, have extremely high open and click rates, so they are a good place to make an offer, ask a question or request feedback. [L0572.008]</li>
+<li>Order and shipping confirmations inform rather than persuade, so they do not need copywriting. [L0568.005]</li>
+<li>Admin emails such as order updates are not copy emails. Their main purpose is service, but an upsell can be added as copy if needed. [L0602.021]</li>
+<li>Shipping notifications have very high open rates because customers are waiting for their parcel, which makes them valuable for cross-selling and building trust. Default templates can be replaced with personal, friendly wording once the system works. [L0910.030]</li>
+<li>A post-purchase flow after the first order serves three purposes: it confirms the brand is legitimate, keeps the buyer informed about the order, and creates room for upsell and cross-sell offers. Keep the message personal and include a link to the brand's social media profiles to grow followers. [L0573.034]</li>
+<li>After the initial purchase, allow customers time to use what they bought, then move them gradually up the value ladder over a longer period. The funnel type changes over time, for example from a free-plus-shipping buyer into an invisible funnel or a two-step high-ticket backend program. Relationship building matters more than the first transaction. [L0523.063]</li>
+<li>Repeat purchases from existing customers only come when the store has delivered good service. Without good service, announcing new products to past buyers by email and SMS will not produce repeat sales. [L0434.019]</li>
+<li>Plan post-purchase sequences in advance by mapping the path from one purchase to the next: what to communicate, which next product offer fits, and when to make it. [L0493.013]</li>
+<li>Each product purchased should trigger its own post-purchase sequence, different from the sequences for other products. [L0493.012, L0203.003]</li>
+<li>After a purchase, segment customers by what they bought and when they bought it, then send related product or service offers that bring them back and increase lifetime value. [L0676.012]</li>
+<li>Use email to bring existing customers back at key moments such as holidays and new product releases that match their interests. This is part of the post-purchase funnel, not only of the remarketing funnel. [L0676.013]</li>
+<li>The post-purchase flow should be split into two tracks, one for new customers and one for returning customers. [L0494.002]</li>
+<li>The post-purchase flow is aimed at customers who have already bought. It offers a discount to encourage a further purchase, so it is a repeat-purchase flow, not a flow for new visitors. [L0606.005]</li>
+<li>Timing between post-purchase offers can be set at two weeks, one month or two months. Choose a starting interval and adjust it through experimentation, because the right timing is not known in advance. [L0493.014]</li>
+<li>Reply emails collect buyer insight and can also produce sales at the same time. Use them with buyers and with people who have not yet purchased. [L0378.089]</li>
+<li>Transactional emails can invite replies that reveal why a visitor did not buy, or gather feedback from customers who did. Replies are a low-cost way to learn about objections and product satisfaction. [L0572.010]</li>
+</ul>
+<h2 id="order-confirmation-and-shipping-confirmation">Order Confirmation and Shipping Confirmation</h2>
+<ul>
+<li>Send the order confirmation immediately after purchase, then send a separate shipping confirmation when the order ships, typically within minutes to about an hour. Both should trigger automatically from order and fulfillment events, and both are good places to add an offer, a question or a request for feedback. [L0572.021]</li>
+<li>Order confirmation steps:
+<ol type="1">
+<li>Send the order confirmation right after purchase. [L0572.009]</li>
+<li>Send the shipping confirmation when the order ships. [L0572.009]</li>
+<li>About three days after the customer receives the product, email them to ask how the product is going, whether they like it, whether they are happy, and whether they have questions. [L0572.009]</li>
+<li>Invite them to hit reply to every one of these emails so they can answer. [L0572.009]</li>
+</ol></li>
+<li>Send one email immediately after a customer's first purchase, not an order confirmation. Use it to present the next offer while the purchase is still fresh: a higher-priced item, a discount, a warranty or a consultation. [L0334.026]</li>
+<li>Order confirmation text to adapt:</li>
+</ul>
+<pre><code>Thank you for your order. Items from [Brand or supplier A] are usually shipped within [X to Y] business days. Items from [Brand or supplier B] are usually shipped within [X to Y] business days. You will receive tracking updates by email as your order moves, and our team is here if you need anything.</code></pre>
+<p>[L0910.027]</p>
+<ul>
+<li>Adding the expected shipping time for each brand to the order confirmation email eliminated about 70 percent of the store's customer emails. This works because the customer gets the answer before they need to ask. [L0910.028]</li>
+<li>Show your own niche store offers after a sale through the order confirmation email and the tracking notification emails. Showing them to visitors through Facebook retargeting before purchase is a gray area that sometimes works and sometimes does not, so test it per niche. [L0923.017]</li>
+</ul>
+<h2 id="shipping-expectations-tracking-and-delivery-alerts">Shipping Expectations, Tracking and Delivery Alerts</h2>
+<ul>
+<li>Post-purchase shipping update flow, in this order:
+<ol type="1">
+<li>Connect the tracking app (AfterShip or similar) to Klaviyo. [L0605.022]</li>
+<li>Create a trigger email for the order-shipped status. [L0605.022]</li>
+<li>In the email, give the shipping update, the delivery timeframe (for example within a set number of days) and 2 to 3 lines of benefit-driven text about the product. [L0605.022]</li>
+<li>Add a link to another collection with an extra discount for the customer's next order while they wait for delivery. [L0605.022]</li>
+</ol></li>
+<li>Shipping update emails put the customer in a positive mood because they confirm the order is moving and the store is trustworthy. This is the moment to pitch another product or collection with an extra discount, since the customer is most concerned about tracking. [L0605.023]</li>
+<li>The best offers work well inside fulfillment update emails, so add offers to shipping and delivery updates. [L0604.008]</li>
+<li>Proactive delivery alerts by SMS, Klaviyo, WhatsApp or another channel protect the customer experience. Telling shoppers about a one-day delay early avoids the frustration of a late order with no update. [L0955.047]</li>
+<li>Klaviyo flows can fire on delivered and sent events from order tracking. Each event is an extra touchpoint for upsells and cross-sells. [L0955.048]</li>
+<li>Proactive delivery delay SMS or email template (replace the placeholders). Send it as soon as the delay is known, before the customer asks where the parcel is:</li>
+</ul>
+<pre><code>Hi {first_name}, a quick update on order {order_number}. Your parcel is running about {delay_length} behind schedule. Your new estimated delivery date is {new_date}. You can follow it here: {tracking_link}. Thanks for your patience.</code></pre>
+<p>[L0955.051]</p>
+<ul>
+<li>Add the same cross-promotion block to the AfterShip tracking notification templates, so every tracking update email also shows the related store offer. AfterShip sends a customer email each time UPS, FedEx or another carrier updates the tracking status. [L0923.015]</li>
+<li>A customer who buys typically receives around four or five AfterShip tracking emails, so the cross-promotion is shown several times at no extra cost. The number depends on how many carrier tracking updates each shipment produces. [L0923.016]</li>
+<li>The Aftership delivery trigger only works if Aftership is installed and connected to Shopify. Without it, the flow must use the Ordered Product trigger with a time delay instead. [L0417.023]</li>
+</ul>
+<h2 id="first-time-and-repeat-thank-you-flows">First-Time and Repeat Thank-You Flows</h2>
+<h3 id="structure-and-triggers">Structure and triggers</h3>
+<ul>
+<li>Thank-you flow trigger: Placed Order, with the first email sent 1 day after the order. [L0607.033, L0573.024]</li>
+<li>A first-time buyer sees the thank-you email after one day, using the condition <code>order equals 1</code> to separate first purchases from repeat purchases. Repeat customers get a separate email, so the two groups never receive the same message. [L0573.024]</li>
+<li>Split first-time and repeat buyers in the thank-you flow with a condition: Placed Order count equals 1 (all time) for first-time buyers, and a separate branch for repeat customers. [L0607.034]</li>
+<li>Sending the same thank-you email to first-time buyers and repeat buyers is a mistake. Split them with a placed-order count condition and write a separate message for each group. [L0607.035]</li>
+<li>Thank-you flow structure:
+<ul>
+<li>Email 1 is sent one day after the order to first-time buyers. [L0573.025]</li>
+<li>A second email follows roughly two days later. [L0573.025]</li>
+<li>A third email can be added for returning customers. [L0573.025]</li>
+<li>Use a personalized message with a link to social media to gain followers. [L0573.025]</li>
+<li>Set all emails to Live with Smart sending off and UTM tracking on. [L0573.025]</li>
+</ul></li>
+<li>Post-purchase discount emails are spaced about 24 hours apart after the order is placed: email 1 at once, email 2 about 24 hours later, email 3 about 48 hours later. Send the thank-you email separately as soon as the order is placed, so the discount sequence does not delay it. [L0606.037]</li>
+</ul>
+<h3 id="setup-procedures">Setup procedures</h3>
+<ul>
+<li>Set up the customer thank-you (post-purchase) flow:
+<ol type="1">
+<li>Open Flows and click Get started on the post-purchase or customer thank-you flow. [L0607.036]</li>
+<li>Check that the trigger is Placed Order. [L0607.036]</li>
+<li>Set the first wait to 1 day. [L0607.036]</li>
+<li>Add the condition Placed Order count equals 1 (all time) to separate first-time buyers from repeat buyers. [L0607.036]</li>
+<li>In the first-time branch, use the post-purchase template, paste your thank-you copy and add your social media link. [L0607.036]</li>
+<li>Clone the first email and set the second email to send 2 days after the order. [L0607.036]</li>
+<li>Add a third email, or a separate email for returning customers, if needed. [L0607.036]</li>
+<li>Make each email Live and check that Smart Sending is off and UTM tracking is on. [L0607.036]</li>
+<li>Click Exit. [L0607.036]</li>
+</ol></li>
+<li>Klaviyo customer thank-you flow: get started on Customer Thank You, edit the first email, turn Smart sending off and UTM tracking on, paste the order-confirmation text, set the subject to "Your order confirmation" with the store name, then set to live. [L0477.020]</li>
+<li>Building the Klaviyo customer thank-you flow:
+<ol type="1">
+<li>Click Get started on customer thank you. [L1297.021]</li>
+<li>Turn Smart sending off and UTM tracking on for the first email. [L1297.021]</li>
+<li>Paste the order confirmation text, set the subject to order confirmation with your store name, then click Done. [L1297.021]</li>
+<li>Switch the email from draft to live. [L1297.021]</li>
+</ol></li>
+<li>Clavio thank-you flow for customers who have already bought:
+<ol type="1">
+<li>Go to Flows and click Get started on Customer thank you. [L0476.013]</li>
+<li>Set the timer so the email sends one day after purchase. [L0476.013]</li>
+<li>Edit the email with the three-dot menu, insert the text from your template, and use the saved store template for logo and images. [L0476.013]</li>
+<li>Offer a reward for the next purchase, for example $15 off or 15% off (example code: save 15 during checkout), and add a note that the order is packed and on its way. [L0476.013]</li>
+<li>Click Save, check the email, click Done, set the email from Draft to Live, and exit the editor. [L0476.013]</li>
+</ol></li>
+<li>The Clavio thank-you flow sends the email one day after purchase. The lesson presents a 15 dollar or 15 percent discount on the next purchase as the reward; choose the amount you can afford. [L0634.015]</li>
+</ul>
+<h3 id="templates">Templates</h3>
+<ul>
+<li>First-time buyer thank-you email template, ready to paste (replace the placeholders in braces):</li>
+</ul>
+<pre><code>Subject line: Thank you for your order, {first_name}
+
+Hi {first_name},
+
+Thank you for your order. It means a lot to us, and we are working on getting it to you.
+
+Here is your thank-you gift: {thank_you_offer}.
+
+We would love to keep you updated. Follow us on social media for news, new products and offers: {social_link}
+
+If you have any questions about your order, just reply to this email.
+
+Cheers,
+{signature_name}
+{store_name}</code></pre>
+<p>[L0607.037]</p>
+<ul>
+<li>Thank-you email, sent 1 day after purchase in the Customer thank you flow:</li>
+</ul>
+<pre><code>Hey, you put your faith in us, you liked our products and you purchased them. It means a lot to us. We have a custom of thanking our rockstar customers with a gift: a 15 percent discount on your next purchase, whatever makes sense for you and whatever you can afford. Here is a 15 percent discount on your next order. Pick from among our legendary [product] items and use code SAVE15 during checkout. By the way, your order is packed and it is on its way. Keep your love for us intact; we will do whatever it takes to retain your trust. Cheers, [customer representative first name], [store URL].</code></pre>
+<p>[L0634.014]</p>
+<h3 id="revenue-and-tone">Revenue and tone</h3>
+<ul>
+<li>To earn extra revenue from thank-you emails, add a gift card to the thank-you email. [L0604.006]</li>
+<li>To earn extra revenue from thank-you emails, add a discounted offer for other products. [L0604.007]</li>
+<li>Two thank-you messages can differ greatly. A message that thanks the customer in corporate language feels distant. A message in which the writer says they personally took the order, showed it to the company president and is grateful the customer chose them feels genuine and builds more warmth. Use the first-person version for customer messages. [L1366.066]</li>
+<li>List VIP perks in the thank-you email only if the store runs a real program that delivers every perk listed, such as discounts, early access and promo alerts. If it does not, remove the list and keep a plain thank-you with the order tracking link. [L0606.042]</li>
+</ul>
+<h2 id="post-purchase-discounts-for-the-next-order">Post-Purchase Discounts for the Next Order</h2>
+<ul>
+<li>The post-purchase flow has three emails offering 15% storewide on the next cart, with deadlines of last 3 days, last 48 hours and last 24 hours. The third email states that the offer ends at midnight. A separate thank-you email runs alongside it. [L0606.012]</li>
+<li>The post-purchase discount applies to the customer's next order, so it lowers the profit of a repeat sale. Before setting the 15% level, calculate the margin on a typical repeat order to confirm the sale still pays. [L0606.023]</li>
+</ul>
+<h2 id="handwritten-notes-postcards-and-physical-thank-yous">Handwritten Notes, Postcards and Physical Thank-Yous</h2>
+<ul>
+<li>Select one primary thank-you method: pre-recorded personalized video messages, handwritten or typed letters, or branded postcards with personalized messages and social media sharing instructions. [L0203.004]</li>
+<li>Order postcards in bulk at minimal cost, handwrite a personalized message on the back alongside a business image, and include branding elements and instructions for customers to share on social media. [L0203.005]</li>
+<li>Include your logo, web address, and a phone or email contact on every handwritten note. Customers often photograph notes and share them on social media or in messages, and the contact details make it easy for others to reach the business. [L0406.020]</li>
+<li>Top repeat customers, such as those who had bought four or more pairs, also received handwritten cards from the team. This made the VIP group feel personally valued and supported repeat purchases. [L0790.103]</li>
+</ul>
+<h2 id="full-post-purchase-sequence-timelines">Full Post-Purchase Sequence Timelines</h2>
+<h3 id="automated-sequence-days-0-to-11-source-b-2021-22-older">Automated sequence, days 0 to 11 (Source B, 2021-22, older)</h3>
+<p>Execute this automated sequence after purchase:</p>
+<ol type="1">
+<li>Order confirmation: immediately (Shopify default system email). [L0203.015]</li>
+<li>Welcome email: 10 minutes after purchase. [L0203.015]</li>
+<li>Upsell Email 1: 1 hour after purchase. [L0203.015]</li>
+<li>Thank-you message (video, text or postcard): 24 hours after purchase. [L0203.015]</li>
+<li>Upsell Email 2: 25 hours after purchase. [L0203.015]</li>
+<li>Upsell Email 3: 48 hours after purchase. [L0203.015]</li>
+<li>Upsell Email 4: 60 hours after purchase, including urgency messaging such as "12 hours remaining to claim this offer". [L0203.015]</li>
+<li>Loyalty program introduction email: 72 hours after purchase (integrates into the welcome sequence). [L0203.015]</li>
+<li>Post-purchase support call: 7 days after purchase. Adjust to match typical shipping time; if products ship in 14 days, move the call to day 14. [L0203.015]</li>
+<li>Referral program introduction email: 8+ days after purchase, sent after post-purchase calls are confirmed, when customers have had positive experiences. [L0203.015]</li>
+<li>Customer feedback survey email: 10+ days after purchase (final touchpoint in the sequence). [L0203.015]</li>
+</ol>
+<h3 id="phone-video-email-and-broadcast-sequence-source-a">Phone, video, email and broadcast sequence (Source A)</h3>
+<p>Execute in order:</p>
+<ol type="1">
+<li>Phone call: thank the customer for their business and explain what to expect during fulfillment and delivery. [L0240.018]</li>
+<li>Facebook video ad: create a short thank-you video setting expectations, using the same messaging as the phone call. [L0240.018]</li>
+<li>Email 1: confirm order details, explain delivery expectations, begin relationship building. [L0240.018]</li>
+<li>Email 2: continue relationship building through educational content related to their purchase. [L0240.018]</li>
+<li>Email 3: engage with relevant content (tips, customer stories, community highlights). [L0240.018]</li>
+<li>Email 4: build anticipation for product arrival or introduce upcoming promotions. [L0240.018]</li>
+<li>Email 5: increase customer lifetime value with a complementary product offer or upsell. [L0240.018]</li>
+<li>Email 6: increase customer lifetime value with a different relevant offer or product angle. [L0240.018]</li>
+<li>Email 7: request a product testimonial or review. [L0240.018]</li>
+<li>Email 8: request a testimonial or review using a different angle or incentive. [L0240.018]</li>
+<li>Email 9: request a testimonial or review (final ask for social proof). [L0240.018]</li>
+<li>Broadcast list: send all product updates, promotions and seasonal offers to the entire customer base. [L0240.018]</li>
+</ol>
+<h3 id="email-only-sequence-source-a">Email-only sequence (Source A)</h3>
+<ul>
+<li>Thank-you email after purchase, then a few days later ask why the customer bought, whether the product is helping, and whether it arrived in good condition. [L0572.015]</li>
+<li>Move the customer onto the main or house list. [L0572.015]</li>
+<li>Send helpful tips on using the product, such as how to get the most from it. [L0572.015]</li>
+<li>Use post-purchase emails that resemble pre-purchase emails to stay on the customer's radar. [L0572.015]</li>
+<li>Include other products to sell to them over time. [L0572.015]</li>
+<li>Sending one thank-you email after purchase and then forgetting the customer wastes the post-purchase opportunity. Buyers should be moved onto the main list and receive useful content. [L0572.014]</li>
+<li>One example order-based sequence contained 72 emails. Some subscribers have received a daily email for over two months, and others for a full year. [L0572.016]</li>
+<li>Post-purchase sequence built as a Klaviyo flow triggered by a purchase:
+<ol type="1">
+<li>Send an order confirmation with shipping info, a short company intro and a mission statement. [L1076.057]</li>
+<li>Send an education email, such as how to install or safely use the product. [L1076.057]</li>
+<li>Send an email with engaging content, such as a helpful video or blog post. [L1076.057]</li>
+<li>Send a dispatch email with tracking details, then send coupon codes that the buyer can use or share with friends and family. [L1076.057]</li>
+<li>Send three testimonial requests, one for text, one for a photo and one for a video. [L1076.057]</li>
+<li>Move the customer into the main broadcast list for regular updates and promotions. [L1076.057]</li>
+</ol></li>
+</ul>
+<h3 id="post-purchase-set-up-steps-for-the-first-order-source-a">Post-purchase set-up steps for the first order (Source A)</h3>
+<ol type="1">
+<li>Send one email immediately after a customer's first purchase, not an order confirmation. [L0334.060]</li>
+<li>In that email, make the next offer: a direct upsell to the higher-priced item with a discount or warranty, a consultation booking, or a quantity increase such as 3 or 6 units instead of 1. [L0334.060]</li>
+<li>If the upsell does not convert, test a store-wide discount on the first order with a short deadline, such as one hour. [L0334.060]</li>
+<li>After a second purchase, send a plain-text email flow that restates the brand's core claims. [L0334.060]</li>
+<li>Build the flow in Klaviyo so it runs automatically. [L0334.060]</li>
+</ol>
+<ul>
+<li>Build a post-purchase email flow that runs automatically: after the first purchase, send an email to test an offer (for example, a full-store discount with a short deadline), and after a second purchase, send a plain-text email flow that reinforces the brand message. The flows should repeat the brand's core claims in each step. [L0334.034]</li>
+<li>Klaviyo is used for all post-purchase and customer email sequences in the example brand, including the personalized follow-up flows. [L0334.033]</li>
+</ul>
+<h2 id="post-purchase-customer-feedback-and-reply-questions">Post-Purchase Customer Feedback and Reply Questions</h2>
+<ul>
+<li>Hello, I have a small question for you. What prompted your purchase of [PRODUCT NAME]? Your insight will help me improve how we support you and our other customers. Just respond to this message.</li>
+</ul>
+<p>Your reply can be a single phrase such as "great price" or a long story, whatever you prefer. Every bit of feedback helps us refine what we sell.</p>
+<p>Use this as a reply-email template:</p>
+<pre><code>Hello, I have a small question for you. What prompted your purchase of [PRODUCT NAME]? Your insight will help me improve how we support you and our other customers. Just respond to this message.
+
+Your reply can be a single phrase such as &quot;great price&quot; or a long story, whatever you prefer. Every bit of feedback helps us refine what we sell.</code></pre>
+<p>[L0378.088]</p>
+<ul>
+<li>Ask customers one question after their second or third weekly design: "Would you recommend us?" [L1153.067]</li>
+<li>If they answer yes, send them a message the next day with a link to share the brand on Facebook, Instagram or Pinterest, such as a banner or the Facebook group. [L1153.067]</li>
+<li>If they answer no, do not send them the next question and put them in a separate funnel. [L1153.067]</li>
+<li>The single question "Would you recommend us?" is the most useful survey question, because people who say yes will usually answer the other feedback questions too. This comes from a Harvard Business Review article used in the course. [L1153.068]</li>
+</ul>
+<h2 id="upsell-and-cross-sell-sequences-per-product">Upsell and Cross-Sell Sequences Per Product</h2>
+<h3 id="per-product-triggers-and-setup">Per-product triggers and setup</h3>
+<ul>
+<li>Build an automated post-purchase upsell sequence of three to four emails. It is triggered automatically when a customer buys a specific core product and does not change the purchase confirmation emails, which are sent alongside it. [L1409.016]</li>
+<li>Email upsell setup steps:
+<ol type="1">
+<li>Download the email template packet, which includes the email templates and timing instructions. [L1409.017]</li>
+<li>Paste each template into your email tool as a step in the sequence. [L1409.017]</li>
+<li>Customize the email text with the specific products and details for each core product. [L1409.017]</li>
+<li>Set the send timing for each email as the instructions specify. [L1409.017]</li>
+<li>Create one flow per core product from the planner list, with the trigger "Customer buys [that core product]". [L1409.017]</li>
+<li>Activate each flow so that it runs automatically on each matching purchase. [L1409.017]</li>
+</ol></li>
+<li>Create a separate email flow for each core product in the upsell planner. For example, ten core products targeted with upsells require ten separate flows, each triggered by its own product purchase. [L1409.018]</li>
+<li>Drip and Klaviyo both integrate with Shopify and can trigger an email flow when a specific product is purchased. Other major email tools offer similar purchase-based triggers. [L1409.019]</li>
+<li>Email flows can be set up to trigger on a specific product purchase, so each product can have its own upsell email. Set this up in Klaviyo using product triggers. [L0970.129]</li>
+<li>Segment customers in Klaviyo who purchased a specific product:
+<ol type="1">
+<li>Create filter: "Include &gt; Orders &gt; Product is [product name]". [L0274.035]</li>
+<li>Create filter: "Exclude &gt; Orders &gt; Product is [related product]" (optional). [L0274.035]</li>
+<li>Set up automation to email this segment with a complementary product offer. [L0274.035]</li>
+</ol></li>
+<li>Plan each product's sequence so the next offer is clear and timed. Choose the interval from Section "Core Principles" above and test it. [L0493.014]</li>
+</ul>
+<h3 id="full-four-sequence-upsell-campaign-per-core-product">Full four-sequence upsell campaign per core product</h3>
+<ul>
+<li>Upsell email setup for each core product, in order:
+<ol type="1">
+<li>Sent immediately after the first purchase of the core product: 3 to 4 emails sent automatically in a row. [L1408.003]</li>
+<li>Sent 15 to 30 days post-purchase: the same 3 to 4 emails again, with minor variations. [L1408.003]</li>
+<li>Sent 60 days post-purchase: the same 3 to 4 emails again, with minor variations. [L1408.003]</li>
+<li>Sent 120 days post-purchase: the same 3 to 4 emails again, with minor variations. [L1408.003]</li>
+</ol></li>
+<li>A full upsell email campaign uses four sequences per core product: one immediately after purchase, then at 15 to 30 days, at 60 days and at 120 days after purchase, each containing 3 to 4 emails. [L1408.004]</li>
+<li>Formula: automated upsell emails per core product = 4 sequences × 3 to 4 emails each = 12 to 16 emails. Across several core products the total multiplies accordingly, which looks like a large number but comes from copying the same emails. [L1408.013]</li>
+<li>In Klaviyo, the four sequences can be built as one flow per product with four email sets inside it, or as four separate flows. Either structure works as long as the emails are sent at the right intervals. [L1408.005]</li>
+<li>Each upsell sequence needs a condition that removes the customer from the flow if they have already bought the upsell product, so they stop receiving offers for something they own. [L1408.006]</li>
+<li>The 15 to 30 day window is a good time to re-offer an upsell because the core product has usually been delivered and the customer has started using it, so add-ons and bundles are easier to value. [L1408.007]</li>
+<li>The 15 to 30 day window also fits customers whose budget was stretched at the first order, since after the next payday or a freed-up credit card limit they may be able to afford the upsell. [L1408.008]</li>
+<li>The 60-day and 120-day sends reach customers who have had more time with the product, so their opening email should reintroduce the same upsell with a slightly different angle. Reusing the exact wording from the 15 to 30 day send makes later sends feel stale. [L1408.015]</li>
+<li>Creating the sequences efficiently: duplicate the first upsell flow four times, then change only the opening email of each copy slightly (for example the framing of the offer for the later send date). The products and the rest of the emails stay the same. [L1408.009]</li>
+<li>Duplicating an upsell flow works differently in each email platform, so check how your tool copies flows, sequences or individual emails before building the four timed sets. Only the opening email of each copy needs small wording changes; the upsell product and the rest of the emails stay the same. [L1408.014]</li>
+<li>Setting up the full set of duplicated upsell flows is quick, so it can be spread over several days or a month alongside other work instead of being done in one long session. [L1408.010]</li>
+<li>Most email recipients never open a given message, and average open rates sit around 20 to 30 percent, so repeating the same upsell offer across several sends reaches different people each time and raises total conversion. [L1408.001]</li>
+<li>Sending an upsell offer only once and not sending enough emails overall is a common error in email marketing. A single send misses the majority of buyers who never open it. [L1408.002]</li>
+<li>Repetition is a core marketing principle: the same call to action can be repeated several times on a page or across messages without harm, as long as it stays respectful and consistent. [L1408.011]</li>
+<li>Upsell email sequences should run alongside the store's regular customer emails, since those keep the relationship going between upsell sends. Together they keep the brand top of mind and make each later upsell offer feel more natural. [L1408.012]</li>
+</ul>
+<h3 id="offer-templates-and-patterns">Offer templates and patterns</h3>
+<ul>
+<li>Post-purchase follow-up for a low-ticket part that belongs to a high-ticket product, sent immediately after the first order:</li>
+</ul>
+<pre><code>Hi [First name], thanks for your order of [low-ticket item]. It is a part for [high-ticket product]. As a thank-you, we would like to offer you a free consultation with one of our experts. You can book it here: [calendar link]. [Your brand name]</code></pre>
+<p>[L0334.027]</p>
+<ul>
+<li>Warranty reminder email, sent automatically when the warranty checkbox was not ticked at checkout:</li>
+</ul>
+<pre><code>Hi [First name], you did not add the [warranty name] to your order of [product name]. You can still add it here: [link] and get 25% off the warranty within [time limit]. If you have questions, just reply to this email. [Your brand name]</code></pre>
+<p>[L0334.028]</p>
+<ul>
+<li><p>Missed add-on reminder pattern: [Name], you did not add [the add-on that protects or completes the purchase] to your order. Here is [a specific discount] to add it now, with a time limit and a reply option. This works because it frames the upsell as a reminder of a missed item rather than a new sale.</p>
+<ul>
+<li>Example 1: <code>Hi Sam, you did not add the extended care plan to your standing desk order. Get 20% off within 48 hours: [link].</code></li>
+<li>Example 2: <code>Hi Maya, you did not add the spare filter set to your air purifier order. Add it today for 15% off: [link].</code> [L0334.029]</li>
+</ul></li>
+<li><p>Cross-sell email for repeat buyers, sent 7 to 14 days after delivery together with the dynamic product ad. Pair product X with product Y in the product catalog before sending, so the ad and the email recommend the same item:</p></li>
+</ul>
+<pre><code>Subject line: &#39;Pairs well with your {product X name}&#39;
+
+Hi {first name}, thanks again for your order of {product X name}. Many customers who love it also pick {product Y name}, so we thought you would like to see it. Your code {coupon code from the first email} still works until {expiry date} for {discount}. See the pick here: {link}.</code></pre>
+<p>[L1243.047]</p>
+<ul>
+<li>Post-purchase messages can add a discounted offer for other products to thank-you emails. [L0604.007]</li>
+</ul>
+<h2 id="digital-bonuses-and-access-links">Digital Bonuses and Access Links</h2>
+<ul>
+<li>Delivering a digital bonus after purchase with Klaviyo:
+<ol type="1">
+<li>Create a flow in Klaviyo triggered by a purchase of the product. [L0934.058]</li>
+<li>Add an email that sends the access link. [L0934.058]</li>
+<li>Use a Google Drive link to PDFs or an unlisted YouTube video or unlisted page as the link. [L0934.058]</li>
+<li>Test the flow before going live. [L0934.058]</li>
+</ol></li>
+</ul>
+<h2 id="review-photo-and-testimonial-requests">Review, Photo and Testimonial Requests</h2>
+<h3 id="timing">Timing</h3>
+<ul>
+<li>Send post-purchase email sequences over 14 days requesting text reviews, product photos and videos. Incentivize submissions with discount codes, gift cards or physical gifts to increase participation. [L0286.024]</li>
+<li>The photo or review request should be sent a few days after the delivery email, not on the day the product arrives. Waiting gives the customer time to use the product before being asked. [L0417.018]</li>
+<li>Using a time delay that is shorter than the real delivery time sends the request before the product has arrived. Set the delay from the actual average shipping time and add a few days on top. [L0417.021]</li>
+<li>Judge.me's default review request email is sent 14 days after purchase, so the buyer should already have received the product. [L1245.013]</li>
+<li>Review requests are also sent after repeat purchases, so customers who buy again are asked for a review too. This keeps the review base growing over time. [L1245.014]</li>
+<li>Contact customers about three months after purchase to ask for their experience with the product, and collect quotes from several customers into one evergreen blog post. Customer setup showcase pages can be created by year and updated as customers submit photos or reviews. [L1120.033]</li>
+</ul>
+<h3 id="building-the-review-flow-in-klaviyo">Building the review flow in Klaviyo</h3>
+<ul>
+<li>Klaviyo review request flow (Testimonial ask), step by step:
+<ol type="1">
+<li>In Klaviyo, open Flows and create a new flow, for example named Testimonial ask. [L0417.019]</li>
+<li>Under the trigger, choose the metric Ordered Product (filters are optional). [L0417.019]</li>
+<li>Add a time delay after the trigger that matches the normal delivery time plus a buffer, for example 10 days when shipping takes about 7 days. [L0417.019]</li>
+<li>Add an Email action after the delay. [L0417.019]</li>
+<li>Edit the email in the drag-and-drop builder: set the sender name, the subject line, images and text, or use the HTML builder if needed. [L0417.019]</li>
+<li>Save the email, set the flow status to Live, then click Save and exit. The flow then sends automatically in the background without further work. [L0417.019]</li>
+</ol></li>
+<li>Aftership-based delivery flow:
+<ol type="1">
+<li>Install and connect Aftership to the Shopify store. [L0417.020]</li>
+<li>In Klaviyo, open the prebuilt delivery flow that is triggered when a customer receives delivery via Aftership, which loads pre-built emails. [L0417.020]</li>
+<li>Edit the flow so the photo or review email goes out a few days after the delivery email. [L0417.020]</li>
+<li>Save the flow and set it to Live. [L0417.020]</li>
+</ol></li>
+<li>A flow that is saved but not set to Live never sends anything. Always switch the flow to Live before saving and exiting. [L0417.022]</li>
+<li>In a Klaviyo flow with a time delay, each new buyer enters the flow on the trigger and waits in a queue for the full delay before the email is sent. One flow therefore handles every order automatically, with no manual sending per customer. [L0417.026]</li>
+<li>Klaviyo's built-in post-purchase flow can serve as a starting template for review request emails and can be edited to match the store's wording and timing. Sending review requests through Klaviyo rather than through an app's automated review emails keeps the whole sequence in one place. [L0429.085]</li>
+<li>Klaviyo automates review requests and follow-up emails once the business has enough orders to justify automation. Start with manual personal follow-up before automating. [L1111.121]</li>
+</ul>
+<h3 id="incentives">Incentives</h3>
+<ul>
+<li>A reward for leaving a review must be automatically generated and tied to the review, so the same customer cannot pick up the same incentive repeatedly. Set the incentive in the review app's settings, not handled manually after each order. [L0476.044]</li>
+<li>To encourage photo reviews without offering a free product:
+<ol type="1">
+<li>Send a gift card, typically $25 or $50, that the buyer can use on the next purchase. [L0429.047]</li>
+<li>Alternatively, send a small niche-related gift worth about $20 to $50 that you can drop-ship along with the order, if it is worth the cost. [L0429.047]</li>
+</ol></li>
+</ul>
+<h3 id="review-apps-judgeme-and-junip">Review apps (Judge.me and Junip)</h3>
+<ul>
+<li>Send product review requests through Klaviyo rather than through Judge.me's automated review emails. Judge.me's emails are not a deal breaker if the store is already happy with them. [L0429.028]</li>
+<li>Judge.me sends an automatic review request email to buyers, and it can be edited in the email template section with the built-in editor. Keep the review request turned on so buyers are asked for reviews after they receive their order. [L1245.012]</li>
+<li>Judge.me sends a confirmation email to a customer after they leave a review. It is part of the email templates and can be edited the same way. [L1245.015]</li>
+<li>Post-review actions flow:
+<ol type="1">
+<li>Open Post-review actions in the Flows section. The flow is set to trigger when a review is submitted. [L1244.009]</li>
+<li>Add an action to the post-review actions flow that sends the customer an email with their discount code. [L1244.009]</li>
+<li>Connect a messaging app under Integrations if you want the email or SMS action to be available. [L1244.009]</li>
+</ol></li>
+<li>Junip's Integrations screen offers messaging apps for post-review flows, including Postscript, Omnisend, Klaviyo, Drip and Shopify Flow. Connecting one adds email or SMS functionality to the flow. [L1244.010]</li>
+</ul>
+<h3 id="review-request-template">Review request template</h3>
+<pre><code>Getting Value? Please Leave a Review!</code></pre>
+<p>[L1286.007]</p>
+<h2 id="surveys-and-feedback-requests">Surveys and Feedback Requests</h2>
+<h3 id="timing-1">Timing</h3>
+<ul>
+<li>Send the post-purchase survey email a few days after purchase (for example three or four days). This is different from the review request, which is sent about two weeks after purchase. Do not send both on the same day, to avoid overloading the customer. [L0682.014]</li>
+<li>Send the first survey request email about 14 days after purchase, adjusted to your typical delivery times. The customer should have received the product first if the survey is meant to rate the product itself. [L1052.007]</li>
+<li>If the survey only covers the on-site experience or customer service, it can be sent closer to the purchase date. Sending it further out avoids cluttering the early post-purchase email sequence. [L1052.008]</li>
+<li>The customer feedback survey email in the Source B sequence is sent 10+ days after purchase as the final touchpoint. [L0203.015]</li>
+</ul>
+<h3 id="reminders">Reminders</h3>
+<ul>
+<li>Every feedback or review request email should be followed by a reminder to those who have not responded yet. A reminder can also reach people who already responded without harm. Email open rates average about 30%, so a single email is often missed. [L0682.015]</li>
+</ul>
+<h3 id="survey-questions-and-examples">Survey questions and examples</h3>
+<ul>
+<li>Survey template (ask every caller or buyer in this order):</li>
+</ul>
+<pre><code>Before you wrap up, I have a few brief questions we put to every caller. While browsing our website, did anything seem broken or not work properly? [If yes: What was it?] Were you checking other websites while looking into this product? [If yes: Which ones?] Please share your candid opinion: did any of those sites appeal to you more, and if so, what made them stand out? What specifically did you like about them?</code></pre>
+<p>[L0682.023]</p>
+<ul>
+<li>A post-purchase survey email can ask how the buyer experienced the business, whether they compared other sites before buying, which sites those were, and what could be improved. These questions reveal competitor comparisons and friction points that the store can address. [L0682.026]</li>
+</ul>
+<h3 id="reporting-results-to-customers">Reporting results to customers</h3>
+<ul>
+<li>Send an email to the customer list once per quarter summarizing the survey results and the changes made in response. For smaller businesses or fewer responses, every six months is sufficient. [L1052.015]</li>
+<li>Quarterly update email structure: state that many people have filled in the survey, share a few points they highlighted about the business, then explain what has been changed internally in response to that feedback. Keep it short and factual, so customers see their feedback matters and get another reason to open future emails. [L1052.016]</li>
+<li>Automated survey emails can be sent through any email automation tool connected to your store. The send point after purchase is your choice, and the full follow-up process can be outsourced to a virtual assistant once it is set up. [L1052.018]</li>
+</ul>
+<h2 id="loyalty-program-reminders">Loyalty Program Reminders</h2>
+<ul>
+<li><p>Tell customers about the loyalty program more than once, never only once. Send the first mention at or soon after the first purchase, then remind customers who hold points at least every three months. [L0956.007]</p></li>
+<li><p>Loyalty program introduction email: 72 hours after purchase, integrated into the welcome sequence. [L0203.015]</p></li>
+<li><p>Loyalty reminder email flow:</p>
+<ol type="1">
+<li>Write one reminder email that says the customer has loyalty points, explains how to use them, and suggests products they can buy with the points. [L0956.008]</li>
+<li>Add it to the email marketing system as an automated flow. [L0956.008]</li>
+<li>Set the flow trigger to send to customers with loyalty points once every three months, at a minimum. [L0956.008]</li>
+<li>Activate the flow and leave it running. Review and adjust the wording occasionally, but do not rewrite it on a schedule. [L0956.008]</li>
+</ol></li>
+<li><p>Do not treat a loyalty program as a one-time announcement. Customers forget the program quickly, so repeated reminders are needed to produce repeat purchases. [L0956.011]</p></li>
+<li><p>Formula for a post-purchase message about a loyalty program:</p>
+<ol type="1">
+<li>State the points earned on this order.</li>
+<li>Name one other action that earns more points, such as a review or a referral.</li>
+<li>State what the points can become on the next order.</li>
+</ol>
+<p>Customers are most receptive right after buying, and a concrete balance with a clear next step is easier to act on than a general mention. Examples: <code>Your order just added 150 points to your account. Leave a review on a product to earn more, then use the total on your next order.</code> and <code>Thanks for your order. You now have 320 points, enough for a discount on your next purchase. Refer a friend and you earn points when they buy.</code> [L0956.016]</p></li>
+</ul>
+<h2 id="referral-program-emails">Referral Program Emails</h2>
+<ul>
+<li>Promote the referral program several times so customers know it exists. Include it in an email sent shortly after a customer's first purchase. [L1234.014]</li>
+<li>Referral program introduction email: 8+ days after purchase, sent after post-purchase calls are confirmed, when customers have had positive experiences. [L0203.015]</li>
+<li>Place referral program emails after customers have experienced positive post-purchase touchpoints like support calls and loyalty rewards. Customers primed by satisfaction are far more willing to enthusiastically refer your business. [L0203.013]</li>
+<li>Connecting referral rewards to the loyalty system makes the process smoother, for example by awarding loyalty points for referrals. Emails can then cover both programs. This integration is helpful but not required. [L1234.015]</li>
+<li>Remind customers about the referral reward at least every three months by email. Also mention the referral program in personalized post-purchase messages. [L1234.017]</li>
+<li>Reminders about a referral program give customers a simple way to pass something of value on to friends, family or social followers. Framing the reminder around that benefit to the customer, not only the reward, is part of why it works. [L1234.020]</li>
+</ul>
+<h2 id="win-back">Win-Back</h2>
+<ul>
+<li>Win-back email template for customers who have not bought for a while (replace the placeholders in braces):</li>
+</ul>
+<pre><code>Hey {billing first name}, it has been a while since your last purchase from {store name}, and we miss you. As a thank you, here is $15 off your next order. Use code {discount code} at checkout: {store URL}. We hope to see you back soon. Reply STOP to opt out.</code></pre>
+<p>[L0477.041]</p>
+<ul>
+<li>Repeat purchases come only from good service, so a win-back offer should follow a store that has delivered it. [L0434.019]</li>
+</ul>
+<h2 id="cross-store-and-own-niche-promotion">Cross-Store and Own-Niche Promotion</h2>
+<ul>
+<li>Cross-promotion placed in the order confirmation email reaches customers after they have bought, so it does not interfere with the conversion rate of the main store. It also brings free traffic to the second store. [L0623.022]</li>
+<li>Add a note to the order confirmation email that refers customers to a related store with a return-customer discount code. This drives cross-store sales. [L0964.125]</li>
+<li>Cross-promoting two related stores:
+<ol type="1">
+<li>Add a note to the order confirmation email linking to the second store with a return-customer discount code. [L0964.126]</li>
+<li>Once both stores run well, use monthly store-wide promotions (module six, creating promotions) to mix audiences that have been customers longest. [L0964.126]</li>
+</ol></li>
+<li>Show own niche store offers after a sale is made, through the order confirmation email and the tracking notification emails. [L0923.017]</li>
+<li>Post-sale value example: a 100 dollar gun safe sale can become a 40 dollar ebook sale, plus a recurring 30 dollar per month subscription. Each buyer then brings in more revenue than the initial sale, which makes a higher cost per click affordable. [L0923.034]</li>
+</ul>
+<h3 id="affiliate-offers-after-purchase">Affiliate offers after purchase</h3>
+<ul>
+<li>Affiliate links can be sent directly in emails, because you control your autoresponder and the buyer can click straight to the offer. This removes friction, although sending people to a blog review first also works. [L0923.030]</li>
+<li>Coupon codes from your own stores cannot be used for affiliate offers, because the buyer is sent to a different website. Own-store offers therefore come first in the sequence, and affiliate offers follow only if you have no suitable own store. [L0923.031]</li>
+<li>Offer placement after purchase:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Offer type</th>
+<th>When to show it</th>
+<th>Where to show it</th>
+<th>Tool or channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Own related niche store</td>
+<td>After a sale</td>
+<td>Shopify order confirmation email and AfterShip tracking emails</td>
+<td>Shopify, AfterShip</td>
+</tr>
+<tr>
+<td>Affiliate store (affiliate network or Amazon Associates)</td>
+<td>After a sale, after own-store offers</td>
+<td>Order confirmation email and tracking emails, with direct links allowed</td>
+<td>Commission Junction, ShareASale, Amazon Associates</td>
+</tr>
+<tr>
+<td>Information product</td>
+<td>Three-day autoresponder sequence after purchase, plus Facebook retargeting to blog posts for about 30 days</td>
+<td>Email with direct affiliate link; blog review as retargeting target</td>
+<td>ClickBank and niche affiliate programs, Facebook pixel</td>
+</tr>
+<tr>
+<td>Upsell add-on</td>
+<td>After an item is added to cart, and at checkout</td>
+<td>Cart and checkout</td>
+<td>Shopify product upsell app</td>
+</tr>
+<tr>
+<td>Intangible item (warranty, same-day shipping, white glove delivery, assembly)</td>
+<td>Same as upsell add-on</td>
+<td>Upsell app, or a product page option for lower-priority offers</td>
+<td>Shopify product upsell app</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0923.032]</p>
+<ul>
+<li>Cross-sell and cross-promotion sequence after a sale:
+<ol type="1">
+<li>Send the first own-store offer in the order confirmation email after a sale. [L0923.033]</li>
+<li>Add the same offer to the AfterShip tracking notification emails, so it appears in each tracking update. [L0923.033]</li>
+<li>Send affiliate store offers after the own-store offers, using the same post-sale emails if you have no own store. [L0923.033]</li>
+<li>Send an autoresponder sequence of about three days after the purchase that mentions information product offers. [L0923.033]</li>
+<li>Keep retargeting the buyer with Facebook ads to blog posts for about 30 days. [L0923.033]</li>
+<li>Keep the buyer on the email list and send broadcast emails for new offers and holidays such as Memorial Day and Black Friday. [L0923.033]</li>
+</ol></li>
+</ul>
+<h2 id="source-conflicts-and-version-notes">Source Conflicts and Version Notes</h2>
+<ul>
+<li><strong>Second survey or review timing:</strong> The survey timing differs by what it measures. A survey on the product itself is sent about 14 days after purchase, after delivery [L1052.007]. A survey on the on-site experience or customer service can be sent closer to purchase, at about 3 to 4 days [L0682.014, L1052.008]. The Source B sequence places its feedback survey at 10+ days [L0203.015]. Use the rule that matches what the survey measures.</li>
+<li><strong>Review request timing:</strong> Judge.me's default is 14 days after purchase [L1245.013]. A Klaviyo review flow is set from the actual average delivery time plus a buffer, such as 10 days when shipping takes about 7 days [L0417.019]. Use the Klaviyo delay for flows you build, and the Judge.me default only if you keep Judge.me's request.</li>
+<li><strong>Review sending channel (older, 2022):</strong> The 2022 advice is to send review requests through Klaviyo, not Judge.me's emails [L0429.028, L0429.085]. The Judge.me email is not a deal breaker if the store is already satisfied with it [L0429.028]. Keeping the request in Klaviyo keeps the whole sequence in one place [L0429.085].</li>
+<li><strong>Referral timing:</strong> The Source B sequence sends the referral email at 8+ days, after the post-purchase calls are confirmed [L0203.015]. The later advice is to promote the referral program in an email shortly after the first purchase, and to repeat it [L1234.014]. Both apply: the first mention shortly after purchase, and a later introduction once the customer has had a positive experience.</li>
+<li><strong>Thank-you discount level:</strong> The Clavio flow uses $15 off or 15% off [L0476.013, L0634.015]. The thank-you template uses a 15% discount [L0634.014]. The post-purchase storewide offer uses 15% [L0606.012]. Choose the amount you can afford, and check the margin on a typical repeat order before setting 15% [L0606.023].</li>
+<li><strong>Second thank-you email timing:</strong> The structure gives the second email roughly two days after the first [L0573.025]. The step-by-step procedure sends it 2 days after the order [L0607.036]. Both describe a second email about two days later, so measure the gap from the event your flow uses.</li>
+<li><strong>Open rates:</strong> Average open rates are about 20 to 30 percent [L1408.001] and about 30 percent [L0682.015]. Either figure justifies repeating offers and reminders.</li>
+<li><strong>Upsell timing:</strong> The first-day sequence sends upsells at 1 hour, 25 hours, 48 hours and 60 hours after purchase [L0203.015]. The long campaign repeats 3 to 4 emails immediately after purchase, then at 15 to 30 days, 60 days and 120 days [L1408.003]. Both apply: the first runs in the first days, the second repeats the offer over months.</li>
+<li><strong>Version notes (older advice, 2019 to 2022):</strong> The following units come from sources dated 2020 to 2022 and should be treated as older: [L0203.003, L0203.004, L0203.005, L0203.013, L0203.015, L0406.020, L0429.028, L0429.047, L0429.085, L0493.012, L0493.013, L0493.014, L0568.005, L0602.021, L0682.014, L0682.015, L0682.023, L0682.026, L0956.007, L0956.008, L0956.011, L0956.016, L1052.007, L1052.008, L1052.015, L1052.016, L1052.018, L1111.121, L1234.014, L1234.015, L1234.017, L1234.020, L1408.001-L1408.015, L1409.016-L1409.019]</li>
+</ul>
+<h2 id="flow-structure-per-core-product">Flow structure per core product</h2>
+<ul>
+<li>Do not build one email flow for all core products. Each core product needs its own flow with its own purchase trigger, otherwise the emails will not match the product the customer bought. (Source: Source B, 2021-22, older advice.) [L1409.028]</li>
+</ul>
+<h2 id="post-purchase-upsell-email">Post-purchase upsell email</h2>
+<ul>
+<li>Pattern (Source B, 2021-22, older advice):
+<ol type="1">
+<li>Thank the buyer for the core product just purchased.</li>
+<li>Name a related product that pairs well with it.</li>
+<li>Include a button that adds the product to the cart in one click. [L1409.020]</li>
+</ol></li>
+<li>Example templates:</li>
+</ul>
+<pre><code>Thanks for your order of the [core product]. The [related product] pairs well with it, so add it here in one click.</code></pre>
+<pre><code>Your [core product] is on its way. Many buyers also add the [related product] at the same time. Tap here to add it to your order.</code></pre>
+<p>[L1409.020]</p>
+<h2 id="repeat-buyers">Repeat buyers</h2>
+<ul>
+<li>Customers who have already bought once should not receive the same offer again straight away. (Source: Source B, 2021-22, older advice.) [L1456.036]</li>
+<li>If a repeat-purchase email does not convert, the offer is probably wrong for them, or they need useful content for a while before the next sales email. (Source: Source B, 2021-22, older advice.) [L1456.036]</li>
+</ul>
+<h2 id="complementary-products-for-past-buyers">Complementary products for past buyers</h2>
+<ul>
+<li>Past buyers can be contacted by email to offer complementary products later, which turns a first purchase into a second and third sale. (Source: Source B, 2021-22, older advice.) [L1486.005]</li>
+<li>This only works when the niche has a product range that suits the same customer. (Source: Source B, 2021-22, older advice.) [L1486.005]</li>
+</ul>
+<h2 id="personalized-recommendations-with-ai">Personalized recommendations with AI</h2>
+<ul>
+<li>Automated, AI-powered email flows send personalized product recommendations. (Source: Source D, 2026.) [L1459.014]</li>
+<li>They are used to keep customer retention high. (Source: Source D, 2026.) [L1459.014]</li>
+</ul>
+</article><nav class="pn"><a href="../../15-email-and-sms/08-browse-abandonment-manual-cart-recovery-and-personal-follow-/"><span class="k">&larr; Previous</span><span class="v">Browse abandonment, manual cart recovery and personal follow-up</span></a><a class="nx" href="../../15-email-and-sms/10-sms-marketing-compliance-opt-in-and-flows/"><span class="k">Next &rarr;</span><span class="v">SMS marketing: compliance, opt-in and flows</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

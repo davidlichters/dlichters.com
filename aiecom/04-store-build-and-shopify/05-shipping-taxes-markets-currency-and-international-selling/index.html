@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Shipping, taxes, markets, currency and international selling | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.5: Shipping, taxes, markets, currency and international selling.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/05-shipping-taxes-markets-currency-and-international-selling/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Shipping, taxes, markets, currency and international selling | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.5: Shipping, taxes, markets, currency and international selling."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/05-shipping-taxes-markets-currency-and-international-selling/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/05-shipping-taxes-markets-currency-and-international-selling/">Plain version</a></div><h1>4.5 Shipping, taxes, markets, currency and international selling</h1><article><h2 id="shipping-model-for-supplier-fulfilled-stores">Shipping model for supplier-fulfilled stores</h2>
+<ul>
+<li>Shipping profiles are rules that decide which products ship to which destinations and what they cost. Manage them under Settings &gt; Shipping and delivery in the Shopify admin. [L0970.070]</li>
+<li>Most stores use free shipping on all products through a single profile that covers all products. Upgraded options such as expedited shipping or white-glove delivery are the exception. [L0970.071]</li>
+<li>Standard policy (2025 source): free shipping on all orders to the continental USA. The store pays the shipping cost; the customer does not. [L0255.018]</li>
+<li>Always offer free shipping to all customers, with the company covering the cost. Handle expedited or upgraded shipping and white-glove delivery as fixed-cost add-on options. [L0268.018]</li>
+<li>Free shipping is the norm among competing stores in this niche, so the store offers it and absorbs the shipping cost. [L1305.029]</li>
+<li>Shopify's built-in shipping rates are not used when suppliers ship on their own accounts, because suppliers usually have better prices. Shopify's discounts with UPS, FedEx, DHL and USPS exist but are rarely used by this business. [L0805.033]</li>
+<li>Do not rely on live carrier shipping rates. The store-owner setup is a free shipping option for almost all products, an expedited option as an upcharge, and a white-glove option as a fixed upcharge. [L0359.045]</li>
+<li>Counterpoint (older, 2020): when charging for shipping, Shopify's built-in calculator can display real-time carrier quotes. Use it before looking for third-party shipping apps. [L1088.029]</li>
+<li>A store on a basic Shopify plan does not need supplier locations entered. The store does not use Shopify shipping calculations and handles freight through suppliers and carriers. [L0854.071]</li>
+<li>Shipping abroad only makes sense for small, inexpensive items. Premium and bulky products, which fit the high-ticket model, rarely justify international shipping costs. [L1274.074] (older, 2018)</li>
+<li>Shipping must be reviewed before launch so checkout shows correct delivery costs for each country served. [L1008.004]</li>
+</ul>
+<h3 id="multi-supplier-procedure-older-2020">Multi-supplier procedure (older, 2020)</h3>
+<ol type="1">
+<li>For multiple suppliers, use one free shipping rule: "Continental US = free shipping." [L0268.020]</li>
+<li>Use fixed-cost add-ons for expedited delivery or white-glove delivery. [L0268.020]</li>
+<li>For inventory: enter a random inventory number (100-300) if you are not tracking real-time stock. Customers don't see internal numbers. [L0268.020]</li>
+<li>No need for a setup with 4 or more locations. [L0268.020]</li>
+</ol>
+<h2 id="free-shipping-setup">Free shipping setup</h2>
+<ul>
+<li>Basic principle: set up a domestic shipping rate before launch. Without a rate for your country, checkout does not work properly for customers. For most new stores, free shipping is the simplest starting point. [L0677.023]</li>
+<li>Shipping is set up in basic form first, with free shipping as the most appealing option. Later, once real costs and the product mix are known, decide whether to charge shipping for certain locations or products. [L0677.026]</li>
+<li>Free shipping as a general rule (2019, older): in Shopify admin, open Shipping and create one method named "Free shipping" with a price of 0. Customers see it in checkout and pay nothing; the supplier's shipping cost is paid by you. [L0357.050]</li>
+</ul>
+<h3 id="free-shipping-for-the-us-2023-2025-source">Free shipping for the US (2023-2025 source)</h3>
+<ol type="1">
+<li>Open General shipping rates in the general shipping profile. [L1305.028]</li>
+<li>Check the shipping origin address. It defaults to the address entered at account creation; update it later with the business address. [L1305.028]</li>
+<li>Delete all default rates listed under the shipping rates (the default free rate and others). [L1305.028]</li>
+<li>Edit the first rate and change its type to Custom flat rate, with no transit time. [L1305.028]</li>
+<li>Name the rate "Free shipping" and click Add. [L1305.028]</li>
+<li>Set the price to $0 and the minimum order price to $0. [L1305.028]</li>
+<li>Click Done. [L1305.028]</li>
+<li>Under Shipping zones, keep Domestic (United States) with the Free shipping rate at $0. [L1305.028]</li>
+<li>Delete the International zone. [L1305.028]</li>
+<li>Confirm that the remaining 27 countries and regions are not covered, so customers can only ship to the United States with free shipping. [L1305.028]</li>
+<li>Click Save. [L1305.028]</li>
+</ol>
+<ul>
+<li>Settings &gt; Shipping and delivery &gt; General shipping rates: delete all default rates, then add one Custom flat rate with no transit time, named "Free shipping", price $0, minimum order price $0. Click Done. [L1305.027]</li>
+<li>International shipping is not offered at launch because international rates are too expensive. With only the US in the shipping zones, other markets stay uncovered. [L1305.030]</li>
+</ul>
+<h3 id="free-shipping-for-australia-2021-22-source">Free shipping for Australia (2021-22 source)</h3>
+<ol type="1">
+<li>Go to Settings &gt; Shipping and delivery. [L0677.024]</li>
+<li>Click Manage rates in the shipping box at the top. [L0677.024]</li>
+<li>Choose the Domestic profile for Australia. [L0677.024]</li>
+<li>Delete the default Express and Standard rates. [L0677.024]</li>
+<li>Delete the Rest of World rate. [L0677.024]</li>
+<li>Click Add rate, name it "Free shipping" and leave the price at 0 (zero means free). [L0677.024]</li>
+<li>Click Done. [L0677.024]</li>
+<li>Click Save. [L0677.024]</li>
+</ol>
+<ul>
+<li>Do not set a Rest of World shipping rate for a store that only sells domestically. Without it, checkout will not let customers continue with a foreign shipping address, which is the desired effect. [L0677.025]</li>
+<li>The Shipping from address in the domestic profile comes from the store address in Settings &gt; General. You can edit the address used for rate calculations in the shipping settings. [L0677.047]</li>
+<li>The Local delivery and Local pickup options on the Settings &gt; Shipping and delivery page are for stores with a physical location and their own warehouse. A dropshipping store does not need to configure them. [L0677.046]</li>
+<li>To charge a different rate for only certain products, create a new profile in Settings &gt; Shipping and delivery instead of changing the default domestic profile. [L0677.048]</li>
+</ul>
+<h2 id="paid-upgrades-and-expedited-options">Paid upgrades and expedited options</h2>
+<ul>
+<li>Priority shipping is set up in Shopify settings as a shipping option. It is free and takes about 5 minutes to configure. Pair it with a visible delivery time so customers can choose it at checkout. [L1076.045]</li>
+<li>Expedited shipping is built as a shipping profile in Shopify so customers can select it at checkout. No third-party app is needed for expedited rates. [L1094.062]</li>
+<li>Fixed upcharge options: expedited delivery as an upcharge and white-glove delivery as a fixed upcharge. [L0359.045, L0268.018]</li>
+<li>Example of a free option and a paid faster option side by side:
+<ul>
+<li>Free option: name "Free Express Delivery", Rate type Flat, Price $0.00, Transit time 3 to 5 business days. It appears at checkout with the estimated delivery dates. [L0798.012, L0798.011]</li>
+<li>Paid faster option: name "Express Priority Delivery", Price $4.95, placed next to the free option. Customers choose between free and paid speed at checkout. [L0798.013, L0798.011]</li>
+</ul></li>
+<li>Pricing limits (2019-2022 source, older): aim for a maximum shipping charge of about $10 on low-priced products, and ideally offer free shipping by building the cost into the product price. Expedited shipping should not exceed about 15 to 20 percent of the product price. [L1259.041]</li>
+<li>Shopify shipping option timeframes are static text, such as "five to seven days". For longer custom production times, put the lead time on the product pages and leave timeframes off the shipping option text. [L0962.031]</li>
+</ul>
+<h3 id="setting-up-a-shipping-option-source-d-2026-procedure">Setting up a shipping option (Source D 2026 procedure)</h3>
+<ol type="1">
+<li>Click Settings at the bottom left of the Shopify admin. [L0798.011]</li>
+<li>Click Shipping and delivery. [L0798.011]</li>
+<li>Click General profile. [L0798.011]</li>
+<li>Check the fulfillment location (the shop location) and the shipping zones. [L0798.011]</li>
+<li>Add a shipping option to the zone with Add shipping option (or Add rate). [L0798.011]</li>
+<li>Name the first option "Free Express Delivery", set Rate type to Flat and Price to $0.00, and set Transit time to 3 to 5 business days. [L0798.011]</li>
+<li>Add a second option, open it with Edit shipping option, and name it "Express Priority Delivery" with a price of $4.95. [L0798.011]</li>
+<li>Save the profile. [L0798.011]</li>
+</ol>
+<h3 id="custom-shipping-rates-and-zones-2019-2022-sources">Custom shipping rates and zones (2019-2022 sources)</h3>
+<ul>
+<li>Delete the default shipping rates and create custom rates such as "Free Track Shipping" (0 USD) and "Expedited Shipping" (4.99 USD). For other regions, create zones, for example "ePacket" or "T4" for Canada, Australia and the United Kingdom. [L1259.040, L1260.049]</li>
+<li>Weight-based shipping rate formula: product weight × rate per pound. Example: at $2 per pound, a 50 lb product costs $100 to ship. Product weights must be accurate for this to work. [L0671.216] (older, 2021)</li>
+</ul>
+<h2 id="shipping-profiles-and-product-level-rules">Shipping profiles and product-level rules</h2>
+<ul>
+<li>Create a new profile for a group of products from one supplier: Settings &gt; Shipping and delivery &gt; Create new profile. Choose the shipping zone first, then add the rate. [L0971.050]</li>
+<li>Some themes do not support different shipping rates for individual products by default. Ask the store developer or support for custom code before installing a third-party app. [L1279.100]</li>
+<li>The Charlotte Shopify theme has one default delivery estimate for all products. Different estimates per supplier, category or product need a custom code change from the developer. [L1281.057]</li>
+<li>Dispatch-based estimate: for products shipped from a supplier that dispatches the same or next day with a domestic carrier, 3 to 5 business days is a safe estimate. Suppliers that dispatch only on certain days, such as weekly on Fridays, need a longer window. [L1069.026]</li>
+</ul>
+<h2 id="shipping-zones-and-locations">Shipping zones and locations</h2>
+<ul>
+<li>The General profile applies to all products that are not in another shipping profile. New products are added to it by default. Its rules are set under Settings &gt; Shipping and delivery &gt; General profile. [L0798.008]</li>
+<li>In the General profile, check the Fulfillment location under the shop location setting, because that location sends the orders. The Shipping zones section lists which countries each zone covers and the rates attached to it. [L0798.009]</li>
+<li>A shipping zone can cover many countries at once. In the example store, one zone covered several countries and 234 more, with a paid rate of $3.95 for that zone. [L0798.010]</li>
+<li>Check that each target market is included in shipping in Shopify. If shipping is not set up for a country such as Australia, customers may not be able to check out. [L0950.028]</li>
+<li>Check shipping and sales regions in Shopify against the markets you advertise to. A store sending paid traffic that could not buy because it only shipped to Australia and New Zealand needs its location settings changed. [L1225.039]</li>
+<li>Third-party carrier rates at checkout are switched on under Settings &gt; Shipping and delivery with "Enable third-party calculated rates at checkout". This needs your own carrier account connected. The option showed an "Upgrade your plan" prompt, so check the plan first. The default package under Saved packages feeds these calculations, so enter your real parcel size and weight there. [L1167.037]</li>
+<li>Source D 2026 packages and local delivery: leave the default settings at the foundation stage, including the packing slip template, the pickup in store option and the sender name on shipping labels. Delivery customizations can be used later to hide, reorder or rename delivery options at checkout. [L1327.027]</li>
+</ul>
+<h3 id="ask-shopify-for-setup-help-before-outsourcing-2020-older">Ask Shopify for setup help before outsourcing (2020, older)</h3>
+<ol type="1">
+<li>Call Shopify support by phone before hiring someone. [L1277.063]</li>
+<li>Ask them to walk you through the shipping zone and location setup, which may take around 30 minutes. [L1277.063]</li>
+<li>Only outsource the setup if Shopify cannot resolve it. [L1277.063]</li>
+</ol>
+<ul>
+<li>Use the setup problem above if supplier location ZIP codes are not accepted in Shopify. [L1277.063]</li>
+</ul>
+<h2 id="estimated-delivery-and-checkout-display">Estimated delivery and checkout display</h2>
+<h3 id="estimated-delivery-on-product-pages-source-a-procedure">Estimated delivery on product pages (Source A procedure)</h3>
+<ol type="1">
+<li>In the product template, expand Product information. [L0139.007]</li>
+<li>Click the eye icon next to Estimated delivery to enable it. [L0139.007]</li>
+<li>Set the earliest delivery day (example: 4 days). [L0139.007]</li>
+<li>Set the latest delivery day (example: 7 days). [L0139.007]</li>
+<li>Save changes. The system automatically updates these calendar dates each night at midnight based on the current day. [L0139.007]</li>
+</ol>
+<ul>
+<li>Estimated delivery text appears on product pages when the setting is not hidden in the theme editor and the country, earliest delivery days, latest delivery days, and text are all filled in. [L0971.054]</li>
+<li>Show when orders are expected to arrive: in Shipping and delivery &gt; General profile &gt; Estimated delivery dates, switch on "Show when orders are expected to arrive" so customers see the expected delivery window before buying. [L0798.015]</li>
+<li>Shopify shows the warning "Not showing transit time may impact conversion at checkout". Hiding the transit time on a shipping option can lower checkout conversion, so keep it visible. [L0798.014]</li>
+</ul>
+<h3 id="shipping-information-and-trust">Shipping information and trust</h3>
+<ul>
+<li>Customers want to know how a product will be delivered, what it costs, and how trustworthy the delivery company is. Shipping should be presented to look better than what competitors offer. [L0411.024]</li>
+<li>Missing shipping information on the product or cart page weakens trust. Show delivery time and shipping cost clearly before checkout. [L0524.021]</li>
+<li>Never add costs at the cart or checkout stage that the shopper did not see earlier, including shipping, taxes or other fees. Hidden costs are the number one reason for abandoned checkouts. Show any delivery costs on the product page. [L1522.022]</li>
+<li>Rephrase shipping information positively (2019-2022 source, older): instead of "free shipping", state "We pay for shipping". Instead of "delivery in 12 to 15 days", state "We ship within 1 to 2 days". If delivery is slow, add an explanation, such as "Due to high demand, delivery takes 7 to 10 business days; you will get a tracking number within 12 to 24 hours". [L1259.042]</li>
+<li>Add a shipping policy note with typical delivery times, and add a warning that delivery can take longer. [L0964.099]</li>
+</ul>
+<h3 id="show-free-at-checkout-instead-of-calculated-at-next-step">Show "Free" at checkout instead of "calculated at next step"</h3>
+<ol type="1">
+<li>In Shopify go to Settings &gt; Languages. [L1345.062, L1259.035, L1260.043]</li>
+<li>Open the edit default theme content option. [L1345.062, L1259.035, L1260.043]</li>
+<li>Search for "shipping". [L1345.062, L1259.035, L1260.043]</li>
+<li>Set the shipping default value to "Free". [L1345.062, L1259.035, L1260.043]</li>
+<li>Save and check the checkout to confirm the text reads "Free". [L1345.062]</li>
+</ol>
+<ul>
+<li>If shipping is free, display "Free" at checkout rather than "calculated at next step", because the latter makes buyers expect extra charges. If shipping is not free, the calculated text can stay. [L1345.063]</li>
+</ul>
+<h2 id="taxes">Taxes</h2>
+<ul>
+<li>Tax settings are found under Settings &gt; Taxes and duties, where tax collection by location and method is configured. [L0855.095]</li>
+<li>Shopify's built-in tax calculation is a starting point. A tax app can track sales thresholds across states as revenue grows. [L0855.106]</li>
+<li>Shopify can manage and collect sales tax and other charges paid by the customer. No changes are made at first; it becomes relevant when a sales tax threshold for states or markets is reached. [L1305.031]</li>
+<li>Shopify adds a default tax setting, such as VAT included at 20 or 21 percent, on new products. If you do not charge taxes, disable the tax setting on each product, because visible tax lines can cause checkout abandonment. [L1259.036]</li>
+<li>If the exact product category is not in Shopify's list, choose the closest top-level category, since taxes may be calculated from the selected category. [L0970.072]</li>
+<li>Change the store owner's tax country in the Shopify admin: open Settings in the bottom left and find the address settings for the account. Update the country to match the business location. [L1111.057]</li>
+</ul>
+<h2 id="store-currency">Store currency</h2>
+<h3 id="which-currency-to-choose">Which currency to choose</h3>
+<ul>
+<li>Store currency should match the country where the business is based and where it sells, not the country of the website's audience. Once the first sale is made, the store currency is locked and cannot be changed. [L0677.003]</li>
+<li>Set the store's currency to the currency of the primary selling market (for example USD for a US store). If the account defaulted to another currency such as CAD but the store sells in the US, change it to USD. Settings &gt; Store currency. [L1305.003]</li>
+<li>Set the store's default currency to the currency used by customers in the country being targeted. This keeps prices and checkout consistent for those buyers. [L0853.038] (older, 2021)</li>
+<li>When targeting a new market, set the store currency to the local currency. Showing USD or another foreign currency at checkout causes buyers to lose trust and leave. [L1185.020]</li>
+<li>Currency display for a US market: in Settings &gt; General &gt; Store defaults &gt; Currency display, set US Dollar (USD $) if you sell to the US market. If the store currency is left on a local currency (for example SGD), US customers see the local currency on the website and at checkout, which discourages purchases. The currency customers see is managed under Markets, where the backup region is set to United States. [L1327.005]</li>
+<li>Set the default display currency to the currency of the main traffic source. If most visitors come from the United States, show US dollars by default, because visitors who see unfamiliar prices often leave before buying. [L1325.001]</li>
+<li>Check the default currency: open your own store from the country where most of your traffic comes from, without a VPN, and see which prices appear. If visitors would see an unfamiliar currency, change the store's default to the local one. [L1325.029]</li>
+<li>Keep currency consistent across the whole buying path. Showing prices in one currency on the product page and switching at checkout confuses buyers and makes them leave, especially in markets like the UK. [L0694.048]</li>
+<li>Competitor stores show prices in the visitor's currency and place a country and currency selector in the header, for example CAD for Canada. Set this up before selling into a second market so the displayed price matches what the customer pays. [L0600.040]</li>
+<li>Orders from Canada can be taken in US dollars without conversion. Currency conversion apps exist but are not required to start. [L1092.048] (older, 2022)</li>
+</ul>
+<h3 id="without-shopify-payments-and-with-it">Without Shopify Payments and with it</h3>
+<ul>
+<li>Without Shopify Payments, checkout may show only the store currency (for example USD). With Shopify Payments, buyers see prices in their local currency. Use the same currency as the target market and check the main store currency under Settings. [L1259.039]</li>
+<li>Shopify Payments shows the visitor's currency automatically. For other countries, set up tax and shipping rules in Google Merchant Center first, and keep the other country's Google Shopping campaigns separate from the US ones. [L0834.047] (older, 2021)</li>
+<li>Shopify Multi-Currency Support lets a store display and charge prices in several currencies, which matters when selling to customers in more than one country. [L1089.002] (older, 2021)</li>
+<li>Base currency: each market can have its own base currency, which only Shopify Payments can manage. [L1167.008]</li>
+</ul>
+<h3 id="changing-the-store-currency">Changing the store currency</h3>
+<ul>
+<li>To change the store currency for a new market, contact Shopify support on Twitter (X), which replied fastest in this case. Then open a support ticket asking to change the store currency for the new market. The currency can be switched back to the original one later. [L1185.045]</li>
+<li>Changing the store currency can be requested from Shopify support by opening a ticket. It can be switched back later. [L1185.020]</li>
+</ul>
+<h3 id="currency-conversion-apps">Currency conversion apps</h3>
+<ul>
+<li>Bucks Currency Converter (free) setup procedure:
+<ol type="1">
+<li>Install the app from the Shopify App Store. [L0635.014]</li>
+<li>Copy the modified money format HTML with currency and the HTML without currency from the app. [L0635.014]</li>
+<li>Go to Shopify Settings &gt; Store currency, click Change formatting, and paste both HTML snippets into the matching fields. [L0635.014]</li>
+<li>Save. [L0635.014]</li>
+<li>Go to Theme app extension settings, turn on the currency converter option, click Save, confirm with "I have done this", then click Enable app. [L0635.014]</li>
+</ol></li>
+<li>Once the currency converter is active, visitors from other countries (for example Canada or Australia) see product prices in their own currency on the product page. [L0635.015]</li>
+<li>Currency-conversion apps only convert the displayed price. This conflicts with MAP pricing in dropshipping, so they do not solve custom USD pricing for a Canadian store. Before creating a second store for another currency, ask Shopify support through live chat whether its native features or an app can set separate prices per currency. [L0854.113] (older, 2022)</li>
+<li>Shopify Markets can show prices in visitors' local currency automatically, if enabled. Enabling it does not solve shipping costs, which decide whether selling to a distant market is worth it. [L0360.020] (2024)</li>
+</ul>
+<h3 id="currency-conversion-in-a-spreadsheet-2022-older">Currency conversion in a spreadsheet (2022, older)</h3>
+<ol type="1">
+<li>Put USD prices in column A. [L0429.048]</li>
+<li>In column B, enter a formula multiplying column A by the current exchange rate (CAD cell = USD cell × exchange rate). [L0429.048]</li>
+<li>Drag the formula down. [L0429.048]</li>
+<li>Update the rate, because exchange rates change. [L0429.048]</li>
+</ol>
+<h2 id="shopify-markets">Shopify Markets</h2>
+<h3 id="basics">Basics</h3>
+<ul>
+<li>Shopify Markets is the built-in feature for selling to customers in other countries from one store. Each market groups one or more regions and can carry its own currency, language, catalog and discount settings. [L0798.001]</li>
+<li>Shopify Markets lists 237 regions that can be added to a market. A market can be set to cover specific selected regions instead of all of them. [L0798.002]</li>
+<li>Markets &gt; International &gt; Edit: the regions of the International market are changed here. Use Market conditions set to Specific, then pick the countries and press Done. [L0798.003]</li>
+<li>The market detail page has Parent market and Sub-market fields, so one market can sit inside another in a hierarchy. The market for the store's own country is labeled as the store default in the Markets list. [L0798.021]</li>
+<li>Each market has a Customized section that says "Create unique configurations for customers in this market". It contains Currency, Catalogs, Discounts, Domain and language, and an option for market-specific settings. If nothing is customized, the store configuration applies. [L0798.007]</li>
+<li>Example (Singapore store): the International market used Singapore Dollar (SGD) as its currency in its Customized section, while the Markets list showed each market's region count and status. Checking the currency per market before activating it prevents prices from displaying in the wrong currency. [L0798.022]</li>
+<li>Market settings have separate areas for Languages and domains, Products and pricing (for example All products included and the market currency), Duties and import taxes, and Store settings (Payments and Taxes). [L1167.008]</li>
+<li>Shopify's Markets recommendation says 22% of worldwide online sales are cross-border, and it suggests activating an International market to start selling abroad. Activating that market is what makes the other countries available at checkout. [L1167.040]</li>
+<li>Turning on International Active activates geolocation, which converts product prices into the visitor's local currency automatically. Most merchants stop there, but each target country should also get its own market with manually set prices. [L1316.001]</li>
+<li>Activate markets for each country you target so shoppers see prices in their local currency. Do this before running paid traffic to several countries, otherwise conversion suffers in those markets even when the ads perform. [L1171.053]</li>
+<li>In Shopify Markets, set a specific price for each market instead of relying on automatic conversion. Enter prices such as 24.90 or 26.90 for the UK instead of 27. [L1161.042]</li>
+<li>Shopify Markets sets the language and content for each country, but you must supply the translations yourself or install a translation app to fill them in. [L1158.050]</li>
+<li>Shopify Markets: go to Settings and use Markets to assign a language and translated content to each country. Markets can also serve separate URLs for each market, such as a subfolder or suffix for France. [L1158.033]</li>
+</ul>
+<h3 id="setting-up-the-international-market">Setting up the International market</h3>
+<ol type="1">
+<li>In the Shopify admin left menu, click Markets. [L0798.005]</li>
+<li>Click International. The default market for the store's own country is shown; if it is not the market you want, work in the International market. [L0798.005]</li>
+<li>Click Edit. [L0798.005]</li>
+<li>Add the top five countries: United States, United Kingdom, Canada, Australia, New Zealand. Add more regions if needed. [L0798.005, L0798.004]</li>
+<li>Click Done. [L0798.005]</li>
+<li>Check the market status. A new market starts as Draft; change it to Active so it can sell. [L0798.005, L0798.006]</li>
+</ol>
+<ul>
+<li>For the first international expansion, add the five largest English-speaking export markets: United States, United Kingdom, Canada, Australia and New Zealand. These five are the recommended starting set. [L0798.004]</li>
+<li>A new market often starts in Draft status. A market in Draft does not sell, so it must be switched to Active after the regions are added. [L0798.006]</li>
+</ul>
+<h3 id="market-setup-order-source-d-2026-procedure">Market setup order (Source D 2026 procedure)</h3>
+<ol type="1">
+<li>Go to Settings &gt; Markets &gt; International. [L1167.006]</li>
+<li>Set the market to Active. Only active markets allow customers in those countries to check out. [L1167.006]</li>
+<li>Confirm the countries you sell to are included, for example United States and United Kingdom. [L1167.006]</li>
+<li>Once Shopify Payments is set up, change the base currency to match the currency of the place you sell (USD in the example for US sales). [L1167.006]</li>
+<li>Click Save. [L1167.006]</li>
+</ol>
+<h3 id="inactive-markets-block-checkout">Inactive markets block checkout</h3>
+<ul>
+<li>A market that is inactive blocks checkout, so customers in its countries cannot buy. The Markets overview shows each market as Primary, Active or Inactive, and the preview displays "Customers can't check out" for inactive markets. [L1167.007]</li>
+<li>Shopify does not enable checkout for every market by default, so visitors from other countries may be unable to check out. Check the Markets settings for each country you want to sell to. [L0363.034]</li>
+<li>Targeting countries such as Canada, New Zealand or Australia while only the US is activated in Shopify Markets causes checkout failures. Customers cannot select their country and abandon the cart. [L0773.007]</li>
+<li>A new store with inactive markets lost sales: only the primary market (United States) was active, so buyers from other countries could not check out. This caused high add-to-cart numbers without conversion. [L1259.038]</li>
+<li>A new store with a disabled non-US market lost around 100-200 sales within an hour because visitors from other countries could not check out. Always test the checkout for every target country. [L1260.046]</li>
+<li>While selling in one country, keep the primary market (for a US store, United States) active and keep International inactive. Over time Markets show which market makes most sales and conversion rates per market. [L1305.035]</li>
+</ul>
+<h3 id="checking-markets-before-sending-traffic">Checking markets before sending traffic</h3>
+<ol type="1">
+<li>Go to Settings &gt; Markets. [L1259.037, L1260.045]</li>
+<li>Verify all target countries (for example USA, Canada, Australia, UK) are active. [L1259.037, L1260.045]</li>
+<li>Test checkout with a random address in each country. [L1259.037, L1260.045]</li>
+<li>Ensure the store can take orders in each target market before ads go live. [L1259.037]</li>
+</ol>
+<ul>
+<li>Disabled markets block checkout and can lose sales. [L1260.045]</li>
+</ul>
+<h3 id="shopify-markets-and-language">Shopify Markets and language</h3>
+<ul>
+<li>Shopify Markets lets you assign a language and translated content to each country. [L1158.033]</li>
+<li>Use a separate store or market for each target country when the market shows consistent results. Translate not only landing pages but also checkout language and default Shopify text, so the whole experience is in the local language. [L1158.034]</li>
+<li>Shopify suggested adding German to a market that already includes Austria, because German converts best there. Match market languages to the countries where a language is most likely to be used. [L1167.009]</li>
+</ul>
+<h2 id="languages-and-translation">Languages and translation</h2>
+<h3 id="adding-languages">Adding languages</h3>
+<ul>
+<li>Settings &gt; Languages: add a language to serve customers in their own language. Shopify states that translations improve cross-border conversion by an average of 13% and that adding them is free. The Published languages list shows which languages are active in the markets they were added to. [L1250.016]</li>
+<li>Add German for customers in Germany (or other markets where German is used). The lesson says translations improve cross-border conversion by an average of 13%. [L1327.049]</li>
+<li>For a multi-language store, begin with one English store and use Shopify's built-in translation feature rather than a second store. Shopify reports traffic sources, which makes it easier to see where customers come from. [L0352.037]</li>
+<li>For a multi-language store, use a translation app or Shopify's native translation feature with a language selector instead of building separate content for each language. The language switches automatically when a visitor selects it. [L1113.032]</li>
+<li>Keep the default English for a US store. Change only if the site should be in more languages. Settings &gt; Languages. [L1305.040]</li>
+<li>Stores with foreign-language pages can be translated and edited. This is a viable approach to launch the product in your market. [L0209.036]</li>
+</ul>
+<h3 id="translating-the-whole-store">Translating the whole store</h3>
+<ul>
+<li>When selling in a non-English market, translate the whole store and ads into the local language. A store fully translated into the target language was recommended for Spain. [L0361.041]</li>
+<li>When you run a store for a country where people speak a language other than English, such as Germany or Switzerland, build the store and its messages in the local language. Translation and local wording reduce confusion and lower complaints. The same product can need different wording for each country even when the language is shared. [L0519.043]</li>
+<li>Website, ads and checkout should all be in the local language of the target market. An English store in the Netherlands converts worse than a native-language store. [L0660.018]</li>
+<li>For a single-country test, translate the store into that country's language. For worldwide targeting, keep the store in English. [L1185.023]</li>
+<li>Stores in the local language generally convert better than English stores. AI translation tools can handle most of the work when translating into German or another language, but a native speaker should proofread before launch. [L1185.024]</li>
+<li>Translate websites into the local language with a human translator, for example through Fiverr, instead of automatic translation apps, which were described as inaccurate. Do this for every country where you sell or run influencer campaigns. [L1214.015]</li>
+</ul>
+<h3 id="translation-quality-risks">Translation quality risks</h3>
+<ul>
+<li>Shopify's Google Translate app was described as not good enough for store translation. Translating an entire store with machine translation without review is a risk to quality. [L0709.015]</li>
+<li>AI translations can be fast but their accuracy is unknown. Have a native speaker check them before publishing a translated store. Publishing unchecked machine translations can hurt trust in the store. [L0709.016]</li>
+</ul>
+<h3 id="languages-and-currency-across-the-store">Languages and currency across the store</h3>
+<ul>
+<li>Shopify offers localization tools for international sales, including translation apps for multiple languages, a geolocation app that recommends language and currency, and targeting of specific countries or regions. Country-specific domains are presented as a way to improve search ranking and buyer trust in those markets. [L1292.038] (older, 2021-22)</li>
+<li>Shopify states that about 35% of store traffic comes from international visitors. Localization tools, such as translation apps and a geolocation app for language and currency, are worth considering. [L1292.025, L1314.016] (older, 2021-22)</li>
+<li>Shopify Settings &gt; Store currency is paired with language: for a single-country test, keep the language and currency of that country on the store.</li>
+</ul>
+<h3 id="language-and-currency-selectors">Language and currency selectors</h3>
+<ul>
+<li>Currency selectors and language selectors are only needed for multi-country selling. A currency selector is only needed when selling across borders. For a store selling mainly in one country it can be turned off, and the language selector can also be left off if not used. Check the need for currency conversion later, once real customers from other countries appear. [L0681.004]</li>
+<li>The Language selector in the footer appears only once at least one additional language is added in Settings &gt; Languages. If the store sells in one language, leave "Show language selector" unchecked. [L0681.015]</li>
+<li>The Currency selector in the footer needs currencies to be added first, in Settings &gt; Payments. Keep "Show currency selector" off unless the store sells across borders in more than one currency. [L0681.016]</li>
+<li>Header &gt; Country/region selector and translation options are switched off unless the store sells in several markets or languages. [L1309.024]</li>
+<li>The free shipping bar is not needed for a supplier demo store and can stay off until you run a free shipping promotion. Many stores offer free shipping on all products and never use the bar. [L0775.030]</li>
+<li>Enable the country/region selector only if you sell in multiple markets, and enable the translation option only if you serve several languages. Both are off by default. [L0775.031]</li>
+</ul>
+<h2 id="payment-methods">Payment methods</h2>
+<ul>
+<li>Before launching in a new country, offer the local payment methods shoppers use, such as Klarna in Sweden. Missing a common local payment option can hurt conversion even when the offer is good. [L0692.011]</li>
+<li>Klarna (pay in 4) is available in Canada. Use the Canadian page of Klarna for details. [L0971.075]</li>
+<li>Shopify Payments can change the displayed currency and accepted payment methods by visitor country, but it cannot show different products per country. [L1090.036] (older, 2021)</li>
+</ul>
+<h2 id="multi-country-decisions">Multi-country decisions</h2>
+<h3 id="one-store-multiple-markets-or-separate-stores">One store, multiple markets, or separate stores</h3>
+<ul>
+<li>Shopify Payments: the US and Canada can run from one store with the same products, while a UK store is typically a separate store. Do not use one multi-country store when the product range differs by country. [L1090.037] (older, 2021)</li>
+<li>To sell different products in another country, build a separate store on a country domain, such as a.co.uk version of the.com store. [L1090.036] (older, 2021)</li>
+<li>Do not start a second store for a new country in most cases. Make sure shipping to the new country is cost-effective and that shipping is set up so you do not lose money. [L0834.048] (older, 2021)</li>
+<li>When a store needs to sell in a second country, one option is to build a separate copy of the existing store for that market with a different name, the same suppliers and policies, and only the country swapped. Keeping markets in separate stores also keeps analytics cleaner than mixing both countries in one store. [L0805.061] (older, 2024)</li>
+<li>Create new Google Ads campaigns for each country rather than adding a new country to existing campaigns. Separate campaigns make it much easier to track which country is profitable. [L1090.038] (older, 2021)</li>
+<li>Shopify Markets: each target country can get its own market with manually set prices. [L1316.001]</li>
+</ul>
+<h3 id="separate-market-per-target-country-procedure">Separate market per target country (procedure)</h3>
+<ol type="1">
+<li>Open the Markets section of the Shopify admin. [L1316.002]</li>
+<li>Click Add market. [L1316.002]</li>
+<li>Name the market after the country (e.g. Australia) and search for that country in the country field. [L1316.002]</li>
+<li>Click Add market. [L1316.002]</li>
+<li>Open the new market and set specific product prices for that country, instead of relying on the automatic conversion. [L1316.002]</li>
+<li>Click Save. [L1316.002]</li>
+</ol>
+<h3 id="changing-a-second-currency-or-country-without-native-per-currency-pricing-2022-older">Changing a second currency or country without native per-currency pricing (2022, older)</h3>
+<ol type="1">
+<li>Ask Shopify support via live chat whether the current plan or an app can set custom prices per currency. [L0854.114]</li>
+<li>If a solution exists, keep one store and duplicate the ad campaigns, changing only the country targeting on the copy. [L0854.114]</li>
+<li>If no solution exists, export the store's products and settings. [L0854.114]</li>
+<li>Build the second store and import everything into it. [L0854.114]</li>
+<li>Run the second store's ad campaigns for its own country and currency. [L0854.114]</li>
+</ol>
+<h3 id="shipping-and-market-fit">Shipping and market fit</h3>
+<ul>
+<li>Shipping abroad only makes sense for small, inexpensive items. [L1274.074]</li>
+<li>Check whether shipping to each new country is cost-effective before you open it. Shipping costs, not the market price setting, decide whether a distant market is worth serving. [L0360.020, L0834.048]</li>
+<li>For Canada, the Shop page sales channel (Facebook/Instagram shop page) is recommended. [L0969.089] (older, 2022)</li>
+<li>Shopify's shipping settings are where a store defines its shipping rates and shipping zones. Review them before launch so checkout shows correct delivery costs for each country served. [L1008.004]</li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/04-core-admin-settings-general-checkout-payments-and-orders/"><span class="k">&larr; Previous</span><span class="v">Core admin settings: general, checkout, payments and orders</span></a><a class="nx" href="../../04-store-build-and-shopify/06-legal-pages-policies-and-trust-pages/"><span class="k">Next &rarr;</span><span class="v">Legal pages, policies and trust pages</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

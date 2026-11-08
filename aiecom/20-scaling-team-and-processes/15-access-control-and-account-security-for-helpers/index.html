@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Access control and account security for helpers | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 20.15: Access control and account security for helpers.">
+<link rel="canonical" href="https://dlichters.com/aiecom/20-scaling-team-and-processes/15-access-control-and-account-security-for-helpers/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Access control and account security for helpers | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 20.15: Access control and account security for helpers."><meta property="og:url" content="https://dlichters.com/aiecom/20-scaling-team-and-processes/15-access-control-and-account-security-for-helpers/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">20. Scaling, team and processes</a> &rsaquo; <a href="../../../ecom/20-scaling-team-and-processes/15-access-control-and-account-security-for-helpers/">Plain version</a></div><h1>20.15 Access control and account security for helpers</h1><article><h2 id="when-to-add-a-team-member">When to add a team member</h2>
+<ul>
+<li>A new store starts with one user, the owner. Hire staff only once the business can afford to pay them and doing the work yourself is no longer the better option. [L1306.009]</li>
+<li>The risk of a virtual assistant (VA) stealing or copying is real, but it should not stop you from hiring. Reduce it by vetting thoroughly, starting small and building trust gradually, not by avoiding delegation altogether. [L245.055]</li>
+</ul>
+<h2 id="vetting-and-phasing-in-a-new-va">Vetting and phasing in a new VA</h2>
+<ol type="1">
+<li>Learn about the person through interviews and reference checks. [L245.054]</li>
+<li>Start with a small, low-risk project to assess reliability and character. [L245.054]</li>
+<li>Gradually increase access to different business systems and information over time. [L245.054]</li>
+<li>Do not hand over all sensitive information immediately to someone you do not know. [L245.054]</li>
+</ol>
+<p><strong>First access for a new VA:</strong></p>
+<ul>
+<li>Begin with limited access: sales, orders and the support mailbox only. This tests how the working relationship goes. [L1173.048]</li>
+<li>Extend access to other tools only after the assistant has delivered reliable work over a set period. The sources do not state how long that period is. [L1173.048]</li>
+</ul>
+<h2 id="account-types-and-permission-levels">Account types and permission levels</h2>
+<h3 id="shopify-staff-accounts">Shopify staff accounts</h3>
+<ul>
+<li>Under Settings &gt; Users, staff accounts give team members such as marketers or designers access to the store. [L1306.008]</li>
+<li>Shopify Staff Accounts lets the owner invite team members with their own logins and permissions. Use it to give helpers access without sharing the main owner account. [L1095.010]</li>
+<li>A staff account added through the invite form has full permissions, so it can change the whole store. Only add people you trust with full access. [L1300.034]</li>
+</ul>
+<p><strong>Adding a staff account (2021-22 plan, older):</strong></p>
+<ol type="1">
+<li>Open Settings and go to Plan and permissions, which is the Account page in the Shopify admin. [L1300.032]</li>
+<li>In the Staff section, click Add staff. Check the staff count, which on this plan is limited to 2 (shown as Staff (0 of 2)). [L1300.032]</li>
+<li>Enter the First Name and Last Name of the staff member and the email address from their welcome email. [L1300.032]</li>
+<li>This staff account will have full permissions. [L1300.032]</li>
+<li>Click Send invite. [L1300.032]</li>
+<li>The staff member accepts the invitation and works on the store through their own Shopify Partners account. [L1300.032]</li>
+</ol>
+<p><em>Conflict on the navigation path:</em> The 2021-22 guide uses Settings &gt; Plan and permissions (older). The later guide uses Settings &gt; Users. Use whichever path matches your admin screen. [L1300.032, L1306.008]</p>
+<h3 id="shopify-collaborator-accounts">Shopify collaborator accounts</h3>
+<ul>
+<li>Collaborator accounts let a developer, designer or marketer enter your Shopify admin without taking one of your staff account slots. [L1300.033]</li>
+<li>Collaborators do not count toward the staff limit. [L1327.013]</li>
+<li>Use collaborator accounts for freelancers who upload products. Shopify's collaborator code feature grants limited upload access only, while protecting payment methods, store settings and account security. Never share your Shopify login with freelancers uploading products. [L0128.006]</li>
+</ul>
+<p><strong>Giving an outside party access (supplier, 3PL, agency or support staff):</strong></p>
+<ol type="1">
+<li>Go to Settings &gt; Users and open the organization account security page. [L1327.013]</li>
+<li>Click Generate new code. [L1327.013]</li>
+<li>Share the code together with the store's domain or store name identifier with the person who needs access. [L1327.013]</li>
+<li>The outside party sends a collaborator request using that code. [L1327.013]</li>
+<li>Review the request in your Shopify admin and approve it. [L1327.013]</li>
+<li>Assign the appropriate role after approval. [L1327.013]</li>
+</ol>
+<p><em>Conflict on request type:</em> The 2021-22 guide describes two options in the Collaborator accounts section: allow any person to submit a collaborator request, or limit requests to people who hold a collaborator request code (older). The current procedure uses the code. Use the code option. [L1300.033, L1327.013]</p>
+<h3 id="permission-levels">Permission levels</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Access type</th>
+<th>Default or rule</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Staff account via invite form</td>
+<td>Full permissions</td>
+<td>[L1300.034, L1300.032]</td>
+</tr>
+<tr>
+<td>Collaborator</td>
+<td>Smallest role that fits the job, such as Customer support, Online store editor or Limited permissions</td>
+<td>[L1327.014]</td>
+</tr>
+<tr>
+<td>Collaborator</td>
+<td>Administrator is not the default choice</td>
+<td>[L1327.014]</td>
+</tr>
+<tr>
+<td>Apps and third-party agents (e.g., a China 3PL, bundle or review apps)</td>
+<td>Also work through the roles system</td>
+<td>[L1327.014]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Give each outside party the smallest role that fits their job, such as Customer support, Online store editor or Limited permissions, instead of Administrator. [L1327.014]</li>
+<li>Apps that need access, for example bundles or review apps, and third-party agents such as a China 3PL also work through this roles system. [L1327.014]</li>
+</ul>
+<h3 id="shared-logins">Shared logins</h3>
+<ul>
+<li>Do not share one login across several people working at the same time. A second login on the same account logs the first user out with a message that another user has signed in from a different device. [L0892.034]</li>
+<li>For tools with no financial or customer data, a shared login can be used, such as a shared Canva account with extra seats for multiple users. [L0360.082]</li>
+<li>Individual seats are the safer option when more people need access. [L0360.082]</li>
+</ul>
+<h3 id="google-workspace-seats">Google Workspace seats</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Cost</th>
+<th>Own login and inbox</th>
+<th>Notes</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additional user</td>
+<td>$7 per month each</td>
+<td>Yes</td>
+<td>Only for employees who must sign in themselves</td>
+<td>[L1197.024]</td>
+</tr>
+<tr>
+<td>Alias address (e.g., returns@, firstname@) on the same domain</td>
+<td>No extra cost</td>
+<td>No</td>
+<td>Accessed through the primary account's login</td>
+<td>[L1197.024]</td>
+</tr>
+<tr>
+<td>Annual plan user changes</td>
+<td>Users can be added at any time</td>
+<td>,</td>
+<td>Users can only be removed when the contract renews</td>
+<td>[L1197.024]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="tool-access-for-vas-conflicting-guidance">Tool access for VAs: conflicting guidance</h2>
+<p>Sources differ on how far VA access should go. Each rule applies to a different situation:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Guidance</th>
+<th>Source</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VA needs the tools for daily work</td>
+<td>Give access to all tools they need, including system logins. Accepting this risk is necessary for the work to function.</td>
+<td>[L1122.023]</td>
+<td>Undated</td>
+</tr>
+<tr>
+<td>VA must place orders or pay suppliers</td>
+<td>Give system logins plus the relevant bank account details and credit cards. Without these they cannot complete ordering or payments. Misuse is considered uncommon in practice.</td>
+<td>[L1122.031]</td>
+<td>Undated</td>
+</tr>
+<tr>
+<td>VA places orders and decides on supplier purchases</td>
+<td>Give access to supplier pricing and ordering so they can decide and place orders on your behalf. Trust and information access are needed for them to work well.</td>
+<td>[L1109.065]</td>
+<td>2018 (older)</td>
+</tr>
+<tr>
+<td>Shopify store, financial data and customer data</td>
+<td>Use a staff or collaborator account with limited, view-only access to the sections they need. Do not give admin login. Restrict access to financial and customer data.</td>
+<td>[L0360.081]</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>Supplier orders</td>
+<td>VA gets passwords, supplier price lists, contracts and credit card details needed to place supplier orders.</td>
+<td>[L1473.025]</td>
+<td>Undated</td>
+</tr>
+<tr>
+<td>Owner's bank or personal financial accounts</td>
+<td>Not given to the VA.</td>
+<td>[L1473.025]</td>
+<td>Undated</td>
+</tr>
+<tr>
+<td>Profit margin data</td>
+<td>Not given to the VA, since it is not needed for daily tasks.</td>
+<td>[L1473.025]</td>
+<td>Undated</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>How the sources fit together:</em> The undated broad-access rules and the 2024 restriction meet at Shopify and financial or customer data. The 2024 restriction applies there. The broad rules apply to the other tools the job needs. The 2018 rule is older, and it matches the undated ordering rules. [L1122.023, L1122.031, L0360.081, L1109.065]</p>
+<h2 id="discount-and-decision-limits-for-vas">Discount and decision limits for VAs</h2>
+<ul>
+<li>The VA may grant discounts of up to 10% without asking the owner, since all suppliers accept that margin. [L1473.024]</li>
+<li>Any larger discount or other decision needs the owner's approval. [L1473.024]</li>
+</ul>
+<h2 id="protecting-finances-and-sensitive-data">Protecting finances and sensitive data</h2>
+<ul>
+<li>Restrict access to financial and customer data for every helper. [L0360.081]</li>
+<li>Billing history, meaning past payments to Shopify, is shown under Settings &gt; Billing. [L1306.008]</li>
+<li>If the P&amp;L is accessed by multiple team members or is sensitive internal data, create a separate restricted-access sheet. Share only the read-only output with the team, and keep transaction-level data isolated. [L0218.025]</li>
+</ul>
+<p><strong>Maximum security for sensitive financial data used with AI tools:</strong></p>
+<ol type="1">
+<li>Use an old cleared laptop with a fresh OS. [L0218.013]</li>
+<li>Create a brand new Google Drive account on that device. [L0218.013]</li>
+<li>Create a separate Google Drive for this project only. [L0218.013]</li>
+<li>Grant sheet access only to this new email address. [L0218.013]</li>
+<li>Store this laptop offline except during AI sessions. [L0218.013]</li>
+</ol>
+<h2 id="reviewing-who-has-access">Reviewing who has access</h2>
+<ul>
+<li>In Business settings, the Users list shows every person with access to the business portfolio. [L0651.024]</li>
+<li>The Last active column shows who has been working in the portfolio. [L0651.024]</li>
+<li>The Invite people button adds new users, and the Export button downloads the list. [L0651.024]</li>
+<li>Use this list to review access before adding or removing people. [L0651.024]</li>
+</ul>
+<h2 id="storing-login-details">Storing login details</h2>
+<ul>
+<li>Keep the login details for every tool the team uses, such as the phone system Mighty Call and Shopify, on one card in the corporate information board. [L1396.065]</li>
+<li>Staff can then find access details without asking the owner, and forgotten passwords stop blocking work. [L1396.065]</li>
+<li>Limit who can view that board, because it holds credentials. [L1396.065]</li>
+</ul>
+<h2 id="freelancers-and-outside-parties">Freelancers and outside parties</h2>
+<ul>
+<li>Giving freelancers direct access to the store is dangerous, because a single wrong click can damage the entire store. [L1396.050]</li>
+<li>A Fiverr freelancer was found to have copied a logo instead of creating one. [L1396.050]</li>
+<li>Limit store access to trusted staff. Use freelancers only for isolated tasks that do not need store access. [L1396.050]</li>
+</ul>
+<h2 id="fixing-access-problems">Fixing access problems</h2>
+<h3 id="when-a-team-member-makes-themselves-a-domain-owner-2022-older">When a team member makes themselves a domain owner (2022, older)</h3>
+<ol type="1">
+<li>Remove the meta tag they used to claim ownership. [L1281.082]</li>
+<li>Message them calmly and ask them to remove themselves as an owner as soon as possible. [L1281.082]</li>
+<li>Grant only the access they need, and ask them to request any future access in advance. [L1281.082]</li>
+</ol>
+<p><strong>Message template:</strong></p>
+<pre class="text"><code>Hi [name], I just got an email from Google saying you were added as an owner of [store domain]. If you need extra access, let me know and I will grant what is needed. Please remove yourself as an owner of the domain as soon as possible. In future, if you need more access to any tool, ask me in advance.</code></pre>
+<p>[L1281.083]</p>
+<h3 id="keeping-the-response-calm">Keeping the response calm</h3>
+<ul>
+<li>Most access problems from team members come from carelessness rather than intent. [L1281.084]</li>
+<li>Keep the response calm and fix the access, so the working relationship stays intact. [L1281.084]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><ol type="1">
+<li>When hiring a virtual assistant, learn about the person through interviews and reference checks; 2. Start with a small, low-risk project to assess reliability and character; 3. Gradually increase access to different business systems and information over time; 4. Do not hand over all sensitive information immediately to someone you do not know. [L0245.054]</li>
+</ol></li>
+<li><p>Risk of VA theft/copying is real but should not prevent hiring; mitigate by vetting thoroughly, starting small, and building trust gradually rather than avoiding delegation entirely. [L0245.055]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../20-scaling-team-and-processes/14-choosing-and-managing-agencies-and-ad-outsourcing/"><span class="k">&larr; Previous</span><span class="v">Choosing and managing agencies and ad outsourcing</span></a><a class="nx" href="../../20-scaling-team-and-processes/16-testing-cadence-and-scale-or-kill-decision-rules/"><span class="k">Next &rarr;</span><span class="v">Testing cadence and scale-or-kill decision rules</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

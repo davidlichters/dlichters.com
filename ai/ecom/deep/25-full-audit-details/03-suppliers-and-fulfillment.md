@@ -1,0 +1,16 @@
+<!-- split-map -->
+<!-- part of ecom/deep/25-full-audit-details.md -->
+Part 3 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/02-niche-and-product-research.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/04-store-build-and-shopify.md
+
+## 03. Suppliers and Fulfillment
+
+Main chapter: https://dlichters.com/ai/ecom/deep/03-suppliers-and-fulfillment.md
+
+**This part has 20 lessons and is split into 2 pages of at most about 4,000 words. Pick the page whose lesson titles match the question, open it, and answer only from what it says.**
+
+1. https://dlichters.com/ai/ecom/deep/25-full-audit-details/03-suppliers-and-fulfillment/01-4-0-introduction-to-getting-suppliers.md (3,005 words)
+   4.0 Introduction To Getting Suppliers (Dokument) (Course A) [L0108, undated] · 3 Methoden zum Upload echter Produkte (Course A) [L0106, 2020-26] · 4.4 Good vs. Bad Stores (Dokument) (Course A) [L0123, undated] · 4.8 Phone Email Scripts (Dokument) (Course A) [L0133, undated] · 4.5 Business Email Account Creation Setup (Dokument) (Course A) [L0125, undated] · 4.9 Supplier FAQs What They Ask (Dokument) (Course A) [L0134, undated] · Course A Build Your Brand (Dokument) (Course A) [L0237, 2018] · April 2020 Coaching Call: Lieferanten, Google Ads und Corona-Strategien (Course A) [L0245, 2020] · April 2024 Coaching Call: Lieferanten, Shop-Setup und Ads (Course A) [L0253, 2024] · April 2025 Coaching Call: Lieferanten, Shopify und Pricing (Course A) [L0255, 2025]
+2. https://dlichters.com/ai/ecom/deep/25-full-audit-details/03-suppliers-and-fulfillment/02-august-2022-coaching-call-q-a-zu-versand-ads-und-s.md (2,072 words)
+   August 2022 Coaching Call: Q&A zu Versand, Ads und Shop-Optimierung (Course A) [L0272, 2022] · August 2023 Coaching Q&A, Google Shopping, Nische und Supplier-Strategie (Course A) [L0274, 2023] · August 2024 Coaching Call: Lieferanten, Preise und Google Ads (Course A) [L0276, 2024] · Speaker A4 Amazon FBA (Dokument) (Course A) [L0289, 2014] · Speaker A1 Content Marketing (Dokument) (Course A) [L0325, 2017] · Speaker A1 Content Marketing (Dokument) (Course A) [L0326, 2014] · Business-Telefonnummer mit Quo einrichten (Course A) [L0338, 2020-26] · Coaching-Call März 2020: Lieferanten-Margen, Corona-Auswirkungen und Geschäftsoptimierung (Course A) [L0358, 2020] · Dezember 2018: Saisonale Strategien, Supplier und Store-Start (Course A) [L0466, 2018] · Dezember 2020 Coaching Call: Q&A zu Suppliers, Ads und Shop-Aufbau (Course A) [L0468, 2020]
+
+Part 3 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/02-niche-and-product-research.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/04-store-build-and-shopify.md

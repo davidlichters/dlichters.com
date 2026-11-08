@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Diagnosing the store funnel: conversion, bounce and on-site behavior | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.12: Diagnosing the store funnel: conversion, bounce and on-site behavior.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/12-diagnosing-the-store-funnel-conversion-bounce-and-on-site-be/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Diagnosing the store funnel: conversion, bounce and on-site behavior | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.12: Diagnosing the store funnel: conversion, bounce and on-site behavior."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/12-diagnosing-the-store-funnel-conversion-bounce-and-on-site-be/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/12-diagnosing-the-store-funnel-conversion-bounce-and-on-site-be/">Plain version</a></div><h1>19.12 Diagnosing the store funnel: conversion, bounce and on-site behavior</h1><article><h2 id="verify-tracking-and-data-before-you-judge">Verify tracking and data before you judge</h2>
+<ul>
+<li>Record how many visitors arrive per day, how many of them are organic, and where they come from before you diagnose a conversion rate. [L0663.016] (2019, older)</li>
+<li>If traffic is high but sales are low, verify the numbers first. Example: 2,000 visits (1,500 from Google Ads and 500 direct) should produce dozens of sales at a healthy conversion rate. [L0663.072] (2019, older)</li>
+<li>Blended conversion rates from Shopify or Google Analytics are misleading because they include bot traffic. [L0249.079] (2022, older)</li>
+<li>Blended store conversion rate also mixes bot traffic, organic searches and repeat visits, so measure each paid channel separately, such as Google Shopping, Facebook Dynamic Remarketing and Google Remarketing. [L0272.069] (2022, older)</li>
+<li>The conversion rate in the default Shopify dashboard blends all sources and understates the performance of controllable sources, especially Google Ads. [L1109.047] (2018, older)</li>
+<li>Track add-to-cart, checkout and purchase rates in Shopify to find the exact step where shoppers leave. Dropshipping is largely about reading these numbers after each change. [L0388.043]</li>
+<li>Shopify shows average order value (AOV), add-to-cart percentage, initiate-checkout percentage and session conversion rate in the Analytics section of the dashboard. [L0445.008, L0875.008]</li>
+<li>Add-to-cart percentage shows how well the landing page and offer work, because it measures how many visitors take the first purchase step. A weak value points to a page or offer problem before the ads are blamed. [L0445.011, L0875.009]</li>
+<li>Store analytics show which products customers view, add to cart, buy and ask about. Google Ads and Google Analytics data are the most valuable sources for understanding real customer behavior. [L1446.012]</li>
+<li>Shopify analytics show website visitors and the pages they open, so no extra analytics tool is needed at the start. [L1304.007]</li>
+<li>Review Google Analytics data about every two weeks to track performance trends and make data-driven optimization decisions. [L0293.001]</li>
+<li>When diagnosing a store with few sales, compare Google Analytics traffic week over week or month over month since launch. This shows whether the problem is traffic volume or conversion. [L0807.042]</li>
+<li>Analyze traffic by source over 30 days, such as paid Shopping, organic social, organic search, referrals and unassigned, to find where sales come from before changing anything. [L0855.037]</li>
+<li>Review two numbers in analytics: where traffic goes (most visited pages) and where sales come from (source attribution). Together they show which pages to optimize and which channels to scale. [L0972.056]</li>
+<li>When judging a store, focus first on high-intent actions: add to cart, initiate checkout and completed purchase. Traffic source matters mainly when you diagnose a tracking problem or spot unwanted traffic. [L0363.081]</li>
+<li>Conversion rate was the top priority for merchants in the audience poll, but AOV and customer lifetime value should be tracked alongside it when optimizing a cart. [L1231.003]</li>
+<li>Track revenue per visitor and per sale. A store with about 8,711 visitors and only 8 sales is a warning sign that ad spend is not reaching buyers. [L0854.096] (2022, older)</li>
+<li>Unverified industry figures are often quoted: average cart abandonment around 70%, and roughly 70% of website traffic eventually returns to the homepage. Use them only as rough benchmarks and compare against your own checkout and analytics data. [L1208.012]</li>
+</ul>
+<h2 id="sample-size-and-traffic-bursts">Sample size and traffic bursts</h2>
+<ul>
+<li>Judge a store funnel only with at least 150 to 200 visitors; 50 to 100 visitors is too little data to conclude anything. [L1345.006]</li>
+<li>Judge a store's conversion rate only after about 100 to 200 or more visitors per day; 30 to 50 visitors are too few for a reliable conclusion. [L1377.044]</li>
+<li>If traffic is below that level, run ads for two more days before changing the landing page. [L1377.044]</li>
+<li>Check the store after 100 to 150 visitors. If add-to-cart is still low, change the offer; if it stays low after several offers, switch to the next product. [L0363.042]</li>
+<li>Ad platforms send an initial traffic burst when a campaign starts. Remove it from the visitor count before calculating add-to-cart rates. [L1345.007]</li>
+<li>If the burst cannot be separated exactly, an approximation based on the timing of the burst is acceptable. [L1345.007]</li>
+<li>Launch ads six to seven hours before the planned running start time, so the initial burst happens at a known moment and can be excluded. Once the burst is identified, all other visits count as genuine visitors. [L1345.008]</li>
+</ul>
+<h2 id="core-store-rates-and-benchmarks">Core store rates and benchmarks</h2>
+<p><strong>Formulas</strong></p>
+<ul>
+<li>Add-to-cart rate = add-to-cart events / landing page visitors (sessions that reach the product page). [L0361.003]</li>
+<li>Example: 100 visitors and 4 add-to-carts gives 4%, which is the minimum benchmark. [L0361.003, L0361.002]</li>
+<li>Per Session Value (PSV) = revenue / sessions. [L0389.018]</li>
+<li>Average Order Value (AOV) = revenue / transactions. [L0389.018]</li>
+<li>Conversion rate = transactions / sessions. [L0389.018]</li>
+<li>Check: $57,286 / 50,970 sessions = $1.12 PSV, and $57,286 / 1,019 transactions = $56.22 AOV, which matches the control figures in the case. [L0389.018]</li>
+<li>Revenue per session is the metric that matters most in conversion rate optimization, more than conversion rate alone. A test that raises conversion rate can still be unprofitable if it attracts lower-spending customers or lowers AOV. Measure every A/B test against revenue-per-session improvement. [L0197.025]</li>
+</ul>
+<p><strong>Benchmarks for add-to-cart and conversion</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Benchmark</th>
+<th>Applies to</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add-to-cart rate, minimum</td>
+<td>At least 4% of landing page visitors</td>
+<td>Any store; anything clearly below is a very bad sign</td>
+<td>L0361.002</td>
+</tr>
+<tr>
+<td>Add-to-cart rate, winning product</td>
+<td>About 4 to 5% of store traffic</td>
+<td>A product that is already winning</td>
+<td>L0773.004, L0774.006</td>
+</tr>
+<tr>
+<td>Add-to-cart rate, product page</td>
+<td>About 5% of visitors is a reasonable benchmark</td>
+<td>Product page check</td>
+<td>L1216.004</td>
+</tr>
+<tr>
+<td>Initiate-checkout rate, winning product</td>
+<td>About 4 to 5% of all traffic</td>
+<td>A product that is already winning</td>
+<td>L0773.004, L0774.006</td>
+</tr>
+<tr>
+<td>Store conversion rate</td>
+<td>About 2% to 3% is ideal depending on industry</td>
+<td>General e-commerce</td>
+<td>L0640.012</td>
+</tr>
+<tr>
+<td>Store conversion rate, dropshipping</td>
+<td>Above 4% is good</td>
+<td>Dropshipping</td>
+<td>L0640.012</td>
+</tr>
+<tr>
+<td>Paid channel conversion</td>
+<td>2.5% or more for Google Shopping, Facebook Dynamic Remarketing and Google Remarketing</td>
+<td>Each paid channel separately (2022, older)</td>
+<td>L0272.069</td>
+</tr>
+<tr>
+<td>Product page conversion</td>
+<td>Above 1.5% is the target</td>
+<td>A product page getting clicks</td>
+<td>L1172.033</td>
+</tr>
+<tr>
+<td>Facebook traffic conversion (practice)</td>
+<td>Roughly the same percentage as CTR, so 1.5% CTR leads to roughly 1.5% conversion</td>
+<td>Rough practice benchmark</td>
+<td>L1017.015</td>
+</tr>
+<tr>
+<td>Example store</td>
+<td>About 100 visitors per day gave 3 to 4 sales per day, roughly 3 to 4% conversion</td>
+<td>Example only</td>
+<td>L0372.002</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>In dropshipping, the add-to-cart rate should be roughly double the purchase conversion rate because shipping times are long. [L0640.012]</li>
+<li>Use the benchmarks as a guide for where to look, not as a verdict on their own. Each benchmark is valid only with enough traffic behind it. [L1345.006, L1377.044]</li>
+<li>A slow traffic week with a healthy conversion rate points to a traffic problem, not a product or checkout problem. [L0372.002]</li>
+<li>A store with 20,000 visits and no sales has a conversion issue on the site rather than an ad issue. [L1225.069]</li>
+<li>Strong top-of-funnel traffic with no add-to-carts usually means the bottleneck is the website. [L1225.069]</li>
+</ul>
+<h2 id="reading-the-funnel-stage-by-stage">Reading the funnel stage by stage</h2>
+<ul>
+<li>Diagnose a weak store in this order: ads shown, clicks, visits, add-to-cart, checkout starts and completed purchases. [L0471.065]</li>
+<li>The largest drop between two stages shows where the problem sits. Fix that stage before changing anything else. [L0471.065]</li>
+<li>Example: many checkout starts with no purchases points to checkout or trust issues rather than to ad targeting. [L0471.065]</li>
+<li>Analyze the funnel in this order: pre-click ad metrics, then website and landing page metrics, then checkout, then customer support and supply chain. If the ads perform well, the problem is usually further down the funnel. [L1260.002]</li>
+<li>Interpret the funnel in the Shopify report by checking sessions per landing page, add-to-cart rate and conversion rate. This locates the leak between ad click and purchase before you change creatives. [L0640.016]</li>
+<li>A typical funnel drop from ad click to add-to-cart to final checkout is about half at each stage. Shipping costs are the most common reason people leave at checkout. [L0640.017]</li>
+<li>Check funnel ratios per product and per country: CTR, CPC, CPM, conversion rate, add-to-cart ratio and initiate-checkout ratio. [L1185.018]</li>
+<li>The add-to-cart rate is driven mostly by what happens on the store after the click (site quality, product and offer), not by the traffic source alone. Evaluate it per product and per store rather than per ad platform. [L1508.012]</li>
+<li>The add-to-cart rate used to judge a product page is read in the Shopify backend. Check that the page structure is good enough before duplicating it. [L1194.013]</li>
+<li>In Business Manager, check add-to-cart and initiate-checkout rates per ad asset and compare them with the Shopify dashboard. A drop at one step shows where the funnel breaks. [L1017.023]</li>
+<li>A profitable funnel needs both parts healthy: strong Meta metrics (CPM, CTR, CPC, cost per purchase) and a converting website. A good website cannot compensate for expensive traffic, and cheap traffic cannot compensate for a website that does not convert. [L1354.018]</li>
+</ul>
+<p><strong>Funnel leak table</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Leak location</th>
+<th>Indicator</th>
+<th>Likely root cause</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pre-click</td>
+<td>High CPM and low CTR</td>
+<td>Creative not resonating</td>
+<td>New hooks or angles</td>
+</tr>
+<tr>
+<td>Click to LPV</td>
+<td>More than 30% drop</td>
+<td>Slow page or accidental clicks</td>
+<td>Fix page speed</td>
+</tr>
+<tr>
+<td>LPV to ATC</td>
+<td>Under 5%</td>
+<td>Page does not match the ad</td>
+<td>Improve message match</td>
+</tr>
+<tr>
+<td>ATC to checkout</td>
+<td>Under 30%</td>
+<td>Cart friction</td>
+<td>Improve cart experience</td>
+</tr>
+<tr>
+<td>Checkout to purchase</td>
+<td>Under 50%</td>
+<td>Checkout abandonment</td>
+<td>Simplify checkout</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0613.053]</p>
+<p><strong>Procedure: funnel check with a 3-step order</strong></p>
+<ol type="1">
+<li>Check the number of visitors arriving at the store first. [L1508.024]</li>
+<li>Check whether those visitors add products to the cart. [L1508.024]</li>
+<li>Check whether people are buying. [L1508.024]</li>
+</ol>
+<ul>
+<li>Use these results to decide whether the price, the product and the website are converting, and look at all three together. [L1508.024]</li>
+</ul>
+<p><strong>Procedure: diagnosing a failed campaign</strong></p>
+<ol type="1">
+<li>Check whether tracking is correct by comparing the ad platform numbers with the store analytics, for example Shopify. [L0361.009]</li>
+<li>Check CTR and CPC. A very high CPC points to a creative or audience problem. [L0361.009]</li>
+<li>Check the add-to-cart rate against the 4% benchmark. If it is low, the creative, offer or landing page is the suspect. [L0361.009, L0361.002]</li>
+<li>If add-to-carts are fine, check the step from add-to-cart to checkout: shipping costs, trust signals, and whether the checkout works at all. [L0361.009]</li>
+<li>If people reach checkout but do not buy, test the checkout yourself and review the purchase step. [L0361.009]</li>
+</ol>
+<p><strong>Four-scenario diagnosis from the tracker</strong></p>
+<ol type="1">
+<li>Ads and website both healthy: all metrics in green, ROAS well above break-even, stable for 5 to 7 days. Action: scale. [L1354.019]</li>
+<li>Ads and website both weak: high CPM, expensive clicks, no or few sales, everything in red for 5 to 7 days. Action: improve both parts of the funnel. [L1354.019]</li>
+<li>Ads strong (good CPM, CTR and CPC) but website weak (few or no add-to-carts, low conversion rate such as 0.5%). The bottleneck is the website. [L1354.019]</li>
+<li>Website strong but ads weak (high CPM, CPC near $6). The funnel is not scalable until traffic cost is fixed. [L1354.019]</li>
+</ol>
+<p><strong>Examples from the same tracker</strong></p>
+<ul>
+<li>Optimal funnel: $100 daily Meta spend, ROAS of 4.5 (versus break-even 1.30), 10 add-to-carts, 3 purchases, and a cost per purchase below the $115 target. [L1354.022]</li>
+<li>Weak funnel: $100 daily spend with high CPM, traffic costs too high, some add-to-carts but few or no sales, and all values in the red. Action: fix both the ads and the website. [L1354.023]</li>
+<li>Website bottleneck: $100 spend with good CPM, CTR and CPC, but zero or very few sales and a conversion rate around 0.5%. Action: focus on the website, such as trust elements (testimonials), the chosen price point, and what stops people from buying. [L1354.024]</li>
+<li>Ads bottleneck: a website with many add-to-carts, purchases, a positive ROAS and a good conversion rate, but terrible Meta metrics such as high CPM and a cost per click near $6. Action: the funnel is not scalable until traffic cost is reduced, even though the website is good. [L1354.025]</li>
+</ul>
+<h2 id="add-to-cart-and-checkout-drop-offs">Add-to-cart and checkout drop-offs</h2>
+<ul>
+<li>Check the funnel when add-to-carts are low or when there is a large drop between add-to-carts and initiate-checkouts. These drop-offs point to causes in the store or offer. [L0349.022]</li>
+<li>If add-to-carts are at or above 4% but there are zero sales, the problem lies after add-to-cart: checkout, shipping costs, trust or checkout setup. A problem in the checkout area is far more likely than a problem in the ad or product page. [L0361.007]</li>
+<li>Track add-to-carts alongside sales, because a store can show cart activity without enough purchases. In one example, four carts led to two sales, which pointed to the checkout experience and trust factors as the next place to look. [L0650.071]</li>
+<li>Add-to-cart and checkout activity can be high while sales are zero. The speaker suggested this is unusual and worth investigating. Add-to-cart to checkout conversion of around 71% was considered strong. [L0552.026]</li>
+<li>Use the 71% figure as the strong end of add-to-cart to checkout conversion. The leak table treats under 30% as cart friction, so below 30% is a clear problem and 71% is a clear strength. [L0552.026, L0613.053]</li>
+<li>When add-to-cart and checkout are both healthy and click-through is healthy too, but sales are still missing, the remaining problem is more likely the product or the ad angle. [L1382.072]</li>
+<li>Healthy add-to-cart and checkout rates suggest the landing page works, which moves the problem toward the offer, the creative or the product. [L1436.088]</li>
+<li>When CTR is high but add-to-cart and checkout ratios are low, the product page is failing to hold the visitor. Typical causes are an unattractive offer, a weak product description or any reason that makes visitors leave before adding to cart. [L0774.009]</li>
+<li>If ads drive add-to-cart activity but few visitors complete checkout, the problem may be the offer rather than the ad. Test a clearer or stronger offer first. [L0918.022]</li>
+<li>When an ad gets clicks but no add-to-carts or purchases, the page or checkout is a likely cause. Testing the same ad again after a fix helps separate an ad problem from a checkout or page problem. [L1426.016]</li>
+<li>A product page that gets clicks but does not convert needs work on the product page, price, bundles or copy. [L1172.033]</li>
+<li>If content views are far below link clicks, the landing page may load too slowly, so visitors leave before the product page registers. Content views should normally be somewhat lower than link clicks, and a big gap is a warning sign for site speed. [L1024.038]</li>
+<li>A good add-to-cart rate with zero sales points to a problem after the cart, not in the ad or the product. [L1216.004]</li>
+<li>Track each step against a benchmark before deciding. The stage with the largest gap to its benchmark is where you start. [L0471.065, L0613.053]</li>
+</ul>
+<h2 id="site-versus-ad-where-the-problem-sits">Site versus ad: where the problem sits</h2>
+<p><strong>Core split between ad and store</strong></p>
+<ul>
+<li>Check CTR and CPM first in Facebook ads. High CTR with no sales points to the offer, not the ad. [L0519.028]</li>
+<li>Track CTR for ads and store conversion rate for the website separately. A good CTR with a low conversion rate points to the website or offer. A poor CTR points to the ad. [L0650.046]</li>
+<li>A strong CTR with no sales means the ad is working and the store or offer is the problem. [L1017.015]</li>
+<li>If CTR is at least 1.5% and CPC is below 1 USD but there are still no sales, the problem is the store. If CTR or CPC are off target, change the ads. [L1220.034]</li>
+<li>If ads reach a click-through rate above 1.5% but produce no add-to-carts or sales, the problem is likely the offer. Test different offers before changing anything else. [L1399.001]</li>
+<li>A good CTR of around 3% with many add-to-carts but no sales points to a problem after the add-to-cart step, such as currency or checkout. [L1185.018]</li>
+<li>After you have a good CTR and a good offer, check store conversion rate and then decide whether to scale or move on, in that order. [L0650.048]</li>
+<li>Apart from the creative, the only other lever under the advertiser's control is the post-click part: landing page and funnel. Improving the conversion of visitors into buyers is a way to win the same audience pocket as competitors. [L0639.012]</li>
+<li>When ad CTR and CPC are acceptable but sales are missing, check the add-to-cart and initial checkout rates on the store. [L1436.088]</li>
+</ul>
+<p><strong>Hook, desire and interest</strong></p>
+<ul>
+<li>Diagnose a funnel problem in this order: first check that attention (hook rate) is strong. If clicks are good but sales are poor, the problem is in desire. [L0950.018]</li>
+<li>Possible causes of poor desire are an ad that does not sell the idea, unexpected fees, a price that is too high, a product page that does not sell well, a functional problem on the page, or a lack of trust. [L0950.018]</li>
+<li>A high click-through rate with poor sales shows real interest, so the next step is to fix the product page, checkout fees or trust signals rather than the ad. [L0950.019]</li>
+</ul>
+<p><strong>Case: a launch with clicks and no sales</strong></p>
+<ul>
+<li>A product launched with a wow factor and a strong landing page got €190 in ad spend over four days without a single sale. Sessions were about 50 per day, then rose to 100 to 120 per day after new ad sets were added, but sales fell to zero. [L0950.025]</li>
+<li>Before the drop, the account had ROAS of about 2.2 and 4.4x return on ad spend, with a click-through rate of about 2 to 3%. [L0950.025]</li>
+<li>The first step was to check that the page and checkout functioned correctly and to use Lucky Orange to watch screen recordings. [L0950.025]</li>
+</ul>
+<p><strong>Low conversion despite traffic</strong></p>
+<ol type="1">
+<li>Check which keywords are driving impressions and clicks in your Shopping campaign keyword report. [L0210.031]</li>
+<li>Search Google for the product yourself and analyze what competitors show: messaging, offers and product photos. [L0210.031]</li>
+<li>Compare your product page with competitor pages: pricing, descriptions, images, shipping and returns. [L0210.031]</li>
+<li>Fix product page conversion elements, not just the ads. [L0210.031]</li>
+</ol>
+<ul>
+<li>A low conversion rate on a product page often means the page's traffic is at an awareness stage the page does not address. Check the traffic source and stage before changing the page itself. [L0481.016] (2021-2022, older)</li>
+<li>A high bounce rate on a high-traffic page can also point to a gap between what visitors expected and what the page shows. [L0473.019] (2021-2022, older)</li>
+</ul>
+<p><strong>Unexplained sales drop</strong></p>
+<ol type="1">
+<li>Check whether the drop is seasonal or market-wide by comparing with previous years and with competitors. [L0949.028] (2021-2022, older)</li>
+<li>Look at what competitors are doing, including new products, better offers and stronger traffic. [L0949.028] (2021-2022, older)</li>
+<li>Check your own traffic, conversion and offer for changes, and fix what has shifted. [L0949.028] (2021-2022, older)</li>
+</ol>
+<ul>
+<li>When a profitable store turns unprofitable after months of work, identify the root cause with data before changing things. Persistent problems usually come from specific parts of the funnel. [L0963.143] (2022, older)</li>
+<li>Before you change the store, check whether a poor result is a traffic problem or a conversion problem by comparing against the previous period. [L0807.042]</li>
+<li>When asking a mentor or coach to diagnose weak ad performance, send screenshots of the ad results and screenshots of the Shopify analytics showing how visitors behave on the store. This lets the reviewer see whether the problem is in the ads or in the store. [L1347.040]</li>
+</ul>
+<p><strong>Advertorial route (see also the advertorials section below)</strong></p>
+<ul>
+<li>Check how many visitors move from the advertorial to the offer page. [L1131.017]</li>
+<li>If that number is low, rewrite the advertorial copy to strengthen the argument. [L1131.017]</li>
+<li>Alternatively, split test sending ad traffic directly to the offer page against the advertorial route, and keep the stronger one. [L1131.017]</li>
+</ul>
+<h2 id="traffic-source-country-and-product-breakdowns">Traffic source, country and product breakdowns</h2>
+<p><strong>Traffic source</strong></p>
+<ul>
+<li>Measure conversion rate by traffic source separately (Google Shopping, Facebook Remarketing and organic) rather than using blended figures. [L0249.079] (2022, older)</li>
+<li>Each paid channel should reach 2.5% or more conversion. These channels are Google Shopping, Facebook Dynamic Remarketing and Google Remarketing. [L0272.069] (2022, older)</li>
+<li>If one traffic source converts well and another does not, leave the working source alone and focus the investigation on the weak one. Compare conversion rate by traffic source in Google Analytics to see which is which. [L1456.040] (2021-2022, older)</li>
+<li>Measure conversion rate and return on ad spend per traffic source, especially Google Ads, to see what is working. [L1109.047] (2018, older)</li>
+<li>Track ROAS, conversion rate, bounce rate, cost per sale and spend per product group together. A high bounce rate can be normal for product-page traffic that already knows what it wants. [L0804.082] (2023)</li>
+<li>Judge the bounce rate by paid traffic segments when a new store launches, and do not change the store before paid traffic starts. [L1281.096] (2022, older)</li>
+</ul>
+<p><strong>Country</strong></p>
+<ul>
+<li>Google Analytics shows the country distribution of visitors, which tells you which currency and pricing defaults to use. [L0838.005]</li>
+<li>Procedure: check conversion rate per country in Shopify.
+<ol type="1">
+<li>Go to Analytics. [L1316.007]</li>
+<li>Open Reports and then Online store sessions. [L1316.007]</li>
+<li>Click View report. [L1316.007]</li>
+<li>Set the columns to Sessions, Conversions (converted sessions) and Conversion rate. [L1316.007]</li>
+<li>Set the time grouping to None so the data is not split by hour or day. [L1316.007]</li>
+<li>Choose the Country grouping and compare the rows. [L1316.007]</li>
+<li>Filter or drill down to Region and City to see which area converts best. [L1316.007]</li>
+</ol></li>
+<li>For market analysis, the usable columns in the Online store sessions report are Sessions, Conversions, Conversion rate, Country, Region and City. Filter these to see which country, region or city performs best. [L1316.008]</li>
+<li>After you find a strong country, drill down to region and city. Put more ad budget into the best-performing city, for example Melbourne in Australia, rather than spreading spend evenly across the country. [L1316.010]</li>
+<li>The Markets overview shows each market's share of total sales, sales and conversion rate for the last 30 days. It also counts how many countries are not in any market (209 in the example). [L1167.035]</li>
+<li>Check funnel ratios per product and per country, not only in total. [L1185.018]</li>
+</ul>
+<p><strong>Product</strong></p>
+<ul>
+<li>When two or more products run on one store, give each product its own campaign and UTM tag. Compare add-to-cart and initiate-checkout counts per product alongside purchases. This shows at which funnel step each product loses buyers, which a shared campaign cannot show because it can credit the same purchase to several products. [L1347.037]</li>
+<li>When running several product pages or stores from the same TikTok account, track each page separately to see which product converts. [L0561.058]</li>
+<li>Focus price and page optimization on the top 20% of product pages by traffic, since they drive most of the results. [L1090.131] (2021, older)</li>
+<li>Google Analytics &gt; Engagement &gt; Pages and screens shows which pages already get the most traffic. Use it to decide which product descriptions to rewrite first. [L1190.016]</li>
+</ul>
+<h2 id="bounce-rate-and-time-on-page">Bounce rate and time on page</h2>
+<p><strong>Definitions</strong></p>
+<ul>
+<li>Bounce rate is the percentage of visitors who leave after visiting only that single page without further interaction. [L0293.004]</li>
+<li>Average Time on Page shows per URL how long visitors remain on each product page in your store. [L0293.003]</li>
+<li>Bounce rate is the share of visitors who leave without further interaction. An average time on site well below 10 seconds together with a very high bounce rate indicates that the visitors are the wrong audience for the offer. [L1254.005]</li>
+<li>Google Analytics is used to check the bounce rate of the store, which is the share of visitors who leave the site without any action. [L1085.048] (2018, older)</li>
+</ul>
+<p><strong>Thresholds (note the different sources and years)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Threshold</th>
+<th>Meaning</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General store (2018, older)</td>
+<td>60% or lower</td>
+<td>Healthy</td>
+<td>L1085.049</td>
+</tr>
+<tr>
+<td>General store (2018, older)</td>
+<td>80% to 90%</td>
+<td>Most visitors leave right away; the landing page needs a fix</td>
+<td>L1085.049</td>
+</tr>
+<tr>
+<td>Organic landing pages (2021-2022, older)</td>
+<td>50% or below</td>
+<td>Good</td>
+<td>L1099.017</td>
+</tr>
+<tr>
+<td>Organic landing pages (2021-2022, older)</td>
+<td>80% to 90%</td>
+<td>Page problem or mismatch between page and search terms it ranks for</td>
+<td>L1099.017</td>
+</tr>
+<tr>
+<td>New store with paid traffic not yet started (2022, older)</td>
+<td>78% to 82% with average session of 53 seconds</td>
+<td>Not a reason to change the store before paid traffic starts</td>
+<td>L1281.096</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Use the 2021-2022 organic thresholds when you evaluate landing pages from organic search. Use the 2018 general thresholds only as an older reference. [L1085.049, L1099.017]</li>
+<li>Judge user interaction only on organic traffic. Paid traffic, especially from Google Shopping, usually has a higher bounce rate and different time on page, so filter it out by Source/Medium before evaluating a page. [L1099.016] (2021-2022, older)</li>
+<li>Time on page under 30 seconds is not good for organic landing pages. Above 30 seconds is acceptable, and longer is better. [L1099.018] (2021-2022, older)</li>
+<li>A very high bounce rate on a high-traffic page, with many visitors leaving within about 10 seconds, points to a problem with the offer or to a gap between expectations and what the page shows. Behavior data does not always reveal a problem, so use it to guide the investigation, not as proof. [L0473.019] (2021-2022, older)</li>
+<li>Before judging a high bounce rate on a new store, check which search terms and countries Google Search Console shows for the store. Traffic from unrelated search terms or distant countries often explains a poor bounce rate better than the bounce figure alone. [L1281.130] (2022, older)</li>
+</ul>
+<p><strong>Procedure: diagnosing a high bounce rate in Google Analytics (2021, older)</strong></p>
+<ol type="1">
+<li>Open Behavior. [L0247.116]</li>
+<li>Open Content. [L0247.116]</li>
+<li>Find the pages with the highest bounce rates. [L0247.116]</li>
+<li>Check which traffic sources send visitors to those pages. [L0247.116]</li>
+</ol>
+<p><strong>Procedure: checking user interaction on landing pages (2021-2022, older)</strong></p>
+<ol type="1">
+<li>Open Google Analytics in the default browser. [L1099.019]</li>
+<li>Load the custom report and open it under Custom reports in the left menu. [L1099.019]</li>
+<li>Filter by secondary dimension Source/Medium and keep only organic traffic. [L1099.019]</li>
+<li>Compare bounce rate and time on page per landing page against the thresholds of 50% bounce rate and 30 seconds time on page. [L1099.019]</li>
+<li>For pages above 80% bounce rate or under 30 seconds, check search intent match, above-the-fold content, overlays, readability and interaction points. Adjust the search terms if the keywords themselves are mismatched. [L1099.019]</li>
+<li>Re-measure after changes. [L1099.019]</li>
+</ol>
+<ul>
+<li>The custom report supplied with the course shows bounce rate and time on page for all landing pages. Filter it by the secondary dimension Source/Medium to isolate organic traffic. [L1099.015] (2021-2022, older)</li>
+<li>A high bounce rate on a product page can be normal for traffic that already knows what it wants. [L0804.082] (2023)</li>
+</ul>
+<h2 id="device-mobile-versus-desktop">Device: mobile versus desktop</h2>
+<ul>
+<li>Track conversion and return on ad spend by device. Desktop often converts best, but mobile carries most traffic and sales, and many mobile visitors buy later on desktop, so mobile should not be switched off. [L1085.052] (2018, older)</li>
+<li>Check Google Analytics bounce rate and session duration, separated by mobile and desktop, before changing the store or ads, since device differences often explain most of the problem. [L1090.132] (2021, older)</li>
+<li>Relative mobile conversion rate = mobile conversion rate / desktop conversion rate x 100. It shows how well the mobile site converts compared with desktop, so it can be read without being distorted by differences in campaign sources. [L0390.002]</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Mobile</th>
+<th>Desktop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traffic share</td>
+<td>58%</td>
+<td>42%</td>
+</tr>
+<tr>
+<td>Conversion rate</td>
+<td>1.79%</td>
+<td>4.44%</td>
+</tr>
+<tr>
+<td>Relative mobile CR</td>
+<td>40% (1.79% / 4.44%)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Relative mobile conversion rate equals the mobile conversion rate divided by the desktop conversion rate. In the example, 1.79% divided by 4.44% gives 40%. [L0423.003, L0423.004]</li>
+</ul>
+<h2 id="page-speed-and-reliability">Page speed and reliability</h2>
+<ul>
+<li>One second of speed improvement can add about 7,000 USD in daily revenue for a store with 100,000 USD daily revenue. [L0390.033]</li>
+<li>The target First Contentful Paint (FCP) is under 3 seconds. It is the main speed metric to watch because it reflects the first view a customer sees. [L1410.033]</li>
+<li>Page speed scores in the Shopify admin are less accurate than GTmetrics. Use an outside tool to check page speed before making design decisions. [L0468.170] (2020, older)</li>
+<li>PageSpeed Insights shows field data only when the Chrome User Experience Report has enough real-user data for that exact URL. Otherwise it shows an origin summary for the whole domain, so check individual page URLs to see page-specific results. [L1266.033] (2021-2022, older)</li>
+<li>Run WebPageTest at least three times and compare the first view runs. Treat a slow metric as a real problem only if it appears consistently across the runs, not only in a single outlier run. [L1266.045] (2021-2022, older)</li>
+<li>Treat uptime monitoring as business insurance, not an expense. A store that is down for days loses sales unnoticed, and Shopify outages can happen even on a cloud platform. [L0575.024]</li>
+</ul>
+<h2 id="google-analytics-and-shopify-page-reports">Google Analytics and Shopify page reports</h2>
+<ul>
+<li>Google Analytics &gt; left sidebar &gt; Behavior &gt; Site Content shows which URLs visitors view, which helps decide which product pages to optimize first. [L1275.039] (2019, older)</li>
+<li>In Google Analytics, go to Sidebar &gt; Behavior &gt; Site Content &gt; All Pages to view detailed page-level performance metrics displayed in red columns. [L0293.002]</li>
+<li>Menu names differ between versions of Google Analytics, so use the path your account shows. [L0293.002, L1190.016]</li>
+<li>Google Analytics shows which pages get views and a basic conversion rate per page. [L0561.058]</li>
+<li>Google Analytics is used to compare page versions at the end of a test. Relevant page metrics are bounce rate, time on page, exit rate, conversion rate and page value. [L1364.031] (2021-2022, older)</li>
+<li>Procedure: compare results after a test (2021-2022, older).
+<ol type="1">
+<li>Open the two page versions in Google Analytics. [L1364.038]</li>
+<li>Compare bounce rate, time on page, exit rate, conversion rate and page value for each version over the test period. [L1364.038]</li>
+<li>Check whether the difference is statistically significant before making a decision. [L1364.038]</li>
+</ol></li>
+</ul>
+<h2 id="on-page-behavior-heatmaps-and-recordings">On-page behavior: heatmaps and recordings</h2>
+<ul>
+<li>A heatmap shows how far visitors scroll and where they click. It tells you whether key content, such as reviews or the add-to-cart button, is actually being seen. [L0409.014] (2021-2022, older)</li>
+<li>Deep orange areas in Lucky Orange heatmaps show where most visitors click on your pages. If a non-clickable section receives heavy clicks (deep orange), visitors probably expect it to be interactive, or the design confuses their intentions. [L0293.010]</li>
+<li>Use Lucky Orange screen recordings to see how shoppers move through the page and checkout when sales are missing. [L0950.025]</li>
+</ul>
+<h2 id="advertorials-and-landing-page-routes">Advertorials and landing-page routes</h2>
+<ul>
+<li>Advertorial decision logic when it underperforms:
+<ol type="1">
+<li>Check how many visitors move from the advertorial to the offer page. [L1131.017]</li>
+<li>If that number is low, rewrite the advertorial copy to strengthen the argument. [L1131.017]</li>
+<li>Alternatively, split test sending ad traffic directly to the offer page against the advertorial route, and keep the stronger one. [L1131.017]</li>
+</ol></li>
+<li>Google Optimize could run headline tests on advertorial and sales pages to find the headline that grabs the most attention. It was installed as a snippet placed after the page builder (PageFly) loader in Shopify. [L0995.011]</li>
+<li>Google Optimize was discontinued in 2023, so the A/B testing described in that lesson needs another current testing tool, such as a Shopify app or a native testing platform. [L0916.034]</li>
+</ul>
+<h2 id="upsell-cross-sell-and-bundle-analytics">Upsell, cross-sell and bundle analytics</h2>
+<p><strong>Upsell metrics</strong></p>
+<ul>
+<li>Track the dollar value each upsell adds, not just its conversion rate. An offer that converts less often can still produce more revenue if its price is much higher. [L0378.087]</li>
+<li>AOV is the key metric for upsells and cross-sells, because they raise revenue per existing customer rather than acquiring new ones. Track AOV to judge whether an offer works. [L1411.003]</li>
+<li>Track AOV to measure the effect of bundles, cross-sells and upsells. In the example, AOV rose from $40 to $70 with a two-unit bundle, and from $39 to $49 with a three-tier bundle ladder. [L0434.018]</li>
+<li>Example with a single-product store: average order value of 40 USD. After switching to a bundle offer of buy two and get an extra 20% off, two items cost about 70 USD, and AOV rises from 40 USD to about 70 USD. Shipping per unit also falls with two units, which raises average profit further. [L0435.010]</li>
+<li>The lesson estimates that about 80% of buyers do not uncheck pre-selected cart extras. About 60% of orders then add 3 to 5 USD, so each order can gain 5 to 10 USD in total from extras. [L1412.019]</li>
+<li>The lesson estimates that a cart upsell app such as Monster Cart Upsell can lift AOV by about 5 to 10 USD, and by 20 to 30 USD with extensive customization. These are the lesson's own estimates, not verified results. [L1412.020]</li>
+<li>Conversion rate is not the only measure for upsells. Track AOV and profit per order together. [L1231.003, L0378.087]</li>
+</ul>
+<p><strong>Upsell options and tactics</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Upsell Tactic</th>
+<th>Tool/Method</th>
+<th>Cost</th>
+<th>Setup Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comparison charts</td>
+<td>Create in Shopify or design app</td>
+<td>$0</td>
+<td>1-3 hours per chart</td>
+</tr>
+<tr>
+<td>Product upgrade (Bold Upsell app)</td>
+<td>Bold Upsell</td>
+<td>$9.99-$89.99/month*</td>
+<td>15-30 minutes per upsell</td>
+</tr>
+<tr>
+<td>Extended warranty</td>
+<td>Bold Upsell (included)</td>
+<td>Included in app</td>
+<td>5 minutes</td>
+</tr>
+<tr>
+<td>Priority shipping</td>
+<td>Shopify checkout setting</td>
+<td>$0</td>
+<td>5 minutes</td>
+</tr>
+<tr>
+<td>Post-purchase phone call</td>
+<td>Staff time</td>
+<td>$0</td>
+<td>10-20 minutes per call</td>
+</tr>
+</tbody>
+</table></div>
+<p>*14-day free trial available. [L0240.016]</p>
+<p><strong>Bundle tests</strong></p>
+<ul>
+<li>When testing a bundle structure, track average order value and profit per customer alongside ad performance. Judge bundle changes by profit per customer, not by the front-end price alone. [L0347.020]</li>
+<li>After adding bundles and the ebook bonus, track average order value and conversion rate, and compare them with the period before the change. This shows whether the offer change actually improved results. [L0860.026]</li>
+</ul>
+<p><strong>Kaching Bundles and Upsell reports</strong></p>
+<ul>
+<li>Kaching Bundles overview shows Added revenue and Orders with bundles for 24 hours, 7 days, 30 days or all time, plus per-deal columns for Visitors and AOV. Use these to compare the performance of each bundle. [L0862.015]</li>
+<li>Track AOV and orders with bundles per deal in Kaching Bundles analytics. Compare each deal's AOV and visitor count to decide which bundle to keep, change or archive. [L0861.022]</li>
+<li>The Kaching Bundles overview shows Added revenue and Orders with bundles for a selected period. A Performance metrics section lists Revenue per visitor and Total revenue. Use Revenue per visitor alongside AOV to compare how much each bundle earns per shopper who lands on the store. [L0861.041]</li>
+<li>Kaching Upsell analytics report AOV, Add. rev (revenue added by upsells), Total rev and Rev/visitor for the chosen period. These figures show how much the upsell and cart changes add to each order and to each visitor. [L0560.031]</li>
+<li>The funnel dashboard shows Views, Conversion, Revenue and Rev./Visit for each offer, with a Last 30 Days filter. Compare these per funnel to decide which funnels to keep, improve or remove. [L1141.022]</li>
+<li>The Store Performance panel shows Total OCU revenue, Today's upsell revenue, Today's AOV with OCU upsells, Today's AOV without OCU upsells and Today's avg. upsell value. Compare the two AOV figures to measure the real lift from upsells. [L1141.023]</li>
+<li>Post-purchase funnels in the lesson example pushed AOV to about 300 USD, and into the 380 USD range in the best case. Use these as upside targets and measure against your own store's AOV without upsells, not as a guarantee. [L1141.024]</li>
+</ul>
+<p><strong>Rebuy and cross-sell dashboards</strong></p>
+<ul>
+<li>The Rebuy dashboard shows widget analytics and Rebuy sales as a percentage of total sales. In the example, the figure was 4.23%, but no benchmark was given because results depend on many variables. [L1231.057]</li>
+<li>After launching cross-sells, review the app's dashboard to see which options customers click and where they leave the funnel. If buyers do not follow through, change the offers, the order of steps or the products shown. [L1076.034]</li>
+</ul>
+<h2 id="post-purchase-offers">Post-purchase offers</h2>
+<ul>
+<li>The Rebuy post-purchase report shows these columns per offer: Views, Conversion (%), Revenue (<span class="math inline">), <em>R</em><em>e</em><em>v</em>/<em>U</em><em>s</em><em>e</em><em>r</em>(</span>), and status (ACCEPTED, DECLINED or A/B TESTING). Each widget in a flow carries its own row with these figures. [L1413.013]</li>
+<li>In the example merchant's flow, about 84% of customers declined the initial offer, and only about 15% of the 14,000 customers who reached the final downsell converted. Low acceptance rates are normal for post-purchase offers and can still produce meaningful revenue at scale. [L1413.014]</li>
+<li>Additional analytic event delay is a setting on post-purchase widgets. It is left at 0 seconds in the example flows. [L1413.015]</li>
+<li>The Post Purchase Flows list shows these columns per flow. The flow-level figures summarize all offers in the flow, while the per-offer report breaks the same measures down by widget. [L1413.019]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Flow (name and ID)</th>
+<th>Status (LIVE / NOT LIVE)</th>
+<th>Total Visitors</th>
+<th>Conversion</th>
+<th>Revenue</th>
+<th>Revenue Per Visitor</th>
+<th>Last Viewed</th>
+<th>Created Date</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+<p>[L1413.019]</p>
+<ul>
+<li>Give each flow and widget a name that states its test purpose, such as Gift Card offer test, so the report shows which variant is which. Clear names make it easier to compare conversion and revenue per visitor across tests. [L1413.022]</li>
+</ul>
+<h2 id="ab-test-metrics-and-significance">A/B test metrics and significance</h2>
+<p><strong>Core metrics and reading the report</strong></p>
+<ul>
+<li>Measure all A/B tests against revenue-per-session improvement to judge profitability accurately. [L0197.025]</li>
+<li>Visually's test report shows status, start date, last edit, pages, audience, device and allocation at the top. It lists sessions, transactions, conversion rate, AOV, PSV, revenue, profit and odds to win for control and each variation, with the primary goal marked. Metrics not selected at setup can be added later to the report. [L0389.020]</li>
+<li>For product recommendations and product upsells, Visually splits revenue into assisted revenue (a shopper clicked an upsell item and bought something later) and direct revenue (the upsell item was bought directly). Best-selling items for control and each variation are listed further down the report. [L0389.021]</li>
+<li>When setting up a Visually A/B test, the goal menu offers many options, including revenue, conversion rate, profit, AOV, subscriptions and returns. You can select several goals, but one must be marked as the primary goal. Events can also be sent to Google Analytics with a checkbox. [L0389.024]</li>
+</ul>
+<p><strong>Significance</strong></p>
+<ul>
+<li>Wait for a statistically significant result before choosing a winner in Visually. Keep the test running while the report shows no statistically significant results yet. A variation with a high chance to win, such as 80% odds to win, is not enough on its own. [L0389.019]</li>
+<li>Do not claim double-digit conversion gains after only a few days of test data. [L0389.023]</li>
+<li>In the matching snapshot, conversion rate was around 2.0% vs 2.05% and not statistically significant, so the reported gain was not visible there. [L0389.023]</li>
+</ul>
+<p><strong>Case: mobile cart upsell test on a watch-band Shopify store</strong></p>
+<ul>
+<li>The test ran from 1 Nov 2024 (last edit 10 Nov 2024, version 1-14 Nov 2024) with an even 50% split, All Pages, All Visitors and Mobile targeting. [L0389.022]</li>
+<li>Control: 50,970 sessions, 1,019 transactions, AOV $56.22, PSV $1.12, revenue $57,286 and profit $42,105. [L0389.022]</li>
+<li>Variation: 50,753 sessions, 1,039 transactions, AOV $57.15 (+1.7%), PSV $1.17, revenue $59,375 (+3.6%) and profit $43,804 (+4.0%). [L0389.022]</li>
+<li>Visually still showed no statistically significant result and 80% odds to win for the variation, so the test needed more days before a decision. [L0389.022]</li>
+</ul>
+<p><strong>Lift calculation</strong></p>
+<ul>
+<li>Relative conversion lift = (new conversion rate − old conversion rate) ÷ old conversion rate × 100. [L0916.038]</li>
+<li>Example: a rise from 1.85% to 4.25% equals (4.25 − 1.85) ÷ 1.85 × 100 ≈ 129.7%, which is an increase of about 130%. [L0916.038]</li>
+</ul>
+<p><strong>Older headline testing note</strong></p>
+<ul>
+<li>Headline tests on advertorial and sales pages, installed as a snippet after the PageFly loader, belonged to the Google Optimize setup described in older material. Google Optimize was discontinued in 2023, so use a current testing tool instead. [L0995.011, L0916.034]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>If the conversion rate is too low, improve it first (conversion rate optimization) so that the business can afford to spend more on traffic. [L1495.006]</li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/11-test-budgets-kill-rules-and-scale-decisions/"><span class="k">&larr; Previous</span><span class="v">Test budgets, kill rules and scale decisions</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/13-google-ads-and-shopping-reporting-and-optimization/"><span class="k">Next &rarr;</span><span class="v">Google Ads and Shopping reporting and optimization</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Building bundles in Shopify and apps | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 7.14: Building bundles in Shopify and apps.">
+<link rel="canonical" href="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/14-building-bundles-in-shopify-and-apps/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Building bundles in Shopify and apps | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 7.14: Building bundles in Shopify and apps."><meta property="og:url" content="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/14-building-bundles-in-shopify-and-apps/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">7. Offers, pricing and bundles</a> &rsaquo; <a href="../../../ecom/07-offers-pricing-and-bundles/14-building-bundles-in-shopify-and-apps/">Plain version</a></div><h1>7.14 Building bundles in Shopify and apps</h1><article><h2 id="choose-the-offer-type-before-you-build">Choose the offer type before you build</h2>
+<ul>
+<li>Bundle offers outperform Monster Card for average order value. Monster Card and bundle tactics are incompatible and should not run at the same time. [L0298.033]</li>
+<li>Bundle apps work better for increasing the quantity of the same product. Monster Card works better when you have different complementary items to cross-sell. Choose by your specific goal. [L0298.056]</li>
+<li>Use an automated discount rather than a discount code for a buy-X-get-Y offer. The discount applies in the cart without the customer entering anything, and the offer stays identical at every step from the ad to checkout. [L0650.066]</li>
+<li>Bundle builders with quantity discounts usually need a paid app. Built-in bundle features in a theme can replace several monthly app costs. [L0709.021]</li>
+<li>One bundle app was estimated to cost about as much per month as the full $249 theme price over roughly six months. Compare total app costs with a one-time theme price to judge the savings. [L0709.022]</li>
+<li>Common conversion features are bundle builders, quizzes, upsells, cross-sells, free shipping options, and discounts for adding more items. They were built into a theme because they were seen converting well across many brand projects. [L0709.023]</li>
+</ul>
+<h2 id="shopify-automatic-discounts-no-bundle-app-needed">Shopify automatic discounts (no bundle app needed)</h2>
+<ul>
+<li>Shopify automatic discount for a quantity rule: go to Discounts, click Create discount, choose Automatic discount, and set a rule such as "buy 2 and get 20% off". Show a banner message on the product page or in the cart. Example: 2 products at 34.99 USD each (69.99 USD) become 59.99 USD at checkout. Apps such as Bundle Bear are optional and not needed at the start. [L0773.017]</li>
+<li>Source check: 20% off 69.99 USD is 55.99 USD, not 59.99 USD. The example shows about 14% off. Confirm the discount value in the Shopify rule before you publish the banner. [L0773.017]</li>
+<li>Set up the automatic quantity discount in Shopify: Discounts &gt; Create discount &gt; automatic discount. Communicate the offer on the product page, for example "20% off when two items are added to the cart". This works without a bundle or upsell app. [L0774.014]</li>
+<li>Create an automatic product discount for a bundle:
+<ol type="1">
+<li>Go to Discounts and create a new discount.</li>
+<li>Select Amount off products.</li>
+<li>Set the method to Automatic.</li>
+<li>Enter a Title. Customers see this title in the cart and at checkout.</li>
+<li>Set Discount value to Percentage and enter the value (for example 10%).</li>
+<li>Under Applies to, choose Specific collections and select the collection that holds all bundle items.</li>
+<li>Set a minimum purchase requirement of 4 items so the discount applies only to a full bundle.</li>
+<li>Decide whether the discount may combine with other discounts.</li>
+<li>Set the start date under Active dates and, if needed, an end date.</li>
+<li>Save, then check the Performance section for usage. [L0559.015]</li>
+</ol></li>
+<li>The automatic discount summary should read Amount off products, Method Automatic and Details For Online Store, with the percentage and minimum item count listed. The discount must be active before testing, otherwise the cart will not show it. [L0559.016]</li>
+<li>Set the Shopify minimum purchase quantity to the number of items in the bundle, so the discount triggers only when the full bundle is in the cart. A minimum below the bundle size gives the discount on partial sets. [L0559.018]</li>
+<li>Formula: Bundle price after discount = list total x (1 - discount %). Example: a list total of $37.00 with a 10% discount gives $37.00 x (1 - 0.10) = $33.30, a saving of $3.70. [L0559.019]</li>
+<li>If the widget discount percentage and the Shopify discount value differ, the shopper sees one saving on the bundle and gets another at checkout. Keep both values identical for each bundle. [L0559.022]</li>
+<li>In Shopify, a quantity-based discount can be set to apply when two items are in the cart, so the customer sees the saving immediately. The lesson's amount is 10, but its unit is not stated. Confirm whether it is a percentage or a fixed amount in your store before publishing. [L0436.017]</li>
+</ul>
+<h2 id="bundle-bear">Bundle Bear</h2>
+<p><strong>Tool description and offer types</strong></p>
+<ul>
+<li>Bundle Bear is a Shopify app for volume discount offers, such as buy two and get 40% off. [L1259.028, L1260.021]</li>
+<li>In Bundle Bear, the Bundle and Volume discount offer types are the most practical choices for most stores. A bundle can offer a fixed saving on two complementary products, or make the second product a free gift with the first. [L0634.040]</li>
+<li>Bundle Bear can combine two different products into one deal, such as a cap with a free t-shirt, and can run buy-one-get-one-free offers. Each bundle can use the brand color and brand images, and its performance can be checked in the analytics. [L0635.034]</li>
+<li>Bundle Bear offer types: bundle with another product, volume discount (the more bought, the less paid), mix and match (discount for different products), and cart goal (discount above a cart value such as $50). [L1297.033]</li>
+</ul>
+<p><strong>Setup procedures</strong></p>
+<ul>
+<li><p>Create a bundle offer in Bundle Bear:</p>
+<ol type="1">
+<li>Install Bundle Bear from the Shopify App Store and click Install app.</li>
+<li>Click Create offer and choose Bundle.</li>
+<li>Select the first and second product.</li>
+<li>Choose the saving. Options: a fixed amount off for both items (for example $10 or $20), the second product as a free gift, or no discount, to show that the products are sold together.</li>
+<li>Under advanced settings, set a start and end date for urgency and round prices, choosing 0.99 as the ending.</li>
+<li>Click save. [L0634.026]</li>
+</ol></li>
+<li><p>Create a volume discount in Bundle Bear:</p>
+<ol type="1">
+<li>Install Bundle Bear from the Shopify App Store.</li>
+<li>Click Create an offer and select Volume discount.</li>
+<li>Select the specific product and search for it.</li>
+<li>Add tiers, for example Buy 1 and save 10%, Buy 2 and save 15%, Buy 3 and save 20%, and customize the text for each tier.</li>
+<li>Save. The offer appears just below the product.</li>
+</ol>
+<p>You can also set brand color and images, create buy-one-get-one or free-gift offers, and check bundle analytics. [L0635.025]</p></li>
+<li><p>Create a Bundle Bear volume discount (second procedure):</p>
+<ol type="1">
+<li>Install Bundle Bear from the Shopify App Store and click Install app.</li>
+<li>Create an offer and name it, for example "offer one".</li>
+<li>Choose the offer type: bundle with another product, volume discount, mix and match, or cart goal.</li>
+<li>For this example choose volume discount, then pick all products or specific products.</li>
+<li>Before setting the discount, calculate the fulfillment cost per unit with your supplier.</li>
+<li>Add the discount tiers, then click save and activate.</li>
+<li>In the theme editor, add the Bundle Bear block to the product page, usually below the quantity selector. [L1297.033]</li>
+</ol></li>
+<li><p>Bundle Bear button label: a bundle offer can use a label such as "Get my deal" instead of "Add to cart" or "Buy now". The label and savings text can be edited in the bundle app. [L1410.043]</p></li>
+</ul>
+<p><strong>Tier values and examples</strong></p>
+<ul>
+<li>Typical volume-discount tiers are buy 2 for 10% off and buy 3 for 15% off. A cheaper alternative to Bundle Bear is the Sketching Bundle app. [L0635.026]</li>
+<li>Tier values differ between sources. L0635.025 uses Buy 1 save 10%, Buy 2 save 15%, Buy 3 save 20%. L1297.034 uses 10% for 2 items, 15% for 3 items and 20% for 4 items. Both are examples. Calculate your fulfillment cost per unit before you choose the tiers. [L0635.025, L0635.026, L1297.034, L1297.033]</li>
+<li>Worked example: 10% off for 2 items, 15% off for 3 items and 20% off for 4 items. Two items were priced at about $201 instead of about $223, so one item cost about $100 instead of about $112. [L1297.034]</li>
+</ul>
+<p><strong>Advanced settings and rounding</strong></p>
+<ul>
+<li>In Bundle Bear advanced settings, you can add custom badges, set a start and end time for urgency, and round discounted prices to 50 cents or $1. The example rounded prices to 50 cents. [L1297.035]</li>
+<li>For Bundle Bear discounted prices, enable rounding and choose the.99 ending, for example to show a bundle price as 49.99 instead of 50.00. Set this in the advanced settings of the offer. [L0476.030]</li>
+<li>Rounding values differ between sources. Use the.99 ending for charm pricing, as in L0476.030 and L0634.026. Use 50 cents or $1 when you want whole-amount rounding, as in L1297.035, where the example used 50 cents. [L0476.030, L0634.026, L1297.035]</li>
+</ul>
+<h2 id="kaching-bundles">Kaching Bundles</h2>
+<p><strong>Setup procedures</strong></p>
+<ul>
+<li>Set up a quantity-break bundle in Kaching Bundles (single-product example):
+<ol type="1">
+<li>Search "Kaching Bundles" in the Shopify App Store, install it, and approve the billing permissions.</li>
+<li>Open the app and create a new bundle deal.</li>
+<li>Select the product to bundle (one product, here a single supplement).</li>
+<li>Enter a name for the bundle (only visible to you).</li>
+<li>Set the Block title to a free-shipping threshold above the one-item price and between the one-item and two-item totals (example: "Free Shipping for orders above $25" for a $19.95 product).</li>
+<li>Set the Discount name shown in cart and checkout to "Bundle &amp; Save".</li>
+<li>Leave all other settings at default except Price rounding.</li>
+<li>Enable Price rounding and choose 95 or 99 cents.</li>
+<li>If the product has no variants, turn off "Let customers choose different variants for each item".</li>
+<li>Bar #1 (Buy One): set quantity to 1 and keep Full price. Title "Buy One". Delete the subtitle. In the price line, insert the variable for new price per item followed by "/ bottle". In the label, type "SAVE" followed by the variable for saved total. Badge style "Simple", badge text "Great Start!".</li>
+<li>Bar #2 (Buy Two): set quantity to 2 and choose Fixed price with a total of 29.99. Title "Buy Two". Subtitle and label identical to each other. Badge style "Most Popular". Optionally select it by default.</li>
+<li>Bar #3 (Buy Three): set quantity to 3 and choose Fixed price with a total of 38.95. Title "Buy Three". Badge text "Best Value".</li>
+<li>Add a free e-book gift to Bar #2 and Bar #3 (and to Bar #4 if you add one).</li>
+<li>Open Style and change colors, fonts and corner radius to your brand.</li>
+<li>Click Save as draft, check the preview, then click Publish. [L0862.001]</li>
+</ol></li>
+<li>Set up a bundle deal in Kaching Bundles (generic version):
+<ol type="1">
+<li>Search Kaching Bundles in the Shopify App Store, install it and approve the billing permissions.</li>
+<li>Open the app, go to Bundle deals, then click Create bundle deal.</li>
+<li>Under the product selection, choose the product that the bundle is built around.</li>
+<li>In Settings, enter a name (visible only to you), a block title that carries the free shipping message (for example "Free shipping for orders above $25") and the discount name shown in cart and checkout (for example "Bundle &amp; Save").</li>
+<li>Keep all other settings at default except Price rounding.</li>
+<li>Choose the deal type. Quantity breaks for the same product is the usual default.</li>
+<li>Bar #1 Buy One: set Quantity to 1, Full price, title "Buy One", delete the subtitle, Badge style "Simple", badge text "Great Start!", label "SAVE" with the saved total variable, and the price line with the new price per item followed by "/Bottle".</li>
+<li>Bar #2 Buy Two: set Quantity to 2, Fixed price with a total of 29.99, title "Buy Two", subtitle and label identical to the title, Badge style "Most Popular", optionally "Selected by default".</li>
+<li>Bar #3 Buy Three: set Quantity to 3, Fixed price with the chosen total, title "Buy Three", Badge style "Best Value".</li>
+<li>Add a free gift to bars 2 and 3: Add gift, Single gift, rename it "Free e-book" and select the e-book product.</li>
+<li>In Settings, turn off the variant selector if the product has no variants.</li>
+<li>In Style, change colors, font sizes and corner radius to the brand.</li>
+<li>Use Preview to check the product and the country (for example United States) and confirm the prices display correctly.</li>
+<li>Click Save as draft, then Publish. A Setup A/B test option is available before publishing. [L0861.003]</li>
+</ol></li>
+</ul>
+<p><strong>Deal types and templates</strong></p>
+<ul>
+<li>Bundle deal types available in Kaching Bundles:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Layout</th>
+<th>Example labels in the app</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Quantity breaks, same product</td>
+<td>1 / 2 / 3 packs of one product</td>
+<td>Complete the bundle, Save $10.00!, Buy 2</td>
+</tr>
+<tr>
+<td>Quantity breaks, different products</td>
+<td>1 / 2 / 3 packs of different products</td>
+<td>SAVE 15%</td>
+</tr>
+<tr>
+<td>Buy X, Get Y (BXGY)</td>
+<td>Buy 1 get 1 free, Buy 2 get 3 free, Buy 3 get 6 free</td>
+<td>Buy 1, get 1 free SAVE 60%; Buy 2, get 3 free SAVE 68%</td>
+</tr>
+<tr>
+<td>Subscription</td>
+<td>Subscribe and save</td>
+<td>Subscribe &amp; Save 20%</td>
+</tr>
+<tr>
+<td>Progressive gifts</td>
+<td>Unlock free gifts as the order grows</td>
+<td>Free shipping, FREE gift, Locked</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0861.015]</p>
+<ul>
+<li>Quantity breaks are the usual choice for most products. The other deal types are alternatives for specific products, such as subscription or BXGY offers. Pick the type that matches how the customer will buy the product. [L0861.016]</li>
+<li>For supplements, the subscription template is a good fit. For most other products, quantity breaks are good enough. Any bar can be customized, so quantity breaks for 1, 2 and 3 units (optionally 4) is a sound default. [L0862.008]</li>
+<li>Available bundle templates in Kaching Bundles: Quantity breaks for the same product, Quantity breaks for different products, Buy X Get Y deals (for example Buy 1 get 1 free, Buy 2 get 3 free, Buy 3 get 6 free), Subscription &amp; Save with 20% off, Progressive gifts that unlock free gifts with an order, a Volume discount with other products, countdown timer and scratch-off styles. [L0862.007]</li>
+<li>The deal creator asks you to choose a discount type from Single or Duo templates, with presets such as "You save 15%", "Buy 1, get 1 free" and "Buy 3, get 6 free". Any template can be changed afterwards. Pick the closest preset to speed up setup, then edit the prices and labels. [L0861.040]</li>
+<li>Create a highlighted offer: in the Kaching Bundles app, create a bundle offer, add quantity breaks to it, and mark the best-selling offer as highlighted so customers see it first. [L1324.007]</li>
+</ul>
+<p><strong>Pricing and fixed totals</strong></p>
+<ul>
+<li>Use Fixed price for bundle bars instead of percentage discounts. You can type the exact total, and the per-unit price is then easy to show. Example: a fixed total of 29.99 for two bottles displays as about 14.98 per bottle. [L0862.002]</li>
+<li>Source check: 29.99 divided by 2 is 14.995, so the exact per-bottle figure is about 14.995 and the source displays 14.98. Use the price shown in your Preview. [L0862.002]</li>
+<li>Reference bundle prices from the example, for a $19.95 single bottle:
+<ul>
+<li>Buy Two at a fixed total of $29.99 (about $14.98 per bottle, compare-at $40.00).</li>
+<li>Buy Three at a fixed total of $38.95 (about $12.98 per bottle, compare-at $60.00).</li>
+<li>Price rounding set to 95 shows prices ending in.95. [L0862.003]</li>
+</ul></li>
+<li>Formula for the SAVE label: Saved amount = compare-at price of the bundle minus the bundle total. Example: a compare-at price of $40.00 and a bundle total of $29.95 shows SAVE $10.05. [L0861.012]</li>
+<li>Pricing settings: in Settings &gt; Pricing, the toggle "Update theme product price" sits next to Price rounding and the other price display options. Turn it on only if the theme should show the bundle-adjusted price on the product page. Confirm the result in Preview before publishing. [L0861.037]</li>
+</ul>
+<p><strong>Variables for labels and price lines</strong></p>
+<ul>
+<li>The bracket button in Kaching Bundles label and price fields opens an "Add variable" menu with preset maths. The variables are: New unit price, Saved $ per unit, Original unit price, Unit quantity, Buy quantity, Got quantity, Discount, Saved percentage, Saved $ total, Product title, New total price, New price per item and Original total price.</li>
+<li>Use New price per item with the unit label for the bar price line, and Saved $ total in the SAVE label. [L0861.011, L0862.036]</li>
+</ul>
+<p><strong>Bars and badges</strong></p>
+<ul>
+<li>Bar settings: Add upsell, Add gift, Add personalisation, Add highlights, Show as Sold out, Show quantity selector and Selected by default. Each bar can carry its own title, subtitle, label, badge style and badge text. [L0861.017]</li>
+<li>Badge styles in the example bundle: Simple for the single-unit bar, Most Popular for the two-unit bar and Best Value for the three-unit bar. Badge text is free to set, for example "Great Start!", "Most Popular" and "Best Value". [L0861.018]</li>
+<li>Bundle with a free gift: a free gift on the two-unit and three-unit bars gives the customer both a discount and extra value for buying more. This helps move them from one unit to at least two. Use the same gift logic on any higher-quantity bar. [L0861.020]</li>
+</ul>
+<p><strong>Gifts</strong></p>
+<ul>
+<li>Gifts added to a bundle receive an automatic 100% discount, so the free item costs nothing at checkout. Add the free gift to the Buy Two and Buy Three bars, and to a Buy Four bar if one exists. A buy-four bar needs its own gift. [L0861.019, L0862.005]</li>
+<li>Gift options in a bar: Add gift offers "Single gift" or "Multiple gifts selector". Toggles: Show original price, Include in compare-at price and Apply only for subscriptions.
+<ul>
+<li>Leave "Include in compare-at price" on if the free gift's value should count toward the savings shown.</li>
+<li>Use "Apply only for subscriptions" to limit a gift to subscription orders. [L0861.039, L0862.033]</li>
+</ul></li>
+</ul>
+<p><strong>Variants and product selection</strong></p>
+<ul>
+<li>Leaving the variant selector on for a product with no variants adds an unnecessary step for the customer. Turn it off in the settings when the product has no variants. [L0862.009]</li>
+<li>Variant options in Kaching Bundles: "Show variant selection for single quantity deal bar", "Hide theme variant picker", "Hide unavailable variant options", "Don't update other products when a variant is selected", "Set default variants" and "Add swatches". For a product with no variants, turn off "Let customers choose different variants for each item" so the selector does not appear. [L0862.034, L0861.003, L0862.001]</li>
+<li>Each bar selects its products via "All products", "Selected products" or "Selected collections", with a search filter. A counter shows how many products are selected out of the allowed maximum (200 in the example). [L0862.035]</li>
+</ul>
+<p><strong>Visibility, schedule and states</strong></p>
+<ul>
+<li>Visibility and activity settings: Markets set to All, Exclude B2B customers, and the checkbox "Apply discount only via bundle widget", kept as shown in the default setup. Set Active dates (Start date, optional End date) only if the bundle has a limited run. [L0861.008, L0862.006]</li>
+<li>Active dates: the Other settings &gt; Active dates section has Start date, Set end date and Start time fields. The start time is shown with the store's time zone (the example store showed GMT+9:30). Set both a start and an end date for limited-time bundles, and check the time zone before relying on the schedule. [L0861.038]</li>
+<li>Bundle deal states in the Kaching Bundles list: Active, Inactive and A/B test archive. Use Save as draft to keep changes unpublished and Publish to make the bundle live. [L0861.036]</li>
+<li>Mistake to avoid: leaving the variant selector on for a no-variant product, as above. [L0862.009]</li>
+</ul>
+<h2 id="bundle-widgets-on-the-product-page-rebuy-and-general">Bundle widgets on the product page (Rebuy and general)</h2>
+<p><strong>Principles</strong></p>
+<ul>
+<li>A dynamic bundle lets customers add several related products to the cart with one click. This shortens the path to a larger basket on the product page. [L0557.020]</li>
+<li>A dynamic bundle widget lets shoppers add several products to the cart with one click, and change the set by selecting or removing items first. Suggesting frequently bought together items, complete-the-look sets or curated product bundles reduces shopper decision fatigue and raises average order value. [L0559.001]</li>
+<li>Bundle offers on the product page can be built with the Kaching Bundles app. Use quantity tiers (for example buy 2 or buy 3 with a percentage off) and gift-style tiers (for example buy 3 and give 2 to someone). Place the bundle widget above the Add to Cart button so the offer is seen before purchase. [L1188.017]</li>
+<li>Use the same offer set across product pages and the cart, so the customer sees a consistent deal. Bundle apps can build buy-one-get-one-free, buy-X-get-Y-free and volume-discount offers. [L1411.014]</li>
+</ul>
+<p><strong>Example data source (demo)</strong></p>
+<ul>
+<li>In the demo bundle, the Rebuy Mug ($10.00, White), T-shirt ($25.00, White / XS) and Bold Brew ($10.00, 1lb) add up to a total price of $45.00. The data source preview lists recommended items under the label "Frequently Bought Together" with their individual prices and a combined total, and the total is shown above the Add to Cart button before any discount is applied. [L0557.019, L0557.024]</li>
+<li>The bundle's total price is calculated from the included products and shown above the Add to Cart button before any discount. Discount settings sit in a separate Discount tab in the widget editor, so they can be adjusted without changing the product list. [L0557.025]</li>
+</ul>
+<p><strong>Discount values in the widget</strong></p>
+<ul>
+<li>A Widget Discount only shows the saving visually on the bundle. It does not reduce the price in the cart. Real discounting requires either a Shopify Scripts discount (Shopify Plus only) or a Shopify automatic discount. [L0559.012]</li>
+<li>To set a discount per rule: open the rule, choose Widget Discount, select Percentage and enter the value. Each rule can have its own percentage. Rule titles should state the saving, so the shopper sees the discount in the bundle heading. [L0559.013]</li>
+<li>Setting one discount for a whole widget: if all bundles of one widget share the same discount, set it once in Widget Settings under the Discount field (for example 10% or 15%). Use rule-level Widget Discount percentages on the data source only when different bundles need different savings, and keep each percentage identical to the matching Shopify automatic discount. [L0559.014, L0559.027]</li>
+<li>Each bundle must be its own Shopify product, so bundle counts grow quickly. Five accessories with one bundle per accessory means at least five bundles, and every added combination multiplies that number. Keep the set small and limited to the best-selling accessories so shoppers are not overwhelmed. [L1357.049]</li>
+</ul>
+<p><strong>Rebuy merchandising tools</strong></p>
+<ul>
+<li>ReBuy merchandising widgets include personalized product carousels, product add-ons and dynamic bundles. Add-ons and bundles are the offer types to use when raising order value on product pages and in the cart. [L0593.005]</li>
+</ul>
+<h2 id="page-builder-embeds-pagefly-and-others">Page-builder embeds (PageFly and others)</h2>
+<ul>
+<li><p>Integrate a bundle app such as White Bundle or BundleBear into PageFly pages:</p>
+<ol type="1">
+<li>Find the HTML/Liquid section in PageFly.</li>
+<li>Copy the embed code from the bundle app.</li>
+<li>Place the code in the HTML section, positioned right after the "Add to Cart" button.</li>
+<li>The app widget will display on the product page.</li>
+</ol>
+<p>Different apps provide different code formats. Consult the app's documentation. [L0321.027]</p></li>
+</ul>
+<h2 id="rebuy-smart-cart-tiered-progress-bar-and-discount-tiers">Rebuy Smart Cart: tiered progress bar and discount tiers</h2>
+<p><strong>Bar options and types</strong></p>
+<ul>
+<li>Smart Cart goal box &gt; Tiered Progress Bar &gt; Configure Tiers: each tier has a Choose Tier Type field (Free Shipping, free products, order discount, or decorative only), an Unlock Price field in dollars, and an Add New Tier button, with a maximum of four tiers. Advanced Bar Settings &gt; Use Shopify Functions (Recommended) is on by default. The Free Gifts section has a Gift Area Title field. Separate Configure Icon and Configure Labels &amp; Text sections change the bar's icon and wording. [L1230.026]</li>
+<li>Type list differs between sources. L1230.026 names "decorative only" as a type. L1231.025 and L1231.026 name Fixed Price. Check the tier-type list in your admin before you build. [L1230.026, L1231.025, L1231.026]</li>
+<li>A tiered progress bar supports up to 4 tiers. The tier types are Free Shipping, Free Product, Order Discount and Fixed Price. [L1231.026]</li>
+<li>Tiered Progress Bar with Shopify Functions can turn full-priced products into free gifts once a cart reaches a tier. Each tier can be set to a free gift, free shipping, an order discount, or a decorative stage. [L1230.012]</li>
+<li>Only one tiered progress bar is shown to a visitor at a time. Multiple bars can be built with different country limits. Example: one bar offers free shipping and a free gift in the US, while another offers only the free gift in Canada. [L1231.027]</li>
+<li>Each progress bar must have its countries specified, or it will show for all visitors. Currency settings follow the country codes assigned to each bar. [L1231.028]</li>
+</ul>
+<p><strong>Setup procedure</strong></p>
+<ul>
+<li>Set up a tiered progress bar:
+<ol type="1">
+<li>In the cart editor, click Add Component to Header and choose Tiered Progress Bar, placing it in the header or goal box area.</li>
+<li>Set the countries where the bar should appear, using the country field with autocomplete. This replaces the old two-letter ISO code entry.</li>
+<li>Add a tier and choose its type: Free Shipping, Free Product, Order Discount, or Fixed Price.</li>
+<li>Set the threshold amount for that tier.</li>
+<li>For Free Product, choose the product and the variant option, then set the unlock price.</li>
+<li>Turn on Use Shopify Functions if the tier should be applied as a discount automatically.</li>
+<li>Set a custom tier label and icon size if needed.</li>
+<li>Repeat for additional tiers.</li>
+<li>Save the cart. [L1231.025]</li>
+</ol></li>
+</ul>
+<p><strong>Free gifts and line items</strong></p>
+<ul>
+<li>Line item mode is a toggle for free gifts. When it is on, the free gift is added to the cart as a normal line item instead of being shown in the free gift area. This saves space and avoids a complex workaround. [L1231.030]</li>
+<li>For a Free Product tier, you can select a single variant or all variants of a product. When several variants are selected, the customer chooses one from a dropdown. With line item mode on, the chosen variant appears as a line item in the cart. [L1231.031]</li>
+<li>Any product used in a free product tier must be active, in stock and available for sale on the online store. Otherwise the reward cannot be applied at checkout. [L1308.003]</li>
+<li>Free Product tier example: a free product is added to the cart automatically when the cart reaches a $100 unlock price. The product is a single-variant item in the demo. [L1231.035]</li>
+<li>Use a custom tier label to describe the reward generically, such as savings or money off, instead of naming the free product or the discount amount. Icon size can also be set for each tier. [L1231.036]</li>
+<li>Selectable gift with purchase, where the customer picks the free gift, is not a native option on non-Plus stores at the time of the webinar (dated statement, Source E 2025-26 source). It needs extensive workarounds, a third-party app that can run Shopify Functions discounts, or a cross-sell widget. [L1231.037]</li>
+</ul>
+<p><strong>Discount tiers (Shopify Functions)</strong></p>
+<ul>
+<li>Discount tiers can only be powered by Shopify Functions. When you add a discount tier, the Use Shopify Functions toggle is hidden. If you switch that setting off, the discount tier disappears for the user. [L1308.013]</li>
+<li>The step 6 wording in the setup procedure presents Use Shopify Functions as a choice. For discount tiers, keep it on, because L1308.013 says discount tiers depend on it. [L1231.025, L1308.013]</li>
+<li>Path to add a discount tier: Tiered Progress Bar &gt; Configure Tiers &gt; Add New Tier. For a discount tier, choose Order Discount Type (Percentage or fixed amount), set Order Discount Amount from Total, and set the Unlock Price (the cart total that unlocks the tier). [L1308.014]</li>
+<li>Order Discount tier example: spend $500 and get 25% off the order. Fixed Price tier example: spend $500 and get $50 off the order. Both are applied through Shopify Functions. [L1231.034]</li>
+<li>Example pair: a fixed $50 off tier unlocked at a $500 cart total, plus a percentage tier of 20% off unlocked at a $1000 cart total. Set the Order Discount Text of each tier to match its discount, such as "20% OFF". [L1308.015]</li>
+<li>By default, Functions discounts are allowed to combine with product, shipping and order discount types. In the tested cart, only the largest qualifying order discount was applied. With several tiers reached, the biggest one wins. [L1308.016]</li>
+<li>With a $50 fixed tier at $500 and a 20% tier at $1000, a cart of about $1000 or more receives only the 20% discount, because it is greater than the $50 fixed amount. The checkout shows only that order discount. [L1308.017]</li>
+<li>Remaining-amount label: with a $500 unlock price, a cart subtotal of $499.99 shows the remaining-amount label as one cent away from the reward. The remaining-amount placeholder always displays the gap between the current cart total and the next unlock price, so customers see exactly how little they still need to add. [L1308.025]</li>
+<li>Two product tiers: Tier 1 at a $50 unlock price for one free product and Tier 2 at a $100 unlock price for a second free product. When both tiers are unlocked, checkout shows both products fully discounted. The product discount text comes only from Tier 1, so keep that Tier 1 text generic so it fits both rewards. [L1308.026]</li>
+</ul>
+<p><strong>Subscriptions and Buy More Save More</strong></p>
+<ul>
+<li>Switch to Subscription (Cart Items &gt; Switch to Subscription) lets customers upgrade one-time products to subscriptions directly in the cart. It is useful when a store sells both one-time and subscription versions of a product. [L1230.014]</li>
+<li>Buy More Save More (Cart Items &gt; Buy More Save More) is a tiered discount that encourages customers to buy more units of a product to unlock a bigger discount. [L1230.015]</li>
+<li>Set up subscription upgrades in the cart:
+<ol type="1">
+<li>Integrate your selling plan provider, such as Recharge, in the Rebuy admin under the Integrations tab.</li>
+<li>Open the cart body and toggle subscriptions on for the eligible line items.</li>
+<li>Customers who add a one-time version will see the option to switch to a subscription.</li>
+<li>Optionally turn on Disable downgrade to stop customers switching back from subscription to one-time.</li>
+<li>Edit the switch-to-subscription labels to fit your brand. [L1231.039]</li>
+</ol></li>
+<li>The Disable downgrade toggle stops customers from switching a subscription back to a one-time purchase. Leave it off if you want to keep the option available, since a step back can keep the journey moving. [L1231.040]</li>
+<li>Switch to subscription works across multiple selling plans for the same product. If the delivery frequencies share a uniform option, such as switching a 6-week item to a 4-week option, both items can be delivered together. [L1231.041]</li>
+<li>Buy More Save More is set up in the cart with editable language. At the time of the webinar it had no Shopify Function equivalent, so it is set up with Shopify automatic discounts or a third-party app instead. It was largely a Shopify Plus feature (dated statement, Source E 2025-26 source). [L1231.042]</li>
+<li>At the time of the webinar, Buy More Save More in Rebuy Smart Cart had no Shopify Function equivalent and had to be built with Shopify automatic discounts or a third-party app. Rebuy planned a Shopify Functions integration for this offer as its next one, but did not expect it before the end of that year (dated statement, Source E 2025-26 source). [L1231.060, L1231.042]</li>
+<li>ReBuy's smart cart shows a tiered progress bar and can switch the buyer to subscription options. Both elements can be fully customized to the brand, so the tiers and subscription offer can be set per store. [L0593.006]</li>
+</ul>
+<h2 id="cart-progress-bars-kaching-cart">Cart progress bars (Kaching Cart)</h2>
+<ul>
+<li>Kaching Cart &gt; Cart settings &gt; Promotions progress bar: set Reward type to Order discount and Discount type to Percentage. Set a Min price in USD for each tier. Use "Add tier" for more tiers. Optionally exclude specific products from being counted, or celebrate unlocks with confetti. [L0560.018]</li>
+<li>Set the promotion threshold above the price a customer must reach for buying two products, so a 5 percent discount requires buying two items. The lesson's example threshold is 50 dollars. [L0560.019]</li>
+<li>The progress bar can hold several reward tiers, for example a 5 percent discount and a higher 15 percent tier. Each tier needs its own threshold above the previous one. [L0560.020]</li>
+<li>Promotion progress bar texts (app placeholders kept as shown):</li>
+</ul>
+<pre><code>Default text: Add ((progress_needed)) to unlock ((next_promo_label))
+Unlocked text: ((unlocked_promo_title)) Unlocked!
+All promotions unlocked text: all rewards are unlocked
+Promo discount text: #1 - ((promo_discount_amount)) discount
+Discount text: ((promo_discount_amount)) discount</code></pre>
+<p>[L0560.021]</p>
+<h2 id="bundles-and-promotions-without-an-app">Bundles and promotions without an app</h2>
+<ul>
+<li>Run a bundle promotion without an app (older, 2022 source):
+<ol type="1">
+<li>During the promotion window, edit the existing product page.</li>
+<li>Describe the bundle in the title or description, for example "standing desk plus chair".</li>
+<li>Restore the normal product page after the window ends. [L1281.038]</li>
+</ol></li>
+<li>Create a bundle as a separate product page, or temporarily change an existing page, then remove it when the promotion ends. Orders from several suppliers are not automated, so each order has to be sent out as it arrives. [L1204.036]</li>
+<li>A bundle can be added as a selectable option on the existing product page, with extra description explaining what the upgraded package includes. Ads then keep sending the same visitors to the same page (older, 2021-22 source). [L1456.042]</li>
+<li>Alternatively, the bundle can be its own product page and feed item, using the same product title plus a suffix so it still shows for the standard product's search terms (older, 2021-22 source). [L1456.042]</li>
+<li>Whichever option is chosen, the price changes with the selection near the add-to-cart button. [L1456.042]</li>
+</ul>
+<h2 id="other-bundle-apps-and-names">Other bundle apps and names</h2>
+<ul>
+<li>Bundle-building apps mentioned in the course: Bundle Bear for volume and buy-to-save offers. A second app is named differently across the sources (Bundler Where, White Bundle, or White Bundles / Bundle Where). Check the Shopify App Store for current options. [L1259.031, L1260.023, L0321.027]</li>
+<li>Coaching Bundles app (Shopify App Store) sets up offers such as multi-pack bundles on the product page. Build the competitor's offer structure in this app instead of coding it manually. [L0600.017]</li>
+<li>The Sketching Bundle app is a cheaper alternative to Bundle Bear. [L0635.026]</li>
+</ul>
+</article><nav class="pn"><a href="../../07-offers-pricing-and-bundles/13-designing-bundles-and-quantity-break-ladders/"><span class="k">&larr; Previous</span><span class="v">Designing bundles and quantity-break ladders</span></a><a class="nx" href="../../07-offers-pricing-and-bundles/15-upsells-cross-sells-and-add-ons-on-the-product-page-and-cart/"><span class="k">Next &rarr;</span><span class="v">Upsells, cross-sells and add-ons on the product page and cart</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

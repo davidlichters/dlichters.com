@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Abandoned cart and checkout recovery (Email) | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.7: Abandoned cart and checkout recovery (Email).">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/07-abandoned-cart-and-checkout-recovery-email/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Abandoned cart and checkout recovery (Email) | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.7: Abandoned cart and checkout recovery (Email)."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/07-abandoned-cart-and-checkout-recovery-email/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/07-abandoned-cart-and-checkout-recovery-email/">Plain version</a></div><h1>15.7 Abandoned cart and checkout recovery (Email)</h1><article><h2 id="purpose-and-priority">Purpose and Priority</h2>
+<ul>
+<li>An abandoned checkout occurs when a customer adds products, starts checkout, and does not complete the purchase [L0282.001]. An abandoned cart flow is triggered for shoppers who started checkout but did not complete the order, and it brings them back to the cart they already built [L0606.004].</li>
+<li>Visitors who add to cart and leave without buying waste paid traffic unless you can follow up with them. Automated reminder emails or SMS let you re-contact them hours later at no extra ad cost [L0476.001].</li>
+<li>Roughly 7 to 8 out of 10 shoppers who add products to their cart leave without buying, so an abandoned-cart sequence reaches a large share of site visitors [L0572.006].</li>
+<li>Recovering about 25% of abandoned carts through an email sequence is cited as a realistic result to aim for once the flow is optimized [L0572.007].</li>
+<li>Abandoned cart recovery is among the cheapest ways to win back shoppers who added items to their cart [L1251.039].</li>
+<li>Improving the abandoned-cart flow is one of the fastest ways to see results in an online store, because it recovers sales that already had strong intent. Gains can show as lower cost per lead, better traffic quality and a higher conversion rate [L1208.020].</li>
+<li>A recovered buyer can become a repeat customer who leaves reviews, refers others and eventually becomes a brand advocate. This long-term value justifies the extra effort in recovery sequences [L1208.013].</li>
+<li>Set up the abandoned cart email sequence before any other optimization. Use it to learn why visitors leave, and avoid discounts as the first lever; discounts should be strategic and paired with something of higher value [L0575.027].</li>
+<li>The abandoned cart sequence should be set up before traffic is scaled [L0430.013].</li>
+<li>Older advice (2018): set up the abandoned cart email sequence in Klaviyo from day one, before any traffic campaigns run [L1085.004].</li>
+<li>Older advice (2021): once the store is established, run abandoned cart follow-up as an automated email flow, for example one built in Klaviyo [L0671.020].</li>
+<li>Older advice (2021): Klaviyo is used to set up abandoned cart emails with customized messages and urgency. Abandoned carts can turn into sales in the days after a visit, so configure these early [L1279.047].</li>
+<li>Older advice (2021-22): an abandoned cart email sequence is an automated message sent through the email autoresponder when a shopper leaves a cart without buying [L1298.031].</li>
+<li>Klaviyo can run abandoned cart recovery, which sends a notification to visitors who left items in their cart without completing the purchase [L1399.005].</li>
+<li>Shopify's email or Klaviyo can both send abandoned cart messages and both work; the speaker's team uses Klaviyo [L0964.124].</li>
+<li>Older advice (2021-22): a person who added items and started checkout is the warmest prospect you will get, so extra reminder emails are acceptable here [L1449.001].</li>
+<li>Abandoned-cart messages are reminders about items left in the basket, not welcome emails. Keep the copy focused on the cart and its contents. Trust comes from the logo, the product block and clear next steps, not from a long introduction [L0567.043].</li>
+<li>A shopper who abandoned a cart has already moved through the ad, the site, the product page and add-to-cart, so purchase intent is high. The messages should help them close the sale, not reintroduce the brand [L1208.001].</li>
+<li>Abandoned-cart messages are bottom-of-funnel. Do not use top-of-funnel content such as broad brand introductions; focus on trust, objection handling and social proof [L1208.017].</li>
+<li>At the abandoned-cart stage the buyer has already decided. Messages should validate that decision, build trust and handle objections instead of pushing for a sale. Pressure or a hard sell at the first contact tends to backfire [L1208.003].</li>
+</ul>
+<h2 id="trigger-choice-and-setup">Trigger Choice and Setup</h2>
+<h3 id="trigger-by-platform">Trigger by Platform</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform</th>
+<th>Trigger and setup</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify</td>
+<td>Use the Abandoned Checkout template, not Abandoned Cart [L0266.015]</td>
+<td>L0266.015</td>
+</tr>
+<tr>
+<td>Shopify Flow</td>
+<td>Trigger text: "This workflow starts when a customer abandons their checkout." First condition: "Customer abandoned checkout in online store = true" and "Checkout total &gt; $0" [L0282.013]</td>
+<td>L0282.013</td>
+</tr>
+<tr>
+<td>Klaviyo (Source E)</td>
+<td>Trigger "When someone Checkout Started" [L0567.002]. Use the Checkout Started event, not Abandoned Checkout, to capture customers immediately when they leave the cart [L0261.019]</td>
+<td>L0567.002, L0261.019</td>
+</tr>
+<tr>
+<td>Klaviyo (Source C)</td>
+<td>Confirm the trigger is Started checkout [L0607.029, L0573.021]</td>
+<td>L0607.029, L0573.021</td>
+</tr>
+<tr>
+<td>Clavio</td>
+<td>Open Flows, search for Abandoned carts and click Get started [L0634.010]</td>
+<td>L0634.010</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The sources name the trigger differently because each uses the trigger native to its platform. The Source E source says to use Checkout Started rather than Abandoned Checkout [L0261.019], while the Shopify workflow starts from Abandoned Checkout [L0282.013]. Use the trigger the platform's own flow provides for the abandoned checkout event.</li>
+<li>Shopify automation: applying the Abandoned Cart customer tag when the automation starts segments these customers for future targeting and analysis [L0156.004]. Shopify workflow variant: add a tag action named 'abandoned cart' [L0266.015].</li>
+<li>Checkout setting for Clavio: remove phone number as an optional checkout field and make email a required field, so every customer can be retargeted by email [L1347.031].</li>
+</ul>
+<h3 id="channel-choice">Channel Choice</h3>
+<ul>
+<li>Source E first message: 20 minutes after abandon, sent as SMS to subscribers and as email to non-SMS subscribers [L0261.001].</li>
+<li>SMS can only reach customers who agreed to receive SMS. SMS Bump only sends to opted-in customers, so SMS cannot recover carts for customers who never opted in. Set up Clavio and SMS Bump in parallel [L1347.030].</li>
+<li>Source E SMS: within 24 hours, send one SMS that reassures the buyer, points out the saved order and lists three value propositions. If the cart is over $100, mention free shipping instead of one of them [L1208.019].</li>
+</ul>
+<h2 id="timing-and-spacing">Timing and Spacing</h2>
+<h3 id="first-email-delay">First Email Delay</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>First email</th>
+<th>Applies to</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify default</td>
+<td>10 hours</td>
+<td>Pre-built Recover Abandoned Checkout template default</td>
+<td>L0149.005, L0266.003, L0282.006</td>
+</tr>
+<tr>
+<td>Source A recommendation</td>
+<td>4 hours</td>
+<td>Reduces the default to re-engage while purchase intent is fresh</td>
+<td>L0149.005, L0266.004, L0156.002, L0282.006</td>
+</tr>
+<tr>
+<td>Source E</td>
+<td>20 minutes (SMS to subscribers, email to non-SMS subscribers)</td>
+<td>Standard first message</td>
+<td>L0261.001, L0261.002</td>
+</tr>
+<tr>
+<td>Source E path 2</td>
+<td>4 hours</td>
+<td>Pain-point email in the split test</td>
+<td>L0567.004, L0567.005</td>
+</tr>
+<tr>
+<td>Clavio (Source C)</td>
+<td>15 minutes</td>
+<td>Clavio abandoned carts flow</td>
+<td>L0476.011, L0476.016, L0634.010</td>
+</tr>
+<tr>
+<td>Klaviyo, as taught (Source C)</td>
+<td>15 minutes</td>
+<td>First email after checkout start</td>
+<td>L0477.019, L1297.020, L0605.020</td>
+</tr>
+<tr>
+<td>Klaviyo, new store with first product (Source C)</td>
+<td>30 minutes, changed from the default 4 hours</td>
+<td>Aggressive timing for a first product</td>
+<td>L0573.021, L0607.029</td>
+</tr>
+<tr>
+<td>Source B</td>
+<td>Immediately after abandonment</td>
+<td>Reminder email with product and checkout link</td>
+<td>L1449.002</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Source C range for the first email: 10 to 15 minutes after checkout is abandoned, at least 10 minutes, since entering card details takes 5-7 minutes. 20 minutes can also be tested [L0605.020].</li>
+<li>Source A: the first abandoned checkout email is sent 4 hours after abandonment, reduced from the default 10 hours, to capitalize on immediate purchase intent [L0149.005].</li>
+<li>Source A: the default wait is 10 hours [L0266.003].</li>
+<li>Source A: the first email sends only if the default-timer change is in place; the pre-built template defaults to 10 hours, so the change to 4 hours must be made manually [L0282.006].</li>
+</ul>
+<h3 id="second-and-later-emails">Second and Later Emails</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Second email</th>
+<th>Third or later</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A (Shopify)</td>
+<td>20 hours after the first, about 24 hours total from abandonment (4 + 20)</td>
+<td>Not applicable (two-email sequence)</td>
+<td>L0149.006, L0266.008, L0156.002</td>
+</tr>
+<tr>
+<td>Source A (Shopify)</td>
+<td>24 hours after the initial abandonment</td>
+<td>Not applicable</td>
+<td>L0282.010</td>
+</tr>
+<tr>
+<td>Source E</td>
+<td>Reminder 45 minutes after the first email, only to unopened emails; path test at 23 hours total from abandon</td>
+<td>Risk email 24 hours after step 4 (about 47 hours total); first discount offer 12 hours later (about 59 hours); scarcity reminder 8 hours later (about 67 hours)</td>
+<td>L0261.002, L0261.005</td>
+</tr>
+<tr>
+<td>Source E (five-message sequence)</td>
+<td>Risk and social-proof email, then a 1-day wait before the 15% offer at 7:00 am</td>
+<td>Last-chance email 13 hours after the offer email</td>
+<td>L0567.007, L0567.008</td>
+</tr>
+<tr>
+<td>Source C (Clavio)</td>
+<td>4 hours after the first</td>
+<td>Third email 20 hours after the second</td>
+<td>L0476.016, L0634.010</td>
+</tr>
+<tr>
+<td>Source C (Klaviyo, as taught)</td>
+<td>4 hours after the first</td>
+<td>Third email 24 hours after the second, with the cart and discount reminder</td>
+<td>L0477.019, L1297.020</td>
+</tr>
+<tr>
+<td>Source C (Klaviyo, new store)</td>
+<td>After roughly 8 to 10 hours</td>
+<td>Third email after 24 hours; a fourth at 48 hours can also work</td>
+<td>L0573.022, L0607.030</td>
+</tr>
+<tr>
+<td>Source C (four-email flow)</td>
+<td>About 2 hours after email 1</td>
+<td>About 6 hours after email 2; final email announces the deal is ending</td>
+<td>L0605.020</td>
+</tr>
+<tr>
+<td>Source B</td>
+<td>6 hours after the first reminder</td>
+<td>Personal email 18 hours after the second reminder; discount 24 hours later</td>
+<td>L1449.002</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Source C timing for the three-email sequence: first email 15 minutes after the cart is left, second 4 hours after the first, third 20 hours after the second [L0476.016].</li>
+<li>Source C gap note: the second email's delay was described as 4 hours (default was 20 hours in the Clavio setup) [L0476.011].</li>
+</ul>
+<h3 id="spacing-rules">Spacing Rules</h3>
+<ul>
+<li>Use 20-minute, 45-minute and 23-hour intervals rather than random timings. The 23-hour wait ensures the second follow-up hits the customer at the same time of day as when they originally abandoned their cart, when they are most likely to be free and receptive [L0261.005].</li>
+<li>Always space abandoned cart emails using multiples of 24 and 12 hours (20 min + 45 min ≈ 1 hour, then 23 hours, 24 hours, 12 hours). Avoid arbitrary intervals like 4 hours, which hit customers at inconvenient times (for example 2 a.m.) and get lost in inbox clutter by morning [L0261.006].</li>
+<li>Conflict: the Source A recommendation uses a 4-hour first delay [L0149.005, L0266.004], and the Source E path 2 pain email also waits 4 hours [L0567.005]. The Source E rule says to avoid 4-hour intervals [L0261.006]. The Source E test data show 8.1 orders per 100 abandons with a 20-minute delay and 3.7 with a 4-hour delay [L0261.001]. Use the Source E evidence where the 20-minute start is used; the 4-hour delay remains the Source A recommendation for the first email [L0149.005].</li>
+<li>Scheduled send time: in Klaviyo, use Time Delay with Wait until specific time to send at a consistent time in the customer's timezone (for example 7 a.m.). This prevents emails sent at inconvenient hours [L0261.010].</li>
+<li>Example from the same source: wait 13 hours to reach an 8 p.m. send time, which creates midnight expiration urgency [L0261.010].</li>
+<li>Discount offer email at 7:00 am in the sequence [L0567.007].</li>
+<li>Source C: the 48-hour email is optional [L0607.030].</li>
+</ul>
+<h3 id="expiry-windows">Expiry Windows</h3>
+<ul>
+<li>Source E: the abandoned checkout flow has a 72-hour window. After that window, the product is returned to the shelf and the flow ends [L0494.015].</li>
+<li>Source C: the cart discount should expire only after the final cart email. Send email 4 a few hours before that expiry. Derive the gaps between emails 1 to 3 from the expiry you set, because the cart copy does not fix them [L0606.038].</li>
+<li>Source B: time-limited discounts should be labelled clearly as limited, here for 3 days, and reminders should show the remaining time, such as 24 hours and 4 hours [L1449.007].</li>
+</ul>
+<h3 id="day-based-countdown-source-a">Day-Based Countdown (Source A)</h3>
+<ul>
+<li>Abandoned-cart email countdown over seven days:
+<ol type="1">
+<li>Day 5: send an email saying there are 72 hours left [L1243.034].</li>
+<li>Day 6: send an email saying there are 48 hours left [L1243.034].</li>
+<li>Day 7: send three emails within the day, at 12 hours, 6 hours and 1 hour left [L1243.034].</li>
+<li>Make clear in the final message that this is the last and best offer [L1243.034].</li>
+</ol></li>
+</ul>
+<h2 id="sequence-structure-and-per-email-jobs">Sequence Structure and Per-Email Jobs</h2>
+<h3 id="sequence-length-and-shape">Sequence Length and Shape</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Sequence type</th>
+<th>Structure</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Five messages</td>
+<td>Desire-led reminder, pain-point reminder, risk reduction with social proof, discount offer, last-chance warning</td>
+<td>L0567.001</td>
+</tr>
+<tr>
+<td>Four emails (Source E path)</td>
+<td>20-minute desire email, 45-minute reminder, 23-hour pain test, 24-hour risk email, 12-hour offer, 8-hour scarcity reminder</td>
+<td>L0261.002</td>
+</tr>
+<tr>
+<td>Four emails (Source C, discount from email 2)</td>
+<td>Email 1 without discount, discount from email 2, last two emails with a closing deadline</td>
+<td>L0606.011</td>
+</tr>
+<tr>
+<td>Four emails (Source C, extra 10%)</td>
+<td>Benefit email, reviews and urgency, extra 10% off, final email</td>
+<td>L0605.020</td>
+</tr>
+<tr>
+<td>Three emails (Source C minimum)</td>
+<td>At least three emails; text-based messages with personalization convert better and reach the inbox more reliably</td>
+<td>L0573.023</td>
+</tr>
+<tr>
+<td>Seven-step sequence (Source B)</td>
+<td>Reminder, second reminder, personal email, discount, content or discount reminder, final discount reminder, handover to the prospect flow</td>
+<td>L1449.002</td>
+</tr>
+<tr>
+<td>Two emails (Shopify default)</td>
+<td>First email with products and default template, then a second email with a discount</td>
+<td>L0266.012, L0282.011</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A cart-abandonment flow is a series of emails, not a single reminder. Start with a short first reminder built from a fill-in-the-blank template, then plan the second and third emails using the same principles [L0572.022].</li>
+<li>Source E: each of the first three abandoned-cart emails should have exactly one objective, which is returning the buyer to checkout to complete the order. Remove additional calls to action such as social media icons, app download prompts or other links that distract from the purchase [L1208.014].</li>
+<li>Source C: each email in the abandoned checkout sequence should answer one of the four reasons customers abandon (offer, price, lack of trust, uncertainty): product value first, social proof second, and a discount last [L0604.004].</li>
+<li>Use the same sequence logic for every abandoned-cart follow-up [L1208.017].</li>
+<li>Keep non-purchase prompts such as social media follow requests, app download invitations and other promotions out of the abandoned-cart sequence. Put those messages into separate flows or manual campaigns so the buyer has only one reason to return to checkout [L1208.022].</li>
+</ul>
+<h3 id="per-email-jobs">Per-Email Jobs</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Email</th>
+<th>Job</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First email (desire)</td>
+<td>Desire-led reminder about what the customer wants to gain or feel; no discount</td>
+<td>L0261.002, L0567.001, L0476.011</td>
+</tr>
+<tr>
+<td>First email (reminder)</td>
+<td>Reminder that the cart is waiting, with one product benefit or guarantee and a link to the store; no discount</td>
+<td>L0476.011, L0476.015</td>
+</tr>
+<tr>
+<td>First email (validation)</td>
+<td>Validate the decision and reassure; do not word it as if the customer forgot something</td>
+<td>L1208.003, L1208.004</td>
+</tr>
+<tr>
+<td>First email (no new options)</td>
+<td>Do not suggest other products or new options; the buyer was ready to complete the purchase</td>
+<td>L1208.005</td>
+</tr>
+<tr>
+<td>Second email (pain or proof)</td>
+<td>Pain-point reminder, or image reviews and testimonials</td>
+<td>L0567.001, L0604.003</td>
+</tr>
+<tr>
+<td>Second email (urgency)</td>
+<td>Reason to act now such as limited stock, plus a code and checkout link</td>
+<td>L0476.015, L0605.020</td>
+</tr>
+<tr>
+<td>Risk-reduction email</td>
+<td>Guarantees, payment options and customer testimonials</td>
+<td>L0261.002, L0261.009, L0567.001</td>
+</tr>
+<tr>
+<td>Third email (offer)</td>
+<td>Raise the incentive; include the tracking policy link, the checkout link and a deadline</td>
+<td>L0476.011, L0606.040</td>
+</tr>
+<tr>
+<td>Final or last-chance email</td>
+<td>Final deadline and last-chance warning; state that no further emails will follow</td>
+<td>L0476.015, L0605.020, L0567.038</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Risk-reduction email: sent 24 hours after the test step in the Source E flow, with guarantees, payment options and customer testimonials [L0261.002].</li>
+<li>In the final abandoned-cart email, adding a link to the store's delivery tracking policy and contact details reduces hesitation about buying. Shoppers who worry about shipping or support are more likely to return to checkout when these answers are one click away [L0476.041].</li>
+<li>In the third cart email, add a short line with the delivery tracking code, a promise of a quick reply, and links to the tracking policy and contact details. Include the links only if those pages exist and are current [L0606.040].</li>
+</ul>
+<h3 id="full-sequence-procedures">Full Sequence Procedures</h3>
+<p><strong>Source C four-email abandoned checkout flow (in this order):</strong></p>
+<ol type="1">
+<li>Email 1, about 10 to 15 minutes after checkout is abandoned (at least 10 minutes, since entering card details takes 5-7 minutes; 20 minutes can also be tested). Use a benefit-led headline, not a salesy one. Describe the customer's pain point and how they will feel after getting the product, add 3-4 bullet points on why they need it, and end with a benefit-driven call to action such as "get yours today" or "make your partner happy by ordering now" [L0605.020].</li>
+<li>Email 2, about 2 hours after email 1. Use a subject line that says the order is not yet complete. Add 3-4 five-star reviews with images, a link back to the order, and urgency such as limited stock (for example only 50 pieces remaining), a price increase after 4-5 days, or "while stock lasts" [L0605.020].</li>
+<li>Email 3, about 6 hours after email 2. Use a new subject line that announces an exclusive deal with an extra 10% off. Repeat the benefit points, reviews, headline and bullet points, and restate the same offer [L0605.020].</li>
+<li>Final email: say the deal is about to end, give a final confirmation and state that no further emails will follow [L0605.020].</li>
+</ol>
+<p><strong>Source C three-email abandoned checkout sequence:</strong></p>
+<ol type="1">
+<li>First email: explain the benefits of the product, address the customer's pain point or current situation, and explain why this product fits them. Show the product with 3-4 bold headline points and a call to action [L0604.003].</li>
+<li>Second email: show image reviews and testimonials [L0604.003].</li>
+<li>Third email: make a better offer with an extra 10-20% off [L0604.003, L0604.005].</li>
+</ol>
+<p><strong>Source B abandoned-cart sequence (older advice, 2021-22):</strong></p>
+<ol type="1">
+<li>Reminder email immediately after abandonment, containing the product and a link back to checkout [L1449.002].</li>
+<li>Second reminder email 6 hours after the first, same type (product plus checkout link) [L1449.002].</li>
+<li>Personal welcome-style email from the business owner 18 hours after the second reminder, asking whether you can help and inviting a reply, without pushing the product [L1449.002].</li>
+<li>Discount offer 24 hours later, limited to 3 days, with the product, a checkout link and the discount code [L1449.002].</li>
+<li>After 2 days without purchase, send either a helpful content email (such as a buyer's guide, if the product range is broad) or a discount reminder if the range is narrow, stating 24 hours remain to finish the purchase [L1449.002].</li>
+<li>24 hours later, send a final discount reminder stating about 4 hours remain before the discount expires [L1449.002].</li>
+<li>Hand the contact over to the 30-day master flow for prospects so they keep receiving emails [L1449.002].</li>
+</ol>
+<p><strong>Source A Shopify template sequence (overview):</strong></p>
+<ul>
+<li>The pre-built template automatically includes the customer's abandoned products in the first email and uses the color scheme configured in the Messaging app settings [L0282.008].</li>
+<li>The pre-built template is effective because Shopify designed it using performance data. Keeping it unchanged is a safe choice; customize only if you have specific improvements beyond the default version [L0282.015].</li>
+</ul>
+<h2 id="desire-vs-pain-messaging">Desire vs Pain Messaging</h2>
+<ul>
+<li>Design the abandoned cart flow using desire messaging (what the customer wants to gain or feel) versus pain messaging (the biggest problem the product solves). Test both with a 50/50 split to find which resonates with your audience, because effectiveness varies by product category and niche [L0261.011].</li>
+<li>Desire messaging outperformed pain messaging for the initial abandoned cart email in the same Source E test. Desire path A reached 83.8% open, 16.2% click and 8.1% order; pain path B reached 82.4% open, 5.9% click and 2.9% order [L0261.016].</li>
+<li>Find the pain point by asking what goes wrong during the product's hardest real use, such as long sessions in heat or a full working day. Name that exact situation in the email so the reader recognises their own experience [L0567.045].</li>
+<li>Pain-based example for bike gear: the subject line "Saddle Sores? Say No More!" targets the specific objection (uncomfortable clothing causing soreness) rather than generic benefits. It overcomes the biggest barrier to purchase in that product category [L0261.014].</li>
+<li>Objections are usually offer, price, lack of trust or uncertainty. Address each in its own email [L0604.004].</li>
+<li>Trust-based messaging: focus on trust, objection handling and social proof, not on introducing the brand [L1208.017, L1208.003].</li>
+<li>Source E offer email: tease what waits in the cart without naming the product. This creates curiosity and gets opens [L0567.010].</li>
+<li>Short versus story-driven pain copy after the 23-hour wait: see the benchmark results below [L0261.017].</li>
+<li>Reminders must not suggest the customer forgot something, because that implies the item was not valuable to them. Use assumptive wording such as saying something went wrong at checkout instead [L1208.004].</li>
+</ul>
+<h2 id="discount-timing">Discount Timing</h2>
+<h3 id="discount-position-and-amount">Discount Position and Amount</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Discount placement</th>
+<th>Amount</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source E</td>
+<td>No discount in the first messages; risk email first, then the offer email after a 1-day wait, sent at 7:00 am</td>
+<td>15% offer</td>
+<td>L0567.007, L0261.002, L0567.038</td>
+</tr>
+<tr>
+<td>Source E (offer example)</td>
+<td>Discount offer email subject variant</td>
+<td>15%</td>
+<td>L0261.008</td>
+</tr>
+<tr>
+<td>Source E (scarcity reminder)</td>
+<td>Discount reminder with scarcity messaging, 8 hours after offer</td>
+<td>15%</td>
+<td>L0261.015</td>
+</tr>
+<tr>
+<td>Source C (Clavio)</td>
+<td>Email 1 without discount; email 2 with code; email 3 with a larger code</td>
+<td>$5, then $10</td>
+<td>L0476.016, L0634.010, L0634.012, L0634.013</td>
+</tr>
+<tr>
+<td>Source C (Klaviyo, as taught)</td>
+<td>Email 2 with a discount code for the product</td>
+<td>$10 or 20%</td>
+<td>L0477.019</td>
+</tr>
+<tr>
+<td>Source C (Klaviyo, Shopify code)</td>
+<td>Email 2 with the code created in Shopify</td>
+<td>$10 off</td>
+<td>L1297.020</td>
+</tr>
+<tr>
+<td>Source C (four-email flow)</td>
+<td>No discount in email 1; 10% from email 2 onward</td>
+<td>10%</td>
+<td>L0606.011</td>
+</tr>
+<tr>
+<td>Source C (four-email flow, extra)</td>
+<td>Email 3 announces an exclusive deal with an extra 10% off</td>
+<td>Extra 10%</td>
+<td>L0605.020</td>
+</tr>
+<tr>
+<td>Source C (three-email flow)</td>
+<td>Third email offers an extra discount</td>
+<td>10-20%</td>
+<td>L0604.005</td>
+</tr>
+<tr>
+<td>Source A (Shopify default)</td>
+<td>Second email uses the Discount Reminder template</td>
+<td>Discount per store offer</td>
+<td>L0266.012</td>
+</tr>
+<tr>
+<td>Source A (free shipping first)</td>
+<td>Use free shipping first, then 10% off if free shipping costs more</td>
+<td>Free shipping or 10%</td>
+<td>L1243.046</td>
+</tr>
+<tr>
+<td>Source B</td>
+<td>Discount offer 24 hours after the personal email, limited to 3 days</td>
+<td>Discount code</td>
+<td>L1449.002, L1449.007</td>
+</tr>
+<tr>
+<td>Source E (SMS flow)</td>
+<td>Email four: 10% off, plus free shipping or add-on suggestions if the cart is under the threshold</td>
+<td>10%</td>
+<td>L1208.019</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="discount-rules">Discount Rules</h3>
+<ul>
+<li>Holding the discount back until the second email protects margin from shoppers who would have bought anyway. Only the people who still hesitate receive the offer [L0606.018].</li>
+<li>The most common abandoned-cart mistake is offering a discount immediately. Start with a plain reminder and a checkout link, because many people abandon carts for non-price reasons such as distraction, connection loss or interruptions [L1449.003].</li>
+<li>Lead with value and the product before any discount, so the offer does not come first [L0567.001].</li>
+<li>Discounts should be strategic and paired with something of higher value [L0575.027].</li>
+<li>Use only the offer that is cheapest for your margin: free shipping first, then 10% off if free shipping costs more [L1243.046].</li>
+<li>For carts over $100, mention free shipping instead of one of the SMS value propositions [L1208.019].</li>
+<li>Source C discount progression: none in email 1, then $5, then $10 across the sequence. The discount increases across the sequence [L0476.016].</li>
+<li>Time-limited offers should be labelled clearly as limited, here for 3 days, and reminders should show the remaining time, such as 24 hours and 4 hours [L1449.007].</li>
+<li>Source C: the first email can carry no discount, the second a small code, and the third the largest code, with its deadline stated [L0634.010].</li>
+</ul>
+<h2 id="conditions-splits-and-filters">Conditions, Splits and Filters</h2>
+<h3 id="send-conditions">Send Conditions</h3>
+<ul>
+<li>Second email conditions (Source A): the customer must not have placed an order since abandonment, and they must not have started a new checkout [L0149.007].</li>
+<li>First email conditions (Shopify template): the first email sends only if both are true, the customer has not placed an order since the workflow started, and at least one product from the abandoned cart is in stock [L0282.007].</li>
+<li>Second email conditions (Shopify template): the second email sends only if the customer has no order since abandonment and more than 24 hours have passed since their last abandoned checkout, preventing duplicate emails from multiple abandoned carts [L0282.011].</li>
+<li>Purchase exclusion: if a customer completes their purchase before a delay timer expires, they are automatically excluded from all remaining email steps [L0282.009].</li>
+<li>New checkout during a running automation: if a customer initiates a new checkout before the first abandoned checkout automation completes, that automation cancels without sending emails. If the new checkout is also abandoned, the customer enters a fresh abandoned checkout automation for the new session, enabling re-entry without duplicate emails [L0266.016].</li>
+<li>Second email spend filter: send the second abandoned checkout email only to customers who have previously spent over $0.00, filtering out brand new customers who may not be ready for follow-up offers [L0156.005].</li>
+<li>Conflict on the spend filter: the Shopify workflow sets the Amount Spent condition to "is equal to $0" (Customer &gt; Amount Spent) in its condition step and again in its review step [L0266.015]. The spend filter described in L0156.005 sends to customers who spent over $0.00. The sources do not explain which applies in which case, so confirm the condition in Shopify before relying on either.</li>
+<li>Branch by cart size (Source E): if the cart is over $100, mention free shipping in the SMS; if under the threshold, add free shipping or add-on suggestions in email four [L1208.019].</li>
+<li>Branch by product range (Source B): after 2 days without purchase, send a helpful content email (such as a buyer's guide) if the product range is broad, or a discount reminder if the range is narrow [L1449.002].</li>
+</ul>
+<h3 id="splits">Splits</h3>
+<ul>
+<li>Source E 50/50 split: send the first email with a 50/50 A/B test. Path A uses desire messaging; path B uses pain messaging [L0261.002].</li>
+<li>Klaviyo setup for the split: use a Conditional Split with the condition 'Is part of a 50% random sample' to divide shoppers into two paths for the first email test. The live split was about 51% and 49% [L0567.003].</li>
+<li>Path 1 (desire/objection email #1A): sent 20 minutes after checkout starts [L0567.004].</li>
+<li>Path 2 (pain-point email #1B): waits 4 hours after checkout starts before it is sent [L0567.005].</li>
+<li>Conditional split for reminders: after the first email, use a conditional split to check 'Has Opened Email zero times since starting this flow.' If unopened, send a 45-minute reminder with the same subject line. If opened, let the customer continue to the next step without a redundant email [L0261.018].</li>
+<li>Source E test step: after the 23-hour wait, test short direct pain copy against story-driven pain copy [L0261.002, L0261.017].</li>
+</ul>
+<h2 id="copy-and-subject-formulas">Copy and Subject Formulas</h2>
+<h3 id="subject-line-formulas">Subject-Line Formulas</h3>
+<ul>
+<li>Formula for a cart-recovery subject line: suggest that something may have gone wrong at checkout, then promise a direct link back to the cart. The question-style opener lowers pressure and reduces the sense of being chased [L1243.026].
+<ul>
+<li>Example 1: "Did something go wrong at checkout? Here is your cart: {link}" [L1243.026]</li>
+<li>Example 2: "Quick question about your order, {first name}. Your cart is saved here: {link}" [L1243.026]</li>
+</ul></li>
+<li>Pattern for the last-chance subject line: put the exact hours left first, then the offer and its expiry, for example a plain countdown plus discount. Examples of the author's own: "2 hours left: your 10% code ends tonight" and "Last call: your saved bag closes in 3 hours" [L0567.009].</li>
+<li>Pattern for the offer email subject: tease what waits in the cart without naming the product, which creates curiosity and gets opens. Examples of the author's own: "Something good is still sitting in your basket" and "Your favourite pick is still on hold" [L0567.010].</li>
+<li>Formula for the Source C email 1 subject line in the Clavio setup: a friendly reminder, with the first email written as a reminder that the cart is waiting [L0476.011]. Example of the same tone: "Still thinking it over? Your cart is saved for a few more hours." [L0476.015]</li>
+<li>Example for the second email: "Stock on your picks is running low. Here is 10 dollars off for the next hour." [L0476.015]</li>
+<li>Subject-line examples for a benefit-led first email: none specified beyond the template; set the subject to include the product name [L1297.020].</li>
+<li>Discount offer example subject (Source E test): "You Won't Believe What's Waiting in Your Cart" with a 15% discount [L0261.008].</li>
+<li>Discount reminder example subject (Source E scarcity test): "4 Hours Left: 15% Off Expires Soon" [L0261.015, L0567.038].</li>
+<li>Default subject line for the first abandoned checkout reminder email: "You left items at checkout" [L0266.010].</li>
+<li>The Source E sender name uses the brand and a monitored support address, and the subject "RE: About your order" makes the email look like a reply in the inbox [L0567.006].</li>
+<li>Source C third email subject: "your cart is still waiting for you and so is our discount" [L1297.020].</li>
+<li>Day 3 to 4 email subject (Source A): "Your {product name} is still waiting for you" [L1243.046].</li>
+<li>Older advice (2019): "Did you forget something?" was used as the first abandoned-cart subject line [L1086.045]. Source E advises against wording reminders as if the customer forgot something [L1208.004], so use the newer wording.</li>
+<li>Source C second-email subject: say the order is not yet complete [L0605.020].</li>
+<li>Source C third-email subject: announce an exclusive deal with an extra 10% off [L0605.020].</li>
+</ul>
+<h3 id="copy-rules">Copy Rules</h3>
+<ul>
+<li>One strong headline is enough in the first abandoned cart email. A sub-headline can be dropped. Testing in this store showed the extra line added nothing, so remove it unless a split test proves otherwise [L0567.044].</li>
+<li>Repeat the real deadline in the P.S. line of an offer email, because many readers scroll to the end. Keep it consistent with the countdown and the code expiry time [L0567.046].</li>
+<li>Sign the offer and last-chance emails with the founders' first names to add a personal touch. The sign-off should match the brand voice used across the sequence [L0567.047].</li>
+<li>Each abandoned-cart email should contain a direct button to the checkout link, so the customer returns to the exact cart with one click. Copy the same link into each email in the sequence [L0634.039].</li>
+<li>Text-based abandoned-cart emails with some images and plenty of personal text tend to convert better, because they feel personal and land in the primary inbox more often [L0607.032, L0573.023].</li>
+<li>The personal welcome email in the cart sequence should ask a direct question and invite a reply, rather than repeating the product. Its goal is to uncover objections such as an unresolved question or hesitation about a competitor, and a reply can lead to a personal conversation that moves the sale forward [L1449.005].</li>
+<li>Personal message from the store owner: frame the second follow-up email as a personal message from the store owner offering direct help with questions. Invite the customer to reply, positioning it as one-on-one conversation rather than automated broadcast, to increase engagement and encourage direct response [L0149.008].</li>
+<li>Insert the abandoned checkout products block into the second reminder email so recipients see exactly which items they left behind, rather than generic product suggestions or inspirational content [L0266.013].</li>
+<li>Last-chance email build order (Source E):
+<ol type="1">
+<li>Copy the layout of the offer email [L0567.038].</li>
+<li>Change the subject to a countdown such as "4 Hours Left: 15% Off Expires Soon" [L0567.038].</li>
+<li>Update the headline to say time is almost up and the discount ends [L0567.038].</li>
+<li>Insert the product block of the items left behind between the headline and the CTA [L0567.038].</li>
+<li>Add the final warning and the CTA to complete the order with the discount applied [L0567.038].</li>
+</ol></li>
+<li>Source C: the first email's copy as a reminder, with a product benefit or guarantee and a link back to the store; keep no discount in this first message [L0476.011].</li>
+<li>Source E: abandoned-cart copy should be benefit-led and describe the customer's pain point and how they will feel after getting the product [L0605.020].</li>
+<li>Use the Shopify AI tool to refine the first email template and improve its messaging [L0156.006].</li>
+<li>For the first abandoned checkout email, Shopify's Generate Text tool can be used with a description (for example "You left items at checkout"), a tone (for example playful) and a choice of suggested subject line [L0266.015].</li>
+</ul>
+<h3 id="templates-and-prompts">Templates and Prompts</h3>
+<p>Abandoned cart email, sent automatically to a shopper who left checkout (Source A):</p>
+<pre><code>Hi [First name], you did not finish your order. Is there anything I can help you with? Just reply to this email. [Sender name], [Brand name]</code></pre>
+<p>[L0334.030]</p>
+<p>Prompt for composing email two in the recovery sequence (Source A):</p>
+<pre><code>I need assistance composing an email for an abandoned cart recovery sequence on [store domain]. My first email in this sequence is complete, but I&#39;m developing email two to communicate to buyers that they can reach out with questions or purchasing support. I have a preliminary version of this email: [paste draft here]</code></pre>
+<p>[L0282.014]</p>
+<p>Abandoned cart email template, ready to paste (replace the placeholders in braces) (Source C):</p>
+<pre><code>Subject line: {subject_line}
+Preview text: {preview_text}
+
+Hi {first_name},
+
+You left {product_name} in your cart, and it is still waiting for you.
+
+[Cart section showing the items]
+
+Checkout now to secure your items.
+[Button: Complete checkout, linked to {checkout_link}]
+
+Prefer to keep browsing? [Link: Return to cart, linked to {cart_url}]
+
+Here is what other customers say about {store_name}:
+[Image: testimonial collage]
+
+If you have any questions, just reply to this email.
+
+Cheers,
+{signature_name}
+{store_name}</code></pre>
+<p>[L0607.031]</p>
+<p>Abandoned cart email 1 (sent 15 minutes after abandonment) (Source C, Clavio):</p>
+<pre><code>Hey [first name], you know we feel like you stood us up for a date. We hate to see sad looking abandoned carts, especially when they hold such amazing items. If you are the thinky kind of shopper, you will be glad to know our products have a 100 percent satisfaction guarantee in place. We are also known for our fantastic [product] which make the owner 150 percent more awesome instantly. We are holding on to your cart for now, but these items tend to sell out really soon. Hope to see you back. Cheers, [customer representative first name], [store URL].</code></pre>
+<p>[L0634.011]</p>
+<p>Abandoned cart email 2 (Source C, Clavio):</p>
+<pre><code>Hi there, we know online checkout can feel like a lot. Ideally nobody would leave a cart behind, so consider this before you go: the items you picked are the same ones other shoppers are buying right now. They are selling fast, and we may not be able to fill your order next time. To make it easier, we are taking $5 off once you finish checkout. That means more savings and more shopping, but the window is short because we cannot tell when your selection will sell out. Enter code SAVE5 at checkout. [Checkout link button] Warm regards, [customer representative first name], [store URL].</code></pre>
+<p>[L0634.012]</p>
+<p>Abandoned cart email 3 (Source C, Clavio):</p>
+<pre><code>Hi [first name], still on the fence? Treating yourself is never a bad idea. Your cart is saved for the moment. [Checkout link button] We are holding your discount too, and this round is bigger: $10 off. Apply code SAVE10 at checkout. Every order ships with a tracking code, and our team responds quickly if you have questions. See our [tracking policy link] or reach out through our contact details. Your saved cart will expire and the offer closes soon, so act now. We hope to welcome you back today. Warm regards, [customer representative first name], [store URL].</code></pre>
+<p>[L0634.013]</p>
+<p>Older template (2019, Source A), first abandoned cart email:</p>
+<pre><code>Subject: Did you forget something?
+
+Hi {first_name}, did you forget something? {customer_name} from {customer_location} got their {product_name} from {store_name}, and yours is still waiting in your cart. Did you forget yours? [Insert customer photo of {customer_name} with {product_name} here]
+
+Complete your order here: {cart_link}</code></pre>
+<p>[L1086.045] Use this as the first abandoned cart email, and keep the customer photo above the button. Older advice (2019), with the subject wording conflicting with L1208.004; see the subject-line section.</p>
+<p>Day 3 to 4 abandoned-cart email, sent after the Messenger reminder when the shopper still has not bought (Source A):</p>
+<pre><code>Subject line: &#39;Your {product name} is still waiting for you&#39;
+
+Body: &#39;Hi {first name}, you left {product name} in your cart, and it is still here. Use code {code} for {free shipping or 10% off} at checkout. Return to your cart here: {link}. We would really like to be the store you choose, so thanks for considering us.&#39;</code></pre>
+<p>[L1243.046] Replace the placeholders before sending, and use only the offer that is cheapest for your margin: free shipping first, then 10% off if free shipping costs more.</p>
+<h2 id="benchmark-results">Benchmark Results</h2>
+<h3 id="source-e-results-2025-26">Source E Results (2025-26)</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Email</th>
+<th>Open rate</th>
+<th>Click-through rate</th>
+<th>Order rate</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desire-based abandoned cart email</td>
+<td>83%</td>
+<td>16.2%</td>
+<td>8.1%</td>
+<td>L0261.004</td>
+</tr>
+<tr>
+<td>First email, desire path (Path A)</td>
+<td>83.8%</td>
+<td>16.2%</td>
+<td>8.1%</td>
+<td>L0261.016</td>
+</tr>
+<tr>
+<td>First email, pain path (Path B)</td>
+<td>82.4%</td>
+<td>5.9%</td>
+<td>2.9%</td>
+<td>L0261.016</td>
+</tr>
+<tr>
+<td>Discount offer email (15% off, subject "You Won't Believe What's Waiting in Your Cart")</td>
+<td>56.2%</td>
+<td>11.2%</td>
+<td>4.5%</td>
+<td>L0261.008</td>
+</tr>
+<tr>
+<td>Risk-mitigation email (testimonials, guarantees, payment options)</td>
+<td>53.2%</td>
+<td>3.2%</td>
+<td>1.1%</td>
+<td>L0261.009</td>
+</tr>
+<tr>
+<td>Discount reminder with scarcity messaging ("4 Hours Left: 15% Off Expires Soon")</td>
+<td>60.2%</td>
+<td>9.1%</td>
+<td>4.5%</td>
+<td>L0261.015</td>
+</tr>
+<tr>
+<td>Pain copy, short direct version (after 23-hour wait)</td>
+<td>76.2%</td>
+<td>9.5%</td>
+<td>2.4%</td>
+<td>L0261.017</td>
+</tr>
+<tr>
+<td>Pain copy, story-driven version (after 23-hour wait)</td>
+<td>69.6%</td>
+<td>8.9%</td>
+<td>0%</td>
+<td>L0261.017</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Timing result: a 20-minute first delay produced 8.1 orders per 100 abandons, against 3.7 orders with a 4-hour delay, a 2.2x difference in conversion [L0261.001].</li>
+<li>Copy result: short, direct pain copy significantly outperformed story-driven copy for pain-focused follow-up emails [L0261.017].</li>
+<li>The Source E figures come from its own store tests. The units do not give sample sizes [L0261.004, L0261.016, L0261.017].</li>
+</ul>
+<h3 id="other-sources">Other Sources</h3>
+<ul>
+<li>Source C: the units give no measured results; they make qualitative claims only. Text-based emails with personalization convert better and reach the inbox more reliably [L0573.023, L0607.032].</li>
+<li>Source C: the third email's larger discount is presented as the step that pushes hesitant buyers to act, without a measured rate [L0606.018, L0604.005].</li>
+<li>Source A: roughly 7 to 8 out of 10 shoppers leave without buying, and about 25% recovery is cited as a realistic target [L0572.006, L0572.007].</li>
+</ul>
+<h2 id="platform-walkthroughs">Platform Walkthroughs</h2>
+<h3 id="shopify-messaging-app-create-automation">Shopify Messaging App (Create Automation)</h3>
+<ol type="1">
+<li>Log in to Shopify Admin [L0149.009].</li>
+<li>Open Shopify Messaging [L0149.009].</li>
+<li>Click 'Create automation' (not 'Create campaign') [L0149.009].</li>
+<li>Select template 'Recover Abandoned Checkout' [L0149.009].</li>
+<li>Click 'Turn on automation' [L0149.009].</li>
+<li>Go to Marketing → Automations and click 'Install Shopify Flow' [L0149.009].</li>
+<li>In Flow, change the first delay timer from 10 hours to 4 hours [L0149.009].</li>
+<li>Verify the first email displays products from the customer's cart and uses Shopify's default template; edit subject line or content if desired [L0149.009].</li>
+<li>Add a wait step of 20 hours [L0149.009].</li>
+<li>Add condition: customer has not placed an order [L0149.009].</li>
+<li>Add condition: customer has not started a new checkout [L0149.009].</li>
+<li>Add a second email using a blank template with subject such as 'It's been 24 hours' [L0149.009].</li>
+<li>In the second email, invite the customer to reply with questions and position yourself as the store owner offering help [L0149.009].</li>
+<li>Confirm the automation status shows 'Turn off workflow' to verify it is active [L0149.009].</li>
+<li>The automation now runs indefinitely [L0149.009].</li>
+</ol>
+<h3 id="shopify-admin-workflow-marketing--automations-abandoned-checkout-template">Shopify Admin Workflow (Marketing &gt; Automations, Abandoned Checkout Template)</h3>
+<ol type="1">
+<li>Open Shopify admin, navigate to Marketing &gt; Automations, and click Create Automation [L0266.015].</li>
+<li>Select the Abandoned Checkout template (not Abandoned Cart) and click Turn on Automation [L0266.015].</li>
+<li>Click Continue if prompted about replacing existing automations [L0266.015].</li>
+<li>Click into the new automation and select Edit Workflow [L0266.015].</li>
+<li>Click the wait step showing '10 hours' and change it to '4 hours', then click off to save [L0266.015].</li>
+<li>Right-click and drag the workflow to reposition it for better visibility [L0266.015].</li>
+<li>Hover over the connector from the trigger to the first condition check and delete it to insert a new step [L0266.015].</li>
+<li>Click the plus icon, select Action, and choose Add customer tags [L0266.015].</li>
+<li>Enter the tag name 'abandoned cart' and click off to confirm [L0266.015].</li>
+<li>Reconnect the workflow by dragging the connector from the tag action back to the first condition [L0266.015].</li>
+<li>Click into the first email template and select Edit Email [L0266.015].</li>
+<li>Click Generate Text, enter a description (for example 'You left items at checkout'), select a tone (for example playful), and click Generate [L0266.015].</li>
+<li>Select the preferred subject line suggestion from the AI options [L0266.015].</li>
+<li>Modify the email body similarly, using Generate Text or writing custom copy, then click Save [L0266.015].</li>
+<li>Return to the workflow diagram and click the plus icon to add another Action [L0266.015].</li>
+<li>Select Wait and set the time to 20 hours, then click off to save [L0266.015].</li>
+<li>Click the plus icon, select Add Condition, and choose 'If all conditions are met' [L0266.015].</li>
+<li>Click Add criteria, navigate to Customer &gt; Amount Spent, and set the condition to 'is equal to $0' [L0266.015].</li>
+<li>Click the plus icon, select Action, and choose Send marketing email [L0266.015].</li>
+<li>Click Select Template and scroll to the Re-engagement section [L0266.015].</li>
+<li>Select the Discount Reminder template [L0266.015].</li>
+<li>Click into the email and customize the subject line using Generate Text or custom copy [L0266.015].</li>
+<li>Replace any placeholder content (discount codes, promotional messages) with your offer details [L0266.015].</li>
+<li>Delete the 'Need Inspiration' section by hovering and clicking the delete icon [L0266.015].</li>
+<li>Replace the deleted text with 'Come back and complete your order' or similar messaging [L0266.015].</li>
+<li>Hover over content sections to reveal the plus icon, then click it to add elements [L0266.015].</li>
+<li>Select Abandoned Checkout from the options; Shopify will automatically display the exact products from the abandoned cart [L0266.015].</li>
+<li>Click Save and return to the workflow diagram [L0266.015].</li>
+<li>Review the entire workflow: trigger → add 'abandoned cart' tag → verify conditions → wait 4 hours → send first email → wait 20 hours → check amount spent equals $0 → send second email [L0266.015].</li>
+<li>Click Apply Changes and confirm to make the changes effective immediately [L0266.015].</li>
+</ol>
+<h3 id="shopify-messaging-and-flow-verify-and-modify">Shopify Messaging and Flow (Verify and Modify)</h3>
+<ol type="1">
+<li>Log into Shopify admin and open the Shopify Messaging app [L0282.013].</li>
+<li>Click Create Automation (top right), not Create Campaign [L0282.013].</li>
+<li>Select the 'Recover Abandoned Checkout' template from the list [L0282.013].</li>
+<li>Click Turn on Automation [L0282.013].</li>
+<li>Navigate to Marketing &gt; Automations in Shopify admin to manage the workflow [L0282.013].</li>
+<li>Install Shopify Flow app for easier editing (optional but recommended) [L0282.013].</li>
+<li>In Flow, click Edit on the Recover Abandoned Checkout automation [L0282.013].</li>
+<li>Verify the trigger: 'This workflow starts when a customer abandons their checkout.' [L0282.013]</li>
+<li>Verify first condition: 'Customer abandoned checkout in online store = true' and 'Checkout total &gt; $0.' [L0282.013]</li>
+<li>Modify the first delay timer: change from default 10 hours to 4 hours [L0282.013].</li>
+<li>Verify condition: customer has not placed an order since workflow started [L0282.013].</li>
+<li>Verify condition: one or more products from the cart remain in stock [L0282.013].</li>
+<li>Review the first email template or customize by clicking Edit Email to change subject, text, and add sections [L0282.013].</li>
+<li>Hover over Send Marketing Email, click plus, select Action &gt; Wait [L0282.013].</li>
+<li>Set wait time to 24 hours (total time from abandonment to second email) [L0282.013].</li>
+<li>Add condition: 'Customer has no order since abandonment = true.' [L0282.013]</li>
+<li>Add condition: 'Hours since last abandoned checkout &gt; 24.' [L0282.013]</li>
+<li>Select Add &gt; Action &gt; Messaging &gt; Send Marketing Email [L0282.013].</li>
+<li>Choose blank template and customize the subject line and email body for the second email [L0282.013].</li>
+<li>Click Apply Changes to save the workflow [L0282.013].</li>
+<li>Verify the workflow is active by checking that the button shows 'Turn off workflow' [L0282.013].</li>
+</ol>
+<ul>
+<li>Status check: an active automation displays a 'Turn off workflow' button; an inactive automation displays a 'Turn on workflow' button [L0282.016].</li>
+</ul>
+<h3 id="shopify-email-template-based">Shopify Email (Template-Based)</h3>
+<ol type="1">
+<li>Start with Shopify Email's 'Abandoned Checkout' automation template [L0156.006].</li>
+<li>Reduce the initial email wait from 10 hours to 4 hours for faster follow-up [L0156.006].</li>
+<li>Add an action that applies the 'Abandoned Cart' customer tag when the automation starts [L0156.006].</li>
+<li>Use Shopify Email's built-in AI tool to refine the first email template and improve its messaging [L0156.006].</li>
+<li>After the first email, add a waiting period of 20 hours before the next action [L0156.006].</li>
+<li>Add a condition that only proceeds if the customer has previously spent over $0.00 [L0156.006].</li>
+<li>Create a second email using Shopify Email's 'Discount Reminder' template [L0156.006].</li>
+<li>Use the AI tool to refine the second email and add the 'Abandoned Checkout' section for context [L0156.006].</li>
+</ol>
+<h3 id="klaviyo-source-e">Klaviyo (Source E)</h3>
+<ul>
+<li>Trigger: 'When someone Checkout Started' [L0567.002]. Flow filters are added after the trigger, starting with a Conditional Split [L0567.002].</li>
+<li>Split, timing, and reminder steps: see the Conditions, Splits and Filters section [L0567.003, L0261.018].</li>
+<li>Scheduled sends: use Time Delay with Wait until specific time [L0261.010].</li>
+</ul>
+<h3 id="klaviyo-source-c-abandoned-cart-flow">Klaviyo (Source C, Abandoned Cart Flow)</h3>
+<ol type="1">
+<li>Open Flows and click Get started on the Abandoned cart flow [L0607.028].</li>
+<li>Check that the trigger is Started checkout [L0607.028].</li>
+<li>Change the first wait step from 4 hours to 30 minutes [L0607.028].</li>
+<li>Edit the first email: set the subject line and preview text, then delete the default blocks you do not need [L0607.028].</li>
+<li>Add a text block with your own cart copy, then add the cart section that shows the items [L0607.028].</li>
+<li>Insert a button labeled complete checkout linked to the checkout link [L0607.028].</li>
+<li>Add a Return to cart link [L0607.028].</li>
+<li>Add the review section, for example an image collage made in Canva from customer testimonial screenshots [L0607.028].</li>
+<li>Add your signature and store name [L0607.028].</li>
+<li>Click Done [L0607.028].</li>
+<li>Clone the email and add more emails: one at 30 minutes, one after 8 to 10 hours, and one after 24 hours; a 48-hour email is optional [L0607.028].</li>
+<li>Change each email from Draft to Live, then click Exit [L0607.028].</li>
+</ol>
+<p>Source C Klaviyo setup (alternative version):</p>
+<ol type="1">
+<li>Confirm the trigger is Checkout started [L0573.021].</li>
+<li>Change the first wait from 4 hours to 30 minutes, to be aggressive with a first product [L0573.021].</li>
+<li>Use the custom template instead of the Klaviyo default, since it converts better [L0573.021].</li>
+<li>Set subject line and preview text, and keep the first-name personalization [L0573.021].</li>
+<li>Keep the cart section, and add a text block with the message [L0573.021].</li>
+<li>Replace the signature with your own name and store name [L0573.021].</li>
+<li>Add a button labeled Complete checkout that links to the checkout URL, and a Return to cart option [L0573.021].</li>
+<li>Add a review section, such as a collage of testimonial screenshots made in Canva [L0573.021].</li>
+<li>Save the email and clone it to build the sequence [L0573.021].</li>
+</ol>
+<ul>
+<li>Set every email to Live after cloning [L0573.022].</li>
+</ul>
+<p>Source C Klaviyo setup (as taught, 2026):</p>
+<ol type="1">
+<li>Email 1 sent 15 minutes after checkout start [L0477.019].</li>
+<li>Email 2 sent 4 hours after email 1, including a discount code (for example $10 or 20%) for the product [L0477.019].</li>
+<li>Email 3 sent 24 hours after email 2 (listed as one day after the last wait), with reminder that the cart and discount are still waiting [L0477.019].</li>
+<li>Set each to live [L0477.019].</li>
+</ol>
+<p>Source C Klaviyo setup (Shopify code, older 2021-22 wording not applicable):</p>
+<ol type="1">
+<li>Click Get started on the abandoned checkout flow [L1297.020].</li>
+<li>Set the first email to send after 15 minutes [L1297.020].</li>
+<li>Use the saved template, add the abandoned cart text, and set the subject to include the product name [L1297.020].</li>
+<li>Set the second email to send after 4 hours. Add a discount, for example $10 off, with the code created in Shopify [L1297.020].</li>
+<li>Clone the waiting step and set the third email to send after 24 hours. Use the subject 'your cart is still waiting for you and so is our discount' [L1297.020].</li>
+<li>Set each email from draft to live, with Smart sending off and UTM tracking on [L1297.020].</li>
+</ol>
+<h3 id="klaviyo-final-email">Klaviyo Final Email</h3>
+<ul>
+<li>Final last-chance email build order: see Copy and Subject Formulas, Copy Rules [L0567.038].</li>
+</ul>
+<h3 id="clavio">Clavio</h3>
+<ol type="1">
+<li>Go to Flows and click Get started on Abandoned carts [L0476.011].</li>
+<li>Set the first timer to 15 minutes instead of the default four hours, then open the first email [L0476.011].</li>
+<li>Click the three-dot menu, choose Edit, and enter the name and subject line. Click Change template &gt; Drag and drop, then open Saved templates and click Use template. The logo and images are already in the saved template, so only the text needs changing [L0476.011].</li>
+<li>Write the first email as a reminder that the cart is waiting, mention a product benefit or guarantee, add a link back to the store, and keep no discount in this first message [L0476.011].</li>
+<li>Set the delay before the second email to four hours (default was 20 hours). Write the second email with the $5 code (example: save five during checkout) and a checkout link [L0476.011].</li>
+<li>Add a time delay of 20 hours below the second email. Clone the second email, place the clone below the timer, and edit it [L0476.011].</li>
+<li>In the third email, raise the offer to a $10 code (example: save 10), bold it, and give it a background color. Include a link to the tracking policy, the checkout link, and a deadline [L0476.011].</li>
+<li>For each email, set Smart sending to off, UTM tracking to on, and switch the email from Draft to Live [L0476.011].</li>
+</ol>
+<p>Clavio (short version):</p>
+<ol type="1">
+<li>Open Flows, search for Abandoned carts and click Get started [L0634.010].</li>
+<li>Set the timer of email 1 to 15 minutes after abandonment [L0634.010].</li>
+<li>Use the saved template with reminder copy and a 100 percent satisfaction guarantee statement [L0634.010].</li>
+<li>Set the timer of email 2 to 4 hours and use a checkout link plus a code 'save5' offering 5 dollars off [L0634.010].</li>
+<li>Set a delay of 20 hours for email 3, clone email 2 and edit it with an offer of 10 dollars off using code SAVE10 and a link to the tracking policy [L0634.010].</li>
+<li>Set each email to live with UTM tracking on and Smart sending off [L0634.010].</li>
+</ol>
+<p>Clavio setup: the email tool for visitors who start checkout but do not buy [L1131.026].</p>
+<h3 id="sms-bump-with-clavio">SMS Bump with Clavio</h3>
+<ul>
+<li>Set up Clavio and SMS Bump in parallel to recover abandoned carts. SMS Bump only sends to customers who have agreed to receive SMS [L1347.030].</li>
+<li>Checkout setting for abandoned cart recovery: remove phone number as an optional checkout field and make email a required field, so every customer can be retargeted by email [L1347.031].</li>
+<li>Recovering paid-traffic add-to-cart visitors who did not buy:
+<ol type="1">
+<li>Confirm that the Clavio retargeting emails and SMS Bump messages are set up correctly [L1347.032].</li>
+<li>If results are weak, change the email copy and the copywriting [L1347.032].</li>
+<li>Change the discount or the offer in the retargeting emails [L1347.032].</li>
+</ol></li>
+</ul>
+<h3 id="review-of-an-existing-sequence">Review of an Existing Sequence</h3>
+<ul>
+<li>Review the abandoned cart sequence against the templates provided, and update it where it does not match the new approach (older advice, 2021-22) [L0493.016].</li>
+</ul>
+<h2 id="tracking-and-mistakes">Tracking and Mistakes</h2>
+<h3 id="tracking-and-go-live-checks">Tracking and Go-Live Checks</h3>
+<ul>
+<li>Source C: for each email, set Smart sending to off, UTM tracking to on, and switch from Draft to Live [L0476.011, L0634.010, L1297.020].</li>
+<li>Source C: set every email in the sequence to Live after cloning [L0573.022, L0607.028].</li>
+<li>Shopify Admin: click Apply Changes and confirm to make the changes effective immediately [L0266.015, L0282.013].</li>
+<li>Shopify status check: confirm the button shows 'Turn off workflow' to verify the automation is active [L0149.009, L0282.016].</li>
+<li>Shopify Messaging: the automation now runs indefinitely once active [L0149.009].</li>
+<li>Check each timer before going live [L0476.027].</li>
+</ul>
+<h3 id="mistakes-to-avoid">Mistakes to Avoid</h3>
+<ul>
+<li>Leaving the default timers in place for welcome and abandoned cart flows means messages arrive too late or too late for the offer. Check each timer before going live [L0476.027].</li>
+<li>Customizing the Shopify template without a specific improvement adds risk, because the pre-built template is built on performance data [L0282.015].</li>
+<li>Offering a discount in the first message is the most common mistake; start with a plain reminder and a checkout link [L1449.003].</li>
+<li>Stopping all emails after the abandoned-cart flow ends is a common error. Contacts who did not buy should move into the 30-day prospect master flow rather than being dropped, because they may still be in the market [L1449.004].</li>
+<li>Do not word reminders as if the customer forgot something, because that implies the item was not valuable to them [L1208.004].</li>
+<li>Do not restart the shopping journey in the early abandoned-cart messages by suggesting other products or new options. Doing so confuses a buyer who was ready to complete the purchase [L1208.005].</li>
+<li>Do not add extra calls to action (social media icons, app download prompts or other links) to the first three abandoned-cart emails [L1208.014, L1208.022].</li>
+<li>Do not add a second headline or sub-headline to the first email unless a split test proves it helps [L0567.044].</li>
+<li>Do not send a last-chance email with a deadline that conflicts with the countdown or the code expiry time; keep the P.S. line consistent with both [L0567.046].</li>
+<li>Do not keep a 4-hour first interval as a fixed rule for all emails; the Source E guidance avoids arbitrary 4-hour intervals that hit customers at inconvenient times [L0261.006].</li>
+<li>Do not treat the abandoned cart flow as a one-off reminder; it is a series [L0572.022].</li>
+<li>Do not leave an automation running with an expired discount; the discount should expire only after the final email, with email 4 sent a few hours before that expiry [L0606.038].</li>
+<li>Do not send SMS to customers who did not opt in; SMS cannot recover their carts [L1347.030].</li>
+<li>Do not use the abandoned-cart sequence to deliver top-of-funnel content or broad brand introductions [L1208.017].</li>
+</ul>
+<h2 id="scope-and-standard">Scope and Standard</h2>
+<ul>
+<li>Use an abandoned checkout flow with more than one email, not a single reminder. A typical flow runs five to seven emails spread across five to seven days [L1522.027].</li>
+<li>If a store already runs an abandoned-cart flow, review it against the standard sequence: reminders, a personal owner email, a time-limited discount and a final reminder. Add only the missing emails rather than rebuilding the whole flow [L1449.013].</li>
+<li>All advice in this section is older advice from Source B's 2021-22 course [L1449.008, L1449.009, L1449.010, L1449.011, L1449.012, L1449.013, L1449.014, L1449.015, L1522.027].</li>
+</ul>
+<h2 id="why-emails-are-spaced">Why Emails Are Spaced</h2>
+<ul>
+<li>Abandoned-cart emails are spaced with waiting periods because many people do not check email right away [L1449.011].</li>
+<li>Each step gives the shopper time to act before the next message is sent [L1449.011].</li>
+</ul>
+<h2 id="sequence-timeline">Sequence Timeline</h2>
+<p>The following schedule is derived from the moment of abandonment [L1449.012]:</p>
+<ol type="1">
+<li>0 hours: first reminder with product and checkout link [L1449.012].</li>
+<li>6 hours: second reminder of the same type [L1449.012, L1449.015].</li>
+<li>24 hours: personal owner email asking whether you can help and inviting a reply [L1449.012, L1449.008].</li>
+<li>48 hours: time-limited discount offer for 3 days [L1449.012, L1449.014].</li>
+<li>96 hours: either a helpful content email (broad product range) or a discount reminder with 24 hours left (narrow product range) [L1449.012, L1449.010].</li>
+<li>120 hours: final discount reminder with about 4 hours left [L1449.012, L1449.009].</li>
+<li>After the final reminder, move the contact to the 30-day prospect master flow [L1449.012].</li>
+</ol>
+<h2 id="per-email-jobs-1">Per-Email Jobs</h2>
+<p><strong>Reminders (0 hours and 6 hours).</strong> Both use the same plain text. Neither includes a discount [L1449.015].</p>
+<pre><code>Subject: You left {product_name} in your cart
+
+Hi {first_name},
+
+Your {product_name} is still in your cart and ready to order. You can finish your purchase here:
+{checkout_link}
+
+{business_name}
+
+(Send the same email again 6 hours after the first one, using the same text. Do not include a discount in either reminder.)</code></pre>
+<p>[L1449.015]</p>
+<p><strong>Personal owner email (24 hours).</strong> Write it as a welcome-style email from the business owner, 18 hours after the second reminder, to a shopper who has not purchased [L1449.008, L1449.012]. Use the following prompt text unchanged:</p>
+<pre><code>Write a personal welcome-style email from the business owner for an abandoned cart, 18 hours after the second reminder, to a shopper who has not purchased. Keep it short and written by a real person. Share a brief part of your story and what sets your business apart, and do not mention the abandoned product. End with one clear call to action: ask whether there is anything you can help with and ask the shopper to simply reply to this email. Use a plain-text style, no discount, no pressure.</code></pre>
+<p>[L1449.008]</p>
+<p><strong>Discount offer (48 hours).</strong> Send the time-limited discount with the product, the code and the checkout link. The offer lasts 3 days and ends on the expiry date [L1449.012, L1449.014]. Use the following template unchanged:</p>
+<pre><code>Subject: {first_name}, your discount for {product_name} is ready
+
+Hi {first_name},
+
+You left {product_name} in your cart. We have set up a discount code for you: {discount_code}
+
+Use the code at checkout here:
+{checkout_link}
+
+This offer is time limited and ends in 3 days, on {expiry_date}. After that the code will no longer work.
+
+{business_name}</code></pre>
+<p>[L1449.014]</p>
+<p><strong>Narrow-range discount reminder (96 hours, 24 hours left).</strong> Use this email when the store has a narrow product range [L1449.010, L1449.012]. Use the following prompt text unchanged:</p>
+<pre><code>Write a discount-reminder email for an abandoned cart, sent 24 hours after the discount offer when the store has a narrow product range. Include the product, a link back to checkout and the discount code, and state that 24 hours are left to finish the purchase. Keep it short and direct.</code></pre>
+<p>[L1449.010]</p>
+<p><strong>Broad-range content email (96 hours).</strong> Use this email when the store has a broad product range, in place of the discount reminder [L1449.012].</p>
+<p><strong>Final reminder (120 hours, about 4 hours left).</strong> Send a brief, factual final reminder [L1449.009, L1449.012]. Use the following prompt text unchanged:</p>
+<pre><code>Write a final abandoned-cart reminder email, sent 4 hours before a discount expires. Include the product, a direct link back to checkout, the discount code, and a short, clear statement that the discount is about to expire in 4 hours. Keep it brief and factual, with no extra offers.</code></pre>
+<p>[L1449.009]</p>
+<h2 id="discount-timing-1">Discount Timing</h2>
+<ul>
+<li>The discount is offered at 48 hours and runs for 3 days [L1449.012, L1449.014].</li>
+<li>The first two reminders contain no discount [L1449.015, L1449.012].</li>
+<li>The narrow-range reminder is sent at 96 hours, when 24 hours are left [L1449.012, L1449.010].</li>
+<li>The final reminder is sent at 120 hours, with about 4 hours left [L1449.012, L1449.009].</li>
+<li>The source values do not fully align, so check them before building:
+<ul>
+<li>The 96-hour send matches the "24 hours left" wording, since the discount ends at 120 hours [L1449.012, L1449.010].</li>
+<li>The wording "sent 24 hours after the discount offer" does not match the 96-hour timing. The offer is at 48 hours, so 24 hours after it would be 72 hours [L1449.010, L1449.012, L1449.014].</li>
+<li>The 3-day discount from 48 hours ends at 120 hours. The final reminder at 120 hours is described as "about 4 hours left", which implies expiry near 124 hours [L1449.012, L1449.009, L1449.014].</li>
+</ul></li>
+</ul>
+<h2 id="conditions-and-splits">Conditions and Splits</h2>
+<ul>
+<li>Product range decides the 96-hour email. A broad range receives a helpful content email. A narrow range receives a discount reminder with 24 hours left [L1449.012].</li>
+<li>After the final reminder, the contact moves to the 30-day prospect master flow [L1449.012].</li>
+</ul>
+<h2 id="personalisation-fields">Personalisation Fields</h2>
+<ul>
+<li>Templates use these fields: {first_name}, {product_name}, {checkout_link}, {discount_code}, {expiry_date} and {business_name} [L1449.014, L1449.015].</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Abandoned checkout automation follows up with customers who initiated but didn't complete purchase, enabling recovery of otherwise lost sales through automated email sequences. [L0156.001]</p></li>
+<li><p>Abandoned-cart emails run through Klaviyo's autoresponder, which automatically includes the abandoned product's information and links in the reminder emails. [L1449.006]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../15-email-and-sms/06-welcome-series-and-new-subscriber-nurture/"><span class="k">&larr; Previous</span><span class="v">Welcome series and new subscriber nurture</span></a><a class="nx" href="../../15-email-and-sms/08-browse-abandonment-manual-cart-recovery-and-personal-follow-/"><span class="k">Next &rarr;</span><span class="v">Browse abandonment, manual cart recovery and personal follow-up</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

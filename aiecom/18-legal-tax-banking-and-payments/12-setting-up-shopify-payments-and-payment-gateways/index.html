@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Setting up Shopify payments and payment gateways | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 18.12: Setting up Shopify payments and payment gateways.">
+<link rel="canonical" href="https://dlichters.com/aiecom/18-legal-tax-banking-and-payments/12-setting-up-shopify-payments-and-payment-gateways/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Setting up Shopify payments and payment gateways | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 18.12: Setting up Shopify payments and payment gateways."><meta property="og:url" content="https://dlichters.com/aiecom/18-legal-tax-banking-and-payments/12-setting-up-shopify-payments-and-payment-gateways/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">18. Legal, tax, banking and payments</a> &rsaquo; <a href="../../../ecom/18-legal-tax-banking-and-payments/12-setting-up-shopify-payments-and-payment-gateways/">Plain version</a></div><h1>18.12 Setting up Shopify payments and payment gateways</h1><article><h2 id="shopify-payments-what-it-is-and-what-it-covers">Shopify Payments: What It Is and What It Covers</h2>
+<ul>
+<li>Shopify Payments accepts credit cards, debit cards, Apple Pay and Google Pay. [L0096.007]</li>
+<li>It runs on Stripe, a separate company that handles card processing and can request its own checks. [L0677.040, L0272.046]</li>
+<li>It accepts American Express, Discover and Mastercard, plus Apple Pay and Google Pay, without extra apps. [L0470.043]</li>
+<li>Shop Pay Installments is built in and is the equivalent of Klarna. [L0272.046]</li>
+<li>The Shopify admin includes Shop Pay as a checkout option, payout and cashflow tracking, and chargeback management. [L1167.026]</li>
+<li>It automatically shows options such as Apple Pay, Shop Pay and Mastercard at checkout. [L1377.046]</li>
+<li>Customer payments are deposited into the linked bank account. Customers can also use other payment methods alongside it. [L0934.135, L0934.015]</li>
+<li>It is managed under Payments in the Shopify admin. Analytics and finance reports are kept in the same Shopify business admin. [L0934.015]</li>
+<li>Shopify Payments is the preferred processor. Linking a third-party merchant account is possible but not recommended. [L0934.016, L1111.181]</li>
+<li>Use Shopify Payments whenever possible. Third-party processors add Shopify transaction fees on top of their own fees. [L0470.043, L0805.034]</li>
+<li>Setup needs only bank account details and takes about five minutes. [L1111.181]</li>
+<li>Setup is configured under the Shopify settings area and takes only a few minutes. [L0836.004]</li>
+<li>The bank details needed are the bank account number, routing number and checking account number. After setup, the processor accepts credit cards from customers worldwide and deposits the sales into the bank account. [L0759.010]</li>
+</ul>
+<h2 id="country-availability-and-eligibility">Country Availability and Eligibility</h2>
+<ul>
+<li>Shopify Payments is available in specific countries only. [L0272.046]</li>
+<li><em>Older list, 2019:</em> Merchants in Australia, Canada, Denmark, Germany, Hong Kong, Ireland, Japan, the Netherlands, New Zealand, Singapore, Spain, the UK and the US could use Shopify Payments. Businesses elsewhere were told to use Stripe. [L0357.048]</li>
+<li><em>Listed in another lesson:</em> Shopify Payments is available in the USA, Canada, Australia, Germany and the UK. In countries where it is not available, Shopify offers other payment options. [L0759.009]</li>
+<li>Shopify Payments works in dozens of countries, so banking limitations do not automatically block the store. Check the country's availability before choosing another solution. [L0967.064]</li>
+<li>The Netherlands is an available country. A Dutch company with a Dutch bank account can use Shopify Payments to accept payments from customers anywhere in the world. [L1088.082]</li>
+<li>Availability may depend on the account's country of residence. If it is not available, PayPal can be added as a second payment option. [L0855.127]</li>
+<li>Shopify Payments is not always available to every seller, so check access before planning around it. [L1158.051]</li>
+<li>Where Shopify Payments is not available, such as Mexico at the time of the lesson, use a payment gateway from the country's provider list. Switch to Shopify Payments once it is available there. [L0469.044]</li>
+<li>If Shopify Payments is not available and 2Checkout cannot be used, connect the main local payment processor to Shopify, because Shopify integrates with almost any processor. Check the local processor's Shopify integration before signing up. [L0359.113]</li>
+<li>Shopify integrates with over 100 payment processors. [L1088.084]</li>
+<li>Stripe acceptance can differ by country. Stripe India showed lower acceptance and some banks blocked transactions, which led one seller to move to a company abroad. [L1512.019]</li>
+<li>Before launching in a new country, enter the shipping details for that country in checkout and confirm that the payment providers work there. A checkout that fails for one target country loses sales before any ads are paid for. [L0661.054]</li>
+</ul>
+<h2 id="choosing-a-payment-option">Choosing a Payment Option</h2>
+<ul>
+<li><p>A payment gateway (payment processor) accepts card payments on an online store and forwards the funds to the seller's bank account. Reliable access to one is the basic requirement for receiving store revenue. [L1512.002]</p></li>
+<li><p>Procedure to choose payment options for a store:</p>
+<ol type="1">
+<li>Check which payment options are available in your country at shopify.com/payment-gateways.</li>
+<li>If Shopify Payments is available, start with it.</li>
+<li>If not, check Stripe as the alternative.</li>
+<li>Add PayPal (it needs a business account once business transactions begin, with company details and fulfillment method).</li>
+<li>If no suitable gateway is available at home, form a company in a country that offers them, such as the US or Hong Kong.</li>
+</ol>
+<p>[L1512.003]</p></li>
+<li><p>For beginners, use Shopify Payments if it is available, because it avoids most chargebacks and saves 1 to 2 percent in fees. [L1158.036]</p></li>
+<li><p>With Shopify Payments in a country where it is available, a store can often test products and scale to about 1,000 to 15,000 USD in monthly sales without a large company setup. Starting out, the US owner's social security number is usually enough to open it. [L1512.008]</p></li>
+<li><p>Enable Shopify Payments where it is available. Stripe and PayPal are the other common and trusted processors, and Shopify displays the methods supported by the processor you connect. [L1377.046]</p></li>
+<li><p>Alternatives when Shopify Payments is unavailable include Skrill, which is common in some Asian and African countries, plus Amazon Pay and Airwallex. Amazon Pay and Airwallex require creating an account on their websites and connecting their API to Shopify. [L1512.015]</p></li>
+</ul>
+<h2 id="activating-shopify-payments">Activating Shopify Payments</h2>
+<ul>
+<li><p>Under Settings &gt; Payments, click the button labeled Activate Shopify Payments. [L0096.007, L1306.010]</p></li>
+<li><p>Procedure to prepare the store before activation:</p>
+<ol type="1">
+<li>Open Settings (gear icon, bottom-left corner).</li>
+<li>Open Store details and review the fields (store name, store email, store phone) so you know where to edit them later, without changing email or phone yet.</li>
+<li>Go to Settings &gt; Payments and click Activate Shopify Payments.</li>
+<li>Choose Shopify Balance as the deposit destination for the initial payouts.</li>
+<li>Leave all other settings at their defaults.</li>
+</ol>
+<p>[L0096.009]</p></li>
+<li><p>Procedure for activating Shopify Payments through Shopify Balance:</p>
+<ol type="1">
+<li>Open Settings with the gear icon at the bottom left.</li>
+<li>Click Payments.</li>
+<li>Click Activate Shopify Payments.</li>
+<li>Answer the setup questions about where the money should go.</li>
+<li>Select a Shopify Balance account as the destination so payments land there instantly.</li>
+<li>Withdraw funds from the Shopify Balance account to your bank account.</li>
+</ol>
+<p>[L1306.011]</p></li>
+<li><p>Shopify Payments is set up inside Shopify so customers can pay by credit card, debit card or Apple Pay, and the money is paid out directly to the seller's bank account. [L1304.004]</p></li>
+<li><p>Of all the settings covered, activating Shopify Payments is the one that must be completed before the store is ready to take orders. [L1306.024]</p></li>
+<li><p>The billing address in Store details must match the address linked to the card on file with Shopify, since it is the account's billing address. [L1306.004]</p></li>
+<li><p>Create a separate Shopify Payments account for each store through the payment integration, rather than linking one Stripe account directly. Shopify Payments is powered by Stripe. [L0852.095]</p></li>
+<li><p>Each Shopify store needs its own Shopify account. Several accounts can share one login email using single sign-on, but one merchant account number cannot be used across several websites. [L0934.136]</p></li>
+</ul>
+<h3 id="example-activation-in-australia-older-2021-22">Example: Activation in Australia (older, 2021-22)</h3>
+<ul>
+<li><p>Shopify Payments in Australia costs 1.75% plus $0.30 per card transaction. Other third-party payment gateways typically charge 2% per transaction. [L0677.010]</p></li>
+<li><p>Shopify Payments in Australia accepts major credit cards, Shop Pay, Apple Pay and Google Pay. After activation, the Payments screen shows the last two digits of the connected payout bank account. [L0677.012]</p></li>
+<li><p>Procedure to activate Shopify Payments in Australia:</p>
+<ol type="1">
+<li>Go to Settings &gt; Payments.</li>
+<li>Click Activate Shopify Payments.</li>
+<li>Enter your bank account details (account numbers differ by country).</li>
+<li>Enter information about the products you will sell.</li>
+<li>Enter personal details and legal business name.</li>
+<li>Enter your business number (ABN in Australia, a federal number such as the EIN in the US).</li>
+<li>Submit and wait for Shopify to review the account.</li>
+</ol>
+<p>[L0677.011]</p></li>
+<li><p>Bank account fields for Shopify Payments and PayPal differ by country because banking systems are structured differently. Fill in the fields the local form asks for, using the business bank account. [L0677.044]</p></li>
+</ul>
+<h2 id="setup-order-and-first-day-readiness">Setup Order and First-Day Readiness</h2>
+<ul>
+<li>Set up your payment processors as part of the initial store build, so orders can be taken from the first day the store opens. <em>Older advice, 2021.</em> [L0801.142]</li>
+<li>Open the business bank account before connecting checkout payments during the store build, because the gateway setup needs it. Payment gateways that take customer checkout payments must be linked to a business bank account, which receives the sales money. <em>Older advice, 2021-22.</em> [L0702.029]</li>
+<li>Checkout is not usable until at least one payment gateway is connected. The recommended pair is Shopify Payments and PayPal. <em>Older advice, 2021-22.</em> [L1145.004]</li>
+<li>Payment setup is the first gate to launch. A merchant account is the intermediary that accepts card payments and forwards the money to the seller's bank account. Shopify Payments works with any bank and can be used without opening a separate merchant account at first. [L0697.004]</li>
+</ul>
+<h2 id="identity-address-and-account-verification">Identity, Address and Account Verification</h2>
+<ul>
+<li>Shopify Payments can be applied for in the payment section of the Shopify admin and is usually approved right away. Shopify can check credit, and if volume grows it may ask for identity verification such as a driver license or passport photo. Account reserves are uncommon. <em>Older advice, 2021.</em> [L0968.027]</li>
+<li>Shopify or Stripe may ask for further identification at any time after activation, even months later. Provide the requested documents, and the account will be reviewed and activated. <em>Older advice, 2021-22.</em> [L0677.013]</li>
+<li>Both companies review new accounts because anyone can open a Shopify store. The review aims to confirm the owner is a legitimate business that will deliver orders. <em>Older advice, 2021-22.</em> [L0677.040]</li>
+<li>If Shopify Payments places the account on standby for identity checks, make sure the name on the account matches the name on the ID, including any middle name. Update the account and reply to the verification request. <em>Older advice, 2020.</em> [L1111.143]</li>
+<li>Processors ask for company documents mainly because a business that receives large amounts of money is treated as higher risk. Shopify Payments usually does not ask for a company until volumes become high. [L1512.010]</li>
+<li>Without proof of address, a seller cannot open Shopify Payments, so Stripe may be the only processor available. In one case, the seller had PayPal restrict the account and Stripe was used instead. [L1127.007]</li>
+<li>Stripe needs a tax number for the business owner or company during account approval, and every platform asks for the same tax number. Have the EIN and tax residency documents ready before applying. [L1127.008]</li>
+</ul>
+<h2 id="payout-destination-and-schedule">Payout Destination and Schedule</h2>
+<ul>
+<li>The deposit destination can be set to the Shopify Balance account or to a bank account. [L0096.008]</li>
+<li>Shopify Balance is recommended for the first payouts because funds are instantly accessible and can be transferred to a bank later. [L0096.008, L1306.012]</li>
+<li>Shopify Balance receives customer payments instantly, and money is then withdrawn to a bank account. For beginners this payout route is recommended over a direct bank payout. [L1306.012]</li>
+<li>The payout destination can be changed at any time. [L0096.008, L1306.013]</li>
+<li>Shopify Payments can be set to pay out directly to your own bank account, instead of through a third-party processor. The lesson's store uses Shopify Payments only and no third-party gateway for payouts. [L1327.015]</li>
+<li>Shopify Payments deposits into the bank account linked in Shopify. You then pay each supplier yourself from that money. <em>Older advice, 2020.</em> [L1277.108]</li>
+</ul>
+<h3 id="payout-timing-by-source">Payout timing by source</h3>
+<p>Sources give different timings. Each applies to the period it describes:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Timing stated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019 lesson</td>
+<td>Usually about 48 hours; can take longer over holidays [L1110.041]</td>
+</tr>
+<tr>
+<td>2020 lesson</td>
+<td>48 hours, shorter with more established accounts; eventually 24-hour deposits [L0268.048]</td>
+</tr>
+<tr>
+<td>2021 lesson</td>
+<td>About 48 hours after the order [L0247.112]</td>
+</tr>
+<tr>
+<td>2022 lesson</td>
+<td>Within 2 business days of order placement [L0249.071]</td>
+</tr>
+<tr>
+<td>2023 lesson</td>
+<td>Typically within 48 hours; expected timing shown when the account is opened [L1283.053]</td>
+</tr>
+<tr>
+<td>2024 lessons</td>
+<td>Within 48 to 72 hours [L0253.013]; typically within 48 hours of an order [L0360.067]</td>
+</tr>
+<tr>
+<td>Source D 2026</td>
+<td>New accounts start at 21 days after the sale [L1327.016]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><em>Older advice, 2021-22:</em> A payout schedule of 2 business days from order placement means no upfront capital is required. [L0249.071]</li>
+<li>Plan cash flow around the 48-hour delay. [L0247.112]</li>
+<li>PayPal payouts typically arrive about one day after withdrawal. [L1283.053]</li>
+<li>A longer hold, such as a seven-day hold, typically signals previous chargebacks or a high-risk account. <em>Older advice, 2019.</em> [L1110.041]</li>
+<li>Payout progression for a new account: payouts start at 21 days after the sale, then move to 14 days, 7 days, 5 days, 3 days and finally daily payouts as the store fulfills orders consistently. A new Shopify account is at the 21-day stage first. [L1327.016]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Payout stage</th>
+<th>Days after the sale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start (new account)</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Step 2</td>
+<td>14</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Step 4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Step 5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>Daily [L1327.016]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Withdrawal limits on Shopify can be raised by asking Shopify support to increase the daily payout limit. At a larger scale, get a proper business bank account to avoid cash flow problems. [L1469.042]</li>
+<li>Amazon payouts go to the seller's bank account every two weeks, and they can go to any bank account in a supported country. Plan cash flow around this two-week cycle when reinvesting in inventory. [L1153.076]</li>
+<li>Payouts from the store are converted to the payout account currency. Example: the payout account shows in SGD while the store currency is USD. [L0351.031]</li>
+</ul>
+<h2 id="fees-and-plan-comparison">Fees and Plan Comparison</h2>
+<h3 id="shopify-payments-rates-by-plan">Shopify Payments rates by plan</h3>
+<p>Credit card rates by plan, as shown in the lesson:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Monthly price</th>
+<th>Credit card rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic</td>
+<td>not stated</td>
+<td>2.9% plus 30 cents per transaction</td>
+</tr>
+<tr>
+<td>Mid plan</td>
+<td>105 USD</td>
+<td>2.6%</td>
+</tr>
+<tr>
+<td>Advanced</td>
+<td>400 USD</td>
+<td>2.4%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The rate depends on the plan, not on order size. [L0470.041]</p>
+<ul>
+<li>To decide whether a higher Shopify plan pays off, compare the rate saving on your card sales with the monthly plan cost. For example, saving 0.5% on sales must exceed the extra monthly plan fee. [L0470.042]</li>
+<li>The Shopify Payments processing rate can be improved by upgrading the Shopify plan. [L0351.030]</li>
+</ul>
+<h3 id="regional-rates">Regional rates</h3>
+<ul>
+<li>Singapore-based store, Shopify Basic plan, as shown in the lesson: 3.2% plus S$0.50 per online transaction and 3% plus S$0.50 per in-person transaction. The Basic plan was shown at S$348 per year, with a monthly option. These are the starting baseline for a Singapore setup. [L1327.010]</li>
+<li>Shopify Payments in Australia: 1.75% plus $0.30 per card transaction; other third-party gateways typically 2%. <em>Older advice, 2021-22.</em> [L0677.010]</li>
+<li>Typical payment processor fees for new sellers are 2.9% plus $0.30 per transaction. Processors such as Stripe, Shopify Pay and PayPal charge these fees on card payments. <em>Older advice, 2021-22.</em> [L1148.013]</li>
+<li>Stripe has no account fee but takes about 2% of each transaction, so a 40 dollar sale can lose roughly 2 to 3 dollars before payout. [L0678.041]</li>
+<li>High-volume and high-risk rates are covered in the section on higher-risk processors below. [L0363.065]</li>
+</ul>
+<h3 id="fees-when-shopify-payments-is-not-used">Fees when Shopify Payments is not used</h3>
+<ul>
+<li><em>Older advice, 2021:</em> Shopify charges a 2 percent transaction fee on the Basic plan when Shopify Payments is not used. [L0469.055]</li>
+<li>Source C: if Shopify Payments is not used, a fee of about 1 percent, 1.5 percent or 2 percent applies on the basic Shopify plan, on top of the processor's own fees. [L1158.038]</li>
+</ul>
+<h3 id="calculator-and-checks">Calculator and checks</h3>
+<ul>
+<li>Check the gateway formula in the calculator against the payment rate your Shopify Payments account shows, which the example sets at 5.5% of the order price plus $0.30. Change the formula if your rate differs, because the gateway fee is the largest variable cost after COGS on a low-priced product. [L0986.017]</li>
+<li>Use the net payout in the finance sheet, not the gross order value. [L0678.041]</li>
+<li>Worked example (older advice, 2021-22): a PayPal fee on a 500 order at 2.9% plus a 0.30 static fee: 500 × 2.9% = 14.50, plus 0.30 gives a processor fee of 14.80. Use this same method to check any processor fee before entering it. [L1201.025]</li>
+<li>For a store that sells in one market only, the Shopify Markets fee input should stay at zero. A store that uses Markets must weight the Markets fee by the share of total revenue that comes from Markets orders, not apply the full fee rate to all orders. [L0433.017]</li>
+</ul>
+<h2 id="plan-costs-and-billing">Plan Costs and Billing</h2>
+<ul>
+<li>Shopify Settings &gt; Billing shows the upcoming bill, which is issued at the threshold (example: S$260) or at the end of the billing cycle, whichever comes first. [L0351.030]</li>
+<li>Settings &gt; Plan: check the plan, the card rates and the billing cycle. Shopify bills the store in cycles and charges for apps and usage on the same account, so app costs must be counted with the plan. [L1327.012]</li>
+<li>Shopify bills app charges and usage-based fees such as transaction fees on the store account at the end of the billing cycle, or earlier once a usage threshold is reached. The Billing page shows the next bill date and the amount due, so check it before installing paid apps. [L1327.066]</li>
+</ul>
+<h2 id="payment-capture">Payment Capture</h2>
+<ul>
+<li><p>Procedure to activate payments and test the checkout, in this order:</p>
+<ol type="1">
+<li>Go to Settings &gt; Payments and click Activate Shopify Payments.</li>
+<li>Choose the payment capture method. Payments were authorized when an order is placed and captured Automatically at checkout in the example.</li>
+<li>Open the preview of your checkout and check that products, prices and countries display correctly.</li>
+<li>Once Shopify Payments is active, run a test checkout from the test option that appears.</li>
+</ol>
+<p>[L1167.025]</p></li>
+</ul>
+<h2 id="stripe-terms-scaling-and-account-rules">Stripe: Terms, Scaling and Account Rules</h2>
+<ul>
+<li>Stripe allows fast-shipping dropshipping (orders arrive in 1-3 weeks) but does not allow slow-shipping dropshipping from overseas (orders take weeks, high chargeback rates). Dropshipping from US suppliers with fast delivery fits Stripe's terms. <em>Older advice, 2022.</em> [L0272.060]</li>
+<li>Stripe may close accounts it classes as high risk, and drop-shipping from China is one reason. Check the provider's risk policy before building a store around a payment processor. <em>Older advice, 2021.</em> [L0469.045]</li>
+<li>A Stripe account connected to a business bank account does not require a store URL linked to the LLC or a company web page. An LLC does not need its own website to set up Stripe. [L0808.044]</li>
+<li>You can only use one payment processor at a time. Shopify Payments is built on Stripe, so you cannot enable Shopify Payments and a separate Stripe account together. [L1158.035]</li>
+<li>Shopify Payments can cause problems once monthly revenue reaches about 20,000 to 30,000 dollars, or up to 50,000 to 60,000 per month, due to chargebacks. Stripe is preferred for scaling stores because it offers more payment features. [L1158.037]</li>
+<li>Once a store scales at high volume, consider Stripe or another processor for better features. [L1158.036]</li>
+<li>Stripe runs on the same infrastructure as Shopify Payments. If a processor stops supporting a store, check with the bank whether it is due to the industry. <em>Older advice, 2020.</em> [L1088.084]</li>
+</ul>
+<h2 id="merchant-accounts-and-gateways">Merchant Accounts and Gateways</h2>
+<ul>
+<li>A merchant account is the intermediary that accepts customer card payments (credit or debit) and forwards the money to the seller's bank account. [L0697.004]</li>
+<li>Authorize.net is only a gateway, so it needs a separate merchant account at a bank or processor to deposit your money. Start with Shopify Payments. <em>Older advice, 2021.</em> [L0671.075, L0671.212]</li>
+<li>When applying for a merchant account, state a realistic expected monthly volume, for example between $5,000 and $10,000. Very high numbers look like more risk to the processor, and the volume can grow over time. <em>Older advice, 2021.</em> [L0671.076, L0671.213]</li>
+<li>If Shopify Payments is not available, open a merchant account directly with your own bank and connect it to Shopify, either through a direct integration or a gateway such as authorized.net. Third-party processors such as Checkout.com that integrate with Shopify are a faster alternative. <em>Older advice, 2021.</em> [L0968.028]</li>
+<li>Linking a third-party merchant account to Shopify is possible but not recommended. Shopify Payments is the preferred processor. [L0934.016]</li>
+<li>Shopify Payments has strict terms for supplements, so sellers of such products may need a third-party merchant account instead. <em>Older advice, 2022.</em> [L1113.044]</li>
+<li><em>Older advice, 2019:</em> Shopify can work with other payment processors, but PayPal Payments Pro is not recommended. You can instead open a merchant account through your bank and compare terms and rates; keeping Shopify Payments is simpler. [L1110.043]</li>
+</ul>
+<h2 id="other-payment-methods-and-processors">Other Payment Methods and Processors</h2>
+<ul>
+<li>Settings &gt; Payments has a Manual payment methods section for payments taken outside the online store. Orders paid this way must be approved before they are fulfilled. <em>Older advice, 2021-22.</em> [L0677.042]</li>
+<li>Settings &gt; Payments also lists Third-party providers, which charge the provider's own rate, and Alternative payment methods, which can be added on top of Shopify Payments or a third-party provider. <em>Older advice, 2021-22.</em> [L0677.043]</li>
+<li>Settings &gt; Payments shows a "See all other providers" option for using a payment provider other than Shopify Payments. Shopify Payments is still required to manage each market's base currency and to offer local currency checkout, so a different provider means giving those up. [L1167.041]</li>
+<li>PayPal needs a business account once business transactions begin, with company details and fulfillment method. [L1512.003]</li>
+</ul>
+<h2 id="higher-risk-processors-and-restricted-products">Higher-Risk Processors and Restricted Products</h2>
+<ul>
+<li>High-volume payment processing needs a higher-risk payment provider when sales spike suddenly, since PayPal and Stripe may freeze funds. Authorized.net was cited as a high-risk processor, charging about 5-6%. [L0363.065]</li>
+<li>Payment processors may place a store under a standby review. Keep identity documents ready, because the review can occur at any time. [L0677.013]</li>
+<li>Stripe may close accounts it classes as high risk, and drop-shipping from China is one reason. Check the provider's risk policy before building a store around a payment processor. <em>Older advice, 2021.</em> [L0469.045]</li>
+<li>Shopify Payments has strict terms for supplements, so sellers of such products may need a third-party merchant account instead. <em>Older advice, 2022.</em> [L1113.044]</li>
+</ul>
+<h2 id="checkout-trust-signals">Checkout Trust Signals</h2>
+<ul>
+<li>Anxiety-reducing payment and checkout signals: a 'secure checkout' label on the button, secure payment logos, and a note that transactions are encrypted and protected. These reassure the buyer that they will not be scammed. [L0919.027]</li>
+</ul>
+<h2 id="shopify-markets-currency-and-local-pricing">Shopify Markets, Currency and Local Pricing</h2>
+<ul>
+<li>Shopify Markets requires Shopify Payments, so a store that only uses Stripe cannot set up markets and must price everything in one currency, such as USD. Check the payment setup before planning multi-market selling. [L0694.025]</li>
+<li>Local pricing shows customers prices in their local currency and requires Shopify Payments to be active. Without Shopify Payments, you cannot manage the base currency for a market. [L1167.028]</li>
+<li>Set the store currency in Settings to match the target market. Without Shopify Payments (for example, when using Stripe), customers see only the store currency, such as USD. With Shopify Payments, customers can check out in local currencies. Use USD only for USD-targeted markets. [L1260.047]</li>
+<li>Set the store currency inside Shopify to your local currency, such as pounds for a UK seller. Shopify Payments converts currency automatically for worldwide sales. <em>Older advice, 2020.</em> [L0852.096]</li>
+<li>If Shopify Payments is not available and another gateway such as Stripe is used, checkout may show only the store currency, for example USD. Shopify Payments lets customers pay in their local currency. [L1345.066]</li>
+<li>Use the local currency of each target market. Use USD only when the store targets USD markets. [L1345.067]</li>
+</ul>
+<h3 id="procedure-check-markets-before-sending-traffic">Procedure: check markets before sending traffic</h3>
+<ol type="1">
+<li>Go to Settings &gt; Markets.</li>
+<li>Check which countries are active, for example United States, Canada, Australia, and United Kingdom.</li>
+<li>Activate every target country that is inactive.</li>
+<li>Place a test order with a random address in each target country to confirm checkout works.</li>
+</ol>
+<p>[L1345.064]</p>
+<h3 id="case-inactive-markets-blocked-sales">Case: inactive markets blocked sales</h3>
+<ul>
+<li>Starting point: a newly created store had traffic and a high add-to-cart rate but almost no sales. Cause: only the primary market was active, and other countries were inactive, so buyers from them could not complete checkout. Result: roughly 100 to 200 sales were lost within one hour before the market was activated. [L1345.065]</li>
+</ul>
+<h2 id="test-mode-and-test-checkouts">Test Mode and Test Checkouts</h2>
+<ul>
+<li><p>If Shopify Payments is already set up, put Shopify Payments into test mode using Shopify's own guide before placing a test order, so the test runs through the payment system without charging a real customer. [L1302.003]</p></li>
+<li><p>Settings &gt; Payments &gt; Shopify Payments &gt; Test mode: switch it on to place a test order and see how payments and orders flow through the store before launch. [L1327.065]</p></li>
+<li><p>To test payment providers cheaply, create a 95% discount code, then complete a real checkout using PayPal, Shopify Payments and Stripe (or the other providers in use). [L0773.008]</p></li>
+<li><p>Procedure after changing the store currency or payment setup:</p>
+<ol type="1">
+<li>Make a test purchase yourself.</li>
+<li>Check that no error message appears at checkout.</li>
+<li>Repeat the test after provider updates, because payment providers sometimes need updates that break checkout.</li>
+</ol>
+<p>[L1185.021]</p></li>
+</ul>
+<h2 id="fixing-a-payment-error-that-blocks-checkout">Fixing a Payment Error That Blocks Checkout</h2>
+<ul>
+<li><p>Procedure for a payment error that blocks checkout:</p>
+<ol type="1">
+<li>Check the Shopify orders to confirm customers add their details but fail to pay.</li>
+<li>Deactivate the payment provider in Shopify.</li>
+<li>Reactivate the payment provider.</li>
+<li>Create a 95% or 99% discount code and place a test order yourself to confirm checkout works.</li>
+</ol>
+<p>[L1216.010]</p></li>
+<li><p>Uninstalling and reinstalling a broken payment provider app can fix setup errors. [L0773.008]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../18-legal-tax-banking-and-payments/11-funding-cash-flow-and-financing-the-business/"><span class="k">&larr; Previous</span><span class="v">Funding, cash flow and financing the business</span></a><a class="nx" href="../../18-legal-tax-banking-and-payments/13-payment-methods-paypal-financing-and-local-options/"><span class="k">Next &rarr;</span><span class="v">Payment methods, PayPal, financing and local options</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

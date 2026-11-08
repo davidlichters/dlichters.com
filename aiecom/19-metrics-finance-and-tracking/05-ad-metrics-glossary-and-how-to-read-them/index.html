@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ad metrics glossary and how to read them | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.5: Ad metrics glossary and how to read them.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/05-ad-metrics-glossary-and-how-to-read-them/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Ad metrics glossary and how to read them | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.5: Ad metrics glossary and how to read them."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/05-ad-metrics-glossary-and-how-to-read-them/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/05-ad-metrics-glossary-and-how-to-read-them/">Plain version</a></div><h1>19.5 Ad metrics glossary and how to read them</h1><article><h2 id="delivery-impressions-reach-frequency-and-cpm">Delivery: impressions, reach, frequency and CPM</h2>
+<ul>
+<li><strong>Reach</strong> is the total number of unique people who have seen the ad. <strong>Impressions</strong> is the total number of times the ad was shown, so one person seeing it twice counts as two impressions. [L0290.018]</li>
+<li>Impressions count every display, including several to the same person across placements such as Facebook and Instagram. Reach counts only unique Meta accounts, so four impressions to one person equal one reach. [L1024.028]</li>
+<li><strong>Frequency = Impressions ÷ Reach</strong>, showing how many times the average person saw the ad. A value of 1.2 means each person saw the ad about 1.2 times on average. [L0290.018, L0950.021]
+<ul>
+<li>Example: 2,017,463 ÷ 862,845 = 2.34. [L0797.023]</li>
+</ul></li>
+<li>Frequency checks:
+<ul>
+<li>A frequency above 2 means the same ad is shown too often and may tire. Watch it closely, especially with image ads that are cheap per click and served repeatedly. [L0950.020]</li>
+<li>In longer-running campaigns, frequency normally rises from about 2.5 to about 4. The expected range depends on how long the ad has been live. [L1030.005]</li>
+<li>Top-of-funnel frequency is about 1.03 to 1.2. Low frequency does not rule out fatigue. [L0398.041]</li>
+<li>Reading the two figures together: treat 2 as the point to check the ad. In a campaign that has run for a while, a frequency of 2.5 to 4 is normal drift, so judge it against campaign age. [L0950.020, L1030.005]</li>
+</ul></li>
+<li><strong>CPM (cost per thousand impressions)</strong> is what you pay for 1,000 ad impressions across all placements. It is your cost of advertising. [L0290.019, L1024.027]
+<ul>
+<li>Formula: CPM = (ad spend ÷ impressions) × 1,000. [L0874.007, L1021.002, L1259.059]</li>
+<li>Example: $50 spent over 1,500 impressions gives a CPM of about $33.33. [L0874.007]</li>
+<li>Facebook formula: CPM = amount spent ÷ impressions × 1,000, the cost paid for 1,000 impressions across Meta placements. [L1024.027]</li>
+<li>Cost of impressions = (impressions ÷ 1,000) × CPM. Example: 500,000 impressions at a $15 CPM cost $7,500. The lesson's figure of about $33,000 for the same case is an arithmetic error. [L0871.032]</li>
+<li>CPM means cost per mille, the cost to show the ad to 1,000 people. It counts impressions, not clicks or engagement. It appears as a column in Meta Business Manager. [L1407.022]</li>
+<li>CPM is set by the auction. Better ad rankings can lower it, so the creative is the main lever for cost. [L0638.043]</li>
+</ul></li>
+</ul>
+<h2 id="clicks-ctr-and-cpc">Clicks: CTR and CPC</h2>
+<h3 id="ctr-click-through-rate">CTR (click-through rate)</h3>
+<ul>
+<li><strong>Formula:</strong> CTR = clicks ÷ impressions × 100, as a percentage. [L0327.001, L0874.009, L0968.070, L0808.057, L1021.003, L1024.035, L1271.011]
+<ul>
+<li>Examples: 5 clicks from 100 impressions = 5% CTR. [L0327.001]</li>
+<li>100 link clicks over 1,000 impressions = 10%. [L0874.009]</li>
+<li>2 clicks from 100 viewers = 2%, meaning 2 people out of 100 impressions clicked through to the website. [L1021.003, L1024.035]</li>
+<li>Older (2021): 100 clicks from 1,000 impressions = 10%, and raising it to 12% is the optimisation goal. [L0968.070]</li>
+</ul></li>
+<li><strong>Google Search organic CTR:</strong> Impressions are how often the store appeared in organic search results, and clicks are how often people then clicked through. Both are shown in Google Search Console &gt; Performance. [L1271.011]</li>
+<li><strong>Link clicks vs. all clicks:</strong> Use link clicks, not all clicks, when calculating Facebook CTR and CPC, because link clicks show people who went through to the store. [L1220.041] Ads Manager can also show a CTR (all) figure that counts all clicks. Confirm you are reading the link-click version before comparing against the 3% to 7% benchmark. [L0874.019]</li>
+<li><strong>Unique metrics:</strong> Unique metrics count each person once. Repeated clicks by one person count as one unique click. Non-unique clicks count every click. Use unique CTR and unique clicks for analysis. [L0640.005]</li>
+<li><strong>Facebook CTR variants:</strong>
+<ul>
+<li>CTR (all) measures attention, meaning how many people noticed the ad. Unique Outbound CTR measures interest, meaning how many different people clicked. [L0258.021]</li>
+<li>Outbound Unique CTR is the main CTR metric, since it counts unique clicks that send users to the website through the call-to-action. [L0639.009]</li>
+<li>Use the unique link click-through rate, not the standard CTR, when judging Facebook ads. [L0502.036]</li>
+</ul></li>
+<li><strong>Scope in Google Ads:</strong> CTR can be measured at account, campaign, ad group, ad, keyword, PLA (Product Listing Ads) or search term level, and across different time periods. [L0327.002]</li>
+<li><strong>Data sufficiency:</strong> CTR analysis needs enough data. If an ad has run for one day with minimal impressions, extend the analysis period. [L0327.003]</li>
+<li><strong>Variation:</strong> CTR varies by ad type and keyword position. Top-of-funnel keywords have different CTRs from bottom-of-funnel keywords. Search ads have different CTRs from PLAs, display ads or YouTube ads. [L0327.006]</li>
+<li><strong>Cold traffic:</strong> Link clicks, CTR and CPC are top-of-funnel metrics, measured before the click. They show how cold prospects who have never seen the product react to the ad. [L1024.034]</li>
+<li><strong>Early test signal:</strong> A CTR of 2% to 3% held over 7 to 10 days shows the hook is working. It does not prove the offer converts. [L0524.064]</li>
+<li><strong>Lead generation ads (older, 2021 to 2022):</strong> Lead generation ads are expected to reach very high CTRs compared with competitor product ads on the same term, because the unusual angle makes them stand out. [L0922.021]</li>
+</ul>
+<h3 id="cpc-cost-per-click">CPC (cost per click)</h3>
+<ul>
+<li><strong>Formula:</strong> CPC = ad spend ÷ link clicks. [L0874.004, L1021.004, L1220.040, L0808.056]
+<ul>
+<li>Examples: $50 spent with 100 clicks = $0.50. $50 with 25 clicks = $2.00. [L0874.004]</li>
+<li>$8.92 for six clicks = about $1.49 per click. [L0874.006]</li>
+<li>$50 spent with 25 link clicks = $2.00, above the 1 USD target, meaning the CTR is too low and the ads need to change. [L1220.035]</li>
+<li>Average CPC = total ad spend ÷ total clicks. Example: $330 over 430 clicks = about $0.77. [L0808.056]</li>
+</ul></li>
+<li><strong>Formula through CPM and CTR:</strong> CPC = CPM ÷ (1,000 × CTR as a fraction). [L0774.030, L1024.036, L1259.004, L1260.003, L1375.014]
+<ul>
+<li>CPC = CPM ÷ (1,000 × CTR). Example: CPM of $20 and CTR of 1.5% gives about $1.33. A low CPM does not guarantee a low CPC when the CTR is low, so use this formula to find the source of a high CPC. [L0774.030]</li>
+<li>CPM of $10 and CTR of 2% gives 20 clicks per 1,000 impressions, so each click costs $0.50. [L1024.036]</li>
+<li>CPM of $30 and CTR of 2% gives 1,000 impressions, 20 clicks and a CPC of $1.50. [L1259.004, L1260.003]</li>
+<li>CPM of $10 and CTR of 1.5% gives a CPC of about $0.67. A CPC below $1 alone does not guarantee the 1.5% CTR target. [L1375.014]</li>
+</ul></li>
+<li><strong>Worked check:</strong> At a CPM of $10, $50 of spend gives about 5,000 impressions. If 25 link clicks come from them, the CTR is 0.5%, below the 1.5% target, and the CPC is $2, above the 1 USD limit. [L1220.040]</li>
+<li><strong>CPC is an outcome of CPM and CTR.</strong> A rising CPC can come from a higher CPM (costlier placements) or a lower CTR (a weaker ad). Diagnose which one drives it. [L1024.037, L0502.037]
+<ul>
+<li>A high CPM means fewer impressions and fewer people reached. A low CTR makes the CPC high because few people click. Judge them together. [L0502.037]</li>
+<li>A high CTR with a high CPM can still produce a high CPC. [L0773.003]</li>
+<li>A high CPM can still produce a low CPC when CTR is strong. [L1259.059]</li>
+</ul></li>
+<li><strong>CPC on its own:</strong> Treat a CPC above 1 USD alone as no clear sign, since sales and return on ad spend matter more. [L0502.037]</li>
+<li><strong>Google Ads CPC:</strong> Quality Score work is not about the lowest CPC. Relevance raises Quality Score, which can lower CPC. See the Google Ads section. [L0220.002, L0510.058]</li>
+</ul>
+<h2 id="video-attention-hook-rate-hold-rate-and-retention">Video attention: hook rate, hold rate and retention</h2>
+<h3 id="definitions">Definitions</h3>
+<ul>
+<li><strong>Hook rate (3-second version)</strong> = 3-second video plays ÷ impressions × 100. It is the share of impressions that watched past the first three seconds. [L0398.042, L1024.030]
+<ul>
+<li>It measures how well the first 3 to 5 seconds stop the scroll and grab attention. [L1024.030]</li>
+<li>Video attention rate is the same calculation: (3-second video plays ÷ impressions) × 100. It shows what share of impressions watched the first three seconds of a video ad. [L0644.001, L1426.007]</li>
+<li>Hook rate applies to video ads only, not to static images. [L0640.002]</li>
+</ul></li>
+<li><strong>Hold rate</strong> = ThruPlays ÷ impressions × 100. ThruPlays are plays of at least 15 seconds or plays that reached the end. [L0398.042]
+<ul>
+<li>Through-plays are views beyond 15 seconds, so the metric shows how well the video keeps viewers after the hook. [L1024.032]</li>
+<li>Use hook rate and hold rate together to judge the hook and the body of a video. [L0398.042]</li>
+<li><strong>Conflicting definition:</strong> Hold rate is also described as the share of people who watch the video up to 50% of its length. [L0640.004] Check which definition your report uses.</li>
+<li>Hold rate is only meaningful with large traffic. Longer videos naturally show lower hold rates than short ones, for example 15 seconds against one minute. [L0640.004]</li>
+</ul></li>
+<li><strong>Hook and hold together:</strong> Hook rate measures how well the first seconds stop viewers. Hold rate measures how long they keep watching. Read them with CTR and CPM. [L1213.017]</li>
+<li><strong>Main test metric:</strong> Hook rate is the main metric for hook performance in a creative test. Compare it across the hook variations to find the winner, then check hold rate for how long viewers keep watching. [L0902.023]</li>
+<li><strong>Retention in steps (analysis framework):</strong>
+<ul>
+<li>Hook rate (25% version) = 25% plays ÷ impressions. [L0613.049]</li>
+<li>Retention 25 to 50% = 50% plays ÷ 25% plays. [L0613.049]</li>
+<li>Retention 50 to 75% = 75% plays ÷ 50% plays. [L0613.049]</li>
+<li>Retention 75 to 100% = 100% plays ÷ 75% plays. [L0613.049]</li>
+<li>Completion rate = 100% plays ÷ impressions. [L0613.049]</li>
+<li><strong>Conflicting hook definition:</strong> The framework defines hook as 25% plays, while the other units use the 3-second version. Name the definition you use. [L0613.049, L0398.042]</li>
+</ul></li>
+<li><strong>Drop-off points:</strong> Video ad analytics show viewer completion at 75% watched (three-quarters through) and 95% watched (nearly finished), along with where viewers most commonly drop off. This shows which hooks and problem-solution formulas hold attention. [L0280.046]
+<ul>
+<li>Drop-off can be analysed at 25%, 50% and 75% views to see exactly where viewers leave. This deeper analysis is only worth it when the account has a lot of traffic. [L1426.014]</li>
+</ul></li>
+</ul>
+<h3 id="benchmarks-for-hook-rate">Benchmarks for hook rate</h3>
+<p>The sources disagree on hook benchmarks. Give one set, state which set you used, and apply it to every ad so scores stay comparable. [L0613.052]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source reading</th>
+<th>Benchmark</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source C scorecard</td>
+<td>average about 40%; above 50% is great</td>
+<td>[L0398.041]</td>
+</tr>
+<tr>
+<td>Attention table</td>
+<td>poor &lt;15%, average 15-25%, good 25-40%, excellent &gt;40%</td>
+<td>[L0613.050]</td>
+</tr>
+<tr>
+<td>Funnel reference</td>
+<td>poor &lt;10%, below average 10-20%, average 20-30%, good 30-40%, excellent &gt;40%</td>
+<td>[L0613.051]</td>
+</tr>
+<tr>
+<td>Attention rate (hook retention)</td>
+<td>40% or more is very good</td>
+<td>[L0639.030]</td>
+</tr>
+<tr>
+<td>Facebook video ads</td>
+<td>above 30% good, above 40% excellent, above 50% outstanding</td>
+<td>[L0640.009]</td>
+</tr>
+<tr>
+<td>Diagnosis (mainly when sales are weak)</td>
+<td>25% or below not good; above 30% the target; 40-49% very good; above 50% excellent</td>
+<td>[L0652.007]</td>
+</tr>
+<tr>
+<td>3-second video attention</td>
+<td>25% or more acceptable, 30% or more good, 40% or more very good</td>
+<td>[L0644.003]</td>
+</tr>
+<tr>
+<td>3-second video attention</td>
+<td>about 25% acceptable, 30% and above good, 40% and above excellent, around 20% low</td>
+<td>[L1426.009]</td>
+</tr>
+<tr>
+<td>Custom metric in Facebook</td>
+<td>above 30% good, 40% to 50% very strong, 50% means half the audience watched, below 20% bad, 15% weak</td>
+<td>[L0950.015]</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0398.041, L0613.050, L0613.051, L0639.030, L0640.009, L0652.007, L0644.003, L1426.009, L0950.015]</p>
+<ul>
+<li>Use the 30% line as the target for Facebook hook rate. The sources treat high attention as a rule of thumb only. [L0652.007, L0640.009]</li>
+<li>High attention alone does not guarantee sales. The audience must still be relevant. [L0640.009]</li>
+<li>A low-attention ad can still sell when the traffic is relevant. Treat the thresholds as rules of thumb. [L0644.003]</li>
+<li>Benchmarks vary by industry. Compare against your own historical metrics in your ad account first, and improve those before judging against general figures. [L0652.008]</li>
+</ul>
+<h3 id="benchmark-table-video-attention">Benchmark table: video attention</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Poor</th>
+<th>Average</th>
+<th>Good</th>
+<th>Excellent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hook rate</td>
+<td>&lt;15%</td>
+<td>15-25%</td>
+<td>25-40%</td>
+<td>&gt;40%</td>
+</tr>
+<tr>
+<td>25% to 50% retention</td>
+<td>&lt;50%</td>
+<td>50-65%</td>
+<td>65-80%</td>
+<td>&gt;80%</td>
+</tr>
+<tr>
+<td>50% to 75% retention</td>
+<td>&lt;40%</td>
+<td>40-55%</td>
+<td>55-70%</td>
+<td>&gt;70%</td>
+</tr>
+<tr>
+<td>75% to 100% retention</td>
+<td>&lt;30%</td>
+<td>30-45%</td>
+<td>45-60%</td>
+<td>&gt;60%</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0613.050]</p>
+<h3 id="funnel-benchmark-reference">Funnel benchmark reference</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Poor</th>
+<th>Below average</th>
+<th>Average</th>
+<th>Good</th>
+<th>Excellent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hook rate</td>
+<td>&lt;10%</td>
+<td>10-20%</td>
+<td>20-30%</td>
+<td>30-40%</td>
+<td>&gt;40%</td>
+</tr>
+<tr>
+<td>CTR</td>
+<td>&lt;0.5%</td>
+<td>0.5-1%</td>
+<td>1-1.5%</td>
+<td>1.5-2.5%</td>
+<td>&gt;2.5%</td>
+</tr>
+<tr>
+<td>LPV per click</td>
+<td>&lt;60%</td>
+<td>60-70%</td>
+<td>70-80%</td>
+<td>80-90%</td>
+<td>&gt;90%</td>
+</tr>
+<tr>
+<td>ATC per LPV</td>
+<td>&lt;3%</td>
+<td>3-5%</td>
+<td>5-8%</td>
+<td>8-12%</td>
+<td>&gt;12%</td>
+</tr>
+<tr>
+<td>Purchase per checkout</td>
+<td>&lt;30%</td>
+<td>30-45%</td>
+<td>45-60%</td>
+<td>60-75%</td>
+<td>&gt;75%</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0613.051]</p>
+<h3 id="hold-rate-benchmarks-scorecard">Hold rate benchmarks (scorecard)</h3>
+<ul>
+<li>Hold rate average is about 6% to 8%. 8% is good, above 10% is very good, and 10% to 15% is excellent. [L0398.041]</li>
+</ul>
+<h2 id="sales-and-funnel-cvr-add-to-cart-cpa-roas-and-purchases">Sales and funnel: CVR, add-to-cart, CPA, ROAS and purchases</h2>
+<h3 id="conversion-rates">Conversion rates</h3>
+<ul>
+<li><strong>Ad conversion rate (CVR)</strong> = purchases ÷ link clicks, as a percentage. [L0290.003]
+<ul>
+<li>For Facebook analysis, use purchases ÷ unique outbound clicks, shown as a percentage. Facebook tracks page views poorly, while outbound clicks reliably reach the website. [L0640.003]</li>
+</ul></li>
+<li><strong>Store conversion rate</strong> = (purchases ÷ visitors) × 100. Example: 10 visitors with 1 purchase = 1%. [L1021.007]
+<ul>
+<li><strong>Conflicting definition:</strong> Ad CVR divides by clicks, and store conversion rate divides by visitors. Use the ad version when judging the ad and the store version when judging the site.</li>
+<li>A website conversion rate of about 2% is treated as a good benchmark. [L0639.030, L0639.008]</li>
+</ul></li>
+<li><strong>Store check:</strong> A strong CTR with a weak site conversion rate points to the landing page or offer, not the ad. [L1315.019]</li>
+</ul>
+<h3 id="add-to-cart-and-checkout">Add-to-cart and checkout</h3>
+<ul>
+<li><strong>ATC%</strong> = add to carts ÷ link clicks, as a percentage. [L0290.004]</li>
+<li><strong>IC%</strong> = initiate checkout ÷ link clicks, as a percentage. [L0290.005]</li>
+<li>Read add-to-cart ratios in the Shopify backend:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Add-to-cart ratio</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook ads</td>
+<td>Minimum 5%</td>
+<td>Read in the Shopify backend</td>
+</tr>
+<tr>
+<td>TikTok ads</td>
+<td>Minimum 3%</td>
+<td>Read in the Shopify backend</td>
+</tr>
+<tr>
+<td>Google Ads</td>
+<td>Around 7%</td>
+<td>Higher because search is intent-based</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1194.012]</p>
+<ul>
+<li>Add-to-cart and sales checks: cheap clicks that produce no add-to-carts and no sales are a warning sign, not a success. Judge campaigns on downstream funnel metrics, not on click metrics alone. [L0361.005]</li>
+</ul>
+<h3 id="cost-per-acquisition-cpa">Cost per acquisition (CPA)</h3>
+<ul>
+<li><strong>Formula:</strong> CPA = total ad spend ÷ number of conversions. Example: $500 ÷ 18 conversions = $27.78. [L0327.008]</li>
+<li>CPA is also called CPP or cost per purchase. It is the ad cost of one sale: ad spend ÷ number of purchases. [L1021.006]</li>
+<li>Cost per result (purchase objective) = amount spent ÷ website purchases. [L0797.023]</li>
+<li>Cost per purchase shows the spend per purchase. [L1024.043]</li>
+<li>CPA should not be your primary profitability metric. ROAS is more important. [L0327.008]</li>
+</ul>
+<h3 id="return-on-ad-spend-roas">Return on ad spend (ROAS)</h3>
+<ul>
+<li><strong>Formula:</strong> ROAS = revenue from ads ÷ ad spend. A spend of $1 returning $3 gives a ROAS of 3. [L1021.005]</li>
+<li>ROAS equals the revenue from an ad set divided by the ad spend over the same period. A ROAS of 4 to 5 means about $4 to $5 of revenue for every $1 spent on that ad set. [L0524.063]</li>
+<li><strong>Purchase ROAS</strong> = purchase conversion value ÷ amount spent. A ROAS of 2 means $2 is returned for every $1 spent. A ROAS of 1.7 means $1.70 is returned for every $1 spent. [L1024.041]</li>
+<li>Decide on scaling only by comparing ROAS and cost per purchase against the breakeven and desired values, not by delivery numbers. [L0445.028]</li>
+</ul>
+<h3 id="purchases-and-revenue">Purchases and revenue</h3>
+<ul>
+<li>Purchases shows the number of purchases. Cost per purchase shows the spend per purchase. Purchase conversion value shows the revenue from those purchases. Together they show whether the sales are worth the ad spend. [L1024.043]</li>
+<li>Platform revenue = website purchases × AOV (average order value). Example: 306 × $129.20 = $39,535.20. [L0797.023]</li>
+<li><strong>Content views</strong> fire when a visitor lands on the product page the ad links to. Cost per content view shows what each landed visitor costs. [L1024.039]</li>
+</ul>
+<h2 id="google-ads-quality-score-ad-rank-impression-share-and-youtube">Google Ads: Quality Score, Ad Rank, impression share and YouTube</h2>
+<h3 id="ad-rank-and-quality-score">Ad Rank and Quality Score</h3>
+<ul>
+<li><strong>Formula:</strong> Ad Rank = Quality Score × Bid Amount. Your position in Google Ads auctions is determined by this product, not by bid alone. A high Quality Score on a smaller bid outperforms a low Quality Score on a large bid. [L0220.001]</li>
+<li><strong>Ad relevance</strong> is the match between your copy and the search intent, and it makes up a large part of Quality Score. When headlines and descriptions directly address the search query, Quality Score rises, impressions increase, cost per click decreases, and you can outrank competitors who bid significantly more. [L0220.002]</li>
+<li>The goal of optimising Quality Score is not the lowest possible CPC. It is the ability to bid more than competitors while staying profitable at the target ROAS. Advertisers who can afford higher bids dominate auctions in the niche. [L0510.058]</li>
+<li>Lowering bids as far as possible is not the goal of paid traffic. Cheaper clicks should come from better ad quality, not from underbidding. [L1031.035]</li>
+</ul>
+<h3 id="search-impression-share-older-2021-to-2022">Search impression share (older, 2021 to 2022)</h3>
+<ul>
+<li>Search Impression Share is the percentage of relevant search queries your ads show for, given current bids and negative keyword lists. It is the main measure of how competitive your bids are. [L0744.043]</li>
+</ul>
+<h3 id="youtube-in-stream-pricing">YouTube in-stream pricing</h3>
+<ul>
+<li>Example: about 3,500 views for about 4 cents each, which is about $0.0011 per view. [L1510.003]</li>
+</ul>
+<h2 id="decision-thresholds-when-a-campaign-is-a-winner">Decision thresholds: when a campaign is a winner</h2>
+<ul>
+<li><strong>Clear winner:</strong> at least 3 sales with positive ROAS. One sale may be an exception. [L0398.041]</li>
+<li><strong>Scaling signal:</strong> a creative used in 8 or more ads means Meta is scaling it. [L0398.041]</li>
+<li><strong>Profitable sales before scaling an interest:</strong> 6 or more. [L0639.030]</li>
+<li><strong>Expansion threshold</strong> to push a new ad to the next audience tier: 3% CTR or 5% engagement. [L0639.030]</li>
+<li><strong>Data before judging:</strong> 3 to 5 days. Avoid judging on one day. [L0639.030]</li>
+<li><strong>Chargeback rate:</strong> about 1.5%. Above this, fines and processor problems follow. [L0639.030]</li>
+<li><strong>Scorecard table</strong> (from the Source C scorecard):</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Benchmark</th>
+<th>Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outbound CTR</td>
+<td>above 2%</td>
+<td>good; 1.5-2% borderline in some cases; below 1% means the creative is not working</td>
+</tr>
+<tr>
+<td>CPC</td>
+<td>below $1.5</td>
+<td>good (reference for 2023)</td>
+</tr>
+<tr>
+<td>CPM</td>
+<td>above $30, sometimes $35+</td>
+<td>competitive audience or weak creative that forces views</td>
+</tr>
+<tr>
+<td>Hook rate (3-second plays / impressions)</td>
+<td>average about 40%</td>
+<td>above 50% is great</td>
+</tr>
+<tr>
+<td>Hold rate (ThruPlays / impressions)</td>
+<td>average about 6-8%</td>
+<td>8% is good; above 10% is very good; 10-15% is excellent</td>
+</tr>
+<tr>
+<td>Frequency (top-of-funnel)</td>
+<td>about 1.03-1.2</td>
+<td>low frequency does not rule out fatigue</td>
+</tr>
+<tr>
+<td>Clear winner</td>
+<td>at least 3 sales with positive ROAS</td>
+<td>one sale may be an exception</td>
+</tr>
+<tr>
+<td>Scaling signal</td>
+<td>creative used in 8 or more ads</td>
+<td>Meta is scaling it</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0398.041]</p>
+<h2 id="reading-the-metrics-together">Reading the metrics together</h2>
+<ul>
+<li>Judge CTR, CPM and CPC together, and always check CPC, conversion rate and margin before deciding. [L0773.050, L0502.037]</li>
+<li><strong>Healthy baseline for Meta:</strong> CTR above 1.5%, CPC below 1 USD and CPM below 25 USD together. If all three hold but sales are missing, the work moves from the ads to the store. [L0774.004]</li>
+<li><strong>Store problem:</strong> If the CTR is above roughly 3% to 5% and the ads still produce no results, the problem is almost always the store, not the ad. [L0774.001]</li>
+<li><strong>Traffic is cheap, audience right:</strong> Benchmark link-click metrics over a few days included a CPM of $23.28, a cost per link click of $0.93, a CTR of 2.49% and 313 link clicks. Such top-of-funnel numbers signal that traffic is cheap and the audience is right. [L1225.067]</li>
+<li><strong>Brand-specific targets:</strong> Top-of-funnel metrics such as CPM, CPC and CTR are common benchmarks. Cost per purchase and ROAS targets are unique to each brand, so compare each brand against its own margins. [L1225.068]</li>
+<li><strong>Own history first:</strong> Compare against your own past numbers in your own ad account before judging against general figures. [L0652.008, L0640.010]</li>
+<li><strong>Low CTR is not automatically a failure</strong> if the product converts well for its qualified buyers. Look for improvements relative to your own past numbers. [L0640.010]</li>
+<li><strong>Relevance and attention:</strong> A creative with low video attention but good CTR or sales still needs review. Low attention with sales may mean the traffic is relevant but small. [L1426.013]</li>
+<li><strong>Hook and sales:</strong> A high CTR does not prove a good ad when no purchases follow. A high attention rate with irrelevant traffic gives misleading signals. Check whether audience and message are aligned, not only the percentage. [L1426.015]</li>
+<li><strong>Platform comparison:</strong> Compare platforms by CPM and CTR together, not by CTR alone. Snapchat can deliver more clicks that do not necessarily bring quality traffic. [L0562.010]</li>
+<li><strong>Post-test check:</strong> After the first test spend, check CPM, CTR and CPC. A CTR above about 3% is a strong signal, but it must be read together with conversion rate and store data. [L1161.044]</li>
+</ul>
+<h3 id="diagnosis-sequence-for-video-ads">Diagnosis sequence for video ads</h3>
+<ol type="1">
+<li>Check the video attention rate (3-second plays divided by impressions) first, to judge whether the hook works. [L1426.011]</li>
+<li>Check the click-through rate, to judge whether the middle of the video and the offer hold attention. [L1426.011]</li>
+<li>Check add-to-cart and purchase data, to judge whether the page and sale convert. [L1426.011]</li>
+<li>Use the combined picture of these metrics to decide what to improve. [L1426.011]</li>
+</ol>
+<p>[L1426.011]</p>
+<p>Hook benchmarks are rules of thumb, applied mainly when sales are weak. [L0652.007]</p>
+<h3 id="build-a-new-creative-from-hook-and-hold-data">Build a new creative from hook and hold data</h3>
+<ol type="1">
+<li>Add the Hook Rate and Hold Rate columns to the dashboard. [L0398.044]</li>
+<li>Find the video with a strong hook rate and the video with a strong hold rate. [L0398.044]</li>
+<li>Take the first three to five seconds from the strong-hook video. [L0398.044]</li>
+<li>Take the rest of the video from the strong-hold video. [L0398.044]</li>
+<li>Combine them into one new video and test it as a new creative. [L0398.044]</li>
+</ol>
+<p>[L0398.044]</p>
+<h2 id="benchmarks-meta">Benchmarks: Meta</h2>
+<h3 id="meta-ctr">Meta CTR</h3>
+<ul>
+<li><strong>Minimum and test targets:</strong>
+<ul>
+<li>Test target for new ads: at least 1%. [L1194.012]</li>
+<li>Facebook CTR target: at least 1.5%. A CTR above 0.7% is acceptable, but 1.5% is the target value. [L1220.032]</li>
+<li>A CTR of about 1.5% is a decent guideline for Meta ads. Anything lower is generally considered weaker. Treat this as a guideline, not a hard cut-off. [L0644.009]</li>
+<li>A CTR of at least 1.5% is the guideline for Meta ads. Lower CTRs need attention to the middle of the video and the offer. Ads with a CTR around 0.7% to 1.0% still produced sales for some stores. [L1426.010]</li>
+<li>A CTR around 1% was considered weak in one example, while 1.83% and 1.24% were seen on other ad sets. A CTR of 3% or above is a strong result in the examples given. [L0650.047]</li>
+</ul></li>
+<li><strong>Good readings:</strong>
+<ul>
+<li>A good CTR on Facebook is above 1.5%. Winning products usually sit between 2% and 2.5%. Below 1.5% combined with no sales is a warning sign. [L0773.049]</li>
+<li>On Facebook ad sets, a CTR above 1.5% signals that ads are performing. CTRs of 3% to 5% show strong relevance but still need sales to be meaningful. Winning products in the lesson hit roughly 2% or more. [L0773.002]</li>
+<li>A CTR above 1.5% on Meta ad sets shows the ad is attracting clicks. [L0774.001]</li>
+<li>Good Facebook CTR range: 1.5% to 2.0%. [L0229.012]</li>
+<li>Industry-standard CTR on Facebook is about 2%, meaning roughly 20 clicks per 1,000 people reached. [L0639.008, L0639.030]</li>
+<li>A CTR above 2% is considered good, and the goal is to push it higher over time. [L0652.009]</li>
+<li>Facebook CTR target: aim for above 2%. [L0640.010]</li>
+<li>Good performance on Meta ads means a CTR above 2% and a CPC below $1. The audience is interested and clicks through to the store. [L1172.032]</li>
+<li>With strong creative, a CTR over 2% and CPC around $1 to $1.40 are the cited benchmarks. [L1315.019]</li>
+<li>For T4 and T5 markets, a healthy Meta ad has a CTR around 2% or above. [L1260.004]</li>
+<li>Unique link CTR above 1.5% is considered good. [L0502.036]</li>
+</ul></li>
+<li><strong>Higher readings:</strong>
+<ul>
+<li>CTRs of 3% to 5% are good on Meta, as rough reference points that depend on product and market. [L0361.004]</li>
+<li>The ideal Meta ad CTR is 3% to 7%. Unlike CPC and CPM, a higher CTR is better. [L0874.010]</li>
+<li>A CTR of 2.2% to 2.4% is acceptable if you let the ad run another day or add a bit more spend. [L0874.010]</li>
+<li>In one real campaign, a CTR of 2.12% per impression was below the ideal range. [L0874.011]</li>
+</ul></li>
+</ul>
+<p><strong>Reconciling the CTR figures:</strong> The units give 1.5% as the floor for link CTR, about 2% as the good line, and 3% to 7% as the ideal. The 3% to 7% range is the Source D reading, and the 1.5% and 2% lines appear across Source C and the other units. Always confirm which CTR variant you are reading (link CTR, unique outbound CTR or CTR all) before comparing. [L0874.019, L0639.009, L0502.036, L0874.010]</p>
+<h3 id="meta-cpc">Meta CPC</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Reading</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target, Meta ads</td>
+<td>below 1 USD</td>
+<td>[L0774.002, L1220.033, L0773.003]</td>
+</tr>
+<tr>
+<td>Winning products</td>
+<td>usually 0.30 to 0.40 USD</td>
+<td>[L0774.002, L0773.003]</td>
+</tr>
+<tr>
+<td>Warning sign</td>
+<td>near 1 USD</td>
+<td>[L0774.002]</td>
+</tr>
+<tr>
+<td>Dropshipping target range</td>
+<td>$0.50 to $1.50; below that range is excellent</td>
+<td>[L0640.011]</td>
+</tr>
+<tr>
+<td>Good</td>
+<td>about $1</td>
+<td>[L0874.005]</td>
+</tr>
+<tr>
+<td>Relatively good</td>
+<td>$1.10 to $1.20</td>
+<td>[L0874.005]</td>
+</tr>
+<tr>
+<td>Bad</td>
+<td>$2 or higher</td>
+<td>[L0874.005]</td>
+</tr>
+<tr>
+<td>T4 markets</td>
+<td>under 1.50 dollars is good; under 1 dollar is ideal</td>
+<td>[L1260.005]</td>
+</tr>
+<tr>
+<td>Rough reference for Meta</td>
+<td>0.60 to 0.67 USD very good; about 1.50 USD or more is the higher end</td>
+<td>[L0361.004]</td>
+</tr>
+<tr>
+<td>Good, rough benchmark</td>
+<td>under $1.50 to $2.00</td>
+<td>[L0229.012]</td>
+</tr>
+<tr>
+<td>Good, scorecard (2023 reference)</td>
+<td>below $1.5</td>
+<td>[L0398.041]</td>
+</tr>
+<tr>
+<td>Early-test target</td>
+<td>around $0.50 ideal; old ad account showed $5 to $8</td>
+<td>[L1194.012]</td>
+</tr>
+<tr>
+<td>Benchmark example</td>
+<td>$0.93 cost per link click</td>
+<td>[L1225.067]</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0774.002, L1220.033, L0773.003, L0640.011, L0874.005, L1260.005, L0361.004, L0229.012, L0398.041, L1194.012, L1225.067, L0774.030]</p>
+<ul>
+<li>Do not focus too much on high CPC if the campaign is profitable and ROAS is strong. [L0640.011]</li>
+<li>A CPC above 1 USD alone is no clear sign. Sales and return on ad spend matter more. [L0502.037]</li>
+<li>A CPC near 1 USD is a warning sign for winning products. [L0774.002]</li>
+<li><strong>Reconciling the CPC figures:</strong> The sources range from under 1 USD (working target) to 1.50 USD (upper good limit in T4 markets) and $2 (bad). Use under 1 USD as the working target for Meta. Use the 1.50 USD upper limit when the market is one of the T4 markets (the USA, Canada, Australia and the UK). Treat $2 or more as bad in every case. [L0774.002, L1260.005, L0874.005]</li>
+</ul>
+<h3 id="meta-cpm">Meta CPM</h3>
+<ul>
+<li>Average CPM on Facebook is about $10. At that CPM, a $10 daily ad set budget reaches up to about 1,000 people per day, usually fewer. [L0639.007]</li>
+<li>Target: under $10, ideally near $5. Old ad account showed $20 to $50. [L1194.012]</li>
+<li>Healthy setup: CPM below 25 USD. [L0773.003, L0774.003]</li>
+<li>For T4 and T5 markets: a Meta ad is healthy when CPM is under 30 dollars. [L1260.004]</li>
+<li>A CPM above $30, sometimes $35 or more, points to a competitive audience or weak creative that forces views. [L0398.041]</li>
+<li>Reference point for a low CPM in a real campaign: $31.52 per 1,000 impressions. Compare your CPM against this kind of figure, keeping in mind that a lower CPM means cheaper reach. [L0874.018]</li>
+<li>Source D reading for 2026: a CPM of about $50 is decent, and anything from about $70 upward is poor. A lower CPM is always better because reaching 1,000 people costs less. Benchmarks may rise as competition increases. [L0874.008]</li>
+<li><strong>Reconciling the CPM figures:</strong> The sources range from about $10 (average), under $25 and under $30 (healthy limits) to about $50 (decent) and $70 (poor). The Source D 2026 figures are its own reading of current competition. The Source C limits (under $25) and the T4/T5 rule (under $30) are the stricter checks. Apply the one that matches your market and period, and state it. [L0639.007, L0773.003, L1260.004, L0874.008]</li>
+</ul>
+<h3 id="meta-cpm-table-funnel-and-other-rules">Meta CPM table, funnel and other rules</h3>
+<ul>
+<li>Top-of-funnel benchmark table:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Benchmark</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPM (Meta)</td>
+<td>about $10</td>
+<td>Average cost per 1,000 impressions</td>
+</tr>
+<tr>
+<td>CTR (all)</td>
+<td>about 2%</td>
+<td>Industry standard; roughly 20 clicks per 1,000 people reached</td>
+</tr>
+<tr>
+<td>Outbound Unique CTR</td>
+<td>main metric</td>
+<td>Clicks that send users to the website</td>
+</tr>
+<tr>
+<td>Conversion rate (website)</td>
+<td>about 2%</td>
+<td>Treated as a good benchmark</td>
+</tr>
+<tr>
+<td>Expansion threshold</td>
+<td>3% CTR or 5% engagement</td>
+<td>Needed to push a new ad to the next audience tier</td>
+</tr>
+<tr>
+<td>Attention rate (hook retention)</td>
+<td>40% or more</td>
+<td>Described as very good</td>
+</tr>
+<tr>
+<td>CTR (soft metric)</td>
+<td>above 2%</td>
+<td>Good sign for a creative</td>
+</tr>
+<tr>
+<td>Profitable sales before scaling</td>
+<td>6 or more</td>
+<td>Needed before scaling an interest</td>
+</tr>
+<tr>
+<td>Data before judging</td>
+<td>3 to 5 days</td>
+<td>Avoid judging on one day</td>
+</tr>
+<tr>
+<td>Chargeback rate</td>
+<td>about 1.5%</td>
+<td>Above this, fines and processor problems follow</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0639.030]</p>
+<ul>
+<li><strong>Facebook quality rankings:</strong> Ads Manager shows a quality ranking, an engagement ranking and a conversion ranking for each ad. Each is graded below average, average or above average. Use them to judge how the creative performs against competitors. [L0638.042]</li>
+<li>Facebook's auction sets CPM from how the ad performs in these rankings. Better rankings can lower CPM. [L0638.043]</li>
+<li><strong>Facebook metrics can contradict each other,</strong> for example total play counts and average play time. Cross-check several metrics and the actual video length before drawing conclusions. [L1215.013]</li>
+<li>Facebook hook rate as a custom metric is built in Ads Manager columns and applies to video ads only. [L0640.002]</li>
+</ul>
+<h2 id="benchmarks-tiktok">Benchmarks: TikTok</h2>
+<ul>
+<li><strong>CPC:</strong> target below $1 per click. [L1375.002]
+<ul>
+<li>For a US audience, a CPC of about $0.50 to $0.62 is good. [L1382.042]</li>
+<li>Any CBO campaign or ad group with a CPC above $1 should be cut. [L1382.042]</li>
+</ul></li>
+<li><strong>CPM:</strong> target below $10 per 1,000 impressions. [L1375.003]
+<ul>
+<li>TikTok ads have much lower CPM than Facebook. The main difference between platforms is CPM, not the ideal CTR. [L0773.038]</li>
+</ul></li>
+<li><strong>CTR (conflicting readings):</strong>
+<ul>
+<li>Target: above 1.5%, meaning the share of viewers who click the ad. [L1375.004]</li>
+<li>In TikTok product tests, a CTR above 1% is strong. A like rate of 1% or more signals engagement. [L1382.042]</li>
+<li>A CTR around 0.8% can be acceptable on TikTok if traffic, conversion rate and profit are good. [L0773.038]</li>
+<li>Apply the 1.5% target as the default. Use the 1% and 0.8% readings only when traffic, conversion and profit support them. [L1375.004, L1382.042, L0773.038]</li>
+</ul></li>
+<li><strong>Formula:</strong> CTR is clicks per impression, so CPC = CPM ÷ (1,000 × CTR) and CTR = CPM ÷ (1,000 × CPC). Example: at a CPM of $10 and a CTR of 1.5%, the CPC is about $0.67. A CPC below $1 alone does not guarantee the 1.5% CTR target. [L1375.014]</li>
+<li><strong>Add-to-cart ratio:</strong> minimum 3%, read in the Shopify backend. [L1194.012]</li>
+<li>TikTok ads usually cost more per impression than Pinterest for similar targeting. [L0788.058]</li>
+</ul>
+<h2 id="benchmarks-pinterest">Benchmarks: Pinterest</h2>
+<ul>
+<li><strong>US cost benchmarks:</strong> CPM between $3 and $5, sometimes as low as $2. [L1134.012, L1135.060]</li>
+<li>Early-stage quality is usually poor because Pinterest is still learning the audience. [L1134.012]</li>
+<li>Early traffic tests stay cheap compared with Facebook or TikTok. [L1135.060]</li>
+<li>For similar targeting, Pinterest usually has lower CPM and CPC than TikTok. Costs are lower in the UK and Europe than in the US. The US has the largest user base and therefore more competition for the same audience. [L0788.058]</li>
+<li>No Pinterest CTR benchmark is given in the units for this section. [none in this set]</li>
+</ul>
+<h2 id="benchmarks-google-ads">Benchmarks: Google Ads</h2>
+<ul>
+<li><strong>Average CTR:</strong> about 1%. CTR above 1% is considered good. [L0327.005]</li>
+<li><strong>Varies by ad type and position:</strong> top-of-funnel and bottom-of-funnel keywords differ, and search ads differ from PLAs, display ads and YouTube ads. [L0327.006]</li>
+<li><strong>Add-to-cart ratio:</strong> around 7%. Google is higher because search is intent-based. [L1194.012]</li>
+<li><strong>Scope:</strong> check CTR at account, campaign, ad group, ad, keyword, PLA or search term level. [L0327.002]</li>
+<li><strong>CPA:</strong> see the sales section. CPA is not the primary target; ROAS is more important. [L0327.008]</li>
+<li><strong>Quality Score and impression share:</strong> see the Google Ads section. [L0220.001, L0220.002, L0510.058, L0744.043]</li>
+<li>No Google CPC benchmark (beyond the average CPC formula example) is given in the units for this section. [L0808.056]</li>
+</ul>
+<h2 id="benchmarks-bing-and-revenue-per-click">Benchmarks: Bing and revenue per click</h2>
+<ul>
+<li>No knowledge unit in this set gives Bing benchmarks. [none in this set]</li>
+<li>No knowledge unit in this set defines revenue per click. [none in this set]</li>
+</ul>
+<h2 id="other-platforms-snapchat">Other platforms: Snapchat</h2>
+<ul>
+<li>Rough early-test benchmarks for paid traffic: a cost per click under 50p and a cost per 1,000 impressions of about 2 to 3 pounds. [L0562.038]</li>
+<li>CTR benchmarks differ by platform. In one test, Snapchat reached nearly 2%, while most other platforms stayed below 1%. Compare each platform against its own numbers. [L0562.038]</li>
+<li>Snapchat has a lower CPM than Facebook, and it can deliver more clicks that do not necessarily bring quality traffic. [L0562.010]</li>
+</ul>
+<h2 id="setting-up-custom-metrics-in-the-ad-platforms">Setting up custom metrics in the ad platforms</h2>
+<ul>
+<li><strong>Hook Rate and Hold Rate in Ads Manager</strong> (procedure):
+<ul>
+<li>Open the column or custom metric option and choose create custom metric.</li>
+<li>Name the first "Hook Rate", set the format to percentage, and use 3-second video plays divided by impressions.</li>
+<li>Name the second "Hold Rate", set it to percentage, and use ThruPlays divided by impressions.</li>
+<li>Add both columns to the dashboard to compare creatives side by side. [L0398.043]</li>
+</ul></li>
+<li><strong>Funnel analysis metrics:</strong> In Facebook Ads Manager, go to Columns &gt; Customize columns &gt; Custom metrics to create the custom metrics used for funnel analysis. Set the Hook rate metric as a percentage of impressions where viewers watched the first three seconds. [L0950.014]</li>
+<li><strong>Hook rate definition as a custom metric:</strong> people who watch the first 3 seconds of a video divided by all impressions, as a percentage. [L0950.015]</li>
+<li><strong>Video attention metric:</strong> a custom metric calculated as 3-second video plays divided by impressions, as a percentage. In Meta Ads Manager, create it via Customize columns &gt; Create custom metric, name it "Video attention", set the format to percentage, and enter the 3-second video plays field divided by the impressions field. [L1426.007]</li>
+<li><strong>Video attention, step by step:</strong> open Columns &gt; Customize columns, click Create custom metric, name it "Video attention", set it as a percentage, and use 3-second video plays divided by impressions. Save it and add it next to click-through rate in the reporting view. [L1426.008]</li>
+<li><strong>Frequency:</strong> found in the Facebook Ads columns. [L0950.021]</li>
+<li><strong>Video attention benchmark for the first three seconds:</strong> about 25% is acceptable, 30% and above is good, and 40% and above is excellent. A value around 20% is considered low, and the hook should be improved. [L1426.009]</li>
+</ul>
+<h2 id="checking-numbers-by-hand">Checking numbers by hand</h2>
+<p>Ad set metrics can be checked from the raw totals:</p>
+<ul>
+<li>Frequency = impressions ÷ reach. Example: 2,017,463 ÷ 862,845 = 2.34. [L0797.023]</li>
+<li>CPM = amount spent ÷ impressions × 1,000. Example: 10,832.32 ÷ 2,017,463 × 1,000 = $5.37. [L0797.023]</li>
+<li>CPC = amount spent ÷ link clicks. Example: 10,832.32 ÷ 27,761 = $0.39. [L0797.023]</li>
+<li>CTR = link clicks ÷ impressions. Example: 27,761 ÷ 2,017,463 = 1.38%. [L0797.023]</li>
+<li>Cost per result (purchase objective) = amount spent ÷ website purchases. Example: 10,832.32 ÷ 306 = $35.40. [L0797.023]</li>
+<li>Platform revenue = website purchases × AOV. Example: 306 × $129.20 = $39,535.20. [L0797.023]</li>
+</ul>
+<p>If you estimate impressions from spend, use impressions ≈ spend ÷ CPM × 1,000. Example: at a CPM of 10 USD, 50 USD of spend gives about 5,000 impressions, so 25 link clicks is a CTR of 0.5%, below the 1.5% target, and a CPC of 2 USD, above the 1 USD limit. [L1220.040]</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>Spending on Facebook ads without knowing what CTR and CPM mean makes results impossible to read and wastes budget. Learn these metrics before testing products. [L0519.027, L1176.021]</li>
+<li>Meta Ads Manager metrics such as CTR, CPC and CPM describe ad delivery and click efficiency, not profitability. Decide on scaling only by comparing ROAS and cost per purchase against the breakeven and desired values. [L0445.028]</li>
+<li>A high CTR does not prove a good ad when no purchases follow. [L1426.015]</li>
+<li>Judging hook benchmarks from two different sets without naming which one you used. Pick one set, state it, and apply it consistently. [L0613.052]</li>
+<li>Reading the CTR (all) figure as link CTR when comparing against benchmarks. Confirm the variant. [L0874.019]</li>
+<li>Treating a low CPM as proof of a low CPC. CPC also depends on CTR. [L0774.030]</li>
+<li>Chasing the lowest possible bid rather than better ad quality. [L1031.035]</li>
+<li>Using an arithmetic error from a source as a benchmark. In one lesson the figure of about $33,000 for 500,000 impressions at a $15 CPM is wrong; the correct cost is $7,500. [L0871.032]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Click-through rate = clicks / impressions. An impression is counted each time the ad is shown, so a low result signals that the ad, image or price is not attracting clicks. [L1002.050]</p></li>
+<li><p>In the book niche, sustainable CPC and CPM sit around $0.80 to about $2. Costs in this range keep early tests affordable. [L1175.031]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/04-traffic-conversion-and-funnel-math-for-planning/"><span class="k">&larr; Previous</span><span class="v">Traffic, conversion and funnel math for planning</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/06-setting-up-google-tracking-analytics-search-console-merchant/"><span class="k">Next &rarr;</span><span class="v">Setting up Google tracking: analytics, search console, merchant center, ads</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

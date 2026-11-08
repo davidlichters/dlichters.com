@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Speed, apps and technical health | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.17: Speed, apps and technical health.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/17-speed-apps-and-technical-health/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Speed, apps and technical health | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.17: Speed, apps and technical health."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/17-speed-apps-and-technical-health/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/17-speed-apps-and-technical-health/">Plain version</a></div><h1>4.17 Speed, apps and technical health</h1><article><h2 id="theme-choice-and-code-weight">Theme choice and code weight</h2>
+<ul>
+<li>On Shopify, site speed depends on the code weight and efficiency of the theme, apps and images, not on Shopify's infrastructure. Lightweight themes load faster than bloated themes with sloppy code. [L0245.029] (older: 2020)</li>
+<li>The installed theme is the main factor in page speed, so choose a theme built for fast loading. Manhattan is described as a fast-loading option. [L1190.002]</li>
+<li>Page speed is a critical SEO ranking factor and conversion metric. Choose a lightweight theme with minimal code and limit installed apps, because each one adds code weight. [L0176.001]</li>
+<li>Store speed is an SEO ranking factor, so slow pages should be fixed as part of search work. [L1092.047] (older: 2022)</li>
+<li>Choose a theme with clean, lightweight code. Compare candidate themes' speed before committing, because speed-optimised themes are not all equal. [L1098.005]</li>
+<li>For fast collection pages, use an optimised theme such as Manhattan and install as few apps as possible. Image compression helps, but the theme and the number of apps have the bigger effect. [L0368.024]</li>
+<li>Free Shopify themes such as Sense and Refresh generally load quickly and are a good base when speed matters. [L1259.065, L1345.036]</li>
+<li>Page builders such as PageFly add a layer on top of the theme and increase load time somewhat. Weigh that cost against the conversion features they provide. [L1259.065, L1345.036, L1260.036]</li>
+<li>Theme updates can shift load time by as much as 10 seconds. Test whether the theme itself causes slowness. If it does, change the theme or invest in improving it. [L1522.036] (older: 2021-2022)</li>
+<li>Custom code in the theme keeps a site faster than stacking extra apps. A developer can add a feature such as sorting when the theme lacks it. Paid apps remain an option when custom development is not affordable. [L0968.036] (older: 2021)</li>
+<li>Responsiveness directly affects the relative mobile conversion rate. Use a theme from the Shopify Theme Store or a trusted developer, and design with mobile users first. [L0423.027]</li>
+<li>Improve speed with quick code changes rather than an expensive hosting upgrade. A costly host for a small speed gain reduces net profit and can lower the sale price. [L1468.032]</li>
+<li>Do not hire Fiverr freelancers to boost site speed unless you understand their method. They often inject code that hides the site from speed testing tools, which can be penalised or banned by Google. [L0788.026]</li>
+<li>The legitimate ways to reduce load time are compressing images and removing apps that are not needed. [L0788.027]</li>
+<li>Keep JavaScript and theme libraries to an absolute minimum. Use only open-source libraries under the MIT license and avoid bloated libraries, because many premium themes load a large number of them. [L0709.008]</li>
+<li>Use CSS for simple animations instead of JavaScript, for example with the Animate.css library, to keep the page lighter. [L0709.009]</li>
+<li>Use system fonts where possible. They load much faster than custom web fonts, and font loading is one of the biggest factors in store speed. [L0709.010]</li>
+<li>Heavy visual effects such as full-screen video backgrounds, parallax effects and many moving elements slow page loading. Avoid them unless they demonstrably help sales. [L1098.006]</li>
+<li>Keep the number of product variants reasonable. Too many variants can slow a store, so review the speed impact with GTmetrics rather than relying only on the Shopify speed score. [L1283.093]</li>
+</ul>
+<h2 id="theme-and-admin-settings">Theme and admin settings</h2>
+<ul>
+<li>Leave the Advanced, Custom styles and scripts, and Performance settings at the Shopify defaults in the early stage, because the default performance settings are already set correctly for the theme. [L1371.024] (older: 2021-2022)</li>
+<li>To change robots.txt or other theme files, go to the theme editor and open the code editor. Shopify support documentation covers the exact process. [L1115.062]</li>
+<li>Turn off quick view on collection pages. Its code loads before the customer clicks, it slows the page, and there was no evidence it increased conversion. Customers can open the product page instead. [L1266.022] (older: 2021-2022)</li>
+<li>Avoid sliders. Check whether a carousel is really needed at shouldiuseacarousel.com. [L0423.026]</li>
+<li>Remove quick shop functionality. [L0423.026]</li>
+<li>Keep homepage slideshows and large hero images only if analytics show visitors click them and buy. If they are not clicked, remove them, because they add load time without helping the sale. [L1098.008]</li>
+<li>Shopify shows an online store speed score only when password protection is disabled. The score can take 1 to 3 days to calculate after that, and it shows as unavailable while the store is password protected. [L1292.021, L1371.050] (older: 2021-2022)</li>
+<li>Your store's speed score depends on which apps are installed, whether the theme's code has been modified, and how large the images and videos are. [L1292.022] (older: 2021-2022)</li>
+</ul>
+<h2 id="measuring-speed">Measuring speed</h2>
+<h3 id="which-tool-to-trust">Which tool to trust</h3>
+<ul>
+<li>Use GTmetrix for page speed readings. The Shopify admin score gives a less accurate picture of how fast a store loads. [L0468.071] (older: 2020)</li>
+<li>Shopify's Speed Score is not a reliable indicator of performance. Use GTmetrix to analyse load speed. [L1092.042] (older: 2022)</li>
+<li>The Shopify admin speed score drops after any app or script is added, even on a fast theme. The GTmetrix waterfall shows what actually loads slowly for visitors. [L0854.069] (older: 2022)</li>
+<li>Measure speed on Google PageSpeed Insights and GTmetrix rather than the Shopify speed score. Use fewer apps rather than more, because the speed score is unreliable for judging real performance. [L0665.035, L0665.034] (older: 2022)</li>
+<li>The key page speed metric is First Contentful Paint, which should be under 3 seconds. Check it in Google PageSpeed Insights or GTmetrix by pasting the product page URL. [L1412.045]</li>
+<li>The Shopify online store speed score combines many factors and matters less than First Contentful Paint. Removing unused JavaScript with a developer had little effect in the lesson's experience. Image optimisation and removing apps had the most impact. [L1412.046]</li>
+<li>The speed-score numbers in Shopify's Online Store speed report are overall factors and do not matter much. The most impactful steps were image optimisation and removing unused apps. A developer can remove unused JavaScript for a fee. [L1410.032]</li>
+<li>Shopify's speed score can show as low even when pages load in under two seconds. Test with several speed tools and look at real load times rather than optimising for the score alone. [L0801.099] (older: 2021)</li>
+<li>Shopify's own analytics script can show up as very slow in speed tools, sometimes around 30 seconds. It loads in the background and does not hurt the customer experience, so check whether it is the real cause before removing anything. [L0857.054]</li>
+<li>GTmetrix provides a free waterfall report for any URL, showing what loads slowest and which elements cause problems. No paid plan is needed. [L1287.031]</li>
+<li>GTmetrix measures page load speed and performance scores for a store URL. Use it to check product and landing pages for speed problems before sending paid traffic to them. [L1007.004]</li>
+</ul>
+<h3 id="which-page-version-and-conditions-to-test">Which page version and conditions to test</h3>
+<ul>
+<li>Mobile and desktop share the same Shopify admin changes, so optimisations made in the admin apply to both devices without separate mobile work. [L0857.051]</li>
+<li>Test store speed on both desktop and mobile separately, since a store can load fast on one and slower on the other. Only treat a problem as real if it appears in the test results, not in a single personal impression. [L1446.031]</li>
+<li>Product page load time should be checked on mobile. [L0801.097] (older: 2021)</li>
+<li>Test under worst-case conditions, such as a slow 3G mobile connection, not only on home Wi-Fi or good LTE. Check that the site loads fast enough and stays usable in that scenario. [L1098.004]</li>
+<li>Test the final canonical URL. If PageSpeed Insights reports that the requested URL was redirected, for example from http to https or from non-www to www, every visit pays for that extra redirect step. [L1266.034] (older: 2021-2022)</li>
+<li>Test your store regularly with Google PageSpeed Insights, GTmetrix or Pingdom. [L1522.036] (older: 2021-2022)</li>
+<li>Re-run the test after a few minutes, since cached results can change the score. [L0970.068] (older: 2023 is not old; see note below)</li>
+</ul>
+<h3 id="core-metrics-and-what-they-mean">Core metrics and what they mean</h3>
+<ul>
+<li>LCP stands for Largest Contentful Paint and measures how long the largest visible element on a page takes to load. Check it in GTmetrix on mobile and desktop and fix the element that loads slowest. [L0857.052]</li>
+<li>Layout stability is part of page speed scoring. Elements that move while the rest of the page loads are a sign that the theme code needs a developer review. [L0971.086]</li>
+<li>To check layout shift (CLS), reload the page and watch for elements that jump after the initial load. Typical causes are upsell widgets, financing widgets or other apps that inject content late. Removing those apps usually removes the shift. [L1266.041] (older: 2021-2022)</li>
+<li>The standard PageSpeed Insights Opportunities list gives suggestions with estimated savings in seconds. The Diagnostics list gives extra detail that does not directly change the Performance score. Start with the red items, typically removing unused JavaScript, deferring offscreen images, sizing images properly and removing render-blocking resources. [L1266.035] (older: 2021-2022)</li>
+<li>PageSpeed Insights diagnostics can flag text that stays hidden while web fonts load. This does not change the Performance score, but it signals that the font loading setup should be checked. [L1266.040] (older: 2021-2022)</li>
+</ul>
+<h3 id="targets-and-benchmarks">Targets and benchmarks</h3>
+<ul>
+<li>Aim for an average page load time under 5 seconds. Observed conversion differences between roughly 3 and 5 seconds were negligible, while a difference between 10 and 5 seconds clearly affected conversion. [L1522.034] (older: 2021-2022)</li>
+<li>Page load time should stay well under 10 seconds. Pages taking longer than about 10 seconds cause visitors to leave before the page fully loads, which hurts conversion and retention. [L1099.011] (older: 2021-2022)</li>
+<li>Most items on a page load within about three seconds. If a page takes around 10 seconds on mobile, find the one slow element with a waterfall test rather than removing everything. [L0801.097] (older: 2021)</li>
+<li>Only the first product image, title and price need to appear within the first seconds on a product page. Sections lower down may load late without hurting the customer's first impression. [L1410.047]</li>
+<li>Speed testing targets by source:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Value</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average page load</td>
+<td>under 5 s</td>
+<td>L1522.034 (older)</td>
+</tr>
+<tr>
+<td>Load time ceiling</td>
+<td>under 10 s; above it visitors leave</td>
+<td>L1099.011 (older)</td>
+</tr>
+<tr>
+<td>Most items loaded</td>
+<td>within about 3 s</td>
+<td>L0801.097 (older)</td>
+</tr>
+<tr>
+<td>First Contentful Paint</td>
+<td>under 3 s</td>
+<td>L1412.045, L1410.031</td>
+</tr>
+<tr>
+<td>Grade during a fix</td>
+<td>aim for A or A+</td>
+<td>L0854.068 (older)</td>
+</tr>
+<tr>
+<td>Grade for a healthy store</td>
+<td>A preferred; B or B+ fine</td>
+<td>L0963.042 (older)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>GTmetrix benchmarks judged very good for a Shopify store: performance score 97, structure score 87, Largest Contentful Paint 671 ms, Total Blocking Time 140 ms, Cumulative Layout Shift 0.02. Compare the store against competitor stores on GTmetrix to decide whether further speed work is needed. [L0836.062]</li>
+<li>In one case, two embedded videos on a product page dragged the GTmetrix grade down to E with a 48% performance score. Removing them raised the grade to C. Well-built stores typically reach an A with around 99%. [L0970.067]</li>
+<li>A speed score around 38 may be acceptable if the cause is minor. Look at what is causing the slowdown before deciding whether the score matters. [L0970.069]</li>
+<li>Older stores with heavy code can sit at D+ and still sell well. New stores typically reach B or A. [L0963.042] (older: 2022)</li>
+<li>Benchmark a store's performance score against the largest e-commerce sites. Run the biggest e-commerce brands through a tool such as GTmetrix, compare their scores with your own, and if your store scores as well as or better than them, treat the score as acceptable. Do not delay launch to raise it further. [L1446.032] (older: undated, see note below)</li>
+<li>Fix slow pages on your own store before comparing it with a slow-loading competitor. A slow competitor is a weakness you can exploit, but your own store must not have the same problem. [L0894.044]</li>
+<li>Revenue impact of load time:
+<ul>
+<li>79% of customers who are dissatisfied with web performance are less likely to buy. [L0423.023]</li>
+<li>For a store earning $100k per day, a one-second speed improvement adds about $7k in daily revenue. This shows why load time is a direct revenue question. [L0423.024]</li>
+<li>A one-second delay in load time typically causes an 11% loss in page views and an overall 7% loss in conversions. [L0423.025]</li>
+<li>The common claim that each second of load time cuts conversion by about 10% is unreliable. Test your own store. Bringing a site down to a 1 to 2 second load time can require developer time, so it is only worth it when the benefit is measurable. [L1522.035] (older: 2021-2022)</li>
+</ul></li>
+</ul>
+<h3 id="test-procedures">Test procedures</h3>
+<p><strong>GTmetrix waterfall: find the cause of a slow site</strong></p>
+<ol type="1">
+<li>Go to gtmetrix.com and enter your store URL.</li>
+<li>Create a free account if asked to see the results.</li>
+<li>Open the Waterfall view.</li>
+<li>Look at the items loading last, on the right side of the list. Large videos or a single slow app are common causes. [L0470.054] (2023)</li>
+</ol>
+<p><strong>GTmetrix: create a free account and read the waterfall</strong></p>
+<ol type="1">
+<li>Enter the store URL in gtmetrix.com.</li>
+<li>Create a free account, which needs no credit card.</li>
+<li>Run the test and read the scores.</li>
+<li>Open the Waterfall section, where the bars show what loads from fastest to slowest.</li>
+<li>Identify the slowest element, such as an image, video or app, and decide whether to remove or replace it. [L0857.053]</li>
+</ol>
+<p><strong>GTmetrix: test and fix (grade target)</strong></p>
+<ol type="1">
+<li>Run the store URL through gtmetrix.com.</li>
+<li>Aim for an A or A+ grade.</li>
+<li>Open the waterfall and look at the slowest items at the bottom of the list.</li>
+<li>Remove or optimise the items that take the longest, such as large videos, oversized images, unused apps or tracking scripts.</li>
+<li>Recheck the grade after each change. [L0854.068] (older: 2022)</li>
+</ol>
+<p><strong>GTmetrix: test and fix (short version)</strong></p>
+<ol type="1">
+<li>Enter the store URL and click test.</li>
+<li>Open the waterfall to see the load order.</li>
+<li>Note the items that take longest, such as apps, large uncompressed images, videos or broken code.</li>
+<li>Remove unneeded apps, compress images and repair broken code. [L0963.040] (older: 2022)</li>
+</ol>
+<p><strong>GTmetrix: test and read the waterfall</strong></p>
+<ol type="1">
+<li>Enter the store URL with HTTPS and run the test.</li>
+<li>Open the waterfall view and scroll down. The items loading longest appear furthest to the right, in milliseconds.</li>
+<li>Optimise those items, for example by compressing images, or remove code from apps no longer used. [L1092.043] (older: 2022)</li>
+</ol>
+<p><strong>Test and fix page speed with GTmetrix (with script check)</strong></p>
+<ol type="1">
+<li>Open gtmetrix.com and run a test on the store URL.</li>
+<li>Read the report for the elements slowing the page, such as videos, large images or apps.</li>
+<li>Before removing an app, search the page source (Cmd+F or Ctrl+F) for the app or developer name.</li>
+<li>Remove or replace the heavy element.</li>
+<li>Re-run the test after a few minutes, since cached results can change the score. [L0970.068] (2023)</li>
+</ol>
+<p><strong>Test with GTmetrix and fix in order</strong></p>
+<ol type="1">
+<li>Run the store through GTmetrix.</li>
+<li>Open the waterfall view and look at how each element loads.</li>
+<li>Identify the slowest elements at the bottom of the waterfall.</li>
+<li>Check the likely culprits: embedded videos, oversized images and apps that add extra code.</li>
+<li>Fix them yourself or outsource the fix. [L1446.020]</li>
+</ol>
+<p><strong>Find the source of a slow item on a product page</strong></p>
+<ol type="1">
+<li>Open the waterfall report for the slow page.</li>
+<li>Find the item at the bottom of the list, which loads last and takes the longest.</li>
+<li>Copy that item's code or URL.</li>
+<li>Search for that code on Google to find its source and see whether others have fixed the same slowdown, for example in the Shopify community forum or in developer documentation. [L0965.089] (2024)</li>
+</ol>
+<p><strong>Improve product page speed</strong></p>
+<ol type="1">
+<li>Test the page on GTmetrix.</li>
+<li>Read the waterfall, which shows each element and how long it takes to load.</li>
+<li>Identify the one or two slow items, such as an app, a large image or a video.</li>
+<li>Remove or modify those items.</li>
+<li>Compress all images so they load fast. [L0801.098] (older: 2021)</li>
+</ol>
+<p><strong>Find what slows a store with GTmetrix (waterfall, product-level check)</strong></p>
+<ul>
+<li>Use the procedure above for the waterfall and the Opportunities list. The waterfall shows which items load last, and those are the first candidates for optimisation, usually apps, oversized media or broken code. [L0963.041] (older: 2022)</li>
+</ul>
+<h1 id="order-of-work-for-speed">Order of work for speed</h1>
+<p><strong>Improve store speed in this order</strong></p>
+<ol type="1">
+<li>Avoid sliders. Check whether a carousel is really needed at shouldiuseacarousel.com.</li>
+<li>Remove quick shop functionality.</li>
+<li>Optimise images: use the proper file format, crop and scale them to the display size, and compress them with TinyPNG or Crush.Pics.</li>
+<li>Keep only essential apps.</li>
+<li>Update your theme.</li>
+<li>Optimise and minify your code. [L0423.026]</li>
+</ol>
+<p><strong>Improve page speed in this order (older source)</strong></p>
+<ol type="1">
+<li>Test the site regularly with Google PageSpeed Insights, GTmetrix or Pingdom. [L1522.036]</li>
+<li>Check whether the theme causes slowness. If so, change the theme or invest in improving it, because theme updates can shift load time by as much as 10 seconds. [L1522.036]</li>
+<li>Reduce front-end apps, meaning apps that run JavaScript as the page loads. Replace simple app features with custom code from a developer where practical. [L1522.036]</li>
+<li>Compress images before uploading them, using an offsite tool such as ImageOptim rather than in-store compression apps, which are unreliable. [L1522.036]</li>
+<li>Embed videos from YouTube or Vimeo in a lightweight way instead of with the standard Shopify embed code, which is often the largest element in page load time. [L1522.036]</li>
+<li>If fixes are too technical, hire a developer with Shopify page speed experience, for example through onlinejobs.ph, freeup.net or toptool.com. [L1522.036]</li>
+</ol>
+<p><strong>Improve page speed (image and app focus)</strong></p>
+<ol type="1">
+<li>Use GTmetrix or Google PageSpeed to identify the main issue, usually images or GIFs. [L1260.036]</li>
+<li>Compress images below 300 KB and GIFs below 800 KB (ideally under 1 MB). [L1260.036]</li>
+<li>Target product images under 50 KB while keeping the quality nearly the same, using TinyPNG or Photoshop. [L1260.036]</li>
+<li>Install as few apps as possible, since each app adds JavaScript that runs on every page load. Remove unused apps and their code. [L1260.036]</li>
+<li>Note that page builders such as PageFly add an extra layer on top of the theme and slow the page, so weigh the speed cost against the conversion features. [L1260.036]</li>
+</ol>
+<p><strong>Speed check and fix</strong></p>
+<ol type="1">
+<li>Run the store through GTmetrix or Google PageSpeed.</li>
+<li>Identify the main issue, which is usually large images or GIFs.</li>
+<li>Compress the images and GIFs with TinyPNG or Photoshop.</li>
+<li>Remove apps that are no longer used, together with their code.</li>
+<li>Re-test the page speed. [L1345.034]</li>
+</ol>
+<h1 id="images">Images</h1>
+<h2 id="compression-and-format">Compression and format</h2>
+<ul>
+<li>Compress product images to small file sizes to reduce product page load time. This improves both search engine rankings and user experience. [L0176.002]</li>
+<li>Compress all images so they stay high quality on screen but have small file sizes. [L1098.007]</li>
+<li>Compress all product images before uploading them, for example with TinyPNG, and use lower resolution so pages load within a few seconds. Slow-loading product images cause visitors to bounce. [L0950.030]</li>
+<li>Shopify has begun serving the WebP image format automatically to supporting browsers such as Chrome. This speeds up loading without any action from the store owner. Continue using Shopify's built-in handling and focus your own optimisation on other areas. [L0390.034]</li>
+<li>Convert all JPEG, PNG and GIF images to WebP. A 1 to 2 MB JPEG can drop to about 200 KB or less. Use an online converter for bulk conversion instead of an image app. [L1410.031]</li>
+<li>Speed up animated GIFs by converting each GIF to WebP. GIFs of 1.5 to 5 MB typically drop to about 200 to 500 KB as WebP. [L1436.037]</li>
+<li>Compress oversized supplier images before uploading them, for example files around 20 MB, because heavy media slows the store. [L0857.055]</li>
+<li>Oversized image files force the browser to shrink them, which slows page loading. This matters once the store goes live, even if it does not matter for a demo site used to call suppliers. [L1310.009] (older: 2021-2022)</li>
+<li>Speed tools often flag oversized images on mobile. A 1000 by 1000 pixel image that looks fine on desktop can be too large on a small screen. Serving a smaller image to mobile devices fixes this warning. [L0709.012]</li>
+<li>A reliable approach for device-specific images is to load a separate desktop version and a separate mobile version, switched with media queries. Responsive srcset attributes were described as not always reliable. [L0709.013]</li>
+<li>Lazy loading for images is a code feature. Shopify's Turbo theme and some other themes have it built in. Other themes need a developer to add lazy loading code or a theme change. No reliable app for this was known to the lesson's author. [L1266.025] (older: 2021-2022)</li>
+<li>Crop and scale images to the display size before upload, and use the proper file format. [L0423.026]</li>
+</ul>
+<h2 id="image-alt-text-seo-and-accessibility">Image alt text (SEO and accessibility)</h2>
+<ul>
+<li>Every image on the site needs an image alt tag. In Shopify this is easy to add in the image settings. [L1467.013]</li>
+<li>Image alt tags must be descriptive and should include at least one keyword relevant to the content where the image appears. [L1467.014]</li>
+</ul>
+<h1 id="video-and-embeds">Video and embeds</h1>
+<ul>
+<li>Embedded YouTube videos do not slow site loading because they are served from YouTube's servers. Uploading videos directly to your Shopify server will slow your site. [L0245.030] (older: 2020; see the disagreement note below)</li>
+<li>Do not upload the video directly to Shopify or embed it like a YouTube or Vimeo player, because this slows the site. Hosting the video through LyveCom keeps load times lower and gives e-commerce analytics. [L0959.009]</li>
+<li>Embedded videos on product pages load slower and lower page speed scores, even though they do not hurt the user. Embed a video only when it helps conversion. Otherwise upload it to a YouTube channel, link it from the product description, and link the social profiles in the store footer. [L0806.040]</li>
+<li>The standard Shopify YouTube embed loads a large JavaScript file even when the video is not playing, which adds seconds to load time. Use a thin embed that loads the JavaScript only after the user clicks play, either through custom code (preferred) or a light app. [L1266.016] (older: 2021-2022)</li>
+<li>Standard YouTube or Vimeo embeds are often the largest element of a page's load time. Embed them with a lightweight method instead, especially on product pages that use video. [L1522.039] (older: 2021-2022)</li>
+<li>Common speed problems are large page videos, oversized images, unused app code and tracking scripts from Google or Microsoft. Background tracking scripts often add load time even when visitors don't notice. [L0854.070] (older: 2022)</li>
+<li>Do not embed large PDFs directly in product pages. Upload the file to Shopify Files or Dropbox and link to it with a text link or a PDF icon image. [L0970.066]</li>
+<li>A new Shopify store loads very quickly at first. Slowdown comes from many videos, uncompressed high-resolution images and apps. Check speed after each batch of content or app changes. [L0807.035]</li>
+</ul>
+<h1 id="apps-and-leftover-code">Apps and leftover code</h1>
+<h2 id="how-many-apps">How many apps</h2>
+<ul>
+<li>Apps needed with a new theme: very few, typically 4 to 5 in total, and only those mentioned in the blueprint. Most functionality is built in. [L0249.025] (older: 2022)</li>
+<li>No fixed number of apps slows a store. A single poorly coded app can slow it, while highly rated apps usually do not affect user experience in a meaningful way. [L1092.046] (older: 2022)</li>
+<li>Use as few apps as possible to keep the store fast and working properly. Automatic discounts built into Shopify are preferred to extra apps. [L0650.026]</li>
+<li>Every app adds JavaScript and code, so every installed app increases load time. Remove unused apps, ask developers about their load impact, and minimise installed apps. [L1412.042]</li>
+<li>Every app and large file slows the store. Heavy session-recording apps add extra load. Avoid adding them until the store has enough traffic to justify the cost and the slowdown. [L1380.037]</li>
+<li>Page speed comes mainly from a fast theme, compressed images and removing leftover code from apps you no longer use. Speed apps are not needed for this. [L0853.090] (older: 2021)</li>
+<li>Two apps that both add review or rich snippet schema data can conflict and cause Google Search Console or Merchant Center warnings. Find the apps that add schema data and disable one of them. [L0801.100] (older: 2021)</li>
+</ul>
+<h2 id="review-apps">Review apps</h2>
+<ul>
+<li>Review app (Loox) display: go to Shopify Admin &gt; Online Store &gt; Themes &gt; Customize &gt; App embeds and enable the app there if its reviews do not appear on the store. Apps often do not display on PageFly stores that use Theme 2.0 until they are enabled this way. [L0363.032]</li>
+</ul>
+<h2 id="leftover-code-after-uninstalling">Leftover code after uninstalling</h2>
+<ul>
+<li>Apps leave their code in the store even after uninstalling. This adds page weight and slows the site. Contact the app developer through the Shopify app store to have the leftover code removed, or ask where the code is and remove it yourself. [L0806.036] (older: 2024 is not old; see note)</li>
+<li>Uninstalling an app from the app dashboard removes it from the app section, but its code may stay in the store theme and keep slowing it down. Ask the app developer which code to delete after uninstalling. [L0551.030] (older: 2020)</li>
+<li>Uninstalling an app from the Shopify app store does not remove the code the app added to the theme. Remove the leftover code separately and check page speed again. [L1088.026] (older: 2020)</li>
+<li>Remove and test apps carefully, because uninstalling an app often leaves its injected code on the site. Leftover code can be removed by contacting the app developer through the app's page in the Shopify App Store. [L1092.045] (older: 2022)</li>
+<li>Revisit the theme after about two years. Stores built by several developers often contain residual code from apps that were uninstalled but not fully removed. This leftover code can cause errors that slow the site or break important features. [L0390.037]</li>
+<li>Leftover code from multiple freelancers and removed apps can account for a large share of a theme's code and can create many JavaScript errors. These errors may stop other scripts from running, so features such as upsells on the cart can silently fail. [L0390.038]</li>
+<li>Leftover HTML or CSS footer code visible on the storefront, such as raw code text, makes a store look broken and unprofessional. Remove it before going live. [L0656.017]</li>
+<li>Speed issues caused by uninstalled apps: use GTmetrix to find the slowest-loading code snippet, search for it on Google to identify the app or cookie, and then decide whether to keep it or ask the developer to remove it. [L0971.080] (2024)</li>
+<li>Note: a formatting or display bug after installing a theme or app can be found by disabling installed apps one by one, except core apps, and checking after each one. [L1285.030] (2024)</li>
+<li>Note: the apps that cause a bug can be found by the same one-by-one method. [L1285.030]</li>
+</ul>
+<h2 id="removing-leftover-code-procedures">Removing leftover code (procedures)</h2>
+<p><strong>Reduce app code that slows the store (older source)</strong></p>
+<ol type="1">
+<li>Remove apps you do not use.</li>
+<li>Message each app developer in the Shopify app store to remove the code they injected, because removing an app does not always remove its code.</li>
+<li>Measure speed on Google PageSpeed Insights and GTmetrix rather than the Shopify speed score. [L0665.034] (older: 2022)</li>
+</ol>
+<p><strong>Find leftover app code in the page source</strong></p>
+<ol type="1">
+<li>Open a store page in Google Chrome and choose View page source.</li>
+<li>Search the page for the uninstalled app's name (Cmd+F on Mac, Ctrl+F on PC).</li>
+<li>Check the matches. Leftover code from the app shows up as matches, and some remaining matches may belong to apps still in use.</li>
+<li>Check the store's URL on BuiltWith to see the tools and software installed on it.</li>
+<li>Email the app developer through the Shopify app store, ask them to confirm the app is fully removed, and ask whether any remaining code must be removed manually. [L0835.080] (2023)</li>
+</ol>
+<ul>
+<li>BuiltWith shows the tools and software installed on a website when you enter its URL. It can help confirm that unwanted apps are no longer present. [L0835.081] (2023)</li>
+</ul>
+<h2 id="custom-code-instead-of-apps">Custom code instead of apps</h2>
+<ul>
+<li>Custom code in the theme keeps a site faster than stacking extra apps. [L0968.036] (older: 2021)</li>
+<li>Replace simple app features with custom code from a developer where practical. [L1522.036] (older: 2021-2022)</li>
+</ul>
+<h1 id="scripts-fonts-and-mistakes-in-code">Scripts, fonts and mistakes in code</h1>
+<ul>
+<li>Mistake: heavy session-recording apps and tracking scripts add load time. Check each one against its speed cost. [L1380.037, L0854.070]</li>
+<li>When copy-pasting code, word processors can convert straight quotes to curly quotes, which breaks the code. Copy the code from the original source and follow its instructions exactly. [L0803.086] (older: 2022)</li>
+<li>Do not change the tracking or theme code without checking its load time afterwards. [L0807.035]</li>
+</ul>
+<h1 id="javascript-errors">JavaScript errors</h1>
+<ul>
+<li>JavaScript errors can break add-to-cart and ruin the customer experience even when the ads and product are fine. Check the add-to-cart flow after every theme or app change. [L1225.042] (2025-26 source)</li>
+<li>Leftover code from multiple freelancers and removed apps can create many JavaScript errors that stop other scripts from running, so cart upsells can silently fail. [L0390.038]</li>
+<li>A performance fix can break a page. A sales drop after a speed optimisation app was added was traced to script placement, which kept main product images from loading quickly and lowered conversion. Check the product page visually after any speed change. [L0950.027]</li>
+<li>A mandatory terms-and-conditions checkbox added to the cart with a third-party app can add about 0.5 seconds to cart load time. Replacing it with a small HTML addition in the theme avoids that delay. [L0390.056]</li>
+</ul>
+<h1 id="cookie-consent">Cookie consent</h1>
+<ul>
+<li>Cookie consent is a separate section at the bottom of the theme editor sidebar, below Footer. It shows a pop-up at the bottom of the page where visitors accept cookie tracking. [L0775.065]</li>
+<li>Turn cookie consent on for stores selling into the EU, where cookie opt-in is required. Leave it off if it is not needed. [L0775.065]</li>
+<li>Cookie consent banners are mainly needed because of EU laws. Ask support how to add one to an older theme rather than building it yourself. [L0934.093] (2023)</li>
+</ul>
+<h1 id="accessibility">Accessibility</h1>
+<ul>
+<li>Accessibility means making the store usable for everyone. Analyse colour contrast and component sizes, and use accessibility apps where they add extra support. [L0423.028]</li>
+</ul>
+<h1 id="urls-and-handles">URLs and handles</h1>
+<h2 id="product-url-pattern">Product URL pattern</h2>
+<ul>
+<li>Create product page URLs in the format [Brand Name]-[Product Name]-[SKU#] to include keywords in the URL slug and make the URL more descriptive for search engine optimisation. [L0176.006]</li>
+<li>Product URLs should follow the pattern brand-name-product-name-sku. Use dashes, not underscores. Example: herman-miller-aeron-chair-9876. This matches competitor conventions and helps Google understand products. [L0274.051] (2023)</li>
+<li>In Shopify, the domain and the path prefix (/products/ or /collections/) are generated automatically. The only part to edit is the slug that follows them. [L1414.002] (older: 2021-2022)</li>
+</ul>
+<h2 id="handles-set-once-change-carefully">Handles: set once, change carefully</h2>
+<ul>
+<li>A product's URL handle should be set once and kept unchanged after the store is live, because changing it breaks existing links and rankings. A product title can be changed freely. [L0835.072] (2023)</li>
+<li>Changing names and descriptions without changing URLs is safe. Do not change product URLs without setting up redirects. [L0964.095] (2023)</li>
+<li>If a product URL handle is changed after the page has ranked or received links, create a redirect from the old URL to the new one. Redirects are needed only for pages that already have traffic, rankings or external links. [L0835.073] (2023)</li>
+<li>When you change a product's URL handle in Shopify, a 'Create redirect' checkbox appears. Keep it selected for any product that already has rankings, backlinks or ad traffic, because unchecking it leaves the old URL broken. [L0835.134] (2023)</li>
+</ul>
+<p><strong>Change product URLs on a live store</strong></p>
+<ol type="1">
+<li>Set up redirects from the old URLs to the new ones.</li>
+<li>Check in Google Search Console that there are no issues.</li>
+<li>Resubmit the sitemap to Google Merchant Center as soon as possible.</li>
+<li>Consider pausing ad campaigns during the change so the old link does not lead to a dead page. [L0964.096] (2023)</li>
+</ol>
+<p><strong>Change product titles and handles before launch (order of work)</strong></p>
+<ol type="1">
+<li>Make all product title and URL handle changes before submitting the sitemap or feed.</li>
+<li>Delete the sitemap submitted in Google Search Console.</li>
+<li>Delete the product feed in Merchant Center.</li>
+<li>Make the changes you want.</li>
+<li>Resubmit the sitemap and re-add the product feed after the changes are finished.</li>
+<li>Create redirects only for pages that already had traffic or links, which is not needed before the store has launched. [L0835.074] (2023)</li>
+</ol>
+<h2 id="hiding-products">Hiding products</h2>
+<ul>
+<li>Hiding a product from the Online Store sales channel removes it from the homepage and collections, but keeps the product. Google then sees a broken link and 404 errors for that URL. [L1414.017] (older: 2021-2022)</li>
+</ul>
+<h2 id="finding-404-pages">Finding 404 pages</h2>
+<p><strong>Find pages returning 404 errors in Google Analytics</strong></p>
+<ol type="1">
+<li>Go to Behavior.</li>
+<li>Open Site Content.</li>
+<li>Click All Pages.</li>
+<li>Find the row for the 404 page and click it.</li>
+<li>Add the secondary dimension Source to see which source sends traffic to that page. Medium or Term can be added for more detail. [L0941.041]</li>
+</ol>
+<h1 id="redirects">Redirects</h1>
+<ul>
+<li>Use redirects only where absolutely needed, because each redirect adds an extra loading step. [L1266.024] (older: 2021-2022)</li>
+<li>301 redirects can be created by hand in the Navigation section (Online Store &gt; Navigation) without an app. For redirecting many old URLs at once, a bulk redirect app can be installed. [L1372.027] (older: 2021-2022)</li>
+<li>301 redirects are set in the Shopify admin under the navigation settings. An app can be used to manage many redirects in bulk. [L1414.029] (older: 2021-2022)</li>
+</ul>
+<p><strong>Redirect for a renamed collection</strong></p>
+<ol type="1">
+<li>Rename the collection in Shopify if it is necessary.</li>
+<li>Add a URL redirect from the old collection address to the new one in Shopify.</li>
+<li>Confirm the old URL forwards to the new page. [L1114.028] (2023)</li>
+</ol>
+<h2 id="hosting-and-technical-limits">Hosting and technical limits</h2>
+<ul>
+<li>Shopify is a hosted platform, so technical SEO on it is restricted to the settings and features the platform exposes to the merchant. Advanced server-level changes are outside the scope of a Shopify store owner. [L1362.004] (older: 2021-2022)</li>
+<li>Platforms such as WordPress with WooCommerce or Magento give the owner more control over hosting and server features than Shopify does. Stores on these self-hosted platforms can carry out technical SEO measures that a Shopify store cannot. [L1362.005] (older: 2021-2022)</li>
+</ul>
+<h1 id="canonical-and-seo-basics">Canonical and SEO basics</h1>
+<h2 id="canonical">Canonical</h2>
+<ul>
+<li>The canonical code goes into theme.liquid inside the head section, directly before the closing head tag. Paste it exactly as provided, with no edits. The code itself is not included in this unit; take it from the original course material. [L1414.020] (older: 2021-2022)</li>
+</ul>
+<h2 id="meta-descriptions-and-yoast">Meta descriptions and Yoast</h2>
+<ul>
+<li>Every page on the website needs a unique meta description. Pages without one, such as those that fall back to the menu text, produce weak snippets in search results. [L0575.011]</li>
+<li>Do not use Yoast SEO on Shopify, because it is not recommended for Shopify stores. [L0667.038] (2025)</li>
+</ul>
+<h2 id="keeping-pages-out-of-google">Keeping pages out of Google</h2>
+<ul>
+<li>To keep a page out of Google, remove it from the sitemap so it is not submitted, or add a noindex tag via the back end. Pages that already receive clicks, such as a warranty page, are usually better left indexed. [L0963.038] (older: 2022)</li>
+<li>Use a noindex tag on duplicate test pages so search engines do not treat them as duplicate content. Apply it through a noindex app on Shopify. The duplicate page is marked noindex through a noindex app available for Shopify. [L1364.036, L1364.037] (older: 2021-2022)</li>
+<li>A page that appears too often in on-site search results needs a theme-level fix that is not built into the theme. Email support with the exact question and let developers check it. [L0963.039] (older: 2022)</li>
+</ul>
+<h2 id="indexed-pages-in-search-console">Indexed pages in Search Console</h2>
+<ul>
+<li>In Google Search Console, a Shopify store showing around 128 indexed pages and around 2.52K non-indexed pages is normal. Most non-indexed URLs are duplicates created by product variants. [L0971.009] (2024)</li>
+<li>Check whether the non-indexed pages are normal:
+<ol type="1">
+<li>Count the pages on the store (products, blogs, other pages).</li>
+<li>Compare that count with the number of indexed pages.</li>
+<li>If they roughly match, the other URLs are variant duplicates that Google should not index. [L0971.010] (2024)</li>
+</ol></li>
+</ul>
+<h2 id="speed-and-ranking">Speed and ranking</h2>
+<ul>
+<li>Store speed is a ranking factor for SEO. [L1092.047] (older: 2022)</li>
+<li>Page speed is a critical SEO ranking factor. [L0176.001]</li>
+</ul>
+<h1 id="forms-and-spam-protection">Forms and spam protection</h1>
+<ul>
+<li>In Online Store &gt; Preferences &gt; Spam protection, enable Google reCAPTCHA on contact forms. Optionally also enable it on the login, create account and password recovery pages. Some customers may then be asked to complete a reCAPTCHA task. [L0370.024] (older: 2021-2022)</li>
+</ul>
+<h1 id="where-sources-disagree">Where sources disagree</h1>
+<ul>
+<li><strong>YouTube embeds.</strong> One 2020 source says embedded YouTube videos do not slow a site because they are served from YouTube's servers. [L0245.030] (older: 2020). Later sources say embeds slow the page: embedded videos load slower on product pages, and the standard Shopify embed loads large JavaScript even when not playing. [L0806.040, L1266.016] (older: 2021-2022 for L1266.016). Use the thin or lightweight embed when a video is needed, and embed only when it helps conversion. [L0806.040, L1266.016]</li>
+<li><strong>How much the score matters.</strong> Several sources say the Shopify admin score is unreliable and GTmetrix or Google tools are better. [L0468.071, L1092.042, L0665.035, L0854.069] One source says the score matters less than First Contentful Paint. [L1412.046] Another says its overall factors do not matter much. [L1410.032] The score depends on apps, theme code and media size. [L1292.022] Use the waterfall and First Contentful Paint as the main signals. [L0857.052, L1412.045]</li>
+<li><strong>Grade targets.</strong> One source says aim for an A or A+ during a fix. [L0854.068] (older: 2022) Another says A is preferred, B or B+ is fine, and older heavy stores can sit at D+ and still sell. [L0963.042] (older: 2022) Aim for A while fixing; accept B when the store already sells. [L0854.068, L0963.042]</li>
+<li><strong>App count.</strong> One source gives a typical count of 4 to 5 apps for a new theme. [L0249.025] (older: 2022) Another says no fixed number slows a store, and one poorly coded app is enough to matter. [L1092.046] (older: 2022) Use the blueprint list as the limit, and judge each app by its code. [L0249.025, L1092.046]</li>
+<li><strong>Revenue per second.</strong> One source gives 11% loss in page views and 7% in conversions per second. [L0423.025] Another says the 10% claim is unreliable and advises testing your own store. [L1522.035] (older: 2021-2022) Test your own store before budgeting for speed work. [L1522.035]</li>
+<li><strong>WebP.</strong> Shopify serves WebP automatically to supporting browsers, and the advice is to keep using that. [L0390.034] Another source says to convert all JPEG, PNG and GIF images to WebP before upload. [L1410.031] The units do not explain how the two fit together. Use Shopify's built-in handling for delivery, and convert GIFs and oversized files before upload. [L0390.034, L1436.037]</li>
+<li><strong>Image compression tools.</strong> Sources name TinyPNG, Crush.Pics, Photoshop and ImageOptim. [L0423.026, L1260.036, L1522.036] One older source says in-store compression apps are unreliable and recommends an offsite tool. [L1522.036] (older: 2021-2022) Use an offsite tool. [L1522.036]</li>
+<li><strong>Sliders and carousels.</strong> One source says avoid sliders. [L0423.026] Another says keep a slideshow only if analytics show clicks and sales. [L1098.008] Remove them unless you can measure clicks and sales. [L0423.026, L1098.008]</li>
+<li><strong>Redirects.</strong> One older source says use redirects only where absolutely needed. [L1266.024] (older: 2021-2022) Another says redirect whenever a live product URL changes. [L0964.095] (2023) A third says redirects are needed only for pages with traffic, rankings or links, and not before launch. [L0835.073, L0835.074] Redirect pages that already have traffic, rankings or links. [L0835.073, L0835.074, L1266.024]</li>
+<li><strong>Mobile versus desktop.</strong> One source says admin changes apply to both devices. [L0857.051] Another says test each device separately because a store can load fast on one and slower on the other. [L1446.031] Make the change once in the admin, then test both devices. [L0857.051, L1446.031]</li>
+<li><strong>Cached results.</strong> One source says cached results can change the score, so re-run after a few minutes. [L0970.068] Another says Shopify caches content heavily, so a theme change can take a while to appear live. [L0709.014] Wait for the cache to update before judging a change. [L0709.014, L0970.068]</li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/16-social-profiles-tracking-and-google-readiness/"><span class="k">&larr; Previous</span><span class="v">Social profiles, tracking and Google readiness</span></a><a class="nx" href="../../04-store-build-and-shopify/18-pre-launch-testing-and-go-live/"><span class="k">Next &rarr;</span><span class="v">Pre-launch testing and go-live</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

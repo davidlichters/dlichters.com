@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pixel, events, conversions API and Shopify integration | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.6: Pixel, events, conversions API and Shopify integration.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/06-pixel-events-conversions-api-and-shopify-integration/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Pixel, events, conversions API and Shopify integration | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.6: Pixel, events, conversions API and Shopify integration."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/06-pixel-events-conversions-api-and-shopify-integration/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/06-pixel-events-conversions-api-and-shopify-integration/">Plain version</a></div><h1>9.6 Pixel, events, conversions API and Shopify integration</h1><article><h2 id="ios-14-limits-and-why-server-side-tracking-matters">iOS 14 Limits and Why Server-Side Tracking Matters</h2>
+<ul>
+<li>Since iOS 14, cookie-based tracking is limited. The Conversions API lets a store send data server to server to Facebook and Google, so connect the store with maximum data sharing to keep tracking accurate. (older, 2021) [L0247.068]</li>
+<li>Connecting Shopify directly to Facebook through Shopify's built-in integration uses the Conversions API, which keeps conversion tracking reliable after the iOS 14 privacy changes. (older, 2021) [L0853.075]</li>
+<li>Linking Facebook and Shopify with the correct pixel setup from the start still recovers some data through Safari blocking, but nothing fully restores pre-iOS 14 tracking. (older, 2021) [L1112.025]</li>
+<li>Maximum data sharing with the Conversions API recovers only part of the tracking lost after Apple's iOS 14.5 changes. Do not assume it brings back all lost conversions. [L1318.017]</li>
+<li>After the iOS update, many conversions are not tracked, so the pixel needs larger audiences to find results. Audiences of around 40 to 50 million or more give the pixel more data than tightly restricted ones. [L0648.017]</li>
+<li>Remarketing audiences shrank after iOS 14, so the minimum usable remarketing window is now about seven days. Make windows as large as the traffic allows instead of very narrow ones. (older, 2021) [L1112.023]</li>
+<li>Before iOS 14, a site with a few hundred daily visitors could split Facebook remarketing into windows of 2, 4 and 7 days, then wider windows beyond 7 days. These narrow windows no longer work well because audiences shrank after the update. (older, 2021) [L1112.082]</li>
+<li>Device-based audience changes for Facebook and iOS are not required at small ad budgets. They matter more as spend and audience size grow. (older, 2022) [L0969.076]</li>
+<li>The Facebook ad training was updated after the iOS privacy changes. Current practice differs mostly in how Shopify connects the store to Facebook ads. (older, 2022) [L0803.051]</li>
+<li>Set Shopify's Facebook data sharing to maximum so Meta can capture more users for remarketing. (older, 2022) [L1113.063]</li>
+</ul>
+<h2 id="prerequisites-and-account-structure">Prerequisites and Account Structure</h2>
+<ul>
+<li>Meta Pixel: a tracking code on the store that reports visitor actions such as add to cart, checkout and purchase to Meta. Meta uses this data to learn which people are likely to buy and to optimise ads. [L1021.013]</li>
+<li>Events must be configured. In Events Manager, set up Add to Cart, Initiate Checkout and Purchase so Meta knows which actions count as success. Events that are not configured give Meta no signal to optimise towards. [L1021.014]</li>
+<li>Backend setup order between Facebook and Shopify:
+<ol type="1">
+<li>Connect your Facebook Page to Shopify, so Facebook knows which store to send people to. [L1021.012]</li>
+<li>Verify your domain, which proves that you own the website. [L1021.012]</li>
+<li>Create your Meta Pixel and connect it to the store. [L1021.012]</li>
+<li>Configure events in Events Manager for Add to Cart, Initiate Checkout and Purchase. [L1021.012]</li>
+<li>Add a payment card, because Meta needs a way to charge ad spend. [L1021.012]</li>
+</ol></li>
+<li>Connect a Meta Pixel to your existing Business Manager (business portfolio) rather than creating a new Business Manager. The pixel is a dataset that lives under the Business Manager and is linked to the ad account from there. [L1027.001]</li>
+<li>Domain verification: when Meta and Shopify are linked through the Meta sales channel, the integration handles domain verification. A separate meta tag in theme.liquid is not needed. (2025) [L0667.041]</li>
+<li>Connecting the online store to the Business Manager is a separate step after domain verification. It is required before running dynamic remarketing ads. [L1025.019]</li>
+<li>Requirements for complete conversion data: a connected and verified domain, the Shopify Conversions API integration, and the tracking data switches turned on. Without all three, conversion data is incomplete. [L1288.006]</li>
+<li>A Meta Commerce account must be created inside the Meta Business Manager so the Shopify products can be placed in the Business Manager. This is a prerequisite for dynamic remarketing with product catalogs. [L1318.008]</li>
+<li>A pixel created by yourself, outside the Business Manager and the Shopify integration, may not connect properly. Always create the pixel from the business portfolio that owns the ad account and connect it through the partner setup. [L1027.009]</li>
+<li>Setting up the connection and the Commerce account does not spend any ad budget. Ads are created in later steps. [L1318.011]</li>
+</ul>
+<h2 id="creating-the-pixel-dataset-in-meta">Creating the Pixel (Dataset) in Meta</h2>
+<ul>
+<li>The pixel must already exist in Meta Events Manager before you link it in Shopify. If no pixel exists, Shopify's dataset step offers a Create new option instead of listing an ID. [L1028.008]</li>
+<li>Create the pixel in Meta Business settings:
+<ol type="1">
+<li>Go to Business settings and open Data sources. [L1024.021]</li>
+<li>Open Data sets. The pixel was moved from its former location to data sets. [L1024.021]</li>
+<li>Click Add, then Create new data set. [L1024.021]</li>
+<li>Name the data set after the store and click Create. [L1024.021]</li>
+</ol></li>
+<li>Ad set &gt; Conversion &gt; Dataset is the Meta pixel and should already be selected by default. If no pixel exists, create one, add it to the website and grant the needed permissions to the user and the Business Manager. [L0865.017]</li>
+<li>Create a new Meta pixel for each new product test. You create it yourself inside the account, so it does not need to be bought. [L1171.014]</li>
+<li>Alternative to Shopify: install the Facebook pixel directly through Facebook and the Google pixel directly through Google to keep full control over tracking and retargeting. For a beginner who wants to start immediately, Perfect Audience can track both Facebook and Google visitors with one line of code on the site. [L0923.010]</li>
+<li>Three ways to set up the pixel on the Set up Meta pixel screen:
+<ul>
+<li>Add the pixel code to the website yourself (marked Recommended). [L1027.016]</li>
+<li>Send instructions to a developer. [L1027.016]</li>
+<li>Set up with a partner such as Shopify or WordPress. For a Shopify store, the partner route connects the pixel through the Shopify integration. [L1027.016]</li>
+</ul></li>
+<li>Traffic route: send Facebook traffic to your Shopify store rather than using Facebook's built-in direct-sell option. This was the practice as of early 2023 and may change. [L0934.051]</li>
+<li>Facebook Commerce Center: the new Facebook sales channel uses it. It needs fewer apps and no extra fees, which makes setup easier than the older process. (older, 2021) [L0247.069]</li>
+</ul>
+<h2 id="connecting-shopify-to-facebook-and-instagram">Connecting Shopify to Facebook and Instagram</h2>
+<p>Two procedures reach the same Facebook &amp; Instagram channel. Use procedure A for the current Shopify flow. Procedure B is the order used in a separate setup.</p>
+<ul>
+<li>Shopify app: install the Facebook &amp; Instagram app from the Shopify App Store (developer: Meta, free to install, additional charges may apply), then click Get started and log in to Facebook. [L1027.012]</li>
+<li>The personal Facebook profile is used only as the access route to the business accounts. It is not the owner of the pixel or catalog. [L1027.012]</li>
+<li>Shopify asks for a business portfolio. A portfolio that does not meet Meta's requirements for shops cannot be selected, and the Connect button stays unavailable for it. In that case choose Create new business portfolio or pick a portfolio that qualifies before connecting. [L1027.013]</li>
+</ul>
+<p><strong>Procedure A (Source D 2026)</strong></p>
+<ol type="1">
+<li>In the Shopify admin, install the Facebook &amp; Instagram app and click Get started, then connect your Facebook account. [L1027.002]</li>
+<li>Under Set up Ads on Facebook and Instagram, connect the business portfolio (Business Manager) that owns the product catalog, choose or create a catalog, and accept Meta's Product Catalog Terms. [L1027.002]</li>
+<li>Under Manage Facebook &amp; Instagram data sharing preference, select Maximum and save. Maximum shares the most data with Facebook and uses the Meta Pixel, advanced matching and Conversions API. [L1027.002]</li>
+<li>Submit for review and wait while the channel setup finalizes. This takes several minutes. Do not refresh. [L1027.002, L1028.012]</li>
+<li>In Ads Manager, open the ad account, then open Events Manager from the left column. [L1027.002]</li>
+<li>Choose Connect data, select Web, then Create a new dataset (pixel). Leave the name field empty if you wish, and agree to the Meta Business Tools Terms. [L1027.002]</li>
+<li>Choose the option to set up the pixel with a partner (Shopify), go to Shopify, and confirm the connection. [L1027.002]</li>
+<li>In Shopify, make sure the Facebook and Instagram sales channel is installed, and set the data sharing to Maximum. [L1027.002]</li>
+<li>Return to Events Manager and click Next. The status stays inactive until test traffic is sent. [L1027.002]</li>
+<li>Click Send Test Traffic, then Finish. [L1027.002]</li>
+</ol>
+<p><strong>Procedure B</strong></p>
+<ol type="1">
+<li>In Shopify admin, go to Sales channels and search for Facebook (the Facebook &amp; Instagram app), then click Get started. [L1028.005]</li>
+<li>Click Connect account. [L1028.005]</li>
+<li>Log in with the Facebook profile you want to use. Shopify uses this personal profile only to access your business accounts. Review the requested access (name and profile picture, view access) and continue. [L1028.005]</li>
+<li>Choose the business profile that owns the ad account you want to use (the one you created in your ad account). [L1028.005]</li>
+<li>Choose the data sharing preference (see the data sharing section). [L1028.005]</li>
+<li>In the dataset step, select the existing pixel. If no pixel exists yet, click Create new. [L1028.005]</li>
+<li>Click Confirm, then wait while Shopify shows Finalizing channel setup. [L1028.005, L1028.012]</li>
+<li>Continue to the catalog step and sync products. [L1028.005]</li>
+</ol>
+<p>Procedure B also notes that if you have a product catalog, connect the business portfolio that owns it during setup. You can manage how your products are advertised later. [L1028.013]</p>
+<ul>
+<li>The Set up Meta pixel screen for Shopify is handled through the partner route. The pixel connects through the Shopify integration. [L1027.016]</li>
+<li>Changing the connected Business Manager: remove the existing Facebook channel or business manager connection in the Shopify Facebook app, then connect the new Business Manager there. [L1218.015]</li>
+<li>Older Shopify procedure (2022): enable the Facebook pixel under Online Store &gt; Preferences, choose the highest level of data sharing in the customer privacy settings, and connect Shopify directly to Facebook, since this is used for the product feed. (older, 2022) [L1281.052]</li>
+<li>Orders bought through Meta still appear in Shopify if the purchase runs through your Shopify store. The checkout option you choose in Meta does not change this. [L0965.054]</li>
+</ul>
+<h2 id="data-sharing-levels-in-shopify">Data Sharing Levels in Shopify</h2>
+<p>Shopify's Facebook &amp; Instagram data sharing preference has three choices: Conservative, Enhanced and Maximum. Shopify shows the choice as "Manage Facebook &amp; Instagram data sharing preference" and "Choose your data sharing preference." [L1027.003, L1028.006]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What it means</th>
+<th>Source</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conservative</td>
+<td>Listed as a choice; the sources give no further detail.</td>
+<td>[L1027.003]</td>
+<td>Not used in the sources' setups.</td>
+</tr>
+<tr>
+<td>Enhanced</td>
+<td>Customer activity is sent through the Meta Pixel, advanced matching and the Conversions API. Customers can stop this from their own Facebook account settings.</td>
+<td>[L1028.006, L1028.007]</td>
+<td>Used in one setup. Maximum is also a valid choice.</td>
+</tr>
+<tr>
+<td>Maximum</td>
+<td>Shares the most data with Facebook. Uses the Meta Pixel, advanced matching and Conversions API. Continually updated with Meta's latest ad technology.</td>
+<td>[L1027.002, L1027.003]</td>
+<td>Recommended by most sources for the best possible results.</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Shopify's setup guidance cites a 17.8% lower average cost per result for advertisers who used the Conversions API alongside the Meta Pixel. [L1027.003]</li>
+<li>Meta reports that sending customer data through both the Meta Pixel and the Conversions API together lowers cost per action (CPA) compared with the Pixel alone. This is why Enhanced combines both channels. [L1028.019]</li>
+<li>Data sharing is a single setting. If it is correct, the audience sizes in Meta should be correct. [L0965.049]</li>
+<li>Maximum sends customer personal data to Meta. Before saving the setting, the store's privacy policy must describe how personal data is used and shared with third parties such as Facebook. Shopify's share data settings are where this preference is chosen. [L1027.014]</li>
+<li>Maximum data sharing is also needed for purchase conversions to appear in campaigns. Without it, the Purchase event may not reach Meta, and the Purchase option will not appear in the Meta campaign event drop-down. [L0837.032]</li>
+</ul>
+<h2 id="dataset-settings-and-verification">Dataset Settings and Verification</h2>
+<ul>
+<li>Website settings in the dataset (Events Manager &gt; Settings):
+<ul>
+<li>Turn on Automatic website matching. It uses hashed customer data such as email or phone to match customers to Meta accounts, which helps attribute more conversions and supports remarketing. [L1027.006]</li>
+<li>Turn on Automatic advanced matching. [L1027.006]</li>
+<li>The course recommends keeping website matching on and tracking events without code. The dataset feature turns off after 90 days of inactivity. [L1027.006]</li>
+</ul></li>
+<li>Auto-tracking in dataset settings: turn it on only when you want campaigns to draw on offline events from this dataset for ad tracking and attribution. Once enabled for an ad account, every new campaign there uses this dataset for offline event tracking by default. Keeping it off is a valid choice if you have no plans to use it. [L1027.007]</li>
+<li>Extend attribution uploads (Events Manager &gt; Settings) can extend the offline event upload window from 7 days to 90 days. Use it only if your business cannot upload events within at least seven days after they occur. Extensions apply only to offline events from a physical shop. [L1027.008]</li>
+<li>Sharing a dataset: open the dataset's Settings in Events Manager, go to Sharing, and choose Share With an Ad Account. To give another business portfolio access instead, use the option Give another business portfolio access to this dataset. [L1027.019]</li>
+<li>Verify the connection by checking that the pixel ID is linked to the ad account ID in Events Manager and the Business Manager, and that the pixel status shows connected to the ad account. The course checks the pixel ID and ad account ID on both screens. [L1027.010]</li>
+<li>In Events Manager under Integrations, the Shopify (online) entry should show the status Connected and the number of pixels connected to it. The dataset page should show it as connected to one ad account. [L1027.020]</li>
+<li>Events Manager pixel tabs: Overview, Test events, Diagnostics, History and Settings. The Overview's event table shows Total events and the Last received time for each event, such as Add to Cart, Initiate Checkout and Purchase, to confirm data is flowing. [L1028.011]</li>
+</ul>
+<p><strong>Find and verify the two IDs before linking</strong></p>
+<ol type="1">
+<li>Ad account ID: open Ads Manager and check the ad account selector. The numeric Ad account ID is shown under the account name. [L1028.010]</li>
+<li>Pixel ID: open Events Manager and select the pixel, which Meta now lists as a dataset. The numeric ID is shown on its overview and in the page URL. [L1028.010]</li>
+<li>In Shopify, confirm that the selected business profile and ad account match the ad account ID from step 1, and that the dataset matches the pixel ID from step 2. [L1028.010]</li>
+<li>Confirm the link only when both IDs match. [L1028.010]</li>
+</ol>
+<ul>
+<li>If the pixel ID selected in Shopify is wrong, the whole ad optimization process does not work. Always compare the selected ID with the pixel ID shown in Meta Events Manager before confirming. [L1028.009]</li>
+</ul>
+<h2 id="auto-advanced-matching">Auto Advanced Matching</h2>
+<ul>
+<li>Auto advanced matching lets Meta collect more customer data from the website, such as phone number and address, which makes remarketing more precise. Turn it on in the Meta ad account. [L0649.006]</li>
+<li>The Shopify course places the same setting in Events Manager &gt; Settings, next to Automatic website matching. Use Events Manager, and keep website matching on. [L1027.006]</li>
+<li>A new Meta pixel knows nothing about who buys. It learns from view, cart, checkout and purchase events, so more events on the store mean faster and better audience learning. [L0649.008]</li>
+</ul>
+<h2 id="conversion-event-for-optimization">Conversion Event for Optimization</h2>
+<ul>
+<li>For a new store, set the Meta ads conversion event to Purchase from the start, because the goal is sales. This is the presenter's experience. Some advertisers start with Add to Cart. [L0642.005]</li>
+<li>Set up the new Facebook pixel site-wide on the store. The optimization event options include Checkouts, Registrations, Leads, Key page views, Adds to cart, and other website conversions. Adds to Cart was reported as the strongest option. [L0643.035]</li>
+<li>Optimizing for Adds to Cart gave a better actual purchase conversion rate than optimizing for purchases. It only pays off if you also have a follow-up sequence for people who added to cart. Even if you already run ads, switch the optimization event to Adds to Cart. [L0643.036]</li>
+<li>Choose between the two: Purchase from the start (for a new store, per the presenter's experience) or Adds to Cart (when you have a follow-up sequence for cart abandoners). [L0642.005, L0643.036]</li>
+</ul>
+<h2 id="one-pixel-per-product-or-per-niche">One Pixel per Product or per Niche</h2>
+<p>Sources differ on when to split pixels. The split points are given below, each with its own condition.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Pixel rule</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two valid strategies</td>
+<td>(1) One pixel per product, which is stricter and gives clean data per product. (2) Several products under one pixel, with a new pixel after 3 to 5 failed tests. Both are accepted; the choice depends on how strict you want the test to be.</td>
+<td>[L0348.023]</td>
+</tr>
+<tr>
+<td>Testing 3 to 5 failed products of different niches</td>
+<td>Create a new pixel and start a new data set for the next products.</td>
+<td>[L0348.021]</td>
+</tr>
+<tr>
+<td>Same niche, all product tests</td>
+<td>Run all product tests on the same pixel.</td>
+<td>[L0349.016, L0639.021]</td>
+</tr>
+<tr>
+<td>Winner found and a new product in a different niche</td>
+<td>Use a different pixel.</td>
+<td>[L0349.016]</td>
+</tr>
+<tr>
+<td>Switching to a completely different niche</td>
+<td>Install a new pixel. The same ad account can usually stay.</td>
+<td>[L1172.038]</td>
+</tr>
+<tr>
+<td>Five products in one niche test</td>
+<td>Use one pixel for all five, so the pixel does not change each time a product is added.</td>
+<td>[L1194.009]</td>
+</tr>
+<tr>
+<td>Product takes off profitably at about 100 conversions</td>
+<td>Create a new pixel for that product. Below about 100 conversions, the pixel has too little data for a change to make a difference.</td>
+<td>[L0639.022]</td>
+</tr>
+<tr>
+<td>Fewer than about 5 sales per day</td>
+<td>Sharing one pixel between products is acceptable while testing.</td>
+<td>[L0645.032]</td>
+</tr>
+<tr>
+<td>About 10 to 15 total sales</td>
+<td>Sharing one pixel across different niches is acceptable. With more data, keep one pixel per niche.</td>
+<td>[L1217.045]</td>
+</tr>
+<tr>
+<td>Purchase volume about 100 or more</td>
+<td>Share one pixel until the store reaches about 100 or more purchases.</td>
+<td>[L1177.042]</td>
+</tr>
+<tr>
+<td>20 purchases</td>
+<td>Too little data to need a second pixel.</td>
+<td>[L1177.042]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Keep one pixel per niche so its data stays focused on that niche. Keep purchase data from one niche separate from another. Products within the same niche can share one pixel while testing. [L0639.021, L0645.032]</li>
+<li>Keep one pixel while testing. The pixel only starts to optimize well after roughly 10 sales for a product. Until then, Facebook's own targeting does most of the work, so the pixel matters less during early tests. [L0639.022, L0645.033]</li>
+<li>In the first test phase, the pixel mainly collects data and does not drive sales. Pixel data becomes important once a product has real sales. [L1217.048]</li>
+<li>In the early stage, with only a few sales, several products can share one ad account and one pixel. The pixel is still gathering data at this point rather than driving sales. [L1217.042]</li>
+<li>A pixel becomes tied to the niche it has been used for over months. When switching to a completely different niche, install a new pixel. [L1172.038]</li>
+<li>A new pixel gives Meta's algorithm a clean data record, so it learns faster than from a pixel with many failed tests attached. Creating a new pixel after failures restarts the learning process. [L0348.022]</li>
+<li>Keep the same pixel when testing products in the same niche. Consider a new pixel when switching to a different niche. Both approaches can work. A new pixel gives more separate data to compare. [L1316.035]</li>
+<li>Each new ad account needs its own new pixel. [L1194.009]</li>
+<li>Sharing a dataset with another ad account is possible through Share With an Ad Account. [L1027.019]</li>
+</ul>
+<h2 id="testing-the-pixel-test-events-and-pixel-helper">Testing the Pixel: Test Events and Pixel Helper</h2>
+<p><strong>Meta Pixel Helper</strong></p>
+<ul>
+<li>Meta Pixel Helper is a free Google Chrome extension. It shows which Meta pixel is installed on the current page, the pixel ID, and the events it fires along with the page URL. (2025) [L0837.030]</li>
+<li>Use it to debug pixel tracking before relying on the data. It shows whether the Meta Pixel is installed on a page and whether it is firing correctly. (2025) [L0844.003]</li>
+<li>Purchase test with Pixel Helper:
+<ol type="1">
+<li>Install Meta Pixel Helper in Google Chrome. [L0837.031]</li>
+<li>Create a temporary product priced at about $1 in your Shopify store and buy it. [L0837.031]</li>
+<li>On the order confirmation page, open the extension and check that a Purchase event was triggered. [L0837.031]</li>
+<li>If no Purchase event appears, the integration between Shopify and Meta is at fault. Check the Facebook &amp; Instagram sales channel settings in Shopify. [L0837.031]</li>
+</ol></li>
+</ul>
+<p><strong>Test events in Events Manager</strong></p>
+<ul>
+<li>Test events procedure (Source D 2026):
+<ol type="1">
+<li>Open the dataset, go to Test events, enter the website URL and click Test events. [L1027.004]</li>
+<li>Take actions on the site, such as View content, Add to cart, Initiate checkout or a simulated purchase. [L1027.004]</li>
+<li>The events should appear in the test view, typically within a few seconds. A status of Active confirms the pixel works. [L1027.004]</li>
+<li>Events can take up to 30 minutes to show in the normal overview. [L1027.004]</li>
+</ol></li>
+<li>Test events procedure with test_event_code:
+<ol type="1">
+<li>Open the pixel in Events Manager and go to Test events. [L1028.015]</li>
+<li>Copy the unique test_event_code shown on the page. [L1028.015]</li>
+<li>For server-side events, open the Graph API Explorer, make sure all parameters match the payload shown on the page, submit the request and return to the Test events page. [L1028.015]</li>
+<li>For website events, enter your website URL in the field and click Test events. [L1028.015]</li>
+<li>Keep the Test events page open in Events Manager during the whole test. [L1028.015]</li>
+<li>Open your store and perform the actions you want to verify, such as viewing a product, adding to cart and starting checkout. [L1028.015]</li>
+<li>Check the events list: each action should appear as its event (for example Add to Cart or Initiate Checkout). Expect delays of up to 30 minutes before events show in the chart. [L1028.015]</li>
+</ol></li>
+<li>Do not treat the setup as finished until the test events appear in Events Manager. A connection that looks linked in Shopify can still send no usable events if the pixel or test steps were skipped. [L1028.016]</li>
+<li>Test events show how the site and server events are set up, but test behaviour can differ from live traffic. Personal ad settings do not affect test data, so a passing test does not show that the ads are optimized. [L1028.020]</li>
+</ul>
+<h2 id="product-catalog-and-commerce-manager-feed">Product Catalog and Commerce Manager Feed</h2>
+<p><strong>Making products sellable on Facebook and Instagram</strong></p>
+<ul>
+<li>Procedure (Source D 2026):
+<ol type="1">
+<li>Set each product's status to active. [L1027.018]</li>
+<li>Select the Facebook sales channel for each product. [L1027.018]</li>
+<li>Publish the products. [L1027.018]</li>
+<li>Wait until the catalog shows Catalog in sync, which confirms the products were synced to the catalog for ads and shops. [L1027.018]</li>
+</ol></li>
+<li>Procedure (before the catalog sync):
+<ol type="1">
+<li>In Shopify, set the product status to active for the Facebook &amp; Instagram sales channel. [L1028.014]</li>
+<li>Publish the products to that channel. [L1028.014]</li>
+<li>Sync products to your Meta catalog so they can be featured in ads and shops. [L1028.014]</li>
+<li>Wait until the catalog shows as in sync before running ads. [L1028.014]</li>
+</ol></li>
+<li>The product catalog must contain the full catalog, since remarketing needs every product to be available. If products are rejected, shorten the description below the 5,000-character limit. (older, 2021) [L0834.076]</li>
+<li>Facebook product descriptions must stay under 5,000 characters, or the product will not publish to Facebook. (older, 2021) [L0834.077]</li>
+</ul>
+<p><strong>Checking the catalog in Commerce Manager</strong></p>
+<ul>
+<li>Meta Commerce Manager, reached through a Meta Commerce account linked to the Business Manager, holds the product catalog that allows dynamic remarketing with products. Data sources and items show whether the Shopify products arrived correctly. [L1318.007]</li>
+<li>For a store with its own brand, create a new product catalog during the sync step rather than adding it to a catalog that belongs to another business. Name it after the store domain. [L1318.009]</li>
+<li>Choose the Business Manager, Facebook page, Instagram profile and pixel that belong to the store. Several businesses or pixels may be listed, and picking the wrong one connects the store to the wrong account. [L1318.010]</li>
+<li>The Shopify product feed in Commerce Manager should be named Shopify dynamic Facebook ads product feed and show an all good status with its latest update time. [L1318.012]</li>
+<li>Data sources can still show an old manually uploaded feed that has not been updated for 365 days. Ignore that stale feed and check the newly updated Shopify feed instead. [L1318.013]</li>
+<li>Procedure for checking products in Commerce Manager:
+<ol type="1">
+<li>Open Commerce Manager from the Business Manager. [L1318.014]</li>
+<li>Click data sources and find the Shopify dynamic Facebook ads product feed with its latest update time and an all good status. [L1318.014]</li>
+<li>Click items to confirm all Shopify products are listed. [L1318.014]</li>
+<li>Expand a product to see whether it is in stock or out of stock and to see its content details. [L1318.014]</li>
+</ol></li>
+<li>Connecting the Shopify store to Meta, enabling data sharing and checking the Commerce Manager feed only prepares the account and spends no ad budget. Confirm that the product feed and items are correct before building audiences or launching any ads. [L1318.016]</li>
+</ul>
+<p><strong>Feed content and dynamic ads</strong></p>
+<ul>
+<li>Dynamic product ads require the account to be linked to the store's product feed, which may need more account activity first. Posting a few times a week on Instagram builds this activity. (2022, older) [L0429.054]</li>
+<li>Meta dynamic remarketing works when the store connects directly to Meta through Shopify, which shares the product catalog. A custom feed can be used instead for more control, submitted as a catalog URL in Meta. (2022, older) [L0429.055]</li>
+<li>Meta ads can run before dynamic product ads are possible. [L0429.054]</li>
+<li>Facebook Marketplace is a default placement for Meta ads run from a Shopify catalog. Separate Marketplace listings are not needed. (2022, older) [L0429.056]</li>
+<li>Running an ad to a product with no shop page is risky. A catalog-based ad with checkout inside Facebook is an alternative that avoids a landing page, but it requires setting up a catalog first. [L0552.021]</li>
+<li>Connect the store to the Facebook page and import the product catalog there, so products can be viewed on Facebook and visitors can return to the store. Post content on the Facebook page that matches what the successful reference store posts. [L1325.015]</li>
+</ul>
+<h2 id="catalog-and-feed-errors">Catalog and Feed Errors</h2>
+<ul>
+<li>Conversion errors (wrong conversion types, ID issues) are often platform-level Facebook issues that affect multiple users. Contact Facebook support by clicking the question mark (?) icon at the bottom right of the campaigns page. [L0209.006]</li>
+<li>Procedure when Meta reports a product feed error such as "add product description" (2022, older):
+<ol type="1">
+<li>Check how the product feed is submitted to Meta. [L0429.053]</li>
+<li>If submitted through a Shopify app, open the app's feed and check that the product description column contains data. [L0429.053]</li>
+<li>Fix the blank column so Meta reads the correct field. [L0429.053]</li>
+</ol></li>
+<li>Procedure when a Facebook catalog reports products without descriptions although they have text:
+<ol type="1">
+<li>Check whether all products or only a subset are affected. [L0470.004]</li>
+<li>If all products are affected, check in the feed app (for example Simprosys) that the correct Shopify section is linked to the product feed. [L0470.004]</li>
+<li>If only a subset is affected, check whether those descriptions are too long for Facebook or contain HTML that Facebook does not accept. [L0470.004]</li>
+<li>For the affected products, write custom descriptions inside the feed app so that the feed sent to Facebook carries them. [L0470.004]</li>
+</ol></li>
+<li>Procedure when Facebook rejects a product catalog without a clear reason (older, 2021):
+<ol type="1">
+<li>Do not repeatedly request reviews from the rejection notice. [L0853.097]</li>
+<li>Open the Facebook support page and click Get started. [L0853.097]</li>
+<li>Use the live chat there to learn the reason and ask for the issue to be resolved. [L0853.097]</li>
+</ol></li>
+</ul>
+<h2 id="tracking-errors-and-common-mistakes">Tracking Errors and Common Mistakes</h2>
+<ul>
+<li>Pixel ID mismatch: if the pixel ID selected in Shopify is wrong, optimization does not work. Compare it with the ID in Meta Events Manager before confirming. [L1028.009]</li>
+<li>Missing Purchase event: check the Shopify sales channel settings and data sharing, as in the Pixel Helper procedure. [L0837.031, L0837.032]</li>
+<li>Setup seems complete but sends no events: test events must show up in Events Manager before the setup counts as finished. [L1028.016]</li>
+<li>Interrupting Finalizing channel setup by refreshing the page can leave the channel incomplete. [L1028.012]</li>
+<li>Blocked parameters and events: data sharing category and domain controls in Events Manager can block parameters and events. If no category is assigned, set the dataset category via Edit. The allow list or block list controls which domains can send events to Facebook. [L1027.011]</li>
+<li>Bot and non-buying traffic: newly launched ads, UTM parameters or platform crawlers can inflate visitor counts. Launch ads at least six to seven hours before the planned start, so the platform's bot traffic arrives before measurement begins. Exclude it from funnel analysis. [L1260.011]</li>
+<li>Stale feed: an old manually uploaded feed (not updated for 365 days) can be mistaken for the live feed. Check the newly updated Shopify feed. [L1318.013]</li>
+<li>Accuracy after iOS: maximum data sharing recovers only part of the tracking lost after iOS 14.5, so do not expect all lost conversions to return. [L1318.017]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Online Store &gt; Preferences &gt; Facebook Pixel: click 'Set up Facebook' to connect the pixel through the Facebook app. The app handles the setup and enables advanced tracking options that help target new and existing customers, including retargeting. The pixel tracks visitor behaviour on the store to support marketing. [L0370.021]</p></li>
+<li><p>The Facebook Pixel is set up in Shopify under Online Store &gt; Preferences &gt; Facebook Pixel by clicking Set up Facebook. Connecting through the Facebook app ensures correct setup and enables advanced tracking for retargeting audiences. [L0726.016]</p></li>
+<li><p>In Online Store &gt; Preferences, the Facebook Pixel section lets you connect your pixel through the Facebook app. The app handles the setup and enables advanced tracking that supports retargeting of new and existing customers. [L1145.024]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/05-ban-recovery-appeals-and-meta-support/"><span class="k">&larr; Previous</span><span class="v">Ban recovery, appeals and Meta support</span></a><a class="nx" href="../../09-meta-and-facebook-ads/07-ads-manager-columns-custom-metrics-and-naming/"><span class="k">Next &rarr;</span><span class="v">Ads manager columns, custom metrics and naming</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

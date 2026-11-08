@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Merchant center diagnostics, disapprovals and free listings | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.8: Merchant center diagnostics, disapprovals and free listings.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/08-merchant-center-diagnostics-disapprovals-and-free-listings/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Merchant center diagnostics, disapprovals and free listings | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.8: Merchant center diagnostics, disapprovals and free listings."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/08-merchant-center-diagnostics-disapprovals-and-free-listings/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/08-merchant-center-diagnostics-disapprovals-and-free-listings/">Plain version</a></div><h1>10.8 Merchant center diagnostics, disapprovals and free listings</h1><article><h2 id="daily-diagnostics-routine">Daily Diagnostics Routine</h2>
+<ol type="1">
+<li>Open the Merchant Center home page and check how many products are disapproved [L0732.015].</li>
+<li>Open Diagnostics to see the exact error for each disapproved product [L0732.015].</li>
+<li>Fix the errors in the store or feed app, then let the feed update [L0732.015].</li>
+<li>Check the last upload date in the Feeds section to confirm the feed is refreshing [L0732.015, L0732.025].</li>
+<li>Confirm that the feed is live and free of errors and warnings, and fix problems immediately. Google's error emails are unreliable, so do not depend on them alone. A feed that is offline for a day or two loses those searches [L0575.005].</li>
+<li>Spot-check your top 10 to 20 best-selling products:
+<ol type="1">
+<li>Confirm they appear in Google Ads and Bing Ads if you run them [L1357.013].</li>
+<li>Confirm they show as organic results if you do SEO [L1357.013].</li>
+<li>If a product is missing, find the cause and fix it immediately, because customers cannot buy what they cannot find [L1357.013].</li>
+</ol></li>
+<li>Check the Overview page. The top right shows free listings with the number of active and disapproved products. Click Diagnostics for the reasons [L0470.057].</li>
+<li>Do not let disapprovals build up. In an aged store example, 474 products were approved and 81 needed optimization, which means roughly 15% of products were not showing in Shopping. Each unapproved product is a potential loss of sales, so these errors should be fixed quickly [L0732.017].</li>
+<li>Merchant Center disapproves products that break Google's policies automatically and lists them, so you can see what Google rejects. If the reason for a disapproval is unclear, Google support can explain it [L0732.024].</li>
+</ol>
+<h2 id="where-to-find-diagnostics">Where to Find Diagnostics</h2>
+<ul>
+<li>Merchant Center &gt; Products &gt; Diagnostics shows item issues and feed issues for all products, with affected destinations (Shopping ads, Dynamic Remarketing, Free listings), countries and the share of affected past clicks [L0727.018].</li>
+<li>The Diagnostics page has three tabs: Item issues (problems per product), Feed issues, and Account issues (account-wide problems such as suspensions by country) [L0730.009, L0730.023].</li>
+<li>The Products overview graph shows counts of Active, Expiring, Pending and Disapproved items over time [L0730.023].</li>
+<li>Each row in Item issues shows the number of affected items plus two shares: % affected and % affected past clicks. The default date range is the last 30 days up to today. In the example, each issue affected less than 1% of items [L0730.024].</li>
+<li>To filter, set destination to Shopping ads, countries to All and primary feed to All [L0730.009].</li>
+<li>In the Products section, items not approved for Shopping ads are marked [L0732.025].</li>
+<li>The product detail page (Products &gt; All products, then click the product) shows:
+<ul>
+<li>Item status with the issue [L0730.025].</li>
+<li>Affected destinations: Shopping ads, Dynamic Remarketing, Free listings [L0730.025].</li>
+<li>Technical details: Expires in (for example 11 day(s)), Created on, Primary feed, and whether the data comes from the Content API [L0730.025].</li>
+</ul></li>
+<li>After Google has checked your feed, open Products &gt; Diagnostics and fix every product warning, such as missing barcodes or products without a price [L1145.043].</li>
+<li>The Merchant Center account does not show whether Google Ads is active. Check the Google Ads account for that. Merchant Center shows the feed, approved products, rejected products and errors [L0964.057].</li>
+<li>Merchant Center shows the status of every product feed item. Products flagged with red errors need fixing before they can show, so check that all products are green [L1112.017, older 2021].</li>
+<li>Products &gt; Diagnostics for the specific issue is the first step when fixing a feed error [L0971.064, L1015.001].</li>
+</ul>
+<h2 id="reading-warnings-versus-violations">Reading Warnings Versus Violations</h2>
+<ul>
+<li>Yellow warning signs are optimization suggestions for ad performance. They are not violations, do not cause a suspension, do not stop ads from running, and are optional to fix [L0727.018, L0730.016, older 2021-22].</li>
+<li>Red disapprovals are the items that must be fixed [L0730.016, older 2021-22].</li>
+<li>Google Merchant Center can show limited reach for policy violations while ads still run. Read the exact warning wording before deciding whether the problem is urgent [L0855.015].</li>
+<li>The restricted reach from a policy violation is fixed by changing the flagged content, not by stopping the campaign [L0855.020].</li>
+<li>Limited performance due to missing value (gtin) means the product still runs but with reduced performance because the barcode is missing [L0727.030].</li>
+<li>A product disapproval or missing GTIN can stop its feed from showing in ad previews. Check the Merchant Center issue report for the affected products and fix them [L0966.084].</li>
+<li>The same Shopping ads policy warning can appear twice in Merchant Center. Treat it as one issue when fixing the feed [L1170.047, older 2021-22].</li>
+<li>Variant-based issues are often not a major problem if the primary products of the store are already approved and showing. It is usually not worth rewriting every variant of every product only for Shopping Actions [L0738.032, older 2021-22].</li>
+<li>A Merchant Center notice that point-of-sale or inventory data for local product listings has expired can usually be ignored when the store's products are already approved and selling. Confirm the product listings and account status before acting on it [L0666.061].</li>
+<li>Without a visible message in Merchant Center, low organic Shopping impressions are not caused by a restriction. A niche-wide restriction would affect every store in that niche, not just one [L0837.002].</li>
+<li>Merchant Center approval problems can delay a new store by about 20 days, so resolve the flagged issues before expecting Shopping traffic [L0667.002].</li>
+</ul>
+<h2 id="item-issues-and-common-fixes">Item Issues and Common Fixes</h2>
+<h3 id="common-item-issues">Common Item Issues</h3>
+<p>Diagnostics &gt; Item issues, with the affected field and the meaning for the store (older, Source B 2021-22):</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Issue</th>
+<th>Affected field</th>
+<th>Meaning and fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Violation of Shopping ads policy</td>
+<td>Product</td>
+<td>Product is blocked by Google's Shopping ads policy; check the item status and either fix the product or request a review if it is wrongly flagged</td>
+</tr>
+<tr>
+<td>Invalid value (gtin)</td>
+<td>GTIN</td>
+<td>Barcode is not valid; correct the barcode in Shopify and the supplier data so it flows into the feed</td>
+</tr>
+<tr>
+<td>Missing value (shipping)</td>
+<td>Shipping</td>
+<td>Shipping value is missing in the feed; add the shipping setting so it reaches Merchant Center</td>
+</tr>
+<tr>
+<td>Limited performance due to missing value (gtin)</td>
+<td>GTIN</td>
+<td>Product still runs but with reduced performance because the barcode is missing; add the GTIN</td>
+</tr>
+<tr>
+<td>Promotional overlay on image (image link)</td>
+<td>Image</td>
+<td>Product image contains a promotional overlay; use an image without promotional overlays</td>
+</tr>
+<tr>
+<td>Low image quality (image link)</td>
+<td>Image</td>
+<td>Product image is rated low quality; replace it with a sharper, clearer image</td>
+</tr>
+<tr>
+<td>Value truncated (too long) (title)</td>
+<td>Title</td>
+<td>Product title is cut off because it exceeds the length limit; shorten the title</td>
+</tr>
+<tr>
+<td>Excessive capitalization (title)</td>
+<td>Title</td>
+<td>Title uses too many capital letters; rewrite it in normal capitalization</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0727.030]</p>
+<p>Common Merchant Center disapproval reasons for a Shopping ads destination, seen in diagnostics (older, Source B 2021-22):</p>
+<ul>
+<li>Violation of Shopping ads policy [L0730.012]</li>
+<li>Invalid value [gtin] [L0730.012]</li>
+<li>Missing value [shipping] [L0730.012]</li>
+<li>Promotional overlay on image [image link] [L0730.012]</li>
+<li>Limited performance due to missing value [gtin] [L0730.012]</li>
+<li>Value truncated (too long) [title] [L0730.012]</li>
+<li>Low image quality [image link] [L0730.012]</li>
+<li>Excessive capitalization [title] [L0730.012]</li>
+<li>Invalid value [gtin] (duplicate or non-valid) [L0730.012]</li>
+<li>Missing or outdated availability updates [availability] [L0730.012]</li>
+<li>Disallowed code in description [description] [L0730.012]</li>
+</ul>
+<p>Common Shopping Actions feed issues (older, Source B 2021-22). Each warning shows the affected items and percentage in the Diagnostics view:</p>
+<ul>
+<li>Duplicate GTIN values [L0738.031]</li>
+<li>Potentially inaccurate price [L0738.031]</li>
+<li>Promotional overlay on the image link [L0738.031]</li>
+<li>Same value for differing variants [L0738.031]</li>
+<li>Invalid GTIN or colour [L0738.031]</li>
+<li>Incorrect identifier [L0738.031]</li>
+<li>Ungrouped variants with a matching image link [L0738.031]</li>
+<li>Ambiguous GTIN [L0738.031]</li>
+<li>Character encoding problems in the description (UTF-8) [L0738.031]</li>
+</ul>
+<p>Duplicate variant warnings often come from variants that share the same GTIN or other identifiers. Fix them by submitting unique values for each variant, because Google ignores very similar variants and serves a single ad for them (older, Source B 2021-22) [L0738.030].</p>
+<p>Product-level disapprovals affect only those products and do not suspend the whole account when they are a small share of the feed (older, Source B 2021-22) [L0730.011].</p>
+<h3 id="gtin">GTIN</h3>
+<ul>
+<li>Products showing missing GTIN, MPN or brand errors point to broken product URLs, outdated feed data, or missing brand fields. Verify:
+<ol type="1">
+<li>The URLs are working [L0276.055].</li>
+<li>The feed updates every 24 hours [L0276.055].</li>
+<li>The brand field is populated in your Shopify store [L0276.055].</li>
+<li>The brand is mapped correctly in your feed [L0276.055].</li>
+</ol></li>
+<li>Fix a missing GTIN:
+<ol type="1">
+<li>Email the supplier and ask whether each affected product has a GTIN and what it is [L0807.020].</li>
+<li>Add the GTIN for every product where the supplier provides one [L0807.020].</li>
+<li>Only if no GTIN exists, use the manufacturer part number (MPN) instead, following Google's documentation on when this is allowed [L0807.020].</li>
+</ol></li>
+<li>Fix a valid disapproval such as an invalid GTIN (older, Source B 2021-22):
+<ol type="1">
+<li>Identify the product from the diagnostics list [L0730.015].</li>
+<li>In Shopify, open the product and check the barcode value linked to it [L0730.015].</li>
+<li>Compare it with the supplier's product information and make sure the values match [L0730.015].</li>
+<li>Change the value in Shopify if needed [L0730.015].</li>
+<li>The change passes through the feed to Merchant Center and the disapproval updates automatically [L0730.015].</li>
+</ol></li>
+<li>Errors in product data such as invalid GTIN values should be fixed in the source data (Shopify and supplier information), so the corrected value flows automatically through the feed into Merchant Center (older, Source B 2021-22) [L0727.024].</li>
+<li>For a missing identifier warning (older, Source A 2023):
+<ol type="1">
+<li>Check that every product and every variant has a unique SKU [L0855.176].</li>
+<li>Resubmit the existing product feed so the products are pulled in again. Do not create a new feed [L0855.176].</li>
+<li>Wait a couple of days for the missing-identifier warning to clear [L0855.176].</li>
+<li>If the warning remains, set the identifier-exists attribute to false for those products, accepting that they may show in fewer searches [L0855.176].</li>
+</ol></li>
+</ul>
+<h3 id="images">Images</h3>
+<ul>
+<li>Promotional overlay on the image and low image quality are image issues. Use an image without promotional overlays and replace low-quality images with a sharper, clearer image [L0727.030, older 2021-22].</li>
+<li>A product photo can be wrongly flagged for partial nudity under Google's personalized advertising policy. If you review the images and none show nudity, submit a review request with the compliance confirmation ticked (older, Source B 2021-22) [L1170.046].</li>
+</ul>
+<h3 id="limited-discoverability">Limited Discoverability</h3>
+<p>Fix a limited discoverability warning (older, Source A 2023):</p>
+<ol type="1">
+<li>Open the links in the warning, such as the editorial and professional requirements policy [L0470.058].</li>
+<li>Check that the website domain matches the domain listed in the upload [L0470.058].</li>
+<li>Remove broken links and any placeholder content [L0470.058].</li>
+<li>Make sure the whole store works, then submit the review again [L0470.058].</li>
+<li>Have someone outside the business click through the store as a customer and report anything that looks untrustworthy [L0470.058].</li>
+</ol>
+<p>Basic policy compliance for free listings (older, Source B 2021-22): the company's physical address, email, phone number and terms and conditions should be easy to find on the website. The product data should contain only products that Google supports [L0731.034].</p>
+<h3 id="adult-content-and-nudity-flags">Adult Content and Nudity Flags</h3>
+<ul>
+<li>If Google flags products for adult content by mistake, appeal immediately in Merchant Center. The initial flag is automated and a person reviews the product only after you request a review (Source A 2024) [L0471.047].</li>
+<li>A policy flag on one product, such as an image wrongly marked for partial nudity in personalized ads, suspends only that product (older, Source B 2021-22) [L1170.052].</li>
+<li>A mismatch between prices, taxes or shipping shown at checkout and those in the feed can suspend the entire product feed, so checkout settings must match the feed exactly (older, Source B 2021-22) [L1170.052].</li>
+</ul>
+<h3 id="titles-descriptions-and-other-fields">Titles, Descriptions and Other Fields</h3>
+<ul>
+<li>Common disapproval causes include missing product microdata and overly long product titles. Shorten and simplify titles, and fill in every field Google requests, because fixing these errors makes Google prefer the products more (Source A) [L0732.018].</li>
+<li>Fix a 'product has one missing or invalid field' Merchant Center error (Source A 2024):
+<ol type="1">
+<li>Open Merchant Center &gt; Products &gt; Diagnostics for the specific issue [L0971.064].</li>
+<li>Open the product in the feed and check each section for empty fields [L0971.064].</li>
+<li>Compare a rejected product with an approved one side by side [L0971.064].</li>
+<li>Fix errors and resubmit [L0971.064].</li>
+<li>Alternatively, remove unwanted products from the Google Shopping feed app and submit a new feed [L0971.064].</li>
+</ol></li>
+<li>Missing required product information can stop listings from qualifying for badges such as the 30-day return badge (Source A 2023) [L0970.118].</li>
+</ul>
+<h3 id="policy-violations-on-a-product">Policy Violations on a Product</h3>
+<ul>
+<li>Fix a policy violation (Source A 2022). When one product is flagged while identical product sizes are approved:
+<ol type="1">
+<li>Open the product's violation link to see which policy is cited [L0429.052].</li>
+<li>Compare the flagged product page with the approved pages side by side in separate tabs [L0429.052].</li>
+<li>Remove the product from the product feed, resubmit the feed, add the product back and resubmit again [L0429.052].</li>
+</ol></li>
+<li>Find the cause of a violation (Source A 2023):
+<ol type="1">
+<li>Note whether the violation appears in Google Merchant Center or in Google Ads [L0855.178].</li>
+<li>Copy the exact warning wording, because the wording shows which policy is involved [L0855.178].</li>
+<li>Find the flagged text or image on the product page and read the policy that the warning names [L0855.178].</li>
+<li>Change the flagged content, then resubmit the product or request a review [L0855.178].</li>
+</ol></li>
+<li>Product pages flagged as unsupported shopping content or limited can be checked against competitor pages that sell the same product without a warning. Compare the description for copied supplier text or unique wording that might trigger the flag, and do not copy competitor text (Source A 2025) [L0472.018].</li>
+<li>A product disapproval for a dangerous or prohibited category can be a false positive from automated review, for example a steam shower flagged as recreational drug equipment. Check the product's category and content before accepting the disapproval as correct (older, Source B 2021-22) [L0730.013].</li>
+<li>A disapproved product's detail page has an Actions section that suggests reviewing the Shopping ads policies and updating the feed to meet requirements, with a Learn more link. Use Request review only when the product is actually compliant. If it breaks a policy, fix the feed data first (older, Source B 2021-22) [L0730.027].</li>
+<li>Google's automated product checks can make mistakes. Wrongly flagged products should be challenged with a review request, while real product errors should be fixed in Shopify and the feed (older, Source B 2021-22) [L0727.023].</li>
+</ul>
+<h2 id="manual-reviews-and-appeals">Manual Reviews and Appeals</h2>
+<ul>
+<li>Review a disapproved product (older, Source B 2021-22):
+<ol type="1">
+<li>Open Diagnostics &gt; View examples for the issue, click the product, and check the item status [L0727.019].</li>
+<li>If the product is wrongly flagged (for example, a steam shower wrongly flagged as recreational drugs or drug-related equipment), select Request review [L0727.019].</li>
+<li>Tick the box confirming the product complies with Shopping ads policies and the product feed specification [L0727.019].</li>
+<li>Submit the manual review request [L0727.019].</li>
+<li>Review takes about one day, and the product is expected to be reapproved within 24 hours [L0727.019, L0727.032].</li>
+</ol></li>
+<li>Request a manual review for a wrongly disapproved product (older, Source B 2021-22):
+<ol type="1">
+<li>Open Products &gt; All products and click the product, then find the issue in the Item status section [L0730.014].</li>
+<li>Under Actions, click Request review [L0730.014].</li>
+<li>Tick the confirmation box that the product complies with Shopping ads policies and the product feed specification [L0730.014].</li>
+<li>Click to request the manual review [L0730.014].</li>
+<li>Wait. The status changes to under review and a person reviews the product. Re-approval is expected within up to 24 hours, after which the product returns to the feed and can be advertised [L0730.014].</li>
+<li>While under review, no other action is possible on that product [L0730.014].</li>
+</ol></li>
+<li>A product under manual review cannot be edited or acted on further until Google decides, so fix all other issues on that product before requesting a review (older, Source B 2021-22) [L0727.032].</li>
+<li>Use Request review only when the product is actually compliant [L0730.027, older 2021-22].</li>
+<li>If a Google Merchant Center account or product listing is disapproved or suspended, request a review through Merchant Center. Follow the Google support document on requesting a GMC review, which describes the submission path (Source A 2023) [L1093.004].</li>
+<li>If the suspension looks like an algorithm error, investigate the product first and then request a review (older, Source B 2021-22):
+<ol type="1">
+<li>Open Products &gt; All products [L1170.041].</li>
+<li>Search or filter for the product [L1170.041].</li>
+<li>Open the product to view its data points [L1170.041].</li>
+<li>Compare the final attributes Google uses with the raw feed attributes. Missing attributes often explain suspension [L1170.041].</li>
+<li>Check the Item status for violated policies and affected destinations [L1170.041].</li>
+<li>If the suspension looks like an algorithm error, tick the compliance confirmation and click REQUEST REVIEW [L1170.041].</li>
+</ol></li>
+<li>Product data changes in Merchant Center can take up to 30 minutes to appear. Diagnostics lists disabled products, but the individual product page usually gives the specific reason (older, Source B 2021-22) [L1170.042].</li>
+<li>When fixing a suspension or product disapproval, read Google's Shopping ads policies and the product data specification pages before you change anything. These pages are linked from the Merchant Center diagnostics and define what each issue means (older, Source B 2021-22) [L0727.033].</li>
+</ul>
+<h2 id="account-level-suspensions-and-country-scope">Account-Level Suspensions and Country Scope</h2>
+<ul>
+<li>A small share of disapproved products does not suspend the whole account. The risk of account suspension rises significantly when a large share of products is disapproved, for example 3,000 out of 6,000 (older, Source B 2021-22) [L0727.020].</li>
+<li>A well managed feed of about 6,000 products including variants can have a few products disapproved at any time. A share below 1 percent of affected items is not a serious problem, while a large share (for example 3,000 of 6,000) greatly raises the risk of a whole-account suspension (older, Source B 2021-22) [L0730.010].</li>
+<li>A high number of disapproved products relative to the total feed increases the chance of an account-wide suspension (older, Source B 2021-22) [L0730.011].</li>
+<li>Example from an active account (older, Source B 2021-22): about 6,000 approved products (including variants), with a few disapproved items, mostly from invalid GTIN values, missing shipping value, promotional overlay on the image and a policy violation. Less than 1% of past clicks were affected by these issues [L0727.022].</li>
+<li>Account-wide suspensions appear under Merchant Center &gt; Diagnostics &gt; Account issues. Each country where the account is suspended is listed separately, so a suspended country (for example Canada) can be inactive while the main country account stays active (older, Source B 2021-22) [L0727.021].</li>
+<li>Account-wide suspensions appear under Account issues, with the affected country and the reason stated. A suspension for one country (e.g. Canada) does not affect the account for another country if no products are offered there (older, Source B 2021-22) [L0730.017].</li>
+<li>An account-level suspension appears on the Overview as a notice that all items are suspended from listed destinations, with a reason such as a feed specification violation for inappropriate currency. The suspension can cover all destinations or only one country, for example Canada, while a store with no offers in that country stays unaffected in the other country (older, Source B 2021-22) [L0730.026].</li>
+<li>A feed specification violation such as an inappropriate currency can suspend the account for one destination country only, even when no products are offered there. Under Diagnostics &gt; Account issues, each suspended country is listed separately, so check the country named in the notice and the currency set for it in the feed (older, Source B 2021-22) [L0727.031].</li>
+</ul>
+<h2 id="approval-timelines">Approval Timelines</h2>
+<p>The sources give different values for different situations. Each value below is paired with the situation it describes.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Timeline</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First Merchant Center review of a clean submission (no warnings, no exclusions)</td>
+<td>2 to 4 days; products stay in Pending during this period</td>
+<td>[L0182.003, L1168.006, L1168.007]</td>
+</tr>
+<tr>
+<td>First Merchant Center review, sometimes longer</td>
+<td>Up to about four days (Source A)</td>
+<td>[L1168.007]</td>
+</tr>
+<tr>
+<td>Feed moving from pending to approved after submission</td>
+<td>2 to 3 days</td>
+<td>[L0964.055]</td>
+</tr>
+<tr>
+<td>Merchant Center approval in general</td>
+<td>Usually a few days, sometimes up to a week; campaigns can be set up while products are pending, but nothing spends until approval</td>
+<td>[L0941.063]</td>
+</tr>
+<tr>
+<td>Google approval and first impressions, no fixed timeline (older, 2020)</td>
+<td>A day to about a week or more; check the account daily after launch</td>
+<td>[L0468.117]</td>
+</tr>
+<tr>
+<td>Merchant Center approval problems for a new store</td>
+<td>About 20 days of delay (Source A 2025)</td>
+<td>[L0667.002]</td>
+</tr>
+<tr>
+<td>New Google Ads Shopping campaign under review</td>
+<td>Status shows All ads under review; about 30 minutes or a few days; impressions and clicks should start within a day once approved</td>
+<td>[L0743.025]</td>
+</tr>
+<tr>
+<td>First-time Google Ads approval (older, 2020)</td>
+<td>About 2 days or more; impressions start only after approval</td>
+<td>[L1111.101]</td>
+</tr>
+<tr>
+<td>Campaign stuck because of a feed issue</td>
+<td>Delete the campaign and recreate it; approval should follow within about a day</td>
+<td>[L0964.055]</td>
+</tr>
+<tr>
+<td>Manual review of a wrongly flagged product (older, Source B 2021-22)</td>
+<td>About one day for review; reapproval within 24 hours</td>
+<td>[L0727.019, L0727.032, L0730.014]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Newly submitted products have the status Pending, which is normal. The first review by Google usually takes 2 to 4 days, and sometimes up to about four days, before products become approved [L1168.007].</li>
+<li>After Merchant Center approves a product, it appears in the free product listings in Google Shopping without any manual submission at the account setup stage. Until approval, the product status shows 'processing', and that label disappears once the product is approved (Source A) [L0729.019].</li>
+<li>In the Symprosis Google Shopping Feed dashboard, a newly linked store shows all products as Pending [L1168.014].</li>
+<li>If a Google Ads campaign is stuck because of a feed issue, delete the campaign and recreate it. Approval should follow within about a day [L0964.055].</li>
+<li>If Google gives a date by which a policy warning must be resolved, do not keep editing the product page past that date. Set the product to inactive if the warning is still not cleared (Source A 2025) [L0472.019].</li>
+<li>Check the account daily after launch, because there is no fixed approval timeline [L0468.117, older 2020].</li>
+<li>If free listings setup fails to add products on the same step for several days in a row, contact Google Merchant Center support. The cause may be a glitch or a setting that needs to be turned on (Source A 2023) [L0835.139].</li>
+</ul>
+<h2 id="feed-sync-and-update-timing">Feed Sync and Update Timing</h2>
+<ul>
+<li>Once a corrected feed is submitted, Google Ads and Merchant Center resubmit about every 24 hours. Let the corrected feed resubmit to Merchant Center, which happens about every 24 hours [L1015.001].</li>
+<li>The feed is the source of Google Shopping listings. Keep it free of errors and warnings in Merchant Center, because a suspended or disapproved product stops appearing and traffic falls (Source A 2023) [L0934.134].</li>
+<li>Check the last upload date in the Feeds section to confirm the feed is refreshing [L0732.015, L0732.025].</li>
+<li>Fix the errors in the store or feed app, then let the feed update [L0732.015].</li>
+<li>Product data changes in Merchant Center can take up to 30 minutes to appear (older, Source B 2021-22) [L1170.042].</li>
+<li>Resubmit the existing product feed so the products are pulled in again. Do not create a new feed [L0855.176].</li>
+<li>Feed diagnosis (Source A 2025): diagnose the problem in this order:
+<ol type="1">
+<li>Log into Google Merchant Center and open 'Feed diagnostics', which is on the first page shown after login [L1015.001].</li>
+<li>Hover over the small circled-i icon next to each listed error to read its description [L1015.001].</li>
+<li>Fix the errors in Symprosis based on those descriptions [L1015.001].</li>
+<li>Let the corrected feed resubmit to Merchant Center, which happens about every 24 hours [L1015.001].</li>
+</ol></li>
+<li>Do not start feed troubleshooting in Symprosis, even though it can display errors, because the source of truth for feed errors is Merchant Center's Feed diagnostics. Check Merchant Center first, then correct the flagged items in Symprosis (Source A 2025) [L1015.002].</li>
+<li>A feed that is offline for a day or two loses those searches [L0575.005].</li>
+<li>Raising the ad budget does not fix a limited feed. If Google limits products because of missing data, the budget goes unspent and extra money adds no impressions (Source A 2020) [L1088.039, older].</li>
+<li>Free listing placement is based on the product feed, such as product name, SKU and description, matched to the search term. Optimizing product page content and feed data improves both paid and free placement (Source A 2020) [L1088.037, older].</li>
+</ul>
+<h2 id="free-listings-and-surfaces-across-google">Free Listings and Surfaces Across Google</h2>
+<h3 id="what-free-listings-are">What Free Listings Are</h3>
+<ul>
+<li>Google Product Listings are free product listings displayed visually in Google Shopping results, separate from text-based organic search, requiring no ad spend (Source A) [L0163.005].</li>
+<li>Google Merchant Center, once approved with products correctly submitted, makes them visible in the free Google Shopping section and Google Product Listings without advertising spend (Source A) [L0168.002].</li>
+<li>Google product listings are free product placements that appear in the Google Shopping section, separate from the normal text results of organic search (Source A) [L0586.007].</li>
+<li>Google Product Listings (free) let a store show its products in Google Shopping results without paid ads. They require a connected Google Merchant Center account with correct product data (Source A 2020) [L1087.005, older].</li>
+<li>Free product listings appear on the Shopping tab of a Google search, below the sponsored ads, at no cost per click. They require a product feed set up in Google Merchant Center (Source A 2025) [L0807.018].</li>
+<li>Free Google Shopping product listings cost nothing, so every product can be listed there whether or not it receives paid ad spend (Source A 2023) [L0970.118].</li>
+<li>Free listings in Google Shopping appear without ad spend, so low-margin products can still earn sales from them (Source A 2025) [L0966.086].</li>
+<li>Google Merchant Center lets products appear for free in the free section of Google Shopping and in product listings. This adds qualified traffic and sales alongside paid campaigns (Source A) [L1393.002].</li>
+<li>Free Google product listings give traffic without ad spend and should be used for products with thin margins. Organic traffic from Google and Bing can also reach those products (Source A 2020) [L1111.107, older].</li>
+<li>Free listings give no per-click cost, so they suit products that paid traffic cannot profit from (Source A 2025) [L0807.017].</li>
+</ul>
+<h3 id="setup">Setup</h3>
+<p>Get free product listings on Google (Source A 2020, older):</p>
+<ol type="1">
+<li>Link your Shopify products to your Google Merchant Center account [L0852.059].</li>
+<li>In the Merchant Center settings, enable the option called surfaces across Google [L0852.059].</li>
+<li>Products will then appear in the free Google product listings section, even without a Google Ads campaign [L0852.059].</li>
+<li>Create a Google Shopping campaign and select only the products you want to pay for. Products not in the campaign remain free in the listings [L0852.059].</li>
+</ol>
+<ul>
+<li>Enable Surfaces across Google in the Google Merchant Center account to show products in the free listings section of Google Shopping. It can be turned on during setup or changed later in the account settings (Source A 2020) [L1088.036, older].</li>
+<li>The same setting appears in other sources as Enable Google Product Listings in Merchant Center, so products can also appear in the free results below the paid Shopping carousel (Source A 2022) [L0963.011, older].</li>
+<li>Google Shopping free listings should be set up through the feed app, not through the Google sales channel's Merchant Center listing option. The Google sales channel is only used to connect the Google account and for the GA4 link (Source A 2023) [L0835.060].</li>
+<li>Google Shopping remains the main source of free listings. Set up the shopping feed so products appear in the free product listings as well as the paid ones (Source A 2022) [L0854.057, older].</li>
+<li>Merchant Center's free listings also require basic policy compliance (older, Source B 2021-22). See Limited Discoverability above [L0731.034].</li>
+<li>In Merchant Center, the Products section shows the full product list and marks items that are not approved for Shopping ads. The Feeds section shows the last upload date, which confirms whether each feed is still refreshing [L0732.025].</li>
+</ul>
+<h3 id="where-free-listings-appear">Where Free Listings Appear</h3>
+<ul>
+<li>Products in the 'Sponsored' section of Google Shopping are paid listings, while the 'Most popular' section shows free listings. Only products included in a paid Shopping campaign spend money (Source A 2020) [L0852.060, older].</li>
+<li>Free listings appear below the sponsored area of Google Shopping. Use them as free listings when a store has no paid ad budget; a free listing shows the store's price and description (Source A 2023) [L0964.064].</li>
+<li>Google Shopping now shows free product listings below paid ads, while prominent product listing ads stay paid. Campaigns that already work should not be changed (Source A 2020) [L0967.084, older].</li>
+<li>Paid results sit above the gray line, while free listings appear below it (Source A 2021) [L0853.053, older].</li>
+<li>Google Shopping product listings appear in free listings and paid shopping. Products excluded from feeds do not appear in those placements, which is why add-on products must be left out of feeds (Source A 2023) [L1283.106].</li>
+<li>Some free listings on Google Shopping come from third-party marketplaces that list other sellers' products, so a competitor product link may not be sold by that store. Check the seller before assuming a competitor is a direct retailer (Source A 2023) [L1094.044].</li>
+</ul>
+<h3 id="free-listings-without-paid-campaigns">Free Listings Without Paid Campaigns</h3>
+<ul>
+<li>When a product is taken out of a paid Google Shopping campaign because it does not convert, it can stay in the free Google product listings. Stopping spend on a product therefore does not remove its organic Shopping visibility (Source A 2022) [L1113.083, older].</li>
+<li>Check Google Merchant Center for the reason a product is partially approved when free listings show zero impressions while paid ads work. If no reason is shown, contact Google support (Source A 2021) [L0968.062, older].</li>
+</ul>
+<h2 id="sequencing-free-listings-before-paid-ads">Sequencing: Free Listings Before Paid Ads</h2>
+<ol type="1">
+<li>Stage your Google integration in two phases:
+<ol type="1">
+<li>First, ensure all products are approved in free Google Shopping listings (2-4 days) [L0182.008].</li>
+<li>Only then set up Google Ads campaigns [L0182.008].</li>
+<li>This prevents wasting ad spend on unapproved or pending inventory and ensures a stable feed before paid traffic drives to your store [L0182.008].</li>
+</ol></li>
+<li>Do not connect Google Ads to your Merchant Center account until free listings approval is fully complete. Premature Ads setup will spend budget on products still in Pending status [L0182.009].</li>
+<li>Approved products first appear in the Free listings section of Google Shopping, not in paid ads. Google Ads is intentionally not linked until all products are approved in the free section [L1168.008].</li>
+<li>Google Shopping products must be approved in the free Shopping listings in Google Merchant Center before a paid Shopping campaign is launched. Approval status shows there as approved, and any pending, limited, or Google-requested changes must be fixed first [L0743.001].</li>
+<li>In Merchant Center, free product listings are set up first, Shopping ads (the paid program) are the main program, and Dynamic remarketing is used later. The settings carry over from free listings to paid listings (older, Source B 2021-22) [L0731.023].</li>
+<li>Google ads, and products generally, start earning once approved. Nothing spends until approval [L0941.063].</li>
+<li>If you do not want to start with paid ads, submit products to Google Merchant Center for free listings and build organic SEO. Move to paid ads once organic sales have built up a budget (Source A 2021) [L0671.089, L0671.226, older].</li>
+<li>A new store can start with the free listings while it builds a bankroll (Source A 2024) [L0360.045].</li>
+<li>Free traffic sources that can be used long term are the free Google product listings (not paid Product Listing Ads) and optimized organic results on Google. Both should be in place before relying on short-term tactics (Source A 2022) [L0429.013, older].</li>
+<li>Products can be submitted to Google Merchant Center as free Google product listings, which give free traffic to product pages, or as paid Google Shopping ads (Source A 2024) [L0360.045].</li>
+</ol>
+<p>Note on the two approaches: the staged approach above, which holds off linking Google Ads until free listings are approved, is the recommended path to avoid wasted spend [L0182.008, L0182.009, L1168.008]. Campaigns can be set up while products are still pending, but nothing spends until approval [L0941.063].</p>
+<h2 id="product-selection-for-free-and-paid-placement">Product Selection for Free and Paid Placement</h2>
+<ul>
+<li>Products with thin margins can be pushed through free traffic, while products with healthy margins are the ones to fund with paid ad spend (Source A 2025) [L0807.017].</li>
+<li>Products with too little margin for ad spend should stay active in Google Merchant Center but should not be included in paid campaigns. Their free listings can still earn clicks from the lower Shopping section (Source A 2020) [L0967.085, older].</li>
+<li>Non-MAP products with thin margins can be left out of paid ads and still reach shoppers through free Google Shopping listings. This avoids competing against sellers pricing at break even (Source A) [L0941.072].</li>
+<li>If a product still earns margin after ad costs but shipping is too high to run paid ads, keep it on the site for organic traffic. Add it to Google Merchant Center but leave it out of the Google Shopping campaign, so it can appear in free listings (Source A 2020) [L0852.045, older].</li>
+<li>Show free Google product listings right away, but skip paid Shopping ads for products if competitors advertise them 50 to 100 dollars cheaper above the gray line (Source A 2021) [L0853.053, older].</li>
+<li>Set a one-cent cost per click for products you want to keep in free Shopping listings without funding them with ad money. Use higher cost per click bids for the few products with the biggest opportunity (Source A 2023) [L0934.127].</li>
+<li>To run Shopping ads with a mixed catalog (Source A 2022, older):
+<ol type="1">
+<li>Submit the full product feed to Google Merchant Center, including accessories [L0803.042].</li>
+<li>Run paid Product Listing Ads only for products in your target price range [L0803.042].</li>
+<li>List the lower-priced add-on products as free Google product listings, which are organic, so they get traffic without ad spend [L0803.042].</li>
+</ol></li>
+<li>Free listing placement and paid placement both benefit from clean product data. Products with missing data stop listing well (Source A 2020) [L1088.037, older].</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ol type="1">
+<li>Open the Merchant Center account and find the rejection reason for each product.</li>
+<li>Take a screenshot showing the rejection reasons.</li>
+<li>Send the screenshot and the store link to support so the cause can be pinpointed. [L0966.085]</li>
+</ol>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/07-feed-optimization-titles-images-descriptions-and-promotions/"><span class="k">&larr; Previous</span><span class="v">Feed optimization: titles, images, descriptions and promotions</span></a><a class="nx" href="../../10-google-ads-and-shopping/09-shopping-campaign-fundamentals-and-the-alpha-beta-structure/"><span class="k">Next &rarr;</span><span class="v">Shopping campaign fundamentals and the alpha-Beta structure</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

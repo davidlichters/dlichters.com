@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Pricing, margin and profitability checks per supplier | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 3.11: Pricing, margin and profitability checks per supplier.">
+<link rel="canonical" href="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/11-pricing-margin-and-profitability-checks-per-supplier/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Pricing, margin and profitability checks per supplier | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 3.11: Pricing, margin and profitability checks per supplier."><meta property="og:url" content="https://dlichters.com/aiecom/03-suppliers-and-fulfillment/11-pricing-margin-and-profitability-checks-per-supplier/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">3. Suppliers and fulfillment</a> &rsaquo; <a href="../../../ecom/03-suppliers-and-fulfillment/11-pricing-margin-and-profitability-checks-per-supplier/">Plain version</a></div><h1>3.11 Pricing, margin and profitability checks per supplier</h1><article><h2 id="cost-inputs-for-the-margin-calculation">Cost inputs for the margin calculation</h2>
+<ul>
+<li>Cost of goods sold (COGS) is only accurate when it is entered per product in Shopify. COGS equals the cost to deliver the product to your 3PL plus the average shipping cost per unit to the customer. [L0222.006]</li>
+<li>Packaging and supplies cover only the materials used to fulfil an order: the box, tape, polymailer and the cost of the shipping label itself. Postage paid to the carrier is entered separately as shipping cost. [L0433.013]</li>
+<li>Shipping cost is the average postage paid per order for a typical order size, for example $9.17. Take it from actual carrier costs, not from packaging. [L0433.014]</li>
+<li>If a 3PL charges per pick, an order with several items incurs one pick fee per item, so the 3PL cost per order must be scaled to the average number of picks. Typical 3PL pick and pack fees run about $1.50 to $2.50 per pick. If no 3PL is used, this input is $0. [L0433.015]</li>
+<li>Keep COGS as low as possible, but never at the expense of the quality customers notice. Cutting costs that buyers feel will hurt repeat sales. [L0378.016]</li>
+<li>Customisation and rush production options from the supplier carry their own costs. Add a markup to them, and ask suppliers which custom or rush options they offer before building them into your pricing. [L0920.023]</li>
+<li>A supplier's percentage margin must be checked for its basis. Ask whether it is a net margin left after the product cost or a markup on that cost. The two give very different selling prices, so confirm which one applies before committing. (Older advice, 2020.) [L0551.076]</li>
+</ul>
+<p><strong>Worked cost examples</strong></p>
+<ul>
+<li>Ceramic flower pot: sold at $30 (about $29.90) with an $11 COGS including fulfilment costs. [L0642.044]</li>
+<li>Zendrop: one unit sourced at $20 with $10 shipping to the customer gives a total of $30 entered as COGS + SHIPPING per unit. [L0987.023]</li>
+<li>CJ Dropshipping: a cost of $17 per item on CJ was entered into profit calculators to check margin. [L0440.018]</li>
+</ul>
+<p><strong>CJ Dropshipping price basis</strong></p>
+<ul>
+<li>On CJ Dropshipping, after you choose the variant and the target country, the product page shows a field called total dropshipping price. It already includes the product cost and shipping to the customer, so use it as the base cost for pricing instead of the item price alone. [L0436.024]</li>
+</ul>
+<p><strong>Confirming cost before pricing</strong></p>
+<ol type="1">
+<li>Estimate the product cost from AliExpress listicles by checking average prices.</li>
+<li>Open a sourcing request at CJ Dropshipping to get accurate supplier prices.</li>
+<li>Use the sourcing result as the real cost basis for pricing.</li>
+</ol>
+<p>[L0693.019]</p>
+<ul>
+<li>AliExpress prices are only estimates, because sellers without fulfilment can set any price. Use a sourcing request to confirm the cost. [L0693.021]</li>
+</ul>
+<p><strong>Shipping outside the MAP</strong></p>
+<ul>
+<li><p>Shipping costs are typically not included in a supplier's MAP price, because shipping varies by destination. If a supplier does not explicitly state that shipping is included in its pricing, assume it is not. [L0276.012]</p></li>
+<li><p>Estimating shipping and margin (older advice, 2020):</p>
+<ol type="1">
+<li>Find the supplier's location and zip code on its website.</li>
+<li>Note the product's size and weight.</li>
+<li>Get a freight estimate from freightbroker.com between the supplier's zip code and two customer zip codes in the states you plan to sell in, for example one in Florida and one in California.</li>
+<li>Average the two estimates to get a shipping cost.</li>
+<li>Subtract wholesale cost and shipping from the selling price to see the margin left for ads and fees.</li>
+</ol>
+<p>[L0961.036]</p></li>
+<li><p>Some suppliers based in Japan charge an average of about $15 shipping per product, which can remove most of the margin on lower-priced items. Add this shipping cost into the spread calculation before listing their products. [L0965.086]</p></li>
+<li><p>If a supplier adds tax to its wholesale prices, compare competitor prices with that tax included and recalculate the MAP-to-wholesale spread. Keep the products only if the spread still works. [L0965.027]</p></li>
+</ul>
+<h2 id="retail-price-basis">Retail price basis</h2>
+<ul>
+<li>Google Shopping is used for competitor price research: search your product names as a customer, then compare sellers' prices to your wholesale cost. Use store averages, not the lowest prices. [L1051.004]</li>
+<li>Extremely low competitor prices are often a warning sign rather than a bargain. Stores selling with almost no margin often have poor customer service, late or missing shipments and short business lifespans. Check company names, websites, reviews and ratings before treating their price as market price. [L1051.005]</li>
+</ul>
+<h2 id="benchmarks-map-wholesale-and-the-50-rule">Benchmarks: MAP, wholesale and the 50% rule</h2>
+<p>The sources give different thresholds. Each one applies in a different situation, so read them together.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th>Value</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50% rule (core target)</td>
+<td>Wholesale about half of MAP. A $1,000 MAP implies a $500 wholesale cost.</td>
+<td>Default test for every supplier.</td>
+<td>[L0358.003, L0835.021, L0967.014]</td>
+</tr>
+<tr>
+<td>Target spread</td>
+<td>Wholesale of $1,000 should correspond to a MAP of about $2,000.</td>
+<td>Planning target when reviewing a price list.</td>
+<td>[L0666.019]</td>
+</tr>
+<tr>
+<td>Minimum multiple</td>
+<td>MAP at least 2x wholesale.</td>
+<td>Floor after fees, acquisition, shipping and overhead. (Older advice, 2020.)</td>
+<td>[L0268.010]</td>
+</tr>
+<tr>
+<td>Ideal multiple</td>
+<td>MAP at least 2.2x wholesale.</td>
+<td>Preferred level; thin spreads should be reconsidered. (Older advice, 2022.)</td>
+<td>[L0665.010]</td>
+</tr>
+<tr>
+<td>Formula shown by suppliers</td>
+<td>A MAP formula such as 2x wholesale.</td>
+<td>When the supplier sheet has no MAP policy.</td>
+<td>[L0470.074]</td>
+</tr>
+<tr>
+<td>Shipping-inclusive margin floor</td>
+<td>At least 25% margin including shipping.</td>
+<td>Listing decision for a product. (Older advice, 2021-22.)</td>
+<td>[L1046.031]</td>
+</tr>
+<tr>
+<td>Average spread in one example</td>
+<td>About 25%, against about 50% required by the model.</td>
+<td>Reference of what suppliers often offer.</td>
+<td>[L0835.019]</td>
+</tr>
+<tr>
+<td>Typical retail discount offered</td>
+<td>15-20% off retail is below target.</td>
+<td>Spread check before paid ads.</td>
+<td>[L0666.019, L0666.066]</td>
+</tr>
+<tr>
+<td>Floor before expenses</td>
+<td>Never settle on a margin leaving about 20% before expenses.</td>
+<td>Hard floor during negotiation.</td>
+<td>[L0835.022]</td>
+</tr>
+<tr>
+<td>Discount from supplier</td>
+<td>30% insufficient for an online retailer; 30-35% not enough if you also pay shipping and acquisition.</td>
+<td>Supplier discounts that still must cover shipping and ads. (Older advice, 2020; 2025.)</td>
+<td>[L0967.016, L0807.015]</td>
+</tr>
+<tr>
+<td>Discount from supplier</td>
+<td>50% acceptable; 20-40% usually not.</td>
+<td>Judged by whether COGS is about 50% of planned selling price. (Older advice, 2020.)</td>
+<td>[L0664.005]</td>
+</tr>
+<tr>
+<td>Affiliate-style margin</td>
+<td>10-20% before payment fees and ad costs.</td>
+<td>Sign of an affiliate-style relationship; not enough to build a business. (Older advice, 2020.)</td>
+<td>[L0967.015]</td>
+</tr>
+<tr>
+<td>Affiliate minimum</td>
+<td>A minimum affiliate discount of 30% is not profitable; at 20%, decline or price above MAP without paid traffic. (Older advice, 2020.)</td>
+<td>Affiliate offers.</td>
+<td>[L0268.009]</td>
+</tr>
+<tr>
+<td>No-MAP starting price</td>
+<td>Price around three times wholesale as a starting point. (Older advice, 2020.)</td>
+<td>Only when no MAP is given; revise against margin math and competitor prices.</td>
+<td>[L0358.014]</td>
+</tr>
+<tr>
+<td>No-MAP fallback</td>
+<td>Set price at least 2x wholesale. (Older advice, 2022.)</td>
+<td>When no clear competitor price can be found.</td>
+<td>[L0854.011]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Where sources give different starting points for a supplier with no MAP, use the 3x starting point [L0358.014] only as a first guess. Use the 2x fallback [L0854.011] when no clear competitor price exists. Revise both against competitor prices and your own margin.</p>
+<ul>
+<li>Under the 50% rule, if a supplier's price is far off and it will not negotiate, the supplier is usually not worth working with. (Older advice, 2020.) [L0358.003]</li>
+<li>The minimum acceptable wholesale margin is about 50%. A wholesale cost above half of MAP should be negotiated or reconsidered. (Older advice, 2022.) [L0665.010]</li>
+<li>Judge a discount by the resulting cost of goods, not by the percentage alone. A 50% discount can be acceptable, while 20-40% off usually is not. (Older advice, 2020.) [L0664.005]</li>
+<li>Off-MSRP example: a supplier offering 50% off MSRP while MAP is 25% off MSRP leaves too little margin. The deal only works if competitors sell at MSRP. (Older advice, 2021.) [L0671.265]</li>
+</ul>
+<h2 id="net-profit-and-ad-spend-thresholds">Net profit and ad-spend thresholds</h2>
+<p><strong>Worked profit example at 2x (older advice, 2020)</strong></p>
+<ul>
+<li>Wholesale $800, sale price $1,000: gross profit $200. Minus 2.9% fees ($29) gives $171. Minus 10% customer acquisition cost ($100) gives $71 profit. Subtracting shipping and operational overhead leaves minimal or negative margin.</li>
+<li>Solution: price at $1,600 instead, and drive only organic and remarketing traffic, not paid ads.</li>
+</ul>
+<p>[L0268.010, L0268.011]</p>
+<ul>
+<li>Transaction fees (2.9%) and customer acquisition (up to 10% of sale) are the costs that a 2x MAP has to cover. [L0268.010]</li>
+</ul>
+<p><strong>Dollar profit matters as much as percentage</strong></p>
+<ul>
+<li>A wholesale price of $161 against a MAP of $230 leaves too little dollar profit per sale to justify advertising. Accepting a lower spread is only reasonable for very high-ticket products worth thousands of dollars, where gross profit per unit is still large. [L0835.020]</li>
+<li>A lower spread is acceptable only when the dollar profit per sale still makes the sale worthwhile. [L0835.021]</li>
+<li>Established industry suppliers offered about $125 profit on a $1,000 product and about $200 on a $4,000 product, which can be too thin for paid ads. (Older advice, 2021.) [L0671.002]</li>
+<li>Do not sell products at very low margins, such as 5% or a flat $50 per sale. This is especially true for suppliers without a price policy, where other retailers race to the bottom. These deals create more problems than sales. [L0835.023]</li>
+<li>Products sold below 25% margin including shipping should not be added to the store. Keep the supplier on file for later. (Older advice, 2021-22.) [L1046.031]</li>
+</ul>
+<p><strong>Product-level margin checks</strong></p>
+<ul>
+<li>Product-only margin in the example was roughly 20% once outbound shipping was removed, showing that shipping was the main reason the margin was low. (Older advice, 2021-22.) [L1046.030]</li>
+<li>Outbound shipping in the example cost about $98,000 to $100,000 per year, roughly 6.3% of total income. It is one of the largest levers for improving margin. (Older advice, 2021-22.) [L1046.028]</li>
+<li>Check each product's margin including shipping before listing it. Add only products with at least 25% margin including shipping. (Older advice, 2021-22.) [L1046.031, L1046.032]</li>
+<li>Small, lightweight products have low fulfilment costs because they ship in small packages. This leaves room for a good selling price and margin, so use it when choosing test products. [L0562.018]</li>
+<li>Outbound shipping cost in one case was about $98,000 per year; the owner planned to bring it to about $75,000, a saving of about $23,000 per year, while keeping the rest of the cost structure. This was the third of three supplier priorities. (Older advice, 2021-22.) [L1046.036]</li>
+</ul>
+<p><strong>Margin review steps (older advice, 2021-22)</strong></p>
+<ol type="1">
+<li>Contact the supplier and build the relationship before asking for terms.</li>
+<li>Request the supplier's current pricing sheet.</li>
+<li>Calculate the margin for each product, including shipping.</li>
+<li>Add only products with at least 25 percent margin including shipping.</li>
+<li>Keep low-margin suppliers on file and note any individual high-margin products they offer.</li>
+<li>Keep searching for higher-margin suppliers as the first priority.</li>
+</ol>
+<p>[L1046.032]</p>
+<ul>
+<li>Products from suppliers with weak sales can stay listed in free Google Shopping listings if they still show margin, so they earn traffic without ad spend. (Older advice, 2020.) [L0967.041]</li>
+</ul>
+<h2 id="evaluating-a-supplier-before-listing">Evaluating a supplier before listing</h2>
+<p><strong>Supplier margin is set per supplier</strong></p>
+<ul>
+<li>Margins are supplier-specific, not niche-specific. No actual margin is known before approval, because pricing tiers and credit terms differ by supplier. One supplier may offer 50% margin while another in the same niche offers only 25-30%. [L0274.003]</li>
+<li>The profit margin is set by each supplier, not by the niche. Two suppliers in the same niche can offer very different margins, so judge every supplier on its own price list before deciding what to sell. (Older advice, 2021.) [L0671.001, L0671.157]</li>
+<li>Supplier margins are negotiated per supplier, not per niche. A low 20-30% margin from one supplier does not mean the niche is wrong. Keep adding approved suppliers in the niche. (Older advice, 2022.) [L0429.040]</li>
+<li>Margin between MAP and wholesale varies by supplier, not by niche. Calculate each supplier's margin after approval rather than assuming an industry margin. (Older advice, 2022.) [L0854.022]</li>
+<li>Supplier-specific prices, MAP policies and margins are unknown until approval. Use category averages for planning and confirm the real margins after approval. (Older advice, 2021.) [L0469.031]</li>
+<li>Wholesale cost is not known until you are approved, but you can still plan around it. (Older advice, 2022.) [L0854.022]</li>
+<li>A supplier's price list is the fastest way to confirm true profit per supplier. Margins can often only be confirmed after approval, but they can be calculated as soon as the price list is received. (Older advice, 2020.) [L0967.024]</li>
+<li>Approved suppliers typically send an Excel sheet with three columns, or three separate price lists: MSRP, MAP and wholesale. Use these to estimate margins before listing products. (Older advice, 2019.) [L0663.053]</li>
+</ul>
+<p><strong>Checking a supplier with no MAP policy</strong></p>
+<ol type="1">
+<li>Get the supplier's price list.</li>
+<li>Search Google Shopping for several of its products.</li>
+<li>Check whether anyone already advertises those products and at what markup.</li>
+<li>If competitors mark them up only 10% or 15%, do not list them; this is a no-go.</li>
+<li>If there is little competition, become the main seller for those products; if competitors sell them at healthy margins, list them too.</li>
+</ol>
+<p>[L0671.007] (Older advice, 2021.)</p>
+<ol type="1">
+<li>Search the supplier's products in Google Shopping.</li>
+<li>Check the prices other sellers use for those products.</li>
+<li>If sellers are selling at no margin, skip the supplier.</li>
+<li>If sellers still make a healthy margin, sell the products and mark them as ineligible on your price match policy page.</li>
+</ol>
+<p>[L0467.030] (Older advice, 2019.)</p>
+<ol type="1">
+<li>Search the product names on Google Shopping.</li>
+<li>Compare the prices other sellers charge.</li>
+<li>Drop the product if many sellers price it at almost no margin, because that is a race to the bottom.</li>
+<li>If margins hold up, exclude the product from your price match policy before the first sale.</li>
+</ol>
+<p>[L0664.007] (Older advice, 2020.)</p>
+<ol type="1">
+<li>Search for that brand on Google Shopping.</li>
+<li>Check what prices competitors list the products at.</li>
+<li>If competitors are listing at very low markup (e.g., 5% margin), list the product on your site but only target free/organic traffic (no paid ads).</li>
+<li>If competitors have healthy markups, you can list at similar prices and use Google Shopping ads.</li>
+<li>Decide ad spend based on competitor pricing and your margin.</li>
+</ol>
+<p>[L0255.017] (2025.)</p>
+<ul>
+<li><p>When no MAP policy exists, check the supplier's price list, shipping estimate and competitor prices before listing its products. Compare the expected margin for each brand before committing, since margins can still be strong when the brand approves only selected retailers. (Older advice, 2020.) [L0961.087]</p></li>
+<li><p>Brands that approve retailers selectively, especially those without a MAP policy, can still offer good margins because other retailers also protect their prices. Do not undercut the best competitor price in these cases, because price wars leave no one profitable. (Older advice, 2020.) [L0961.088]</p></li>
+<li><p>Pricing for a brand with no MAP starts from competitor prices. If competitors sell above your planned price, match their price instead of undercutting them, since buyers pay more.</p>
+<ol type="1">
+<li>Search Google for a few products of that brand as a normal customer would.</li>
+<li>Open Google Shopping and check what competitors list the same products for.</li>
+<li>If competitors sell above your planned price, match their price instead of undercutting them, since buyers pay more.</li>
+<li>If you cannot find a clear competitor price, set the price at least 2x wholesale.</li>
+</ol>
+<p>[L0854.011] (Older advice, 2022.)</p></li>
+<li><p>If competitors sell a popular product at only about 1.5x wholesale, you can still list it at 2x wholesale but run no paid ads for it. Let it earn sales from free Google product listings and SEO instead of spending money where you cannot beat the price. (Older advice, 2022.) [L0854.012]</p></li>
+</ul>
+<p><strong>Judging a supplier's position and terms</strong></p>
+<ul>
+<li>Suppliers that sell direct at MSRP and let retailers sell at MAP are good partners. Avoid brands that sell at MAP themselves or below MAP, because this removes your price advantage. (Older advice, 2020.) [L0961.030]</li>
+<li>If a brand sells direct at MAP, look for a unique value proposition (UVP), such as better presentation, trust or customer experience, that sets your store apart. Skip the brand if its own site already sells well and it expects you to match or beat its price. (Older advice, 2020.) [L0961.031]</li>
+<li>Retail margins are usually the same for every reseller, so negotiate only if the numbers do not work. (Older advice; undated.) [L0359.029]</li>
+<li>Supplier prices are usually fixed once you are approved, so negotiation is rarely possible. Focus on the research and the approval process instead. (Older advice, 2020.) [L0961.027]</li>
+<li>Some manufacturers sell direct at MSRP but allow retailers to sell at MAP, so a retailer can price below MSRP. Get approved, request the price list and confirm the margin before deciding. (Older advice, 2019.) [L0467.031]</li>
+<li>When a brand is only available through a wholesaler, check the margin after the wholesaler's price and whether you have pricing control. Working through the wholesaler is acceptable when margin and pricing are right. (Older advice, 2021.) [L0801.028]</li>
+<li>A supplier that sells the same product direct at the same price with free shipping leaves no room for a value proposition. List such products only if the store offers a bonus or better service; otherwise skip the supplier. (Older advice? Undated, 2023.) [L0964.030]</li>
+<li>If a supplier sells direct to consumers and runs its own paid ads, listing its products on your store can still help build credibility when approaching other brands. Do not include them in paid ads, since they are unlikely to become a major earner. (2025.) [L0837.040]</li>
+<li>If the supplier also sells directly to consumers at MAP, check its own retail website before deciding: whether it runs ads and whether the site is built to convert visitors. A supplier that does not invest in its retail channel can still be a profitable partner. (Older advice, 2022.) [L0854.117]</li>
+<li>Judge a supplier's offer on its own numbers before listing. Approval does not mean every product is worth selling. (Older advice, 2019.) [L0663.033]</li>
+</ul>
+<p><strong>Supplier with thin margin after shipping</strong></p>
+<ul>
+<li>If a supplier's margin is too thin after shipping, drop that supplier's products even after approval. Approval does not mean every product is worth selling. (Older advice, 2019.) [L0663.033]</li>
+<li>Supplier margins of 10-20% before payment fees and ad costs signal an affiliate-style relationship. Negotiate with these suppliers or skip them in favour of suppliers that meet the 50% wholesale rule. (Older advice, 2020.) [L0967.015]</li>
+</ul>
+<h2 id="negotiating-better-terms">Negotiating better terms</h2>
+<p><strong>Timing: when negotiation works</strong></p>
+<ul>
+<li>In the early stage, with minimal sales history, you have little negotiating power with suppliers for better rates or terms. Focus optimisation on conversions and product selection. Negotiate more heavily once you have proven sales volume. [L0208.014]</li>
+<li>Wholesale cost is usually not negotiable for a brand-new retailer, even one with a track record in other businesses. Suppliers typically want proof of sales first. Wholesale cost becomes negotiable as your sales volume with that supplier grows. [L0939.008]</li>
+<li>Once a relationship is established, a supplier may give about 10% off wholesale cost. Some suppliers also offer special holiday pricing so the retailer can sell more of their products. [L0939.009]</li>
+<li>Demand comes before cost. Build consistent demand first, for example 20 sales per day consistently and later 50 per day. Inconsistent demand is a bigger problem than supplier cost at an early stage. [L0644.041, L0644.042]</li>
+<li>Validate first, then negotiate once you know the product will scale. Keep a second backup supplier so you can justify the price. [L0780.021]</li>
+</ul>
+<p><strong>Basic sourcing sequence (Source C)</strong></p>
+<ol type="1">
+<li>Start with CJ Dropshipping for convenience, since it is easy to set up and offers acceptable prices and shipping.</li>
+<li>Build consistent demand first, for example 20 sales per day consistently and later 50 per day.</li>
+<li>Once demand is steady, contact other suppliers, state your sales volume and ask whether they can beat your current price.</li>
+<li>Move the business only if the new supplier matches or beats the price and service.</li>
+</ol>
+<p>[L0644.041]</p>
+<p><strong>Negotiation procedures</strong></p>
+<ol type="1">
+<li>Ask your current supplier, such as CJ, whether they can lower the price.</li>
+<li>Request quotes from several other suppliers for the same product.</li>
+<li>Compare the quotes and choose the supplier that gives the best margin and delivery terms.</li>
+</ol>
+<p>[L0661.019]</p>
+<ul>
+<li>In the shoe example, fulfilment cost per pair was about $13 to $15 after negotiation. That cost still left a healthy margin on a selling price of $40. [L0661.020]</li>
+<li>A jewelry product with a fulfilment cost of about $7 per item allowed a selling price of $30 with a comfortable margin. The margin came from low cost of goods rather than from a high selling price. [L0661.021]</li>
+<li>Check your supplier's best price rather than accepting the first offer, and ask whether the price can go lower once you have scale. [L0780.021]</li>
+</ul>
+<p><strong>Negotiation procedure with a volume threshold (older advice, 2020)</strong></p>
+<ol type="1">
+<li>Obtain the supplier's price list showing wholesale and MAP.</li>
+<li>If MAP is not about double the wholesale price, state that the price must be at that level to sell and that otherwise the brand will not be sold.</li>
+<li>Ask immediately whether the supplier offers volume-based pricing incentives, for example a discount once a monthly dollar or unit threshold is reached.</li>
+<li>Track monthly volume and follow up for the discount once the threshold is reached.</li>
+</ol>
+<p>[L0967.023]</p>
+<p><strong>Incentive pricing after approval (Source A)</strong></p>
+<ol type="1">
+<li>Once you are approved, get their price list and upload their products right away.</li>
+<li>Ask whether they offer incentive pricing for selling a set number of units per month or for reaching revenue targets.</li>
+<li>Ask whether they give discounts off wholesale prices for your account.</li>
+<li>Before the busy season (Black Friday, Cyber Monday through Christmas), contact them again to negotiate special seasonal pricing.</li>
+</ol>
+<p>[L0941.013]</p>
+<p>Template: incentive pricing request</p>
+<pre><code>Hi [Supplier contact name], we are now approved and have uploaded your products to our store at [store domain]. Do you offer any incentive pricing if we sell [number] units per month or reach [revenue target] in revenue? Are there any discounts off wholesale prices that would be available to us, and do you offer special pricing during busy periods such as Black Friday, Cyber Monday and the holiday season? Thank you, [Your name].</code></pre>
+<p>[L0941.014]</p>
+<p><strong>Requesting better margins</strong></p>
+<ul>
+<li>Ask suppliers for a tiered retailer discount structure early in the process. Standard options include a percentage off wholesale or discounts at set sales volumes. [L0934.153]</li>
+<li>Ask whether the supplier offers tiered retailer pricing, such as 20% off wholesale. Ask for discounts at set sales volumes, such as a number of units or sales. Decide to list or advertise the products only after you see the final margins. [L0934.030]</li>
+<li>A supplier can be asked for better margins with a specific framing: say you want to promote their products and spend more on ads, and ask about incentive pricing. Start with friendly questions rather than an immediate request for discounts. (Older advice, 2023.) [L0835.046]</li>
+<li>Before running ads on a supplier offering a 15-20% discount off retail, ask for better margins first. Some stores have negotiated better margins with suppliers, so a low spread can sometimes be improved. (Older advice, 2024.) [L0666.066]</li>
+<li>When a supplier adds a drop-ship fee, shipping and taxes that erode your margin, negotiate first. If prices cannot change, exclude that supplier from paid ads, because organic sales still earn margin. Remove the supplier if the margin is still too small. (Older advice, 2021.) [L0469.026]</li>
+<li>Ask whether a supplier offers a value-for-volume deal. Ask for better wholesale prices, incentive or volume programmes, and whether a retailer hitting a set number of units or sales unlocks lower wholesale prices. (Older advice, 2023.) [L0970.035]</li>
+<li>Add the question to your early calls: ask suppliers for their tiered retailer discount structure, including volume discounts. Ask for 5 or 10 percent off at set sales levels. (Older advice; undated.) [L0359.029]</li>
+</ul>
+<p>Template: asking for better margins (older advice, 2019)</p>
+<pre><code>Hi, this is [Your name] from [Store name]. Now that we have reviewed your price sheets, we want to move a good number of your products. After running the numbers, our margins are lower than we expected, around [current margin]%, and we need closer to [target margin]% to run ads profitably. Do you have other pricing tiers, or is there room to negotiate better margins for us? We would also like product photos and videos we are allowed to use, and we would like to order one sample unit at wholesale price to inspect the quality before we commit.</code></pre>
+<p>[L0960.029]</p>
+<p>Template: volume-based discount request (older advice, 2020)</p>
+<pre><code>Hi [Supplier name], we have been ordering from you since [month and year] and placed about [total annual order value] in orders over the last twelve months, so we are one of your larger accounts. We would like to discuss better pricing for next year. Could you offer us [5] percent or [10] percent lower prices on [product list or category], and could you send your volume pricing tiers? If we can agree on this, we can commit to about [expected monthly order volume] orders. Thank you, [Your name], [Company name].</code></pre>
+<p>[L1046.033]</p>
+<p>Template: incentive programme follow-up (2023)</p>
+<pre><code>Hi, this is [your name] from [your brand]. We were looking over the price lists you sent us. We really want to put a real ad budget behind these products and become one of your top retailers, but the margins aren&#39;t where we need them to be. Do you have any incentive programs where, if retailers reach a certain number of units or a certain sales volume, wholesale prices get discounted? If not, please let me know so we can decide our next steps.</code></pre>
+<p>[L0970.036]</p>
+<ul>
+<li><p>Ask a supplier whether a discount is allowed:</p>
+<ol type="1">
+<li>Collect screenshots of competitor coupons or discount pop-ups.</li>
+<li>Email the sales rep with the screenshots and ask whether you may do the same.</li>
+<li>If there is no reply, follow up briefly to make sure the email was seen.</li>
+</ol>
+<p>[L0963.092] (Older advice, 2022.)</p></li>
+</ul>
+<p><strong>Excess stock and special offers</strong></p>
+<ul>
+<li>Suppliers often hold excess or discontinued stock they want to clear quickly, and offer discounts of up to 40% for sellers who promote it. A store that already has traffic can start moving that stock almost immediately by featuring the products or running new ads on them. A brick-and-mortar retailer must place a bulk order, wait for shelf space and then handle the stock before it can sell. (Older advice, Source B 2021-22.) [L0929.034]</li>
+<li>When a service provider such as a finisher or waterproofing shop has to market its services itself, you can ask for a discount if you can line up a steady group of customers who need the same service. The provider accepts a lower price because you reduce its acquisition effort and time. [L0701.038]</li>
+</ul>
+<p><strong>Using the list of suppliers as leverage</strong></p>
+<ul>
+<li>When competitors sell the same product for less than your supplier price list allows, they most likely have better supplier pricing or better shipping rates. They are not usually selling at a loss. (Older advice, 2019.) [L1068.032]</li>
+<li>Ask suppliers about the product's price when a competitor is undercutting you. Possible answers include a cheaper carrier or a lower wholesale tier. (Older advice, 2019.) [L1002.062]</li>
+<li>Email the supplier with your wholesale price, the competitor's price with free shipping and your shipping cost. Ask whether they can offer better pricing or cheaper shipping. (Older advice, 2019.) [L1002.060]</li>
+</ul>
+<p>Template: wholesale and shipping pressure (older advice, 2019)</p>
+<pre><code>Hi [rep name],
+
+This is the wholesale price you gave me for [product]: [wholesale price]. A competitor is selling it for [competitor price] with free shipping. My shipping cost for this item would be about [shipping cost], which leaves me no profit. Is there any way we could get better pricing or a cheaper shipping option? Thank you for your help.
+
+[your name]</code></pre>
+<p>[L1002.061]</p>
+<ul>
+<li>Shipping costs in one case reached 30-50% of product cost for distributor shipping, and the most popular supplier's products shipped at about 40%. The recommended path was to show the supplier real figures (sales count, shipments, shipping costs and remaining margin) and request preferred-carrier shipping or incentive pricing, then compare freight broker quotes. Raising prices above MAP, adding a large shipping fee or dropping the brand were rejected, because sales would fall and ad spend would be wasted. (Older advice, 2020.) [L0852.123]</li>
+</ul>
+<h2 id="low-margin-handling">Low-margin handling</h2>
+<p><strong>Options when the spread is too thin</strong></p>
+<ol type="1">
+<li>Contact the supplier to negotiate better wholesale pricing.</li>
+<li>If the margin is still acceptable but ad spend is unaffordable, keep the product and rely on organic traffic only.</li>
+<li>Otherwise drop the product.</li>
+</ol>
+<p>[L0665.011] (Older advice, 2022.)</p>
+<ul>
+<li>Low-margin products can still be listed without being run in paid campaigns. Keep them in free Google product listings for organic traffic, and keep paid campaigns focused on products with the largest spread. (Older advice, 2024.) [L0666.022]</li>
+<li>If a supplier's margin is too thin, either do not list its products or list them without including them in any paid ads, so only free traffic reaches them. (Older advice, 2021.) [L0671.003]</li>
+<li>Products with too small a margin to advertise can still be listed on the store and in the free listings section of Google Shopping, without any ad budget. (Older advice, 2024.) [L0836.041]</li>
+<li>Spend paid traffic only on products from suppliers with healthy margins. Send the full catalogue to free Google product listings, and add suppliers to paid campaigns only after their margins are proven. (Older advice, 2021.) [L0968.012]</li>
+<li>Non-MAP suppliers: do not run Google Shopping ads for products where competitors undercut your price on every listing. Invest in free traffic sources instead, and do not expose the products to price-match guarantees. (Older advice, 2022.) [L0969.042]</li>
+<li>When margins are too thin, ask suppliers whether they have incentive or volume programmes that lower wholesale prices once a retailer hits a set number of units or sales volume. If the answer is no, decide whether to list the brand with no ad spend or skip it entirely. (Older advice, 2023.) [L0970.035]</li>
+<li>Do not match prices of non-MAP competitors when no margin is available. If the supplier enforces MAP, ask it to contact the competitor. Otherwise keep your price where you can make money and do not run Google Shopping ads on those products. (Older advice, 2021.) [L0834.025]</li>
+<li>Do not sell a product at a price below MAP through advertising. (Older advice, 2022.) [L0963.093]</li>
+<li>If a supplier that does not enforce MAP sells the same product elsewhere, check it has no price-match policy before approaching. If margins are too thin, exclude those products from paid ads and rely on free Google Shopping listings. (Older advice; undated.) [L0941.020]</li>
+</ul>
+<p><strong>Thin margin: a shipping example (older advice, 2019)</strong></p>
+<ol type="1">
+<li>Calculate the margin: retail price minus wholesale cost minus shipping. Example: $699 - $530 = $169, but $200 shipping would leave a loss.</li>
+<li>Email the supplier with your wholesale price, the competitor's price with free shipping and your shipping cost, and ask whether they can offer better pricing or cheaper shipping.</li>
+<li>If the supplier refuses, still list the product if people search for it, but exclude it from paid traffic.</li>
+<li>Price the product with your own margin, and exclude it from your price-match guarantee.</li>
+<li>Add perceived value with bonuses and shipping upgrades, such as white-glove delivery.</li>
+</ol>
+<p>[L1002.060]</p>
+<ul>
+<li>A supplier's cost should be checked against its MAP before it is listed. A thin spread should be reconsidered or negotiated (see the 2x and 50% benchmarks above). [L0665.010]</li>
+<li>If a supplier adds a drop-ship fee or tax that erodes margin, first negotiate. If prices cannot change, keep the product on free traffic only. (Older advice, 2021.) [L0469.026]</li>
+<li>Do not sell at very low margins, and do not advertise products whose spread has become too thin. (Older advice, 2023.) [L0835.023]</li>
+</ul>
+<h2 id="ad-versus-free-traffic-decisions">Ad versus free-traffic decisions</h2>
+<p><strong>Paid versus free listing by margin</strong></p>
+<ul>
+<li>Spend paid traffic only on products from suppliers with healthy margins. Send the full catalogue to free Google product listings. (Older advice, 2021.) [L0968.012]</li>
+<li>Keep the paid campaigns focused on products with the largest spread. Products with thin spreads stay in free listings. (Older advice, 2024.) [L0666.022]</li>
+<li>Products from suppliers with weak sales can remain in free Google Shopping listings if they still show margin, so they earn traffic without ad spend. (Older advice, 2020.) [L0967.041]</li>
+<li>Keep products with thin margins in free listings only, so that organic traffic can still reach them. (Older advice, 2024.) [L0836.041]</li>
+</ul>
+<p><strong>Checking whether a supplier's product is working</strong></p>
+<ul>
+<li>When a supplier's products get more than 100 unique visitors from paid ads without any sale, shoppers are most likely buying from the supplier directly. Check unique visitors per supplier product before deciding whether to keep advertising it. (2023.) [L0934.002]</li>
+<li>If big retailers ignore a supplier's MAP enforcement, check that supplier's SKUs one by one. Advertise only products where big retailers are not selling at a lower price. Filtering this way keeps ad spend on products you can actually sell at MAP. (2023.) [L0934.035]</li>
+</ul>
+<p><strong>Products that do not sell</strong></p>
+<ol type="1">
+<li>First optimise the product pages and the ads for those products.</li>
+<li>If they still do not sell, lower the target cost per click for them in Google Shopping, so they still show but receive less budget.</li>
+<li>If that fails, remove them from the paid alpha and beta campaigns and let them sell through free Google product listings and organic search.</li>
+</ol>
+<p>[L0854.016] (Older advice, 2022.)</p>
+<p><strong>Competitor price-cutting in paid campaigns</strong></p>
+<ol type="1">
+<li>Take screenshots of the violating listings and send them to your supplier.</li>
+<li>Watch how the supplier responds. A supplier that acts quickly is the first step.</li>
+<li>If the supplier is not helpful, check how your ads convert for those specific products.</li>
+<li>If they do not convert and the spend looks like unfair competition, drastically lower the bids for those products rather than removing them from the feed.</li>
+</ol>
+<p>[L0470.005] (2023.)</p>
+<ul>
+<li>Stop paid ads for a supplier's products when the supplier's margin does not hold after shipping and ad costs. Keep the products on the store for organic traffic. [L0807.015]</li>
+</ul>
+<p><strong>Ad spend after a supplier discount</strong></p>
+<ul>
+<li>A supplier discount of 30-35% is not enough if you still pay shipping and must fund customer acquisition. Ask suppliers for better margins, check whether they offer pricing tiers, and review their terms, exclusivity and pricing before deciding which products to fund with paid traffic. (2025.) [L0807.015]</li>
+<li>Products where a 2x MAP leaves room are run in ads only if the remaining profit covers acquisition. A 2x MAP at 10% customer acquisition still needs the rest of the costs covered. (Older advice, 2020.) [L0268.010]</li>
+</ul>
+<p><strong>Ad decision by supplier type</strong></p>
+<ul>
+<li>Suppliers that sell direct to consumers and undercut your price while running ads are hard to beat. Keep them on the store without ads and rely on organic traffic, while advertising products where your store adds value. (2023.) [L0855.071]</li>
+<li>For a product where competitors undercut your price, bid lower and run no ads on those products instead of matching their price. (Older advice, 2022.) [L0854.012]</li>
+</ul>
+<h2 id="direct-to-consumer-undercutting">Direct-to-consumer undercutting</h2>
+<ul>
+<li><p>A brand selling direct to consumers is a good partner when it sells at MSRP and lets retailers sell at MAP. Avoid brands that sell at MAP themselves or below MAP, because this removes your price advantage. (Older advice, 2020.) [L0961.030]</p></li>
+<li><p>If a brand sells direct at MAP, look for a unique value proposition, such as better presentation, trust or customer experience. Skip the brand if its own site already sells well and it expects you to match or beat its price. (Older advice, 2020.) [L0961.031]</p></li>
+<li><p>If a supplier sells direct to consumers at the same price and advertises in the same channels as you, stop paid ads to its product pages. Keep those products only in free Google Shopping listings, where organic traffic can still arrive. (2023.) [L0934.001, L0934.157]</p></li>
+<li><p>Once an approved supplier is strong direct-to-consumer, keep it on your store but stop spending on it:</p>
+<ol type="1">
+<li>Remove its products from the Google Shopping product feed.</li>
+<li>Keep the products live for organic traffic.</li>
+<li>Put ad budget into products from suppliers you have not yet onboarded.</li>
+</ol>
+<p>[L0804.023] (2023.)</p></li>
+<li><p>Suppliers that sell direct to consumers and undercut your price while running ads are hard to beat. Keep them on the store without ads and rely on organic traffic, while advertising products where your store adds value. (2023.) [L0855.071]</p></li>
+<li><p>A supplier that sells the same product direct at the same price with free shipping does not leave the store room for a value proposition. (2023.) [L0964.030]</p></li>
+<li><p>If a supplier sells direct and runs its own paid ads, do not include its products in your paid ads. Listing them can still add credibility. (2025.) [L0837.040]</p></li>
+<li><p>Do not match prices of non-MAP competitors when no margin is available. If the supplier enforces MAP, ask it to contact the competitor. (2021.) [L0834.025]</p></li>
+</ul>
+<h2 id="price-match-guarantees-coupons-and-advertised-price">Price-match guarantees, coupons and advertised price</h2>
+<ul>
+<li>Coupon codes that reduce price below MAP are generally acceptable, because MAP is the minimum advertised price, not the minimum selling price. Check individual supplier agreements for language forbidding promotional codes. (Older advice, 2022.) [L0249.013]</li>
+<li>The advertised price, meaning the price shown in ads and emails, must not go below MAP. A coupon code applied at checkout can lower the price the customer pays, because the advertised price stays at MAP. Product-specific discounts that only apply at checkout are generally allowed unless a supplier forbids them. (2023.) [L0964.017]</li>
+<li>Clear coupon mechanisms that only apply at checkout are the only standard exception to not selling below MAP through advertising. (Older advice, 2022.) [L0963.093]</li>
+<li>MAP is a minimum advertised price, so you may advertise a product above it but not below it. A retailer below MAP is in violation of the supplier's policy. (2025.) [L0837.038]</li>
+<li>Ask whether the supplier has a MAP policy after approval. If it does not, the site should not carry a price guarantee, because it can only be honoured when MAP applies. (Older advice, 2018.) [L0466.022]</li>
+<li>Do not offer a price-match guarantee on a supplier's product pages if that supplier does not enforce a minimum advertised price. Otherwise a competitor willing to sell at a loss can force you to match and lose money on every sale. (Older advice, 2020.) [L0664.006]</li>
+<li>Do not work through a supplier's MAP with a price-match guarantee if the supplier does not use MAP. A price guarantee promises to match a lower price from an authorised retailer, which only fits MAP-enforced products. (Older advice, 2021.) [L0853.048]</li>
+<li>Products from non-MAP suppliers do not require price-match policies. (2025.) [L0255.016]</li>
+<li>Before approaching a non-MAP supplier, confirm that it has no price-match policy. (Older advice; undated.) [L0941.020]</li>
+</ul>
+<p>Template: asking whether a supplier has a MAP policy</p>
+<pre><code>Hi [Supplier name], I wanted to ask whether you have a MAP policy. I searched [product name] on Google Shopping and found it listed at [price 1], [price 2] and [price 3] (screenshots attached). Could you let me know how you see this pricing?</code></pre>
+<p>[L0941.022]</p>
+<h2 id="map-violations-detection-reporting-and-enforcement">MAP violations: detection, reporting and enforcement</h2>
+<p><strong>Confirm and document the violation</strong></p>
+<ul>
+<li>Take a screenshot of every case where a competitor breaks the MAP policy, including sales on Amazon. Send the screenshots to your supplier's sales rep. Expect a quick fix if the supplier enforces the policy; a slow response shows how strictly it is enforced. (Older advice, 2019.) [L0356.033]</li>
+<li>Take a screenshot of the competitor's product page showing the price that violates MAP, and confirm the price is live on several devices. (2025.) [L0837.037]</li>
+<li>To report a competitor selling a MAP product below the minimum advertised price, take a screenshot of the lower price. (2025.) [L0857.066]</li>
+<li>When a competitor sells below MAP and your ads face unfair price competition, take screenshots of the violating listings and send them to your supplier. (2023.) [L0470.005]</li>
+<li>Take screenshots of the below-MAP listing before contacting the supplier. (2026.) [L0808.016]</li>
+</ul>
+<p><strong>Report to the supplier</strong></p>
+<p>Procedure (Source A, 2021):</p>
+<ol type="1">
+<li>Contact your supplier representative.</li>
+<li>Send screenshots of the violation.</li>
+<li>See whether the supplier takes action.</li>
+<li>Do not match the competitor's price yourself.</li>
+</ol>
+<p>[L0671.047, L0671.186] (Older advice, 2021.)</p>
+<p>Procedure (Source A, 2025):</p>
+<ol type="1">
+<li>Capture a screenshot of the competitor's product page showing the price that violates MAP, and confirm the price is live on several devices.</li>
+<li>Email the brand's contact person with the competitor's URL, the MAP price, the listed price and the screenshot, and ask them to address it.</li>
+<li>The brand typically contacts the retailer and gives a deadline to correct the price.</li>
+<li>If the retailer does not comply, the brand can remove the retailer's permission to sell its products.</li>
+</ol>
+<p>[L0837.037] (2025.)</p>
+<p>Procedure (Source A, 2025, report):</p>
+<ol type="1">
+<li>Take a screenshot of the competitor's product page showing the lower price.</li>
+<li>Email your contact at the brand with the screenshot.</li>
+<li>State the listed price and the MAP, and ask whether the MAP policy has changed. Do not demand that the competitor be banned.</li>
+<li>The brand contacts the violating store and usually gives it a set number of days to correct the price.</li>
+<li>A store that violates MAP repeatedly can lose the right to sell that brand's products.</li>
+</ol>
+<p>[L0857.066] (2025.)</p>
+<p>Procedure (Source A, 2023, Amazon sale):</p>
+<ol type="1">
+<li>Ask the supplier whether the lower price is its new price and whether you may sell at that price.</li>
+<li>If the supplier says yes, change your price to match.</li>
+<li>If the supplier refuses to follow its own MAP policy, remove that supplier's products from your Google Shopping feed so you do not pay for traffic on them.</li>
+</ol>
+<p>[L0664.008] (Older advice, 2020.)</p>
+<p>Procedure (Source A, 2024, marketplace below MAP):</p>
+<ol type="1">
+<li>Capture screenshots of the marketplace prices.</li>
+<li>Email your supplier representative as soon as possible.</li>
+<li>Ask whether the MAP policy changed, whether the supplier permits this pricing, and whether you may sell at that price.</li>
+<li>Decide your next step based on the reply.</li>
+</ol>
+<p>[L0471.019] (2024.)</p>
+<p>Procedure (Source A, 2026, below-MAP listing):</p>
+<ol type="1">
+<li>Take screenshots of the below-MAP listing.</li>
+<li>Email the supplier with the screenshots and ask whether they are aware the product is listed at that price.</li>
+</ol>
+<p>[L0808.016] (2026.)</p>
+<p>Procedure (Walmart, 2022):</p>
+<ul>
+<li>If competitors on Walmart.com are selling a product below MAP, contact your supplier with screenshot links showing the violation. Ask them to enforce MAP with third-party sellers. Most suppliers will take action. (Older advice, 2022.) [L0249.094]</li>
+</ul>
+<p><strong>Check a supplier's response</strong></p>
+<p>Procedure (Source A, 2019):</p>
+<ol type="1">
+<li>Take a screenshot of every case where a competitor breaks the MAP policy, including sales on Amazon.</li>
+<li>Send the screenshots to your supplier's sales rep.</li>
+<li>Expect a quick fix if the supplier enforces the policy; a slow response shows how strictly it is enforced.</li>
+</ol>
+<p>[L0356.033] (Older advice, 2019.)</p>
+<ul>
+<li>When a competitor violates MAP, follow up with your brand rep repeatedly instead of reporting once and waiting. MAP agreements bind every authorised seller, so the brand has a responsibility to enforce them. (Older advice, 2020.) [L0358.005]</li>
+<li>A supplier that does not act on constant MAP violations is a bad sign. Serious suppliers take listings down quickly when violations are reported. (Older advice, 2021.) [L0671.048, L0671.187]</li>
+<li>When a supplier does not enforce MAP, decide whether to keep paying to advertise those products or to keep them out of the paid budget. (2023.) [L0964.036, L0964.161]</li>
+<li>When a third-party seller on a large marketplace sells a supplier's product below MAP, report it to the supplier, since this has led to price changes. (2023.) [L0964.161]</li>
+<li>If a supplier does not respond about a MAP violation, follow up after a few days, especially after a holiday weekend. (Older advice, 2021.) [L0853.040]</li>
+</ul>
+<p>Procedure (Source A, 2021, no reply):</p>
+<ol type="1">
+<li>Follow up after a few days, especially after a holiday weekend.</li>
+<li>Restate that the violation is still happening.</li>
+<li>If there is still no reply, stop running ads for that supplier's products.</li>
+<li>Remove those products from the store if the violation continues.</li>
+</ol>
+<p>[L0853.040] (Older advice, 2021.)</p>
+<ul>
+<li>A supplier whose MAP is violated by big-box stores selling below the wholesale price must fix the violation before the store lists the product at a higher price in paid channels. (2024.) [L0856.061]</li>
+<li>Report MAP violators that list products far below MAP to Google so that their listings are removed. Prices at half of MAP or less are a sign of a scam or fraud, not a sustainable business model. (2024.) [L0965.029]</li>
+<li>A supplier that offered a better discount for a long time may drop its terms. Use your historical sales and margin data per product to decide which items keep ad budget, and remove the rest from the paid feed. (2024.) [L0965.037]</li>
+<li>Some supplier discounts can change over time. Keep the supplier's price sheet under review and re-check margins before continuing ads. (2024.) [L0965.037]</li>
+</ul>
+<p>Procedure (Source A, 2023, supplier's MAP not reaching 2x):</p>
+<ol type="1">
+<li>Ask for better wholesale pricing.</li>
+<li>Ask whether they offer tiered retailer pricing, such as 20% off wholesale.</li>
+<li>Ask for discounts at set sales volumes, such as a number of units or sales.</li>
+<li>Decide to list or advertise the products only after you see the final margins.</li>
+</ol>
+<p>[L0934.030] (2023.)</p>
+<p><strong>Supplier with no MAP policy: asking about MAP</strong></p>
+<ul>
+<li>After approval, ask each supplier whether it has a minimum advertised price (MAP) policy. If it does not, the site should not carry a price guarantee. (Older advice, 2018.) [L0466.022]</li>
+<li>If the supplier does not provide a MAP policy in its sheet, it may state a formula such as 2x wholesale. You can also search the product name and compare competitor listings to see the actual advertised price. (2023.) [L0470.074]</li>
+<li>Google Shopping search of a supplier's products shows whether sellers price below MAP. Search a sample of the supplier's products every few items, record violations in the supplier's notes, and switch to scheduled audits once the supplier is confirmed to enforce MAP. (Older advice, 2022.) [L0429.083]</li>
+</ul>
+<p>Procedure (Source A, 2022, enforcement failure):</p>
+<ol type="1">
+<li>Check whether your own sales happen at MAP and whether traffic is profitable.</li>
+<li>If yes, continue.</li>
+<li>If not, remove the supplier's products from the alpha and beta campaigns and stop paying for their traffic.</li>
+<li>Keep letting free traffic reach those products.</li>
+</ol>
+<p>[L0429.025] (Older advice, 2022.)</p>
+<p>Procedure (Source A, 2019, supplier with no MAP):</p>
+<ol type="1">
+<li>Search the supplier's products in Google Shopping.</li>
+<li>Check the prices other sellers use for those products.</li>
+<li>If sellers are selling at no margin, skip the supplier.</li>
+<li>If sellers still make a healthy margin, sell the products and mark them as ineligible on your price match policy page.</li>
+</ol>
+<p>[L0467.030] (Older advice, 2019.)</p>
+<p>Procedure (Source A, 2021, ask about MAP with a request):</p>
+<ol type="1">
+<li>Ask the supplier whether it has a MAP policy.</li>
+<li>Show the search results you found on Google Shopping, with screenshots, and ask how it sees the pricing.</li>
+</ol>
+<p>[L0941.022] (Older advice; undated.)</p>
+<p>Template: MAP inquiry to supplier (2021)</p>
+<pre><code>Hi [supplier contact name], I found [competitor name] selling [product name] at [price], which appears to be below your MAP (screenshot attached). Could you tell me what the MAP is for this product, and why this company is not selling at it? Thank you, [your name]</code></pre>
+<p>[L0247.026]</p>
+<ul>
+<li>If a supplier's MAP does not make it into the sheet, use competitor listings and the supplier's stated formula as the reference. (2023.) [L0470.074]</li>
+<li>If a supplier does not enforce MAP, and its products are sold at or below MAP in the same channels, check the margin before advertising. (Older advice, 2022.) [L0429.025]</li>
+</ul>
+<h2 id="competitor-pricing-for-non-map-products">Competitor pricing for non-MAP products</h2>
+<ul>
+<li>For non-MAP supplier products, search for that brand on Google Shopping and check what prices competitors list the products at. (2025.) [L0255.017]</li>
+<li>Judge a supplier by its own price list before listing products. Two suppliers in one niche can offer different margins. (Older advice, 2021.) [L0671.157]</li>
+<li>If competitors mark a product up only 10% or 15%, do not list it. This is a no-go. (Older advice, 2021.) [L0671.007]</li>
+<li>Non-MAP supplier products: list the product on your site with free traffic only if competitors list at very low markup, around 5% margin. (2025.) [L0255.017]</li>
+<li>Non-MAP suppliers: do not advertise where competitors undercut your price on every listing. (2022.) [L0969.042]</li>
+</ul>
+<h2 id="negotiation-and-supplier-handling-checklist">Negotiation and supplier handling checklist</h2>
+<p>Use this order when a new supplier is added:</p>
+<ol type="1">
+<li>Get the approved supplier's price list and upload its products. [L0941.013]</li>
+<li>Confirm whether a MAP policy exists and whether the supplier enforces it. [L0466.022, L0941.022]</li>
+<li>Calculate the margin per product including shipping, packaging, 3PL pick fees and payment fees. [L0433.013, L0433.014, L0433.015, L0222.006, L1046.032]</li>
+<li>Compare the spread against the 50% rule and the 2x floor. [L0358.003, L0268.010, L0665.010]</li>
+<li>Decide per product whether it is paid, free-only or dropped. [L0665.011, L0671.003, L0968.012]</li>
+<li>Ask for better margins, incentive pricing and volume tiers. [L0934.153, L0941.013, L0967.023]</li>
+<li>Once volume is proven, renegotiate. [L0939.008, L0780.021]</li>
+</ol>
+<h2 id="priorities-and-sequencing">Priorities and sequencing</h2>
+<ul>
+<li>In the early stage, focus optimisation efforts on conversions and product selection. Negotiating with suppliers gets easier once you have proven sales volume. [L0208.014]</li>
+<li>Build steady demand before cost savings. Once steady sales are proven, negotiate supplier prices. [L0644.042]</li>
+<li>Keep a backup supplier so the price can be justified, and only switch when the new supplier matches or beats price and service. [L0780.021, L0644.041]</li>
+</ul>
+<h2 id="checks-before-listing-a-product">Checks before listing a product</h2>
+<h3 id="set-up-each-supplier-separately">Set up each supplier separately</h3>
+<ul>
+<li>Pricing rules, margins and MAP requirements belong to each supplier, not to the niche. A niche is not disqualified by one low-margin supplier if others offer the 50%-of-MAP structure. [L1090.014]</li>
+<li>Margins are set per supplier and can differ within one store. Some suppliers offer 15%, others 20% or 30%, so track margin per supplier, not as one store-wide figure. (older, 2021-22) [L1480.015]</li>
+<li>Individual products within one supplier can also have different margins. [L1090.014]</li>
+<li>MAP requirements differ from brand to brand. Run the 2x wholesale check for each supplier, not once across the catalog. If a brand's MAP is too close to its wholesale cost, negotiate better pricing before listing its products. (older, 2019) [L1086.069]</li>
+</ul>
+<h3 id="check-the-pricing-rules-before-discounting">Check the pricing rules before discounting</h3>
+<ul>
+<li>Ask the supplier for its MAP policy before you discount. Many suppliers allow discounts, but some forbid coupon codes. An automatic coupon that pushes the advertised price below MAP can break the policy. (older, 2020) [L1088.020]</li>
+<li>Extra discounts or coupon codes on top of MAP are allowed unless the supplier's retailer approval agreement forbids them. This restriction is rare. If a supplier has it, exclude that brand from promotions. (older, 2019) [L1086.032]</li>
+<li>To find a brand's MAP without asking the supplier, search the brand name on Google Shopping and compare the prices sellers list for its products. Ask the supplier directly only if this does not reveal the price. (older, 2022) [L1113.085]</li>
+<li>If a supplier's listed online price is below its MAP, ask the supplier about it immediately. Do not assume MAP is being enforced. (older, 2020) [L1111.027]</li>
+</ul>
+<h3 id="the-50-rule-wholesale-against-map">The 50% rule (wholesale against MAP)</h3>
+<ul>
+<li>Wholesale cost should be no more than 50% of MAP. Example: a MAP of 5,000 USD requires a wholesale cost of 2,500 USD or less. (older, 2020-21) [L1090.012, L1111.021, L1112.044, L1277.029]</li>
+<li>The spread must cover shipping, payment fees, ad spend and profit. A wider spread leaves more room for these costs. (older, 2020-21) [L1111.021, L1112.044, L1277.029]</li>
+<li>Exceptions are rare and only considered for very expensive items that sell consistently and easily. (older, 2021) [L1090.012]</li>
+<li>MAP is often around 2x the wholesale cost. (older, 2018) [L1274.031]</li>
+</ul>
+<h2 id="margin-calculations">Margin calculations</h2>
+<h3 id="build-the-full-cost-before-committing">Build the full cost before committing</h3>
+<ul>
+<li>Target a gross margin of about 25% to 30% of the selling price. Free shipping, the roughly 2.9% credit card fee and the ad cost to acquire each customer all come out of it. Build a full cost breakdown before committing to a product. (older, 2021) [L1090.013]</li>
+<li>When researching, use the AliExpress product price plus shipping to your country as the initial COGS. Recalculate once you get real quotes from suppliers or fulfillment companies, which can be cheaper than AliExpress. (2026) [L1174.018]</li>
+<li>Test the sourcing and shipping cost of a product through CJ or the supplier before you launch ads, especially for large or heavy packages where shipping can eat the margin. [L1176.030]</li>
+<li>Before pricing, ask the supplier for the product cost that applies to USA shipping. Do not reuse a cost from another market. The cost must cover the single unit and, for bundles, the total cost for each quantity. (2026) [L1182.003]</li>
+<li>Calculate the landed cost including shipping before choosing a heavy book for testing. Thick, heavy books have high cost of goods, and shipping to the US (fast or slow line) adds a large cost on top. (2026) [L1175.027]</li>
+<li>Before calculating margin on a heavy product, confirm whether the supplier ships directly to the end customer and what shipping costs for that destination. Shipping cost often decides whether a niche is viable, more than the product cost does. (older, 2018) [L1109.069]</li>
+<li>Confirm whether a supplier's price list applies per unit or per pack or box before you publish a price. A price list for two units sold as one item led a store to sell four units at about half the intended price. [L1472.026]</li>
+<li>Two units were delivered in one box, and the supplier's price list showed the price for the two units together rather than per unit. The store sold four units at about half the intended price. The store later considered asking the supplier afterward to work on the price, instead of accepting zero profit. [L1472.027]</li>
+<li>Compare the sourcing price with comparable Amazon prices before committing to a product. Example: a vacuum sealer device listed at $60-80 on AliExpress was judged too expensive for what it does, while a vacuum canister sold for $20-40 on Amazon. [L1186.010]</li>
+</ul>
+<h3 id="profit-after-product-cost">Profit after product cost</h3>
+<p>Formula:</p>
+<p>Profit after product cost = MAP − wholesale cost − average shipping cost − payment fees (2.9% for Shopify Payments) − other fees [L1111.022]</p>
+<ul>
+<li>Example: MAP $1,000, wholesale $650 and shipping $100 leave $250 before fees, and roughly $210 after the fees in the example, which may be lower. (older, 2020) [L1111.022]</li>
+<li>Arithmetic check: 2.9% of $1,000 is $29, which alone would leave about $221 from $250. The source's roughly $210 implies further fees that it does not name. Use the full cost list in [L1090.013] and recalculate per product. [L1111.022, L1090.013]</li>
+</ul>
+<h3 id="estimate-cogs-for-bookkeeping">Estimate COGS for bookkeeping</h3>
+<ul>
+<li>Estimate the COGS percentage as 100% minus your gross margin, for example 80% for a 20% margin. Base the estimate on the last six months of your P&amp;L and add a small buffer so the COGS account never runs dry. The result is an estimate, close enough to pay suppliers without checking each invoice to the cent. (older, 2021-22) [L1200.010]</li>
+</ul>
+<h2 id="price-multiples">Price multiples</h2>
+<p>The sources give different multiples. They apply to different bases and situations, so check which one your store uses.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Multiple</th>
+<th>Source and year</th>
+<th>When it applies</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markup on landed cost</td>
+<td>Selling price at least 3x landed cost (product plus shipping, COGS). Example: if landed cost is $10, sell for at least $30.</td>
+<td>Source C</td>
+<td>Needed to cover the average cost per purchase from TikTok ads. Below this margin it becomes very hard to be profitable.</td>
+<td>[L1183.008]</td>
+</tr>
+<tr>
+<td>Product margin before ads</td>
+<td>Product margin of at least 3x, calculated before running ads</td>
+<td>Source C</td>
+<td>Thin margins are a common reason beginners lose money despite sales.</td>
+<td>[L1259.055]</td>
+</tr>
+<tr>
+<td>Non-MAP starting price</td>
+<td>About 2.1x wholesale cost</td>
+<td>Source A, 2020 (older)</td>
+<td>Starting point for non-MAP suppliers, then compare with competitor prices on Google Shopping</td>
+<td>[L1111.025]</td>
+</tr>
+<tr>
+<td>Non-MAP minimum</td>
+<td>2x wholesale cost</td>
+<td>Source A (undated) and 2021 (older)</td>
+<td>Minimum sale price for suppliers without MAP. Go higher if competitors sell above that level.</td>
+<td>[L1146.003, L1279.024]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The 3x markup in [L1183.008] means a sale price of three times landed cost. That is a gross margin of about 67% of the selling price, which is well above the 25% to 30% gross margin target in [L1090.013]. The sources describe different measures, so check the base before applying a rule. [L1183.008, L1090.013]</li>
+<li>The source describes [L1259.055] as a product margin of at least 3x and does not define the base. Read it alongside [L1183.008], which defines the base as landed cost.</li>
+<li>Competitors may sell at 3 times MAP. If so, a higher price than the 2.1x starting point is the right choice. (older, 2020) [L1111.025]</li>
+</ul>
+<h2 id="net-profit-targets">Net profit targets</h2>
+<ul>
+<li><p>Target a net profit of 30 percent per sale, and never go below 20 percent. Accept 20 percent only for competitive products that need heavy ad spend, or for large bulk orders. (older, 2020) [L1277.028]</p></li>
+<li><p>Reseller deals should leave at least 20% net profit after all costs as a minimum. The actual deal needs a larger margin than that, because ads and credit card processing fees come out of it. (older, 2018) [L1274.031]</p></li>
+<li><p>Formula for net profit per sale:</p>
+<p>Net profit per sale = MAP − wholesale − shipping − ad spend per sale [L1277.030]</p></li>
+<li><p>Example with round numbers: 1,000 USD minus 500 USD wholesale, 100 USD free shipping and 100 USD ad spend leaves 300 USD net, which equals a 30 percent net margin. This is not the same as the markup over wholesale. (older, 2020) [L1277.030]</p></li>
+<li><p>Use the gross margin target for early screening, before shipping, fees and ads. Use the net profit target for the decision on each sale. The sources give these as different measures and do not reconcile them. [L1090.013, L1277.028, L1277.030]</p></li>
+</ul>
+<h2 id="shipping-in-the-margin">Shipping in the margin</h2>
+<h3 id="judge-shipping-against-price">Judge shipping against price</h3>
+<ul>
+<li>Shipping cost must be judged against the product's sale price and average order value, not against weight alone. A $800 shipping cost on a $5,000 product can still leave about $1,500 net profit, while the same $800 on a $1,200 product destroys the margin. (older, 2018) [L1085.006]</li>
+<li>Example: two dining tables of the same size and weight cost $300 on average to ship. At $500 retail the $300 shipping makes the product unworkable, while at $1,500 retail the same shipping cost is absorbable. Shipping is therefore judged relative to the product price, even within one industry. (older, 2018) [L1085.007]</li>
+<li>Example: a $1,000 product with about $500 gross margin and shipping of up to $300 leaves only about $200 for ads. Bringing shipping down to about $200 frees up enough money for ad costs and profit. Targeting customers in states close to the supplier is one way to lower shipping. (older, 2018) [L1109.007]</li>
+<li>Shipping costs vary widely by destination. Remote states such as Montana or Idaho can be far more expensive to ship to. For a large item, a shipping cost of $450 instead of $250 can push a product into the danger zone. (older, 2021-22) [L1148.021]</li>
+</ul>
+<h3 id="estimate-shipping-without-exact-quotes">Estimate shipping without exact quotes</h3>
+<ul>
+<li>Shipping costs depend on origin, destination, package size, weight and the carrier used, so they do not need precise calculation for every product at the start. If the shipping cost makes low-price items unprofitable, sell only the higher-priced items in that range. (older, 2018) [L1085.008]</li>
+<li>Shipping can be quoted or estimated from the average shipping cost for each niche when those averages are known. Quotes are only needed when shipping costs are unknown. (older, 2020) [L1111.047]</li>
+<li>Estimate shipping as follows (older, 2021-22) [L1148.023]:
+<ol type="1">
+<li>Ask your supplier what it generally costs to ship an item from its location to your target regions. [L1148.023]</li>
+<li>Do not aim for exact figures, because the cost varies per order unless the supplier offers flat-rate shipping. [L1148.023]</li>
+<li>Estimate a typical shipping cost for each product, and compare item A with item B. [L1148.023]</li>
+<li>Enter the estimate in the supplier shipping cost field and adjust it once real orders come in. [L1148.023]</li>
+</ol></li>
+</ul>
+<h3 id="shipping-case-and-fix">Shipping case and fix</h3>
+<p>Case: a seller had large, heavy products at about 9 x 57 x 36 inches and around 70 pounds. The cheapest shipping found was $198 (covering FedEx, UPS and LTL), while profit before shipping was $150, so each sale lost about $50. The advice was to ask the supplier how competitors ship at MAP and get a better carrier or wholesale rate, and if competitors are losing money too, either stop selling the item or raise the price until it is profitable. (older, 2018) [L1085.010]</p>
+<p>Procedure for a shipping cost that wipes out the margin on a product sold at MAP (older, 2018) [L1085.011]:</p>
+<ol type="1">
+<li>Call the supplier and state the exact shipping cost per unit and the loss per sale at MAP. [L1085.011]</li>
+<li>Tell the supplier which competitors sell the same product at MAP and ask which carrier they use. [L1085.011]</li>
+<li>Ask whether the supplier can offer a better wholesale price or shipping rate. [L1085.011]</li>
+<li>If no competitor can sell profitably, stop selling the product or raise the price until each sale is profitable. [L1085.011]</li>
+</ol>
+<h3 id="lower-shipping-cost">Lower shipping cost</h3>
+<ul>
+<li>When rising shipping costs eat into margins, ask suppliers whether they offer a cheaper, slower shipping option or a shipping deal. Savings on shipping can protect margin before you raise retail prices. (older, 2021) [L1112.081]</li>
+<li>Add shipping costs into the product cost used for pricing, so the selling price already covers delivery. Free shipping is only a sound offer if the supplier's alternative with free shipping is only a few dollars more expensive. Express shipping can be offered as an optional upgrade for customers who want it. [L1215.022]</li>
+</ul>
+<h2 id="price-setting-without-map">Price setting without MAP</h2>
+<h3 id="procedure-for-suppliers-without-map">Procedure for suppliers without MAP</h3>
+<p>Procedure (undated) [L1146.003]:</p>
+<ol type="1">
+<li>Apply for approval with each supplier. [L1146.003]</li>
+<li>After approval, receive the supplier's price list. [L1146.003]</li>
+<li>Build your own price list by adding a third column for your sale price next to the wholesale cost and MSRP columns. [L1146.003]</li>
+<li>Set the sale price using the 2x wholesale minimum, and go higher if competitors sell above that level. [L1146.003]</li>
+<li>Review your paid advertising KPIs every week. [L1146.003]</li>
+</ol>
+<p>Structure of your own price list (supplier lists usually contain only the first two columns) [L1146.004]:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wholesale cost</td>
+<td>What you pay the supplier per unit (your cost of goods)</td>
+</tr>
+<tr>
+<td>MSRP</td>
+<td>Manufacturer's Suggested Retail Price, the selling price the manufacturer recommends</td>
+</tr>
+<tr>
+<td>Sale price</td>
+<td>Your own selling price, added by you because no MAP sets it outside MAP markets</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="check-the-starting-price-against-competitors">Check the starting price against competitors</h3>
+<ul>
+<li>For non-MAP suppliers, set a starting price of roughly 2.1 times the wholesale cost, then compare with competitor prices on Google Shopping. Competitors may be selling at 3 times MAP, which would make a higher price the right choice. (older, 2020) [L1111.025]</li>
+<li>Check the supplier's listed MAP-free wholesale prices and the prices two to three stores advertise them for (older, 2021) [L1279.024]:
+<ol type="1">
+<li>Check the supplier's listed MAP-free wholesale prices and the prices two to three stores advertise them for. [L1279.024]</li>
+<li>If those stores sell at at least 2x wholesale, list the product at that price without undercutting them. [L1279.024]</li>
+<li>Exclude these products from your price match guarantee to avoid losses. [L1279.024]</li>
+</ol></li>
+<li>Products of the same type can be offered by different companies at very different price levels, for example about $700 from one company and about $3,500 from another. A store that combines both price levels for a high-end supplier did not face pushback from that supplier. (older, 2020) [L1111.179]</li>
+</ul>
+<h3 id="raise-margin-without-negotiating">Raise margin without negotiating</h3>
+<ul>
+<li>Dropshipping an accessory from the same manufacturer you already use solves the logistics side, which makes upsells and downsells of existing brand accessories one of the easiest ways to raise margins in a store. (older, 2021-22) [L1152.006]</li>
+<li>Case: a dog toy was sourced for 6 USD from suppliers while competitors sold it for 9.99 USD. Competitors likely either bought in bulk or used slow AliExpress fulfillment, and they accepted lower margins to win volume. A beginner should aim for higher margins to reinvest profits, so the choice was between raising the price or adding a shipping fee. [L1176.029]</li>
+</ul>
+<h2 id="negotiating-better-terms-1">Negotiating better terms</h2>
+<h3 id="ask-early-and-track-volume">Ask early and track volume</h3>
+<ul>
+<li>Ask suppliers early about volume-based pricing tiers and incentive pricing. Revisit negotiation when a product shows no margin or when the store brings a large volume of sales to that supplier. (older, 2019) [L1069.016]</li>
+<li>Once you have proven sales volume with a supplier, you can ask for better pricing terms. If margins do not work from day one, ask the supplier for better pricing at the start. (older, 2020) [L1277.034]</li>
+<li>A processing fee of about $6 to $25 per order is uncommon. It is acceptable when the order value is high (for example $200 to $300), and it can be negotiated later. (older, 2019) [L1069.005]</li>
+</ul>
+<p>Template for volume-based pricing tiers (older, 2019) [L1069.018]:</p>
+<pre><code>Hi [Supplier name],
+
+We have just started selling your [brand or product line] on our website and want to grow this partnership. Do you have volume-based pricing tiers or discounts that unlock after a certain number of orders? Do you also have any incentive pricing we should know about for new retail partners?
+
+Thank you,
+[Your name]
+[Company name]</code></pre>
+<p>Template for a margin-based request (older, 2019) [L1069.019]:</p>
+<pre><code>Hi [Supplier name],
+
+We have worked together for [time period] and we want the partnership to be profitable for both sides. Right now our profit margin on your products is only about [X]% after shipping. We have seen competitors [Competitor A, B, C] selling the same products at [price] with free shipping.
+
+Are there better wholesale prices, better shipping rates or volume tiers we can access? Could you also review our invoices for discounts we might be missing? We would like to make these products work for everyone.
+
+Thank you,
+[Your name]
+[Company name]</code></pre>
+<h3 id="show-the-competitor-prices">Show the competitor prices</h3>
+<p>Template for a request on a product with too little margin (older, 2019) [L1068.033]:</p>
+<pre><code>Hi [CONTACT NAME], I was searching on Google and found [STORE 1], [STORE 2] and [STORE 3] selling [PRODUCT A], [PRODUCT B] and [PRODUCT C] at [COMPETITOR PRICE]. I checked our price list and our cost is [OUR COST] with shipping at [SHIPPING COST]. Is there any pricing incentive we could work on, such as a discount on the price list, a different tiered price list or better shipping rates? We would love to promote these products and bring in sales, but there is simply not enough margin with our current price list. Could we set up a short call to go over this? Thank you, [YOUR NAME], [COMPANY], [PHONE].</code></pre>
+<p>Use: send it as written, then show the supplier the competitor prices you found and let them propose options. (older, 2019) [L1068.033]</p>
+<p>Template for a product with negative net after shipping (2024) [L1285.007]:</p>
+<pre><code>Hi [Supplier contact name], we have recently been running our numbers. To run ads to your products profitably, we cannot sell at MAP and still keep a profit. Is there any incentive or deal you could offer on the wholesale price for [product or SKU names]? Thank you, [Your name], [Store name].</code></pre>
+<h2 id="low-margin-handling-1">Low-margin handling</h2>
+<h3 id="decide-what-to-do-with-a-thin-product">Decide what to do with a thin product</h3>
+<p>Procedure when a supplier's margin is too low to fund ads (2023) [L1283.008]:</p>
+<ol type="1">
+<li>Ask the supplier if it has pricing incentives or different pricing tiers. [L1283.008]</li>
+<li>If nothing changes, list the products on the store without running ads for them and rely on organic traffic. [L1283.008]</li>
+<li>Only keep them if the margin is enough for the products to be worth the time. [L1283.008]</li>
+</ol>
+<p>Procedure when a product has negative net after shipping (2024) [L1285.006]:</p>
+<ol type="1">
+<li>Ask the supplier for a better wholesale price. [L1285.006]</li>
+<li>If the supplier says this is their best price, exclude that product from paid ads. [L1285.006]</li>
+<li>Add other suppliers who can offer better margins so the budget goes to winning products. [L1285.006]</li>
+</ol>
+<p>Procedure when a supplier's product is priced below your margin needs (2021) [L1112.054]:</p>
+<ol type="1">
+<li>Ask for better wholesale pricing first. [L1112.054]</li>
+<li>If they refuse and the margin is too thin for ads, keep the product at MAP and rely on organic traffic without including it in Shopping, or drop it. [L1112.054]</li>
+</ol>
+<ul>
+<li>If a supplier gives a pricing incentive, the question is whether margins support ad spend. If a supplier refuses any change in price structure and competitors list at a 10 percent markup over the supplier price, it is often not worth listing. (2023) [L1283.018]</li>
+<li>For a very poor supplier where little margin remains, either skip the products entirely or list them above MAP with no paid ads. Paid ads should be reserved for products with enough margin to cover the ad cost. (older, 2020) [L1111.024]</li>
+<li>Case: a seller had large, heavy products whose shipping cost wiped out the margin at MAP. The case and fix are in the shipping section above. [L1085.010, L1085.011]</li>
+</ul>
+<h2 id="ads-or-free-traffic">Ads or free traffic</h2>
+<ul>
+<li>If the remaining margin covers a sale at MAP but not paid ads, keep the products listed and exclude them from Google Ads. They can still earn free Google product listing and organic traffic. (older, 2020) [L1111.023]</li>
+<li>Reserve paid ads for products with enough margin to cover the ad cost. [L1111.024]</li>
+<li>Before you run ads on a product, confirm that the target price covers the average cost per purchase. For TikTok ads, the source sets 3x landed cost as the minimum sale price. [L1183.008]</li>
+<li>Target product margin before running ads, so that sales are profitable and scalable. [L1259.055]</li>
+<li>When the supplier's margin is too low, the order of action is: ask the supplier for incentives, then list without ads for organic traffic, then keep only if the margin is worth the time. [L1283.008]</li>
+<li>If MAP enforcement fails after escalating up the supplier's chain of command, stop paid ads for that brand. Keep the products on the store for organic traffic only if the MAP policy allows it. (older, 2021) [L1112.056]</li>
+<li>If a product has negative net after shipping and the supplier cannot improve the price, exclude it from paid ads and move the budget to suppliers with better margins. [L1285.006]</li>
+<li>Before pausing ads on a product whose competitor is violating MAP, search the competitor's name online and read the reviews. If reviews show poor customer service, late shipping or payment problems, the violator is likely to lose customers and it can be worth keeping ads running. (2023) [L1094.019]</li>
+</ul>
+<h2 id="direct-to-consumer-undercutting-and-competitor-prices">Direct-to-consumer undercutting and competitor prices</h2>
+<ul>
+<li>Supplier sales and temporary discounts can be listed on the store, and there is no need to worry about undercutting other suppliers. Contact brands around the holidays to ask if they will offer deals, and the store can promote those discounts with graphics and emails. (2023) [L1114.024]</li>
+<li>Clearance items are typically exempt from MAP compliance. A competitor selling clearance stock below MAP is therefore not automatically a violation. (older, 2019) [L1275.019]</li>
+<li>If a supplier starts selling its best-selling products below your dealer cost or discounts them heavily on its own site, pause those products and do not spend ad money on them until the supplier explains and corrects the pricing. (older, 2021) [L1090.022]</li>
+<li>Some suppliers sell at a price so close to cost that a MAP violator cannot sustain it. Such retailers tend to get bad reputations, so their reviews and customer complaints should be checked before reacting to their price. (2023) [L1094.020]</li>
+<li>A retailer that sells below wholesale price is very likely a scam or burner store that never ships orders. Do not match such prices, and build trust with your own store through reviews instead. (2024) [L1115.015]</li>
+</ul>
+<h2 id="map-violation-monitoring-and-reporting">MAP violation monitoring and reporting</h2>
+<h3 id="find-the-violation">Find the violation</h3>
+<ul>
+<li>Testing whether a competitor violates MAP on Google Shopping (2023) [L1094.018]:
+<ol type="1">
+<li>Search the product on Google Shopping. [L1094.018]</li>
+<li>Read the prices shown by the listings, including the free listings from three stores. [L1094.018]</li>
+<li>If most listings show one price and one or two show a much lower price, the most common price is probably MAP and the lower one is a violation. [L1094.018]</li>
+</ol></li>
+<li>Search the brand name and SKU in Google to find competitors who are selling below the minimum advertised price. Copy the links to the competitor listings. (undated) [L1472.036]</li>
+<li>Expect manufacturers to use software to monitor MAP compliance, and note that large retailers are less often penalized than smaller ones. (undated) [L1472.036]</li>
+<li>A distribution center that warns you about not updating prices on time is a good sign, because it means they care about you maximizing profit. Keep product prices current in your store to avoid these warnings. (undated) [L1472.035]</li>
+</ul>
+<h3 id="report-the-violation">Report the violation</h3>
+<ul>
+<li>When a supplier's MAP is known and a competitor sells below it, report the violation to the supplier right away with a screenshot. Ask whether the competitor has a special deal or whether the supplier will contact them. Good suppliers enforce MAP and may remove an unauthorized retailer as an authorized dealer. (2024) [L1115.014]</li>
+<li>Handling a MAP violation by a competitor (2021) [L1090.018]:
+<ol type="1">
+<li>Screenshot the competitor's product page showing the low price. [L1090.018]</li>
+<li>Search the product in Google Shopping and screenshot the listing showing the same lower price. [L1090.018]</li>
+<li>Email the supplier contact with the competitor URL, both screenshots and a request to correct the pricing. [L1090.018]</li>
+<li>If the price is not updated within a few days, reply to the same thread. Most suppliers fix pricing quickly. Amazon and Walmart listings below MAP can be reported to the supplier the same way. [L1090.018]</li>
+</ol></li>
+<li>Reporting procedure (older, 2019) [L1275.018]:
+<ol type="1">
+<li>Report every MAP violator to the supplier. [L1275.018]</li>
+<li>Follow up with the supplier regularly. [L1275.018]</li>
+<li>If nothing changes after about one to two months, stop selling that supplier's products and stop spending ad budget on them. [L1275.018]</li>
+<li>Take screenshots of competitors selling below your cost, send them to the supplier, and ask whether a better pricing tier or incentive is available. [L1275.018]</li>
+</ol></li>
+<li>Send the supplier screenshots of the Google Shopping listing and the competitor's website. A good supplier enforces MAP and responds within the number of days in the MAP policy. If nothing changes, stop paid ads for that brand, keep listings at MAP for organic traffic, or remove the supplier. (older, 2021) [L1112.055]</li>
+<li>Send the supplier links to the competitor listings. The supplier can then contact the violating retailer through its representatives. (undated) [L1472.036]</li>
+</ul>
+<h3 id="templates-for-map-violation-emails">Templates for MAP violation emails</h3>
+<p>Template for the first report (older, 2021) [L1090.019]:</p>
+<pre><code>Subject: MAP violation for [product name]. Hi [supplier contact name], we noticed that [competitor website] is currently selling [product name] for [price], which is below your MAP policy. Here is the product page link: [competitor product URL]. I have attached a screenshot of the product page and a screenshot of the same listing in Google Shopping. Could you please contact them and ask them to update their pricing? Thank you, [your name]</code></pre>
+<p>Template for the follow-up (older, 2021) [L1090.020]:</p>
+<pre><code>Subject: Follow-up on MAP violation for [product name]. Hi [supplier contact name], I am following up on my email from [date] about [competitor website] selling [product name] below MAP. The price has not changed yet. Could you please check on this again? Thank you, [your name]</code></pre>
+<p>Template for asking about wholesale cost changes (older, 2021) [L1090.021]:</p>
+<pre><code>Subject: Question about wholesale costs. Hi [supplier contact name], I noticed on your website that [product 1] is listed at [price 1] and [product 2] at [price 2]. Is there an update to our wholesale costs that I should know about? I would appreciate a quick reply so I can plan my pricing. Thank you, [your name]</code></pre>
+<p>Template for a follow-up when a competitor is below MAP and the supplier has a special deal question (2024) [L1115.095]:</p>
+<pre><code>Hi [supplier contact name], thanks for sending the link to [competitor store URL]. I checked the site and it looks good. I noticed that the MAP on [product name or SKU] is [MAP price], but they are listing it for [competitor listed price]. Could you let me know whether they have a special deal, or whether you will reach out to them to adjust their pricing? I have attached a screenshot for reference. Thank you, [your name]</code></pre>
+<h3 id="escalation-and-when-to-stop">Escalation and when to stop</h3>
+<ul>
+<li>If MAP enforcement fails after escalating up the supplier's chain of command, stop paid ads for that brand. Keep the products on the store for organic traffic only if the MAP policy allows it. (older, 2021) [L1112.056]</li>
+<li>Sources differ on timing. The 2019 procedure stops selling after about one to two months without change [L1275.018]. The 2021 procedure responds to the number of days in the MAP policy and then stops paid ads [L1112.055]. Use the timing in the supplier's MAP policy where it exists, and the one to two month limit where it does not. [L1275.018, L1112.055]</li>
+</ul>
+<h2 id="supplier-invoices-and-cash-reserve">Supplier invoices and cash reserve</h2>
+<ul>
+<li>Not tracking exactly what is owed to suppliers for each order leads to unexpected supplier bills. Allocating a COGS percentage of every sale into a dedicated account gives a reserve that covers these invoices. (older, 2021-22) [L1200.025]</li>
+<li>Case: a high-ticket dropshipper had just started out and was beginning to see sales and profit rise, believing the business was close to breaking even. After several months, a supplier sent an unexpected bill of 10,000 to 15,000 dollars. The dropshipper had believed all supplier orders were paid, but they were not, so the owner had to borrow money from friends and family to cover the bill. (older, 2021-22) [L1200.022]</li>
+<li>Allocate the COGS percentage from [L1200.010] into a dedicated account from each sale, so that supplier invoices are covered. [L1200.010, L1200.025]</li>
+</ul>
+</article><nav class="pn"><a href="../../03-suppliers-and-fulfillment/10-approval-agreements-and-account-setup/"><span class="k">&larr; Previous</span><span class="v">Approval, agreements and account setup</span></a><a class="nx" href="../../03-suppliers-and-fulfillment/12-getting-product-data-and-uploading-the-catalog/"><span class="k">Next &rarr;</span><span class="v">Getting product data and uploading the catalog</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

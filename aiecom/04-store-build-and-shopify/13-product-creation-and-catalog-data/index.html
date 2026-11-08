@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Product creation and catalog data | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.13: Product creation and catalog data.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/13-product-creation-and-catalog-data/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Product creation and catalog data | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.13: Product creation and catalog data."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/13-product-creation-and-catalog-data/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/13-product-creation-and-catalog-data/">Plain version</a></div><h1>4.13 Product creation and catalog data</h1><article><h2 id="deciding-what-to-upload-first">Deciding what to upload first</h2>
+<ul>
+<li>Upload the approved suppliers' products first, one set per approved supplier, so the starting catalogue covers several brands. Do not wait for every supplier to be approved before listing the ones already approved. [L0689.004]</li>
+<li>Do not upload a whole supplier catalogue before you know the bestsellers. A small starting ad budget spread across thousands of products is wasted, so identify the bestsellers early and direct the budget there first. [L0360.014]</li>
+<li>When a supplier has hundreds of products and no product file, upload the most important items first:
+<ol type="1">
+<li>Email the supplier and ask for their top 10 best-selling products.</li>
+<li>Upload those 10 products first.</li>
+<li>Upload the rest of the catalogue afterwards. [L0808.010]</li>
+</ol></li>
+<li>A new store can start with about 100 products. Established stores often carry hundreds or thousands. Add products gradually after the first batch is live. [L0968.110]</li>
+<li>Aim for at least 100 different products. This gives enough variety to rank for enough keywords to see impressions, clicks and sales. [L0359.038]</li>
+<li>Ask suppliers which variants sell best and list only those. The 80/20 rule suggests that about 80% of sales come from about 20% of variants. <em>Older advice (2019).</em> [L1002.066]</li>
+</ul>
+<h2 id="choosing-the-upload-method">Choosing the upload method</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Method</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 to 20 demo products</td>
+<td>Manual copy and paste</td>
+<td>L0036.026</td>
+</tr>
+<tr>
+<td>Small supplier, few products</td>
+<td>Manual upload</td>
+<td>L0128.012</td>
+</tr>
+<tr>
+<td>100s or 1,000s of products</td>
+<td>CSV bulk upload, which creates all product pages at once</td>
+<td>L0036.026</td>
+</tr>
+<tr>
+<td>Supplier with 500+ products</td>
+<td>Manual entry is impractical</td>
+<td>L0106.001</td>
+</tr>
+<tr>
+<td>8,000 products</td>
+<td>CSV is the only realistic way. <em>Older advice (2022).</em></td>
+<td>L0665.038</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Manual upload is simplest but most time-consuming. It becomes impractical for suppliers with 500+ products. [L0106.001]</li>
+<li>Uploading hundreds of products manually is inefficient. [L0128.004]</li>
+<li>A CSV bulk upload can handle 1,000 or more products in one spreadsheet and creates the product pages automatically. [L0036.010]</li>
+<li>CSV is generally the better option for large catalogues. Products can be added or edited one by one on each product page, or in bulk through a Shopify CSV. [L0247.085, <em>2021</em>]</li>
+<li>CSV is the fastest method when a supplier provides product data. Shopify provides a default CSV template that defines all required columns. [L0128.007]</li>
+<li>CSV import is significantly faster than manual entry and is the recommended method for adding products. [L0278.036]</li>
+<li>CSV is the fastest method besides outsourcing. [L0106.005]</li>
+<li>You do not need one upload method only. Use manual upload for small suppliers, outsource large catalogues to freelancers, and use CSV upload when spreadsheets are available. [L0128.012]</li>
+<li>Do not use automated product feed imports from suppliers. Ask suppliers to send product information as Excel sheets or shared Google Sheets. This lets you edit descriptions, pricing and specifications without them auto-updating from the supplier feed. [L0251.024, <em>2023</em>]</li>
+<li>Use the Shopify CSV template for bulk creation and updates. It also updates older products. [L0665.038, <em>2022</em>]</li>
+</ul>
+<h2 id="manual-product-entry">Manual product entry</h2>
+<p><strong>Steps for manual upload from a supplier's website</strong> [L0106.001]</p>
+<ol type="1">
+<li>Log into the Shopify admin and navigate to Products.</li>
+<li>Click Add products.</li>
+<li>Enter the product title from the supplier website or product information.</li>
+<li>Copy and paste the product description.</li>
+<li>Upload the product images provided by the supplier.</li>
+<li>Enter relevant tags (created previously).</li>
+<li>Set your selling price.</li>
+<li>Enter the supplier's business name in the Vendor field.</li>
+</ol>
+<p><strong>Add product steps</strong> [L0219.011-L0219.017]</p>
+<ul>
+<li>Open Shopify Admin &gt; Products &gt; Add product (top right button). [L0219.011]</li>
+<li>Product Title field: paste the product name. [L0219.012]</li>
+<li>Description field: paste the description into the WYSIWYG editor. [L0219.013]</li>
+<li>Product Category field: select the category for your product. [L0219.014]</li>
+<li>Price field: enter the product price. [L0219.015]</li>
+<li>Product Type field: set to match the product category. [L0219.016]</li>
+<li>Collections section: select automated tag-based collections to assign the product. [L0219.017]</li>
+</ul>
+<p><strong>Other manual-entry rules</strong></p>
+<ul>
+<li>Add products one by one: open Products, click Add product, fill in the details and publish. For larger catalogues, importing a CSV is much faster once you have learned its format. [L0968.031, <em>2021</em>]</li>
+<li>The Shopify product description editor works like a word processor. It supports text formatting (bold, colour, alignment) and embedded images without leaving the field. [L0036.029]</li>
+<li>The Shopify product editor is the single place where all product data is entered. This includes the title, description, price, model number, images, videos and every other field that appears to customers. Product edits, image changes and data updates are all made from the Products area in the admin. [L0452.030]</li>
+<li>Split-screen layout for manual upload: Shopify admin on one side, the supplier's website on the other. Copy titles, descriptions and images directly between the two without switching windows or applications. This reduces transcription errors and speeds up manual uploads for small product counts. [L0106.012]</li>
+</ul>
+<h2 id="product-fields">Product fields</h2>
+<ul>
+<li><strong>Category:</strong> search dropdown for your niche. [L0036.014]</li>
+<li><strong>Type:</strong> the product type name. Set it to match the category. [L0036.014, L0219.016]</li>
+<li><strong>Custom product types:</strong> the Type field accepts custom text you type. If the type does not yet exist in your store, Shopify creates it and adds it to the product type list for all future products. [L0219.018]</li>
+<li><strong>Vendor:</strong>
+<ul>
+<li>Demo products: the store name.</li>
+<li>Real products: the supplier's brand name, for example "Surfboards Plus". [L0036.014, L0106.002, L0128.003]</li>
+<li>Once saved, the vendor name becomes a selectable option (dropdown) for all future products from that supplier. [L0106.002, L0128.003]</li>
+<li>The Vendor field must be completed for every product during upload. [L0106.010]</li>
+</ul></li>
+<li><strong>Collections and tags:</strong> collections are assigned by automated tag-based rules. Enter tags before upload. Product type, vendor, collections and tags should be filled in consistently. [L0219.017, L0106.001, L1145.014]</li>
+<li><strong>SKU and barcode:</strong> optional for demo products. Suppliers typically provide an SKU or GTIN for real products, and these go in the SKU and barcode fields. [L0036.017]</li>
+<li><strong>GTIN or SKU:</strong> enter the supplier's GTIN or SKU in the product identifier fields together with the rest of the supplier product data. [L0836.066]</li>
+<li><strong>Status:</strong> active products are live. Set a product to draft if it still needs work. [L1145.014]</li>
+<li><strong>Product type for multi-box products:</strong> products that ship in several boxes can keep one SKU per product, with the separate boxes listed in the description. [L0855.100]</li>
+</ul>
+<h2 id="pricing-price-compare-at-map-and-cost">Pricing: price, compare-at, MAP and cost</h2>
+<p><strong>Field definitions</strong></p>
+<ul>
+<li><strong>Price:</strong> the customer-facing selling price. [L0036.016]</li>
+<li><strong>Compare-at price:</strong> a higher price that shows a discount. [L0036.016]</li>
+<li><strong>Cost per item:</strong> what you pay the supplier. It is for tracking only and is optional for demo products. [L0036.016]</li>
+<li>The pricing block contains Price, Compare-at price (shown as a struck-through price next to the sale price), Charge tax, and Cost per item. Enter the compare-at price above the sale price to display a discount. [L1013.019]</li>
+</ul>
+<p><strong>Which value goes where</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it holds</th>
+<th>When</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Price</td>
+<td>MAP (minimum advertised price)</td>
+<td>Supplier provides a MAP</td>
+<td>L0667.067</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Your selling price including your markup, not the wholesale price</td>
+<td>Price is set by you</td>
+<td>L1111.187, <em>2020</em></td>
+</tr>
+<tr>
+<td>Compare at price</td>
+<td>MSRP (manufacturer's suggested retail price)</td>
+<td>Supplier provides an MSRP</td>
+<td>L0667.067, L1130.017</td>
+</tr>
+<tr>
+<td>Compare at price</td>
+<td>Left empty</td>
+<td>No MSRP is given</td>
+<td>L0667.067</td>
+</tr>
+<tr>
+<td>Cost per item</td>
+<td>Wholesale price, for profit tracking</td>
+<td>Always, when known</td>
+<td>L0667.067</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>When a supplier provides an MSRP, enter it in Compare at price and enter the MAP in the Price field. Enter the wholesale price in Cost per item. Leave Compare at price empty if no MSRP is given. [L0667.067, <em>2025</em>]</li>
+<li>Enter two prices: Price for the actual sale price, and Compare-at price for the MSRP. The theme then shows the MSRP as the regular price with the sale price beside it. [L1130.017]</li>
+<li><em>Older (2019):</em> On the product page, show the MSRP as a crossed-out compare-at price, the MAP as the displayed price, and keep the wholesale cost off the storefront. [L0663.061]</li>
+<li>In the CSV, the price column must contain the final selling price including your markup. Enter this before importing. [L1111.187, <em>2020</em>]</li>
+</ul>
+<p><strong>How the compare-at price displays</strong></p>
+<ul>
+<li>A product page can show a list price next to the sale price, with the saving in dollars and percent. Example: list 999 USD, price 799 USD, save 200 USD or 20 percent. [L0966.060, <em>2025</em>]</li>
+<li>This shows on the product page by default. It does not show on the homepage, which needs custom code. [L0966.060]</li>
+<li>Pages with a clear list price, price and saving show value to shoppers. This can support conversion without changing the MAP. [L0966.065, <em>2025</em>]</li>
+</ul>
+<p><strong>MAP and compare-at check (spreadsheet)</strong> [L0854.073, <em>2022</em>]</p>
+<ol type="1">
+<li>Get the supplier price list as a CSV.</li>
+<li>Sort it by price from high to low.</li>
+<li>Add a MAP column with the MAP price for each product.</li>
+<li>If needed, export the full product list from the Shopify store and add the MAP and wholesale columns to it.</li>
+<li>Check the spread per product with the formula above. <em>Note: the formula referred to in step 5 is not part of this source unit.</em></li>
+</ol>
+<p><strong>Profit columns for older exports</strong> <em>(2018, older)</em></p>
+<ol type="1">
+<li>Export all products from Shopify as a CSV file.</li>
+<li>Open the file in Google Sheets.</li>
+<li>Add columns such as wholesale price, cost of delivery, and merchant fees (for example 2.9 percent) to calculate profit per product.</li>
+<li>Use the Shopify app to add wholesale prices if you prefer to add them product by product. [L0466.044]</li>
+</ol>
+<h2 id="inventory">Inventory</h2>
+<ul>
+<li><strong>Track inventory:</strong> on each product, the Inventory section has a Track inventory checkbox. [L0972.018]
+<ul>
+<li>Leave it unchecked if you do not want to show stock levels. Set the quantity to zero to make a sold-out product unavailable for purchase. [L0972.018]</li>
+<li>For demo products and products managed manually, inventory tracking can stay unchecked. Enable it only if you want Shopify to track stock levels. [L0036.018]</li>
+</ul></li>
+<li><strong>Google Shopping and out-of-stock items:</strong> [L0667.040, <em>2025</em>]
+<ol type="1">
+<li>In Shopify admin, open Products and turn on inventory tracking for the product or variant.</li>
+<li>Set the inventory of the out-of-stock variant to zero so it stops showing on Google Shopping.</li>
+<li>Set the inventory back above zero once the item is back in stock.</li>
+</ol></li>
+<li><strong>Sync apps:</strong> if supplier inventory is not fully integrated with the store, do not rely on Shopify inventory-sync apps. Update stock manually only for a bestseller that will sell out that day. [L0359.057]</li>
+<li><strong>Bulk stock update</strong> [L0276.067, <em>2024</em>]
+<ol type="1">
+<li>Export your product CSV from Shopify.</li>
+<li>Edit the inventory columns in Google Sheets or a spreadsheet.</li>
+<li>Save the updated CSV.</li>
+<li>Reimport into Shopify.</li>
+<li>Select "Update existing products" (not "Create new").</li>
+<li>Complete the import. All selected products update without creating duplicates.</li>
+</ol></li>
+<li><strong>Inventory values:</strong> must be numbers. [L0538.005]</li>
+<li><strong>Inventory defaults:</strong> if supplier data has no inventory quantities, ChatGPT defaults inventory to 0 for all products. Before importing, instruct ChatGPT to update inventory values from the supplier data, or edit the spreadsheet manually after downloading. [L0106.009]</li>
+</ul>
+<h2 id="sku-and-identifier-rules">SKU and identifier rules</h2>
+<ul>
+<li>Suppliers' SKUs with dashes: search for the SKU with the dashes in quotation marks. Keep the dashes only if your future competitors use them. [L0855.103, <em>2023</em>]</li>
+<li>Product titles include the SKU or model number where this helps buyers find the product. See the title section below. [L0360.015]</li>
+</ul>
+<h2 id="variants-and-options">Variants and options</h2>
+<p><strong>Basics</strong></p>
+<ul>
+<li>Variants are not needed for demo products. [L0036.019]</li>
+<li>Use variants for real products when customers can select different options, such as colours or sizes, from a dropdown. [L0036.019]</li>
+<li>Four colours of the same product are one product, not four. Count variants as part of a single product SKU. [L0270.058, <em>2021</em>]</li>
+<li>The variant shown first on a product page is the top variant in the list. Reorder the list to change the default variant. [L0471.037, <em>2024</em>]</li>
+<li>Native Shopify variants with colour names are what add the chosen colour to the cart. Swatch apps only change how the options look, so set up native variants first. [L1116.017, <em>2025</em>]</li>
+</ul>
+<p><strong>Adding variants in the admin</strong> [L0430.008, <em>2023</em>]</p>
+<ol type="1">
+<li>Open the product in the Shopify admin.</li>
+<li>Scroll to the Variants section and add option names such as size or colour.</li>
+<li>Enter the option values, then set price, SKU and inventory for each generated variant.</li>
+</ol>
+<p><strong>Bundle or discount on some option combinations</strong> [L0255.031, <em>2025</em>]</p>
+<ol type="1">
+<li>Create a separate product variant for the bundle combination.</li>
+<li>Name the variant to show which options it includes (for example "Option 1 + Option 2").</li>
+<li>Set the price as the discounted price.</li>
+<li>Customers select this variant to get the discount automatically, rather than selecting individual options.</li>
+</ol>
+<p><strong>Free add-on as a variant</strong> [L0577.025, <em>Source C</em>]</p>
+<ul>
+<li>Open the product's listing and add the free add-on as a variant. One variant is typical.</li>
+<li>Use the app that connects to the supplier to map the add-on, so both items reach the supplier in a single order.</li>
+</ul>
+<p><strong>Option types and apps</strong></p>
+<ul>
+<li>Shopify allows only three option types per product. When native option types are not enough, use a product options app. [L0853.067, <em>2021</em>]</li>
+<li>Use variations for versions of the same product, such as size. Use separate add-on products for extras, such as a monitor arm. [L0853.067, <em>2021</em>]</li>
+<li>Product options and variants within one listing can be added with the app "Product Options" (formerly Bold Product Options, now SC Product Options). [L0971.071, <em>2024</em>]</li>
+</ul>
+<p><strong>Reducing a large variant range</strong> <em>(2019, older)</em> [L1002.025]</p>
+<ol type="1">
+<li>Install Bold Product Options and work through its setup training, which takes some time to learn.</li>
+<li>Ask the supplier for its best-selling colours and variants.</li>
+<li>List roughly 10 to 20 top options on the website instead of all of them, since too many choices can stop buyers from purchasing.</li>
+<li>Add the chosen variants to the site with Bold Product Options.</li>
+</ol>
+<ul>
+<li>Many near-identical shades, such as ten different reds, confuse shoppers and lower conversions. Trim the variant list to the best sellers. <em>(2019, older.)</em> [L1002.026]</li>
+</ul>
+<p><strong>Variants and SKUs on the page</strong></p>
+<ul>
+<li>Product pages with colour variants that have different SKUs: list the SKU numbers in a section under the main description. Put the SKU in the product title only when each variant has its own product page. [L0962.028, <em>2021</em>]</li>
+<li>If a product has two or more options with different SKUs, choose between one product page with a dropdown and separate pages by checking how the top two or three competitors list it. Match their approach. [L0835.056, <em>2023</em>]</li>
+</ul>
+<p><strong>Add-ons</strong></p>
+<ul>
+<li>Cheap add-on products should not get their own product pages and should not be in the product feed. Offer them only as add-ons on the main product pages. [L0962.027, <em>2021</em>]</li>
+</ul>
+<p><strong>Variant rows in a CSV</strong></p>
+<ul>
+<li>Each extra variant is its own row that repeats the same Handle. Each variant row carries its own SKU, price, inventory quantity and option values. [L0538.004]</li>
+</ul>
+<h2 id="product-titles">Product titles</h2>
+<p><strong>Default format</strong></p>
+<ul>
+<li>Default product title format: supplier or brand name, product name, then dash and SKU number (for example "Brand Product Name - 1234"). Check the top three competitors' naming, and adopt their format if it works better. [L0834.035, <em>2021</em>]</li>
+<li>Product titles should include the brand name and the product name, and may also include a model or SKU number. The exact order and extra elements differ by brand, so copy the format of the top resellers for each brand. [L0551.025, <em>2020</em>]</li>
+</ul>
+<p><strong>Matching resellers</strong></p>
+<ol type="1">
+<li>Pick the brand and the product you plan to upload.</li>
+<li>Search for the product on Google and find the top one or two resellers.</li>
+<li>Note their title format, such as product name only, product name by brand, or brand plus product name plus SKU or model number.</li>
+<li>Use the same title format on your site for that brand when uploading products. [L0551.024, <em>2020</em>]</li>
+</ol>
+<p><strong>Include the SKU or model number</strong></p>
+<ul>
+<li>Product titles should include brand name, product name and SKU or model number. Shoppers who search those exact terms are the ones who buy, and that search traffic is worth capturing. [L0360.015, <em>2024</em>]</li>
+</ul>
+<p><strong>Short search-matched titles</strong> <em>(2018, older)</em></p>
+<ul>
+<li>Formula for supplier-imported titles: [brand] + [main colour or variant] + [core product type]. The long technical name from the supplier is shortened to the words buyers type into Google. Size, material and full specifications move to the description. Examples: "Coleman blue two-person tent" and "Weber black gas grill". This works because short, search-matched titles fit how shoppers search in Google Shopping. [L1085.102]</li>
+</ul>
+<p><strong>Where the rules differ:</strong> the 2024 and 2021 sources include the SKU or model number in the title [L0360.015, L0834.035]. The 2018 source uses a short title with the specifics moved into the description [L1085.102]. Use the competitor check [L0551.024] to decide between them for each brand. Keep the SKU in the title where the top resellers do.</p>
+<h2 id="descriptions-and-copy">Descriptions and copy</h2>
+<p><strong>Launch and rewrite</strong></p>
+<ul>
+<li>Use supplier descriptions at launch. Rewrite the highest-traffic product pages later, with original copy in your brand voice. Rewriting every page at the start is not worth the time. [L0970.063, <em>2023</em>]</li>
+<li>Launch with the supplier descriptions. Once traffic arrives, use Google Analytics to find the top 20% of product pages by visits. Hire a freelancer on Upwork to rewrite only those pages. Do not spend a large budget on e-commerce copywriters before you know which pages matter. <em>(2019, older.)</em> [L1110.022]</li>
+<li>Upload products in bulk first to create a starting point. Then go through each product page and optimise it for the customer. <em>(2018, older.)</em> [L1109.059]</li>
+<li>Load product descriptions in bulk through CSV uploads instead of managing them through a third-party description app. This keeps the store faster and reduces app dependencies. [L0853.111, <em>2021</em>]</li>
+</ul>
+<p><strong>Source text and AI text</strong></p>
+<ul>
+<li>AI writing tools can produce product descriptions. Use the output as notes and rewrite it by hand rather than publishing it unchanged. [L0970.064, <em>2023</em>]</li>
+<li>AI-generated descriptions often invent materials, sizes, certifications or warranties for a product that does not yet exist. Each specification must be confirmed by the supplier before the page goes live. Otherwise returns and chargeback disputes become likely. [L0535.002]</li>
+</ul>
+<p><strong>Prompt: product listing for a photo</strong> [L0535.001, <em>2025</em>]</p>
+<pre><code>Act as a seasoned eCommerce copywriter who builds high-converting Shopify listings for upscale goods. I&#39;ll send a sample photo of an item I&#39;m considering listing. It isn&#39;t a real product yet, so infer its details from the picture and assume realistic specifics. Deliverables: (1) Devise a luxurious-sounding title that works as a brand, matches what the photo shows, suits a Shopify storefront, steers clear of trademarked or established brand names, and conveys reliability and professionalism. (2) Draft a complete listing: a brief opening paragraph centered on customer benefits; a &#39;Key Features&#39; list of 5 to 8 bullets; a &#39;Why You&#39;ll Love It&#39; or &#39;Benefits&#39; block; a plausible, internally consistent &#39;Specifications&#39; block; and a concise closing paragraph that nudges the reader toward buying. (3) Provide SEO metadata: a meta title no longer than 60 characters, a meta description no longer than 155 characters, and 3 to 5 search terms that fit the item. (4) End with a list headed &#39;Assumptions to verify with supplier&#39; that names every material, dimension, color, capacity, function, or feature you inferred from the photo. None of these inferred items may appear in the listing as established fact. Voice: businesslike, self-assured, precise, upscale, ready for Shopify, aimed at sales rather than filler. Ground rules: where the photo is ambiguous, choose the most sensible assumption; treat the item as coming from a dependable supplier of good quality; the goal is a listing that impresses suppliers and looks ready to launch; never fabricate certifications, guarantees, test outcomes, or awards. Formatting: clean and Shopify-friendly, with headings and bullets, easy to scan, no emoji, no overblown hype. Output sequence: product title, meta title, meta description, keywords, product description (sections in the order of point 2), then the supplier verification list.</code></pre>
+<p>[L0535.001]</p>
+<p><strong>Pasting supplier text without hidden code</strong></p>
+<ul>
+<li>Copying description text straight from a supplier website carries hidden HTML code into the product page and can break the whole page. Supplier text may also contain Heading 6 tags that clash with your own structure. [L0921.006]</li>
+<li>Procedure: [L0921.007]
+<ol type="1">
+<li>Copy the supplier description into a Word document.</li>
+<li>Retype or clean the text there so no hidden formatting remains.</li>
+<li>Paste the clean text into the Shopify rich text editor.</li>
+<li>Apply Heading 6 and other headings using the rich text editor buttons, not by pasting supplier headings.</li>
+</ol>
+<ul>
+<li>Alternatively, paste through an app that strips the code automatically if you are not comfortable with HTML.</li>
+</ul></li>
+</ul>
+<p><strong>Search listing (SEO)</strong></p>
+<ul>
+<li>The search engine listing section takes the first paragraph of the product description by default. Edit it with product page SEO best practices so the listing describes the product clearly. [L0806.039, <em>2024</em>]</li>
+</ul>
+<p><strong>Spec sheets and contact details</strong></p>
+<ul>
+<li>Before attaching a supplier's spec sheet to a product, remove the supplier's name and phone number so customers contact your business instead. For simple edits, Canva is enough. [L0808.020, <em>2026</em>]</li>
+</ul>
+<p><strong>Bulk-edit descriptions</strong></p>
+<ul>
+<li>Procedure, for example to remove warranty links: [L0971.039, <em>2024</em>]
+<ol type="1">
+<li>Export all products from Shopify as a CSV. The export does not change the store.</li>
+<li>Use find-and-replace in Google Sheets or Excel to remove the text.</li>
+<li>Import the CSV back into Shopify. It updates existing products and does not create duplicates.</li>
+</ol></li>
+</ul>
+<p><strong>Supplier text reused from a standard template</strong></p>
+<ul>
+<li>Keep the product page's titles and descriptions matched to their own product rows when uploading a CSV. A mismatched title or description creates wrong orders and angry customers. [L1111.071, <em>2020</em>]</li>
+</ul>
+<p><strong>Regional sizing</strong></p>
+<ul>
+<li>When selling to US customers, convert supplier sizes, such as European numbering, into US sizes and keep the size chart simple. Mismatched size formats make US buyers hesitate. [L0352.010, <em>Source C</em>]</li>
+</ul>
+<h2 id="product-media">Product media</h2>
+<p><strong>Source and rights</strong></p>
+<ul>
+<li>Downloading product images directly from an authorised supplier's website is acceptable for use on the store, provided the supplier has authorised the reseller to sell their products. [L0278.033, <em>2025</em>]</li>
+<li>Use product photos from the supplier, not from a Google image search, because the store needs authorisation to use them. [L0360.016, <em>2024</em>]</li>
+<li>Ask suppliers for lifestyle photos with natural backgrounds, or for photos from trade shows and their office. Do not copy images from other websites, because this can lead to copyright complaints. [L1109.060, <em>2018</em>]</li>
+</ul>
+<p><strong>Image standards</strong></p>
+<ul>
+<li>Product pages should use the supplier's images and product names. Main images should be standard product photos on a white background. Add lifestyle images as extra photos. [L0965.062, <em>2024</em>]</li>
+<li>Use extra close-up or detail images from high-resolution supplier photos, for example a crop of hardware or finish detail, to help customers judge the product. Add these only when they are high quality and aid the purchase decision. [L0970.061, <em>2023</em>]</li>
+<li>Compress oversized product images before you upload them. [L1002.020, <em>2019</em>]</li>
+<li>Check that every product image matches its product page, because images are easily swapped during bulk uploads. Compare each image against the supplier's listing or brochure. [L1145.037, <em>2021-22</em>]</li>
+<li>Supplier images stored in Dropbox share links that do not give a direct image URL: download the files, upload them to Shopify Files, then put the resulting Shopify file links into the product CSV. This is easier than uploading each image manually. [L1115.098, <em>2024</em>]</li>
+</ul>
+<p><strong>Video</strong></p>
+<ul>
+<li>Product videos can be filmed by a person demonstrating the product, explaining how it feels, who it suits, and the height or weight it is good for. Post the videos to YouTube and embed them on the product pages. [L0801.105, <em>2021</em>]</li>
+<li>Short product clips of about 3 to 10 seconds can be uploaded straight to Shopify. Longer product walkthroughs should be embedded from YouTube. [L0857.056, <em>2025</em>]</li>
+<li>Supplier product videos belong in the product description, not in the image carousel with the product photos. [L0835.135, <em>2023</em>]</li>
+<li>To use supplier videos hosted on YouTube: [L0857.057, <em>2025</em>]
+<ol type="1">
+<li>Ask the supplier for permission to upload the videos to your own YouTube channel.</li>
+<li>Create a YouTube channel under the store name if you do not have one.</li>
+<li>Upload the videos to that channel.</li>
+<li>Embed them on the product pages from your channel, and add a link to the product page in the video description.</li>
+</ol></li>
+</ul>
+<p><strong>3D models and upcoming media features</strong></p>
+<ul>
+<li>Shopify reports that customers who interact with a 3D product model are more than twice as likely to complete a purchase as customers who do not. The product media feature cited for this is planned to support images, videos, 3D models and augmented reality on product pages. [L0390.048, L0423.029]</li>
+<li>Prepare videos and 3D models for your top 20 best sellers first, since the media features that support them are expected to deliver the biggest conversion gains on your best products. [L0390.049]</li>
+</ul>
+<h2 id="supplier-file-cleaning-and-csv-preparation">Supplier file cleaning and CSV preparation</h2>
+<p><strong>Clean up a supplier CSV</strong> <em>(2023)</em> [L0470.079]</p>
+<ol type="1">
+<li>Make a duplicate of the supplier's CSV file on your computer.</li>
+<li>Open the duplicate and delete all rows for products you do not want, including used items, trade-ins, discontinued and special-order items.</li>
+<li>Save the file as a CSV.</li>
+<li>Upload the cleaned file to Shopify.</li>
+</ol>
+<p><strong>Ask the supplier for the right format</strong> [L0470.086, <em>2023</em>]</p>
+<ul>
+<li>If a supplier is not technical, request the Shopify CSV product upload format, which the supplier can fill out to save you time. Share the Shopify template with them for this.</li>
+</ul>
+<p><strong>Convert a supplier product feed</strong> [L0274.006, <em>2023</em>]</p>
+<ol type="1">
+<li>Get the supplier product feed (typically a spreadsheet).</li>
+<li>Download the Shopify CSV template from the Shopify CSV page.</li>
+<li>Map supplier data to Shopify columns using Google Sheets or Excel.</li>
+<li>Adjust the data to match the required format.</li>
+<li>Upload to Shopify.</li>
+</ol>
+<ul>
+<li>If it is complex, hire a CSV expert on Fiber or Upwork for a low cost. [L0274.006]</li>
+</ul>
+<p><strong>Mismatched formats</strong></p>
+<ul>
+<li>Supplier spreadsheets rarely align with Shopify's CSV format. Required columns are often missing, misnamed or structured differently, which makes manual editing confusing and error-prone. [L0128.009]</li>
+<li>A mismatched CSV causes import errors, so convert it before importing. [L0467.038, <em>2019</em>]</li>
+<li>Uploading a supplier's default file unchanged will not work, because Shopify requires its own column names. Reshape the file to match Shopify's sample CSV before upload. [L1002.021, <em>2019</em>]</li>
+</ul>
+<p><strong>Shopify CSV template columns</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handle</td>
+<td>Product URL</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>Product name</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>Product description</td>
+</tr>
+<tr>
+<td>Vendor</td>
+<td>Supplier name</td>
+</tr>
+<tr>
+<td>Product category</td>
+<td>Product category classification</td>
+</tr>
+</tbody>
+</table></div>
+<p>All columns must be populated correctly for successful import. [L0106.006]</p>
+<ul>
+<li>In Shopify CSV imports: Handle is the product's URL path, Title is the product name, Body is the product description, and Vendor is the supplier name. All other columns correspond to fields in Shopify's product editor. [L0128.008]</li>
+<li>A CSV is a spreadsheet file in which each column holds one product attribute, such as product name, SKU, price and description. Shopify imports these files to create products in bulk. [L1111.073, <em>2020</em>]</li>
+<li>The Shopify CSV Template is the file format used to import products in bulk. Use it to prepare product data in a spreadsheet before uploading. [L1095.009, <em>2024</em>]</li>
+</ul>
+<p><strong>Template workflow</strong> [L0855.096, <em>2023</em>]</p>
+<ol type="1">
+<li>Download Shopify's sample CSV template from its help documentation.</li>
+<li>Keep the template's column headers exactly as they are.</li>
+<li>Fill one row per product or variant, keeping every column in its original position.</li>
+</ol>
+<p><strong>Sample-template preparation</strong> [L0360.013, <em>2024</em>]</p>
+<ol type="1">
+<li>Open Shopify's product documentation and download the sample product CSV template.</li>
+<li>Open the template in a spreadsheet program such as Numbers, Google Sheets or Excel.</li>
+<li>Replace the sample rows with the supplier's product data, keeping the column headers.</li>
+<li>Set "handle" to the product URL ending, which is the part that comes after /products/.</li>
+<li>Set "title" to the product name, "vendor" to the supplier name, and fill in the product category and type.</li>
+</ol>
+<p><strong>Compare the headers and reshape</strong> <em>(2019, older)</em> [L1002.020]</p>
+<ol type="1">
+<li>Get the product data from the supplier, usually as a spreadsheet.</li>
+<li>Open it in Excel, Google Sheets or Apple Numbers.</li>
+<li>Download the sample CSV from Shopify's product import documentation and compare its column headers with the supplier file.</li>
+<li>Rename or rearrange the supplier columns so they match Shopify's headers exactly.</li>
+<li>Save or export the sheet as a CSV file.</li>
+<li>Upload the CSV file to Shopify.</li>
+</ol>
+<ul>
+<li>Compress oversized product images before you upload them.</li>
+</ul>
+<p><strong>Google Sheets and Numbers</strong></p>
+<ul>
+<li>To import products from Google Sheets, save the sheet as CSV. In Google Sheets, go to File, then Download, then choose the CSV format. [L0835.083, <em>2023</em>]</li>
+<li>On a Mac, use File &gt; Export To &gt; CSV in Numbers. On Microsoft systems, the same CSV export is done in Excel. [L0402.017, <em>2021-22</em>]</li>
+<li>Shopify's own documentation on importing CSV files gives the step-by-step import process and is the reference for formatting your product file. [L0835.084, <em>2023</em>]</li>
+</ul>
+<p><strong>Google Shopping columns</strong></p>
+<ul>
+<li>The Shopify product CSV template includes Google Shopping columns for Age Group, MPN, AdWords Grouping, AdWords Labels, Condition and Custom Product, alongside the five Custom Label columns. These can be filled in bulk in the same spreadsheet as the custom labels. [L0747.027, <em>2021-22</em>]</li>
+</ul>
+<p><strong>Keeping product data in line</strong></p>
+<ul>
+<li>Keep the header row unchanged when editing a CSV. [L0430.009, <em>2023</em>]</li>
+</ul>
+<p><strong>Preparing the file for a generic CSV pattern</strong> <em>(2019 and older variants)</em></p>
+<ul>
+<li>Long supplier names and technical product names should be shortened for titles, as described in the title section. [L1085.102, <em>2018</em>]</li>
+</ul>
+<p><strong>Master conversion prompt</strong> [L0538.001, <em>2025</em>]</p>
+<pre><code>You work as a specialist in Shopify CSV imports.
+
+I have attached two files: a product CSV from my supplier, and Shopify&#39;s standard product import template.
+
+Your job is to convert the supplier file into a new CSV that matches Shopify&#39;s required format exactly, so it imports without errors.
+
+Follow these rules:
+- Treat Shopify&#39;s CSV as the master schema.
+- The output must use Shopify&#39;s exact column names.
+- The output must follow Shopify&#39;s row layout for products and variants.
+- Do not add columns that Shopify doesn&#39;t have.
+- Do not delete any required Shopify columns.
+- Map the supplier&#39;s fields to Shopify&#39;s fields as precisely as you can:
+  - Product Title → Handle / Title
+  - Description → Body (HTML)
+  - Brand → Vendor
+  - Category → Type
+  - SKU → Variant SKU
+  - Price → Variant Price
+  - Compare at price → Variant Compare At Price
+  - Inventory → Variant Inventory Qty
+  - Weight → Variant Weight + Variant Weight Unit
+  - Images → Image Src (one row per image where needed)
+  - Options (Size, Color, Model, etc.) → Option1 Name / Option1 Value, Option2 Name / Option2 Value, and so on
+- Handle products that have several variants.
+- Each product gets one main row.
+- Extra variants go in additional rows that reuse the same Handle.
+- Every variant needs its own SKU, price, inventory, and option values.
+- Handles must be lowercase, use hyphens in place of spaces, and be unique for each product.
+- Clean and normalize the data.
+- Strip out invalid characters.
+- Write prices without currency symbols.
+- Make sure inventory values are numbers.
+- Remove extra spaces.
+- Make sure every URL in an image field is valid.
+
+Apply these Shopify defaults wherever data is missing:
+- Published: TRUE
+- Variant Inventory Policy: deny
+- Variant Fulfillment Service: manual
+- Variant Requires Shipping: TRUE
+- Variant Taxable: TRUE
+- Status: active
+
+Output format:
+- Give the final result as one complete CSV table.
+- Make it ready to copy and paste.
+- Put no explanations inside the CSV.
+- After the CSV, list every assumption you had to make.
+
+Validation, before you give the final output:
+- Confirm that all required Shopify columns are present.
+- Confirm that every variant has Handle, Title, SKU, Price, and Inventory.
+- Confirm that the file is ready for a Shopify import.
+
+Your output should contain:
+- The fully formatted, Shopify-ready CSV.
+- A short checklist confirming that the import will work.
+- A short list of any data that could not be mapped cleanly.</code></pre>
+<p>[L0538.001]</p>
+<p><strong>Converting a supplier CSV with the master prompt</strong> [L0538.002, <em>2025</em>]</p>
+<ol type="1">
+<li>Get the supplier's product CSV.</li>
+<li>Get Shopify's default product CSV template.</li>
+<li>Open an AI chat and upload both files.</li>
+<li>Paste the master CSV conversion prompt into the chat.</li>
+<li>Check the returned CSV against the checklist: all required Shopify columns present, and every variant row has Handle, Title, SKU, Price and Inventory.</li>
+<li>Read the list of assumptions the AI made and the list of data it could not map cleanly.</li>
+<li>Fix or fill the unmapped data by hand.</li>
+<li>Save the output as a.csv file and import it into Shopify.</li>
+</ol>
+<p><strong>Mapping table</strong> [L0538.003]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Supplier field</th>
+<th>Shopify column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Title</td>
+<td>Handle / Title</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Body (HTML)</td>
+</tr>
+<tr>
+<td>Brand</td>
+<td>Vendor</td>
+</tr>
+<tr>
+<td>Category</td>
+<td>Type</td>
+</tr>
+<tr>
+<td>SKU</td>
+<td>Variant SKU</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Variant Price</td>
+</tr>
+<tr>
+<td>Compare at price</td>
+<td>Variant Compare At Price</td>
+</tr>
+<tr>
+<td>Inventory</td>
+<td>Variant Inventory Qty</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Variant Weight + Variant Weight Unit</td>
+</tr>
+<tr>
+<td>Images</td>
+<td>Image Src (one per row when needed)</td>
+</tr>
+<tr>
+<td>Options (Size, Color, Model, etc.)</td>
+<td>Option1 Name / Option1 Value, Option2 Name / Option2 Value, etc.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Defaults when data is missing: Published TRUE; Variant Inventory Policy deny; Variant Fulfillment Service manual; Variant Requires Shipping TRUE; Variant Taxable TRUE; Status active. [L0538.003]</p>
+<p><strong>File rules</strong></p>
+<ul>
+<li>A Shopify product CSV import needs one main row per product. Every extra variant is its own row that repeats the same Handle. [L0538.004]</li>
+<li>Price columns contain plain numbers without currency symbols. Inventory values are numeric. Trim extra spaces and remove invalid characters before importing. [L0538.005]</li>
+<li>Import with products that do not exist yet creates new products. Import with existing products updates them. [L0971.040, <em>2024</em>]</li>
+</ul>
+<p><strong>Upload via AI conversion (2025)</strong></p>
+<ol type="1">
+<li>Get the supplier's product spreadsheet.</li>
+<li>Use AI to convert the spreadsheet into Shopify's standard product import format.</li>
+<li>Import the converted file into Shopify in one step to bring in all products at once. This can take about five minutes instead of hours. [L1097.020]</li>
+</ol>
+<p><strong>Freelancer conversion (2025)</strong></p>
+<ol type="1">
+<li>Download the sample product CSV from Shopify's product import template page.</li>
+<li>Copy each product's details from the supplier spreadsheet into the matching columns of the template.</li>
+<li>If that is too complicated, hire a Shopify product upload freelancer on Fiverr for about 5 to 10 dollars. Send them the supplier file and ask for a spreadsheet ready for Shopify import. [L1116.022]</li>
+</ol>
+<p><strong>Older CSV workflows</strong></p>
+<ul>
+<li>Convert a supplier's detailed data <em>(2022, older)</em>: [L1092.041]
+<ol type="1">
+<li>Get the product spreadsheet from the supplier, in Excel or Google Sheets.</li>
+<li>Save the spreadsheet as a CSV file.</li>
+<li>Upload the CSV directly into Shopify to fill in product information in bulk.</li>
+</ol></li>
+<li>Upload a CSV that is already prepared <em>(2019 and 2023)</em> [L0106.005, L0128.011]
+<ol type="1">
+<li>Request the supplier to provide product data as a spreadsheet.</li>
+<li>Download Shopify's blank CSV template from the product import documentation.</li>
+<li>Copy supplier product data into the matching template columns.</li>
+<li>Save the reformatted file as a CSV.</li>
+<li>In Shopify admin, navigate to Products.</li>
+<li>Click Import.</li>
+<li>Drag the CSV file into the import interface. All products upload simultaneously.</li>
+</ol></li>
+</ul>
+<p><strong>Cost-profit spreadsheet</strong> <em>(2018, older)</em> [L0466.044, L0466.045]</p>
+<ul>
+<li>CSV product uploads are complex. Check the required and optional fields against an up-to-date step-by-step guide before uploading large batches.</li>
+</ul>
+<h2 id="csv-import">CSV import</h2>
+<p><strong>Import procedure</strong> [L0128.011]</p>
+<ol type="1">
+<li>Open Shopify Admin.</li>
+<li>Go to Products.</li>
+<li>Click Import.</li>
+<li>Select and upload the finalised CSV file.</li>
+<li>All products are added in one batch operation.</li>
+</ol>
+<p><strong>Preview before confirming</strong> [L0402.016, <em>2021-22</em>]</p>
+<ul>
+<li>After uploading a product CSV, Shopify shows a preview of the first product and a count of the products, SKUs and images that will be imported.</li>
+<li>If the preview does not look right, change the order of the column headings in the file and upload it again before clicking Import products.</li>
+</ul>
+<p><strong>What the preview shows</strong> [L0747.028, <em>2021-22</em>]</p>
+<ul>
+<li>The preview shows the first product with its title, description, status, type, vendor, variant, SKU, weight and price. It states how many products, SKUs and images will be imported.</li>
+<li>If the preview does not look right, change the order of the column headings in the file and check the preview again.</li>
+</ul>
+<p><strong>After import</strong> [L0430.009, <em>2023</em>]</p>
+<ul>
+<li>Check the import report for errors.</li>
+</ul>
+<h2 id="csv-export-and-bulk-edits">CSV export and bulk edits</h2>
+<p><strong>Export</strong> [L1007.003, <em>2024</em>]</p>
+<ul>
+<li>To export the product list from Shopify, open Products &gt; Export in the Shopify admin. The resulting CSV can serve as a backup or be used to move products to another store.</li>
+<li>Export does not delete products. [L0255.028, <em>2025</em>, L0253.002, <em>2024</em>]</li>
+</ul>
+<p><strong>Export procedure</strong> [L0255.028, <em>2025</em>]</p>
+<ol type="1">
+<li>Go to Products in the admin.</li>
+<li>Use the export function. This does not delete products.</li>
+<li>The CSV file includes all product data, including the tags column.</li>
+<li>You can filter, sort and edit the CSV.</li>
+<li>Re-import the CSV to update products without duplicating them.</li>
+</ol>
+<p><strong>Bulk-edit tags, descriptions and other fields</strong> [L0253.002, <em>2024</em>]</p>
+<ol type="1">
+<li>Export all products as CSV from Shopify. This does not delete them.</li>
+<li>Open the CSV file in Excel, Google Sheets or Apple Numbers.</li>
+<li>Edit product information in bulk (tags, descriptions, etc.).</li>
+<li>Import the updated CSV back into Shopify.</li>
+<li>Shopify automatically updates all products with the new information.</li>
+</ol>
+<p><strong>Bulk-edit prices</strong> [L0470.051, <em>2023</em>]</p>
+<ol type="1">
+<li>Export all products as a CSV file from Shopify.</li>
+<li>Change the prices in the file, for example by a straight percentage.</li>
+<li>Import the edited CSV again. Shopify updates the existing products.</li>
+</ol>
+<p><strong>Bulk-edit quantities</strong> [L0276.067, <em>2024</em>]</p>
+<ul>
+<li>See the inventory section above for the full steps.</li>
+</ul>
+<p><strong>Keep matched rows</strong> [L1111.071, <em>2020</em>]</p>
+<ul>
+<li>Keep product titles and descriptions matched to their own product rows when uploading a CSV.</li>
+</ul>
+<p><strong>Publishing from edited copy</strong> [L0883.028, <em>Source E</em>]</p>
+<ul>
+<li>Edited copy can be published to Shopify directly through a sync or import app such as Matrixify, or through an MCP-based publishing workflow. Run this only after editing, since skipping human review risks publishing errors.</li>
+</ul>
+<p><strong>Products that ship in several boxes</strong> [L0855.100]</p>
+<ul>
+<li>Keep one SKU per product, with separate boxes listed in the description.</li>
+</ul>
+<p><strong>Duplicate and sync products</strong></p>
+<ul>
+<li>Once a product is listed from CJ, it stays synced with CJ. Changes to title, images and prices can be made in Shopify after listing without breaking the sync. [L0685.012, <em>Source C</em>]</li>
+</ul>
+<h2 id="outsourcing-uploads">Outsourcing uploads</h2>
+<p><strong>Order of work</strong> [L0429.001, <em>2022</em>]</p>
+<ol type="1">
+<li>Upload the first 20 products yourself while screen-recording them with Loom (screen plus microphone, optionally webcam), so the process and its duration are documented.</li>
+<li>Give that recording to the hire so they know the exact format and workflow.</li>
+<li>Check the uploads every 100 products to confirm they match your standards before errors multiply.</li>
+</ol>
+<p><strong>Learn first, then outsource</strong> [L1111.072, <em>2020</em>]</p>
+<ul>
+<li>Use the Shopify product CSV to learn the upload process by doing the first batch yourself. Outsourcing uploads is acceptable once you can spot-check the results.</li>
+</ul>
+<p><strong>Platforms</strong> [L0429.002, <em>2022</em>]</p>
+<ul>
+<li>onlinejobs.ph is a freelancer marketplace for hiring product-upload staff. It charges a monthly fee to post jobs.</li>
+<li>Upwork (upwork.com) is an alternative with no monthly fee in the same sense.</li>
+<li>For CSV help, Fiber or Upwork can be used at low cost. [L0274.006, <em>2023</em>]</li>
+</ul>
+<p><strong>Staff access</strong></p>
+<ul>
+<li>If you hire help, give them a staff account with limited permissions. [L1090.043, <em>2021</em>]</li>
+</ul>
+<p><strong>Checking outsourced work</strong> [L0854.074, <em>2022</em>]</p>
+<ul>
+<li>Double-check the work for mismatches, such as one product having another product's dimensions or price. A single CSV error can cause pricing problems across the store.</li>
+</ul>
+<p><strong>Efficient bulk upload from a new supplier</strong> [L1090.043, <em>2021</em>]</p>
+<ul>
+<li>Step 1: import the supplier's product list via CSV rather than creating each product by hand.</li>
+<li>Step 2: go in and edit the imported products for tags, descriptions and images.</li>
+<li>Step 3: if you hire help, give them a staff account with limited permissions.</li>
+<li>This avoids starting from scratch with every product.</li>
+</ul>
+<h2 id="checks-before-publishing">Checks before publishing</h2>
+<ul>
+<li>Check that every product shows the status Active before continuing. Products in Draft status do not appear on the storefront. [L1013.003, L1013.004, <em>2026</em>]</li>
+<li>Products set to Active are visible on the Online Store only when they are also included in the Online Store sales channel. In the Products list, bulk actions include "Include in sales channels" and "Exclude from sales channels". [L1013.011, <em>2026</em>]</li>
+<li>Confirm that the vendor, type, collections and tags are filled in consistently. [L1145.014, <em>2021-22</em>]</li>
+<li>Confirm that the supplier's data matches each product: titles, prices, dimensions and images. [L0854.074, L1145.037]</li>
+<li>Rushing the product upload and getting the data wrong the first time means the work has to be redone later, which is harder than doing it right initially. Upload quality affects both paid traffic and organic search rankings. [L1163.002, <em>2021-22</em>]</li>
+</ul>
+<p><strong>Procedure: duplicate and activate products for a multi-product page</strong> [L1013.003, <em>2026</em>]</p>
+<ol type="1">
+<li>In Shopify admin, open Products.</li>
+<li>Use the duplicate function on the product you want to copy, and repeat until you have one product per title (4 to 10 products in total).</li>
+<li>In the Products list, select the duplicated products.</li>
+<li>Open More actions and choose Set as active.</li>
+<li>Confirm the dialog that asks whether to set the selected products as active.</li>
+<li>Check that every product shows the status Active before continuing.</li>
+</ol>
+<p><strong>Draft versus active</strong> [L1013.004, <em>2026</em>]</p>
+<ul>
+<li>Duplicated products must be set to Active. Products in Draft status do not appear on the storefront. Set as draft is the opposite action in the same More actions menu.</li>
+</ul>
+<p><strong>Digital products</strong> [L0861.026, L0862.022, <em>2026</em>]</p>
+<ul>
+<li>For a digital product, open the product in Shopify, go to the Shipping section and turn off "Physical product" (shown as "Not a physical product"). Without this, the store treats the e-book as a shipped item.</li>
+<li>Under Product page &gt; Shipping &gt; Not a physical product, tick this box for any digital product, so no shipping is charged or required. Save the product afterwards so the setting takes effect.</li>
+<li>Leaving shipping active on a digital product causes checkout to treat it as a physical item. Always tick "Not a physical product" before publishing. [L0861.028, <em>2026</em>]</li>
+</ul>
+<p><strong>Quality rules from the sources</strong></p>
+<ul>
+<li>Product titles and descriptions must match their own product rows. [L1111.071]</li>
+<li>Ask for supplier product photos and check each one against the product. [L1145.037]</li>
+<li>Products listed from a supplier with a CSV link can be edited in Shopify after listing. [L0685.012]</li>
+</ul>
+<h2 id="choosing-how-to-create-products">Choosing how to create products</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Method</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A small number of products, or a team that finds spreadsheets daunting</td>
+<td>Manual entry in the admin</td>
+<td>L1166.024</td>
+</tr>
+<tr>
+<td>Hundreds of products at once, with supplier spreadsheets pasted in</td>
+<td>CSV import</td>
+<td>L1166.024</td>
+</tr>
+<tr>
+<td>Thousands of SKUs, simple products</td>
+<td>CSV import for the simple products</td>
+<td>L1396.061</td>
+</tr>
+<tr>
+<td>Products with more options than Shopify's native variant system handles</td>
+<td>Manual upload or a variant app</td>
+<td>L1396.061</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><em>Older (2021-22).</em> Shopify accepts product data in two ways: entering each product by hand in the admin, or bulk importing a CSV spreadsheet. Both produce the same product records, so supplier data can be prepared in whatever form it arrives. [L1166.001]</li>
+<li><em>Older (2021-22).</em> Products &gt; Add product opens the new product form. The Products page also has Export and Import buttons next to Add product. [L1166.003]</li>
+</ul>
+<h2 id="manual-product-creation">Manual product creation</h2>
+<ul>
+<li><p><em>Older (2021-22).</em> Manual method, one product at a time, in this order: [L1166.004]</p>
+<ol type="1">
+<li>Products &gt; Add product.</li>
+<li>Title: take the supplier's product title and add the product type and a differentiator such as colour.</li>
+<li>Description: paste the supplier's description, then clear the formatting (or set it to paragraph) so no bold styling carries over.</li>
+<li>Optional video: in the description editor click Insert video and paste the embed snippet, which starts with <code>&lt;iframe</code>.</li>
+<li>Product type: use one consistent name per product category.</li>
+<li>Vendor: enter the brand or supplier name.</li>
+<li>Tags: optional, used to group products with shared traits.</li>
+<li>Sales channels: include Online Store.</li>
+<li>Product status: set to Active (Draft keeps the product hidden).</li>
+<li>Media: resize the supplier images in bulk beforehand, click Add file, upload them and drag them into order; the first image is the main one shown.</li>
+<li>Alt text: click each image, enter a short descriptive text and click out.</li>
+<li>Pricing: enter the selling price and keep Charge tax on this product ticked; enter Cost per item only if you want margin tracking.</li>
+<li>SKU: enter the supplier's model or part number exactly.</li>
+<li>Track quantity: enter the stock figure, or 10 as a placeholder when no stock figure is given.</li>
+<li>Shipping: tick This is a physical product.</li>
+<li>Variants: if the product has options, add the option name (for example range, colour or size) and its values, then set price, stock and SKU per variant.</li>
+<li>Search engine listing: check that the title matches, then shorten the description and end it with a call to action.</li>
+<li>Save, then open the product page and check that switching options changes the price, the tabs show, and any embedded video plays.</li>
+</ol></li>
+<li><p>Source D 2026 upload sequence: [L1167.001]</p>
+<ol type="1">
+<li>Open the Products section in the Shopify admin and click Add product.</li>
+<li>Drop the product images into the Media area. Prepare them beforehand (the example used Canva) and check that the logo and branding are correct.</li>
+<li>Enter the selling price in the Pricing section.</li>
+<li>Set Quantity to 1 for the first stage to keep stock simple. If your supplier manages stock and fulfillment, leave the remaining supplier-side fields empty.</li>
+<li>Click Save and confirm the 'Product saved' message.</li>
+</ol></li>
+<li><p>Source E 2025-26 creation sequence: [L1331.009]</p>
+<ol type="1">
+<li>Go to Products &gt; Add product.</li>
+<li>Enter the product title, paste the product copy into the description, and upload the product images.</li>
+<li>Set Theme template to Default product.</li>
+<li>Set Category, for example Slippers in Shoes, and add Type, Vendor and Tags.</li>
+<li>Enter the price, set Charge tax to Yes, and confirm Inventory tracked is on.</li>
+<li>Click Save before opening the theme editor.</li>
+</ol></li>
+<li><p>Source D 2026 adding-a-product order: Products &gt; Add product, then fill Title, Description, Media, Pricing, Inventory, Shipping, Variants, Product organization (Type, Vendor, Tags), Category and product metafields, and Status. Set Status to Active last so the product goes live. [L1188.012]</p></li>
+<li><p>Source D 2026 product page sections: Pricing (Price, Compare-at price, Charge tax on this product, Cost per item, Profit, Margin, Adjustment history); Inventory (SKU, Barcode (ISBN, UPC, GTIN, etc.), Track quantity, Continue selling when out of stock, Quantity by Location); Shipping (This is a physical product, Weight, Add customs information); Variants; Product organization (Product type, Tags, Theme template set to Default product); Category metafields; Search engine listing; and Archive product / Delete product at the bottom. [L1167.002]</p></li>
+</ul>
+<h2 id="product-status-and-storefront-visibility">Product status and storefront visibility</h2>
+<ul>
+<li><em>Older (2021-22).</em> New products in Shopify are created with the status Draft by default. A Draft product stays hidden from the storefront and homepage until its status is changed to Active. [L1166.039]</li>
+<li><em>Older (2021-22).</em> A product saved as Draft stays in the back end and does not appear on the storefront or homepage. Set the status to Active and assign the Online Store sales channel for the product to go live. [L1166.009]</li>
+<li>A product only shows on the storefront when it is checked for the Online Store sales channel and its Status is Active. Check both before sending traffic to a new product page. [L1188.049]</li>
+<li><em>Older (2021-22).</em> The Products list has filters for All, Active, Draft and Archived, which show the status of each product. Use them to confirm which products are live and which are still hidden. [L1166.022]</li>
+<li>Status timing differs between sources. Source B's manual method sets Active at step 9 of the entry sequence, before media and pricing [L1166.004]. Source D 2026 says to set Status to Active last so the product goes live [L1188.012]. Both agree that the product must be Active and on the Online Store channel to appear on the storefront [L1166.009, L1188.049].</li>
+<li>Do not publish a placeholder product just to make a header menu link work. The header link points to the real product page, so create the product with its full details, images, and description from the start. [L1326.028]</li>
+</ul>
+<h2 id="title-vendor-type-and-tags">Title, vendor, type and tags</h2>
+<ul>
+<li><em>Older (2021-22).</em> A supplier title usually lacks the product type and any descriptor, so add both to the store title, for example a colour or size. Keep the supplier's model name in the title so the product stays recognisable. [L1166.005]</li>
+<li>Products with dimensions in titles should use a spaced x format, such as 8 space x space 10 instead of 8x10, if the store is not finding searches for that format. Search results depend on the content of the product page. [L1283.089]</li>
+<li><em>Older (2021-22).</em> Vendor is the brand or supplier name. Tags are optional and help group products that share characteristics, so collections can be built from them later. [L1166.011]</li>
+<li>Product tags are not needed in large quantities. Shopify search uses the product name and description, so keep those accurate and descriptive instead of adding 15 to 20 tags per product. [L1283.088]</li>
+<li><em>Older (2021-22).</em> Choose one product type name per product category and reuse it exactly for every product in that category. Consistent names make it much easier to sort products into collections later. [L1166.010]</li>
+<li><em>Older (2021-22).</em> Inconsistent product type names, such as singular and plural versions of the same category, split products across collections and make filtering harder. [L1166.035]</li>
+<li><em>Older (2021-22).</em> Keep a simple written list of the product types you create. Check it before adding each new product so that items in the same category get the exact same product type name. [L1166.042]</li>
+<li>Product type determines tax rates and adds metafields that improve search, filters and cross-channel sales. Set it on every product so the product is categorized correctly. [L1167.004]</li>
+<li>The Category field on a Shopify product sets tax rates and adds metafields that improve search, filters and cross-channel sales. Choose the category, for example Slippers in Shoes, before saving the product. [L1331.043]</li>
+<li>Sources name the same job differently. Source D 2026 and Source B call it Product type [L1167.004, L1166.010]. Source E 2025-26 calls it Category, which sets tax rates [L1331.043]. Set whichever field your admin shows on every product.</li>
+</ul>
+<h2 id="descriptions-and-embedded-video">Descriptions and embedded video</h2>
+<ul>
+<li><em>Older (2021-22).</em> Pasting text from a supplier website brings its bold and other formatting into the Shopify editor. Clear the formatting or set the text to paragraph before saving, or the description will look wrong. [L1166.006]</li>
+<li><em>Older (2021-22).</em> To embed a video in a product description, click Insert video in the description editor, paste the embed snippet into the box and confirm. Supplier videos can be used as well as your own. [L1166.007]</li>
+<li><em>Older (2021-22).</em> Typical embed snippet for a YouTube video, copied from Share &gt; Embed on YouTube and pasted into Insert video. Replace VIDEO_ID with the video's ID: [L1166.008]</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">iframe</span><span class="ot"> width</span><span class="op">=</span><span class="st">&#39;560&#39;</span><span class="ot"> height</span><span class="op">=</span><span class="st">&#39;315&#39;</span><span class="ot"> src</span><span class="op">=</span><span class="st">&#39;https://www.youtube.com/embed/VIDEO_ID&#39;</span><span class="ot"> frameborder</span><span class="op">=</span><span class="st">&#39;0&#39;</span><span class="ot"> allowfullscreen</span><span class="dt">&gt;&lt;/</span><span class="kw">iframe</span><span class="dt">&gt;</span></span></code></pre></div>
+<h2 id="sku-barcode-and-stock">SKU, barcode and stock</h2>
+<ul>
+<li><em>Older (2021-22).</em> Inventing your own SKU numbers breaks reordering, because the supplier cannot find the product from the order sheet. Always copy the supplier's model or part number. [L1166.033]</li>
+<li><em>Older (2021-22).</em> The Shopify SKU field is only for internal tracking. Use the manufacturer SKU as the Shopify SKU so orders, supplier products and price lists are easy to match. Made-up products can use any value there, because it does not affect Google Shopping. [L1456.024]</li>
+<li><em>Older (2021-22).</em> The Barcode field (ISBN, UPC, GTIN) under Pricing is optional. Leave it empty when the supplier provides no barcode, as with many dropshipped products. [L1166.041]</li>
+<li>Source D 2026 defines Barcode as ISBN, UPC, GTIN, etc. within the Inventory section [L1167.002].</li>
+<li>Continue selling when out of stock lets orders go through when inventory is at zero or below. It does not affect Shopify POS, where staff see a warning but can still complete sales once available inventory reaches zero and below. [L1167.003]</li>
+<li>Track quantity and Sell when out of stock should be set deliberately. The default is off for selling out-of-stock items. [L1188.014]</li>
+</ul>
+<p>Starting quantity. The sources give different values:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Value</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>First stage of a new product, to keep stock simple; leave supplier-side fields empty if the supplier manages stock and fulfillment</td>
+<td>L1167.001, L1167.010</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Placeholder when the supplier gives no stock figure</td>
+<td>L1166.004, L1166.025</td>
+</tr>
+<tr>
+<td>Stock figure from supplier</td>
+<td>When the supplier provides one; enter it as stock</td>
+<td>L1166.004</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><em>Older (2021-22).</em> Use 10 as a placeholder only when no stock figure is given. [L1166.025]</li>
+<li>Start with one unit of quantity for a new product to reduce complexity in the first stage. Increase stock only after the product, pricing and checkout are working. [L1167.010]</li>
+<li>Set the stock count for every product before publishing it, because the checklist makes stock levels a precondition for adding products. Markets for the store are set for UK, Australia and US. [L1288.002]</li>
+</ul>
+<h2 id="pricing-fields">Pricing fields</h2>
+<ul>
+<li>Price fields in Shopify: Price (the selling price), Compare-at price (the higher reference price shown as a strikethrough and used for the savings label), and Cost per item (used for margin reporting). The Compare-at price should be the real price the item was offered at, otherwise the discount is misleading. [L1188.013]</li>
+<li><em>Older (2021-22).</em> Keep Charge tax on this product ticked, and enter Cost per item only if you want margin tracking. [L1166.004]</li>
+<li>Compare-at for MAP-restricted products: see the MAP section below. [L1285.036]</li>
+</ul>
+<h2 id="shipping-and-product-data">Shipping and product data</h2>
+<ul>
+<li><em>Older (2021-22).</em> Tick This is a physical product for physical items. [L1166.004]</li>
+<li>Shipping section: set Product weight, package dimensions and country of origin, and fill the HS code field for international orders. [L1188.014]</li>
+<li>Google metafields such as Age Group, Condition, Gender and MPN can be left empty unless the product needs them for Google Shopping. [L1188.015]</li>
+<li>Shopify product metafields can carry custom data such as Custom rating, book cover type, genre, language version and target audience. [L1188.015]</li>
+</ul>
+<h2 id="product-media-1">Product media</h2>
+<ul>
+<li><em>Older (2021-22).</em> Resize all product images in bulk before uploading them to Shopify. The first image in the media section is the main image, and other images appear as thumbnails; drag images to change the order. [L1166.012]</li>
+<li><em>Older (2021-22).</em> Besides Add file, which uploads images from your computer, the Media section of a product offers Add media from URL. Use it when the image is already hosted online. [L1166.040]</li>
+<li><em>Older (2021-22).</em> Click each image, enter a short descriptive alt text and click out. [L1166.004]</li>
+<li><em>Older (2020).</em> Use the best main image in Shopify for each product, because the same image is sent to Google Merchant Center. Don't set a different image just to differ from competitors. [L1277.055]</li>
+<li>The default featured image on a Shopify product page often shows nothing useful about the product. Replace it with an image that explains what the product is at a glance. [L1346.007]</li>
+</ul>
+<h2 id="search-engine-listing">Search engine listing</h2>
+<ul>
+<li><em>Older (2021-22).</em> In the search engine listing preview of a product, click the Edit SEO link to change the URL and the page title and description by hand. If you leave them alone, Shopify fills the title and URL from the product and copies the main description. [L1166.038]</li>
+<li><em>Older (2021-22).</em> Leaving the search description on its automatic setting copies the main description, which gets cut off in search results. Replace it with a short text ending in a call to action. [L1166.036]</li>
+<li><em>Older (2021-22).</em> Check that the search engine listing title matches the product, then shorten the description and end it with a call to action. [L1166.004]</li>
+</ul>
+<h2 id="variants-and-options-1">Variants and options</h2>
+<ul>
+<li><em>Older (2021-22).</em> Close variants of the same product, such as different colours, sizes or materials, should be set up as variants with a selector on one product page, not as separate product pages. Using your own judgement to decide what counts as a close variant is required, and the question can be asked when unsure. [L1163.022]</li>
+<li><em>Older (2021-22).</em> Creating a separate product page for each range, colour or size with identical images creates duplicate pages that complicate marketing later. Use variants on a single product page instead. [L1166.034]</li>
+<li><em>Older (2021-22).</em> Use variants on one product page when a product comes in different ranges, colours or sizes with the same images. Shopify allows up to three options per product, and more options need a separate app in some markets. [L1166.018]</li>
+<li>Shopify limits a product to 100 variants. For products with more variants, use an app like Infinite Options or list only the 100 most popular variations. [L1279.039]</li>
+<li><em>Older (2021-22).</em> Each variant can have its own price, stock quantity and SKU, and different variants often have different supplier model numbers. Enter them in the variant table that appears after the options are set. [L1166.019]</li>
+<li>Variant procedure, Source A 2025: [L1287.029]
+<ol type="1">
+<li>Open the product and go to the Variants section.</li>
+<li>Click the option to add options, such as Color or Size.</li>
+<li>Enter the values, for example blue and green, and click Done.</li>
+<li>Set the price for each variant.</li>
+<li>Set the quantity for each variant, which requires inventory tracking.</li>
+<li>Upload a separate image for each variant.</li>
+<li>Click Save and then Preview, and swipe through the variants to check the price, image and stock.</li>
+</ol></li>
+<li><em>Older (2021-22).</em> Use a variant app for products with more options than Shopify's native variant system can handle, and set the app up separately from the standard product variants. Do not mix the app's variants with the native variants on the same product. Test one product before uploading a whole group. [L1396.062]</li>
+</ul>
+<h2 id="csv-import-and-export">CSV import and export</h2>
+<ul>
+<li><p><em>Older (2021-22).</em> CSV bulk method, in this order: [L1166.023]</p>
+<ol type="1">
+<li>Discard the unsaved product form, then go to Products &gt; Export &gt; All products &gt; Export products. Shopify emails a CSV of existing products, which serves as your template; the template file from Shopify's help pages also works.</li>
+<li>Open the file in a spreadsheet. Each line is one product.</li>
+<li>Fill the columns from Title through the column before SEO Description. Leave Handle blank.</li>
+<li>Paste titles, descriptions, prices and SKUs from supplier spreadsheets into the matching columns.</li>
+<li>Enter option names and their values; list option values on the lines below the product in the layout of the template.</li>
+<li>Set the taxable and requires-shipping columns to TRUE for taxable physical products.</li>
+<li>Upload each image in Settings &gt; Files, copy its URL and paste it into the Image Src column.</li>
+<li>Save the file as a CSV file; the exact menu depends on Mac or Windows, and the file must be a CSV.</li>
+<li>Go to Products &gt; Import, choose the file, tick the option to overwrite products with the same handle, then click Upload.</li>
+<li>Check that the products appear with their data.</li>
+</ol></li>
+<li><p><em>Older (2021-22).</em> Columns to fill in the Shopify CSV, one product per line: [L1166.025]</p></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>What to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handle</td>
+<td>leave blank; Shopify builds the URL handle from the title</td>
+</tr>
+<tr>
+<td>Title</td>
+<td>product title</td>
+</tr>
+<tr>
+<td>Body (HTML)</td>
+<td>product description</td>
+</tr>
+<tr>
+<td>Vendor</td>
+<td>brand or supplier name</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>product type, named consistently</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>tags for grouping products</td>
+</tr>
+<tr>
+<td>Option1 Name / Option1 Value, up to Option3</td>
+<td>option name and values; maximum three options</td>
+</tr>
+<tr>
+<td>Variant SKU</td>
+<td>supplier model or part number</td>
+</tr>
+<tr>
+<td>Variant Inventory Tracker</td>
+<td>shopify</td>
+</tr>
+<tr>
+<td>Variant Inventory Qty</td>
+<td>stock quantity; 10 as placeholder</td>
+</tr>
+<tr>
+<td>Variant Price</td>
+<td>selling price per variant</td>
+</tr>
+<tr>
+<td>Image Src</td>
+<td>hosted file URL from Settings &gt; Files</td>
+</tr>
+<tr>
+<td>Variant Taxable</td>
+<td>TRUE for taxable products</td>
+</tr>
+<tr>
+<td>Variant Requires Shipping</td>
+<td>TRUE for physical products</td>
+</tr>
+<tr>
+<td>SEO Description and columns to the right</td>
+<td>fill up to SEO Description; ignore the columns to the right</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><em>Older (2021-22).</em> Leave the Handle column blank in the CSV, because Shopify creates the handle automatically from the product title. The handle becomes the product URL. [L1166.026]</li>
+<li><em>Older (2021-22).</em> When importing with the overwrite option ticked, products with the same handle are updated instead of duplicated. Use this when re-importing products that already exist in the store. [L1166.027]</li>
+<li><em>Older (2021-22).</em> Settings &gt; Files stores images uploaded to the store and gives each file a URL. Paste that URL into the Image Src column of the CSV; a local file path will not import the image. [L1166.028]</li>
+<li><em>Older (2021-22).</em> A CSV image link must be a hosted URL from Settings &gt; Files; putting a local file name in the Image Src column will leave the product without an image. [L1166.037]</li>
+<li><em>Older (2021-22).</em> Shopify's help pages include a CSV template file with a description of each column and what it must contain. Use it when a column is unclear before importing. [L1166.029]</li>
+<li><em>Older (2019).</em> Shopify publishes the required column format for product CSV imports. Search for the Shopify CSV format, then reformat the supplier's file to match it. [L1275.028]</li>
+<li><em>Older (2021-22).</em> Manual entry suits a small number of products or a team that finds spreadsheets daunting. CSV import suits hundreds of products at once, and supplier spreadsheets can be pasted straight into it. [L1166.024]</li>
+</ul>
+<h2 id="supplier-file-cleaning">Supplier file cleaning</h2>
+<ul>
+<li><em>Older (2021).</em> Supplier file cleaning, in this order: [L1279.038]
+<ol type="1">
+<li>Open the supplier CSV and the Shopify product CSV template side by side.</li>
+<li>Reorder and rename the supplier columns to match the Shopify columns; copying and pasting covers most of the work.</li>
+<li>Fill in any remaining fields and upload the file.</li>
+<li>If manual entry is needed, first list the competitors' best-selling products that come from your approved supplier, then upload everything else in the background.</li>
+</ol></li>
+</ul>
+<h2 id="bulk-edits">Bulk edits</h2>
+<ul>
+<li><em>Older (2022).</em> Bulk updating product fields via Shopify CSV import: [L1281.060]
+<ol type="1">
+<li>Add a column for the product guarantee or description to a product CSV.</li>
+<li>Fill it in for every product from the same supplier.</li>
+<li>Import the file to update existing products in one step. The same import can create new products.</li>
+</ol></li>
+<li><em>Older (2021-22).</em> Keep all catalog changes organized in a single supplier list, and note whenever a manufacturer updates its price list so the uploads and quotes stay current. Update the price list in every place where it is stored. Assign this update to a staff member as part of their regular tasks. [L1396.060]</li>
+</ul>
+<h2 id="outsourcing-uploads-1">Outsourcing uploads</h2>
+<ul>
+<li><em>Older (2021-22).</em> Set up each new product using the product upload board in this order: [L1396.037]
+<ol type="1">
+<li>Enter the supplier name.</li>
+<li>Enter the product description or a link where the description can be found.</li>
+<li>Enter the source for product images, such as a shared Dropbox link.</li>
+<li>Enter the pricing rule: use the MAP price list if one exists, or otherwise add a fixed markup, such as 20%, and match prices from named competitor sites.</li>
+<li>Move the supplier card to the next stage once the upload is finished.</li>
+</ol></li>
+<li><em>Older (2021-22).</em> Split large catalog imports into two roles: one staff member assembles the CSV for simple products, and a second person checks product features before the import. CSV errors are hard to trace after import, so products with many options should be uploaded manually or through a variant app instead. [L1396.075]</li>
+<li><em>Older (2021-22).</em> For bulk catalog uploads of thousands of SKUs with many options, use CSV imports for simple products and manual uploads or a variant app for products that exceed Shopify's native options. A store with about 3,000 SKUs and products with up to 18 options needed this split. Put only the simpler products into a CSV, since errors in CSV files are hard to find. [L1396.061]</li>
+</ul>
+<h2 id="which-products-to-upload-first">Which products to upload first</h2>
+<ul>
+<li><em>Older (2021).</em> If manual entry is needed, first list the competitors' best-selling products that come from your approved supplier, then upload everything else in the background. [L1279.038]</li>
+<li>Products that are not in the first batch can be uploaded afterwards, in the background, once the first batch is live. [L1279.038]</li>
+</ul>
+<h2 id="map-and-compare-at-pricing">MAP and compare-at pricing</h2>
+<ul>
+<li>Products should be listed at MAP as the selling price. Enter the MSRP in the compare-at price field so customers see MSRP struck through and pay the MAP. [L1285.036]</li>
+<li>The compare-at price should be the real price the item was offered at, otherwise the discount is misleading. For MAP-listed products, the compare-at price is the MSRP. [L1188.013, L1285.036]</li>
+<li><em>Older (2021-22).</em> Pricing rule for uploads: use the MAP price list if one exists, or otherwise add a fixed markup, such as 20%, and match prices from named competitor sites. [L1396.037]</li>
+</ul>
+<h2 id="store-level-rules">Store-level rules</h2>
+<ul>
+<li><em>Older (2020).</em> There is no fixed maximum for products in a store. Stores with about 100 products and stores with 3,000 products both work, as long as the products are quality items from good brands in the niche. [L1277.054]</li>
+<li>Source C: markets for the store are set for UK, Australia and US. [L1288.002]</li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/12-demo-store-for-supplier-approval/"><span class="k">&larr; Previous</span><span class="v">Demo store for supplier approval</span></a><a class="nx" href="../../04-store-build-and-shopify/14-product-page-design-and-templates/"><span class="k">Next &rarr;</span><span class="v">Product page design and templates</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

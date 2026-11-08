@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Testing, measurement and optimization | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.15: Testing, measurement and optimization.">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/15-testing-measurement-and-optimization/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Testing, measurement and optimization | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.15: Testing, measurement and optimization."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/15-testing-measurement-and-optimization/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/15-testing-measurement-and-optimization/">Plain version</a></div><h1>15.15 Testing, measurement and optimization</h1><article><h2 id="where-to-test-campaigns-or-flows">Where to Test: Campaigns or Flows</h2>
+<ul>
+<li>Run major tests in email campaigns rather than flows. A campaign sends one variant to a large list at once, which produces the volume needed for a reliable decision. Campaign tests also target differences large enough to show up statistically. [L0570.006]</li>
+<li>Typical differences worth testing in a campaign, each comparing two versions of one element: [L0570.007]
+<ul>
+<li>CTA button color change [L0570.007]</li>
+<li>Lifestyle image versus product shot [L0570.007]</li>
+<li>Benefit-driven headline versus curiosity-driven headline [L0570.007]</li>
+</ul></li>
+<li>Low-volume flows, such as abandoned checkout, can take many months before any decision is possible. Validate ideas in campaigns first, then move them into flows. [L0570.013]</li>
+<li>Abandoned-cart sequences can be split-tested with different angles and hooks even on a low-traffic store. Keep the flow structure that works and vary the messaging. [L1208.021]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test location</th>
+<th>Volume and time needed</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Campaign to a large list</td>
+<td>20,000 contacts at a 50/50 split gives 10,000 per variant. A 50,000 to 100,000-contact list can reach roughly 50,000 per test in one send.</td>
+<td>[L0570.009]</td>
+</tr>
+<tr>
+<td>Abandoned-checkout flow</td>
+<td>About 1,000 per variant can take about six months, depending on the brand. Some brands never reach that volume. Around 2,000 abandoned carts in a test can take a full year.</td>
+<td>[L0570.004]</td>
+</tr>
+<tr>
+<td>Welcome series</td>
+<td>Very large volumes are needed, so results are slow. Plan for long test durations before acting on any result.</td>
+<td>[L0570.005]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="test-design-and-sequencing">Test Design and Sequencing</h2>
+<ul>
+<li>Clone a working campaign, change a few elements such as the subject line or the offer, and send the copy to a different list. Comparing the two campaigns shows which version performs better. [L0514.020]</li>
+<li>Use the following sequence to move from campaign tests to flows: [L0570.010]
+<ol type="1">
+<li>Run the split test as a campaign to a large list (for example 20,000 to 100,000 contacts) to reach a decisive sample size.</li>
+<li>Choose the winning version and use it as the basis for the next campaign.</li>
+<li>Keep changing one proven element at a time and resending, so the template improves with each send.</li>
+<li>Once the template reliably generates revenue on every send, treat it as the proven template.</li>
+<li>Implement the proven winning ideas in automated flows and run the flow tests as A/B tests.</li>
+<li>Because the ideas were already validated at scale, flow tests with lower volume are more likely to produce a winner.</li>
+</ol></li>
+<li>Repeatedly sending a winning template keeps it as the baseline for future tests, which reduces guesswork. Flow changes then rest on campaign data rather than assumptions or long waiting periods. [L0570.011]</li>
+<li>Almost every flow element, including timing, subject lines and offers, must be tested in your own account with your own customers. Treat any source that presents email flow advice as absolute rules with skepticism. [L0588.005]</li>
+<li>Small-batch variant testing, a direct-mail procedure: [L1261.156]
+<ol type="1">
+<li>Write several letter variants with different headlines and offers.</li>
+<li>Mail each variant to a small batch of prospects, such as 1,000 prospects per variant across 25 variants.</li>
+<li>Measure cost per response or per customer for each variant.</li>
+<li>Use only the best-performing letter for the full mailing.</li>
+</ol></li>
+</ul>
+<h2 id="baselines-and-changelog-tests">Baselines and Changelog Tests</h2>
+<ul>
+<li>Log every test in a changelog with its date, the change made, the expected result, the baseline, and the result. Record the result even if it is entered after the test end date. [L0410.007]</li>
+<li>Worked example, a sender profile picture test on Shopify email:
+<ul>
+<li>Change: on 15 November, the sender profile picture was replaced with an animated GIF instead of a static image. [L0410.007]</li>
+<li>Expected result: open rate up by 5 percentage points. [L0410.007]</li>
+<li>Baseline: 90-day trailing open rate of 45%, so the target was an open rate above 50%. [L0410.007]</li>
+<li>Record whether the open rate stayed at 45%, rose to 50%, or rose further. [L0410.007]</li>
+</ul></li>
+<li>The sender profile picture is the small avatar that Gmail shows next to the sender name in the inbox. Replacing a static avatar with an animated GIF is a test you can run on Shopify email to see whether it moves the open rate. [L0410.016]</li>
+<li>The two sources for the same test state the goal differently. Use the one that matches how you write your target: [L0410.007, L1509.010]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Reading of the goal</th>
+<th>Open rate target from a 45% baseline</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+5 percentage points (absolute)</td>
+<td>50%</td>
+<td>[L0410.007]</td>
+</tr>
+<tr>
+<td>+5% (relative increase)</td>
+<td>About 47.25%</td>
+<td>[L1509.010]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Baselines by test: [L1509.009, L1509.010]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Judged by</th>
+<th>90-day trailing baseline</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Percentage-off opt-in incentive replaced with a quiz</td>
+<td>Revenue per opt-in</td>
+<td>$80 per opt-in</td>
+<td>[L1509.009]</td>
+</tr>
+<tr>
+<td>Sender profile picture changed to an animated GIF</td>
+<td>Open rate</td>
+<td>45%</td>
+<td>[L1509.010]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="format-and-copy-tests-older-advice-2021-22">Format and Copy Tests (Older Advice, 2021-22)</h2>
+<ul>
+<li>Test plain text against HTML formatting with your own audience and market, and measure click-through rate as the main metric. Keep whichever format performs better, since there are very few universal truths in email marketing. [L0602.020]</li>
+<li>Email performance improves through continuous sending and measuring results over time. Refine your brand's tone and offer style through testing, since each market responds differently. [L0609.004]</li>
+<li>When email traffic or email sales are weak, review the emails before changing the audience. Check the following, then test other angles: [L1456.037]
+<ul>
+<li>Whether the right emails go to the right people</li>
+<li>Whether the message fits</li>
+<li>Whether recipients are engaged enough to buy</li>
+<li>Whether they are at the right stage of their buying journey</li>
+</ul></li>
+</ul>
+<h2 id="frequency-and-engagement-metrics">Frequency and Engagement Metrics</h2>
+<ul>
+<li>Test frequency over time to find the point where results plateau. Track four metrics to decide whether the frequency is right: [L0603.012]
+<ul>
+<li>Unsubscribes</li>
+<li>Open rate</li>
+<li>Click-through rate</li>
+<li>Conversion rate</li>
+</ul></li>
+<li>Test each segment's performance using audience breakdowns to see which recency windows and engagement thresholds convert best. Then adjust future sends accordingly. [L0264.012]</li>
+<li>Review campaign performance by audience breakdown on contact age (days engaged buckets such as 0-14, 15-30, 31-60 and 31-90), not only by overall open rate. [L0864.001]</li>
+<li>A steady decline across older buckets is an early sign of deliverability or list-quality problems. [L0864.001]</li>
+<li>Example of open rate by bucket: [L0864.002]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Days engaged</th>
+<th>Open rate (example)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-14</td>
+<td>About 60%</td>
+</tr>
+<tr>
+<td>15-30</td>
+<td>About 53%</td>
+</tr>
+<tr>
+<td>31-60</td>
+<td>About 41%</td>
+</tr>
+<tr>
+<td>31-90</td>
+<td>Dropped further (no value given)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The sharpest drop between buckets matters more than the absolute value. [L0864.002]</li>
+</ul>
+<h2 id="reading-results-by-inbox-provider-and-domain">Reading Results by Inbox Provider and Domain</h2>
+<ul>
+<li>Campaign performance is found under Campaigns &gt; [campaign] &gt; Deliverability. It shows Performance by inbox provider and Performance by domain. [L0864.003]</li>
+<li>Audience breakdown, with an Export CSV option, sits next to it under Audience breakdown. The campaign list shows Open rate, Click rate, Successfully Paid and Revenue columns. [L0864.003]</li>
+</ul>
+<h2 id="judging-campaigns-after-the-full-send">Judging Campaigns After the Full Send</h2>
+<ul>
+<li>Do not judge a campaign while it is still sending. Campaigns in progress show queued recipients (for example 1,018 still queued), so wait until the send has finished before reading the open rate. [L0864.015]</li>
+<li>Campaigns can be scheduled to send at each recipient's local time, so the send is spread across several hours. Judge results only after the full send window has passed. [L0864.016]</li>
+</ul>
+<h2 id="attribution-and-reporting">Attribution and Reporting</h2>
+<ul>
+<li>Use a different discount code per flow so you can see which flow produces the sales. Otherwise cart recovery and welcome offers cannot be separated in reporting. [L0606.014]</li>
+<li>The Shopify Messaging dashboard shows, for a chosen date range: [L1317.004]
+<ul>
+<li>Number of emails sent</li>
+<li>Email open rate</li>
+<li>Conversion rate</li>
+<li>Number of sales generated by the emails</li>
+</ul></li>
+</ul>
+<h2 id="flow-audits">Flow Audits</h2>
+<ul>
+<li>The audit and reporting stage needs at least 30 days of Klaviyo send data, read through the Klaviyo MCP. It produces an audit report and a reporting calendar, and /email-draft-review supports the review. [L1361.023]</li>
+<li>Klaviyo's preview does not make discount links clickable, so you cannot test them from there. Copy the real link and open it in a customer-style browser session to confirm the code applies at checkout. [L1470.011]</li>
+</ul>
+<h2 id="claims-to-treat-with-care">Claims to Treat with Care</h2>
+<ul>
+<li>A weekly-design newsletter reported open rates above 70%. The seller called this a strong engagement signal for upselling. It describes one newsletter and is not a general target. [L1153.066]</li>
+</ul>
+<h2 id="common-mistakes">Common Mistakes</h2>
+<ul>
+<li>Testing directly in low-volume flows, such as abandoned checkout, can take many months before any decision is possible. [L0570.013]</li>
+<li>Judging a campaign while it is still sending, before queued recipients have been delivered. [L0864.015]</li>
+<li>Testing discount links in the preview, which does not make them clickable. [L1470.011]</li>
+<li>Accepting flow advice as absolute rules instead of testing it in your own account. [L0588.005]</li>
+</ul>
+</article><nav class="pn"><a href="../../15-email-and-sms/14-holiday-black-friday-and-promotion-campaigns/"><span class="k">&larr; Previous</span><span class="v">Holiday, black Friday and promotion campaigns</span></a><a class="nx" href="../../15-email-and-sms/16-outreach-and-supplier-email/"><span class="k">Next &rarr;</span><span class="v">Outreach and supplier email</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

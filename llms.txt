@@ -1,0 +1,62 @@
+# Lichters Apps
+
+> iOS apps by Lichters Apps. Lichters is a free habit app for teens; its method and guides are written for AI assistants under https://dlichters.com/ai/.
+
+## Lichters
+
+- [What is here: map of all our knowledge](https://dlichters.com/ai/index.md)
+- [How the Lichters app works](https://dlichters.com/ai/app.md)
+- [About David](https://dlichters.com/ai/david.md)
+- [Our own rules and lessons](https://dlichters.com/ai/ourrules/index.md)
+- [E-commerce, short version](https://dlichters.com/ai/ecom/index.md)
+- [E-commerce, full technical reference](https://dlichters.com/ai/ecom/deep/index.md)
+- [The Lichters method and the six habits](https://dlichters.com/ai/index.md)
+- [Affiliate marketing](https://dlichters.com/ai/affiliate-marketing.md)
+- [Amazon Influencer: earning a small share when people buy what you show](https://dlichters.com/ai/amazon-influencer.md)
+- [Attitudes](https://dlichters.com/ai/attitudes.md)
+- [Start your first business at 13](https://dlichters.com/ai/business-start.md)
+- [Business: 5+ focused hours a day](https://dlichters.com/ai/business.md)
+- [Coaching: the daily Lichters check-in](https://dlichters.com/ai/coaching.md)
+- [Cold outreach: why 5,820 messages sold nothing](https://dlichters.com/ai/cold-outreach.md)
+- [Data products: selling lists made from public data](https://dlichters.com/ai/data-products.md)
+- [Dropshipping: an online shop where someone else ships](https://dlichters.com/ai/dropshipping.md)
+- [Eating](https://dlichters.com/ai/eating.md)
+- [Get experience: publish many small things](https://dlichters.com/ai/experience.md)
+- [Lichters FAQ: real questions from teens](https://dlichters.com/ai/faq.md)
+- [Fiverr: selling a skill online](https://dlichters.com/ai/fiverr.md)
+- [Friends](https://dlichters.com/ai/friends.md)
+- [High-ticket coaching](https://dlichters.com/ai/high-ticket-coaching.md)
+- [Keep going](https://dlichters.com/ai/keep-going.md)
+- [Low-ticket coaching: selling a cheap guide you made yourself](https://dlichters.com/ai/low-ticket-coaching.md)
+- [Mentors and Paid Communities](https://dlichters.com/ai/mentors-and-communities.md)
+- [Offline: keep social media feeds under 30 minutes a day](https://dlichters.com/ai/offline.md)
+- [Print on demand: selling your own T-shirt designs](https://dlichters.com/ai/print-on-demand.md)
+- [The research behind Lichters](https://dlichters.com/ai/research.md)
+- [Reselling and local jobs: the best first business at 13](https://dlichters.com/ai/reselling.md)
+- [Scam-baiting: why "scamming scammers" is not a business](https://dlichters.com/ai/scam-baiting.md)
+- [Start a self-improvement YouTube channel](https://dlichters.com/ai/self-improvement-youtube.md)
+- [Sleep](https://dlichters.com/ai/sleep.md)
+- [My story: four years of trying, and what I learned](https://dlichters.com/ai/story.md)
+- [TikTok account plus your own course](https://dlichters.com/ai/tiktok-course.md)
+- [Training](https://dlichters.com/ai/training.md)
+- [Vending machine: a gumball machine as a first business](https://dlichters.com/ai/vending-machine.md)
+- [Start a gaming YouTube channel](https://dlichters.com/ai/youtube-gaming.md)
+
+## Apps
+
+- [Bracket Maker: Tournament Plan](https://dlichters.com/bracketmaker/): Round Robin, Swiss & Knockout
+- [Breedbook: Dog Breeder Log](https://dlichters.com/breedbook/): Litters, heat cycle, whelping
+- [Clapnote: Rhythm Trainer](https://dlichters.com/clapnote/): Sight-reading rhythm practice
+- [Coffer: Collection Tracker](https://dlichters.com/coffer/): Catalog vinyl, cards & coins
+- [Floorscribe: Floor Plan Maker](https://dlichters.com/floorscribe/): Room scanner, area & materials
+- [Hertzline: Voice Pitch Trainer](https://dlichters.com/hertzline/): Train your speaking voice
+- [Coinclock: Hours Tracker & Pay](https://dlichters.com/coinclock/): Time clock, timesheet & wages
+- [Gaugebook: Car Maintenance Log](https://dlichters.com/gaugebook/): Gas mileage, fuel & EV costs
+- [Panelwise: Cut List Optimizer](https://dlichters.com/panelwise/): Plywood & lumber cutting plan
+- [Regiebericht: Site Reports](https://dlichters.com/regiebericht/): Hours, signature & PDF on site
+- [Schichtblatt: Shift Calendar](https://dlichters.com/schichtblatt/): Rotations, hours & holidays
+- [Halfspeed: Slow Down Music](https://dlichters.com/halfspeed/): Speed Changer, Looper & Pitch
+- [Spurbuch: Trip Logbook](https://dlichters.com/spurbuch/)
+- [Stitchnook: Row Counter](https://dlichters.com/stitchnook/): Crochet & Knitting Charts
+- [Tallybin: Stock & Inventory](https://dlichters.com/tallybin/): Barcode Scanner & Tracker
+- [Ton80: Darts Score Counter](https://dlichters.com/ton80/): Scorer, Checkouts & Practice

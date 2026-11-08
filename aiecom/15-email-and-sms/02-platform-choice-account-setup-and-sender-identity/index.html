@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Platform choice, account setup and sender identity | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.2: Platform choice, account setup and sender identity.">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/02-platform-choice-account-setup-and-sender-identity/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Platform choice, account setup and sender identity | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.2: Platform choice, account setup and sender identity."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/02-platform-choice-account-setup-and-sender-identity/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/02-platform-choice-account-setup-and-sender-identity/">Plain version</a></div><h1>15.2 Platform choice, account setup and sender identity</h1><article><h2 id="platform-choice-account-setup-and-sender-identity">Platform Choice, Account Setup and Sender Identity</h2>
+<h3 id="choosing-an-email-platform">Choosing an Email Platform</h3>
+<ul>
+<li>The customer sees only the email itself, plain text or HTML, and every email provider delivers it the same way. The software choice therefore does not change what the customer receives or how they respond. [L0608.005]</li>
+<li>No import tool moves flows, lists and automations from one platform to another, so switching requires manual setup. Factor this rebuild time into any decision to change. [L0608.012]</li>
+<li>Drip and Klaviyo both connect to Shopify and sync customer data for automated email. Choose either one; the choice comes down to preference. [L1298.024, L1298.025, L1298.026]</li>
+<li>Drip is an e-commerce autoresponder that sends automated sequences, such as abandoned cart emails, and syncs customer and order data from Shopify. It is one of two recommended options. [L1298.024]</li>
+<li>Klaviyo is an autoresponder that also covers SMS and forms. It connects to Shopify in the same way as Drip and is a valid alternative. [L1298.025]</li>
+<li>Klaviyo is the most widely used email marketing app for Shopify and is recommended for its strong built-in automations. [L0573.002]</li>
+<li>Klaviyo is the tool used to build the automated flows. An active Klaviyo account is the only requirement to start. [L0606.002]</li>
+<li>Klaviyo is installed on Shopify to send automated emails for bounced visits and abandoned carts. Set it up before the store takes traffic. [L0393.021]</li>
+<li>Send promotions and abandoned cart flows straight from Klaviyo. Add contacts to Shopify only when they buy, become abandoned carts, or sign up through a Shopify-native opt-in form. [L0359.079]</li>
+<li>Clavio is the email and SMS marketing app used in the Source C material for sign-up forms and pop-ups, automated flows (welcome series, abandoned carts, thank-you emails), and email campaigns to the collected list. [L0476.012]</li>
+<li>The Clavio setup is written as the Klaviyo-type setup in the video, so the same steps apply to both. [L0635.020]</li>
+<li>Shopify Email is recommended over Klaviyo mainly because it is much more cost-effective. [L1307.002]</li>
+<li>A store already using Klaviyo with a healthy return on ad spend has no reason to switch immediately. A store that wants to save money should switch. [L1307.002]</li>
+<li>The source claims that, at the time of publication, Shopify Email covered about 99% of what Klaviyo can do. This is a vendor-comparison claim; verify it against current features before relying on it. [L1307.005]</li>
+<li>Shopify Email can replace older email platforms without paid add-ons. It includes AI-assisted features for writing campaigns and images. [L1283.097]</li>
+<li>Ontraport is a marketing automation platform that is expensive but offers many controls and triggers for high volumes, similar to Infusionsoft. [L0923.036]</li>
+<li>Mailchimp is a cheaper option that works well for a standard Shopify autoresponder. Clavio can produce designed email templates. [L0923.036]</li>
+<li>For a pure affiliate site, use GetResponse as the autoresponder. Its free first month lets one affiliate sale pay for the service, and it covers the features needed for affiliate marketing without extra cost. [L0514.023]</li>
+<li>Older advice (2021-22) recommended Drip for all e-commerce emails, including post-purchase, browse abandonment and flows, especially with Shopify integration. Klaviyo remained a decent alternative. Switching was only advisable for new setups, since recreating existing flows is a lot of work. [L0682.016] <em>(older, 2021-22)</em></li>
+<li>Older advice (2020) described Klaviyo as an email marketing app used for email marketing and autoresponders for the stores. [L0852.075] <em>(older, 2020)</em></li>
+<li>Older advice (2021) stated that the newest version of the email setup uses Klaviyo for email capture and does not require Privy. Keeping Privy is fine if it is already installed. [L0853.081] <em>(older, 2021)</em></li>
+</ul>
+<h3 id="costs">Costs</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Cost as stated</th>
+<th>Notes</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify Email</td>
+<td>Free up to 10,000 emails per month, included in the Shopify subscription</td>
+<td>Above 10,000 emails, $1 per additional 1,000 emails. Stated at time of publication; check before relying on it.</td>
+<td>L1283.097, L1307.003, L1307.004</td>
+</tr>
+<tr>
+<td>Shopify Messaging</td>
+<td>10,000 emails per month free</td>
+<td>Each additional 1,000 emails costs 1 USD.</td>
+<td>L1317.002</td>
+</tr>
+<tr>
+<td>Klaviyo</td>
+<td>Free for the first 500 email addresses/contacts, then paid</td>
+<td>Billing starts after the first 500 contacts. (Older, 2020, and undated Source A lesson.)</td>
+<td>L0268.054, L1076.059</td>
+</tr>
+<tr>
+<td>Drip</td>
+<td>Costs start at $19 per month</td>
+<td>Rises with the number of active people in the account. The account owner decides which people count as active. (Older, 2021-22.)</td>
+<td>L1298.028</td>
+</tr>
+<tr>
+<td>Drip (Shopify approval screen)</td>
+<td>Recurring subscription of $0.00 USD during the 14-day free trial, recurring every 30 days, with a maximum of $7,500.00 USD in possible additional fees</td>
+<td>The cap is a buffer so the list can grow without interruption, not a typical cost. (Older, 2021-22.)</td>
+<td>L1298.029</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Email platforms bill per subscriber, so a new store with zero or few subscribers pays little. Costs rise as the list grows. [L1298.030]</li>
+<li>The post-purchase email flow takes about 5 to 10 hours to create. [L1076.059]</li>
+</ul>
+<p>Formula for Shopify Email cost above the free allowance:</p>
+<pre><code>Cost per month = ((emails sent in the month − 10,000) ÷ 1,000) × $1
+Below 10,000 emails per month: $0
+Example: 15,000 emails → (15,000 − 10,000) ÷ 1,000 × $1 = $5</code></pre>
+<p>[L1307.016]</p>
+<h3 id="shopify-messaging-installation-and-branding">Shopify Messaging: Installation and Branding</h3>
+<ul>
+<li>Shopify Messaging is Shopify's free app for sending marketing emails and SMS messages from the store. It is used for email campaigns and automations that are set up in later steps. [L1317.001]</li>
+</ul>
+<p>Procedure: Install Shopify Messaging [L1317.003]</p>
+<ol type="1">
+<li>Open the Shopify admin and click Apps.</li>
+<li>Search for "Shopify Messaging" in the Shopify App Store and pick the best match at the top.</li>
+<li>Click Install.</li>
+<li>Accept the access permissions Shopify asks for and click Install again.</li>
+<li>Once installed, open the app's settings and complete the configuration.</li>
+</ol>
+<p>Procedure: Configure Template Branding in Shopify Messaging settings [L1317.005]</p>
+<ol type="1">
+<li>Open Settings &gt; Template Branding and click Customize.</li>
+<li>Upload the store logo.</li>
+<li>Choose the font. The instructor keeps Sans Serif, but any font used on the store can be selected.</li>
+<li>Set text and background colors. The instructor keeps them black and white.</li>
+<li>Set the button fill to the store's brand color.</li>
+<li>Leave the address and store name fields as they are.</li>
+<li>Click Save.</li>
+</ol>
+<p>Checklist after installing Shopify Messaging [L1317.013]</p>
+<ol type="1">
+<li>Install the app from the Shopify App Store.</li>
+<li>Set Template Branding (logo, font, colors, button fill brand color) and save.</li>
+<li>Check the sender email is <a href="mailto:sales@yourdomain.com">sales@yourdomain.com</a> and enter the same address under Notification Sections.</li>
+<li>Keep Double opt-in inactive.</li>
+<li>Keep Optimize Open Tracking active.</li>
+<li>Leave UTM defaults unchanged.</li>
+</ol>
+<h3 id="klaviyo-account-and-signup-form-setup">Klaviyo: Account and Signup Form Setup</h3>
+<p>Procedure: Install and create the account [L1297.015]</p>
+<ol type="1">
+<li>Search for Klaviyo in the Shopify App Store, click Add app, then Install app.</li>
+<li>Enter your sender name and sender email address and click Continue.</li>
+<li>Select your business goal, here to earn more revenue.</li>
+<li>Select email only as the channel.</li>
+<li>Open the dashboard and start with a signup form.</li>
+</ol>
+<p>Procedure: Install and connect, as taught in the Source C material [L0573.002, L0573.003]</p>
+<ol type="1">
+<li>Install Klaviyo from the Shopify App Store. It is registered with the same email address used for the Shopify account. [L0573.002]</li>
+<li>Connect Klaviyo to the Shopify store. [L0573.003]</li>
+<li>Turn on website tracking. [L0573.003]</li>
+<li>Import existing contacts, starting with email contacts and newsletter subscribers. This step can be skipped if none exist. [L0573.003]</li>
+<li>Optionally build the brand library by uploading logo and brand colors, which Klaviyo then applies to all email templates. [L0573.003]</li>
+<li>Optionally invite team members. [L0573.003]</li>
+</ol>
+<p>Procedure: Initial setup including the signup form [L0477.015]</p>
+<ol type="1">
+<li>Enter sender name and sender email (for example, a name from the brand and a contact@ address on the store domain).</li>
+<li>Select business goal (earn more revenue) and channel (email only).</li>
+<li>Create a signup form via Signup forms in the left menu.</li>
+<li>Choose a pop-up design, name it and add it to a subscriber list (newsletter).</li>
+<li>Replace the percentage offer with a fixed dollar offer (for example, save $5 with the first order).</li>
+<li>Replace the picture with a product or gift image. Free images are available, for example from unsplash.com.</li>
+<li>On the success step, communicate the discount code created in Shopify.</li>
+<li>Publish the form.</li>
+</ol>
+<p>Procedure: Clavio setup as taught in the video [L0635.020]</p>
+<ol type="1">
+<li>Go to Apps &gt; All recommended apps, open the Shopify App Store, search Clavio, and click Install.</li>
+<li>Create the Clavio account and enter a sender name (for example, a support representative's name) and a sender email address on the store's domain (for example, a contact address).</li>
+<li>Choose email only.</li>
+<li>Set up core flows: welcome series, abandoned checkout, and order confirmation series. Then use campaigns for one-off sends.</li>
+</ol>
+<p>Integration and interface checks</p>
+<ul>
+<li>In Klaviyo's integrations area, check that the store integration is listed as connected. Turning on the site option adds the JavaScript that the sign-up box needs to the storefront. <em>(Older, 2022.)</em> [L1092.096]</li>
+<li>When Klaviyo updates its interface, check the current account layout before recording or following lessons. The interface may differ for new accounts even if existing accounts remain unchanged. <em>(Older, 2022.)</em> [L0665.086]</li>
+<li>Check that promotional and evergreen sequences are live in the account before relying on them. <em>(Older, 2021.)</em> [L1112.077]</li>
+</ul>
+<h3 id="drip-setup-procedure">Drip: Setup Procedure</h3>
+<p>Procedure: Drip Email Marketing setup [L1298.027] <em>(older, 2021-22)</em></p>
+<ol type="1">
+<li>In the Shopify App Store, search for drip and click Drip Email Marketing (Klaviyo can be searched the same way).</li>
+<li>Click Install app. You are taken to the Drip sign-up page.</li>
+<li>Create a Drip account with first name, last name, email, password and a goal, complete the human check and click Start free trial.</li>
+<li>Return to Shopify and approve the subscription. The trial starts at $0.00 USD, and then click Start free trial.</li>
+<li>Check the sender business address that loads from your Shopify account. Edit it in the box if needed, then click Continue.</li>
+<li>Wait for the account to sync in the background. Confirm that Drip shows the store as connected and that its tracking snippet is installed on the site.</li>
+<li>Leave the detailed email setup (sequences and flows) for later, when it becomes relevant.</li>
+</ol>
+<h3 id="sender-name">Sender Name</h3>
+<ul>
+<li>Use a person's name as the sender name, such as a founder, yourself, a customer service rep, or a fictional persona, combined with the brand. For example, "John from ABC Lawnmowers" works better than the brand name alone. [L0572.017]</li>
+<li>In a welcome or flow email, the sender name works better as a named person from the store plus the store name, such as a customer representative, than as a bare brand name. A personal sender name makes the message feel like a reply from a human. [L0476.039]</li>
+<li>Use a named customer representative as the sender name, combined with the store name, and send from the store's own email address. This makes automated emails feel personal and recognisable. [L0634.038]</li>
+<li>The Klaviyo sender name and sender email are requested at account setup and appear on every email. Use a real person's first name as the sender name, so the email reads as a personal message rather than a company broadcast. [L0607.050]</li>
+<li>Set the Klaviyo sender name to a person's first name plus the brand, for example "First name from Brand", with a sender email address on the store's own domain. This gives customers a personal sender they recognise that matches the store. [L1297.045]</li>
+</ul>
+<h3 id="sender-address">Sender Address</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Platform or purpose</th>
+<th>Address to use</th>
+<th>Where it is set</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shopify Messaging</td>
+<td><a href="mailto:sales@yourdomain.com">sales@yourdomain.com</a> (sales@ followed by the store's own domain)</td>
+<td>Messaging settings, and the same address under Settings &gt; Notification Sections, which is the sender for all Messaging emails</td>
+<td>L0147.007, L1317.008</td>
+</tr>
+<tr>
+<td>Shopify Email</td>
+<td>General address on own domain, such as support@, sales@ or info@</td>
+<td>Settings &gt; Sender email, taken from the store details settings</td>
+<td>L1307.008, L1307.009</td>
+</tr>
+<tr>
+<td>Klaviyo</td>
+<td>Address on the store domain, for example contact@</td>
+<td>Sender email at account setup</td>
+<td>L0477.015, L1297.045</td>
+</tr>
+<tr>
+<td>Clavio</td>
+<td>Address on the store domain, for example a contact address</td>
+<td>Sender email at account setup</td>
+<td>L0635.020</td>
+</tr>
+<tr>
+<td>Store contact and customer service</td>
+<td>Shopify support email for store contact and customer service questions; the store's support address for supplier contact fields</td>
+<td>Contact and supplier fields</td>
+<td>L0964.142</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The sender address must be on the store's own domain and never a personal address. [L0147.007]</li>
+<li>Do not leave a personal address such as name@agency-domain as the sender of store emails. Use a sales address on the store's own domain instead. [L1317.009]</li>
+<li>The sender address field in Shopify Messaging can show the email used to create the store, which may be a personal inbox. Replace it with a sales address on the store's own domain before sending any emails. [L1317.014]</li>
+<li>Make sure replies go to an inbox that you or your team can manage. [L1307.009]</li>
+<li>Under Settings &gt; Notifications, the sender email addresses are configured. This is left for later, when email marketing is set up. [L1306.023]</li>
+</ul>
+<h3 id="business-domain-email">Business Domain Email</h3>
+<ul>
+<li>Use a business email address on your own domain (name@yourdomain) for suppliers and customers, not a free address such as Gmail, Hotmail or Yahoo. Free addresses make a store look like a small hobby operation, which lowers trust. <em>(Older, 2021-22.)</em> [L0566.001]</li>
+<li>Keep business email separate from your personal inbox and accounts. Mixing the two makes supplier and customer correspondence hard to find and manage. <em>(Older, 2021-22.)</em> [L0566.002]</li>
+<li>Create one core business address first, such as support@, sales@, hello@ or info@, and use it on the website and for customer contact. Add addresses for specific purposes later. <em>(Older, 2021-22.)</em> [L0566.003]</li>
+<li>Do not put a personal or free email address on the website or in supplier outreach. Customers and suppliers expect a domain-based address. <em>(Older, 2021-22.)</em> [L0566.004]</li>
+<li>The business address is the one customers use to contact you at launch and the one shown on the website. Set it up before the site goes live. <em>(Older, 2021-22.)</em> [L0566.018]</li>
+<li>The personal email address entered during Google Workspace sign-up receives the welcome message and serves as the account recovery address. Use an address you can reliably access. <em>(Older, 2021-22.)</em> [L0566.021]</li>
+<li>Google may ask for a phone-number check on a newly created account as a security measure. Creating many accounts in a short time can make this check appear more often. <em>(Older, 2021-22.)</em> [L0566.022]</li>
+<li>The verification screen during Gmail activation says the page can be closed and reopened later. Closing the window is not a failed setup. Check the admin console to confirm the activation status. <em>(Older, 2021-22.)</em> [L0566.023]</li>
+<li>Pricing differs by source:
+<ul>
+<li>A Google Workspace search-result snippet at recording time showed plans from $8.40 per user per month. <em>(Older, 2021-22.)</em> [L0566.025]</li>
+<li>The standard cost quoted was about $12 per month. <em>(Older, 2021-22.)</em> [L0566.025]</li>
+<li>Check the live pricing page for currency and region before budgeting, because prices change. [L0566.025]</li>
+</ul></li>
+</ul>
+<h3 id="physical-address-and-footer">Physical Address and Footer</h3>
+<ul>
+<li>Klaviyo asks for a physical postal address to comply with anti-spam rules. Use a registered business address, such as a low-cost London office space or a virtual office, rather than a personal home address. Update the company registration address and the website when the new address is in place. [L0552.040]</li>
+<li>The footer module in the example email library carries the sender's business identity: an ABN (Australian Business Number), a street address and an unsubscribe link. Outside Australia, use the equivalent company registration number and the business's postal address in the same footer block, so every email includes them automatically. [L0610.012]</li>
+<li>Include the business address in the footer of business emails, such as marketing emails. [L0696.013]</li>
+<li>In Klaviyo emails, remove the organization name or full address from the email footer if you do not want it shown. The two sources differ on whether the address is optional: the rule above applies to business emails in general, and this option applies to stores that choose not to display it. [L1297.022]</li>
+</ul>
+<h3 id="opt-in-settings">Opt-In Settings</h3>
+<ul>
+<li>Choose unconfirmed opt-in when the autoresponder allows it, because subscribers are added immediately with no extra step. Confirmed opt-in sends a confirmation email that many subscribers never see or click, which loses a share of your list. [L0514.024]</li>
+<li>Use a single opt-in with a welcome discount instead of double opt-in, because fewer than 5 percent of subscribers confirm a double opt-in email. [L0857.045]</li>
+<li>Shopify Email: Settings &gt; double opt-in. A double opt-in sends a confirmation email after the customer subscribes and asks them to confirm. Leave the option at its default, "not required", because it adds friction to sign-ups. [L1307.010]</li>
+<li>Shopify Messaging: set Double opt-in to inactive. [L1317.010]</li>
+<li>Configuration for the Messaging app: disable double opt-in, enable optimize open tracking, and leave UTM settings at default values. [L0147.009]</li>
+</ul>
+<h3 id="tracking-utm-and-smart-sending">Tracking, UTM and Smart Sending</h3>
+<p>Settings summary</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Required value</th>
+<th>Where</th>
+<th>Units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smart sending</td>
+<td>Off, for every flow email (Clavio and Klaviyo)</td>
+<td>Email settings before switching to Live</td>
+<td>L0476.010, L0477.017, L0573.016, L0634.006, L1297.022</td>
+</tr>
+<tr>
+<td>UTM tracking</td>
+<td>On, for every flow email</td>
+<td>Email settings before switching to Live</td>
+<td>L0476.010, L0477.017, L0573.016, L0634.006, L1297.022</td>
+</tr>
+<tr>
+<td>Optimize open tracking</td>
+<td>On</td>
+<td>Shopify Messaging settings</td>
+<td>L0147.009, L1317.011</td>
+</tr>
+<tr>
+<td>Open tracking (Shopify Email)</td>
+<td>Default: track all email opens</td>
+<td>Settings &gt; open tracking</td>
+<td>L1307.011</td>
+</tr>
+<tr>
+<td>UTM parameters (Shopify Messaging)</td>
+<td>Defaults: source Shopify email, medium email, campaign UTM campaign, content email name, term activity ID</td>
+<td>Messaging settings</td>
+<td>L0147.011, L1317.012</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>In every Clavio email, set Smart sending to off and UTM tracking to on before you switch the email from Draft to Live. The setting window opens when you click the email in the flow. [L0476.010]</li>
+<li>Before a Clavio email goes live, set Smart sending to off and UTM tracking to on in the email settings panel. Then set the email from Draft to Live. [L0634.006]</li>
+<li>For every flow email, make sure Smart sending is off and UTM tracking is on before setting the email to Live. UTM tracking lets you measure the revenue from each email efficiently, which Smart sending would otherwise interfere with. [L0573.016]</li>
+<li>In Klaviyo, set Smart sending to off and UTM tracking to on in each flow email. [L0477.017]</li>
+<li>In Klaviyo emails, Smart sending should be off and UTM tracking on. The flow then sends each message on schedule and the traffic can be tracked. [L1297.022]</li>
+<li>The UTM parameters in Shopify Messaging are appended to links in emails. This lets sales from emails be tracked in Google Analytics and in the Messaging app. Keep them at their defaults. [L1317.012]</li>
+<li>Do not modify the UTM campaign structure or advanced tracking settings in Shopify Messaging. [L0147.011]</li>
+<li>Keep the default option to track all email opens in Shopify Email. This gives the most accurate open-rate reporting for emails sent through Shopify Email. [L1307.011]</li>
+<li>Optimize Open Tracking in Shopify Messaging should be switched on, so email opens are tracked. [L1317.011]</li>
+</ul>
+<h3 id="going-live-and-final-checks">Going Live and Final Checks</h3>
+<ul>
+<li>An email that stays in Draft is never sent. Each flow email must be switched from Draft to Live after it is edited. [L0476.028]</li>
+<li>Branding and settings changes are not applied unless they are saved. Confirm that all Shopify Email settings are saved before moving on. Otherwise, new automations and campaigns may not carry the intended configuration. [L1307.014]</li>
+<li>Before relying on the Shopify Messaging setup, run the checklist in the Shopify Messaging section above. [L1317.013]</li>
+</ul>
+<h3 id="migration-between-platforms">Migration Between Platforms</h3>
+<ul>
+<li>When moving from Klaviyo to Shopify Email, check your Shopify customer list first. Klaviyo sign-ups usually come through Shopify opt-ins, so many contacts may already be in Shopify and may not need an export. [L0470.078]</li>
+<li>Contacts are added to Shopify only when they buy, become abandoned carts, or sign up through a Shopify-native opt-in form, so a Klaviyo-to-Shopify move should be checked against those routes. [L0359.079]</li>
+<li>Switching platforms requires manual rebuilding of flows and automations. Factor this rebuild time into the decision. [L0608.012]</li>
+<li>Older advice (2021-22) said switching is only advisable for new setups, since recreating existing flows is a lot of work. [L0682.016] <em>(older, 2021-22)</em></li>
+<li>A store that wants to save money should switch to Shopify Email. A store already using Klaviyo with a healthy return on ad spend has no reason to switch immediately. [L1307.002]</li>
+</ul>
+</article><nav class="pn"><a href="../../15-email-and-sms/01-email-and-sms-strategy-economics-and-program-planning/"><span class="k">&larr; Previous</span><span class="v">Email and SMS strategy, economics and program planning</span></a><a class="nx" href="../../15-email-and-sms/03-deliverability-foundations-authentication-reputation-and-war/"><span class="k">Next &rarr;</span><span class="v">Deliverability foundations: authentication, reputation and warm-up</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

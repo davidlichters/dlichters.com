@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Campaign segmentation, tiers and scaling structure | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.13: Campaign segmentation, tiers and scaling structure.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/13-campaign-segmentation-tiers-and-scaling-structure/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Campaign segmentation, tiers and scaling structure | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.13: Campaign segmentation, tiers and scaling structure."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/13-campaign-segmentation-tiers-and-scaling-structure/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/13-campaign-segmentation-tiers-and-scaling-structure/">Plain version</a></div><h1>10.13 Campaign segmentation, tiers and scaling structure</h1><article><h2 id="scope-and-sequencing-of-segmentation">Scope and Sequencing of Segmentation</h2>
+<ul>
+<li>Start with one Alpha and one Beta campaign that hold all products. Split them only as data shows margin, supplier, shipping-region or brand differences. [L0856.017, L0278.017]</li>
+<li>Split on what the data shows, not on a fixed template. [L0466.026]</li>
+<li>Segment by performance, because products and search terms have different CTRs and conversion rates. Bid more on the segments that convert well and less on the weaker ones. [L0510.022]</li>
+<li>Segment at campaign level only when products have very different performance profiles or margins. Keep related variations in the same campaign pair and divide them further with product groups by brand and SKU. [L0225.032]</li>
+<li>Products with different categories get separate Alpha-Beta pairs. Related variations, such as gas and electric lawnmowers, stay in the same pair. [L0225.009]</li>
+<li>Use a waterfall structure for product groups: all products → product type → brand → individual SKU. Segment down to SKU for best optimisation, but do not create so many campaigns that performance cannot be managed. [L0225.010]</li>
+<li>Google does not reward campaign count directly. A structure that is easy to manage gets managed more often and to a higher standard, which tends to improve profitability. [L0747.005]</li>
+<li>A store with 500 or more products needs organisation inside Shopping campaigns. Without it, finding one product to change its bid or add negatives takes too long, and slow management leads to less management. [L0747.003]</li>
+<li>The profitable limit of Shopping traffic is reached when extra clicks can no longer be bought at a cost that meets the target cost per sale and target ROAS, not when the search pool runs out. Narrow niches and small markets reach this limit at lower revenue. [L0744.063]</li>
+<li>Advanced strategies beyond Shopping Ads apply to stores doing $50,000-$100,000+ per month that have reached the scaling ceiling at a 10× return on ad spend with Shopping campaigns. [L0194.003]</li>
+<li>Keep priority products in a separate campaign from secondary products so campaigns do not bid against each other for the same searches. Check for overlapping products whenever campaigns are restructured. [L0807.025]</li>
+<li>Do not place one product in more than one segment. Overlap splits budget and distorts data. [L0224.006]</li>
+</ul>
+<h2 id="campaign-types-and-core-structure-rules">Campaign Types and Core Structure Rules</h2>
+<ul>
+<li><strong>Campaign type:</strong> When creating segmented Shopping campaigns in Google Ads, select Standard Shopping, not Performance Max. Standard gives manual control over product groups and segmentation exclusions. [L0224.009]</li>
+<li><strong>Core bidding setup:</strong> Keep profitable manual Shopping campaigns as the core. When they produce data and profit, raise budgets step by step rather than switching to Smart campaigns. [L0963.001]</li>
+<li><strong>Tier structure:</strong> Campaigns can be split into tiers (for example beta, alpha 1 and alpha 2). Universal negative keywords sit at campaign level. Brand or product negatives funnel traffic toward the tightest tier. [L0247.058]</li>
+<li><strong>Alpha 2 and Beta 2:</strong> A typical Shopping structure has a main Alpha and a Beta campaign holding product groups. Duplicating them creates Alpha 2 and Beta 2, which separate lower-priced products from the main campaigns. [L0852.117]</li>
+<li><strong>Separate budgets per pair:</strong> Create separate Alpha and Beta campaigns, each with its own budget and negative keyword lists. [L0251.048]</li>
+<li><strong>Isolating a product:</strong> To test one product on its own, create a new Alpha and Beta pair exclusively for that product. [L0251.048]</li>
+<li><strong>No shared overlap:</strong> Do not share one budget across three campaigns (all-products Alpha, all-products Beta, single-product Alpha/Beta). This prevents proper bid optimisation. [L0251.048]</li>
+<li><strong>Shared budget per tier:</strong> Several campaigns can run on one shared daily budget. Assign shared budgets to each tier based on profitability goals. Do not let the same products sit in overlapping campaigns. [L0278.018, L0360.031]</li>
+<li><strong>Campaign per category:</strong> Split product categories into separate campaigns, not only separate ad groups. This lets you set budgets per product or product type and put more money behind products with high ROAS, for example $1 in and $20 back. [L0575.006]</li>
+<li><strong>Subcategories:</strong> When the niche widens to several product types, create separate Alpha-Beta pairs for each subcategory, for example one paddle board pair and one skateboard pair. Keep the existing structure if it already meets your return target; splitting is better practice, not urgent. [L0854.048]</li>
+<li><strong>Add-on products:</strong> Add-on products with different keywords run in separate campaigns, for example an Alpha add-on and a Beta add-on, so main campaign data is not distorted. [L0835.058]</li>
+<li><strong>Staged build-up:</strong> Start with all products in one Alpha and one Beta campaign. Optimise with negative keywords and product-level CPC. When a few products perform very well, create Alpha 2 and Beta 2 containing only those products, exclude them from the original campaign, and raise the budget on the new campaign. [L0665.077, L0856.017]</li>
+<li><strong>Exclude losers:</strong> A product is a loser when it gets no sales or customers are unhappy with it, for example because it comes from a bronze-level supplier. Exclude such products from all campaigns. Excluded products cannot appear or spend budget anywhere, so the budget moves to winning brands. [L0715.017, L0715.018]</li>
+</ul>
+<h2 id="custom-labels-what-they-are-and-how-to-plan-them">Custom Labels: What They Are and How to Plan Them</h2>
+<ul>
+<li>Google Shopping supports five custom labels: Custom Label 0, 1, 2, 3 and 4. Each is a separate column in the Shopify product CSV and appears as "Google Shopping / Custom Label 0" through "Custom Label 4". Numbering starts at zero, giving five slots. [L0402.002, L0747.008]</li>
+<li>Labels act like tags on each product, and campaigns filter on them. Each product can carry up to five. [L0747.007]</li>
+<li>Custom labels are the more reliable segmentation method. Google's built-in segmentation options in Google Ads are glitchy, hard to understand and often miss products in the feed. [L0747.006] <em>(Source B, 2021-22, older)</em></li>
+<li>Custom labels are a flexible way to split Shopping campaigns by brand, product title, product type or price. A product type label goes into any free custom label column the same way. [L0402.010] <em>(Source B, 2021-22, older)</em></li>
+<li>Common setup: brand in one label, product title in another, and price or product type in the remaining labels if needed. [L0747.007] <em>(Source B, 2021-22, older)</em></li>
+<li>Decide the attributes before exporting. Put each chosen attribute in its own custom label column, for example vendor in Custom Label 0 and product title in Custom Label 1. [L0402.003] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Label 0 for margin (Source A) vs. brand (Source B):</strong> Use Custom Label 0 for initial profit-margin segmentation. More advanced segmentation with additional label slots exists but is rarely necessary for typical dropshipping stores. [L0224.007] Where brand is the main split, Source B places vendor in Custom Label 0 instead. [L0402.003, L0747.007] <em>(Source B, 2021-22, older)</em> Use the margin approach when profit tiers are the first split; use the brand approach when brand is. Both can be combined by using different label slots.</li>
+<li>Putting the product title into a label lets you find individual products quickly within a Shopping campaign. Brand or vendor in one label and title in another gives both a campaign-level and a product-level view. [L0402.019] <em>(Source B, 2021-22, older)</em></li>
+<li>Once a title label exists, product group lists can show product titles instead of raw IDs such as "shopify_us_" followed by two long numbers. A filter then finds one product quickly. Without it, IDs are hard to read and the hover tooltip with the title is truncated. [L0747.009] <em>(Source B, 2021-22, older)</em></li>
+<li>Product names in the Item ID subdivision come from feed titles. Clean up unclear or code-like titles so per-product results are easier to read and act on. [L0746.037]</li>
+</ul>
+<h2 id="timing-pre-labelling-and-publication-delays">Timing: Pre-Labelling and Publication Delays</h2>
+<ul>
+<li>Apply custom labels to all products in the profitability tiers you plan to use before creating segmented campaigns. Google needs about four hours or longer to publish labels to Ads after bulk edits. Pre-labelling avoids waiting mid-workflow. [L0224.014]</li>
+<li>Merchant Center usually needs about two to three hours to show new custom labels, and up to eight hours for large feeds. [L0402.008] <em>(Source B, 2021-22, older)</em></li>
+<li>Custom labels cannot be used in Google Ads campaign subdivisions until Merchant Center has recognised them. Creating or editing subdivisions before that shows old or no labels. [L0747.015, L0402.008] <em>(Source B, 2021-22, older)</em></li>
+<li>After the app sync shows as finished, wait a few hours or until the next day before editing subdivisions or creating new campaigns with custom labels. Labels not yet in Merchant Center will not appear in the Google Ads interface. [L0402.009] <em>(Source B, 2021-22, older)</em></li>
+</ul>
+<h2 id="custom-labels-csv-procedure-shopify-export-and-import">Custom Labels: CSV Procedure (Shopify Export and Import)</h2>
+<p><strong>Procedure A: Adding custom labels to all Shopify products via CSV</strong> [L0402.004] <em>(Source B, 2021-22, older)</em></p>
+<ol type="1">
+<li>In the Shopify admin, go to Products &gt; All products.</li>
+<li>Click Export, select all products and click Export products.</li>
+<li>Shopify sends a download link by email when the file has 100 or more products (smaller files may download directly). Download the CSV once ready.</li>
+<li>Open the CSV in a spreadsheet program (Numbers, Excel or similar).</li>
+<li>Scroll to the Google Shopping custom label columns (Google Shopping / Custom Label 0 to 4).</li>
+<li>Copy the source column (e.g. Vendor for Custom Label 0) and paste it into the matching custom label column for every product.</li>
+<li>Copy the Title column and paste it into Custom Label 1 (or other chosen label).</li>
+<li>Rename each pasted column header back exactly to 'Google Shopping / Custom Label 0' (or the matching label). Without the exact header the upload fails.</li>
+<li>Save/export the spreadsheet as CSV.</li>
+<li>In Shopify, go to Products &gt; Import, choose the CSV, tick 'Overwrite any current products that have the same handle', and click Upload and continue.</li>
+<li>Review the preview and click Import products. Large files can take a few minutes up to about half an hour; Shopify sends an email when the import is complete.</li>
+<li>In the Feed for Google Shopping app, go to Settings &gt; Sync Settings From Shopify.</li>
+<li>Select 'Manually sync meta fields' (Re-sync meta fields), tick Custom Labels, and click Yes, sync from Shopify.</li>
+<li>Keep the window open until the app reports that syncing has finished.</li>
+<li>Wait for Google Merchant Center to pick up the values, then check the campaign settings in Google Ads.</li>
+</ol>
+<p><strong>Procedure B: Detailed version of the same CSV method</strong> [L0747.012] <em>(Source B, 2021-22, older)</em></p>
+<ol type="1">
+<li>In the Shopify admin, go to Products and open All products.</li>
+<li>Click Export, select all products and choose Export products.</li>
+<li>Wait for the file. Stores with 100 or more products usually get an email with a download link when it is ready, while very small catalogues may download straight away.</li>
+<li>Open the CSV in a spreadsheet program such as Excel.</li>
+<li>Scroll right to the Google Shopping / Custom Label 0 to Custom Label 4 columns.</li>
+<li>Decide what each label will hold, for example brand in Custom Label 0 and product title in Custom Label 1.</li>
+<li>Copy the source column (for example Vendor for brand, Title for product title) and paste it into the chosen label column for all products.</li>
+<li>Rename the pasted column header back to exactly Google Shopping / Custom Label 0 (or 1, 2, 3, 4 as applicable). If the header is not restored, the file will not upload properly.</li>
+<li>Repeat steps 6 to 8 for every label you use.</li>
+<li>Export the spreadsheet as CSV. The file name can be anything.</li>
+<li>In Shopify, go to Products and click Import, then add the CSV file.</li>
+<li>Tick the option to overwrite existing products that have the same handle, then click Upload and continue.</li>
+<li>Check the preview and click Import products. Large files can take several minutes to about half an hour, and Shopify sends an email when the import is complete.</li>
+<li>Open the Feed for Google Shopping app and go to Settings, then Sync Settings From Shopify.</li>
+<li>Press RE-SYNC META FIELDS (Manually Sync Meta Fields), confirm that Custom Labels is ticked, and choose to sync from Shopify. Keep the window open until the app reports that syncing has finished, because closing it can leave the sync incomplete.</li>
+<li>Wait for Google Merchant Center to pick up the labels. This usually takes about 2 to 3 hours and can take up to 8 hours depending on feed size.</li>
+<li>Only after that, check the labels in Google Ads and build campaign subdivisions. Waiting a few hours or until the next day before editing segmentation is recommended.</li>
+</ol>
+<p><strong>App menu path (Feed for Google Shopping)</strong> [L0402.007] <em>(Source B, 2021-22, older)</em></p>
+<ul>
+<li>Settings &gt; Sync Settings From Shopify &gt; Manually Sync Meta Fields &gt; RE-SYNC META FIELDS.</li>
+<li>In the pop-up "Please choose fields which needs to resync", tick Custom Labels (Select All is possible), then click YES, SYNC FROM SHOPIFY.</li>
+<li>Keep the page open until the status shows finished.</li>
+</ul>
+<h2 id="custom-labels-common-mistakes">Custom Labels: Common Mistakes</h2>
+<ul>
+<li><strong>Wrong source column:</strong> Pasting the wrong source column, such as product title where the brand belongs, sends wrong values to Google. Check the first rows of each custom label column before exporting the CSV. [L0747.013] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Header check before pasting:</strong> Check the copied header before pasting. A wrong column (for example vendor instead of product title) must be removed and copied again. Afterwards, set the header back to the exact custom label name, or the upload fails. [L0402.018] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Header left as copied name:</strong> If the header is left as the copied column name, the CSV upload will not work properly. The header must be changed back to the exact custom label name, for example 'Google Shopping / Custom Label 0'. [L0402.005] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Overwrite option:</strong> A CSV import overwrites every existing product with the same handle. Tick the overwrite option deliberately and understand it before uploading. [L0747.014] <em>(Source B, 2021-22, older)</em></li>
+</ul>
+<h2 id="example-brand-group-with-product-types">Example: Brand Group with Product Types</h2>
+<ul>
+<li>For a brand with three product types, the ad group is named after the brand and holds three product groups, one for each type. Opening the group for one type shows only the products of that type, instead of filtering one long list of all brand products. [L0747.026] <em>(Source B, 2021-22, older)</em></li>
+<li>Ad groups are the first level of segmentation. For high-ticket stores they are usually split by brand, because each brand has different product margins and bids should reflect margin. [L0742.017] <em>(Source B, 2021-22, older)</em></li>
+<li>Product type is the second most common split after brand. Ad groups can be split by product type instead of brand. Choose the split that separates products with different margins and bid needs. [L0742.040] <em>(Source B, 2021-22, older)</em></li>
+</ul>
+<h2 id="demo-account-example-shopping-campaign-split-by-search-value">Demo Account Example (Shopping Campaign Split by Search Value)</h2>
+<ul>
+<li>In the demo account, three Shopping campaigns were split by low, medium and high value search terms. Two campaigns showed a budget of US$300 each, and one was limited by budget. Within a brand product group, the group level showed max CPC US$0.30 (enhanced), individual products were bid at US$0.20 per click, and the benchmark max CPC shown was US$0.74. [L0747.011] <em>(Source B, 2021-22, older)</em></li>
+</ul>
+<h2 id="splitting-by-margin-and-profit">Splitting by Margin and Profit</h2>
+<p><strong>Principle</strong></p>
+<ul>
+<li>Allocate ad spend and adjust CPC bids based on individual product profit margins, not order volume. Increase spend on products with higher margins and lower CPC bids on products with lower margins or high COGS. [L0208.016]</li>
+<li>Segment by intent and margin. Uniform settings produce worse targets than group-specific ones. [L0454.043]</li>
+</ul>
+<p><strong>Three-tier margin setup</strong></p>
+<ol type="1">
+<li>Identify high-margin, mid-margin, and low-margin product groups across all suppliers. [L0278.018]</li>
+<li>Create Alpha High Margin (HM), Beta HM, Alpha Mid Margin (MM), Beta MM, Alpha Low Margin (LM), Beta LM campaigns. [L0278.018]</li>
+<li>Assign shared budgets to each tier based on profitability goals. Example: $100 daily budget split as $60 HM, $30 MM, $10 LM. [L0278.018]</li>
+<li>This allows budget control per margin tier rather than one budget across all products. [L0278.018]</li>
+</ol>
+<p><strong>Net-profit tiering</strong></p>
+<ul>
+<li>For net-profit tiers, use separate Alpha and Beta campaigns per profit band. Keep products below the minimum profit out of all campaigns. [L0856.017]</li>
+<li>Example: Alpha 1 and Beta 1 contain products above a set net profit per sale. Products between two thresholds go into Alpha 2 and Beta 2. Products below the lower threshold are excluded from all campaigns. Budget can be split, for example, 80 percent to the high-profit tier and 20 percent to the middle tier, with nothing to the lowest tier. [L0856.018]</li>
+</ul>
+<p><strong>Step-by-step: building the first profit-tier campaign</strong> [L0224.011]</p>
+<ol type="1">
+<li>In Google Ads, create a new Shopping Campaign.</li>
+<li>Select conversion actions for tracking.</li>
+<li>Select your product feed (connected via Some Process).</li>
+<li>Choose Standard shopping campaign (not Performance Max).</li>
+<li>Click Continue.</li>
+<li>Name the campaign (e.g., "alpha high profit").</li>
+<li>Select bidding strategy: manual CPC or enhanced CPC.</li>
+<li>Set daily budget amount.</li>
+<li>Set campaign priority (alpha or beta).</li>
+<li>Turn off Search Network.</li>
+<li>Keep All Devices selected (if this has worked in past campaigns).</li>
+<li>Select country where you do business.</li>
+<li>Name the ad group.</li>
+<li>Set default cost per click based on historical data from existing campaigns, not estimates.</li>
+<li>Click Create Campaign.</li>
+<li>In the product groups section, click the plus icon to subdivide.</li>
+<li>Select Custom Label from the dropdown.</li>
+<li>Select Custom Label Zero.</li>
+<li>Enter or select the label value (e.g., "high profit").</li>
+<li>Verify the product count displayed matches expectations.</li>
+<li>Save without editing bids.</li>
+<li>For the remaining "All Products" group, click the green button.</li>
+<li>Select Exclude to remove all non-labeled products from this campaign.</li>
+<li>The campaign now contains only the labeled product segment.</li>
+</ol>
+<p><strong>Example:</strong> Source A Merch Store had 22 products in the product feed. After analysing sales data, three t-shirts were identified as the highest-profit products and moved into a separate Alpha campaign with dedicated budget. The same process would be repeated for mid-profit and low-profit segments, creating separate Alpha and Beta campaigns for each profitability tier. [L0224.013]</p>
+<p><strong>Before launching profit-tier campaigns</strong></p>
+<ul>
+<li>Pause the original all-products Alpha and Beta campaigns in Google Ads before launching the new profit-tier campaigns. If both old and new remain active, the same products receive budget from multiple campaigns, wasting budget and corrupting performance data. The new segmented campaigns must be the only active campaigns for their products. [L0224.015]</li>
+</ul>
+<h2 id="splitting-by-price-tier">Splitting by Price Tier</h2>
+<p><strong>Principle</strong></p>
+<ul>
+<li>Tiered campaigns by price follow the same logic as Alpha and Beta: the highest-priced products get top priority, and each lower price tier is separated out by priority. This is used when scaling beyond the initial two-campaign structure. [L0466.027] <em>(Source A, 2018, older)</em></li>
+</ul>
+<p><strong>Threshold values by source and context</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Threshold</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A, 2019 (older) [L0467.022]</td>
+<td>Minimum price of $200 or $500 for paid Google ads</td>
+<td>Premium-only Google Shopping campaign</td>
+</tr>
+<tr>
+<td>Source A, 2020 (older) [L0852.062]</td>
+<td>Threshold X, for example $300 or $400</td>
+<td>Duplicating campaigns when cheap items use up the budget</td>
+</tr>
+<tr>
+<td>Source A, 2021 (older) [L0469.086]</td>
+<td>$1,500</td>
+<td>Comparing ROAS between price ranges</td>
+</tr>
+<tr>
+<td>Source A, 2018 (older) [L0466.027]</td>
+<td>High, mid and low tiers, no fixed figure</td>
+<td>Scaling beyond the initial two campaigns</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Premium-only campaign</strong> [L0467.022, L0467.023] <em>(Source A, 2019, older)</em></p>
+<ol type="1">
+<li>Set a minimum price point for paid Google ads, for example $200 or $500.</li>
+<li>Segment products in Google Merchant Center so that only products above that price are advertised on Google Shopping.</li>
+<li>Keep the lower-priced products out of those ads, since they are hard to keep profitable through them.</li>
+</ol>
+<ul>
+<li>Lower-priced products that already make money can stay on the same website, but they should be kept out of the high-price Google Shopping campaigns. Keep the paid ads focused on the higher-value items.</li>
+</ul>
+<p><strong>Splitting when cheap items use up the budget</strong> [L0852.062] <em>(Source A, 2020, older)</em></p>
+<ol type="1">
+<li>Duplicate each main campaign to create a second one.</li>
+<li>In the original campaigns, exclude products under your chosen price threshold X, for example $300 or $400.</li>
+<li>In the duplicated campaigns, exclude products over the threshold X so they only show lower-priced products.</li>
+<li>Lower the daily budget and the cost per click in the duplicated campaigns, and let the main campaigns spend on the higher-priced products that earn the most.</li>
+</ol>
+<p><strong>Comparing ROAS by price range</strong> [L0469.086] <em>(Source A, 2021, older)</em></p>
+<ol type="1">
+<li>Build Alpha and Beta campaigns that include all products.</li>
+<li>Duplicate them into Alpha 2 and Beta 2 filtered to products above a price threshold, such as $1,500.</li>
+<li>Modify the original Alpha and Beta campaigns to include only products below that threshold.</li>
+<li>Compare ROAS for each price range and move budget toward the better range.</li>
+</ol>
+<h2 id="splitting-by-brand-and-supplier">Splitting by Brand and Supplier</h2>
+<p><strong>Segmentation options for high-ticket stores</strong></p>
+<ul>
+<li>Shopping campaigns can be segmented by brand, product type, price or a combination, depending on how the owner wants to organise products. For most high-ticket stores, segment by brand and then by individual product, because brands usually have different margins and justify different bids even at the same price. Profit calculations per brand show which brands make more or less money. [L0747.004] <em>(Source B, 2021-22, older)</em></li>
+<li>Segment by what the data shows: brand, category, bestseller or price range, chosen by performance rather than by default. [L0466.026] <em>(Source A, 2018, older)</em></li>
+<li>Segment by brand when a brand covers many categories and search terms show the other categories leaking into the wrong campaign: split the Alpha and Beta campaigns further by category for that supplier, but only if those campaigns bring in results. [L0470.038] <em>(Source A, 2023, older)</em></li>
+</ul>
+<p><strong>Winning brand with most of the revenue</strong></p>
+<ul>
+<li>When one brand produces most of the revenue, for example about 80% of the revenue from a store with around 20 brands, it should get its own campaign so its performance is easy to read. [L0715.013]</li>
+<li>Do not decide that a brand is a winner after a few days of data. Let campaigns run for about a month or longer before splitting out a brand that drives most of the revenue. [L0715.026]</li>
+<li>When one brand takes most of a campaign's budget, move it into its own Alpha and Beta campaigns and exclude its products from the all-products campaigns. Give each strong brand its own budget so other brands can grow separately. [L0853.072] <em>(Source A, 2021, older)</em></li>
+</ul>
+<p><strong>Step-by-step: moving a winning brand into its own campaign</strong> [L0715.014]</p>
+<ol type="1">
+<li>Create a new Alpha campaign and name it after the brand and the target country, for example alpha, brand name, US.</li>
+<li>Include only the products of that brand in the new campaign.</li>
+<li>Exclude the same products from the main Alpha campaign so they are not duplicated.</li>
+<li>Give the new campaign its own daily budget, a higher cost per click and Enhanced CPC.</li>
+</ol>
+<ul>
+<li>Do not keep a winning brand's products in both the main Alpha campaign and its own campaign, because they compete with themselves and the results become unclear. [L0715.015]</li>
+<li>Raising the bid on a winning brand inside the main Alpha campaign also works, but a separate campaign is clearer to track and gives its own budget. [L0715.016]</li>
+</ul>
+<p><strong>Brands getting no impressions</strong> [L0468.115] <em>(Source A, 2020, older)</em></p>
+<ol type="1">
+<li>Identify the brands that get no impressions while others get all the traffic.</li>
+<li>Either raise the maximum cost per click for the products of those brands, or</li>
+<li>Create a second Alpha and Beta set and move only the brands with no traffic into it, excluding them from the first set.</li>
+<li>Review again after a few days.</li>
+</ol>
+<ul>
+<li>Per-brand Alpha and Beta campaigns make it easier to see which brands are winning. Keep the brand names visible in the campaign so the split is easy to read. [L0468.124] <em>(Source A, 2020, older)</em></li>
+</ul>
+<p><strong>Rebalancing budget when one brand dominates</strong> [L0470.071] <em>(Source A, 2023, older)</em></p>
+<ol type="1">
+<li>Look at last month's spend in the current Alpha and Beta campaigns to see how much of the budget the winning brand takes.</li>
+<li>Duplicate the Alpha and Beta campaigns.</li>
+<li>In the original Alpha 1 and Beta 1, keep only the winning brand, which already has the conversions, and keep its budget at 40 USD per day.</li>
+<li>In Alpha 2 and Beta 2, put all remaining brands and add 10 USD per day, split 5 USD between Alpha 2 and Beta 2, so the other products can get data.</li>
+<li>Alternatively, lower Alpha 1 and Beta 1 to 30 USD per day and put 10 USD per day into Alpha 2 and Beta 2.</li>
+</ol>
+<p><strong>Supplier-based campaign sets</strong> [L0253.018] <em>(Source A, 2024)</em></p>
+<ol type="1">
+<li>Create two separate campaign sets (Alpha/Beta) per supplier instead of one unified Alpha/Beta.</li>
+<li>Example: Supplier A (alpha-A, beta-A), Supplier B (alpha-B, beta-B), Supplier C (alpha-C, beta-C).</li>
+<li>In unified campaigns, exclude the supplier you want to focus on (e.g., exclude Supplier C from main Alpha/Beta).</li>
+<li>In supplier-specific campaigns, include only that supplier's products.</li>
+<li>This distributes daily budget proportionally to each supplier rather than exhausting budget on high-volume suppliers first.</li>
+</ol>
+<p><strong>Brand lifecycle in Google Shopping</strong> [L0879.025] <em>(Source B, 2021-22, older)</em></p>
+<ol type="1">
+<li>Start with all brands included in the campaigns to see what sells.</li>
+<li>Over time, identify brands that perform poorly on Google Shopping or have a margin that is not viable.</li>
+<li>Pause those brands inside the campaigns instead of deleting them, and keep them on the site.</li>
+<li>Reactivate a paused brand when conditions change, for example new pricing, a new owner, or a limited-time deal to clear excess stock.</li>
+</ol>
+<ul>
+<li>Pause a brand's Shopping products instead of deleting them. The campaign structure and data stay intact, so the brand can be reactivated later without rebuilding the setup, for example after new pricing, a change of owner, or a limited-time deal to clear excess stock. [L0879.041] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Mistake: bestseller brands competing:</strong> Splitting bestseller brands into their own high-priority campaign causes them to compete with the remaining high-priority campaign for generic terms such as "infrared sauna". Medium and low priority campaigns do not compete with each other when targeted to different brands. [L0879.026] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Tool for brand competition:</strong> To handle competition between split high-priority campaigns, bid more on one campaign than the other, or use negative keywords to focus each campaign on a different group of generic terms. Without this, a split can lower the performance of the campaign that was converting. [L0879.027] <em>(Source B, 2021-22, older)</em></li>
+<li><strong>Example:</strong> A store selling infrared saunas from ten brands, with three bestsellers. The three bestsellers get their own high-priority campaign, while the other seven stay in the original one. Both campaigns keep generic infrared sauna searches, so they compete for that term unless bids or negative keywords separate them. [L0879.040] <em>(Source B, 2021-22, older)</em></li>
+</ul>
+<p><strong>Ranking brands for priority</strong> [L0941.075]</p>
+<ul>
+<li>To prioritise products in Google Shopping, sort the brand list by best-selling brands first on competitor sites, such as the top brands shown by a large retailer. Focus CPC and product page work on those brands first, since they drive most of the revenue.</li>
+</ul>
+<h2 id="bidding-per-group-and-target-roas">Bidding per Group and Target ROAS</h2>
+<ul>
+<li><strong>Three-tier ROAS example:</strong> A client had a three-tier Shopping setup with a different target ROAS per tier. The branded tier had a very high target because the client wanted strong margins on branded traffic, reasoning that those shoppers would find them anyway. It reached 29x ROAS within two months. The beta shopping tier reached 3x against a target of 4x, and the bottom tier reached 2x. [L0454.021]</li>
+<li><strong>Cluster products for data:</strong> Automated bidding needs more data per group, so cluster similar products into larger product groups. For example, put best-sellers in one group and the rest in another. Aim for at least 20 conversions per month per cluster. [L0454.022]</li>
+<li><strong>Group-specific targets:</strong> Avoid applying one blanket optimisation to all products. Ask what each ad group is about and set bids and targets per group. [L0454.043]</li>
+<li><strong>One target ROAS per group:</strong> One product group cannot use different target ROAS values. For items with higher margins, move them into their own ad group and set a separate target ROAS there. [L0454.045]</li>
+<li><strong>Bidding type:</strong> When creating segmented campaigns, choose manual CPC or Enhanced CPC. Use Enhanced CPC for the winning-brand campaign. [L0224.011, L0715.014]</li>
+<li><strong>Default CPC:</strong> Set default cost per click based on historical data from existing campaigns, not estimates. [L0224.011]</li>
+<li><strong>Raising bids on proven products:</strong> Raise bids on products that already convert in the low-priority campaign. [L0429.081] <em>(Source A, 2022, older)</em></li>
+<li><strong>Shared budgets with test campaigns:</strong> Run several Google Shopping campaigns on one shared daily budget: a campaign for proven MAP products, a test campaign for new products with bids near the minimum (about one cent), and a low-priority campaign for product-level bidding. Google's repeated suggestions to raise a shared budget can be ignored until performance justifies it. [L0429.081] <em>(Source A, 2022, older)</em></li>
+<li><strong>Winning products get more traffic:</strong> A Shopping campaign that beats its target ROAS should get more traffic by raising bids, as long as its ROAS stays at or above the target. Its budget should be raised too, because a well-performing campaign should almost never be limited by budget. [L0745.034]</li>
+</ul>
+<h2 id="bestseller-campaigns">Bestseller Campaigns</h2>
+<p><strong>Principle</strong></p>
+<ul>
+<li>Use Google Shopping campaigns on products with proven sales history first, then expand. Keep long-tail products on organic traffic until performance is established. [L0934.133]</li>
+<li>Feeding Google only proven sellers lets the algorithm learn what converts instead of spending budget on products with no buyer demand. Once bestseller campaigns are profitable, untested products can go into separate testing Alpha and Beta campaigns. [L0472.004]</li>
+<li>Products can be listed as free Shopping listings while only the bestseller group receives paid budget. Free listings reveal which non-featured products get impressions and sales over time. [L0471.013]</li>
+</ul>
+<p><strong>Budget</strong></p>
+<ul>
+<li>Start with most spend on the bestseller group, for example 100 percent in the first month or a 90/10 split with 10 percent for testing other products. Introduce the testing budget for the remaining products after about a month. [L0471.014]</li>
+<li>Bestseller split example:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign</th>
+<th>Products</th>
+<th>Shared budget (per day)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha bestsellers + Beta bestsellers</td>
+<td>Products identified as bestsellers</td>
+<td>Shared budget 1: $15</td>
+</tr>
+<tr>
+<td>Alpha everything else + Beta everything else</td>
+<td>All other products</td>
+<td>Shared budget 2: $5</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each shared budget is attached to its two campaigns. Meta remarketing is separate, at $5 per day. [L0360.031] <em>(Source A, 2024, older? No, 2024, not older)</em></p>
+<p><strong>Building bestseller campaigns without sales data</strong> [L0360.032] <em>(Source A, 2024)</em></p>
+<ol type="1">
+<li>Ask suppliers which of their products sell best.</li>
+<li>Or check future competitor stores for the products shown on their home page, at the top of their collections, and in collections sorted by best sellers.</li>
+<li>Put those products into the Alpha and Beta bestseller campaigns.</li>
+<li>Exclude those same products from the Alpha and Beta everything-else campaigns.</li>
+</ol>
+<p><strong>Rebuilding around a few proven sellers</strong> [L0472.003] <em>(Source A, 2025)</em></p>
+<ul>
+<li>When a store has a few hundred products but only a small share generates sales, rebuild the Google Shopping structure as new campaigns named "Alpha Best Sellers" and "Beta Best Sellers". Only add product groups for products that already sell, and pause the old Alpha and Beta campaigns that were not converting.</li>
+</ul>
+<p><strong>Case:</strong> A store with about 300 products had over 100 sales on Microsoft Ads in one year, but 3,000 clicks on Google Ads over two months produced only one conversion. Only about 30 products made up the Microsoft sales. The recommendation was to pause the existing Google Alpha and Beta campaigns and build new Best Sellers campaigns containing just those 30 products, adding the remaining products later in separate testing campaigns once the first ones were profitable. [L0472.008] <em>(Source A, 2025)</em></p>
+<p><strong>Discount codes</strong></p>
+<ul>
+<li>When a store uses discount codes as Shopping promotions, exclude low-margin products from the new Alpha and Beta Best Sellers campaigns. Promotions do not appear in the free organic Shopping section, so low-margin products can stay there without a discount attached. [L0472.071] <em>(Source A, 2025)</em></li>
+</ul>
+<p><strong>Hypothetical example:</strong> A store with 500 products sells only 20 of them repeatedly, and about 80% of the Google budget goes to those 20. If the next year the same 80% goes to 20 different products that convert worse, check per-product sales and refine CPCs to send the budget back to proven sellers. [L0472.072] <em>(Source A, 2025)</em></p>
+<h2 id="region-country-and-geo-targeting">Region, Country and Geo-Targeting</h2>
+<p><strong>Geo-targeting options and principles</strong></p>
+<ul>
+<li>Geo-targeting in Google Ads can target zip codes, whole states, or a radius around a city instead of an entire country. This lets you limit ads to customers near a supplier's warehouse. [L0942.021] <em>(Source A)</em></li>
+<li>Geo-targeting in Google Ads lets you limit ads to specific states or areas, useful when shipping costs from a supplier make some regions more profitable than others. [L0834.067] <em>(Source A, 2021, older)</em></li>
+<li>Use geo-targeting in Google Ads campaigns to match shipping region profiles in Shopify, so ads only show to regions where products can be shipped. [L0278.007] <em>(Source A, 2025)</em></li>
+<li>If you only want to spend on customers in the United States, set the location targeting of the campaigns to the US only. Traffic from other countries can still arrive through organic Google search without any spend. [L0837.026] <em>(Source A, 2025)</em></li>
+<li>Ads for surfboards shown to people living far inland, such as in the middle of Texas, will struggle to convert because the audience has no use for the product. Check whether the location and audience match the product before scaling spend. [L0489.005]</li>
+<li>Geotargeting for Shopping ads is only useful when you want deliveries close to a supplier warehouse. Its effect on performance is not proven. [L0962.066] <em>(Source A, 2021, older)</em></li>
+<li>Geotargeting is worth using only when supplier shipping costs differ sharply by region. Example: 500 USD to the far coast versus 150 to 250 USD across the nearby region, with thin margins. [L0963.008] <em>(Source A, 2022, older)</em></li>
+<li>For products whose shipping from a supplier is costly to some regions, run ads only in states close to the supplier and exclude distant states. This stops shipping costs from wiping out the profit on each sale. [L0466.012] <em>(Source A, 2018, older)</em></li>
+<li>Seasonal geo-targeting is done inside Google and Facebook by choosing the warmer states during the months when sales are low. [L0468.125] <em>(Source A, 2020, older)</em></li>
+</ul>
+<p><strong>Supplier radius targeting</strong> [L0470.061] <em>(Source A, 2023, older)</em></p>
+<ul>
+<li>When shipping costs are high for a supplier, set up a separate Alpha and Beta for that supplier and use geotargeting to show ads only within a radius around the supplier's warehouse, for example 100 miles. Only do this if the orders stay profitable at that distance.</li>
+</ul>
+<p><strong>Step-by-step: geo-targeting for a supplier whose shipping has made the margin too thin</strong> [L0942.023] <em>(Source A)</em></p>
+<ol type="1">
+<li>Identify the supplier whose margin no longer covers shipping to far-away customers, for example a warehouse in New Jersey with buyers in California.</li>
+<li>Set up a separate campaign for that supplier only, using a product feed that contains only that supplier's products. You can duplicate an existing campaign and rename it after the supplier.</li>
+<li>Set the targeting to a radius around the warehouse, specific zip codes, or states where shipping is still profitable.</li>
+<li>Remove those products from your main campaigns so they are not shown to distant customers.</li>
+<li>Repeat for other suppliers as needed.</li>
+</ol>
+<ul>
+<li>Geo-targeting lets you keep selling products whose margin no longer covers shipping to far regions, instead of dropping them or raising prices until nobody buys. Ad spend is focused on customers close enough to the warehouse for shipping to stay profitable. [L0942.024]</li>
+</ul>
+<p><strong>Note on conflicting advice:</strong> Geo-targeting for supplier radius is recommended in 2018, 2022 and 2023 sources where shipping costs differ sharply [L0466.012, L0963.008, L0470.061]. A 2021 source says its effect on performance is not proven [L0962.066]. Use it when the shipping-cost gap is large and the orders stay profitable at that distance; otherwise it is an unproven lever.</p>
+<h2 id="multi-country-and-multi-region-campaigns">Multi-Country and Multi-Region Campaigns</h2>
+<p><strong>Principle: one country per campaign (most recent advice)</strong></p>
+<ul>
+<li>Run one country per campaign. If you later want ads in a second country, build a separate Alpha and Beta pair for that country rather than adding it to the existing campaigns. [L0746.018] <em>(Source A)</em></li>
+<li>Keep a separate Google Shopping campaign for each country a product is sold in. If Canada is added, do not mix it into a US campaign. Use an Alpha 2 and Beta 2 that targets only Canada so budgets are not commingled. [L0665.078] <em>(Source A, 2022, older)</em></li>
+<li>Google Shopping campaigns for different countries should not share one campaign. Keep the US Alpha and Beta campaigns separate from the UK campaigns. [L0834.069] <em>(Source A, 2021, older)</em></li>
+<li>When selling in two countries, do not add the second country to an existing Alpha or Beta campaign. Create separate campaigns per country, for example keep the Canada campaigns and build new US Alpha and Beta campaigns with the same products but US locations. [L0805.016] <em>(Source A, 2024)</em></li>
+<li>Run separate campaigns per country, such as the US, Canada, Australia and the UK. [L0788.036] <em>(Source C)</em></li>
+<li>For a store selling in several regions, run separate Alpha and Beta campaigns for each region, plus separate Meta retargeting campaigns for each region. This keeps targeting, budget and results separated per market. [L0360.030] <em>(Source A, 2024)</em></li>
+</ul>
+<p><strong>Older option: one campaign with several countries</strong></p>
+<ul>
+<li>To target several countries, either create one campaign and select all target countries, letting Google distribute spend, or duplicate the campaign per country to control spend by country. [L0247.057] <em>(Source A, 2021, older)</em></li>
+<li>Do not mix two countries in one campaign. [L0469.087] <em>(Source A, 2021, older)</em></li>
+</ul>
+<p><strong>Note on conflicting advice:</strong> The 2021 advice allows one campaign with several countries when you want Google to distribute spend [L0247.057]. Later advice from 2021 to 2024 requires one country per campaign [L0746.018, L0834.069, L0665.078, L0805.016, L0469.087, L0788.036]. Use one campaign for several countries only if you accept Google's spend distribution across them. Use one campaign per country whenever you need to control budget by country.</p>
+<p><strong>Step-by-step: adding Canada to a US store</strong> [L0469.087] <em>(Source A, 2021, older)</em></p>
+<ol type="1">
+<li>Keep the existing US campaigns unchanged.</li>
+<li>Duplicate each US campaign.</li>
+<li>In the settings of the copy, edit the location targeting, remove United States and add Canada.</li>
+<li>Lower the budget of the Canadian campaign. Do not mix two countries in one campaign.</li>
+</ol>
+<p><strong>Step-by-step: two countries with one currency each</strong> [L0854.047] <em>(Source A, 2022, older)</em></p>
+<ol type="1">
+<li>Duplicate every Alpha and Beta campaign so the settings are identical.</li>
+<li>Set the country targeting of the first copy to Canada (and US if applicable).</li>
+<li>Set the country targeting of the duplicate to the US only.</li>
+<li>Compare results per campaign to see which country performs.</li>
+</ol>
+<h2 id="out-of-stock-products">Out-of-Stock Products</h2>
+<p><strong>Principle</strong></p>
+<ul>
+<li>Keep running paid ads for products that are in stock, even during the 2020 COVID-19 period. If a supplier runs out of a product, remove that item from Google Merchant Center so you do not spend money advertising products you cannot ship. [L0358.026] <em>(Source A, 2020, older)</em></li>
+<li>During inventory shortages, run only a small, tight Google Shopping campaign with the products that have the best margins and are in stock, and stop promoting backordered products. [L0359.072] <em>(Source A)</em></li>
+</ul>
+<p><strong>Lead-time rules</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stock situation</th>
+<th>Action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Back in stock within about two to three weeks</td>
+<td>Keep ads running and show an ETA note</td>
+<td>[L0856.024]</td>
+</tr>
+<tr>
+<td>Out of stock for about four weeks and will not return (2021 rule)</td>
+<td>Stop taking orders, remove from ad campaigns, add back when close to restocking</td>
+<td>[L0853.107] <em>(Source A, 2021, older)</em></td>
+</tr>
+<tr>
+<td>Back order six to eight weeks or longer, or no ETA</td>
+<td>Set Google Shopping CPC to 1 cent, or stop spending until back in stock</td>
+<td>[L0856.024]</td>
+</tr>
+<tr>
+<td>Back order eight weeks or longer with no ETA</td>
+<td>Lower Google Shopping CPC to about 1 cent, or pause until back in stock; the product page still shows the back-order status and an ETA</td>
+<td>[L0856.023]</td>
+</tr>
+<tr>
+<td>Supplier runs out of product (2020)</td>
+<td>Remove from Google Merchant Center</td>
+<td>[L0358.026] <em>(Source A, 2020, older)</em></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Note on conflicting thresholds:</strong> The 2021 rule removes products after about four weeks without return [L0853.107, older]. The 2024 rules keep ads running for two to three weeks and move to a 1-cent CPC or pause at six to eight weeks or longer [L0856.024, L0856.023]. Use the 2024 thresholds for current planning. Use the four-week rule only if a product has no ETA and no restock date.</p>
+<p><strong>Full procedure: handling out-of-stock by lead time</strong> [L0856.024] <em>(Source A, 2024)</em></p>
+<ol type="1">
+<li>For stock returning within two to three weeks, keep ads running and show an ETA note.</li>
+<li>For back orders of six to eight weeks or longer, or with no ETA, set the Google Shopping CPC to 1 cent or stop spending until back in stock.</li>
+<li>Add a back-order note with the shipping ETA by the add-to-cart button on the product page.</li>
+<li>On popular product pages, add a "need something sooner" section that links in-stock similar products.</li>
+</ol>
+<p><strong>Back-order note and paused products</strong> [L0856.023] <em>(Source A, 2024)</em></p>
+<ul>
+<li>See the table above. Product pages keep the back-order status and ETA while the Shopping CPC is lowered or the product is paused.</li>
+</ul>
+<h2 id="map-minimum-advertised-price-violations">MAP (Minimum Advertised Price) Violations</h2>
+<ul>
+<li>If a supplier keeps violating MAP after you follow up, lower the cost per click on that product to one cent. This keeps the product visible without overspending on it. [L0469.089] <em>(Source A, 2021, older)</em></li>
+<li>Move products or suppliers with recurring problems, such as MAP violations, into their own campaign with lower bids or a very small budget. [L0806.106] <em>(Source A, 2024)</em></li>
+<li>If a supplier enforces MAP but big-box retailers sell below your wholesale cost, do not advertise the product in paid channels at double the price of other stores. Work with the supplier to address the MAP violation first. [L0856.029] <em>(Source A, 2024)</em></li>
+<li>Keep the products with proven MAP compliance in a separate campaign with a shared budget, as described in the bidding section above. [L0429.081] <em>(Source A, 2022, older)</em></li>
+</ul>
+<h2 id="budget-allocation-and-scaling">Budget Allocation and Scaling</h2>
+<p><strong>Scaling a profitable campaign</strong> [L0963.004] <em>(Source A, 2022, older)</em></p>
+<ol type="1">
+<li>Raise the budget by 10, 20 or 30 percent.</li>
+<li>Let the campaign run until the actual return on ad spend shows.</li>
+<li>Raise the budget again by a similar step and repeat.</li>
+</ol>
+<ul>
+<li>A very large one-time budget increase can distort return on ad spend for a full month. In one example, ROAS fell from about 6.5x average to 1.5x after a sharp scale-up, so raise budgets in small increments. [L0963.005] <em>(Source A, 2022, older)</em></li>
+<li>A new campaign with only 15 dollars per day where 20 out of 100 products get all clicks: use a higher CPC and higher daily budget only if the campaign is profitable. Otherwise move the clicking products into their own Alpha campaign and scale that one. [L0665.080] <em>(Source A, 2022, older)</em></li>
+</ul>
+<p><strong>Budget splits used in examples</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Budget split</th>
+<th>Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[L0278.018] (2025)</td>
+<td>$100 daily: $60 HM, $30 MM, $10 LM</td>
+<td>Margin tiers</td>
+</tr>
+<tr>
+<td>[L0360.031] (2024)</td>
+<td>Bestseller $15, everything else $5, Meta remarketing $5 per day</td>
+<td>Bestseller split</td>
+</tr>
+<tr>
+<td>[L0471.014] (2024)</td>
+<td>100% to bestsellers in month one, or 90/10 with 10% for testing</td>
+<td>Bestseller launch</td>
+</tr>
+<tr>
+<td>[L0856.018] (2024)</td>
+<td>80% to high-profit tier, 20% to middle tier, 0% to lowest</td>
+<td>Net-profit tiers</td>
+</tr>
+<tr>
+<td>[L0470.071] (2023, older)</td>
+<td>Winning brand 40 USD/day; remaining brands 10 USD/day split 5/5</td>
+<td>Brand rebalancing</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Campaign-level budget logic</strong></p>
+<ul>
+<li>Budget control per margin tier, not one budget across all products. [L0278.018]</li>
+<li>Shared budget attached to each pair of campaigns. [L0360.031]</li>
+<li>Keep the budget of the winning brand fixed while other brands get testing budget. [L0470.071]</li>
+</ul>
+<h2 id="relaunching-rebuilding-and-migrating-stalled-accounts">Relaunching, Rebuilding and Migrating Stalled Accounts</h2>
+<p><strong>Principle: new campaigns, not reactivated ones</strong></p>
+<ul>
+<li>If relaunching a store that was paused for years, create entirely new campaigns instead of reactivating old ones from the previous period. New campaigns learn with recent market data and follow current platform best practices. [L0208.004]</li>
+<li>Repair before rebuilding: long-running campaigns with steady, high spend can carry some weaknesses in setup, because Google gives account history and spend volume weight. Repair the existing campaign first and rebuild or pause only if nothing moves after repairs. Rebuilding is generally slower to recover than fixing an account with history. [L0510.066]</li>
+<li>Create a new campaign only when the existing one is not moving after repair attempts. Pausing is rare. In roughly 1% of cases, abandoning the whole account and starting fresh may be the better choice, typically in penalised niches. [L0510.029]</li>
+</ul>
+<p><strong>Relaunch procedure for a stalled or failed store</strong> [L0853.078] <em>(Source A, 2021, older)</em></p>
+<ol type="1">
+<li>Rebuild paid ad campaigns from scratch instead of turning the old ones back on.</li>
+<li>Submit products to free Google product listings if they have not been submitted yet.</li>
+<li>Send a timely promotion to the existing email list to re-engage past subscribers.</li>
+<li>Follow up with the remarketing audience.</li>
+<li>Restart a regular social media schedule, for example one post per week.</li>
+</ol>
+<p><strong>Rebuilding Google Shopping spend on an older account with sales history</strong> [L0804.108] <em>(Source A, 2023, older? No: 2023, not in older range)</em></p>
+<ol type="1">
+<li>In Shopify, list every product sold in the past one to two years together with its profit.</li>
+<li>Build a new product feed that contains only the products that sold profitably in that period.</li>
+<li>Remove the old product feed from Google Merchant Center.</li>
+<li>Upload the new feed to Merchant Center.</li>
+<li>Spend the reduced daily budget only on these products, and add more products after they start to sell.</li>
+</ol>
+<p><strong>Changing to a new store URL</strong> [L0247.062] <em>(Source A, 2021, older)</em></p>
+<ol type="1">
+<li>Turn off all Google Ads, without deleting the ad accounts.</li>
+<li>In Merchant Center, disconnect the product feed and delete the existing products.</li>
+<li>Create a new Merchant Center account for the new store and upload the feed there.</li>
+<li>Reuse the same Google Ads account pointed at the new store.</li>
+<li>Do not turn the old redirect ads back on, because tracking will break.</li>
+</ol>
+<p><strong>Rebuilding for best-sellers</strong> [L0472.003, L0472.008] <em>(Source A, 2025)</em></p>
+<ul>
+<li>See the bestseller section above for the procedure and case. The rebuild uses only proven sellers and pauses the old non-converting Alpha and Beta campaigns.</li>
+</ul>
+<h2 id="campaign-structure-start-simple-segment-on-evidence">Campaign Structure: Start Simple, Segment on Evidence</h2>
+<ul>
+<li>Start with at least one Alpha and one Beta Shopping campaign, then segment further into brand campaigns and best-seller campaigns, giving the highest budgets to the most productive ones. <em>(Older advice, 2018.)</em> [L1274.060]</li>
+<li>Keep the structure simple in the first stage. Segmenting too early splits the budget and slows learning, so segment later as the data supports it. <em>(Older advice, 2022.)</em> [L1281.100]</li>
+<li>Use a two-tier structure at launch, with one Alpha and one Beta campaign holding all products. <em>(Older advice, 2022.)</em> [L1113.052]</li>
+<li>In the early phase, the goal is to buy data on search terms and products that show around a 1% conversion rate. Spreading a small budget across hundreds or thousands of products leaves each product with too few clicks to show its own conversion rate, so concentrate budget on fewer products. [L1341.010]</li>
+<li>When many products have only one or two clicks each (for example, 500 products with two clicks each), reduce the number of products by turning off weaker brands or products. Concentrate spending on the highest-margin or best cost-per-click items to gather data sooner. [L1341.012]</li>
+<li>Campaigns can be split by supplier or product category, for example separate Alpha and Beta campaigns per supplier or category, to see which segments perform best. <em>(Older advice, 2020.)</em> [L1088.045]</li>
+<li>When adding a second niche, use a separate Alpha/Beta pair with its own budget and no overlapping products. Mixing unrelated products into an existing campaign resets its learning phase and can hurt performance for weeks. [L1285.055]</li>
+</ul>
+<h2 id="splitting-by-brand-and-supplier-1">Splitting by Brand and Supplier</h2>
+<p><strong>Brand split procedure</strong> <em>(older advice, 2020)</em>:</p>
+<ol type="1">
+<li>Start with all products in one Alpha and one Beta campaign.</li>
+<li>Once one brand is driving most sales, duplicate both campaigns.</li>
+<li>In the originals, remove brands two through seven.</li>
+<li>In the duplicates, remove brand one.</li>
+<li>Set budgets separately: keep the proven brand at its historical daily spend, test the others at a lower level, then optimise. [L1111.103]</li>
+</ol>
+<p><strong>Example budget split</strong> <em>(older advice, 2020)</em>: the proven brand keeps its $100 per day, and the other brands start at about $50 per day. Budgets are adjusted based on how each campaign performs. [L1111.104]</p>
+<ul>
+<li>Use the Alpha/Beta structure to isolate brands. Put a brand that outperforms into its own Alpha and Beta campaigns, then exclude that brand's products from the main Alpha and Beta. The main campaign's budget then goes only to the rest of the catalogue. <em>(Older advice, 2021.)</em> [L1112.011]</li>
+<li>Suppliers with low search volume can still be listed. Put them in their own Alpha and Beta, or keep them in the main campaign with a lower max cost per click for their brand so they do not overspend. <em>(Older advice, 2021.)</em> [L1112.020]</li>
+<li>There is no fixed golden ratio for the budget between Alpha and Beta campaigns. The right split depends on the niche, the suppliers and how many products each has. <em>(Older advice, 2021.)</em> [L1112.022]</li>
+</ul>
+<p><strong>Feed per brand</strong> <em>(older advice, 2022)</em>: Create separate product feeds per brand in the Google Shopping app for Shopify (for example, a Nike feed and a Reebok feed). Link each feed to its own campaign instead of putting all brands into one campaign with many ad groups. This prevents a product from appearing in the wrong ad group. [L0969.065]</p>
+<p><strong>Weak supplier separation procedure</strong> <em>(older advice, 2021)</em>:</p>
+<ol type="1">
+<li>Duplicate your main Alpha and Beta Shopping campaigns.</li>
+<li>In the new set, include only the weak supplier's products.</li>
+<li>Exclude that supplier from the main Alpha and Beta campaigns.</li>
+<li>Keep the budgets as they are, and raise the CPC for the new set only if traction stays low. [L0968.055]</li>
+</ol>
+<ul>
+<li>Do not raise bids on a weak supplier inside the main campaign. That can pull traffic away from products that already convert. A separate campaign lets you measure that supplier's performance on its own. <em>(Older advice, 2021.)</em> [L0968.056]</li>
+</ul>
+<h2 id="splitting-by-price-margin-and-product-tier">Splitting by Price, Margin and Product Tier</h2>
+<p><strong>Price bands</strong> <em>(older advice, 2019)</em>: When the Shopping campaign brings cheap add-on sales instead of high-ticket items, split it into price-band campaigns, for example one for products of $500 or more and one for products under $500. Give each campaign its own budget and bids, so expensive items get the budget and cheap items get cheaper clicks. [L1086.016]</p>
+<p><strong>Accessories</strong> <em>(older advice, 2019)</em>: Put low-priced accessories in a collection linked from the product pages as add-ons, and exclude that collection from Google Shopping campaigns, since advertising cheap accessories is rarely profitable. Accessories priced around 400 to 500 USD may be worth ads. [L1110.029]</p>
+<p><strong>Print on demand</strong> <em>(2025)</em>: If print on demand products are added to a store, include only the high-ticket products in the Shopping campaigns and exclude the print on demand products. Otherwise most ad spend can go to items that earn about $10 per sale. [L1097.035]</p>
+<p><strong>Product tiers</strong> <em>(2024)</em>:</p>
+<ul>
+<li>Alpha and Beta campaigns can be segmented by product tier, such as a bestseller group, a mid-seller group, or groups split by high, mid and low profit. [L1115.102]</li>
+<li>Add new SKUs to an existing Alpha or Beta group only if that group contains the same tier of products, such as bestsellers. Do not mix new, untested products into a bestseller-only group. Create a separate testing group instead. [L1115.040, L1115.102]</li>
+</ul>
+<h2 id="bestsellers-alpha-2-and-beta-2">Bestsellers, Alpha 2 and Beta 2</h2>
+<p><strong>Concentrated sales procedure</strong> <em>(2023)</em>: Use this when a few products dominate sales.</p>
+<ol type="1">
+<li>Keep the current CPC changes first as the main step.</li>
+<li>When about 20 of 100 products make almost all the sales, duplicate the Alpha and Beta campaigns into Alpha 1, Beta 1, Alpha 2 and Beta 2.</li>
+<li>Keep only the top products in Alpha 1 and Beta 1.</li>
+<li>Move the remaining products into Alpha 2 and Beta 2 with their own budget, so they can start to spend without affecting the top products. [L1114.056]</li>
+</ol>
+<p><strong>Source difference:</strong> The 2022 source keeps the structure at two tiers. It says to split later into Alpha 2 and Beta 2 by best sellers, a single brand or a price range, instead of adding a third tier. <em>(Older advice, 2022.)</em> [L1113.052] The 2023 source names the four campaigns and uses the trigger of about 20 of 100 products. [L1114.056] Use the 2022 criteria to decide what goes into Alpha 2 and Beta 2, and the 2023 trigger to decide when to create them.</p>
+<ul>
+<li>Traffic volume is driven by competition, search volume and budget, not by the number of brands sold. To increase clicks, raise bids or budget on the products already listed rather than adding a fixed number of brands. [L1114.058]</li>
+<li>For products with more than about 10 competing stores on Google Shopping, paid traffic is likely to become too expensive. Keep those products on the store for organic traffic, and focus the paid budget on products with fewer competitors. [L1114.059]</li>
+</ul>
+<h2 id="custom-labels-and-product-groups">Custom Labels and Product Groups</h2>
+<ul>
+<li>Custom labels are optional at launch. Use them later to manage products more finely as sales grow, for example when moving from about 20,000 to 50,000 per month toward 100,000 or more per month. [L1168.010]</li>
+<li>Segment Shopping campaigns down to the product ID level, because only then can you set bids per product. Exclude the "everything else" catch-all subgroup at each level, since it duplicates products already assigned above it. [L1328.023]</li>
+</ul>
+<h2 id="geo-targeting-and-costly-shipping-suppliers">Geo-Targeting and Costly-Shipping Suppliers</h2>
+<p><strong>Default position:</strong> Geo-targeting is off for almost all campaigns. Use it only for the special supplier case with heavy goods and a warehouse. <em>(2023.)</em> [L0964.065]</p>
+<p><strong>Narrow case:</strong> For a supplier with heavy or costly shipping, target only the low-shipping region for that supplier's products. This applies to a very small share of products. <em>(2022.)</em> [L0963.009]</p>
+<p><strong>Heavy items:</strong> Restrict ad targeting to regions close to the supplier's warehouse to keep shipping costs manageable. The margin must still cover shipping when the customer is further away. <em>(2022.)</em> [L0969.067]</p>
+<p><strong>Supplier far from customers procedure</strong> <em>(older advice, 2020)</em>:</p>
+<ol type="1">
+<li>Create a new campaign named after the region.</li>
+<li>Exclude that supplier from the main campaign.</li>
+<li>Include the supplier only in the regional campaign.</li>
+<li>In Google Ads, open the campaign, then the ad set, then the Locations field, and select the supplier's state and nearby states. [L0967.083]</li>
+</ol>
+<p><strong>General principle</strong> <em>(older advice, 2020)</em>: If you are unsure whether to adjust geographic targeting, increase spend in regions with clearly good results and cut spend where it only wastes money. Decide with data, not guesses. [L1277.076]</p>
+<h2 id="multi-country-campaigns">Multi-Country Campaigns</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Separate campaigns per country, for example alpha and beta US plus alpha and beta Canada</td>
+<td>Current standard for multi-country stores</td>
+<td>[L1092.069]</td>
+</tr>
+<tr>
+<td>One website, duplicated ad sets with a smaller budget for the second country</td>
+<td>Older advice (2018); do not build a separate website per country</td>
+<td>[L1274.066]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Shopify changes currency and payment options by visitor location, but not the domain. For separate US and Canada stores, run separate campaigns per country, named for example "US Alpha All Products" and "CA Alpha All Products". <em>(2025.)</em> [L1116.030]</li>
+<li>A store can be ready to expand to Canada only after the US campaigns perform well, so the US should be the focus until then. <em>(2023.)</em> [L1094.038]</li>
+<li>Pricing and keyword volume in a smaller country like Australia are lower. A niche may need to move up one level to meet the same thresholds. Once it meets the criteria, the smaller market is still viable. <em>(Older advice, 2021.)</em> [L1090.109]</li>
+<li>A single English-language store was tested across five markets at once: the United States, Australia, Canada, New Zealand and the United Kingdom. Multi-country testing helps find the market where the same product gets the best click-through and sales results. [L1212.050]</li>
+</ul>
+<h2 id="handling-out-of-stock-products">Handling Out-of-Stock Products</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stock situation</th>
+<th>Current action (2024)</th>
+<th>Older advice (2021)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero inventory</td>
+<td>Exclude the product from Shopping campaigns so it triggers no impressions or clicks [L1285.048]</td>
+<td>Not covered [L1279.066]</td>
+</tr>
+<tr>
+<td>ETA two to three weeks</td>
+<td>Keep it running in Shopping ads and add a backorder note with the ETA on the product page [L1285.047]</td>
+<td>Keep running for about two weeks with a note on the product page [L1279.066]</td>
+</tr>
+<tr>
+<td>ETA one to three months, or unknown</td>
+<td>Pause the product or reduce its bid to one cent [L1285.047]</td>
+<td>If the outage gets much longer, pause the ads, since customers are far less likely to wait a month or more [L1279.066]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="controlling-products-and-bids">Controlling Products and Bids</h2>
+<ul>
+<li>Setting CPC to 0 cents only stops spending on those products, but they can still be present in the campaign. To remove them from Shopping campaigns completely, use the product include and exclude options in the campaign settings. [L1015.009]</li>
+<li>When a Google Shopping campaign has no winning product yet, exclude the products that do not perform and keep testing the remaining pool in batches. In one example, 20 products had been excluded and about 200 were still left to test before a winner was expected to emerge. [L1083.017]</li>
+<li>When Google Ads cost per click for a broad category rises, for example furniture, split the account into more granular sub-categories with separate campaigns or ad groups and separate bids for each. Remove traffic that brings in general or unrelated clicks. <em>(2023.)</em> [L1283.033]</li>
+</ul>
+<h2 id="scaling-budgets">Scaling Budgets</h2>
+<p><strong>Profitable scaling procedure</strong> <em>(older advice, 2020)</em>:</p>
+<ol type="1">
+<li>Start from the current daily budget only if it is profitable, for example 15 per day.</li>
+<li>Raise the budget in steps, for example to 25 per day, and hold it there while checking results.</li>
+<li>At each level, check whether ads are still as profitable, which ads are more or less profitable, and which broad keywords appear that need negative keywords.</li>
+<li>Move to the next level only when profitable scaling holds. [L1088.042]</li>
+</ol>
+<ul>
+<li>Jumping from 15 to 200 per day in one step is too abrupt. Google then spends on broader keywords with lower conversion, so raise budgets gradually instead. <em>(Older advice, 2020.)</em> [L1088.043]</li>
+<li>Every Google Ads account has a ceiling on profitable traffic, and the ceiling differs by product, niche and market. Total search demand can be researched in advance, but the actual cost per click and the share of that traffic you can win against competitors cannot be predicted accurately. The only reliable way to find the ceiling is to test in the live account. <em>(Older advice, 2021-22.)</em> [L1228.004]</li>
+<li>When Google Ads reaches its profitable ceiling, keep the campaigns at that level rather than pushing spend higher. Build other traffic sources to add volume alongside them. <em>(Older advice, 2021-22.)</em> [L1228.005]</li>
+</ul>
+<p><strong>Moving winners to CPC</strong> <em>(undated)</em>:</p>
+<ol type="1">
+<li>Get sales and fulfil orders on time, since delivery is part of the customer experience.</li>
+<li>Identify the products that perform better than others.</li>
+<li>Move from Google Shopping or Performance Max to CPC campaigns for those products, bidding per click to buy more traffic.</li>
+<li>Assess the results. Expect the return on ad spend to fall as you scale, and make sure there is enough margin left to remain profitable. [L1508.014]</li>
+</ol>
+<h2 id="stalled-accounts-relaunch-and-rebuild">Stalled Accounts: Relaunch and Rebuild</h2>
+<p><strong>Stalled campaign case</strong> <em>(older advice, 2019)</em>: A Google Shopping campaign was profitable at about 20 return on ad spend, with roughly 75 percent impression share on a low-priority keyword. To gain more impressions, the owner raised the keyword bids. This triggered a flood of generic keywords that never converted and consumed the budget. After about a month of lowering bids and rechecking settings, the campaign was still not profitable. The recommendation was to pause the old campaign, build a fresh one with the same rules, and let it run for about a week, because restoring old settings rarely fixes this. [L1275.048]</p>
+<p><strong>Relaunch with a smaller budget after no sales</strong> <em>(2024)</em>:</p>
+<ol type="1">
+<li>Use historical data to list products that actually sold at a profit.</li>
+<li>Create an Alpha/Beta campaign named Bestsellers that includes only those products.</li>
+<li>Start with a smaller budget and scale within that campaign as it proves itself.</li>
+<li>Keep the other products in separate Alpha testing and Beta testing campaigns with their own budgets.</li>
+<li>Move new winners into the Bestsellers campaign.</li>
+<li>Keep all products in the free Google product listings, and control spend through budget instead. [L1285.054]</li>
+</ol>
+<p>Both sources recommend rebuilding rather than repairing a stalled account. The 2019 advice rebuilds the whole campaign with the same rules. The 2024 advice rebuilds around proven products. [L1275.048, L1285.054]</p>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>Custom labels for Google Shopping can be added to all products at once through a Shopify CSV export and re-import, which is the fastest method for large catalogues. The alternative is entering the data per product in the Feed for Google Shopping app. Shopify's product CSV template already contains the Custom Label 0 to 4 columns. [L0402.001]</li>
+</ul>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/12-bidding-budgets-and-bid-optimization/"><span class="k">&larr; Previous</span><span class="v">Bidding, budgets and bid optimization</span></a><a class="nx" href="../../10-google-ads-and-shopping/14-learning-phase-reporting-and-weekly-optimization-routine/"><span class="k">Next &rarr;</span><span class="v">Learning phase, reporting and weekly optimization routine</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

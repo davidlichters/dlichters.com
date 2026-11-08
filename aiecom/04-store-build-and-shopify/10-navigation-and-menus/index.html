@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Navigation and menus | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.10: Navigation and menus.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/10-navigation-and-menus/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Navigation and menus | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.10: Navigation and menus."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/10-navigation-and-menus/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/10-navigation-and-menus/">Plain version</a></div><h1>4.10 Navigation and menus</h1><article><h2 id="menu-basics-in-shopify">Menu basics in Shopify</h2>
+<ul>
+<li>Menus are managed in the Shopify admin under Content &gt; Menus [L0092.001, L1319.002].</li>
+<li>Older course material (2021-2022) gives the path as Online Store &gt; Navigation [L1303.013, L1320.001].</li>
+<li>Menu items can link to collections, products, pages, blog posts, the homepage, the search page, policy pages, or external URLs. Choose the link type in the item's Link field before saving [L1319.016, L0092.002, L1320.007, L1320.009].</li>
+<li>Menu item names are free text and do not have to match the linked page or collection. A refund policy can be listed as Returns/Exchanges [L1319.017, L1320.009].</li>
+<li>Policies appear under the Policies heading in the link search once they exist [L1320.007].</li>
+<li>Shopify does not allow a menu item without a URL [L1009.014].</li>
+<li>Create all collections, pages, and policies before building menus, because menu items can only link to existing items. This includes shortcut collections such as Bestsellers and On Sale Now [L1319.019].</li>
+<li>When searching for a collection in the link field, copy its exact name from the collections list and paste it. The search matches text, so a near-miss can return the wrong result [L1320.014].</li>
+<li>Give each menu a unique name. Two menus with the same name cause confusion [L1285.028].</li>
+<li>Each menu gets a handle generated from its title in lowercase with hyphens, for example main-menu. The theme uses the handle to find the menu, so the default handle is what the theme looks up [L1303.015].</li>
+<li>The header menu title is not displayed on the storefront and can keep a plain internal name. Footer menu titles appear as visible headings and must read as meaningful labels such as Company or Products [L1303.033].</li>
+<li>Save after every change, because lost connections can discard unsaved work [L1303.018].</li>
+<li>Save, then refresh the storefront. Menu changes can take a minute or more to appear [L1319.006, L1320.002, L1320.003].</li>
+<li>Menus show on the live site only after the theme loads them, so check the live page to catch missing links early [L1303.035].</li>
+<li>Before replacing a menu, take a screenshot of its items so the original structure can be rebuilt [L1010.012].</li>
+<li>Deleted menu items can be re-added at any time, so removing a wrong item is not a lasting error [L1320.003, L1320.012].</li>
+<li>The arrow beside a parent item in the menu editor collapses or expands its sub-items. This only helps while editing and does not change the storefront [L1319.018, L1320.013].</li>
+</ul>
+<h2 id="default-menus-in-a-new-store">Default menus in a new store</h2>
+<ul>
+<li>Sources differ on how many menus a new store starts with. One source says three default menus, and most themes include at least three menu spaces (a main menu and two footer menus) [L1319.003]. Another says two default menus: Footer menu and Main menu [L1320.001]. Check the menu list in your own admin.</li>
+<li>The default main menu contains Home, Catalog, and Contact [L1326.008].</li>
+<li>The default footer menu is initially labelled Search [L1320.005].</li>
+<li>In older (2021-2022) default setups, the default footer menu loads the main menu items, which is not useful in the footer. Replace it with purpose-built footer menus [L1303.026].</li>
+<li>If a theme has different menu locations, the menu positions change but the same menu types can still be built [L1319.003, L1319.020].</li>
+</ul>
+<h2 id="planning-the-three-menus">Planning the three menus</h2>
+<ul>
+<li>Shopify menus organize site navigation in headers and footers, so visitors can find products and important pages without deep browsing [L0092.003].</li>
+<li>Menus link to collections, pages, policies, search, and external links. Menus are organized by place: the main menu runs across the header and can hold dropdowns, the sidebar menu filters products on collection pages, and footer menus hold links at the bottom of the site [L0092.002, L1320.008].</li>
+<li>Build three menus for a professional store [L0092.004]:
+<ul>
+<li>Main Menu: product navigation at the top, using collections.</li>
+<li>Footer Menu: category and promotional links.</li>
+<li>Quick Links Menu: required pages and policies.</li>
+</ul></li>
+<li>The Manhattan theme supports all three menus by default. Other themes typically support similar menu structures [L0092.013].</li>
+<li>The Source A theme uses Main menu, Footer menu, and Secondary footer menu. These are assigned to the header and footer positions separately in the theme customization [L1320.010].</li>
+<li>The menu structure does not need to be perfect and can change as the store evolves [L0092.008, L1319.008].</li>
+<li>Navigation and collections are temporary at an early stage. Revisit and adjust all menus and collections just before launch so they match the products actually on the site [L1303.029].</li>
+<li>There is no required number of top-level items or dropdowns in a main menu. Build the structure from the real product categories and expect to change it as the catalogue and suppliers grow [L1319.008].</li>
+<li>Older (2021-2022) reference structure for a store with five collections:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>Location</th>
+<th>Purpose</th>
+<th>Items</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Main menu</td>
+<td>Header</td>
+<td>Product category navigation</td>
+<td>Five collections, with optional dropdown subcategories</td>
+</tr>
+<tr>
+<td>Top Bar menu</td>
+<td>Very top of the site</td>
+<td>Business and policy pages</td>
+<td>About Us, Contact Us, Shipping, Easy Returns, Privacy and related pages</td>
+</tr>
+<tr>
+<td>Company footer menu</td>
+<td>Footer</td>
+<td>Company and legal pages</td>
+<td>About Us, Privacy, Terms of Service, Contact Us</td>
+</tr>
+<tr>
+<td>Products footer menu</td>
+<td>Footer</td>
+<td>Entry points to categories</td>
+<td>The same five collections, no dropdowns</td>
+</tr>
+<tr>
+<td>Shopping info footer menu</td>
+<td>Footer</td>
+<td>Buying information</td>
+<td>Shipping, Easy Returns, Price Match</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1303.028]</p>
+<h2 id="building-the-main-menu">Building the main menu</h2>
+<h3 id="adding-top-level-category-links">Adding top-level category links</h3>
+<ul>
+<li><p>Basic procedure, from the Main Menu in Content &gt; Menus [L0092.005]:</p>
+<ol type="1">
+<li>Open Main Menu.</li>
+<li>Leave Home as the first item.</li>
+<li>Click Add Menu Item.</li>
+<li>Name the menu item after its collection.</li>
+<li>Set the link type to Collection.</li>
+<li>Select the matching collection.</li>
+<li>Click Save.</li>
+</ol>
+<p>[L0092.005]</p></li>
+<li><p>Alternative procedure for the same task, with the default Home item kept [L1319.004]:</p>
+<ol type="1">
+<li>Go to Shopify Admin &gt; Content &gt; Menus and open Main menu.</li>
+<li>Keep the default Home item.</li>
+<li>Click Add menu item.</li>
+<li>Enter the item name (for example Surfboards).</li>
+<li>In the Link field, choose Collections, search for the matching collection, and tick its checkbox.</li>
+<li>Click Save.</li>
+<li>Add each category the same way, one item per collection.</li>
+<li>For a dropdown, add the sub-category item the same way, then drag its dot handle to the right so it nests under the item above.</li>
+<li>Repeat nesting for every sub-category that belongs to that parent.</li>
+<li>Click Save, then refresh the storefront to check that the dropdown shows under the parent item.</li>
+</ol>
+<p>[L1319.004]</p></li>
+<li><p>Older alternative (2021-2022) for five collections [L1303.016]:</p>
+<ol type="1">
+<li>Go to Online Store &gt; Navigation and click the title of the main menu.</li>
+<li>Delete the default items you do not want, such as Home and Catalog.</li>
+<li>Click Add menu item.</li>
+<li>Enter the name exactly as it should appear on the site, matching the collection name.</li>
+<li>In the Link field, search for the collection by name or paste its link, then select it.</li>
+<li>Click Add.</li>
+<li>Repeat steps 3 to 6 for each of the five collections.</li>
+<li>Click Save menu.</li>
+</ol>
+<p>[L1303.016]</p></li>
+<li><p>Second alternative [L1320.002]:</p>
+<ol type="1">
+<li>Open the Main menu in Online Store &gt; Navigation and remove unwanted items (for example Contact and Catalog) with Delete or Remove.</li>
+<li>Click Add menu item, search the category name, and select the matching collection. Leave the filter collection with tags field empty and click Add.</li>
+<li>Click Save menu, then refresh the storefront.</li>
+<li>To create a dropdown sub-item, add the item as a normal menu item, then drag its dot handle to the right under the parent item. It then appears as a submenu with a small arrow icon.</li>
+<li>Repeat for each subcategory, save, and verify on the store by hovering over the parent.</li>
+</ol>
+<p>[L1320.002]</p></li>
+<li><p>Renaming an existing item: in Online Store &gt; Navigation, change Catalog to Collections, click Apply, then click Save [L1326.008].</p></li>
+</ul>
+<h3 id="deciding-on-home">Deciding on Home</h3>
+<p>Sources disagree on the Home item:</p>
+<ul>
+<li>Keep Home as the first item, as in the default main menu [L0092.005, L1319.004, L1326.008].</li>
+<li>Remove Home from the main menu. Open Content &gt; Menus, open the main menu, click delete on the Home item, then click Save. The homepage still works without the link [L0972.016, 2025].</li>
+<li>Source E advice: put Shop first, before Home. Do not highlight Home, because the aim is to send visitors into the shop. Keep the logo as a homepage link, since clicking it already returns to home [L1225.023].</li>
+<li>Use Shop-first when the aim is to send visitors into the shop, and keep Home when it is a sensible entry point. Both are described in the sources without a stated rule for choosing between them. [L0972.016, L1225.023]</li>
+</ul>
+<h3 id="ordering-and-shortening-the-header">Ordering and shortening the header</h3>
+<ul>
+<li>Order header categories from left to right by sales, with the best-selling category first and the weakest last [L1325.010, L0551.026 (older, 2020)].</li>
+<li>In a new store, make an estimate and change the order later based on sales data [L0551.026 (older, 2020)].</li>
+<li>Only lead with a category that is clearly the top seller [L1325.010].</li>
+<li>Shorten the header menu. Start it with a Shop item that opens a dropdown listing the main product categories by plain names, such as bracelets, earrings, necklaces, rings, and blankets. Avoid vague category names that visitors cannot interpret [L1325.011].</li>
+<li>Keep the menu as simple as possible and include only links customers will actually use. Look at top competitors, then check your own menu from a customer's point of view to decide what to remove [L0551.027 (older, 2020)].</li>
+<li>Use the header space for navigation to categories and collections, not for policy links, to maximise navigation options [L0255.020 (2025)].</li>
+<li>Place the logo on the left of the header so the menu takes less space and does not cover product titles [L1225.023].</li>
+<li>Test the menu for hover sensitivity bugs before scaling traffic. A product page navigation that forces a visitor into another product page when the cursor hovers over the menu blocks the shopping experience [L1225.024].</li>
+<li>Each top-level link can be a plain link, a standard dropdown, or a mega menu, depending on how many subcategories it has. The choice should follow how the shopper navigates the store [L1010.013].</li>
+<li>The main menu supports plain links and dropdowns, which is enough for an early demo store [L1018.001].</li>
+</ul>
+<h3 id="store-types-and-special-items">Store types and special items</h3>
+<ul>
+<li><p>A store with only three main navigation items (Shop Now, Track Your Order, and Support) is missing category links. Adding dropdown links for each product category helps visitors find what they want [L0351.046].</p></li>
+<li><p>Place Subscribe and Bundles in the main top navigation so the recurring and multi-pack options are visible on every page. This keeps higher order values one click away instead of buried in a single product page [L0524.068].</p></li>
+<li><p>When a store is built around one product category, the top navigation should link straight to the product types within it, such as dress types. Add-on products do not need to take up navigation or homepage space [L0838.021].</p></li>
+<li><p>In a gift store, build navigation and homepage sliders by recipient group, and show the best sellers for each group under its own heading. Questions such as what people buy for men, women, parents, or grandparents each get their own section [L0355.007].</p></li>
+<li><p>Adjust the main navigation to the products you actually have after supplier approvals, because categories from the demo store are often incomplete. Every product must be reachable from the main menu through a category, subcategory, or product type [L1145.009].</p></li>
+<li><p>Add a main menu item called Brands or Our Brands. Its dropdown lists every approved brand, and each entry links to a brand collection that contains only that brand's products [L1145.010].</p></li>
+<li><p>Preinstalled collections that Shopify creates by default do not need to be added to the main menu. Keep the main menu limited to the product categories you actually sell [L1319.009].</p></li>
+<li><p>When the store is live and a collection is empty, remove it from the menus instead of deleting it. Add it back once it contains live products [L0971.053].</p></li>
+<li><p>In a one-product store, put a direct link to that product in the header. Visitors on any page can then return to the product page in one click [L1326.010].</p></li>
+<li><p>Procedure to add a single product link to the header of a one-product store [L1326.009]:</p>
+<ol type="1">
+<li>Go to Products and create the product, using the product name as the title and uploading its image.</li>
+<li>Go to Online Store &gt; Navigation and open the Main menu.</li>
+<li>Add a menu item and name it with the product name.</li>
+<li>Select the Products option and choose the product.</li>
+<li>Click Apply, then Save.</li>
+<li>Open Online Store &gt; Themes &gt; Customize and confirm the product link appears in the header.</li>
+</ol>
+<p>[L1326.009]</p></li>
+<li><p>To show a collection link in the navigation, add it as an item in the menu under Online Store &gt; Navigation. The collection link then appears in the header menu [L1326.020].</p></li>
+<li><p>Do not send store visitors to Amazon links, because customers who leave for Amazon are lost sales. Accepting Amazon Pay as a payment method on your store is fine [L0551.028 (older, 2020)].</p></li>
+</ul>
+<h2 id="dropdowns-and-nesting">Dropdowns and nesting</h2>
+<h3 id="creating-a-dropdown">Creating a dropdown</h3>
+<ul>
+<li><p>Nesting a menu item: drag the dot handle on the left side of the item to the right, and it becomes a sub-item of the item directly above it. A nested item shows as a dropdown under its parent in the storefront, with a small arrow beside the parent [L1319.005].</p></li>
+<li><p>Older method (2019): click the menu item that should be the sub-category, drag it slightly to the right under its parent item, then click Save. The sub-items then appear when you hover over the parent item [L1068.041 (older, 2019)].</p></li>
+<li><p>Older note (2020): nested navigation menus are created by dragging each item where you want it to appear. Nested menus are available in any theme; a custom menu requires an app [L0468.063 (older, 2020)].</p></li>
+<li><p>Procedure for building a dropdown in the main menu, from the 2025 course [L1116.014]:</p>
+<ol type="1">
+<li>Go to Content &gt; Menus &gt; Main menu.</li>
+<li>Open the parent item, for example Accessories, to see its nested items.</li>
+<li>To test or reposition, drag a child item out with its drag handle so it becomes top-level, then click Save.</li>
+<li>Drag the item back under the parent so it sits as a nested child. Hold it while moving, then click Save.</li>
+<li>Reload the storefront and confirm the parent item now opens a drop-down.</li>
+</ol>
+<p>[L1116.014]</p></li>
+<li><p>Older procedure (2021-2022) for dropdown subcategories [L1303.019]:</p>
+<ol type="1">
+<li>In the menu editor, click Add menu item and enter the name of the sub-item, such as a product subcategory.</li>
+<li>Link the item to a page or collection. If no page exists yet, a placeholder # link can be used, but it only makes the item appear and sends visitors to the homepage.</li>
+<li>Drag the new item up and slightly to the right so it sits directly beneath the parent menu item.</li>
+<li>Repeat for each subcategory.</li>
+<li>Click Save menu.</li>
+</ol>
+<p>[L1303.019]</p></li>
+<li><p>Pattern for a dropdown: the parent item links to a collection, the subcategory items are nested under it, and a final sub-item named All [category] links back to the parent collection [L1320.011].</p></li>
+<li><p>Example structure built in the lesson [L1319.007]:</p></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Menu item</th>
+<th>Level</th>
+<th>Links to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Home</td>
+<td>Top level (default)</td>
+<td>Home page</td>
+</tr>
+<tr>
+<td>Surfboards</td>
+<td>Top level</td>
+<td>Surfboards collection</td>
+</tr>
+<tr>
+<td>Hybrid Surfboards</td>
+<td>Under Surfboards</td>
+<td>Hybrid surfboards collection</td>
+</tr>
+<tr>
+<td>Shortboards</td>
+<td>Under Surfboards</td>
+<td>Shortboards collection</td>
+</tr>
+<tr>
+<td>Mid-Length Boards</td>
+<td>Under Surfboards</td>
+<td>Mid-length boards collection</td>
+</tr>
+<tr>
+<td>Long Boards</td>
+<td>Under Surfboards</td>
+<td>Long boards collection</td>
+</tr>
+<tr>
+<td>All Surfboards</td>
+<td>Under Surfboards</td>
+<td>Surfboards collection (catch-all link)</td>
+</tr>
+<tr>
+<td>Swimwear</td>
+<td>Top level</td>
+<td>Swimwear collection</td>
+</tr>
+<tr>
+<td>Bathing Suits</td>
+<td>Under Swimwear</td>
+<td>Bathing suits collection</td>
+</tr>
+<tr>
+<td>Wetsuits</td>
+<td>Under Swimwear</td>
+<td>Wetsuits collection</td>
+</tr>
+<tr>
+<td>All Swimwear</td>
+<td>Under Swimwear</td>
+<td>Swimwear collection (catch-all link)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The swimwear items are demo examples to show the nesting method and are not a product recommendation [L1319.007].</p>
+<ul>
+<li><p>Surfboard example from the same lesson: nest Hybrid Surfboards, Shortboards, Mid-Length Boards, Longboards, and All Surfboards under the main Surfboards item, and nest Bathing Suits, Wetsuits, and All Swimwear under Swimwear [L0092.007].</p></li>
+<li><p>Procedure to add sub-items under Surfboards and check them [L0092.006]:</p>
+<ol type="1">
+<li>Add additional menu items for sub-collections.</li>
+<li>Drag sub-items slightly to the right under the main item to nest them as dropdown items.</li>
+<li>Save the menu.</li>
+<li>Refresh the store to confirm dropdown behaviour.</li>
+</ol>
+<p>[L0092.006]</p></li>
+<li><p>Checking a dropdown: hover over the top-level item in the live preview. A mega menu opens a multi-column panel with sub-groups, while a standard drop-down shows a simple list of links [L1018.017].</p></li>
+<li><p>To restore a moved or wrong item: drag it out again to move it back to the top level. Items can be deleted and re-added at any time [L1320.012].</p></li>
+</ul>
+<h3 id="price-and-filter-dropdowns">Price and filter dropdowns</h3>
+<ul>
+<li><p>To build a By Price dropdown in the main menu [L1320.004]:</p>
+<ol type="1">
+<li>Add a menu item named By Price and link it to Products &gt; All products, because no price collection exists under that name.</li>
+<li>Under it, add one sub-menu item per automated price collection, using the exact collection names (for example the under $100 range and the 100 to 500 range). Drag each one to the right so it nests under By Price.</li>
+<li>Save the menu and refresh the store. Visitors clicking By Price land on all products and can filter by price in the sidebar.</li>
+</ol>
+<p>[L1320.004]</p></li>
+</ul>
+<h3 id="placeholder-links-in-dropdowns">Placeholder links in dropdowns</h3>
+<ul>
+<li>Shopify does not allow a menu item without a URL. If the collection for a subcategory does not exist yet, point the item to an existing related collection as a placeholder and replace the link once the real collection is live [L1009.014].</li>
+<li>A placeholder # link on a dropdown item sends visitors to the homepage. Replace every placeholder with the real collection or page link before launch, or delete the item [L1303.020].</li>
+<li>If a collection does not exist yet, a mega menu section can be left unlinked or linked to a temporary collection, and the link should be updated once the real collection is live [L1009.007].</li>
+<li>In a live store, menu items should not all point to the general category page as placeholders. Each option needs its own collection, for example a beginner collection built from products tagged beginner, before the option is linked [L1010.008].</li>
+</ul>
+<h2 id="footer-menus">Footer menus</h2>
+<h3 id="building-the-footer">Building the footer</h3>
+<ul>
+<li><p>Procedure from the Shopify admin [L1319.010]:</p>
+<ol type="1">
+<li>Go to Shopify Admin &gt; Content &gt; Menus and open Footer menu.</li>
+<li>Keep the default Search item.</li>
+<li>Click Add menu item and name it after the main category, for example Surfboards.</li>
+<li>Link it to the matching collection in the Collections list, and tick the checkbox.</li>
+<li>Add more common shortcuts the same way, such as Bestsellers and On Sale Now, each linked to its collection.</li>
+<li>Click Save and refresh the storefront to check the footer.</li>
+</ol>
+<p>[L1319.010]</p></li>
+<li><p>Another procedure with a different example set [L0092.009]:</p>
+<ol type="1">
+<li>Open Footer Menu.</li>
+<li>Remove or keep the default Search link.</li>
+<li>Add these menu items: Surfboards (collection), Best Sellers (collection), On Sale Now (collection).</li>
+<li>Save changes.</li>
+<li>Refresh the store to confirm updates.</li>
+</ol>
+<p>[L0092.009]</p></li>
+<li><p>Starting footer content in one course [L1320.005]: rename the default footer menu (initially labelled Search) to the store name, for example Shaka Surfboards. Starting items are Search, the main niche category collection (for example Surfboards), the New Arrivals collection, and the On Sale Now collection. Save the menu. These four items are described as a sufficient starting point.</p></li>
+<li><p>Footer menus should contain common shortcuts such as bestseller and sale collections, the main product niche, and the search item. The exact contents can change over time and depend on your store [L1319.011].</p></li>
+<li><p>Footer links from an ecommerce course example: FAQ, Return and Refund Policy, Terms and Conditions, Shipping Policy, Delivery Times, Privacy Policy, and Contact Form. The example store also had a Sign Up and Save email box offering early access and special discounts [L0347.024].</p></li>
+<li><p>The store footer menu must link all five required pages (shipping, returns, privacy, terms, and contact us) so they are easily accessible [L0377.018].</p></li>
+<li><p>Older (2021-2022) footer setup [L0681.008]:</p>
+<ol type="1">
+<li>Create the three footer menus in the navigation settings beforehand, for example Company, Our Products, and Useful Info.</li>
+<li>In the footer section, open each menu block and click Change.</li>
+<li>Select the matching menu (Company, Our Products, Useful Info) and click Select.</li>
+<li>Verify that each block now lists real pages or collections that exist on the site.</li>
+</ol>
+<p>[L0681.008]</p></li>
+<li><p>Older example content from the same course store [L0681.009]: the Company menu has About Us, Contact Us, Privacy, and Terms of Service. The Our Products menu has the product collections set up for the store. The Useful Info menu has Shipping, Easy Returns, Price Match, and Why Buy From Us.</p></li>
+<li><p>Footer menu rules (older, 2021-2022):</p>
+<ul>
+<li>Create at least two, and preferably three, footer menus, each with its own distinct title. Avoid generic titles such as Footer menu or Main menu [L1303.025].</li>
+<li>Footer menus must stay flat, with no dropdown submenus, because nested items look poor in the footer [L1303.027].</li>
+<li>Footer blocks display only the top-level links of a menu. Any drop-down items added to a footer menu will not appear on the live store, so build footer menus with the links that should be visible directly [L0681.017].</li>
+</ul></li>
+<li><p>Many themes support a second footer menu displayed in an additional column [L1320.008].</p></li>
+<li><p>Footer menu titles appear on the site as visible headings [L1303.033].</p></li>
+</ul>
+<h3 id="secondary-footer-and-policy-menus">Secondary footer and policy menus</h3>
+<ul>
+<li><p>A secondary footer menu is created via Online Store &gt; Navigation &gt; Add menu, named Quick Links. Typical items are About Us (Pages &gt; About us), Privacy Policy and Terms of Service (both under the Policies section in the link search box), and Contact Us (Pages &gt; Contact us) [L1320.006].</p></li>
+<li><p>To replace the footer quick links with a policy menu [L1326.014]:</p>
+<ol type="1">
+<li>Go to Online Store &gt; Navigation and create a menu named Our policies.</li>
+<li>Add the policy pages to that menu.</li>
+<li>In the theme editor, open the footer and click the menu block.</li>
+<li>Click Change menu and select the Our policies menu.</li>
+<li>Click Save.</li>
+</ol>
+<p>[L1326.014]</p></li>
+</ul>
+<h2 id="quick-links-and-policy-pages">Quick Links and policy pages</h2>
+<ul>
+<li><p>Quick Links menu must contain these items in this exact order [L0092.010]:</p>
+<ol type="1">
+<li>About Us (Page)</li>
+<li>Returns / Exchanges (Refund Policy)</li>
+<li>Shipping (Shipping Policy)</li>
+<li>Privacy Policy (Policy)</li>
+<li>Terms of Service (Policy)</li>
+<li>Contact Us (Page)</li>
+</ol>
+<p>[L0092.010]</p></li>
+<li><p>Procedure to build the Quick Links menu [L0092.011]:</p>
+<ol type="1">
+<li>Click Create Menu.</li>
+<li>Name it Quick Links.</li>
+<li>Add menu items in this order: About Us (Page), Returns / Exchanges (Refund Policy), Shipping (Shipping Policy), Privacy Policy (Policy), Terms of Service (Policy), Contact Us (Page).</li>
+<li>Use Pages or Policies when selecting link types.</li>
+<li>Save the menu.</li>
+</ol>
+<p>[L0092.011]</p></li>
+<li><p>Second Quick Links procedure, with the policy and page sources spelled out [L1319.012]:</p>
+<ol type="1">
+<li>Go to Shopify Admin &gt; Content &gt; Menus and click Create menu.</li>
+<li>Name the menu Quick Links.</li>
+<li>Click Add menu item, name it About Us, and link it to the About Us page in the Pages list. Tick the checkbox.</li>
+<li>Add an item named Returns/Exchanges and link it to the refund policy in the Policies section.</li>
+<li>Add an item named Shipping and link it to the shipping policy in the Policies section.</li>
+<li>Add an item named Privacy Policy and link it to the privacy policy in the Policies section.</li>
+<li>Add an item named Terms of Service and link it to the terms of service page.</li>
+<li>Add an item named Contact Us and link it to the Contact Us page in the Pages list.</li>
+<li>Click Save.</li>
+<li>Refresh the storefront and check that all six links are present.</li>
+</ol>
+<p>[L1319.012]</p></li>
+<li><p>Policy pages (refund, shipping, privacy, terms) must be selected from the Policies section. About Us and Contact Us are normal pages selected from the Pages list. Choosing from the wrong list links to the wrong page [L1319.014].</p></li>
+<li><p>Quick links menu in the footer: select the correct menu in the theme customizer footer settings, and it will appear [L0836.051 (2024)].</p></li>
+<li><p>In the menu setup, the header menu must be set to Main menu, and the footer Quick links block must be set to the Quick links menu via Change menu [L1285.028 (2024)].</p></li>
+<li><p>Older top bar menu (2021-2022) [L1303.024]:</p>
+<ol type="1">
+<li>Go to Online Store &gt; Navigation and click Add menu.</li>
+<li>Enter a title such as Top Bar menu.</li>
+<li>Add menu items linking to your business pages, such as About Us, Contact Us, Shipping, Easy Returns, and Privacy.</li>
+<li>Click Save menu.</li>
+<li>Make sure the theme supports a top menu before expecting it to appear on the site.</li>
+</ol>
+<p>[L1303.024]</p></li>
+<li><p>The top bar menu runs along the very top of the site, but only appears if the theme supports it [L1303.014].</p></li>
+<li><p>Terms of service and privacy policy pages should appear in more than one navigation location, such as a dropdown under the company item, the top bar, and the footer. Ad platforms may refuse to run traffic if they cannot clearly see these legal pages, so redundancy removes any doubt [L1303.034 (older, 2021-2022)].</p></li>
+<li><p>The phone number, Privacy Policy, Terms of Service, and Contact Us links must appear in the header and footer of the site. Google checks for these, so missing links can cause approval problems [L1145.011 (older, 2021-2022)].</p></li>
+<li><p>Conflict on policy links in the header: the 2025 advice says header menus should use their space for categories and collections, not policy links [L0255.020]. Older advice (2021-2022) puts policy and business pages in the top bar and the header, and ad review requires the legal links to be visible [L1303.024, L1145.011, L1303.034]. Use the top bar for policy and business pages, and keep the header main menu for categories, as the newer advice describes.</p></li>
+<li><p>Menu links may not appear immediately on the website after saving. This is normal, and final menu placement occurs during theme customization [L0092.012].</p></li>
+<li><p>A newly saved menu may not show in the correct spot on the storefront right away. Check the menu placement in the theme settings before assuming the menu is broken [L1319.015].</p></li>
+</ul>
+<h2 id="mega-menus">Mega menus</h2>
+<h3 id="deciding-whether-to-build-one">Deciding whether to build one</h3>
+<ul>
+<li>Do not build mega menus for a demo store. Mega menus are expanded menus showing categories, skill levels, colours, and price ranges. Build them later, when real products are added [L0102.007].</li>
+<li>A mega menu shows a dropdown as a multi-column panel that splits categories into sub-groups such as product type, level, or colour. It only pays off once the store has many real products with sizes, colours, or prices, so it can wait until then [L1018.002].</li>
+<li>In the Manhattan theme, the header settings contain an Add mega menu option. The desktop menu type can stay on mega menu, but adding the mega menu block is optional at the start and can be deleted again [L1018.003].</li>
+<li>Setting up detailed mega menus before any products are live means the menu will show empty or placeholder content, and links may point to the wrong place. Add the mega menu once products with variations are uploaded and collections exist [L1009.008].</li>
+<li>Mega menus make product variations such as size, colour, weight, or skill level easy to reach from the top menu. Customers get to the right product page faster, which tends to raise conversion rate. The feature is most useful once supplier products with several variations are on the store [L1009.009].</li>
+<li>A store can have several mega menus, for example one per main category, plus additional ones for subcategories such as stand-up paddle boards or car racks. Only the main niche category needs a mega menu to start [L1010.011].</li>
+<li>The mega menu is a multi-column dropdown in the Shopify header. It lets shoppers browse by category, type, skill level, or colour from the hover state of a top-level link, and it is meant to make the store easier to navigate and find products in [L1010.001].</li>
+</ul>
+<h3 id="what-a-mega-menu-is-in-the-manhattan-theme">What a mega menu is in the Manhattan theme</h3>
+<ul>
+<li>In the Manhattan theme, a mega menu is a built-in dropdown option under the header settings in the Theme Customizer. It turns a top-level menu item into a wide panel that shows subcategories, filters, and featured products. It does not replace the standard menu, and only the items you choose need to be converted [L1009.001].</li>
+<li>The Manhattan theme includes built-in mega menu support through the Add mega menu option under Shopify Admin &gt; Online Store &gt; Themes &gt; Customize [L0102.012].</li>
+<li>Each mega menu affects only the item it is linked to. The other dropdowns keep their standard look, and each one needs its own name, link, sections, and featured products [L1009.012].</li>
+<li>A mega menu supports up to six columns, though fewer can be used [L1010.006, L0146.008]. Each mega menu can have up to six columns [L0146.008].</li>
+<li>A mega menu allows up to six sections, which can fill the full width of the screen. Use only as many sections as help customers filter and find products, because adding more can clutter the menu [L1009.006].</li>
+</ul>
+<h3 id="fields-in-the-mega-menu-settings">Fields in the mega menu settings</h3>
+<ul>
+<li>The Manhattan theme's Theme Customizer under Header &gt; Mega menu has these fields [L1009.003]:
+<ul>
+<li>Mega menu name (set to the collection name).</li>
+<li>Mega menu link (the collection the top-level item links to).</li>
+<li>Enable mega menu one item (switches the feature on).</li>
+<li>An image and title for each section.</li>
+<li>A link for each section title (can be left blank if no collection exists).</li>
+<li>A select-menu field where a Shopify menu is chosen for that section.</li>
+<li>At the bottom of each mega menu, you choose up to two products to feature.</li>
+</ul></li>
+<li>Each section must be switched on with its own toggle. The first toggle is labelled Enable mega menu one item, and the following sections use the same pattern (Enable mega menu two item, Enable mega menu three item, and so on), up to six sections in total [L1009.011].</li>
+<li>Each mega menu column is configured separately. Enable a mega menu item, which reveals a small caret, then choose an image for the column, set its name, and select the menu it links to. The column name is the heading in the dropdown, and the linked menu's items appear beneath it [L1010.005].</li>
+<li>When a mega menu item is enabled in the theme editor, it is linked to the main menu by default. Change that link to the menu meant for the column, such as a Skill Level menu, before saving, or the column will show the wrong links [L1010.018].</li>
+</ul>
+<h3 id="creating-the-mega-menu">Creating the mega menu</h3>
+<ul>
+<li><p>Shopify places new mega menus on the right by default because it treats them as new menu items. To control placement, create a new menu first, then assign it to the header [L0146.005].</p></li>
+<li><p>A newly created mega menu is placed on the far right of the header, after all existing menu items. Shopify does not allow drag-and-drop reordering of menu items, so moving it next to Home requires changing which menu the header uses [L1010.003].</p></li>
+<li><p>Procedure in the Shopify theme editor [L0146.002, L0146.004]:</p>
+<ol type="1">
+<li>Go to Shopify Admin &gt; Online Store &gt; Themes and click Edit theme to access the store theme editor [L0146.002].</li>
+<li>In the theme editor, click Header, click Add mega menu, name it (for example Surfboards), and link it to its main collection [L0146.004].</li>
+</ol></li>
+<li><p>Procedure to place a mega menu directly after Home [L1010.004]:</p>
+<ol type="1">
+<li>Go to Content &gt; Menus and create a new menu with a Home item (linked to the homepage) and a category item (linked to the category collection).</li>
+<li>Save the new menu.</li>
+<li>Go back to Online Store &gt; Themes &gt; Edit theme and open the Header section.</li>
+<li>In the menu field that currently says main menu, select the new menu and save.</li>
+<li>Click Add mega menu, name it, link it to the category collection, and save.</li>
+</ol>
+<p>[L1010.004]</p></li>
+<li><p>Second procedure to place a mega menu after Home [L0146.006]:</p>
+<ol type="1">
+<li>Go to Content &gt; Menus.</li>
+<li>Click Create new menu.</li>
+<li>Name it (for example Mega Menu).</li>
+<li>Add Home, linking to the homepage.</li>
+<li>Add your main category, linking to its collection.</li>
+<li>Save the menu.</li>
+<li>Go to Online Store &gt; Themes &gt; Edit theme &gt; Header.</li>
+<li>Change the Menu dropdown from Main menu to the new menu name.</li>
+<li>Save changes.</li>
+</ol>
+<p>[L0146.006]</p></li>
+<li><p>After assigning a new menu to the header, click Add mega menu, name it, and link it to its collection to place the mega menu directly after Home [L0146.007].</p></li>
+<li><p>Setup in the Manhattan theme Theme Customizer [L1009.002]:</p>
+<ol type="1">
+<li>Open the Theme Customizer and go to Header &gt; Mega menu.</li>
+<li>Rename the default mega menu item to the name of the collection it belongs to, for example surfboards.</li>
+<li>In the mega menu link field, select the matching collection so that clicking the top-level item opens that collection.</li>
+<li>Turn on Enable mega menu one item and click Save.</li>
+<li>Refresh the published store to check the change. At this point the panel shows only the featured product until sections are added.</li>
+<li>Create the section content (images, titles, linked menus) in the mega menu settings.</li>
+<li>Assign the menus you created in Shopify to each section and click Save after each change.</li>
+<li>Refresh the storefront and hover over the menu item to check the result.</li>
+</ol>
+<p>[L1009.002]</p></li>
+<li><p>Mega menu setting in the 2025 course: a mega menu can be deleted from the Header section of the theme editor and rebuilt from scratch. This is a quick way to restart a menu layout that has become tangled, without repairing each column individually [L1010.023].</p></li>
+<li><p>The Add mega menu button under Header &gt; Mega menu creates an additional mega menu for another top-level menu item [L1009.012].</p></li>
+<li><p>The theme editor preview can show old values after a save. Check the mega menu on the live storefront after saving and refreshing the page, rather than relying on the editor's preview [L1010.021].</p></li>
+</ul>
+<h3 id="building-the-columns-and-sections">Building the columns and sections</h3>
+<ul>
+<li><p>Prepare one small image per mega menu section before you configure the mega menu. The section image field only lets you choose images that are already uploaded. Using a different colour for each section helps you tell them apart [L1009.015].</p></li>
+<li><p>Prepare one image for each mega menu column before building the menu, because the theme editor asks for an image for every column [L1010.020].</p></li>
+<li><p>Create the menus that feed a mega menu section [L1009.004]:</p>
+<ol type="1">
+<li>Click Create menu in the mega menu section selector, which opens Shopify's Menus page.</li>
+<li>Give the menu a name that matches the section, for example surfboards.</li>
+<li>Click Add menu item for each subcategory, enter the item name, and link it to the matching collection using the Add button.</li>
+<li>Add as many items as help visitors find products easily. Keep item names and collection names consistent.</li>
+<li>Click Save menu.</li>
+<li>Return to the Theme Customizer, open the mega menu, and select the new menu for the section. If it does not appear, refresh the page and make sure the menu was saved.</li>
+<li>Click Select, then Save.</li>
+</ol>
+<p>[L1009.004]</p></li>
+<li><p>Procedure to fill a mega menu column with sub-links [L1010.007]:</p>
+<ol type="1">
+<li>Go to Content &gt; Menus and create a menu named after the column, for example Surfboards.</li>
+<li>Add one menu item per option, each linked to its own collection, for example Hybrid, Shortboards, Mid-length Boards, and Longboards.</li>
+<li>Save the menu.</li>
+<li>Return to the mega menu, open the column, click Replace, and select the new menu.</li>
+<li>Save and refresh the page to confirm the links show under the column heading.</li>
+</ol>
+<p>[L1010.007]</p></li>
+<li><p>Procedure to fill a mega menu column, with a different sequence [L0146.009]:</p>
+<ol type="1">
+<li>In the mega menu editor, rename the column (for example Surfboards by Type).</li>
+<li>Select an image for the column.</li>
+<li>Create a new menu with the column name.</li>
+<li>Add menu items (for example Hybrid Surfboards, Shortboards, Mid-Length Boards, Longboards).</li>
+<li>Link each item to its corresponding collection.</li>
+<li>In mega menu settings, assign this menu to the column.</li>
+<li>Repeat for other columns (for example Skill Level with Beginner and Pro; Color with Blue, Yellow, Red).</li>
+</ol>
+<p>[L0146.009]</p></li>
+<li><p>Procedure to add another section to an existing mega menu in the Manhattan theme [L1009.013]:</p>
+<ol type="1">
+<li>Open the Theme Customizer, go to Header &gt; Mega menu, and open the mega menu for the top-level item.</li>
+<li>Scroll down and enable the next section toggle, for example Enable mega menu two item.</li>
+<li>Select an image for the section from the images already uploaded.</li>
+<li>Enter the section title.</li>
+<li>Link the title to its collection, or leave the link empty if the collection does not exist yet.</li>
+<li>Select the Shopify menu that should appear under the title.</li>
+<li>Click Save, refresh the storefront, and hover over the top-level item to check the result.</li>
+</ol>
+<p>[L1009.013]</p></li>
+<li><p>After creating mega menu columns, go to Content &gt; Menus, edit the Mega Menu, add the remaining links (for example Swimwear, Essentials, Car Racks) as simple menu items, then save [L0146.011].</p></li>
+<li><p>To restore the other top-level links after switching to the new menu [L1010.012]:</p>
+<ol type="1">
+<li>Go to Content &gt; Menus and open the menu used by the header.</li>
+<li>Click Add new menu item and search for each collection you want, such as Swimwear, Essentials, and Car Racks.</li>
+<li>Check the items off and save.</li>
+<li>Refresh the storefront to confirm the links appear in the header.</li>
+<li>Before replacing a menu, take a screenshot of its items so the original structure can be rebuilt.</li>
+</ol>
+<p>[L1010.012]</p></li>
+<li><p>The menu selector in each mega menu section lists the default Shopify menus, such as Main menu and Quick links, plus any custom menus you have saved. A new menu appears only after it has been saved in Shopify, and the Theme Customizer may need to be reloaded before it shows up [L1009.017].</p></li>
+<li><p>A Shopify menu that is not yet filled or saved may not show in the mega menu selector. Refresh the Theme Customizer after creating a menu, and check that the menu was saved before expecting it to appear [L1009.005].</p></li>
+<li><p>A menu created under Content &gt; Menus does not appear in a mega menu column's menu selector until the list is refreshed. If the new menu is missing, reload the theme editor and check again before assuming it was not saved [L1010.019].</p></li>
+<li><p>Each mega menu section can link to a collection or to nothing. If the matching collection does not exist yet, a section can be left unlinked or linked to a temporary collection, and the link should be updated once the real collection is live [L1009.007].</p></li>
+<li><p>Example from a surfboard shop: the surfboards mega menu can have three sections. Board type (hybrid, shortboard, mid length, long board), skill level (beginner, intermediate, pro), and colour (for example blue, pink, red, white). Sections for skill level and colour can first link to the general surfboards collection until filtered collections are created [L1009.016].</p></li>
+<li><p>Example of a surfboard store with three mega menu columns: Surfboards (Hybrid, Shortboards, Mid-length Boards, Longboards), Skill Level (Beginner, Intermediate, Pro), and Color (Blue, Yellow, Red). Each was built as its own menu and assigned to a column. The Color menu was added to column three after the first two were set up [L1010.009].</p></li>
+<li><p>Choose column types to match how customers sort the products, such as product type, skill level, colour, material, wattage, or price range, based on the attributes the supplier data provides [L1010.006].</p></li>
+</ul>
+<h3 id="featured-products">Featured products</h3>
+<ul>
+<li>A mega menu can show up to two featured products per column or mega menu to highlight best sellers or priority items. Choose the best-selling or highest-profit products, and update them as sales data changes. Choose the products you most want to sell at launch, and replace them with best sellers once sales data exists [L0146.010, L1009.010, L1010.010].</li>
+</ul>
+<h3 id="mega-menu-checklist">Mega menu checklist</h3>
+<ol type="1">
+<li>Create your primary mega menu with logical columns that reflect how customers shop (by type, skill level, colour, brand, and so on) [L0146.016].</li>
+<li>Add up to two featured products to each column [L0146.016].</li>
+<li>Add remaining menu links as simple items [L0146.016].</li>
+<li>Tag all products with relevant attributes [L0146.016].</li>
+<li>Expand collection filter tag lists based on your product tags [L0146.016].</li>
+<li>Test navigation and filters for usability [L0146.016].</li>
+</ol>
+<p>[L0146.016]</p>
+<h2 id="theme-settings-for-menus">Theme settings for menus</h2>
+<h3 id="header-settings">Header settings</h3>
+<ul>
+<li>Header &gt; Menu lets you choose which navigation menu appears in the header. The default is Main menu. Click Change to select another menu created earlier in Shopify's navigation settings [L0775.022].</li>
+<li>The header menu is linked to the main menu by default and should stay linked [L1018.001].</li>
+<li>Header &gt; Desktop menu type offers Mega menu, Drawer, and Dropdown. Mega menu is the option used in the example. Drawer turns the menu into a hamburger icon that opens in a side panel [L0775.023].</li>
+<li>The desktop menu type offers mega menu (the default in this example), drawer, and a third option. Drawer shows a hamburger icon and opens the menu in the sidebar [L1309.018].</li>
+<li>Header menu typography: the menu font size is 14 by default, and font weight 500 is the usual setting for menu text, where weight means boldness. Change the size only if your chosen font looks too small or too large at 14 [L0775.025].</li>
+<li>Navigation menu colour scheme used in the example: background black, first-level link white, sub menu background white, sub menu link blue, sub menu border pink, active link white [L1309.022].</li>
+</ul>
+<h3 id="checking-and-troubleshooting">Checking and troubleshooting</h3>
+<ul>
+<li>After saving a menu, reload the live storefront to confirm the new items and any dropdowns appear as intended [L1303.035].</li>
+<li>Mega menu not appearing: check the Shopify theme customizer to confirm the mega menu option is selected, then compare with the support screenshot [L0836.052 (2024)].</li>
+<li>Test the menu for hover sensitivity bugs before scaling traffic [L1225.024].</li>
+<li>In the 2025 course, check whether a top-level item is a mega menu by hovering over it in the live preview [L1018.017].</li>
+<li>Refresh the storefront after saving. Menu changes sometimes take a minute or more to show on the live store, so refresh before judging the result [L1320.003].</li>
+<li>Save, then refresh the page. Changes in the menu editor only show on the storefront after you click Save and refresh [L1319.006].</li>
+<li>Shopify menu link search: use the exact collection name to avoid a wrong match [L1320.014].</li>
+</ul>
+<h2 id="common-mistakes">Common mistakes</h2>
+<ul>
+<li>If you save without dragging items to the right, every item stays on the top level and no dropdown appears [L1319.006].</li>
+<li>Menus with placeholder # links send visitors to the homepage [L1303.020].</li>
+<li>Mega menu columns showing the wrong links usually mean the column's menu link was left on the main menu [L1010.018].</li>
+<li>Linking to Amazon sends shoppers away and loses sales [L0551.028 (older, 2020)].</li>
+<li>Footer menus with nested items show only top-level links on the live store [L0681.017 (older, 2021-2022)].</li>
+<li>The default footer menu loads the main menu items, which is not useful in the footer [L1303.026 (older, 2021-2022)].</li>
+<li>Choosing a policy or page from the wrong list links to the wrong page [L1319.014].</li>
+</ul>
+<h2 id="menus-and-navigation-structure">Menus and navigation structure</h2>
+<h3 id="site-structure-and-levels">Site structure and levels</h3>
+<p>A typical e-commerce site has three levels, with the homepage at the top:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Page</th>
+<th>Position and links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Homepage</td>
+<td>Root domain entry point; links to all level 2 pages through the main menu, bottom navigation, and search bar</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Collection pages (Shopify: collections)</td>
+<td>Grouped product tiles; each tile opens a product page</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Single pages (Shopify: pages)</td>
+<td>About Us, Contact Us, Shipping Policy, Privacy Policy, Terms of Sale, Returns Policy; linked from the homepage and navigation</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Blog page</td>
+<td>Lists blog posts; each post opens its own page</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Product pages</td>
+<td>Reached from collection pages; use one template for all products</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Blog posts</td>
+<td>Reached from the blog page; created only after launch</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1463.013]</p>
+<h3 id="when-navigation-matters">When navigation matters</h3>
+<ul>
+<li>Site navigation matters most when the store has many products (product numbers in the hundreds or more) or a large amount of content besides product pages. [L1522.003]</li>
+<li>A single-product store needs little navigation beyond getting shoppers to that product. [L1522.003]</li>
+</ul>
+<h2 id="header-menu">Header menu</h2>
+<h3 id="keeping-the-header-short">Keeping the header short</h3>
+<ul>
+<li>Keep the header menu short when the store sells one main product or only a few items, using just the essential links such as shop, collection, or the product itself. [L1326.026]</li>
+<li>Stores with many product categories can add more header menu entries to help visitors find each group. [L1326.026]</li>
+<li>Keep the top menu minimal, for example only Shop and Contact. A focused layout keeps the visitor's attention on the product description and the buying decision. [L1345.054]</li>
+</ul>
+<h3 id="changing-the-header-menu">Changing the header menu</h3>
+<ol type="1">
+<li>Create the new menu under <strong>Online Store &gt; Navigation</strong> with its own items. [L1326.025]</li>
+<li>Open the header section in the theme editor under <strong>Online Store &gt; Themes &gt; Customize</strong>. [L1326.025]</li>
+<li>Change the menu setting from <strong>Main menu</strong> to the new menu. [L1326.025]</li>
+</ol>
+<h2 id="search-bar-in-the-header">Search bar in the header</h2>
+<ul>
+<li>Place a large, prominent, sticky search bar in the site header. Returning visitors often land on the homepage looking for a product they already viewed, so the search bar gets them there fastest. [L1522.004]</li>
+<li>The search bar should show dynamic results as the shopper types, displayed in a dropdown under the bar. [L1522.005]</li>
+<li>Avoid sending shoppers to a separate search results page because it adds a step. [L1522.005]</li>
+</ul>
+<h2 id="footer-menu-and-quick-links">Footer menu and quick links</h2>
+<h3 id="setting-up-the-footer-menu">Setting up the footer menu</h3>
+<ol type="1">
+<li>Go to <strong>Content &gt; Menus</strong>. [L1331.034]</li>
+<li>Create or select a footer menu. [L1331.034]</li>
+<li>In the theme editor, open the <strong>Footer</strong> section and the <strong>Menu - Quick links</strong> block. [L1331.034]</li>
+<li>Select the footer menu instead of the main menu, since the main menu has only three items. [L1331.034]</li>
+<li>Add links to About us, a product page, Contact us, and the policy pages. [L1331.034]</li>
+<li>Save and refresh the preview to confirm the links appear. [L1331.034]</li>
+</ol>
+<h2 id="breadcrumb-navigation">Breadcrumb navigation</h2>
+<ul>
+<li>Breadcrumb navigation, the line of links along the top of product and collection pages, adds internal links and should be kept on. Some store owners turn it off because they dislike its look, and that is a mistake. [L1465.021]</li>
+<li>In most Shopify themes, breadcrumb navigation is an on/off option in the theme's settings. [L1465.022]</li>
+<li>If a theme has no breadcrumb navigation at all, have a developer add it, which is usually not a major coding job. [L1465.022]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>To add a mega menu in Shopify, go to Online Store &gt; Themes &gt; Edit theme, open the Header section in the left panel, and click Add mega menu. Name it and set its link to the relevant collection, such as the main category collection. [L1010.002]</p></li>
+<li><p>Shopify menus organize how shoppers move through the store by linking to collections, pages, policy pages and blog posts. Each theme places menus in fixed spaces, so the menus you build are shown in those spaces. [L1319.001]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/09-collections-tags-and-filters/"><span class="k">&larr; Previous</span><span class="v">Collections, tags and filters</span></a><a class="nx" href="../../04-store-build-and-shopify/11-homepage-and-theme-editor-customization/"><span class="k">Next &rarr;</span><span class="v">Homepage and theme editor customization</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

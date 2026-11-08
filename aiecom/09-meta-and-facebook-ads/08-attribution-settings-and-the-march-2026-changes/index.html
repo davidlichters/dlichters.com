@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Attribution settings and the march 2026 changes | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.8: Attribution settings and the march 2026 changes.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/08-attribution-settings-and-the-march-2026-changes/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Attribution settings and the march 2026 changes | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.8: Attribution settings and the march 2026 changes."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/08-attribution-settings-and-the-march-2026-changes/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/08-attribution-settings-and-the-march-2026-changes/">Plain version</a></div><h1>9.8 Attribution settings and the march 2026 changes</h1><article><h2 id="attribution-settings-for-standard-setups">Attribution Settings for Standard Setups</h2>
+<h3 id="standard-vs-incremental-attribution">Standard vs. Incremental Attribution</h3>
+<ul>
+<li>Standard attribution is the setting for nearly all accounts. Meta selects engaged-view by default, and that default must be overridden to None to keep only the 7-day click window. [L0865.024]</li>
+<li>Incremental attribution uses more complex models to estimate whether an ad caused a conversion, while standard attribution uses the click and view windows. Standard attribution is the choice for nearly all accounts, and incremental attribution is only worth testing in specific cases. [L0865.064]</li>
+<li>For a CBO test ad set, keep Customer life cycle strategy on Get conversions from all audiences and the Attribution model on Standard, while the conversion event stays on Purchase. [L0348.031]</li>
+</ul>
+<h3 id="setting-standard-attribution-step-by-step">Setting Standard Attribution Step by Step</h3>
+<ol type="1">
+<li>Open the ad set and go to Show more settings. [L0865.022]</li>
+<li>Under Attribution setting, click the pencil and select Standard attribution (not Incremental attribution). [L0865.022]</li>
+<li>Open Standard attribution selections with its pencil. [L0865.022]</li>
+<li>Change the default of 7-day click, 1-day engaged-view, 1-day view to 7-day click only. [L0865.023]</li>
+<li>Set Engaged-view to None and View-through to None. [L0865.023]</li>
+</ol>
+<h3 id="setting-timing-rule">Setting Timing Rule</h3>
+<ul>
+<li>Attribution settings can only be changed before a campaign or ad set is published. Once published they are locked, so the only fix is to duplicate the item and start over, which is why the settings must be checked before pressing Publish. [L0865.021]</li>
+</ul>
+<h2 id="attribution-windows-7-day-click-vs-engage-through">Attribution Windows: 7-Day Click vs. Engage-Through</h2>
+<h3 id="why-the-window-matters-for-reading-data">Why the Window Matters for Reading Data</h3>
+<ul>
+<li>Meta attribution can arrive days late, and at the time of the lesson the attribution window was 7 days. A sale can therefore appear after a campaign was switched off, so the start date in the name helps you read the data correctly. [L0648.007]</li>
+</ul>
+<h2 id="what-changed-on-march-17-2026">What Changed on March 17, 2026</h2>
+<h3 id="the-change-in-reporting">The Change in Reporting</h3>
+<ul>
+<li>On March 17 (2026) Meta redefined its attribution settings, so the same ad performance is reported differently without any new attribution windows being added. Ads Manager shows a grey notice at the top of the account about this change. [L1022.001]</li>
+<li>Before March 17, click-through attribution counted any interaction with an ad, including link clicks, likes, comments, saves, shares, story swipe-ups, Shop Now clicks, and clicks on carousels or dynamic catalog ads. After the change, click-through only counts real clicks, and all other interactions moved into engage-through. [L1022.002]</li>
+<li>Engage-through now covers all engagement types such as likes, comments, saves and shares. Engaged-view counts an ad view longer than a set threshold, reportedly around six to seven seconds, though that figure still needs confirmation. [L1022.003]</li>
+</ul>
+<h3 id="effect-on-reported-revenue">Effect on Reported Revenue</h3>
+<ul>
+<li>Because revenue moved from click-through into engage-through, accounts that only report click-through saw conversions and revenue drop overnight even though ad performance itself did not change. Some accounts still report noticeably less revenue on click-through than before the update. [L1022.004]</li>
+<li>Adding click-through and engage-through together gives a number close to what was reported before the March 17 change. That is why the combined setting became the new reference for evergreen account structures. [L1022.005]</li>
+</ul>
+<h3 id="recommended-settings-after-the-change">Recommended Settings After the Change</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Recommended setting</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New campaigns from May 2026</td>
+<td>7-day click plus 1-day engage-through</td>
+<td>Set at ad set level. The 7-day click window was previously the only setting in use. [L1022.006]</td>
+</tr>
+<tr>
+<td>Many accounts after the March 2026 redefinition</td>
+<td>1-day click plus 1-day engage-through</td>
+<td>Came closest to the performance previously reported by 7-day click alone. Reported numbers stayed slightly above historical levels even with this setting. [L1022.026]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Recommended attribution setting for new campaigns from May 2026: 7-day click plus 1-day engage-through. It is set at ad set level, and the 7-day click window was previously the only setting in use. [L1022.006]</li>
+<li>After Meta's March 2026 attribution redefinition, data from many accounts showed that 1-day click plus 1-day engage-through came closest to the performance previously reported by 7-day click alone. Even with this combined setting, reported numbers stayed slightly above the historical levels. [L1022.026]</li>
+</ul>
+<h2 id="transition-rules">Transition Rules</h2>
+<h3 id="principles-for-changing-live-accounts">Principles for Changing Live Accounts</h3>
+<ul>
+<li>The attribution setting of a published ad set cannot be changed afterwards, so an existing asset cannot simply be switched to 7-day click plus 1-day engage-through. The transition has to be done with new ad sets or campaigns. [L1022.012]</li>
+<li>Switching the whole ad account to the new attribution setting at once resets the learning phase of every asset and causes a large performance drop. The transition should happen gradually over a longer period. [L1022.013]</li>
+<li>Putting an ad set with a new attribution setting into the same CBO campaign as ad sets with the old setting makes Meta move most of the budget to the one with more attributed conversions. The new setting should be tested in a separate campaign instead. [L1022.015]</li>
+</ul>
+<h3 id="transition-plan-by-account-type">Transition Plan by Account Type</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Account type</th>
+<th>Pace</th>
+<th>Planned timeline</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Satisfied with performance</td>
+<td>Slow, new campaign runs alongside the old one</td>
+<td>About six months</td>
+<td>Little urgency, so the risk of a large drop is avoided. [L1022.014, L1022.016]</td>
+</tr>
+<tr>
+<td>Break-even</td>
+<td>Bigger changes acceptable</td>
+<td>Short</td>
+<td>Performance was weak to begin with, so there is little to lose. [L1022.014, L1022.018]</td>
+</tr>
+<tr>
+<td>Losing money on first order</td>
+<td>Fast switch with a short overlap</td>
+<td>About three days of overlap</td>
+<td>Little to lose, so bigger changes are acceptable. [L1022.014, L1022.017]</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="transition-procedure-for-a-satisfied-account">Transition Procedure for a Satisfied Account</h3>
+<ol type="1">
+<li>Keep the existing campaign running with its current attribution setting. [L1022.016]</li>
+<li>Create a new campaign that uses 7-day click plus 1-day engage-through at ad set level. [L1022.016]</li>
+<li>Launch all new ad sets and every new batch of creative only in the new campaign, never by adding the new setting to the existing campaign. [L1022.016]</li>
+<li>Keep the original campaign running for as long as it produces a positive contribution margin, letting the new campaign take over gradually. [L1022.016]</li>
+<li>Plan for a transition period of about six months. [L1022.016]</li>
+</ol>
+<h3 id="transition-procedure-for-an-account-losing-money-on-first-order">Transition Procedure for an Account Losing Money on First Order</h3>
+<ol type="1">
+<li>Duplicate the entire campaign that is currently running. [L1022.017]</li>
+<li>Switch the duplicate to 7-day click plus 1-day engage-through. [L1022.017]</li>
+<li>Run the original and the duplicate side by side for about three days. [L1022.017]</li>
+<li>Once the new campaign outperforms the old one, which usually happens almost immediately, turn off the original campaign. [L1022.017]</li>
+<li>Run only the new campaign from then on and send all new ad sets into it. [L1022.017]</li>
+</ol>
+<h3 id="transition-procedure-for-a-break-even-account">Transition Procedure for a Break-Even Account</h3>
+<ul>
+<li>Copy the current campaign, change every attribution setting in the copy to 7-day click plus 1-day engage-through, load all the new creative into that copy, and from then on treat the new campaign as the account's structure. [L1022.018]</li>
+<li>Another route is to copy the best-performing ad sets into a fresh campaign with the correct setting, or to start new ad sets inside the existing campaign with that setting. Meta will favor the new ad sets, which is fine here because performance was weak to begin with. [L1022.018]</li>
+</ul>
+<h2 id="incremental-attribution-older-advice-2025-onward">Incremental Attribution (Older Advice, 2025 Onward)</h2>
+<h3 id="what-it-is">What It Is</h3>
+<ul>
+<li>Incremental attribution is an optimization option available since around October or November 2025 that aims at incremental conversions, using machine learning to predict whether an ad caused a purchase. After the March 2026 change, incremental reporting was in some accounts higher than 7-day click, which made it worth testing. [L1022.020]</li>
+<li>A purchase from someone who had never seen the brand before counts as incremental, while a buyer who had already visited the site, added to cart or was on the email list is unlikely to count as incremental. Results from incremental optimization therefore depend heavily on how many returning customers reach the account. [L1022.021]</li>
+<li>Some accounts show an option at ad set level to optimize purely for new customers under incremental attribution. [L1022.022]</li>
+<li>Incremental attribution optimization worked well for large brands that already optimize for incrementality, but it performed poorly for many smaller accounts when it first appeared in late 2025. Its results depend on how many returning customers the account already receives, so it should be tested before it is relied on. [L1022.027]</li>
+</ul>
+<h3 id="test-procedure">Test Procedure</h3>
+<ol type="1">
+<li>Create a separate campaign with your best-performing evergreen ad sets. [L1022.023]</li>
+<li>Run it with 7-day click plus 1-day engage-through as the optimization setting. [L1022.023]</li>
+<li>Note the incremental number that comes out of the campaign. [L1022.023]</li>
+<li>Break down new customer ROAS by audience segment and by spend split. [L1022.023]</li>
+<li>Keep incremental only if it produces a better new customer ROAS than the 7-day click plus 1-day engage-through campaign. [L1022.023]</li>
+</ol>
+<h2 id="customer-lifecycle-settings">Customer Lifecycle Settings</h2>
+<h3 id="where-the-settings-are">Where the Settings Are</h3>
+<ul>
+<li>Customer lifecycle strategy sits at ad set level near the top of the screen. It offers Acquire new customers with exclusions, for example excluding purchasers from the last 180 days via the pixel and an existing customer list. [L1022.024]</li>
+<li>To tell Meta which buyers count as existing customers, open Account settings and scroll down to the existing customers section. Once this is set, the campaign reports the split between new and existing customers. [L1335.050]</li>
+</ul>
+<h3 id="status-of-the-setting">Status of the Setting</h3>
+<ul>
+<li>Customer lifecycle strategy has shown poor results as of May 29, 2026, so it is not recommended for acquiring new customers. Incremental attribution is the better option to test for that goal. [L1022.025]</li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/07-ads-manager-columns-custom-metrics-and-naming/"><span class="k">&larr; Previous</span><span class="v">Ads manager columns, custom metrics and naming</span></a><a class="nx" href="../../09-meta-and-facebook-ads/09-campaign-structure-cbo-abo-objectives-and-budget-setup/"><span class="k">Next &rarr;</span><span class="v">Campaign structure: CBO, ABO, objectives and budget setup</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

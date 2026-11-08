@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Automation and AI workflows | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 20.4: Automation and AI workflows.">
+<link rel="canonical" href="https://dlichters.com/aiecom/20-scaling-team-and-processes/04-automation-and-ai-workflows/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Automation and AI workflows | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 20.4: Automation and AI workflows."><meta property="og:url" content="https://dlichters.com/aiecom/20-scaling-team-and-processes/04-automation-and-ai-workflows/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">20. Scaling, team and processes</a> &rsaquo; <a href="../../../ecom/20-scaling-team-and-processes/04-automation-and-ai-workflows/">Plain version</a></div><h1>20.4 Automation and AI workflows</h1><article><h2 id="readiness-when-a-task-is-ready-to-automate">Readiness: when a task is ready to automate</h2>
+<ul>
+<li>A task that repeats regularly is ready for automation without first being perfected. Repetition is the criterion, not the optimization level. [L0285.006]</li>
+<li>Automation fits tasks that occur day in and day out. [L0285.002]</li>
+<li>Automate capturing orders only once suppliers reliably have stock. Until then, capture orders manually and have a team member confirm stock on each order. <em>(Older advice, Source A 2021.)</em> [L0834.104]</li>
+<li>Eliminate the cause of a problem before automating the response to it, because a problem that never occurs needs no handling. Automation should follow once the root causes of calls, emails and refunds have been addressed. [L0910.042]</li>
+<li>Automate repeated customer-facing steps once volume grows, because manual handling becomes overwhelming. Example: quiz replies were moved to a team member for a personal touch, but the team returned to automation after about a week because the automated version was better. [L0337.038]</li>
+<li>Identify repetitive manual tasks documented in Standard Operating Procedures. Any task that recurs consistently can be turned into a Zapier automation, which reduces human error and frees team capacity for high-value work. [L0286.033]</li>
+<li>Any task that employees or team members repeat the same way multiple times is a strong candidate for automation. It saves money and frees people for higher-value work. [L0312.004]</li>
+<li>Automation handles rule-based, repetitive tasks (trigger X, perform Y). It does not replace human judgment for exceptions, negotiation or creative decisions. Use the time it frees for those tasks. [L0286.036]</li>
+<li>The aim of an automated dropshipping store is to keep daily manual work to 30 minutes or less, even when the store is very profitable. Judge every tool and automation by how much recurring manual work it removes. [L0437.011]</li>
+</ul>
+<h2 id="manual-first-then-automate">Manual first, then automate</h2>
+<ul>
+<li>Execute each process once manually to understand it, then transfer it to automation for ongoing execution. [L0285.002]</li>
+<li>In the early stage, prioritize manual, non-scalable work, such as personal email follow-ups and individual abandoned-checkout outreach. This extracts maximum conversions from existing traffic. As you scale, these tasks can be automated or delegated. The manual work also generates customer feedback that reveals optimization opportunities. [L0208.012]</li>
+<li>For a team, automate the order email step only after manual processing has worked smoothly for several orders. Add automation once the manual process is verified. [L0964.149]</li>
+<li>Supplier order emails and the Trello card move are done by hand at first. Once several orders have gone through without errors, add a Zapier automation that moves the card to "sent to supplier" when the order email goes out. Add a note on the card showing it was moved automatically. [L0964.160]</li>
+<li>Add an extra note to an automated card when an automation moves it, so staff can tell it was not handled manually. [L0964.150]</li>
+<li>Study the automations module only after the store receives paid traffic and runs operationally, because automations are most useful once you understand the baseline workflow. <em>(Older advice, Source A 2020.)</em> [L0268.076]</li>
+<li>Learning automation pays off over time. After you understand how one automation works, you start seeing similar opportunities across the business, such as inventory updates, customer emails, competitor monitoring and report generation. [L0287.009]</li>
+</ul>
+<h2 id="core-automation-sequence-abandoned-cart-order-tracking-profit-tracking">Core automation sequence: abandoned cart, order tracking, profit tracking</h2>
+<p><strong>Two sequences are given. Both place abandoned cart first and profit tracking near the end. Use the five-step list for the full build-out. Use the three-step list as the shorter core set.</strong></p>
+<p>Full priority sequence:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Automation</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Abandoned cart automation</td>
+<td>[L0192.001]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Order processing automation</td>
+<td>[L0192.001]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Google Sheets automation</td>
+<td>[L0192.001]</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Order tracking and reviews automation</td>
+<td>[L0192.001]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Profit tracking automation</td>
+<td>[L0192.001]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>If you maintain a blog, also create a content distribution automation. [L0192.001]</li>
+<li>Once the business is profitable, hire your first employee to handle operations. [L0192.001]</li>
+</ul>
+<p>Three-step core set (the same list appears in two source units):</p>
+<ol type="1">
+<li>Set up the abandoned cart automation. [L0393.018, L0532.022]</li>
+<li>Set up the order tracking automation. [L0393.018, L0532.022]</li>
+<li>Set up the profit tracking automation. [L0393.018, L0532.022]</li>
+</ol>
+<p>Advanced automation for outsourcing is a later step. It fits once the core processes already run and the store needs to hand work to others. [L0544.013]</p>
+<h2 id="time-saved-and-where-it-goes">Time saved and where it goes</h2>
+<ul>
+<li>Automation is meant to free time. Campaign management, bid optimization, and Google and Facebook ad bid optimization together typically take about 5 hours each. Use the saved hours for growth instead of manual adjustments. [L1033.015]</li>
+<li>Time saved by automation should move to higher-leverage work: product titles, product page conversion rate, cross-channel feed distribution, branding and cold social funnels. For example, five hours of bid tweaking can go to product titles or product pages instead. [L0454.040]</li>
+<li>Automate in steps rather than everything at once. As paid traffic becomes more consistent, shift attention to branding, conversion rate optimization, SEO, email marketing, social media, content marketing and influencer outreach. [L0454.042]</li>
+<li>Automation and outsourcing let order volume, sales and customer count grow without a matching increase in work, manpower or hours, which is what makes the business ready to scale. [L0506.012]</li>
+<li>Automation templates can be used to automate most store operations, and ready-made templates can be set up directly in the system. [L0506.013]</li>
+</ul>
+<h2 id="learning-the-stack">Learning the stack</h2>
+<ol type="1">
+<li>Use each tool in the stack yourself at least once to learn how it works: Shopify, Facebook page, Google Sheets, Trello, Slack and Zapier. [L0437.012]</li>
+<li>Only after you understand each tool, set up the automations that connect them. [L0437.012]</li>
+<li>Keep the free versions of Slack, Trello and Google Sheets unless a real limit is reached. [L0437.012]</li>
+<li>Pay only for Zapier's $20 per month plan when you need the Shopify integration. [L0437.012]</li>
+</ol>
+<ul>
+<li>Automations work like a virtual employee that handles repeatable tasks such as order tracking, posting and sending notifications. Connect each automation through Zapier and have it report results to Slack or a shared sheet. [L0437.013]</li>
+<li>Automation platforms cost approximately $20 per month and reliably execute tasks, without the operational costs and risks of employees: no sick days, errors, salary increases or staff turnover. [L0236.001]</li>
+<li>Process automation costs $20 per month and runs 24 hours a day, 7 days a week, 365 days a year, including holidays. [L0285.004]</li>
+<li>Automation provides reliable execution without errors once configured, runs without interruption from illness or other human factors, eliminates requests for raises, preserves business trade secrets and continuously improves its capabilities. This frees the owner for work that needs human judgment and strategic thinking. [L0285.003]</li>
+<li>Automations are not free of trade-offs. Automated email sequences sometimes arrive at suboptimal times for individual customers, such as during backorders or shipping delays. This timing variance is an acceptable trade-off for operational scalability and simple systems, and it causes minimal harm overall. <em>(Older advice, Source B 2021-22.)</em> [L0203.014]</li>
+<li>Manual updating of order notes in Asana is the weakest operational friction point. Automation or workflow redesign would reduce this burden. [L0230.025]</li>
+</ul>
+<h2 id="zapier-and-trello-order-flows">Zapier and Trello order flows</h2>
+<p><strong>Trello order flow (Source A):</strong></p>
+<ol type="1">
+<li>Customer places order: Zap 1 automatically creates a card in paid orders with complete order details (name, email, product, SKU, shipping address). [L0292.008]</li>
+<li>When the supplier ships, mark fulfillment as shipped in Shopify. Zap 2 automatically moves the card to shipped orders. [L0292.008, L0286.013]</li>
+<li>When tracking shows delivery, manually move the card to delivered and pending review. [L0292.008]</li>
+<li>Contact the customer by phone, email or text using the follow-up script to request a review and feedback. [L0292.008]</li>
+<li>Once the review is received, move the card to the reviewed column. [L0292.008]</li>
+<li>Goal: ensure no order is forgotten and every customer receives follow-up within days of delivery. [L0292.008]</li>
+</ol>
+<ul>
+<li>When an order is marked as shipped in Shopify, Zapier moves its Trello card from the "Sent to Supplier" list to the "Ship Orders" list, which removes manual card movement. [L0286.013]</li>
+<li><strong>Two ways to set the delivered move are given.</strong> When you check tracking yourself, move the card by hand on delivery (step 3 above). [L0292.008] When you automate it, set the delay between "fulfilled" and "delivered" in Trello to match the usual delivery time, for example 7 days after fulfillment. [L0359.101]</li>
+<li>Supplier order automation: after all configuration is complete, toggle the switch labeled "off by default" to "on". The Zap then immediately processes all new paid orders according to the rules you set. [L0283.011]</li>
+<li>After activating the Zap, monitor it for the first few orders. Check the Shopify admin and the BCC emails in your inbox, and confirm emails are being submitted to suppliers correctly. Verifying the initial orders confirms the setup works before you rely on it for all orders. [L0283.014]</li>
+<li>The Trello board is a management dashboard that needs no daily involvement. If the paid orders list holds several cards with old dates, that signals slow supplier processing or internal fulfillment gaps, so you can intervene quickly. [L0292.010]</li>
+<li>Order tracking and review follow-up can be self-managed or delegated to a virtual assistant. The system scales from low to high volume without manual intervention. As volume grows, systematic tracking stops orders slipping through with new or untested suppliers and keeps customer contact consistent for review collection. [L0292.012]</li>
+</ul>
+<h2 id="custom-order-automations">Custom order automations</h2>
+<ul>
+<li>This automation applies to stores that offer customized product versions (varying sizes, colors, heights or specifications), or to B2B businesses handling bulk orders of 50 or more units that require price quotes. [L0284.002]</li>
+<li>B2B bulk orders handled through quote forms typically involve 50 or more units per request. [L0284.014]</li>
+<li>Custom order forms typically capture: customer name, email address, phone number, geographic location or company, and a description of the desired product customization or specifications. [L0284.011]</li>
+</ul>
+<p>Build the custom order automation in Zapier as follows:</p>
+<ol type="1">
+<li>Set WuFu (as written in the source) or Typeform as the trigger, selecting the "Form Completed" event. [L0284.010]</li>
+<li>Add an action: send a Slack private message containing the customer name, email, phone number, location and inquiry details. [L0284.010]</li>
+<li>Add a second action: insert a new row into the Google Sheets tracking sheet with all lead information. [L0284.010]</li>
+<li>Both actions run automatically in sequence when the form is submitted on the website. [L0284.010]</li>
+</ol>
+<h2 id="customer-facing-automations-and-thank-you-notes">Customer-facing automations and thank-you notes</h2>
+<ul>
+<li>Thank-you note with Scribeless (Source B, <em>older advice, 2021-22</em>):
+<ol type="1">
+<li>Create the thank-you note template inside Scribeless. [L0406.024]</li>
+<li>Confirm that the Scribeless and Shopify integration is active, so the note is sent automatically when an order is placed. [L0406.024]</li>
+<li>Add a step to the order-processing SOP for the virtual assistant or order processor: when an order is placed, make sure the Scribeless thank-you note is sent along with processing the order. [L0406.024]</li>
+<li>The team member only needs to check that the note has been sent, because the process is mostly automated. [L0406.024]</li>
+</ol></li>
+</ul>
+<h2 id="blog-and-content-distribution">Blog and content distribution</h2>
+<ul>
+<li>Manually sharing a blog post to social media takes 5-15 minutes per post when a person does it. [L0312.002]</li>
+<li>Setting up the complete WordPress or Shopify blog automation in Zapier takes approximately 10 minutes. [L0312.005]</li>
+<li>Blog automation increases the visibility of content already being created, keeps social media pages active and current, maintains the perception of an active business, and saves team time on repetitive distribution tasks. [L0312.008]</li>
+</ul>
+<h2 id="ad-account-and-ad-launch-automation">Ad account and ad launch automation</h2>
+<ul>
+<li><em>Older advice, Source A 2019:</em> Set up ad account automation once by giving Google, Facebook, Bing and Pinterest a fixed set of rules they follow on their own. Once the rules are active, campaigns run without daily manual management or an agency. [L1086.001]</li>
+<li><em>Older advice, Source A 2019:</em> Automate the repetitive operational tasks staff used to do every day, then move those people toward supplier relationships, customer experience and building unique offers. The aim is to shift human time to higher-value work, not to cut people for their own sake. [L1086.002]</li>
+<li>Example rule: every 7 days, check Meta ad creatives performing below $35 CPA and automatically launch those winning creatives on TikTok. Apply the same automation across several platforms (Meta, TikTok, Snapchat, Pinterest) while you manage budget increases and campaign optimization by hand. [L0207.009]</li>
+<li>Ad Manage.ai saves 20-40 hours per month through automations, integrated analytics and one-click ad launches. It removes the need to switch between multiple platforms. [L0207.011]</li>
+</ul>
+<h2 id="automation-versus-outsourcing">Automation versus outsourcing</h2>
+<ul>
+<li>Outsourcing means hiring humans to perform business tasks. Automation means using tools, apps and bots to execute processes automatically. [L0285.001]</li>
+<li>Outsourcing means buying a service from a third party in place of an in-house resource, and it adds capabilities the owner lacks. It is not the same as automation, which removes the human step entirely. The two can be combined, but they solve different problems. [L1122.001]</li>
+<li>Example: setting up automated email sequences that nurture leads and close sales is automation, because the repeated manual work of writing and sending disappears. Paying someone to write and send those emails by hand would be outsourcing, which is a different thing. [L1122.030]</li>
+<li>Compare the two on cost and reliability: automation runs for about $20 per month with no sick days or turnover, while staff bring the costs and risks listed under readiness and cost above. [L0236.001, L0285.003, L0285.004]</li>
+</ul>
+<h2 id="ai-workflows-ai-agents-and-their-levels">AI workflows, AI agents and their levels</h2>
+<p><strong>Automations progress through three levels.</strong> Start with AI Workflows. [L0287.001, L0287.012]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Level</th>
+<th>What it does</th>
+<th>Example</th>
+<th>Current status</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflows</td>
+<td>Linear, triggered by time or events, without AI</td>
+<td>Daily ad reports to Slack; competitor ads to Google Drive</td>
+<td>Reliable</td>
+<td>[L0287.001]</td>
+</tr>
+<tr>
+<td>AI Workflows</td>
+<td>Chain multiple AI steps in a predetermined order</td>
+<td>Scrape forum → summarize → generate angles → write scripts → save to spreadsheet</td>
+<td>Start here</td>
+<td>[L0287.001, L0287.012]</td>
+</tr>
+<tr>
+<td>AI Agents</td>
+<td>The system decides what to do dynamically</td>
+<td>Email agent that chooses between responding, notifying or scheduling</td>
+<td>Unreliable, fails frequently</td>
+<td>[L0287.001]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>AI Agents: current technology is unreliable and fails frequently. Do not prioritize building agents now. Agents often make unpredictable decisions or misinterpret instructions. Most tasks that seem suited to agents work more reliably as AI Workflows, which use predetermined steps with AI at each stage. Plan to revisit agents in a few months as the technology matures. [L0287.001, L0287.012]</li>
+<li>Example of an email agent: it can notify you in Slack about an incoming email, compose a reply using Claude or another AI model, send the reply directly to the sender, read your previous emails for context, check your calendar for availability, or create a Google Calendar event for a proposed meeting. It makes these decisions dynamically, without a predetermined sequence. [L0287.010]</li>
+<li>AI org charts: a hierarchy of agents where a CEO agent delegates to specialized agents such as a CMO, COO or CFO agent. Each specialized agent can manage its own sub-agents. For example, a CMO agent might supervise copywriter, competitor research, data analysis and landing page builder agents. This models how human teams scale and allows automation of complex multi-team workflows. [L0287.011]</li>
+</ul>
+<h2 id="ai-creative-workflows-setup">AI creative workflows: setup</h2>
+<p><strong>Source D setup (Steps 0-8 once, then Steps 9-10 for each new ad script):</strong></p>
+<ul>
+<li>Steps 0-8 build five reference files in a Claude or ChatGPT project: Voice Guide, Structure Library, Banned List, Avatar and Psychology Lens. Once these five files live in the project, Steps 9-10 create a new ad in a fresh chat every time. The project reads the five files automatically, so you supply only the product, winning scripts, research and chosen angle. [L0039.001]</li>
+<li>Set up Steps 0-8 once and upload the five reference files to your project. After that, run only Steps 9-10 for new ads. Every script session is a new chat in the same project, so the five files stay constant and you change only the angle. [L0039.027]</li>
+</ul>
+<p>Procedure:</p>
+<ol type="1">
+<li><p>Gather 5-10 winning ad scripts from Kalodata or the free Meta Ad Library. Any ad running for months is a proven winner. Copy them into one document and keep it. [L0039.002]</p></li>
+<li><p>Open Reddit Answers and ask six research questions, one at a time. Copy each complete answer into one research document:</p>
+<ul>
+<li>(1) What's so hard about [SITUATION]?</li>
+<li>(2) Why do people struggle with [PROBLEM]?</li>
+<li>(3) What have people tried for [PROBLEM] that didn't work?</li>
+<li>(4) What finally worked for people with [PROBLEM]?</li>
+<li>(5) Why do people give up on [PROBLEM]?</li>
+<li>(6) What do people dislike about [CATEGORY]?</li>
+</ul>
+<p>Copy everything. Don't pick and choose, because the next prompts sort it. [L0039.002]</p></li>
+<li><p>Run the Step 3 prompt to reverse-engineer the concepts in your winning scripts and identify concept families and gaps. [L0039.002]</p></li>
+<li><p>to 8. Run the Step 4-8 prompts to generate and download five files (Voice Guide, Structure Library, Banned List, Avatar, Psychology Lens), then upload each into your project knowledge. [L0039.002]</p></li>
+<li><p>Run the Step 9 prompt in a new project chat to get a ranked angle bank. [L0039.002]</p></li>
+<li><p>Run the Step 10 prompt in the same chat, pick one angle and get your script. [L0039.002]</p></li>
+</ol>
+<p><strong>Conflict hierarchy (Step 10).</strong> The Source D source names two files differently: "Voice Guide" in the setup and "Style Guide" in the rule, and "Banned List" in the setup and "Banned Blacklist" in the rule. Use the names as they appear in your project. [L0039.001, L0039.011]</p>
+<p>Use the five-file conflict hierarchy exactly as written:</p>
+<ol type="1">
+<li>Style Guide governs voice first. [L0039.011]</li>
+<li>Structure Library governs beats second. [L0039.011]</li>
+<li>Banned Blacklist supplies hard negative constraints third. [L0039.011]</li>
+<li>Avatar &amp; Context tells you who to write to fourth. [L0039.011]</li>
+<li>Psychology Lens informs but never overrides voice, fifth. [L0039.011]</li>
+</ol>
+<p>Flag any brief element that contradicts a reference file instead of overriding it silently. [L0039.011]</p>
+<p>Bottom-of-funnel ad production (Source D procedure):</p>
+<ol type="1">
+<li>Ask Claude: "Make me four [concept type] bottom-of-funnel ad prompts for ChatGPT." [L0316.030]</li>
+<li>Copy each prompt to ChatGPT and generate image descriptions or ad text. [L0316.030]</li>
+<li>Upload each generated image to Canva. [L0316.030]</li>
+<li>Re-download from Canva to remove AI metadata. [L0316.030]</li>
+<li>Upload all images to Meta. [L0316.030]</li>
+<li>Create one ad set per concept (e.g., testimonial, free gift, benefit) with 4-8 ads inside each. [L0316.030]</li>
+<li>Set the budget to $50 per day (or $15-20 AUD minimum) and test for 2-3 days. [L0316.030]</li>
+</ol>
+<p>Prompt (Source E-style system brief; reproduce unchanged):</p>
+<pre><code>Set up a streamlined AI system to help our brand produce ads that perform better using data and scale more quickly. Core capabilities: 1. Getting to know customers: go through survey results, persona profiles and behavior data. Work out the real pain points, desires, objections and buying motives. Watch for emerging patterns across our segments. 2. Market and competitor research: look into rivals and the direction of the industry. Surface gaps and openings where our brand can differentiate and strengthen its positioning. 3. Creative planning and ideation: come up with new ad angles, hooks and creative concepts drawn from customer insight. Strengthen current ideas by basing them on data and proven marketing frameworks. 4. Scriptwriting and copywriting: produce persuasive, high-converting ad scripts and marketing copy. Revise copy so it matches the emotions, language and motivations of the audience. 5. Performance feedback loop: examine ROAS, CTR, hook rate, watch time, CPC and comparable metrics. Clarify why particular ads win and others fail. Turn these findings into concrete guidance for the next round of creatives. 6. Knowledge base integration: rely on all uploaded files and research as the main knowledge source. Apply insights and Breakthrough Advertising principles automatically to everything produced. Keep every answer anchored in real audience data. Benefits for the founder: converts customer feedback into clear, actionable insight; recommends creative angles and strategies matched to the audience; helps produce better ads faster from real data; supports ongoing improvement by evaluating ad results and closing the creative feedback loop.</code></pre>
+<p>[L0613.071]</p>
+<h2 id="ai-creative-workflows-the-reference-file-build">AI creative workflows: the reference-file build</h2>
+<ul>
+<li>Assemble the reference files a brand's custom AI assistant needs, and keep them inside the assistant's project so its research follows the brand's own process:
+<ol type="1">
+<li>A brand or product overview. [L0485.031]</li>
+<li>A strategy knowledge file describing the creative method. [L0485.031]</li>
+<li>A copy quality rules file. [L0485.031]</li>
+<li>A team process overview. [L0485.031]</li>
+<li>A discovery call template. [L0485.031]</li>
+<li>Production documents for static ads and for video ads. [L0485.031]</li>
+</ol></li>
+<li>Use AI to analyze what customers say. A weekly review scraper, for example, can turn customer language into ad ideas. [L0485.014]</li>
+<li>AI is often seen only as an idea generator, script writer or visual generator. In practice, almost any task that can be written down can be completed, automated or assisted by AI. [L0485.014]</li>
+<li>Tools, templates and software built with AI can assist current team members or replace some roles entirely. This reduces slow manual work in creative production. [L0485.015]</li>
+<li>A coded workflow connects AI tools and software so each step passes its output to the next. A typical chain:
+<ol type="1">
+<li>The custom AI assistant creates a prompt-based output. [L0485.025]</li>
+<li>The workflow sends it to a platform such as Arcads to create the ad. [L0485.025]</li>
+<li>The result is saved to a spreadsheet. [L0485.025]</li>
+<li>A human is notified on Slack to review it. [L0485.025]</li>
+</ol></li>
+<li>Workflows save admin time and speed up the process, but a custom assistant or pre-built platform already speeds up work without them. Understanding how to build and use the assistant and the platforms comes first. [L0485.028]</li>
+</ul>
+<h2 id="creative-team-roles-and-the-human-ai-balance">Creative team roles and the human-AI balance</h2>
+<ul>
+<li>A traditional creative team with fixed roles (strategist, copywriter, editor, designer) can be replaced by a breakdown into processes and tasks. Each task can be done by a person or an AI agent, as long as the process is predictable and can be written as step-by-step instructions. [L0464.001]</li>
+<li>Break every team role into processes, then into individual tasks from start to finish. Check which tasks can be automated or handed to AI. Any task that can be described as step-by-step instructions can in principle be completed by AI. [L0464.002]</li>
+<li>Any task a person can be trained to do can in principle be trained into an AI agent. The AI can run the same task up to 100 times faster than a human. [L0464.003]</li>
+<li>Projected capability (a forward-looking estimate, not a measured result): once the software and workflow are set up, AI could return creative test projects within about 10 seconds, and a full creative test cycle could be completed in about 20 minutes. [L0464.004]</li>
+<li>Measured experience: the first AI-produced videos took about one hour each while the creator was learning the tools. Once the workflow is familiar, the same production time drops to about 20 to 30 minutes per video. [L0888.028]</li>
+<li>Some brands can run with one creative team member who oversees a group of AI agents. This works only with a well-defined, reliable workflow and a human who reviews the output before it goes live. [L0464.005]</li>
+<li>The right balance of humans and AI is a decision for each brand, based on its budget, niche, existing team and required approvals. Work out this balance before choosing tools or team size. [L0464.008]</li>
+<li>A creative strategist's typical tasks:
+<ul>
+<li>Analyzing what customers say. [L0464.009]</li>
+<li>Identifying likely buyers and their motivations. [L0464.009]</li>
+<li>Extracting core ideas for ads. [L0464.009]</li>
+<li>Finding ideas and styles not yet tested. [L0464.009]</li>
+<li>Running product, competitor and market analysis. [L0464.009]</li>
+<li>Briefing concepts for ad assets. [L0464.009]</li>
+<li>Reviewing the team's work. [L0464.009]</li>
+</ul></li>
+<li>Creative systems can be organized into stages covering conception, planning, production and management of ads. Each stage can use its own AI tools and written SOPs or instructions. [L0464.010]</li>
+<li>One AI prompt can set creative KPIs and check each team member's launch output per product. This is a simple way to confirm the creative team is delivering against its targets. [L0885.022]</li>
+</ul>
+<h2 id="production-batches-images-and-copy">Production: batches, images and copy</h2>
+<ul>
+<li>Run a small test batch of 2 or 3 images before a full run of 50, because each image and each retry costs credits. Scale up only after the test outputs look right. [L0794.048]</li>
+<li>Batch rollout order:
+<ol type="1">
+<li>Write one collection page with the prompt. Check the format, style and length against your template. [L0883.025]</li>
+<li>Refine the prompt until the output matches what you want. [L0883.025]</li>
+<li>Run all collection keywords together as an asynchronous batch, for example 20 collections in one run. [L0883.025]</li>
+<li>Write one blog post the same way, and refine the prompt until its format, style and length are right. [L0883.025]</li>
+<li>Run the remaining blog posts with more automation, relying more on the AI. [L0883.025]</li>
+<li>Have a team member or VA edit and fact-check every output. [L0883.025]</li>
+<li>Publish the edited copy to the site. [L0883.025]</li>
+</ol></li>
+<li>One batch covered 20 collection pages for one brand in a single asynchronous run. The operator started it, left the computer and came back to finished drafts ready for editing. [L0883.026]</li>
+<li>AI can take over work that used to require expensive freelancers or employees: drafting supplier approval messages, checking store pages for compliance before ads go live, and converting supplier spreadsheets. This saves weeks or months on large product catalogs. [L1097.041]</li>
+<li>Photoshop batch automation for product images (Source B, <em>older advice, 2021-22</em>): a freelancer found on OnlineJobs.ph can build a folder-based automation that resizes images, places them on a white background if needed, and compresses them. It then runs unattended at about $10 per 100 images. [L1456.044]</li>
+<li>Outreach automation tools (Source C):
+<ul>
+<li>Lemlist and Instantly are email automation tools for outreach. Import a list with first name, last name and email address, set up a sequence of follow-up emails, and the automation stops as soon as the recipient replies. [L0789.010]</li>
+<li>Instantly allows 25 sending email addresses, each able to send 50 emails per day. Use several sending inboxes to scale outreach volume in a country without overloading one address. [L0789.011]</li>
+</ul></li>
+</ul>
+<h2 id="limits-of-ai-workflows-and-creative-automation">Limits of AI workflows and creative automation</h2>
+<ul>
+<li><p>Keep a human review step in any AI creative workflow. AI still makes mistakes, such as errors in content or visuals, so the review checks output before ads are published. [L0464.006]</p></li>
+<li><p>Have a human edit and fact-check every AI output before it goes live, even when the prompt is well tuned. The first draft can contain wrong product claims or inaccuracies. [L0883.021]</p></li>
+<li><p>Identify the tasks AI cannot yet do well, such as tools that do not exist for a combination of tasks, or tasks that are hard to explain in writing. For those tasks, find a workaround or keep a human, and use this list to cut costs. [L0464.007]</p></li>
+<li><p>The practical limits of an AI creative workflow are:</p>
+<ul>
+<li>the number of separate software tools involved; [L0464.025]</li>
+<li>the connections needed between platforms; [L0464.025]</li>
+<li>whether the workflow is set up reliably enough to give predictable output. [L0464.025]</li>
+</ul>
+<p>Design the workflow so these three points are solved before adding more volume. [L0464.025]</p></li>
+<li><p>Automation handles rule-based tasks, not exceptions, negotiation or creative decisions. Use the time it frees for those. [L0286.036]</p></li>
+<li><p>AI agents are unreliable for now, so use AI Workflows with predetermined steps. [L0287.012]</p></li>
+</ul>
+<p><strong>Summary of limits by approach</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Strength</th>
+<th>Limit</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rule-based automation (Zapier, Trello)</td>
+<td>Reliable once configured, no sick days or turnover</td>
+<td>Only rule-based tasks; exceptions still need a human</td>
+<td>[L0285.003, L0286.036]</td>
+</tr>
+<tr>
+<td>AI Workflows</td>
+<td>Predictable, step by step</td>
+<td>Each AI output needs human review and fact-checking</td>
+<td>[L0287.012, L0883.021]</td>
+</tr>
+<tr>
+<td>AI Agents</td>
+<td>Dynamic decisions</td>
+<td>Unreliable, fails frequently, unpredictable decisions</td>
+<td>[L0287.001, L0287.012]</td>
+</tr>
+<tr>
+<td>AI creative production</td>
+<td>Speed; projected 10-second tests and 20-minute cycles, measured 20-30 minutes per video</td>
+<td>Human review, tool count, connections and reliability limit scale</td>
+<td>[L0464.004, L0888.028, L0464.006, L0464.025]</td>
+</tr>
+</tbody>
+</table></div>
+</article><nav class="pn"><a href="../../20-scaling-team-and-processes/03-documenting-processes-sops-checklists-and-training-videos/"><span class="k">&larr; Previous</span><span class="v">Documenting processes: SOPs, checklists and training videos</span></a><a class="nx" href="../../20-scaling-team-and-processes/05-choosing-a-hiring-model-and-sequencing-hires/"><span class="k">Next &rarr;</span><span class="v">Choosing a hiring model and sequencing hires</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161617" media="(prefers-color-scheme: dark)">
+<title>Privacy Policy for Lichters: Habit Tracker</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bar:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;
+--link:#0071e3;--chev:#aeaeb2;--ring:rgba(0,0,0,.1);--press:#f5f5f7;
+--grad:linear-gradient(96deg,#0071e3 0%,#5e5ce6 52%,#9b3fd6 100%)}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--bar:#161617;--card:#1c1c1e;--text:#f5f5f7;--muted:#a1a1a6;
+--line:#38383a;--link:#2997ff;--chev:#636366;--ring:rgba(255,255,255,.14);--press:#2c2c2e;
+--grad:linear-gradient(96deg,#2997ff 0%,#7d7aff 52%,#da8fff 100%)}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text",
+"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:6px}
+p,li{overflow-wrap:break-word}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.bar{background:var(--bar);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
+.bar nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px;color:var(--text)}
+.brand{display:inline-flex;align-items:center;min-height:44px;color:var(--text);font-weight:600;letter-spacing:-.02em}
+main.wrap{padding-top:44px;padding-bottom:64px}
+h1{margin:0;font-weight:700;font-size:clamp(34px,8.6vw,48px);line-height:1.08;letter-spacing:-.028em}
+h2{font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.018em}
+.hero h1{font-size:clamp(40px,10.6vw,64px);line-height:1.05}
+.grad{color:var(--link)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){.grad{background:var(--grad);
+-webkit-background-clip:text;background-clip:text;color:transparent}}
+.lead{margin:18px 0 0;font-size:21px;line-height:1.38;color:var(--muted);letter-spacing:-.02em}
+.lead.second{margin-top:10px;font-size:17px;line-height:1.47;letter-spacing:-.01em}
+.sec{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:52px 0 20px;padding-bottom:8px;
+border-bottom:1px solid var(--line)}
+.sec h2{margin:0;font-size:28px;line-height:1.14;letter-spacing:-.022em}
+.sec a,.foot a,.back{display:inline-flex;align-items:center;min-height:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:20px 0}
+.card h2{margin:0 0 10px}
+.card p{margin:0 0 14px}.card>:last-child{margin-bottom:0}
+.list{padding:0;overflow:hidden}
+.row{position:relative;display:flex;align-items:center;gap:16px;min-height:52px;padding:12px 44px 12px 16px;
+color:var(--text)}
+.row:hover{text-decoration:none}.row:active{background:var(--press)}
+@media (hover:hover){.row:hover{background:var(--press)}}
+.row::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-5px;
+border:solid var(--chev);border-width:2px 2px 0 0;transform:rotate(45deg)}
+.row+.row::before{content:"";position:absolute;top:0;right:0;left:92px;border-top:1px solid var(--line)}
+.row img{flex:none;width:60px;height:60px;border-radius:13.5px;box-shadow:0 0 0 1px var(--ring)}
+.row .t{display:flex;flex-direction:column;min-width:0}
+.row strong{font-weight:600;line-height:1.3}
+.row .t span{margin-top:2px;color:var(--muted);font-size:15px;line-height:1.35;letter-spacing:-.005em}
+.links .row+.row::before{left:16px}
+.checks{margin:0;padding:4px 20px;list-style:none}
+.checks li{display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.checks li+li{border-top:1px solid var(--line)}
+.checks svg{flex:none;width:22px;height:22px;margin-top:1px;color:var(--link)}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:980px;
+font-size:17px;line-height:1.2;background:#0071e3;color:#fff}
+.btn:hover{text-decoration:none}.btn:active{opacity:.85}
+.btn.ghost{background:transparent;color:var(--link);box-shadow:inset 0 0 0 1px currentColor}
+.app-hero .icon{display:block;width:112px;height:112px;border-radius:25px;margin:0 0 24px;
+box-shadow:0 0 0 1px var(--ring),0 4px 16px rgba(0,0,0,.12)}
+.app-hero h1 span{display:block;margin-top:8px;color:var(--muted);font-size:22px;font-weight:600;line-height:1.25;
+letter-spacing:-.018em}
+.app-hero .lead{color:var(--text);font-weight:600;font-size:19px;letter-spacing:-.015em;margin-top:16px}
+.app-hero .promo{margin:12px 0 0;color:var(--muted)}
+.app-hero+.card,.app-hero+.feat{margin-top:36px}
+.feat h2{margin:0 0 12px}.feat .card{margin:0}
+.back{gap:8px;margin:-12px 0 12px}
+.back::before{content:"";width:9px;height:9px;margin-left:3px;border:solid currentColor;border-width:0 0 2px 2px;
+transform:rotate(45deg)}
+.legal{max-width:680px}
+.legal h1{font-size:clamp(32px,8.2vw,44px)}
+.legal h1+p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.legal h2{margin:40px 0 10px}.legal h3{font-size:17px;margin:24px 0 6px}
+.legal p{margin:0 0 14px}.legal ul{margin:0 0 14px;padding-left:22px}.legal li{margin:8px 0}
+.legal .card{margin:28px 0}.legal .card h2{margin-top:0}
+.legal a.url{overflow-wrap:anywhere;-webkit-hyphens:none;hyphens:none}
+.legal .group{padding:0}.legal .group section{padding:20px}
+.legal .group section+section{border-top:1px solid var(--line)}
+.legal .group h2{margin:0 0 8px;font-size:19px}.legal .group p:last-child{margin-bottom:0}
+.legal section:not(.card)+.card,.legal h1+p+.card{margin-top:32px}
+.foot{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 24px;padding-top:8px;
+padding-bottom:32px}
+.foot nav{display:flex;gap:24px}
+</style></head>
+<body>
+<header class="bar"><div class="wrap"><a class="brand" href="../">Lichters</a><nav aria-label="Support"><a href="mailto:support@lichtersapps.com">Support</a></nav></div></header>
+<main class="wrap">
+<p><a href="../">← Lichters</a></p><article class="card legal"><h1>Privacy Policy for Lichters: Habit Tracker</h1>
+<p>Last updated: 22 October 2026</p>
+<h2>Controller</h2>
+<p>David Lichters<br>Maurenbrecherstraße 16<br>47803 Krefeld<br>Email: <a href="mailto:support@lichtersapps.com">support@lichtersapps.com</a></p>
+<h2>In short</h2>
+<p>Lichters needs no sign-up, no email and no password. There are no third-party SDKs, no analytics, no ads and no tracking, and we never sell data. Your habit ticks and your name are stored encrypted: friends you accept can open them, and so can Lichters support, to help with problems. Friends and other users never see your Money Ideas.</p>
+<h2>Your Lichters ID</h2>
+<p>Every iCloud user automatically gets a Lichters ID, a running number such as 0000 0002. It is tied to your iCloud account, so there is no sign-up, no email and no password.</p>
+<h2>Your name and habit ticks</h2>
+<ul><li>Adding a display name (first and last name) is optional.</li><li>Your ticks for each day and your name are stored encrypted in the app's public CloudKit database.</li><li>Friends you accept can decrypt them.</li><li>Lichters support (the developer, Lichters ID 0000 0001) can always decrypt them with a support key, to help with problems.</li><li>Friend requests are stored in the public CloudKit database.</li><li>An invite link contains your Lichters ID and your first name (if you added a name) in plain text. Anyone who gets the link can read them.</li></ul>
+<h2>Money Ideas</h2>
+<ul><li>Your ideas (text, links, sources and screenshots) are stored on your device and synced through your own private iCloud database, end-to-end encrypted.</li><li>In addition, one encrypted support copy of each idea is stored in the app's public CloudKit database. Only Lichters support can open it, to help with problems.</li><li>Friends and other users never see your ideas.</li><li>Your ideas never go to any AI company.</li><li>Deleted ideas stay in Recently Deleted for 30 days, then they're gone for good.</li></ul>
+<h2>Day entries</h2>
+<p>Your day entries (your ticks and other entries such as notes) sync through your own private iCloud.</p>
+<h2>Face ID and notifications</h2>
+<ul><li>Face ID is only used on your device: if you turn on “Lock with Face ID”, it unlocks your ideas. No biometric data leaves your device.</li><li>Notifications are local: your iPhone creates them itself.</li></ul>
+<h2>No tracking</h2>
+<p>No third-party SDKs, no analytics, no ads, no tracking. We never sell data.</p>
+<h2>iCloud</h2>
+<p>iCloud and CloudKit are run by Apple. Apple's privacy policy applies: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></p>
+<h2>How to delete your data</h2>
+<ul><li><strong>In the app:</strong> open the Guide, scroll to the bottom and tap “Delete My Lichters Data”. This deletes your Lichters ID and your public records (the encrypted copy of your ticks and your name), your friend requests, your Money Ideas (in your own private iCloud and on your device) and their support copies, your keys and the Lichters data on your device. Friends will no longer see you. If you use Lichters on more than one iPhone, do this on each one.</li><li><strong>What stays:</strong> your day entries (your ticks and notes) stay in your own private iCloud. If you keep using Lichters afterwards, it starts fresh with a new Lichters ID and stores this year's ticks again, encrypted, in the public CloudKit database under the new ID.</li><li><strong>Your private iCloud:</strong> you can delete your day entries in the iPhone Settings: tap your name, then iCloud, and manage your storage.</li><li><strong>By email:</strong> write to <a href="mailto:support@lichtersapps.com">support@lichtersapps.com</a> and we'll delete your public records and support copies.</li></ul>
+<p>Deleting the app alone does not remove data stored in iCloud.</p>
+<h2>Why we use this data</h2>
+<p>Only to run the features you use (sync, friends, Money Ideas) and to help with problems (Art. 6(1)(b) and (f) GDPR). We keep it until you delete it.</p>
+<h2>Email support</h2>
+<p>If you email us, we process your address and message only to answer your request (Art. 6(1)(b) and (f) GDPR) and delete them when no longer needed.</p>
+<h2>Your rights</h2>
+<p>You have the right to access, rectification, erasure, restriction, data portability and objection (Art. 15 to 21 GDPR) and the right to lodge a complaint with a supervisory authority.</p>
+<h2>Contact</h2>
+<p>Questions about your data: <a href="mailto:support@lichtersapps.com">support@lichtersapps.com</a></p>
+<h2>Changes</h2>
+<p>We update this policy when the app changes.</p></article>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 David Lichters</span>
+<nav><a href="../imprint/">Imprint</a><a href="mailto:support@lichtersapps.com">Support</a></nav></div></footer>
+</body></html>

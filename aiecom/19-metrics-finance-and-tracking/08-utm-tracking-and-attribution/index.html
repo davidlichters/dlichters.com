@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>UTM tracking and attribution | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.8: UTM tracking and attribution.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/08-utm-tracking-and-attribution/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="UTM tracking and attribution | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.8: UTM tracking and attribution."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/08-utm-tracking-and-attribution/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/08-utm-tracking-and-attribution/">Plain version</a></div><h1>19.8 UTM tracking and attribution</h1><article><h2 id="attribution-principles-and-their-limits">Attribution principles and their limits</h2>
+<ul>
+<li><p>Digital marketing channels influence each other rather than operating independently. PPC campaigns create lift beyond their direct metrics by affecting traffic patterns and performance across other channels. [L0026.001]</p></li>
+<li><p>Perfect tracking is impossible because modern users comparison shop, visit multiple stores, and take time to evaluate purchases, so it is unclear which touchpoint should receive conversion credit. [L0033.001]</p></li>
+<li><p>Attribution means crediting conversions to traffic sources. It is always imperfect because customers interact with multiple channels and touchpoints across several days before purchasing. [L0257.001]</p></li>
+<li><p>Choose one tracking and attribution model and apply it consistently across all reporting periods instead of shifting the measurement approach. All tracking systems have blind spots (cookie loss, multi-session journeys), so consistency matters more than perfect accuracy. [L0257.014]</p></li>
+<li><p>Evaluate campaign performance by comparing total revenue generated against total ad spend, not by relying solely on last-click attribution data. [L0033.004, L1406.003]</p></li>
+<li><p>Track revenue by traffic source from the start. Early tracking shows which sources bring profit and which waste time. Test sources, keep those that consistently make money, and drop the rest. [L0597.005]</p></li>
+<li><p>Judge each traffic source by the revenue and profit it generates, not by the number of visitors it sends. A source that delivers many visitors but no sales is a cost, not a win. [L0597.015]</p></li>
+<li><p>Set up sales tracking before the store gets traffic, so every sale can be traced back to the ad or source that brought it. <em>(Older: Source A 2020.)</em> [L0468.168]</p></li>
+<li><p>Track sales coming through phone, text or live chat, which Google does not record. [L0470.068]</p>
+<ol type="1">
+<li>Ask each customer how they found the store when you take the order.</li>
+<li>Optionally add a short survey to the order confirmation page, such as a simple form asking how the customer found you.</li>
+<li>Note answers such as Google search, Bing search or a Facebook ad.</li>
+</ol>
+<p>[L0470.068]</p></li>
+<li><p>Platform tracking for Facebook, Google and email is often incomplete, partly because of iOS 14 limits and changed tracking rules from around 2022 on. Ask buyers how they found the store in a post-purchase survey and compare those answers with platform revenue before trusting either number alone. [L1204.068]</p></li>
+</ul>
+<h2 id="multi-session-journeys-and-double-counting">Multi-session journeys and double counting</h2>
+<ul>
+<li>The majority of e-commerce sites generate more revenue from multi-session customers (returning visitors) than from first-time single-session purchases. [L0257.003]</li>
+<li>Realistic journey over several days and channels: Monday the customer clicks a shopping campaign; Tuesday they click a search retargeting ad and become a lead; Wednesday they convert via email; Thursday they share a referral code. A friend sees the site, clicks YouTube retargeting, and converts. The result is 2 actual purchases but 4 to 5 channels claiming credit. [L0257.007]</li>
+<li>When multiple platforms independently track the same conversion (email, YouTube, shopping, referral software), each counts it separately. This produces 4 to 5 counted conversions when only 1 or 2 actual purchases occurred. [L0257.008]</li>
+<li>Customer journeys can span many days and several touchpoints, so the time from first ad to purchase is often long. In one example, one stage took 5 days and 2 hours and the next took 2 days and 22 hours. Customers sometimes take 7 to 10 or more days to buy. [L0688.014]</li>
+<li>Typical multi-touch paths include seeing a Facebook or Instagram ad, later receiving an email or SMS, returning through a retargeting ad, visiting via Google search, or completing an abandoned cart email flow. Judge attribution across the whole path, not only the last click. [L0688.015]</li>
+<li>Shoppers often need several visits or ad clicks before buying, so many conversions are multi-step and only the last touch gets credit in simple reports. A high share of multi-step conversions is expected and does not indicate a broken setup. Single-click reports will consistently undercount earlier touchpoints. [L1406.015]</li>
+</ul>
+<h2 id="direct-and-unattributed-traffic">Direct and unattributed traffic</h2>
+<ul>
+<li>Direct/None traffic represents customers returning through browser history or text message referrals. In mature stores this channel shows 15 percent of attributed revenue but is largely unmeasurable as a true traffic source. [L0257.009]</li>
+<li>Direct/None traffic consists of visits with no recorded referral source, for example returning visitors opening the site from their history, clicks on untracked links, or links shared in private messages. In the example store it was the third largest traffic source and produced 12 to 13 percent of total revenue. [L1406.007]</li>
+<li>Direct traffic in analytics can come from untracked links, bookmarks, or links saved from email, and it may be large. Keep it separate from paid ad traffic when reading results. <em>(Older: Source A 2020.)</em> [L0967.086]</li>
+<li>Do not treat Direct/None as a source you can scale or optimize directly. It hides untracked touchpoints, so use it only for comparison between channels. [L1406.008]</li>
+<li>Direct/None can account for a large share of total sales in a Shopify store. Channel-level revenue from Google Analytics therefore will not add up to the store's total revenue. Use it to compare channels relative to each other, not to reconcile totals. [L1406.016]</li>
+<li>Direct/None traffic in Analytics typically represents the final purchase session, where Google cannot link the purchase to earlier discovery visits. Reallocate this revenue to the sources that actually brought the customer (usually organic or paid search). <em>(Older: Source B 2021-22.)</em> [L0256.011]</li>
+<li>Estimating the share of unattributed revenue by source (<em>Older: Source B 2021-22</em>):
+<ul>
+<li>When Shopify records revenue that Analytics does not attribute to a traffic source, estimate each source's portion by calculating its share of new users and applying the same percentage to unattributed revenue. [L0256.009]</li>
+<li>Example: if Google Ads drove 72.9% of new users, attribute 72.9% of the untracked revenue to Google Ads. [L0256.009]</li>
+</ul></li>
+</ul>
+<h2 id="abandoned-cart-email-and-message-driven-sales">Abandoned cart, email and message-driven sales</h2>
+<ul>
+<li>UTMs track the source of email-driven sales by appearing as parameters at the end of URLs, enabling reporting in Shopify Messaging and Google Analytics. [L0147.010]</li>
+<li>Abandoned cart recovery emails originate from an earlier visit through another traffic source. Attribute these sales to the source that first brought the customer, not to the email channel. <em>(Older: Source B 2021-22.)</em> [L0256.010]</li>
+<li>Multi-touch attribution tools can pull email and SMS touchpoints from platforms such as Klaviyo and Attentive into the customer journey. This links a sale to an earlier ad even when the final touch before purchase was a message. [L0688.017]</li>
+</ul>
+<h2 id="reallocating-revenue-and-cross-channel-effects">Reallocating revenue and cross-channel effects</h2>
+<ul>
+<li>Evaluating each channel only by its own direct clicks and sales misses cross-channel effects, such as a YouTube campaign lifting search click-through rates or total traffic. Cutting a channel that looks weak in isolation can reduce results in the channels that depend on it. [L1142.010]</li>
+<li>When a new Google Ads search campaign goes live, total site traffic may rise gradually over several weeks rather than immediately. Judge cross-channel lift by watching the overall traffic trend over that period, not only the clicks reported for each campaign. [L1142.011]</li>
+<li>To compare paid Google Ads traffic with organic search and email, use the channel comparison in Google Analytics. To find which individual ads convert and how often, use Google Ads data. Do not mix the two views when judging a single campaign. [L1406.017]</li>
+</ul>
+<h2 id="attribution-models-and-windows">Attribution models and windows</h2>
+<ul>
+<li>Google Ads uses a 30-day lookback window by default, attributing calls to website visits within the previous 30 days. [L0234.007]</li>
+<li>Last-click attribution is the standard model for call conversions in Google Ads, giving credit to the final ad or source a person clicked before calling. [L0234.008]</li>
+<li>Meta default attribution for this setup credits a purchase to the ad if the person clicked it within the last 7 days or viewed it within the last 1 day. Keep these defaults for remarketing campaigns. [L1029.011]</li>
+<li>The click window is kept long because a person who clicked a remarketing ad days earlier and bought later was still reached by that ad. A view counts because the ad reminds the person of the store even without a click. [L1029.012]</li>
+<li>Use a 30-day attribution window for influencer marketing rather than a one-day click window. Influencers typically need multiple exposures, often three or more touches, before a customer buys. [L0790.075]</li>
+<li>Retargeting apps often claim revenue using a 30-day view attribution window, which credits them with sales they did not generate. Check app attribution against your own analytics before trusting it. [L0790.079]</li>
+<li>Account hygiene: use 7DC / 1DEV attribution, and exclude website purchasers from the last 180 days and existing Shopify customers from targeting. [L1019.045]</li>
+</ul>
+<p>Attribution settings compared against AMER (Acquisition Marketing Efficiency Ratio):</p>
+<ul>
+<li>AMER measures how efficiently the whole business acquires new customers, so it is the business-level truth against which attribution settings are judged. Ad platform numbers alone should not decide which setting is better. [L1022.007]</li>
+<li>If an account is optimized toward a metric that does not correlate with AMER, it is not optimizing for the real business outcome. Change the attribution setting or optimization target to one that correlates with AMER. [L1022.010]</li>
+<li>Platform-wide changes by Meta cause a temporary drop in AMER across the whole industry. Performance returns to normal only gradually and not fully to the previous level. Expect a dip after any platform change and do not read it as a permanent failure of the account. [L1022.011]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What the sources say</th>
+<th>Use or caution</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7-day click</td>
+<td>Before March 17 it had the highest correlation with AMER among the tested settings, which is why it was the default. Gives roughly seven times the window of 1-day click.</td>
+<td>Default before the change.</td>
+<td>[L1022.008]</td>
+</tr>
+<tr>
+<td>1-day click</td>
+<td>Too narrow for most accounts because it did not capture enough purchases for fast decisions.</td>
+<td>Caution.</td>
+<td>[L1022.008]</td>
+</tr>
+<tr>
+<td>1-day click plus 1-day view</td>
+<td>Showed a higher correlation in the chart.</td>
+<td>Its window is too short for most accounts.</td>
+<td>[L1022.009]</td>
+</tr>
+<tr>
+<td>7-day click plus 1-day engage-through</td>
+<td>After the redefinition, matched AMER better than the other tested settings.</td>
+<td>Seven-figure cohort, March 2026.</td>
+<td>[L1022.009]</td>
+</tr>
+<tr>
+<td>7DC / 1DEV</td>
+<td>Recommended account hygiene setting.</td>
+<td>Use.</td>
+<td>[L1019.045]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A cohort of seven-figure stores tracked in March 2026 showed AMER dropping sharply at the March 18 attribution redefinition, then recovering only partly over the following weeks. Before the change, 7-day click followed AMER closely; afterwards it diverged. [L1022.009]</li>
+</ul>
+<h2 id="utm-parameters-what-they-do-and-naming">UTM parameters: what they do and naming</h2>
+<ul>
+<li>UTM parameters are free extra fields appended to the destination URL of an ad. When a visitor clicks, they pass source, medium, campaign, content and term to analytics tools such as Shopify reports or Google Analytics. [L0688.003]</li>
+<li>UTM tracking shows which campaign, ad set and ad a sale came from. Compare these sources in Shopify reports or in Google Analytics if it is connected to Shopify. [L0648.029]</li>
+<li>UTM tracking is limited because customers often buy on a later visit, from another device, or after several touchpoints such as ads, emails, SMS and Google searches. Those paths can break the link to the original ad, so UTM data loses sales. [L0688.008]</li>
+<li>Use UTMs to cross-check Facebook metrics against actual store data. [L0691.025]</li>
+<li>Use a consistent naming convention: name ad sets by date, audience, country, placement, and ads after their video or angle. The names flow into the URL parameters, which keeps results readable. [L0647.014]</li>
+<li>Use UTM parameters on every TikTok ad URL. Name campaigns, ad groups and ads consistently so the parameters can be reconciled with Shopify orders. [L1377.034]</li>
+<li>Track every ad, headline and offer with its own key, such as a unique coupon, code, address or phone number, so each response can be traced to its source. Without keying, the best-performing creative cannot be identified. [L1261.016]</li>
+<li>UTM parameters show conversion rate per campaign and ad set, which is more precise than country-level data for budget decisions. Check UTM tracking when deciding which ad set or campaign deserves more money within a country. [L1316.009]</li>
+<li>Some sellers do not connect the Meta pixel to their store and instead track each campaign with UTM parameters, reading which campaign converts from the UTM data. This allows testing across several ad accounts without linking the pixel to each one. [L0638.056]</li>
+<li>Small brands rarely need custom parameters. Bigger brands and GA4 or Triple Whale users should follow the parameters their tool requires. [L0865.052]</li>
+<li>Audience segment URL parameters are set for all sales campaigns in the advertising settings, not per ad, so they do not need to change for each new ad. [L0865.053]</li>
+<li>UTM Link Builder creates tracking URLs with utm_source, utm_medium and utm_campaign parameters. These let analytics attribute visits from ads, emails and links to their source. [L1007.005]</li>
+</ul>
+<h2 id="utm-strings-and-builder-procedures-by-platform">UTM strings and builder procedures by platform</h2>
+<p>Shared Meta/Facebook ad-level string (L0375.008 and L0376.011 are the same string, merged):</p>
+<pre><code>utm_source=Facebook&amp;utm_medium=cpc&amp;utm_campaign={{campaign.name}}&amp;utm_content={{ad.name}}&amp;utm_term={{adset.name}}</code></pre>
+<p>[L0375.008, L0376.011]</p>
+<ul>
+<li>Add UTM parameters at the ad level so traffic from each ad is tracked by campaign, ad and ad set. Use exactly this parameter string. [L0376.010]</li>
+<li>Note: the sources give different conventions for the same fields. The string above maps utm_content to the ad and utm_term to the ad set. Procedure L0648.028 sets utm term to the ad set name, and procedure L0688.004 sets utm content to the ad set name and utm term to the ad name. Choose one convention and apply it consistently (see L0257.014). [L0375.008, L0376.010, L0648.028, L0688.004]</li>
+</ul>
+<p>Meta procedure in the ad's website section (Ads Manager):</p>
+<ol type="1">
+<li>Click Build a URL parameter.</li>
+<li>Set campaign source to facebook.</li>
+<li>Set campaign medium to cpc (cost per click, the standard label for paid clicks).</li>
+<li>Set campaign name to the dynamic value campaign.name from the dropdown.</li>
+<li>Add the ad set name and the ad name as dynamic values from the dropdown.</li>
+<li>Set utm term to the ad set name.</li>
+</ol>
+<p>The parameters are added to the URL, so Shopify receives which campaign, ad set and ad sent the visitor. [L0648.028]</p>
+<p>Free UTM setup for a Facebook ad (procedure):</p>
+<ol type="1">
+<li>In Facebook Ads Manager, open the ad level of the campaign after adding the page, creative, and website URL (the landing page or product page).</li>
+<li>Open the section called Tracking.</li>
+<li>In the UTM parameters area, either use a pre-built UTM link from a website or use Facebook's own UTM builder.</li>
+<li>Fill in Campaign source: Facebook, FB Marketing, or any consistent label you prefer.</li>
+<li>Fill in Campaign medium: CPC (cost per click) or the placement information.</li>
+<li>Fill in Campaign name with the campaign name.</li>
+<li>Fill in Campaign content with the ad set name.</li>
+<li>Fill in UTM term with the ad name.</li>
+<li>Save the URL so the parameters are appended when someone clicks Shop Now or any other button.</li>
+</ol>
+<p>[L0688.004]</p>
+<p>Meta setting in Source E's course:</p>
+<ul>
+<li>Ad &gt; Tracking &gt; URL parameters &gt; Build a URL parameter: add utm_source with the value ((campaign.id)) or the campaign name. Add utm_medium for the medium, such as Facebook Feed, utm_campaign for the campaign or promotion, and utm_content for the ad variant. Dynamic values like ((ad.id)) can be inserted from the campaign, ad set or ad level. [L0865.051]</li>
+</ul>
+<p>Checking UTM results in Shopify:</p>
+<ul>
+<li>Go to Reports and search for "sales through marketing" or sessions attributed to marketing. Select the exact time range, for example today, then add or view the columns UTM term, source, campaign name, campaign medium, and content. The columns stay empty until traffic arrives with UTM parameters. [L0688.005]</li>
+<li>Shopify's sales-through-marketing report, together with Google Analytics, shows which source, medium, campaign, content and term brought each session or sale when UTM links are used. It is the free way to see campaign-level attribution without an extra subscription. [L0688.006]</li>
+</ul>
+<p>Meta ad-level tracking with UTMs (on iOS and beyond):</p>
+<ul>
+<li>After the iOS privacy changes, Facebook and Shopify struggle to track what happens after the click. The destination link should carry campaign, ad set and ad names as URL parameters, so Shopify can show which ad set and ad each customer came from. [L0647.013]</li>
+<li>Accurate attribution is needed to decide whether to kill, keep or scale a campaign or ad set. Without knowing which campaign or ad set produced each sale, a profitable account cannot be scaled with confidence. [L0688.002]</li>
+</ul>
+<h2 id="tiktok-and-pinterest-utm-setup">TikTok and Pinterest UTM setup</h2>
+<p>TikTok:</p>
+<ul>
+<li>UTM links work for TikTok ads too. Paste a UTM link into the store link field at the ad level instead of a plain store URL, using the same parameter logic as for Facebook. [L0688.007]</li>
+<li>On TikTok, UTM parameters are needed because native TikTok tracking was considered unreliable. Compare Google Analytics with TikTok ad data and duplicate only the campaigns that perform well. <em>(Date not stated in source.)</em> [L0819.019]</li>
+<li>Use UTM parameters on every TikTok ad URL, because tracking on iOS is limited and TikTok data may not match Shopify. [L1377.034]</li>
+</ul>
+<p>Pinterest string appended to the destination URL:</p>
+<pre><code>?utm_source=pinterest&amp;utm_medium=cpc&amp;utm_campaign=%7Bcampaignname%7D&amp;utm_term=%7Badgroupname%7D&amp;utm_content=%7Badid%7D</code></pre>
+<p>[L1133.008]</p>
+<ul>
+<li>Destination URL: use the product page link and append UTM parameters with a question mark to track which campaign the sales come from. [L1134.029]</li>
+<li>Destination URL: enter the product page link, then append a UTM tag starting with a question mark so each sale can be traced to its campaign, ad set and creative. [L1135.045]</li>
+<li>Pinterest tracking is delayed because the platform takes time to record sales. UTM parameters show the source of each sale and are sufficient for a simple one campaign, one ad group test. [L1135.046]</li>
+</ul>
+<h2 id="ios-and-platform-undercounting">iOS and platform undercounting</h2>
+<ul>
+<li>Since Apple's iOS 14 update in 2021, Facebook Ads Manager reports on campaign and ad set sales have become less reliable, especially for Apple devices. Many accounts see tracking accuracy of roughly 60 to 80 percent, so decisions should not rely on Ads Manager data alone. [L0688.001]</li>
+<li>Since iOS 14, Facebook reporting undercounts conversions. The coach estimated that only about 70 percent of actual purchases may show up there. The platform dashboard can therefore show a return of 1.3 when the real value is closer to 1.6. Use an independent tracking source to check the numbers. [L0694.007]</li>
+<li>Facebook misses some sales when users switch devices or browsers, or when cookies are not stored. Complex tools such as Triple Whale can track the full customer journey, but they are not needed for the basic 80 to 90 percent tracking rate. [L1158.041]</li>
+<li>After iOS tracking changes, Meta can track fewer users, so its algorithm is less precise. Retargeting still works but needs different setups. Advertisers have moved toward broad audiences with Advantage+ campaigns that receive all creatives and handle retargeting internally. [L0353.026]</li>
+<li>Tracking accuracy figures differ by measurement: 60 to 80 percent is the accuracy many accounts see in Ads Manager (L0688.001); about 70 percent is the coach's estimate of purchases that show up (L0694.007); 80 to 90 percent is the basic tracking rate that does not need a complex tool (L1158.041).</li>
+<li>UTM tracking is not 100 percent accurate after the iOS update, but it still shows which campaign, ad set and ad a sale came from. [L0648.029]</li>
+</ul>
+<h2 id="paid-multi-touch-attribution-tools">Paid multi-touch attribution tools</h2>
+<p>Tools and what they do:</p>
+<ul>
+<li>Paid multi-touch attribution tools include Triple Whale, Northbeam, Cometly, Converge and Trackify. They track customer journeys across Facebook, TikTok, Google, email and SMS. Triple Whale also shows platform ROAS next to its own ROAS. [L0688.009]</li>
+<li>Triple Whale's dashboard lists campaigns in a layout similar to Facebook Ads Manager, with spend and ROAS per campaign. Platform-reported ROAS and the tool's ROAS can be compared side by side on each row, making any gap easy to see. [L0688.016]</li>
+<li>Triple Whale is better for attribution, and its AI on a higher paid plan is strong. Use TrueProfit when the main goal is profit tracking and Triple Whale when the main goal is attribution. [L1299.028]</li>
+<li>Google Analytics custom report setup is free, and paid attribution tools are generally expensive. Google Analytics with a properly installed tag remains the standard for high-ticket dropshipping in most cases. <em>(Older: Source B 2021-22.)</em> [L0721.032]</li>
+</ul>
+<p>Cost and threshold:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+<th>Note</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starting price, Triple Whale, Northbeam, Cometly, Converge</td>
+<td>About 100 to 150 USD per month</td>
+<td>Rises with revenue or monthly visitors</td>
+<td>[L0688.011]</td>
+</tr>
+<tr>
+<td>Trackify</td>
+<td>Cheaper</td>
+<td>Weaker interface; mainly sends conversion data back to Facebook</td>
+<td>[L0688.011]</td>
+</tr>
+<tr>
+<td>Worth-it threshold (monthly revenue)</td>
+<td>Roughly 20,000 USD or more</td>
+<td>Below that, UTM parameters are recommended</td>
+<td>[L0688.010]</td>
+</tr>
+<tr>
+<td>Worth-it threshold (monthly ad spend)</td>
+<td>Roughly 10,000 USD or more</td>
+<td>Older, Source B 2021-22. Installing a more advanced tool only makes economic sense at this level, because such tools are expensive.</td>
+<td>[L0721.021]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Attribution is not a perfect science. Installing a more advanced attribution tool only makes economic sense at roughly 10,000 USD or more per month in ad spend, because such tools are expensive. <em>(Older: Source B 2021-22.)</em> [L0721.021]</li>
+<li>Paid attribution tools are only worth their cost at roughly 20,000 USD or more in monthly revenue. Below that level, UTM parameters are recommended. [L0688.010]</li>
+</ul>
+<p>Example of platform versus tool ROAS:</p>
+<ul>
+<li>A Facebook campaign with 244 USD spend showed a ROAS of 0.84 in Facebook Ads Manager, while Triple Whale showed 1.30 for the same campaign. Another campaign showed 1.22 on Facebook and 2.75 in Triple Whale. A campaign that looks unprofitable on the platform can be profitable once tracking is corrected, which changes the kill-or-scale decision. [L0688.012]</li>
+<li>Simple case: an account spends 200 USD on Facebook ads and earns 400 USD in sales, so it is profitable. Without campaign or ad set level tracking, the owner cannot tell which ad set generated the sales and so cannot decide which one to scale. [L0688.013]</li>
+</ul>
+<h2 id="platform-versus-analytics-reconciliation">Platform versus analytics reconciliation</h2>
+<p>Three data layers and their jobs:</p>
+<ul>
+<li>Three data layers answer three different questions. The store platform or accounting software (e.g. Shopify, Xero, QuickBooks) shows total ad spend against total revenue. Google Ads shows campaign-level return on ad spend (ROAS). Google Analytics compares traffic channels with each other. Each layer has its own job and should not be used for the others. [L1406.001]</li>
+<li>Use the accounting or store platform to judge overall advertising efficiency, meaning total ad spend compared with total revenue. [L1406.003]</li>
+<li>Use Google Analytics to compare traffic sources with each other, and use Google Ads to optimize Google Ads campaigns. Treat the revenue number of a single source as a comparison figure, not as its exact true value. [L1406.006]</li>
+</ul>
+<p>Worked gap example:</p>
+<ul>
+<li>In the example store, for the same period, Google Analytics reported 376,593 USD in revenue and Google Ads reported 552,255 USD. The gap was about 175,000 USD, or almost 46 percent of the Analytics figure. A difference like this is normal because each tool tracks conversions differently. [L1406.004]</li>
+<li>When reconciling revenue between Google Analytics and Google Ads, compare the same store over the exact same date range. Different periods alone can create a large gap before any tracking difference is considered. [L1406.014]</li>
+<li>A shopper may click one ad on one day and buy days later through another ad or channel, and the earlier interaction often is not recorded correctly. This missing credit is the most likely reason for differences between platforms in active campaigns. When comparing data levels, always consider assisted conversions first. [L1406.005]</li>
+</ul>
+<p>Multi-Channel Funnels and conversion paths:</p>
+<ul>
+<li>Google Analytics Multi-Channel Funnels and attribution reports show the different sequences of touchpoints that lead to a conversion. They try to close some data gaps, but information is still lost. [L1406.009]</li>
+<li>In the 30-day example, the store generated 1,670,000 USD in revenue and 361 conversions. In the Multi-Channel Funnels view used, 209 of these conversions (about 60 percent) were multi-step, multi-click conversions. The Multi-Channel Funnels report only showed conversions with more than two steps. [L1406.010]</li>
+<li>The speaker estimated, without data to back it up, that the true share of multi-click conversions in that store was probably closer to 70 percent. Treat this as an unverified guess. [L1406.011]</li>
+<li>Conversion paths labeled "unavailable" mean the data is missing. In the example, "unavailable" was the top conversion source and the seventh, appearing 142 times in the list. Do not read these entries as a real traffic channel. [L1406.012]</li>
+<li>To count "unavailable" entries in the Multi-Channel Funnels conversion path list, set the list to show 250 rows and search for "unavailable". The number of matches shows how much data is missing in that list. [L1406.013]</li>
+<li>Google Analytics is typically more accurate than Google Ads for conversion reporting because it uses a different tracking mechanism and better recognizes when a single purchase results from multiple earlier visits. <em>(Older: Source B 2021-22.)</em> [L0256.006]</li>
+</ul>
+<p>Google Ads revenue and Analytics choice:</p>
+<ul>
+<li>Google &amp; YouTube analytics integration attributes sales to their source, such as Meta, organic Google, alpha campaign or beta campaign. Use these attributions to judge whether each channel is profitable. [L0972.055]</li>
+<li>Google Analytics compares traffic channels; Google Ads reports campaign ROAS. Use the two only for their own job, as set out above. [L1406.001, L1406.006]</li>
+</ul>
+<p>Meta reporting checks:</p>
+<ul>
+<li>Meta's Purchase ROAS = attributed purchase revenue divided by amount spent. Meta's value is approximate because it is based on purchases attributed to the ads, including sales through Shops, Marketplace, Pages or Messenger, and some values may be estimated by third-party technologies. [L1030.004]</li>
+<li>Meta shows a notice about changed attribution reporting for clicks and engagement results. Check the "About this update" notice before comparing results across time periods. [L1030.006]</li>
+<li>Default Meta ad-set attribution and reconciliation: use the account's own store data as the reference, as set out in the iOS and tool sections above. [L0694.007, L0688.001]</li>
+</ul>
+<h2 id="offline-sales-phone-calls-and-keyed-responses">Offline sales, phone calls and keyed responses</h2>
+<p>Google Ads call tracking:</p>
+<ul>
+<li>Implement call tracking in Google Ads when you receive more than 30 calls per month to understand their source and performance. [L0234.001]</li>
+<li>Calls shorter than 20 seconds do not count as conversions. This filters out very brief or incomplete calls. [L0234.006]</li>
+<li>Each website visitor is assigned a unique tracking phone number. When the same person returns to the site, they see the same number, which allows their actions to be attributed to their original traffic source. [L0234.002]</li>
+<li>Google displays a forwarding number to each visitor in place of your actual phone number. When a visitor dials the forwarding number, Google immediately routes the call to your real number and records it as a conversion. [L0234.011]</li>
+<li>Google Ads can import offline conversions, such as sales made by phone, so that phone-based sales are counted alongside online conversions in campaign results. [L1033.014]</li>
+</ul>
+<p>Phone sale attribution procedure (Google Ads):</p>
+<ol type="1">
+<li>Store each customer's contact details in a CRM tool such as Klaviyo or Wicked Reports, so the customer is linked to their web activity when they call.</li>
+<li>Look up the caller in the CRM to see their click history.</li>
+<li>Confirm from the tagged links that the customer came from a Google ad.</li>
+<li>Upload the offline sale with its click data in the offline conversions section of Google Ads so the sale is attributed to the campaign.</li>
+</ol>
+<p>The process is cumbersome but gives Google the data it needs. [L0454.047]</p>
+<p>Keyed and coupon-based response tracking:</p>
+<ul>
+<li>Advertisers without tracking often pay two to thirty-five times what their sales should cost, because they never see which ads produce the cheapest results. Keyed comparison can reveal cost gaps of several times between ads for the same product. [L1261.017]</li>
+<li>Changing ad size, pictures or type without a traced comparison often raises cost per reply while adding no extra sales. A bigger or more decorative ad must be proven to bring proportionally more sales. [L1261.018]</li>
+<li>Reply cost depends on how a coupon is redeemed. In one test, mailed sample requests cost about 70 cents each, while the same ads with coupons presented at a local store produced inquiries for 18 to 22 cents each. [L1261.145]</li>
+</ul>
+<p>Store display test procedure:</p>
+<ol type="1">
+<li>Choose two comparable towns.</li>
+<li>Run the window or store display in one town only.</li>
+<li>Compare total product sales in both towns, not only the sales of the display store.</li>
+<li>Keep the display spend only if total sales rise.</li>
+</ol>
+<p>[L1261.151]</p>
+<h2 id="platform-reporting-quirks-and-delays">Platform reporting quirks and delays</h2>
+<ul>
+<li>TikTok's displayed spend in the ad manager is lower than the true spend and updates a minute or two late. A campaign showing $50 spent may have actually spent $60 to $80, so payment should be controlled manually. [L1382.044]</li>
+<li>Pinterest results take six to seven days to appear, slower than TikTok or Facebook. UTM parameters on the destination URL are the main way to track sales by campaign, and sales can appear with a delay because the platform records them slowly. [L1134.011]</li>
+<li>Pinterest's tracking delay is a platform recording issue, not a loss of sales. UTM parameters show the source of each sale. [L1135.046, L1134.011]</li>
+</ul>
+<h2 id="campaign-level-utm-use-for-budget-decisions">Campaign-level UTM use for budget decisions</h2>
+<ul>
+<li>Use UTM parameters to decide which ad set or campaign deserves more budget within a country, rather than relying on country-level data. [L1316.009]</li>
+<li>Sellers can compare campaigns across several accounts by reading UTM data, without linking the pixel to each account. [L0638.056]</li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/07-setting-up-meta-tiktok-pinterest-and-other-pixels/"><span class="k">&larr; Previous</span><span class="v">Setting up Meta, TikTok, Pinterest and other pixels</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/09-validating-and-troubleshooting-tracking/"><span class="k">Next &rarr;</span><span class="v">Validating and troubleshooting tracking</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

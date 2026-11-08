@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Customer language mining and research sources | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 2.14: Customer language mining and research sources.">
+<link rel="canonical" href="https://dlichters.com/aiecom/02-niche-and-product-research/14-customer-language-mining-and-research-sources/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Customer language mining and research sources | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 2.14: Customer language mining and research sources."><meta property="og:url" content="https://dlichters.com/aiecom/02-niche-and-product-research/14-customer-language-mining-and-research-sources/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">2. Niche and product research</a> &rsaquo; <a href="../../../ecom/02-niche-and-product-research/14-customer-language-mining-and-research-sources/">Plain version</a></div><h1>2.14 Customer language mining and research sources</h1><article><h2 id="why-customer-language-comes-first">Why customer language comes first</h2>
+<ul>
+<li>Amazon reviews and Reddit threads are the two strongest research sources because they contain unfiltered customer language [L1019.023].</li>
+<li>Amazon reviews are the richest source of marketing angles because reviewers describe how they use a product in detail. Competitor comment sections are a secondary source, and their angles can feed headlines, landing pages and ads [L0708.004].</li>
+<li>Reviews are hard to fabricate. Reviewers, including negative ones, reveal who they are, what they do and why [L0999.006, L0995.004].</li>
+<li>Reviews and forum posts also reveal new angles, such as a product used for a purpose other than its original one, which can open a separate segment [L0999.053].</li>
+<li>Feed AI research tools with manual research, not in place of it. Read Amazon reviews and forums directly, because they show the actual language and scenarios customers use [L0450.004].</li>
+<li>Treat AI as a virtual assistant, not the lead. Human reading of forums and reviews picks up contextual details that AI misses [L0995.010].</li>
+<li>AI output can be wrong. Check every product and data point it names against the source data, ask for its sources, and verify them before spending money on a test [L0354.016].</li>
+<li>Before building a product test, read the Amazon product reviews and the AliExpress comments to learn what buyers value and where the product falls short. These findings can shape the product page angle, ad hooks and script [L0349.032].</li>
+<li>A product's problems, use cases and weaknesses are visible in three places: Amazon reviews, the seller's own website and the comments on its ads. Collecting all three gives a fuller picture before choosing a product [L0708.054].</li>
+<li>Many sellers say they do market research without collecting any data. Real self-research means grounding each answer in your own store sales by product, customer complaints and comments, and the influencers already linked to your product [L1268.012].</li>
+<li>Research with real consumers before writing ads, through interviews, questionnaires and direct sales conversations. Guessing what people want is very expensive [L1261.031].</li>
+</ul>
+<h3 id="source-order-of-recommendation">Source order of recommendation</h3>
+<ol type="1">
+<li><strong>Amazon reviews for the product category.</strong> Reviews are hard to fake. They reveal the use case, where and when the problem occurs, who the customer is (for example homeowners or pet owners) and the exact language customers use [L0497.023].</li>
+<li><strong>Social media and online forums.</strong> Check competitor pages and niche pages on Instagram and similar platforms. Read comments, what people say and who they are. Forums are a gold mine because people post problems, others relate or push back, and existing solutions and opinions come out, including opinions about your own brand [L0497.023].</li>
+<li><strong>Competitor sites and social accounts.</strong> Check how competitors position the product, find market gaps and opportunities, and read what their customers say about the product and the niche [L0497.023].</li>
+</ol>
+<h2 id="amazon-review-mining">Amazon review mining</h2>
+<h3 id="exporting-reviews">Exporting reviews</h3>
+<ul>
+<li>Export the reviews with the Chrome extension Amazon Review Export. It collects all reviews into a spreadsheet and downloads it when stopped [L0353.016].</li>
+<li>The extension works by clicking through the reviews page, and the export can be stopped at any point [L0995.008].</li>
+<li>Export procedure:
+<ol type="1">
+<li>Install an Amazon review export extension in Google Chrome [L0999.072].</li>
+<li>Open the product page and go to the full reviews view through the more reviews link, which shows previous and next paging [L0999.072].</li>
+<li>Click the extension and start the export, which moves through the reviews in chunks [L0999.072].</li>
+<li>Watch the progress bar and stop the export once you have enough reviews [L0999.072].</li>
+<li>Download the resulting file and use it as the review set for analysis [L0999.072].</li>
+</ol></li>
+<li>Amazon review analysis with AI, in order [L0353.016]:
+<ol type="1">
+<li>Open the product page on Amazon and go to all reviews.</li>
+<li>Export the reviews with the Chrome extension Amazon Review Export.</li>
+<li>Paste the reviews into ChatGPT about 30 rows at a time, since the whole sheet cannot be pasted at once.</li>
+<li>Ask the AI to infer the target audience from the reviews, covering demographics, psychographics, behaviour and goals, needs and motivations.</li>
+<li>Supplement the AI output with your own reading of the reviews to find trends.</li>
+</ol></li>
+</ul>
+<h3 id="ai-assisted-analysis-of-reviews">AI-assisted analysis of reviews</h3>
+<ul>
+<li>ChatGPT has a word-count limit. About 30 reviews per prompt worked, while 50 reviews caused errors. Feed reviews in batches of 30 (for example 30, then the next 30, then 60 and 90) and ask the tool to identify the market segment based on the four pillars [L0995.007].</li>
+<li>ChatGPT procedure [L0995.009]:
+<ol type="1">
+<li>Open a new chat, not a chat in which the browser is in use, because the chat may keep browsing the web.</li>
+<li>Give the product title and the About text from the product page for context, and tell the model to digest the message and do nothing else.</li>
+<li>Feed the first batch of about 30 reviews and ask it to infer the target audience using the four pillars (demographics, psychographics, behaviours, needs).</li>
+<li>Ask follow-up questions to get specifics, such as which pets or breeds are mentioned.</li>
+<li>Feed the next 30 reviews and repeat until enough data is collected.</li>
+<li>Verify the output manually, since the AI output is a starting point and misses contextual detail.</li>
+</ol></li>
+<li>When a term or behaviour keeps appearing in reviews, ask ChatGPT for a quantitative check, such as which dog breeds shed the most. This shows whether a qualitative mention is backed by general figures. The answer should still be confirmed against source material [L0999.074].</li>
+<li>Let the AI first extract the signal from the ranking data, then ask it to verify demand and the competitor ad landscape. This is better than asking it to guess at ad competition [L0354.018].</li>
+</ul>
+<h3 id="prompt-target-audience-from-reviews-four-pillars">Prompt: target audience from reviews (four pillars)</h3>
+<p>The unit text, unchanged:</p>
+<pre class="text"><code>Ask the AI to take the pasted Amazon reviews and describe the target audience for this product. Cover four pillars: demographics (who the buyer is, location, income, static information), psychographics (personality, values, psychological profile, attitude toward the product), behaviour (what the buyer is doing when they need the product) and goals, needs and motivations (why they buy, what they want to achieve, what pain they want to escape). Ask for the output under these four headings.</code></pre>
+<p>[L0353.017]</p>
+<h3 id="audience-from-reviews-and-forums">Audience from reviews and forums</h3>
+<ul>
+<li>Audience procedure for a product that is already listed [L0995.004]:
+<ol type="1">
+<li>Collect customer reviews from Amazon, since reviews are hard to fabricate and reviewers reveal their demographics, psychographics, situation and reasons.</li>
+<li>Search forums such as Reddit for problem-related phrases (for example the product problem plus a phrase like "everywhere") and read cleaning tips or complaint threads.</li>
+<li>Look for repeated words, such as a specific breed or a specific behaviour (for example a pet getting onto the bed), that appear many times.</li>
+<li>Confirm the frequency of these findings with quantitative searches (for example which dog breeds shed the most).</li>
+<li>Write down the top three target audiences that can be targeted, separating groups with different problems.</li>
+<li>Build one ad and one landing page per audience, because the creative must speak to a specific audience.</li>
+</ol></li>
+<li>Case: a pet-hair brush with about 8,000 Amazon ratings showed German Shepherds mentioned three to four times as often as other breeds, and dogs getting onto beds came up frequently. Labradors and German Shepherds were named as the breeds that shed most. This pointed to a segment of large-dog owners whose dogs get onto the bed, which allowed a more specific ad message [L0999.007, L0995.006].</li>
+<li>The same brush had enough repeated mentions of breeds, shedding places and pet behaviours to shape several separate audience segments. Large review volumes make it easier to find patterns that repeat often enough to trust [L0995.059].</li>
+<li>A repeated mention of a breed, use case or situation can reveal a segment worth targeting [L0999.006].</li>
+<li>Repeated mentions of surfaces and places, such as stairs, carpet, velvet couches and clothing, show where the product will be used. Those surfaces can be named in copy and in use-case messaging [L0450.033].</li>
+<li>Find the audience for a product not yet on Amazon [L0353.020]:
+<ol type="1">
+<li>Describe the problem the product solves, not the product itself.</li>
+<li>Search forums and Reddit for people talking about that problem and note their own words.</li>
+<li>Research similar products on Amazon and read their reviews.</li>
+<li>Treat the findings with caution, since people may describe the solution in different terms and use different features.</li>
+</ol></li>
+<li>Competitor products may solve the same problem with different features, so the audience's language may differ from the product's own features. Interpret the data with care [L0353.021].</li>
+</ul>
+<h3 id="emotional-and-buying-decision-mining">Emotional and buying-decision mining</h3>
+<ul>
+<li>Every claim, quote and insight needs a direct clickable source link. Link to specific competitor product or landing pages (not only homepages), exact Amazon listings and reviews, exact Reddit threads and comments, social posts and videos, and articles or studies. Write links as descriptive markdown text [L0221.010, L0613.002].</li>
+<li>Research should run at least 5 to 10 minutes and aim for 25+ formatted pages, with depth valued above speed. The output serves as the reference document for all later marketing work [L0221.009, L0613.003].</li>
+<li>Emotional excavation of the market, in order [L0613.006]:
+<ol type="1">
+<li>Identify negative self-labels people use (at least 15 to 20 labels with exact quotes and links), labels others applied that still sting, the identity they lost, the identity they fear becoming, and the role the problem forced them into.</li>
+<li>Document at least 10 guilt and shame narratives: what they blame themselves for, what they wish they had done, what they hide from close friends, and what they tell themselves at night.</li>
+<li>Document at least 10 loss and grief narratives: what was lost, who is lost even if still present, what they miss, the future that now feels impossible, and the milestones they fear missing.</li>
+<li>Document at least 10 breaking-point stories: the moment, comment, image or result that made the problem impossible to ignore.</li>
+<li>Document at least 10 proxy buyer narratives, where someone buys for another person.</li>
+<li>Create at least 5 "secret conversation" scenarios in which a person vents candidly to a close friend.</li>
+<li>For each major pain point, map the primary emotion, intensity from 1 to 10, duration (acute, chronic daily or episodic), social dimension, who else is affected, and physical symptoms such as sleep loss or stress eating.</li>
+<li>Identify 5 to 7 high-stakes scenarios. For each, describe the situation, the specific emotional flavour, the identity at stake, the guilt or shame, what the person fears others think, and what resolution would mean emotionally.</li>
+</ol></li>
+<li>Amazon research, in order [L0613.009]:
+<ol type="1">
+<li>Collect at least 30 direct customer quotes about problems and desires, with links.</li>
+<li>Document previously tried products and what disappointed buyers.</li>
+<li>Collect at least 15 "a-ha moments" when a product worked.</li>
+<li>Note the visual proof buyers look for, and at least 15 objections that cause hesitation.</li>
+<li>Record the decision process, time frames for results, emotional impact, feature comparisons, price sensitivity and unexpected secondary benefits.</li>
+<li>Mine emotional reviews: crying or "finally" reviews, family and relationship impact, rock-bottom stories, transformation stories, proxy buyer reviews and restored confidence. Collect at least 15 high-emotion quotes.</li>
+<li>Collect at least 40 review quotes sorted into six themes: problem description, failed solutions, decision making, results, emotional impact and negative experiences.</li>
+<li>For related products, analyse question sections, star distribution and what drives 1-star versus 5-star reviews, top sellers' unique selling propositions, and review velocity over time.</li>
+</ol></li>
+<li>Across the whole research document, include [L0613.017]:
+<ul>
+<li>the top 30 desire statements, ranked by frequency and emotional intensity;</li>
+<li>the top 30 problem statements, ranked by urgency and pain;</li>
+<li>the top 20 hooks adaptable to the product;</li>
+<li>15 to 20 common objections with responses;</li>
+<li>10 visual proof elements;</li>
+<li>10 mechanisms that build belief;</li>
+<li>the social proof that matters most to the audience;</li>
+<li>20+ buzzwords, ranked by frequency and impact, with sources;</li>
+<li>15+ customer success story patterns.</li>
+</ul></li>
+<li>Deliver this emotional landscape summary at the end of the research [L0613.018]:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Summary item</th>
+<th>Required content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top 10 identity labels</td>
+<td>Label, emotional weight 1-10, example quote, source link</td>
+</tr>
+<tr>
+<td>Top 10 guilt and shame narratives</td>
+<td>Narrative, intensity 1-10, example quote, source link</td>
+</tr>
+<tr>
+<td>Top 10 loss narratives</td>
+<td>Loss, emotional impact, example quote, source link</td>
+</tr>
+<tr>
+<td>Top 5 breaking-point scenarios</td>
+<td>Detailed scenario descriptions</td>
+</tr>
+<tr>
+<td>Top 5 proxy buyer dynamics</td>
+<td>Dynamic, relationship type, emotional drivers</td>
+</tr>
+<tr>
+<td>Highest-stakes scenario</td>
+<td>A detailed narrative of the most emotionally charged situation in the market</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Quote minimums differ between the sources. Use at least 30 direct quotes as the baseline [L0613.002, L0613.009]. Aim for 40+ real quotes [L0221.015]. Sort 40 review quotes into the six themes [L0613.009]. When the sources cannot support 40+ real quotes, prioritise 20 load-bearing verified insights over 90 plausible-sounding fabrications [L0221.015].</li>
+<li>Quote types [L0221.015]:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>What it is</th>
+<th>Where it may be used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[VERBATIM]</td>
+<td>Actual language pulled directly from sources, with working links</td>
+<td>Safe to publish as customer evidence</td>
+</tr>
+<tr>
+<td>[COMPOSITE]</td>
+<td>Language patterns reconstructed from source substance</td>
+<td>Safe to inform copy voice; never present publicly as customer testimonials</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="marketing-angles-from-reviews">Marketing angles from reviews</h3>
+<ul>
+<li>Research marketing angles on Amazon [L0636.016]:
+<ol type="1">
+<li>Open amazon.com and search for your product.</li>
+<li>Open all listings of the product.</li>
+<li>From each listing, read the positive and detailed reviews.</li>
+<li>List every distinct marketing angle you find, not only five.</li>
+<li>Drop the product if it has fewer than 5 distinct angles.</li>
+</ol></li>
+<li>Marketing angle research on Amazon [L1183.015]: search the product name on amazon.com, pick a listing with many reviews and a good rating, and read 5-star and 4-star reviews to find benefits (end feelings or outcomes, such as fun time with kids or less screen time), not features. Read 1- and 2-star reviews to find shortcomings. Use the Chrome extension Amazon Reviews Summarizer to summarise pros and cons.</li>
+<li>Marketing angles from reviews of a similar product [L0895.026]:
+<ol type="1">
+<li>Search Amazon for a similar product that solves the same problem and has many reviews (for example 46,000).</li>
+<li>Read the 5-star reviews.</li>
+<li>Extract benefit-driven lines about the experience rather than the features.</li>
+<li>Use these lines in product benefit copy.</li>
+</ol></li>
+<li>Collect 5 to 10 marketing angles from Amazon reviews of the product and of similar products. Similar products provide more reviews and therefore more angles [L0708.048].</li>
+<li>Marketing angles from benefit searches [L0895.027]:
+<ol type="1">
+<li>Google the product name with "benefits of", for example "benefits of [product]".</li>
+<li>Read the detailed blog articles that appear.</li>
+<li>Extract specific benefits and hidden problem angles the articles cover.</li>
+<li>Aim for 10 to 15 or more marketing angles before building the landing page. Products with more angles rank higher than products with only two or three.</li>
+</ol></li>
+<li>Collect target audience data from competitor website reviews and from Amazon. Search products in your niche or identical products and read customer reviews for the pain points buyers had before purchase, the problems the product now solves and their current issues [L0902.006].</li>
+</ul>
+<h2 id="reddit-and-forums">Reddit and forums</h2>
+<ul>
+<li><p>Reddit threads are a second source of buyer opinions and use cases, next to Amazon reviews and forums. Read them for the scenarios and frustrations people describe in their own words [L0450.026].</p></li>
+<li><p>Forums and Amazon reviews are a goldmine for customer language. Read how buyers describe their problem, the scenario they are in, the pets or situations involved, and which competing products they mention, both positive and negative [L0450.005].</p></li>
+<li><p>Read the comments, not only the posts. Note which pains people complain about and the exact language they use [L1019.025].</p></li>
+<li><p>Search a forum such as Reddit for the problem in plain customer words, for example "dog hair in the house", then read the threads. Customers describe their daily situation, reasons and constraints there, which reveals behaviours and underlying motivations for a segment [L0999.073].</p></li>
+<li><p>Pair the product category with the problem and the solution when searching forums for buyer questions [L0450.025]:</p>
+<ul>
+<li><code>[product type] forum</code></li>
+<li><code>best [product type]</code></li>
+<li><code>effective [problem] removal method</code></li>
+<li><code>why is [problem] bad</code></li>
+</ul>
+<p>Replies to these queries reveal how buyers describe their problem and which products they recommend.</p></li>
+<li><p>To find discussion sources, search with the customer's problem followed by the word forum, then check which forums appear [L0464.012].</p></li>
+<li><p>Reddit research procedure, in order [L0613.010]:</p>
+<ol type="1">
+<li>Identify at least 10 to 15 relevant subreddits and note each one's size, activity level and tone (supportive, skeptical or technical).</li>
+<li>Collect at least 30 quotes on desires, at least 20 examples of failed attempts, and at least 10 recurring success and failure patterns.</li>
+<li>Document DIY approaches, comparisons between alternatives, decision reasoning, terminology differences between novices and experts, descriptions of ideal solutions, and price discussions.</li>
+<li>Search high-engagement threads that begin with "I finally...", "After years of..." or "I can't believe...", plus confession posts, posts about crying or giving up, relationship-impact posts, proxy buyer posts, emotionally supportive comment sections, and "holy grail" product discussions.</li>
+<li>Collect at least 20 high-emotion identity-level quotes and at least 50 quotes in total across desires, past experiences, pre-purchase questions, objections, success stories, disappointments and "holy grail" descriptions, each with a thread link.</li>
+</ol></li>
+<li><p>Behaviour clues reveal the solutions customers already use and their frustrations with them. Repeated complaints about a common alternative, such as sticky lint rollers that waste paper, point to a usable selling point, for example "no more sticky rollers" [L0450.008].</p></li>
+</ul>
+<h2 id="language-into-copy">Language into copy</h2>
+<ul>
+<li>Mirror the words your target market already uses. Study them in their videos, competitions and gathering places, and use that language in content and ads from the start, because people respond to familiar wording [L0487.024].</li>
+<li>Scenario descriptions from real customers, such as a pet jumping onto the bed right after the sheets were changed, can become copy that speaks to the buyer's moment of frustration [L0450.009].</li>
+<li>Customer reviews on Amazon and eBay and Reddit discussions are additional sources for avatars, pain points and customer language. Use them alongside survey answers to map the market. Their language can also feed hooks and objection handling [L0906.019].</li>
+<li>Source D research form, procedure for a product or book [L1195.006]:
+<ol type="1">
+<li>Scrape the reviews of the product and its competitors on Amazon, and on eBay where reviews exist.</li>
+<li>Note how buyers say the product helped them, in their own words. These outcomes are your USP proof.</li>
+<li>Note who writes the reviews. This sharpens the ICP.</li>
+<li>Read Reddit threads, especially the comments, since they are unfiltered user feedback.</li>
+<li>Record which pain points users vent about and the exact language they use.</li>
+<li>Copy their exact phrasing for hooks and headlines.</li>
+<li>Fill the research form (pain points, exact customer language, USP, ICP) and build the creative structure around one main message.</li>
+</ol></li>
+<li>Book research [L1019.024, L1019.028]: on Amazon, scrape the reviews of the book and of its competitors, and note how the product helped buyers in their own words. Use these quotes as USP proof. Run one focused research session on Amazon and Reddit for the niche and fill the research form with exact customer quotes.</li>
+<li>Health-condition research, as a procedure [L0906.016]:
+<ol type="1">
+<li>Search the condition or problem on Google.</li>
+<li>Read the AI overview and authoritative sources, such as Psychiatry.org for ADHD, to get the official names, symptom categories and subtypes.</li>
+<li>Note the exact terms customers use, and compare them with the official terms.</li>
+<li>Use both sets of terms when building avatars and hooks.</li>
+</ol></li>
+<li>Example: an engagement campaign on a community page for parents of children with ADHD can gather how the child's hyperactivity affects daily life and what outcomes parents want. Use the collected comments to find what the children actually face, and to write advertorials, image ads or video ads. Then test the resulting angles [L0906.015].</li>
+</ul>
+<h2 id="customer-feedback-and-differentiation">Customer feedback and differentiation</h2>
+<ul>
+<li>Monitor customer emails and product review comments for feature requests and complaints. Example: customers of resistance bands asked for extra handles for couple workouts. The supplier quoted $0.60 extra per pair. The solution was to add handles and raise the price by $3-5, which created differentiation without a drop in demand. Allocate time each week to scan reviews and emails for patterns in customer requests [L0228.046].</li>
+<li>Customer pain point research can reveal ways to improve existing products and opportunities for new products. Resellers such as dropshippers can use it to choose which new products to source [L0872.010]. <em>(Older advice, 2021-2022.)</em></li>
+<li>Find a differentiation idea for a private-label product [L1155.004]. <em>(Older advice, 2021-2022.)</em>
+<ol type="1">
+<li>Survey your customers repeatedly and keep detailed notes of their requests, complaints and suggested features.</li>
+<li>Mine the product reviews on your own store, which should number in the hundreds by this stage.</li>
+<li>Mine reviews on Amazon and on competitor sites.</li>
+<li>Ask your customer service team what customers say and what they request.</li>
+<li>Identify features customers want that no product on the market offers, and design a version that addresses them.</li>
+</ol></li>
+</ul>
+<h2 id="attention-matrix-older-advice-2021-2022">Attention matrix <em>(older advice, 2021-2022)</em></h2>
+<ul>
+<li>An attention matrix is a spreadsheet that maps every website, YouTube channel, blog, forum, Facebook group and page, and podcast with a large audience in your niche. You use it for ad targeting, content research, customer research and joint promotions [L0478.001].</li>
+<li>A new business has not yet earned its market's attention, so it must first find where prospects already spend their attention. Map those audiences before trying to use or win them [L0478.002].</li>
+<li>Thresholds for inclusion:
+<ul>
+<li>Websites or blogs with more than 5,000 monthly visits, checked with Ahrefs or Ubersuggest. Use these numbers as guidelines rather than strict cut-offs [L0478.003].</li>
+<li>YouTube channels with more than 500 subscribers [L0478.004].</li>
+<li>Facebook groups with more than 300 members [L0478.004].</li>
+<li>Facebook pages with more than 500 likes or followers [L0478.004]. In a large market, many pages may pass this threshold, so raise the bar to 1,000 to 2,000 likes to narrow the list. Lower or raise thresholds based on how many qualifying entries you find [L0478.007].</li>
+<li>Podcasts with more than 10 reviews, because review count is a reasonable proxy for real listenership. A podcast with few or no reviews usually has a small audience [L0478.005].</li>
+</ul></li>
+<li>For forums and Facebook groups, also record the owners or admins, since they control the audience. Note the group admins for each Facebook group you add [L0478.006].</li>
+<li>YouTube audiences are global. Subscriber counts overstate your market if you sell in one country. Estimate the share of subscribers in your sales country before judging audience size [L0478.016].</li>
+<li>Focus on audiences that are not direct competitors, such as adjacent publications and creators who reach your buyers. Competitors with large followings can be added too, but they are usually already known from competitor research [L0478.008].</li>
+<li>Channels covering many sports or products are less specific than niche channels. They can still be listed, but targeting them reaches a broader and less relevant audience. Prefer smaller, tightly focused channels for targeting [L0478.014].</li>
+<li>Some creators are pure YouTubers with no other online presence and may appear as a single entry. This is acceptable, and the entry is still useful [L0478.015].</li>
+<li>Worked examples:
+<ul>
+<li>A well-known surfing magazine had roughly 260,000 monthly organic visits in Ubersuggest, far above the 5,000 threshold, and about 175,000 YouTube subscribers. Its website and channel both qualify, so it is added as one entry with each property in its own column [L0478.012].</li>
+<li>A surfing how-to channel with about 100,000 subscribers was added because its content is aimed only at surfers, especially beginners and intermediates who buy boards. Its subscribers are almost all inside the target market [L0478.013].</li>
+</ul></li>
+<li>Check a site in Ubersuggest: open Traffic Analyzer &gt; Overview, enter the domain and read the Organic Monthly Traffic figure against the 5,000 visits threshold. Ahrefs can be used for the same check [L0478.011].</li>
+<li>Spreadsheet layout, one row per entry [L0478.010]:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>NAME</th>
+<th>WEBSITE</th>
+<th>FACEBOOK</th>
+<th>INSTAGRAM</th>
+<th>YOUTUBE</th>
+<th>PODCAST</th>
+<th>OTHER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name of person, company or organisation</td>
+<td>Website URL</td>
+<td>Facebook page or group URL and size</td>
+<td>Instagram profile and size</td>
+<td>YouTube channel URL and subscriber count (e.g. 175k)</td>
+<td>Podcast name and review count</td>
+<td>Any other relevant property, e.g. forum, newsletter or large social account</td>
+</tr>
+</tbody>
+</table></div>
+<p>Example row: Surfer Magazine | <a href="https://www.surfer.com/">https://www.surfer.com/</a> | (empty if none) | (empty if none) | <a href="https://www.youtube.com/surfer">https://www.youtube.com/surfer</a>, 175k | (empty if none) | (empty if none). Leave cells empty when a property does not exist. Subscriber counts can be stored as rounded figures [L0478.010].</p>
+<ul>
+<li>Build the list, in order [L0478.009]:
+<ol type="1">
+<li>Create a free Gmail account used only for this research and give it a recognisable name.</li>
+<li>Search Google for a phrase such as "best [your niche] blogs" and check existing best-of lists, including the featured snippet.</li>
+<li>Open each candidate website in Ubersuggest or Ahrefs and check its monthly organic visits against the 5,000 threshold.</li>
+<li>Sign up for the website's email list using the research Gmail account.</li>
+<li>From the website, follow its links to its YouTube, Facebook, Instagram and podcast profiles.</li>
+<li>Check each YouTube channel's subscriber count against the 500 threshold.</li>
+<li>Join relevant Facebook groups with your personal profile, check member counts against 300, and note the admins.</li>
+<li>Check Facebook page likes or followers against 500.</li>
+<li>Search podcasts in your niche and check their review counts against 10.</li>
+<li>Enter each qualifying entry as one row in the spreadsheet.</li>
+<li>Repeat until you have at least 50 entries, then keep adding.</li>
+</ol></li>
+<li>If you have no list of sites yet, start on YouTube. Type a broad keyword for your niche into the YouTube search bar and open the channels that appear. Favour channels that focus narrowly on your niche over large general brands that cover many topics [L0478.030].</li>
+<li>Starting from a website is efficient, because most sites link to their YouTube, Facebook, Instagram and podcast profiles, so one site leads to several matrix entries. YouTube is a convenient platform to check first because it publicly shows subscriber counts and video view counts [L0478.031].</li>
+<li>Subscribe to the YouTube channels and podcasts you add, so that their new uploads and episodes reach you as notifications. This lets you see what they publish over time without checking each page by hand [L0478.032].</li>
+<li>The topics that big audiences discuss, and those they ignore, show what your customers are interested in. Patterns of topics nobody talks about are also useful signals [L0478.022].</li>
+<li>Customer research uses the places where buyers gather, such as forums and Facebook groups. Regularly reading and joining these spaces reveals customer language, interests and problems [L0478.021].</li>
+</ul>
+<h2 id="dream-100-older-advice-2021-2022">Dream 100 <em>(older advice, 2021-2022)</em></h2>
+<ul>
+<li>The Dream 100 is a list of roughly 100 targets (people or organisations with an engaged audience) you can contact and build relationships with over time. The number is a guide, not a requirement. Small or specialised markets may yield fewer, very large markets may yield more, and even 30 to 70 contacts are a strong start compared with knowing nobody in the market [L0527.001].</li>
+<li>Keep Dream 100 targets in the country where the business is based, because most of a creator's audience usually lives there and the majority of that audience must be able to buy from you. Ignoring this rule is acceptable for backlink research in SEO, where the link source matters less [L0527.002].</li>
+<li>Identify the primary interests your products serve, not the product itself. Someone selling surfboards should look for people who talk about surfing, rather than surfboard sellers or surfboard-only creators. A sauna seller should consider interests such as weight loss, longevity and biohacking as separate research tracks [L0527.003].</li>
+<li>Target audiences that are small to medium in size, typically under 500,000 followers, though anything from about 10,000 to 100,000 works well. Very large accounts usually cover many unrelated interests, are hard to reach behind management teams, and make paid promotion expensive and poorly targeted [L0527.004].</li>
+<li>Choose only targets whose audience is engaged. They post regularly (for YouTube, roughly weekly uploads), their posts get likes and comments, and people ask questions. Large audiences with almost no comments often indicate purchased followers [L0527.005].</li>
+<li>Dream 100 research, in the original order [L0527.006, L0527.007]:
+<ol type="1">
+<li>Identify the primary interests that your products serve (for example surfing rather than surfboards; for saunas, weight loss, longevity and biohacking).</li>
+<li>Search the target platforms using keywords related to those interests.</li>
+<li>Identify individuals or organisations with small to medium audiences (under about 500,000 followers) that are engaged (they post regularly and receive comments and likes).</li>
+<li>Record each one in the Dream 100 tracker spreadsheet.</li>
+<li>Repeat across all target channels until you reach 100 or as far as the market allows.</li>
+</ol></li>
+<li>Search method per platform [L0527.011]:
+<ul>
+<li>Google keyword search for blogs and forums (for example "surfing forums australia").</li>
+<li>Facebook search bar with the keyword, then filter results to Groups.</li>
+<li>Instagram and YouTube search bars with interest-based keywords.</li>
+<li>LinkedIn people search for B2B markets.</li>
+</ul></li>
+<li>For Facebook groups, check the member count, posts per day, new members per week and posts per month to judge activity. A group with around 47,000 members, about 10 posts per day and about 300 new members a week shows an active audience. Groups for buying and selling the niche's products can also be valuable targets, because they offer direct advertising options [L0527.015].</li>
+<li>If your business has been running for some time, start the Dream 100 search with the search terms your own keyword research has already shown for the primary interests. This saves time compared with guessing new keywords from scratch [L0527.025].</li>
+<li>Work through the Dream 100 list each day and engage only with prospects who have published something new since your last interaction, such as a blog post, a YouTube video or an Instagram post from the last few days. If a prospect has nothing new, skip them that day [L0453.004].</li>
+<li>Google audience insights can be used for a Dream 100-style list, because Facebook audience insights changed and no longer show what people look at [L0835.011]. <em>(Source A, 2023.)</em></li>
+</ul>
+<h2 id="communities-and-publications">Communities and publications</h2>
+<ul>
+<li><p>Prospects gather in congregations such as forums, Facebook groups, newsletters, blogs and niche communities. Instead of trying to create traffic from nothing, find these groups and place your message in front of them. The internet makes such groups reachable worldwide [L0523.027].</p></li>
+<li><p>Find the congregations your target market uses [L0523.028]:</p>
+<ol type="1">
+<li>Google your core keywords together with the word forum.</li>
+<li>Search for groups related to your keywords on Facebook.</li>
+<li>Dig through results and communities until you find places where the audience is active.</li>
+<li>Keep notes on each congregation so you can later place ads or content there.</li>
+</ol></li>
+<li><p>To locate your audience, ask where its attention goes: which email newsletters it reads, which blogs it follows, which Facebook or Instagram groups it joins, which keywords it searches on Google, and which books it buys on Amazon. Real behaviour reveals the audience better than assumptions do [L0523.030].</p></li>
+<li><p>Treat each newsletter, blog or group your audience uses as a vein of traffic. When you find one, dig deeper along it, because similar communities usually lie nearby. Systematic searching turns scattered attention into a predictable source of visitors [L0523.031].</p></li>
+<li><p>Find your audience on Facebook. Search the phrase "pages liked by people who like [your niche]" in the Facebook search bar. Then like the relevant pages and join the groups to see what your customers follow and what competitors post [L1243.004].</p></li>
+<li><p>Stay in the customer's mindset while researching a niche, through six habits [L1370.118]:</p>
+<ol type="1">
+<li>Read every industry publication each month.</li>
+<li>Visit online forums where members of the niche discuss their work.</li>
+<li>Subscribe to email groups where only people in the niche write to each other.</li>
+<li>Attend industry conventions, seminars and trade shows.</li>
+<li>Play the prospect by buying from competing providers to see their sales process.</li>
+<li>Regularly brainstorm with members of the niche and with vendors who serve them.</li>
+</ol>
+<p>A coach who did this long enough was frequently mistaken for a member of the profession, and some went further by investing in businesses in the niche to test ideas firsthand [L1370.118].</p></li>
+<li><p>Start the research by searching the topic directly, instead of spending time planning it. When a result looks useful, follow its references and bibliography to find the original sources. Keep going deeper than competitors do, since they usually stop at the first result. Save the most useful sources in a collection you can return to [L1343.008].</p></li>
+<li><p>Amazon customer reviews are a source for customer research in local markets. Check the local Amazon store (for example Amazon France for a French market) and read the five-star reviews for descriptive feedback. Customer language from these reviews can be used in copy and creatives [L1382.055].</p></li>
+</ul>
+<h2 id="survey-and-interview-research">Survey and interview research</h2>
+<ul>
+<li>Research with real consumers before writing ads, through interviews, questionnaires and direct sales conversations. Guessing what people want is very expensive [L1261.031].</li>
+<li>Before one food campaign, a large group of consumers was interviewed over several weeks to learn their buying triggers. Another advertiser interviewed around a thousand people about what they wanted from a product before writing ads [L1261.032].</li>
+<li>Case: a canvass of about 1,000 households showed that only 4 percent used a canned version of a food, while 96 percent made it at home. The right appeal was therefore to convert home cooks, not to sell one brand against others [L1261.033].</li>
+<li>Use survey answers together with reviews, forums and Reddit, not instead of them [L0906.019].</li>
+</ul>
+<h2 id="deep-research-prompts-and-deliverables">Deep-research prompts and deliverables</h2>
+<ul>
+<li><p>Market research prompt. It pulls data from competitor websites, Amazon reviews, YouTube discussions and Reddit threads to provide a comprehensive market analysis. It generates a detailed research document targeting 25+ pages that identifies market gaps, competitor positioning and customer language patterns [L0221.002].</p></li>
+<li><p>Quality and depth matter far more than speed. Plan 5 to 10 minutes minimum for the investigation, and aim for 25+ pages of formatted content when complete [L0221.009].</p></li>
+<li><p>Deliverables typically have three parts [L0221.020]:</p>
+<ul>
+<li><strong>Part 1:</strong> executive summary, strategic verdict and market overview.</li>
+<li><strong>Part 2:</strong> competitive deep-dive, positioning gaps and differentiation opportunities, with source links.</li>
+<li><strong>Part 3:</strong> ranked hooks and objections, prioritised by conversion strength and emotional intensity.</li>
+</ul>
+<p>Tell the AI about the upcoming parts when starting the research. Later analysis improves significantly when earlier parts are added to the project context for reference [L0221.020].</p></li>
+<li><p>Run the customer and avatar research with a prompt pack [L1476.053]:</p>
+<ol type="1">
+<li>Get the Desire to Scale System 2.0 document from the community resources.</li>
+<li>Copy each prompt, paste it into the chat and fill in the yellow-highlighted fields.</li>
+<li>Run all the prompts in one master chat (Claude or ChatGPT) with all research documents uploaded, so the context carries across prompts. Claude Projects can keep the memory.</li>
+<li>After the prompts, start a new chat, upload the documents you made and build the whitelist character or native ads from there.</li>
+</ol></li>
+<li><p>AI prompts can research an audience through three sources: Reddit discussions, Amazon book reviews and eBay research. Each source helps map the pain point and the marketing angle before you produce custom ads [L1030.030].</p></li>
+</ul>
+<h2 id="delegation-and-tools">Delegation and tools</h2>
+<ul>
+<li>AgentGPT is an AI agent that takes a goal, feeds it to ChatGPT, reviews the output, adds further tasks and uses live internet access to run research automatically. Plain ChatGPT, at the time of that lesson, had no internet access and could only analyse information already provided to it [L0450.003].</li>
+<li>PEAKS is a paid audience research tool that the speaker recommends for finding products through audience research, calling it the best tool on the market [L0690.011].</li>
+<li>Use ChatGPT as a virtual assistant for audience research, with human research in forums and reviews as the lead [L0995.010].</li>
+<li>Delegate the prompt-driven steps to AI only after the source research is done. Verify each output against the sources, as described above [L0354.016, L0354.018].</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>Customer research for creative strategy: 1. Identify existing customer avatars who have already bought from the brand. 2. Predict other problems or desires the product can solve. 3. Determine which people have those problems and desires, based on steps 1 and 2. 4. Search online for where these avatars share opinions or discuss related topics, such as forums, subreddits, Facebook comments, YouTube review videos and other places where the problem or desire is discussed. 5. Scrape the raw language from these sources, meaning the exact words real customers and potential customers use. 6. Summarise the findings and rank them by how often each thought or opinion is mentioned. [L0464.011]</li>
+</ul>
+</article><nav class="pn"><a href="../../02-niche-and-product-research/13-target-market-and-audience-research/"><span class="k">&larr; Previous</span><span class="v">Target market and audience research</span></a><a class="nx" href="../../02-niche-and-product-research/15-competitor-intelligence-and-offer-analysis/"><span class="k">Next &rarr;</span><span class="v">Competitor intelligence and offer analysis</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Demo store for supplier approval | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.12: Demo store for supplier approval.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/12-demo-store-for-supplier-approval/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Demo store for supplier approval | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.12: Demo store for supplier approval."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/12-demo-store-for-supplier-approval/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/12-demo-store-for-supplier-approval/">Plain version</a></div><h1>4.12 Demo store for supplier approval</h1><article><h2 id="what-a-supplier-ready-demo-store-is">What a supplier-ready demo store is</h2>
+<ul>
+<li>A demo store is a fully functional Shopify storefront with placeholder products. It shows that the business is supplier-ready without being connected to approved suppliers or accepting real customer orders. It becomes a live store later, when the demo products are replaced with approved supplier products. [L0069.001]</li>
+<li>It has a complete layout and design, populated with a small number of representative demo products. Suppliers review it to picture how their own products would look before they approve real uploads. [L0245.027]</li>
+<li>It is built to be supplier-ready and looks and behaves like a live store. The finished design is used to show brands when applying to become an authorized retailer. [L1062.001]</li>
+<li>Older (2019): It should be built exactly like the permanent store, with the same design and pages. The only difference is that the real products stay unpublished until the supplier approves. [L0356.022]</li>
+<li>The store built during setup is the same store that will later take real sales, not a separate test site. Only the content differs, because no suppliers or real products exist yet. [L1061.005]</li>
+<li>Before suppliers are contacted, fill the store with demo products instead of real supplier products. The store should look as it will when it sells, so suppliers can picture their own products on it. [L1061.006]</li>
+<li>Examples: ShakaSurfboards.com (surf niche) and Happy Paws (pet supply niche) are demo stores built to a supplier-ready standard. Both are design showcases that resemble a real store. [L0069.007, L1062.004]</li>
+<li>A supplier-facing store should look exactly like a live store, the only difference being that the products are demo items. It must not look half-built. [L0767.003]</li>
+<li>Suppliers review the store before approval, so it should look complete even with only a few products. It should show what the store will look like once the supplier's products are uploaded. [L0467.041]</li>
+<li>Suppliers apply the same skepticism a future customer would. A store that looks untrustworthy fails both audiences. Trust signals are therefore the core criteria. [L0767.009]</li>
+<li>Older (2019): Suppliers judge a retailer partly on how the store looks, so store quality matters before the first sale. A professional look raises the chance of approval. [L1086.061]</li>
+<li>Older (2019): The store should be lean but credible: sample collections and sample products that match the target niche, clean, not a large store with many pages or products. [L0960.004]</li>
+<li>Older (2019): Build it lean but good-looking, without many extra content pages or a large product upload. Add the extras after vendor approval. The goal before approval is a credible, functional store, not a finished one. [L0960.005]</li>
+<li>Minimum set for credibility: a working logo, favicon, colors, fonts, a single slide, a few collections, a pre-footer and an email signup. Defer announcement bars, mega menu details, blog content, buyer guides and advanced product card settings. [L0775.061]</li>
+<li>The store must look relevant to its niche before outreach. Add products from the chosen niche, even placeholders, so the brand sees a store that matches its category. [L0468.061]</li>
+<li>Older (2020): Use the niche-specific demo products and stock sources described below. [L0468.061]</li>
+<li>Build a new demo store for each niche, even if you already own other stores. Mention your existing experience when contacting suppliers, and say the new store goes live on a specific date. [L0934.090]</li>
+<li>A demo store can stay small while suppliers are contacted, for example three collections with three products each. It does not need rebuilding when the niche changes. [L0247.083]</li>
+<li>Build the store to its final look before contacting suppliers, so they can picture how their products will appear. Finish the build first, then start outreach. [L0941.036]</li>
+<li>Timing: the store is built before suppliers are contacted. Demo products are uploaded so suppliers can review it during approval. [L0969.086, L0506.004]</li>
+<li>Before applying to silver suppliers, build the demo store so the supplier can see a working, professional storefront when it reviews the application. [L0486.008]</li>
+<li>Have a live, high-quality demo store before contacting suppliers, so they can see how their products would look on your site. [L1422.017]</li>
+<li>Supplier outreach comes only after the supplier-ready demo store is complete. [L1062.002]</li>
+<li>At the demo stage, no real products are uploaded and no supplier approval is needed yet. Demo products fill the catalog so the store looks realistic, and they are replaced by live products when the store goes live. [L1062.002]</li>
+<li>Loading real products before a supplier has approved you is outside the demo stage. Use demo products in the catalog instead. [L1062.003]</li>
+<li>Store build sequence from the Source D course, with product validation first:
+<ol type="1">
+<li>Build the store with Elixir by following the step-by-step store build guide.</li>
+<li>Optimize the product page: images, copy, urgency elements and trust badges.</li>
+<li>Keep the design clean and trustworthy.</li>
+<li>Submit the store for review via ticket before it goes live. [L0491.015]</li>
+</ol></li>
+<li>Conflict on sequencing. Source D says not to build a store until a product has been approved, because building early wastes time on products that may not pass review. [L0491.014] The Source A and Source B units assume the product choice is made and say to build the demo store before supplier outreach. [L0506.004, L0969.086, L0771.031]
+<ul>
+<li>Applies: validate the product first (Source D). Once the product line is chosen, build the demo store before contacting suppliers.</li>
+</ul></li>
+<li>Store domain: the store must have its own domain name. Suppliers see this as a sign of professionalism and an established business. [L0123.002]</li>
+<li>The shop name and the website domain: a Shopify subdomain such as store-name.myshopify.com in outreach or on the store makes the business look unprofessional and untrustworthy. [L0767.005]</li>
+</ul>
+<h2 id="how-many-demo-products">How many demo products</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Figure</th>
+<th>Source</th>
+<th>Date</th>
+<th>Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 to 20</td>
+<td>L0088.002, L0219.001, L0219.004</td>
+<td>not dated</td>
+<td>Build before contacting suppliers. L0219.001: this lets suppliers visualize the brand and significantly increases the chance of becoming an authorized retailer.</td>
+</tr>
+<tr>
+<td>About 30 minutes for 10 to 20</td>
+<td>L0088.003, L0219.005</td>
+<td>not dated</td>
+<td>Time to create and upload 10 to 20 demo products.</td>
+</tr>
+<tr>
+<td>3 to 5</td>
+<td>L0123.003</td>
+<td>not dated</td>
+<td>Shows the product types and that the store is operational without looking thin or cluttered.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>L0243.030</td>
+<td>2019, older</td>
+<td>Five is enough before launch. Put the effort into About Us, shipping policy and return policy pages instead of many products.</td>
+</tr>
+<tr>
+<td>About 5</td>
+<td>L0934.089, L0934.159</td>
+<td>2023</td>
+<td>Credible for suppliers. Descriptions can be short.</td>
+</tr>
+<tr>
+<td>4 to 5</td>
+<td>L0962.036</td>
+<td>2021, older</td>
+<td>A demo store needs about four or five stock product pages to look complete. Collections need not be filled before launch.</td>
+</tr>
+<tr>
+<td>4 to 5</td>
+<td>L1085.038</td>
+<td>2018, older</td>
+<td>Pick 4 to 5 products, each with a royalty-free image.</td>
+</tr>
+<tr>
+<td>4 to 5</td>
+<td>L1275.031</td>
+<td>2019, older</td>
+<td>Upload about 4 to 5 demo products using stock images before approval.</td>
+</tr>
+<tr>
+<td>4 to 5 per collection</td>
+<td>L0452.022</td>
+<td>not dated (Source B)</td>
+<td>Four products took about 10 minutes.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>L0468.062</td>
+<td>2020, older</td>
+<td>About five placeholder products from one niche.</td>
+</tr>
+<tr>
+<td>5 to 10</td>
+<td>L1068.040</td>
+<td>2019, older</td>
+<td>Enough to start contacting suppliers.</td>
+</tr>
+<tr>
+<td>5 to 10</td>
+<td>L0853.009</td>
+<td>2021, older</td>
+<td>Enough to show suppliers how the store will look.</td>
+</tr>
+<tr>
+<td>5 to 10</td>
+<td>L0804.038</td>
+<td>2023</td>
+<td>Enough; checkout does not need to be enabled.</td>
+</tr>
+<tr>
+<td>3 collections × 3 products</td>
+<td>L0247.083</td>
+<td>2021, older</td>
+<td>Keep the store small while suppliers are contacted.</td>
+</tr>
+<tr>
+<td>A handful</td>
+<td>L0968.038</td>
+<td>2021, older</td>
+<td>A handful of demo products is enough to build the store.</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Across these sources, the figures agree that the store should stay small. Five appears most often; 10 to 20 is the upper range. [L0243.030, L0934.089, L0934.159, L0468.062, L0123.003]</li>
+<li>Do not overbuild at this stage. [L0088.002]</li>
+<li>A demo store needs about five products to be credible to suppliers. Product descriptions can be short, because suppliers only need to see what the product pages look like. [L0934.159]</li>
+<li>Keep the product pages short during review, since the purpose is to show suppliers how the site is organized, not to impress with copy. [L0934.166]</li>
+<li>Collections do not need to be filled with products before launch. [L0962.036]</li>
+</ul>
+<h2 id="stock-images-number-sources-and-legal-sourcing">Stock images: number, sources and legal sourcing</h2>
+<h3 id="how-many-images-per-product">How many images per product</h3>
+<ul>
+<li>One image per demo product is sufficient. Multiple images are not required. [L0036.008]</li>
+<li>One product photograph is sufficient for each demo product. [L0219.007]</li>
+<li>One image per product at acceptable quality is enough. It does not need to be perfect; the best available image is sufficient. [L0964.092]</li>
+<li>Demo products that have only one product photo are fine. Stock images with only one angle are acceptable. [L0855.097]</li>
+<li>Recommended: at least one product photo without people. Lifestyle photos with people are optional. If none is available on Canva, search Google royalty-free images for one product shot per product. [L0834.034]</li>
+<li>Five to 10 images in total are enough for five demo products plus a homepage banner. [L0268.066]</li>
+<li>For a mock store, use three to five royalty-free stock images found through a Google image search. Do not use the supplier images you plan to show in outreach. [L0671.046, L0671.185]</li>
+<li>Five distinct product photos are enough to start. Search the niche plus the words white background. [L1111.074]</li>
+<li>A handful of product photos can be enough at launch. [L0247.086]</li>
+<li>Only a handful of images per product type is needed, because dummy products are removed as soon as real suppliers are live. [L0359.040]</li>
+<li>Upload no more than two source images per product when copying from a source page. If the source page has only one image, upload only that one. [L0452.009, L0452.028]</li>
+<li>Never launch with only demo or stock images. Use stock photos during the build and demo phase, and replace them with supplier product photos as soon as a supplier is approved. [L0270.040]</li>
+</ul>
+<h3 id="image-sources">Image sources</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Notes</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Burst (Shopify), Pexels, Pixabay, Negative Space, FreePik, Vex, Adobe (free section), FreeImages.com, Unsplash</td>
+<td>Free stock photo sites</td>
+<td>L0036.003</td>
+</tr>
+<tr>
+<td>Burst, Pexels, Negative Space, Freepik, Vecteezy, Adobe Stock, Canva with Magic Media (AI-generated)</td>
+<td>Use when supplier images are unavailable or you need more visual variations</td>
+<td>L0091.001</td>
+</tr>
+<tr>
+<td>123RF.com</td>
+<td>Millions of images, $2 to $3 per photo. Use when supplier images are unavailable. Older (2021).</td>
+<td>L0270.031</td>
+</tr>
+<tr>
+<td>Paid stock photos, about $1 per image</td>
+<td>Paid sites can fill gaps when free royalty-free images are scarce. Older (2021).</td>
+<td>L0247.086</td>
+</tr>
+<tr>
+<td>Paid stock photos, a dollar or two each</td>
+<td>Buy a few only if free images cannot be found. Older (2021).</td>
+<td>L0968.038</td>
+</tr>
+<tr>
+<td>Canva Magic Media (AI-generated) and licensed stock</td>
+<td>Shows the layout of a product page without implying an existing supplier relationship</td>
+<td>L0623.015</td>
+</tr>
+<tr>
+<td>Pexels</td>
+<td>Free stock site with a product-type search, useful for placeholders. Older (2019).</td>
+<td>L1275.030</td>
+</tr>
+<tr>
+<td>Pixabay</td>
+<td>Free stock alternative</td>
+<td>L0962.037, L0853.047</td>
+</tr>
+<tr>
+<td>Pexels, Pixabay, Google Images, Alibaba, AliExpress</td>
+<td>Search for usable photos. If nothing usable turns up, search for a very similar product and use its photos.</td>
+<td>L1259.060</td>
+</tr>
+<tr>
+<td>Instagram hashtags (customer-style UGC photos)</td>
+<td>One weighted hula hoop campaign using such images reached an 8 to 9 percent conversion rate.</td>
+<td>L1259.060</td>
+</tr>
+<tr>
+<td>Fiverr freelancer</td>
+<td>About 5 to 10 USD to fix backgrounds and make the product stand out, or retouch with an AI image tool when photos are pixelated or cluttered</td>
+<td>L1259.060</td>
+</tr>
+<tr>
+<td>Brand public sites</td>
+<td>Older (2020): if no suitable stock photos exist, use photos from brands you have not contacted yet, for example from their public sites. Replace them once the supplier is approved.</td>
+<td>L1277.056</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Paid stock photos are generally not worth buying for a demo or mock store. If images have already been bought, reuse them on other content pages and in social media marketing. Older (2019). [L0467.075]</li>
+<li>Google Images, Pinterest and similar sites are not a stock source for this purpose. Use the sources in the table above. [L1259.060] <em>(Conflict noted below.)</em></li>
+</ul>
+<h3 id="sourcing-procedures">Sourcing procedures</h3>
+<p>Procedure: Commercial rights on Google Images [L0036.004]</p>
+<ol type="1">
+<li>Search your niche on google.com/images.</li>
+<li>Click Tools.</li>
+<li>Click Usage Rights.</li>
+<li>Select 'Commercial and other licenses'.</li>
+<li>Review results and verify each image by visiting its source site before using.</li>
+</ol>
+<p>Procedure: Labeled for reuse on Google Images [L0359.041]</p>
+<ol type="1">
+<li>Open Google and search for the product type, for example leather sofa.</li>
+<li>Click Images.</li>
+<li>Click Tools.</li>
+<li>Open the usage rights menu and select Labeled for reuse.</li>
+<li>Save only a handful of images for the demo products.</li>
+</ol>
+<p>Procedure: Labeled for reuse, from the Source D-style store guide [L0767.006]</p>
+<ol type="1">
+<li>Search the product type on Google.</li>
+<li>Switch to the Images tab.</li>
+<li>Open Tools.</li>
+<li>Set Usage rights to 'Labeled for reuse'. Downloaded images are then royalty-free and safe to use on a website.</li>
+</ol>
+<p>Setting: Google Images path for royalty-free photos [L0767.007]</p>
+<ul>
+<li>Google search &gt; Images tab &gt; Tools &gt; Usage rights &gt; 'Labeled for reuse'.</li>
+<li>'Labeled for reuse with modification' is the alternative when edits are planned.</li>
+</ul>
+<p>Procedure: Royalty-free images for demo products, older (2020) [L0852.087]</p>
+<ol type="1">
+<li>Search Google for the product name, for example leather sofa.</li>
+<li>Click Images.</li>
+<li>Click Tools.</li>
+<li>Click Usage rights.</li>
+<li>Choose labeled for reuse or labeled for reuse with modification.</li>
+<li>Download a set of images and name the products as you want.</li>
+<li>Write a one or two sentence basic description for each product.</li>
+</ol>
+<p>Free stock photo sites can also be used. [L0852.087]</p>
+<p>Procedure: Free images for demo products, older (2021) [L0853.047]</p>
+<ol type="1">
+<li>Search Google Images for the product name.</li>
+<li>Click Tools, then choose Usage rights and select a free-to-use option.</li>
+<li>Pick suitable stock images to use as demo products.</li>
+<li>Alternatively, browse Pixabay for free stock images.</li>
+<li>Upload 5 to 10 demo products and replace them with real products once suppliers are approved.</li>
+</ol>
+<p>Procedure: Free images with usage rights, older (2021) [L0962.037]</p>
+<ol type="1">
+<li>Run a Google image search for your product.</li>
+<li>Open Tools.</li>
+<li>Under Usage rights, select Creative Commons licenses.</li>
+<li>Use the results that show the product clearly.</li>
+</ol>
+<p>Pixabay is a free stock photo alternative. [L0962.037]</p>
+<p>Procedure: Demo product pages, older (2018) [L0466.055]</p>
+<ol type="1">
+<li>Open Google Images and search for the product, for example stand-up paddle boards.</li>
+<li>Click the Images tab, then Tools, then Usage rights, and choose Labeled for reuse.</li>
+<li>Select a royalty-free image of the product.</li>
+<li>Create a product page named after the product, for example orange paddle board.</li>
+<li>Add a few lines describing the product, such as size, color, brand, and included parts.</li>
+</ol>
+<p>Setting, older (2018): Google Images &gt; Settings &gt; Advanced search &gt; Usage rights dropdown &gt; Free to use or share &gt; Advanced search. Choose images labeled for reuse and use them only as placeholders until supplier images arrive. Do not copy images from other sites. [L1274.068]</p>
+<p>Setting, older (2019): Google Images &gt; Tools &gt; Usage rights &gt; Labeled for reuse. Use this filter to find product photos you can legally use as stock images for a demo store. [L1275.029]</p>
+<p>Setting, older (2019): To find demo product images, search the product term in Google, open the Images tab, click Tools, then set Usage rights to 'Labeled for reuse'. Use the generic photos you find for your demo store. [L1002.024]</p>
+<p>Procedure, older (2020): Image sourcing for a new store before brands send photos [L1277.056]</p>
+<ol type="1">
+<li>Start with stock photo sites, since only a handful of images per product is needed.</li>
+<li>If no suitable stock photos exist, use photos from brands you have not contacted yet, for example from their public sites.</li>
+<li>Replace these placeholders with supplier images once the supplier is approved.</li>
+</ol>
+<h3 id="usage-rights-which-label-applies">Usage rights: which label applies</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Where it appears</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Commercial and other licenses</td>
+<td>Google Images &gt; Tools &gt; Usage Rights</td>
+<td>L0036.004</td>
+</tr>
+<tr>
+<td>Labeled for reuse</td>
+<td>Google Images &gt; Tools &gt; Usage rights</td>
+<td>L0359.041, L0767.006, L0767.011, L1275.029, L0466.055, L1002.024</td>
+</tr>
+<tr>
+<td>Labeled for reuse with modification</td>
+<td>Google Images, used when edits are planned</td>
+<td>L0767.007, L0852.087</td>
+</tr>
+<tr>
+<td>Free to use or share</td>
+<td>Google Images advanced search (older, 2018)</td>
+<td>L1274.068</td>
+</tr>
+<tr>
+<td>Creative Commons licenses</td>
+<td>Google Images &gt; Tools &gt; Usage rights (older, 2021)</td>
+<td>L0962.037</td>
+</tr>
+<tr>
+<td>Free-to-use option</td>
+<td>Google Images &gt; Tools &gt; Usage rights</td>
+<td>L0853.047</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Images labeled for reuse can be published on your own website without the risk of a copyright claim. [L0767.011]</li>
+<li>Google Images labeled 'licensable' means the copyright holder expects payment. Always verify the source website to confirm the actual licensing terms before using any image found through the commercial license filter. [L0036.027]</li>
+</ul>
+<h3 id="legal-rules-for-images">Legal rules for images</h3>
+<ul>
+<li>Do not copy product photos from competitor websites. Use free stock sites to avoid legal risks and to demonstrate professionalism. [L0036.013]</li>
+<li>Do not copy product photos from Google Shopping or competitor sites. Use your own photos or licensed stock images to avoid rights problems. [L1462.020]</li>
+<li>Do not copy images from other sites. [L1274.068]</li>
+<li>Do not use actual supplier photos or PLR (Private Label Rights) content. [L0268.066]</li>
+<li>Never upload real supplier products, photos or descriptions before you have approval. [L0551.023]</li>
+<li>If you use royalty-free stock photos from image search, you can keep them on a demo store. If the rights are unclear, remove them and use images from suppliers that have approved you. [L1112.039]</li>
+<li>Demo products that use another supplier's photos should be deleted once that supplier approves. [L1112.038]</li>
+<li>Demo product pages should show only a general idea of a future product page. They must not be used to claim that a brand has already approved the store. [L0623.016]</li>
+<li>Older (2019): Using a supplier's photos for demo products before approval usually does no harm. Stock photos avoid the question entirely and are easy to swap out. [L1275.032] <em>(Conflict noted below.)</em></li>
+<li>Conflict on supplier photos: L1275.032 (2019) says supplier photos usually do no harm, while L0268.066 (2020), L1462.020, and L0551.023 say not to use them before approval. Applies: use royalty-free or licensed images before approval. L1275.032 is older advice.</li>
+<li>Conflict on competitor copying: the competitor-copy procedure in L0452.009 includes copying images from the source page, while L0036.013 and L1462.020 forbid copying competitor photos. Applies: copy only the title and description where allowed, and replace photos with licensed or own images.</li>
+</ul>
+<h3 id="image-quality-and-sizing">Image quality and sizing</h3>
+<ul>
+<li>Demo store images do not need top quality. A demo store shows the setup, not conversion. Focus on consistent sizing. [L0806.038]</li>
+<li>Canva procedure, older (2024) [L0806.037]
+<ol type="1">
+<li>Click Create a design in the top right.</li>
+<li>Choose Custom size.</li>
+<li>Enter 600 x 600 pixels and click Create new design.</li>
+<li>Add images with Magic Media (AI generated) or drag in your own.</li>
+<li>Save; all images have the same size.</li>
+</ol></li>
+<li>Demo-site images can stay in place during setup. After launch and once suppliers are onboard, swap them for supplier and brand lifestyle images that show the actual products. [L1310.002]</li>
+</ul>
+<h2 id="demo-product-content">Demo product content</h2>
+<h3 id="descriptions">Descriptions</h3>
+<ul>
+<li>Demo product descriptions can be identical across products, using a generic template with placeholders swapped out for each product. Do not overthink the creation process. [L0036.009]</li>
+<li>Demo product example: name Aloha Blue Longboard Surfboard, weight 13 pounds, with description, key features, and specifications populated from a provided template. [L0036.012]</li>
+<li>Do not use Lorem Ipsum for product descriptions on demo stores. Write basic but genuine sentences describing actual product attributes and benefits. Older (2020). [L0245.025]</li>
+<li>Older (2020) example sentence, given in italics: <em>This blue eight-foot surfboard accommodates up to 150 pounds and is great for enjoying water activities during favorable weather.</em> [L0245.026]</li>
+<li>Demo product descriptions can be basic placeholders. They do not need persuasive copy at the supplier-approval stage. [L0855.098]</li>
+<li>A one- to two-line description lets the supplier picture its product on the site. Do not optimize for sales or conversions. Older (2018). [L1085.038]</li>
+<li>Demo products do not need materials, dimensions, technical specifications, or detailed descriptions, since customers cannot buy them. Generic product descriptions are sufficient. Older (2020). [L0268.082]</li>
+<li>Mock product descriptions and images can be taken from images labeled for reuse in Google image search, combined with basic descriptions. Older (2020). [L0967.048]</li>
+<li>Supplier product descriptions may be used for demo or test products only if they come directly from the brand. Search a sentence from the description in Google; if it appears on many sites, it is the brand's stock text. Older (2019). [L0467.039]</li>
+<li>Copying a description that someone else rewrote or paid for, to make it look unique, creates a copyright problem. Write your own description, or use the brand's original text. Older (2019). [L0467.040]</li>
+<li>Do not present a demo product as stock you are selling, and do not write a long invented story about it. The demo page only shows suppliers how their product could look on the site. Older (2018). [L0466.056]</li>
+<li>Rich text is not needed for supplier approval and can be hidden. Turn it on later for brand story or promotion content once the store is live and the unique value proposition is clear. [L0775.049]</li>
+<li>Product reviews, vendor names and secondary images need product data that a demo store does not have yet. Leave those options off until the store has the content. [L0775.048]</li>
+</ul>
+<h3 id="names-prices-and-vendor">Names, prices and vendor</h3>
+<ul>
+<li>Name pattern: size, product type and color. Example: a clear, descriptive title. Older (2018). [L1085.038]</li>
+<li>Example: seven foot blue standup paddle board. Demo products do not need invented brand names or elaborate descriptions. The brand name can be the store name. Older (2021). [L0834.033]</li>
+<li>Do not invent a company or brand name that does not match the picture. Older (2019). [L0356.024]</li>
+<li>Demo products may have made-up names and invented prices, since they are placeholders and not meant to be sold. [L0767.008]</li>
+<li>Demo products should be generic items from the same category as the niche, for example a lamp or candlestick for a chandelier store. This lets a supplier see what the catalog page for that category would look like. [L0767.012]</li>
+<li>Price: use $799 for demo products. [L0219.006]</li>
+<li>Price: the price can be anything; image size or editing does not matter, because demo products will be deleted later. [L0452.008]</li>
+<li>Price: the exact price is not critical for demos. [L0088.006]</li>
+<li>Show average prices and generic inventory numbers on the demo store before launch. Cart is disabled, so no purchases occur. Older (2022). [L0272.013]</li>
+<li>Hide discount codes and inventory levels, so suppliers do not see broken or unfinished elements. [L1189.024] <em>(Conflict noted below.)</em></li>
+<li>Vendor for a demo: your store name. [L0036.021, L0069.001]</li>
+<li>Vendor for a demo: your own company name, since it does not matter for demonstration. [L0452.013]</li>
+<li>Supplier name field: enter your own store name instead of a real supplier's name. Older (2019). [L1069.024]</li>
+<li>Conflict on displayed prices and inventory: L0272.013 (2022) says show average prices and generic inventory numbers; L1189.024 says hide inventory levels and discount codes. Applies: show plausible generic figures if you want the catalog to look realistic (L0272.013, older); hide them if the goal is to keep the page free of unfinished elements (L1189.024).</li>
+</ul>
+<h3 id="featuring-brands">Featuring brands</h3>
+<ul>
+<li>Do not feature products from brands you are not yet authorized to sell. Add products to the live store only after the supplier has approved you. [L0276.005]</li>
+<li>Demo products are temporary placeholders, removed and replaced with real supplier products once you have brand partnerships. [L0088.008]</li>
+</ul>
+<h3 id="ai-assisted-content-workflow">AI-assisted content workflow</h3>
+<p><em>Full prompt texts are not part of the source units. Only the opening lines are given, in italics.</em> [L0088.006, L0219.010]</p>
+<p>Procedure: Demo product with AI prompts [L0088.006]</p>
+<ol type="1">
+<li>Retrieve the image prompt that begins <em>You are a professional e-commerce product photographer</em>. Customize it by inserting your product name (for example, Blue Surfboard). Generate the image using Gemini or another AI image generator, then download it.</li>
+<li>Separately, obtain the description prompt starting with <em>You are a professional e-commerce copywriter</em>. Enter it into ChatGPT or your preferred AI tool, and attach the generated product image so the AI can observe realistic details before writing.</li>
+<li>Copy the resulting product description.</li>
+<li>Log into Shopify admin, go to Products, and click Add product.</li>
+<li>Enter your product name in the Title field.</li>
+<li>Paste the AI description into the description editor, and use Preview to check formatting.</li>
+<li>If bullets are misaligned, select the bulleted text, remove bullets, reapply them, and preview again.</li>
+<li>Upload the generated image into product media. One image is sufficient for demos.</li>
+<li>Select an appropriate category (such as Surfboards).</li>
+<li>Set a demo price. The exact price is not critical for demos.</li>
+<li>Specify the product type (such as Surfboards).</li>
+<li>Add the tag that connects to your automated collections so the product is positioned correctly.</li>
+<li>Save the product and preview it to confirm the formatting is correct.</li>
+<li>Repeat this entire workflow (steps 1 to 21) until you have created 10 to 20 demo products.</li>
+</ol>
+<p>Procedure: 32-step product workflow [L0219.010]</p>
+<ol type="1">
+<li>Access gemini.google.com, click Create Image, paste the complete Source A Image Prompt that starts with <em>You are a professional e-commerce product photographer creating images for a premium Shopify store</em>, replace product name goes here with your product, and download the result.</li>
+<li>Enter ChatGPT with the full Demo Product Description Prompt beginning with <em>You are a professional e-commerce copywriter specializing in high conversion Shopify product pages for premium products</em>. Use Add photos and files to attach your Gemini image, and submit.</li>
+<li>Open Shopify Admin and navigate to Products. Click the Add product button in the top right corner.</li>
+<li>Insert your product name in the Product Title field.</li>
+<li>Paste your ChatGPT description in the Description field through the WYSIWYG editor, and click Save.</li>
+<li>Preview the page and look for formatting problems such as misaligned bullet points. If you find any, go back to the editor, select the affected text, remove the formatting, reapply it, save, and preview again until the formatting is correct.</li>
+<li>Set the Gemini image as the main product image.</li>
+<li>Fill the Product Category field.</li>
+<li>Set the Price field to $799.</li>
+<li>Set the Product Type field to match your category.</li>
+<li>In the Collections section, select your tag-based automated collection.</li>
+<li>Save the product, and review your final product page with a preview.</li>
+<li>Repeat all preceding steps 10 to 20 times across your product range.</li>
+</ol>
+<p>Example: a completed demo product with title Aquila Coastline Longboard, price $799, category surfboards, one AI-generated image, a professional description generated by ChatGPT, and collection assignment through tags. [L0219.009]</p>
+<h2 id="setting-up-demo-products-in-shopify">Setting up demo products in Shopify</h2>
+<h3 id="upload-procedure">Upload procedure</h3>
+<p>Procedure: Uploading a demo product to Shopify [L0036.021]</p>
+<ol type="1">
+<li>Go to Products &gt; Add products.</li>
+<li>Enter product title.</li>
+<li>Paste and customize the product description from the template.</li>
+<li>Select product category from dropdown.</li>
+<li>Enter product type.</li>
+<li>Enter vendor (store name for demos).</li>
+<li>Add tags (auto-populates collections).</li>
+<li>Drag product image into media section.</li>
+<li>Enter selling price, compare-at price, and cost per item.</li>
+<li>Leave inventory tracking unchecked (unless tracking stock).</li>
+<li>Enter SKU if provided.</li>
+<li>Enter product weight.</li>
+<li>Skip variants for demos.</li>
+<li>Click Save.</li>
+</ol>
+<p>Procedure: Competitor-copy route, Source B [L0452.009]</p>
+<ol type="1">
+<li>Open the source product page on the competitor site.</li>
+<li>Copy the title and paste it into the Title field in Shopify.</li>
+<li>Copy the description and specifications and paste them into the Description field.</li>
+<li>Save the source images, using no more than two per product, and upload them with Add file under Media.</li>
+<li>Enter the price, optionally the compare-at price.</li>
+<li>Set the product type, vendor, tags and status, and tick Online Store.</li>
+<li>Set the quantity and tick the physical product box, then save.</li>
+</ol>
+<p><em>Conflict: this route copies images from a competitor. L0036.013 and L1462.020 forbid this. See the legal rules above.</em> [L0452.009, L0036.013, L1462.020]</p>
+<h3 id="settings-reference">Settings reference</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Where</th>
+<th>Demo rule</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product status</td>
+<td>Product editor</td>
+<td>Set to Active to show the product on the storefront. Draft hides it from all sales channels. New products are created as Draft by default.</td>
+<td>L0452.010</td>
+</tr>
+<tr>
+<td>Online Store</td>
+<td>Sales channels and apps</td>
+<td>Must be ticked. Without it, an Active product still does not appear on the front end.</td>
+<td>L0452.011</td>
+</tr>
+<tr>
+<td>Product type</td>
+<td>Organization section</td>
+<td>Use the name of the collection the product belongs to, for example Solar Power. It must match the collection so the product is grouped correctly.</td>
+<td>L0452.012</td>
+</tr>
+<tr>
+<td>Vendor</td>
+<td>Organization section</td>
+<td>Your own company name is fine for demos.</td>
+<td>L0452.013</td>
+</tr>
+<tr>
+<td>Tags</td>
+<td>Organization section</td>
+<td>Several tags per product are allowed. The tag must match the collection name, for example solar.</td>
+<td>L0452.014</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>Pricing</td>
+<td>The price customers see.</td>
+<td>L0452.015</td>
+</tr>
+<tr>
+<td>Compare at price</td>
+<td>Pricing</td>
+<td>The original price, shown struck through next to the sale price. Enter a higher value here than in Price to display a sale. Example: Price A$ 2,350.00 with Compare at price A$ 2,450.00.</td>
+<td>L0452.015</td>
+</tr>
+<tr>
+<td>Charge tax on this product</td>
+<td>Pricing</td>
+<td>Tick if you need to charge tax in your country. For demos, tax can be left for later.</td>
+<td>L0452.016</td>
+</tr>
+<tr>
+<td>Track quantity and Available quantity</td>
+<td>Inventory</td>
+<td>Tick Track quantity and set Available quantity above zero, for example 10. At zero, Shopify shows the product as out of stock.</td>
+<td>L0452.017, L0452.020</td>
+</tr>
+<tr>
+<td>SKU and Barcode</td>
+<td>Inventory</td>
+<td>Can be left empty for demos. Enter SKU if provided.</td>
+<td>L0452.017, L0036.021</td>
+</tr>
+<tr>
+<td>This is a physical product</td>
+<td>Shipping</td>
+<td>Tick it. Weight, customs information and HS code can be skipped for demos.</td>
+<td>L0452.018</td>
+</tr>
+<tr>
+<td>Media</td>
+<td>Media section</td>
+<td>Add file from the computer or Add media from URL. In a browser, right-click a source image to use Save Image As or Copy Image Address.</td>
+<td>L0452.028</td>
+</tr>
+<tr>
+<td>Template suffix</td>
+<td>Theme templates</td>
+<td>The default product template can be left unchanged while the first demo products are uploaded.</td>
+<td>L0452.029</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="mistakes-and-checks">Mistakes and checks</h3>
+<ul>
+<li>A product with status Draft is not shown on the storefront. A product with Active status but without the Online Store checkbox ticked is not shown either. Check both before expecting a product to appear. [L0452.019]</li>
+<li>A product with a quantity of zero and tracking on displays as out of stock. Always set a quantity when Track quantity is ticked. [L0452.020]</li>
+<li>Preview in Shopify shows how a saved product appears on the site. Before the site is designed, the page can look unfinished, but the preview confirms that the product data has loaded. [L0452.021]</li>
+<li>Do not manually assign demo products to collections. Use the automated tag-based collections created earlier in store setup. [L0219.008]</li>
+<li>Time: four products took about 10 minutes. [L0452.022]</li>
+</ul>
+<h3 id="theme-settings-for-demo-products">Theme settings for demo products</h3>
+<ul>
+<li>Skip customizing pages and blog templates in the Shopify theme editor. This can wait until the store is live and needs more individual content. [L1265.001]</li>
+<li>For a basic demo store, only the sticky content and media settings in the Product information section need changes. The other settings can stay at their defaults until the store is ready for live products. [L1189.027]</li>
+<li>Hide promotional elements and coupons. Keep product pages clean and simple, with professional layout, clean navigation and functional pages. [L0104.012]</li>
+<li>Hide features that are not yet needed, such as discount codes and inventory levels. At the demo stage, all links should work and every function should behave correctly. [L1189.024]</li>
+<li>Minimum theme elements: see the minimum set in the first section. Defer announcement bars, mega menu details and advanced product card settings. [L0775.061]</li>
+</ul>
+<h2 id="pre-launch-checklist-before-supplier-outreach">Pre-launch checklist before supplier outreach</h2>
+<p>Procedure: Supplier-ready store checklist, in order [L0767.002]</p>
+<ol type="1">
+<li>Buy a domain name in Shopify and connect it to the store.</li>
+<li>Remove the demo-store notification bar at the top of the site.</li>
+<li>Keep the product count small: three to five demo products is enough, more is unnecessary.</li>
+<li>Replace every generic or fake phone number with a real phone number, or remove the phone number entirely.</li>
+<li>Delete unneeded default content such as the empty blog that Shopify creates. A blog is not required when contacting suppliers.</li>
+<li>Open the About Us, Shipping and Guarantee (guarantee/returns) pages, fill in all text so it reads complete, and click every link to confirm it works.</li>
+<li>Click through the site the way a supplier would and check that it looks presentable and finished.</li>
+</ol>
+<p>Procedure: Pre-outreach check, 2023 [L0251.032]</p>
+<ol type="1">
+<li>Is live at your final domain (not Shopify's default URL).</li>
+<li>Has all internal links working.</li>
+<li>Does not contain broken pages or placeholder content.</li>
+<li>Has social media links pointing to actual accounts (not default Shopify links).</li>
+<li>Looks complete and professional, as suppliers evaluate your credibility based on site quality.</li>
+</ol>
+<p>Procedure: Pre-outreach check, 2023 [L0804.038]</p>
+<ol type="1">
+<li>Attach your own domain name, not a myshopify.com address.</li>
+<li>Remove all blank image placeholders.</li>
+<li>Make sure the contact page has a working contact form.</li>
+<li>Five to 10 products is enough, and checkout does not need to be enabled.</li>
+<li>Remove the store password.</li>
+</ol>
+<p>Rules for the checklist:</p>
+<ul>
+<li>Your store must have its own domain name. [L0123.002]</li>
+<li>Display an actual phone number prominently. Suppliers view a real, reachable phone number as proof that you operate a legitimate, accountable business. [L0123.004]</li>
+<li>Replace the generic phone number with a real one or remove it entirely. [L0767.002]</li>
+<li>All links on the store must be working. Broken links suggest neglect and undermine supplier confidence. [L0123.005]</li>
+<li>The store should look presentable and appear exactly as it will when the site goes live. Do not show it to suppliers while it is under construction or contains placeholder content. [L0123.006]</li>
+<li>Pre-launch quality: it must look like a real, functioning store, with no test pages, no dead links and no spelling errors. It must be trustworthy enough that a customer would buy from it. [L0964.093]</li>
+<li>Before calling suppliers, add a price guarantee page and a privacy policy page. This takes about 15 to 20 minutes using ready-made scripts or a generator. Older (2019). [L0960.006]</li>
+<li>Older (2019): Fill the About Us page and the shipping and returns policy page. [L0357.051, L0243.030]</li>
+<li>Mistakes that signal the store is not real: a demo-store notification bar, a generic fake phone number, or unfinished default pages such as a placeholder blog. [L0767.004]</li>
+<li>Mistake: using a Shopify subdomain such as store-name.myshopify.com in outreach or on the live store. [L0767.005]</li>
+<li>Costs for the checklist items: a domain name costs between 5 and 20 USD. [L0771.034]</li>
+<li>Build-before-contact procedure, Source B [L0771.031]
+<ol type="1">
+<li>Set up the store on Shopify, which hosts the store on its own software so no custom platform is needed.</li>
+<li>Add branding, a logo and basic design so the site looks like a real e-commerce store.</li>
+<li>Make it a demo website. It does not have to be 100 percent complete, but it must look solid when you show it to suppliers.</li>
+<li>Use the demo site when you contact suppliers to show that the business is serious.</li>
+<li>After approval, upload the supplier's products with their data, pricing and images, then optimize the products and the website.</li>
+</ol></li>
+</ul>
+<h2 id="password-and-sales-during-the-demo-stage">Password and sales during the demo stage</h2>
+<h3 id="remove-the-storefront-password">Remove the storefront password</h3>
+<ul>
+<li>A new Shopify store is password-protected by default. Remove the password in the Online Store preferences before suppliers review the store, for example before module four in the course blueprint. [L0971.029]</li>
+<li>Remove the Shopify storefront password before contacting suppliers. A live store makes the business look real and avoids an extra step for them. [L0970.057]</li>
+<li>Keep the store password off during supplier onboarding. Suppliers and pending suppliers often check the site, and a password blocks them. [L0972.022]</li>
+<li>A store with the password page still enabled looks unfinished to suppliers who visit the URL. Disable the password before sending the URL. The store can be live but unpromoted at this stage, since no ads or search visibility exist yet and checkout is not connected. [L0370.013]</li>
+</ul>
+<h3 id="keep-real-sales-off">Keep real sales off</h3>
+<ul>
+<li>The store can be made live with demo products before real products are uploaded. Nobody will find it without marketing, and checkout is not connected, so no one can buy the demo products. Connect checkout only after real supplier products are uploaded. [L0370.014]</li>
+<li>Demo products are only for showing suppliers how their products will look. They are never sold or marketed, and they must be deleted from the account before the store goes live to customers. [L0452.002]</li>
+<li>Demo products left live can be pulled into the product feed, cause feed errors, and let customers check out for items you cannot sell. Delete all demo products before launch. [L1145.032]</li>
+<li>Shopify payment setting: go to Settings &gt; Payments and disable all payment options so no customer can buy. Alternatively, go to Settings &gt; Shipping and delivery and select no shipping zones, so no shipping option can be chosen. [L0856.064]</li>
+<li>To stop the store from taking orders, leave every payment method inactive so checkout cannot be completed, or set the inventory of the products to zero. Older (2021). [L0968.039]</li>
+<li>Turn off or leave unlinked the payment gateways in the Shopify admin so no real orders can be placed. Older (2019). [L0357.051]</li>
+<li>A payment processor does not need to be set up before supplier calls, because no sales are being taken yet. Older (2019). [L0960.006]</li>
+<li>Conflict on zero inventory: L0452.017 says set quantity above zero for demo products, because zero shows the product as out of stock. L0968.039 says set inventory to zero to stop orders. Applies: keep quantity above zero when the product should show as available (L0452.017), and use zero or inactive payments when orders must be blocked (L0968.039).</li>
+</ul>
+<p>Procedure: Launch the store before suppliers are ready, 2025 [L0255.027]</p>
+<ol type="1">
+<li>Remove password from store (make it accessible).</li>
+<li>Disable all payment methods so customers cannot complete purchases.</li>
+<li>Add demo products to show to potential suppliers.</li>
+<li>Keep demo products for first week while contacting suppliers.</li>
+<li>Once first supplier is approved, upload their products.</li>
+<li>Remove demo products.</li>
+<li>Continue adding supplier products.</li>
+</ol>
+<h2 id="replacing-demo-products-after-supplier-approval">Replacing demo products after supplier approval</h2>
+<p>Procedure: After the first supplier approves, 2021 [L0247.084]</p>
+<ol type="1">
+<li>Remove the demo products.</li>
+<li>Upload that supplier's live products.</li>
+<li>Keep adding products as further suppliers are approved.</li>
+</ol>
+<p>Procedure: Replacement, 2019 [L1275.031]</p>
+<ol type="1">
+<li>Before supplier approval, upload about 4 to 5 demo products using stock images.</li>
+<li>Get approved with real suppliers.</li>
+<li>Upload the real supplier products.</li>
+<li>Remove the demo products.</li>
+</ol>
+<p>Rules:</p>
+<ul>
+<li>Remove the test or dummy products once the first real supplier is approved and its products are uploaded. [L0359.039]</li>
+<li>Remove the demo products as soon as real products from an approved supplier are uploaded. [L0853.009]</li>
+<li>Demo products are removed and replaced with real supplier products once brand partnerships are established. [L0088.008]</li>
+<li>Remove the placeholder products as soon as the first real supplier approves. Older (2020). [L0468.062]</li>
+<li>Before contacting a supplier, leave the demo products on the store so the supplier can see how its items would look. Remove only a specific supplier's real products before contacting that same supplier, so the store does not look already approved. Older (2019). [L0356.023]</li>
+<li>Replace demo products with real products from approved suppliers as soon as they are approved. Demo products that use another supplier's photos should be deleted once that supplier approves. Older (2021). [L1112.038]</li>
+<li>A demo store can be used for real products by deleting the demo products and uploading the real ones. Older (2022). [L0969.087]</li>
+<li>Replace the stock images with actual supplier product photos immediately upon supplier approval. [L0270.040]</li>
+<li>Replace demo images with real supplier images after the first approval. [L0964.092]</li>
+<li>After launch and once suppliers are onboard, swap demo images for supplier and brand lifestyle images that show the actual products. [L1310.002]</li>
+<li>Source B's build route: after approval, upload the supplier's products with their data, pricing and images, then optimize. [L0771.031]</li>
+<li>Once a supplier is approved, the store continues with its products. A small store does not need rebuilding when the niche changes. [L0247.083]</li>
+<li>Build a new demo store for each niche, rather than reusing the store for a different niche. [L0934.090]</li>
+<li>Do not feature products from unauthorized brands on the live store. [L0276.005]</li>
+<li>Demo products are placeholders, so delete them before the store goes live, and do not leave demo products live. [L1145.032, L0452.002]</li>
+</ul>
+<h2 id="done-for-you-build-option">Done-for-you build option</h2>
+<h3 id="two-routes-to-a-supplier-ready-demo-store">Two routes to a supplier-ready demo store</h3>
+<ul>
+<li>There are two routes: build the demo store yourself step by step, or outsource the web design to a done-for-you service. The done-for-you service delivers a finished store that the buyer owns 100 percent. [L1062.008]</li>
+<li>The done-for-you web design service is a paid upgrade. Buyers who already purchased it submit the web design form. Buyers who have not purchased it can sign up through an information form to add it to their account. [L1062.009]</li>
+<li>Choosing the done-for-you service lets the owner skip the self-build lessons for the demo store and move straight to contacting suppliers. Choosing to build it yourself means working through every design step first; supplier outreach starts only after that step is complete. [L1062.013]</li>
+<li>The Ultimate Upgrade done-for-you store includes professional setup of Google Search Console, Google Merchant Center, Google Analytics, and Google Ads accounts. The standard done-for-you store does not include these setups. [L0278.044]</li>
+<li>A custom store build has typically taken three to five business days. Reply to the delivery email with any edit requests, since most owners are satisfied on day one. [L1116.039]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Build yourself</th>
+<th>Done-for-you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time</td>
+<td>An experienced builder can set up a demo Shopify store in under 24 hours. A first-time builder may need a few days. [L0771.032]</td>
+<td>A custom store build has typically taken three to five business days. [L1116.039]</td>
+</tr>
+<tr>
+<td>Your work</td>
+<td>Work through every design step, then start supplier outreach. [L1062.013]</td>
+<td>Skip the self-build lessons and move straight to outreach. [L1062.013]</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>A domain name costs 5 to 20 USD. Initial branding such as a logo from a freelance platform like Fiverr can cost about 20 to 30 USD. [L0771.034]</td>
+<td>A paid upgrade. Buyers who have not purchased it sign up through an information form. [L1062.009]</td>
+</tr>
+<tr>
+<td>Ownership</td>
+<td>Your own store on Shopify.</td>
+<td>The buyer owns the finished store 100 percent. [L1062.008]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Building custom e-commerce software instead would cost tens to hundreds of thousands of dollars. Shopify avoids this cost. [L0771.032]</li>
+<li>The build-yourself route is described in the build-before-contact procedure above. [L0771.031]</li>
+<li>The build should be done on Shopify and then be shown to suppliers. [L0506.004]</li>
+</ul>
+<h2 id="website-checks-before-supplier-outreach">Website checks before supplier outreach</h2>
+<h3 id="what-the-store-must-look-like-before-suppliers-see-it">What the store must look like before suppliers see it</h3>
+<ul>
+<li>The store must look complete before suppliers see it. That means no placeholder phone numbers or emails, no filler or instructional text, and every link must work. [L1464.002]</li>
+<li>Real phone numbers and emails are not required yet. They are added before contacting suppliers. [L1464.001]</li>
+<li>Store branding (colors, color scheme, business name) must be configured in Shopify before any supplier contact. Finish branding first so the store can be shown as complete. [L1466.003]</li>
+</ul>
+<h3 id="checking-the-store-in-order">Checking the store in order</h3>
+<ol type="1">
+<li>Open your store and go through every page. Look for typos, broken links, placeholder phone numbers or emails, and filler text such as instructional placeholder sentences. [L1464.001]</li>
+<li>Click every link on the store and confirm each one works as intended. [L1464.001]</li>
+<li>Send the store link to a friend or family member, ask them to browse, and collect any feedback on things you missed. [L1464.001]</li>
+<li>Fix everything they flag so the site looks complete. [L1464.001]</li>
+<li>In Shopify Admin, go to Online Store &gt; Themes and click Remove Password so the store is publicly reachable. [L1464.001, L1464.003]</li>
+</ol>
+<h3 id="why-an-outside-tester-is-needed">Why an outside tester is needed</h3>
+<ul>
+<li>After long work on a store, the builder tends to overlook obvious errors, so having an outside person test the site with fresh eyes helps catch them. [L1464.005]</li>
+</ul>
+<h2 id="password-removal">Password removal</h2>
+<h3 id="making-the-store-publicly-visible">Making the store publicly visible</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where</td>
+<td>Shopify Admin &gt; Online Store &gt; Themes</td>
+</tr>
+<tr>
+<td>Action</td>
+<td>Click Remove Password</td>
+</tr>
+<tr>
+<td>Result</td>
+<td>Anyone who types the domain name can reach the store</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>To make the store publicly visible in Shopify, go to Online Store &gt; Themes in Shopify Admin and click Remove Password. Once removed, anyone who types the domain name can reach the store. [L1464.003]</li>
+</ul>
+<h3 id="common-mistake">Common mistake</h3>
+<ul>
+<li>A store still locked behind the Shopify password page cannot be shown to potential suppliers, so the password must be removed before supplier outreach begins. [L1464.004]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Demo stores only need to look realistic for a supplier review, not to prove access to the products. Products can use free stock images and simple descriptions. [L0852.088]</p></li>
+<li><p>Before suppliers approve you, you can upload placeholder products with royalty-free images found through Google image search, so you can preview the store. If a supplier asks, explain that the store is being built and the placeholder products are not for sale, consistent with your message that you are launching a new store. [L1110.023]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/11-homepage-and-theme-editor-customization/"><span class="k">&larr; Previous</span><span class="v">Homepage and theme editor customization</span></a><a class="nx" href="../../04-store-build-and-shopify/13-product-creation-and-catalog-data/"><span class="k">Next &rarr;</span><span class="v">Product creation and catalog data</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Funnel diagnostics: finding where visitors leak | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 6.3: Funnel diagnostics: finding where visitors leak.">
+<link rel="canonical" href="https://dlichters.com/aiecom/06-conversion-optimization/03-funnel-diagnostics-finding-where-visitors-leak/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Funnel diagnostics: finding where visitors leak | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 6.3: Funnel diagnostics: finding where visitors leak."><meta property="og:url" content="https://dlichters.com/aiecom/06-conversion-optimization/03-funnel-diagnostics-finding-where-visitors-leak/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">6. Conversion optimization</a> &rsaquo; <a href="../../../ecom/06-conversion-optimization/03-funnel-diagnostics-finding-where-visitors-leak/">Plain version</a></div><h1>6.3 Funnel diagnostics: finding where visitors leak</h1><article><h2 id="diagnosis-rules-traffic-offer-page-and-the-ad-to-store-split">Diagnosis rules: traffic, offer, page, and the ad-to-store split</h2>
+<ul>
+<li>Conversion work starts in one of two ways: customers report a problem, or conversion falls below target. The diagnosis below covers the second case, when no direct feedback exists. (older, 2021-22) [L0473.001]</li>
+<li>Diagnose in this order: traffic, then offer, then web page. The page usually has the smallest effect on conversion chance, so start with the traffic source, not the page layout. (older, 2021-22) [L0473.003]</li>
+<li>Under the 40-40-20 rule, about 40% of conversion depends on traffic targeting (who is sent to the site and where they land), about 40% on offer quality compared with competitors, and about 20% on how the offer is presented on the page. (older, 2021-22) [L0473.002]</li>
+<li>A product that gets traffic but no sales is not automatically a bad product. Concluding that nobody wants it, or that the product is wrong, is premature until traffic, offer and page have been checked. (older, 2021-22) [L0473.004]</li>
+<li>Ads drive traffic; the store has to convert it. High CTR with no sales points to a store-side problem such as price, offer or page content. Store changes belong in the offer, pages and checkout. [L0436.020, L0773.005]</li>
+<li>Basic ad creatives can still hold attention and drive traffic, while a weak store (poor product description, offer or packaging) will still fail to convert that traffic. Once ads already produce clicks, improving the store is often the bigger lever. [L0502.047]</li>
+<li>When ad metrics are strong but the store makes no sales, the traffic is qualified, so the work goes into the store. [L1171.023]</li>
+<li>If ads perform well (good CTR and traffic) but sales are missing, improve the website, and especially the offer, rather than the ads. [L0650.030]</li>
+<li>If CTR is low, the problem is the creative: test different creatives first. If CTR is high but there are no sales, the problem is the landing page: work on the page and offer, not the ad. [L0562.005]</li>
+<li>A good click cost with weak sales points to a conversion problem on the site. Ads only deliver the right traffic, at the right time and price, to the website, where the conversion happens. (older, 2021-22) [L0744.003]</li>
+<li>If search terms, bids and clicks are all in order but sales stay low, the cause is the offer, the competitive position or the site's conversion rate, not the ad settings. No amount of ad management fixes that; review market position, offer and site. (older, 2021-22) [L0744.002]</li>
+<li>Audit each customer step from first ad to repeat purchase the way a retail consultant audits a store: the ad, the entry, product placement, checkout upsell and follow-up sequence. Each step can be tested separately, and stalled businesses usually have a glitch in one of them. [L0523.066]</li>
+<li>Measure the conversion rate of each step separately so you know which phase needs repair. A low opt-in rate points to the squeeze or pre-frame; a low buyer rate points to the offer. Diagnose before changing anything. [L0523.134]</li>
+<li>Make every step from landing on the store to a paid order as frictionless as possible: reach the site, find the product, add it to the cart, pay. Remove anything that gives the visitor a reason to stop or leave. [L1098.002]</li>
+<li>Improve conversion before adding traffic. Check product pages, pricing, shipping and abandoned carts first, then increase volume. (older, 2021) [L0801.116]</li>
+</ul>
+<h2 id="funnel-benchmarks-by-stage">Funnel benchmarks by stage</h2>
+<ul>
+<li>The store funnel has four stages: landing page visit (LP), add to cart (ATC), checkout start (IC) and purchase (PUR). Each stage rate is measured against the stage before it, so the exact drop-off point can be found. [L0776.001]</li>
+<li>Each funnel stage has its own problems and fixes. Low add-to-cart rate, drop-off between add-to-cart and checkout, and drop-off between checkout and purchase are different issues. Diagnose each stage separately instead of treating the funnel as one problem. [L0361.033]</li>
+<li>Shopify's online store analytics shows a funnel with the stages Added to cart, Reached checkout and Purchased, next to sessions and visitors. Check which stage loses the most visitors before changing the overall conversion rate, because the final rate alone does not show where the drop happens. [L0400.017]</li>
+</ul>
+<p><strong>Stage benchmarks</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage transition</th>
+<th>Metric</th>
+<th>Benchmark</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LP to ATC</td>
+<td>ATC rate</td>
+<td>6% or more is good; 1 to 2% points to a problem on the landing page or product page</td>
+<td>L0776.002, L1259.010</td>
+</tr>
+<tr>
+<td>ATC to IC</td>
+<td>IC rate</td>
+<td>25% to 50% or more, with 50% as the target</td>
+<td>L0776.002, L1259.011</td>
+</tr>
+<tr>
+<td>IC to PUR</td>
+<td>Purchase rate</td>
+<td>50% or more</td>
+<td>L0776.002, L1259.012</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Fix only the stage that breaks its benchmark. If ATC is below 6%, the landing page or product page is the problem and later stages can wait. [L1259.013]</li>
+<li>Sources differ on the add-to-cart threshold. The 6% LP-to-ATC benchmark applies to stage analysis of landing page visitors [L0776.002, L1259.010]. The 4% threshold applies when a product has high CTR and low CPC but no sales; an add-to-cart rate below 4% points to the offer, price, copy or product not persuading visitors [L0691.005, L0691.007]. The sources do not state whether both use the same denominator, so measure both the same way in Shopify before comparing them. [L0691.005, L1259.010]</li>
+<li>Add-to-cart to checkout: the target is 50%, with 25% to 50% as the range. Example: 12 add-to-cart visitors at 50% means 6 checkouts initiated. [L1259.011, L0776.002]</li>
+<li>Add-to-cart to purchase: a typical drop from add-to-cart to final checkout is about 50%, mainly from shipping cost shock. Optimisation should reduce this. [L0067.027]</li>
+<li>Add-to-cart to purchase target: 16 add-to-carts and 3 purchases is significantly below target. Aim for at least 6 purchases from 16 add-to-carts, roughly 37% to 40% checkout conversion. [L0067.046]</li>
+<li>Checkout to purchase: at least 50%. (older, 2021 framing) Aim for about a 50% drop-off between each stage of the checkout flow; a much larger drop-off indicates a problem to troubleshoot. [L1259.012, L0469.066]</li>
+<li>Landing page conversion of about 3% to 4% was used as a reference point while reviewing ad performance. Compare CTR and landing page conversion together to see whether the ad or the page is limiting sales. [L0644.013]</li>
+<li>A 2.5% conversion rate is the working benchmark for qualified traffic. (2023 and 2024 sources) [L0251.005, L0253.038]</li>
+<li>A conversion rate of 0.2% is far below a working target of about 2.5%; the lesson used that gap as the goal to close within four weeks. (older, 2019) [L0356.040]</li>
+<li>Conversion of about 2% from quality traffic is the threshold for running the next check. If quality traffic is below about 2%, move on to a usability test. (older, 2019) [L1068.054]</li>
+<li>Click-to-sale expectation, sources differ:
+<ul>
+<li>Older minimum: 1,835 clicks should convert to at least 15 sales, about 0.8%. If the result is significantly lower, the problem is store or product presentation, not the traffic source. (older, 2020) [L0268.030]</li>
+<li>Current working benchmark: clicks ÷ 40 = expected sales at a 2.5% conversion rate. For 1,835 clicks that is about 46 sales. If actual sales are lower, compare the product page with competitors. [L0253.038]</li>
+<li>Use clicks ÷ 40 as the working expectation; treat 15 sales as the older, lower floor.</li>
+</ul></li>
+</ul>
+<h2 id="ctr-cpc-and-traffic-signals">CTR, CPC and traffic signals</h2>
+<ul>
+<li>CTR below 1%: the creatives are not resonating with the audience. Test entirely new video or image creatives. [L0229.011]</li>
+<li>CTR of 1.5% to 2%: pre-click performance is good. If there are still no sales, the issue is post-click (the website conversion funnel), not the ads. [L0229.011]</li>
+<li>CTR above 3% with a conversion rate of 0.5% to 0.8% on a 70 EUR product signalled weak demand or weak copy. (case in the kill section) [L0693.051]</li>
+<li>CTR above 3% and sometimes 4% with a conversion rate of about 0.8% after a week was the pattern in a 60 EUR product case. [L1161.035]</li>
+<li>A strong hook rate and CTR with low purchases means the problem sits in the offer or landing page: the ad may not clearly sell the product or may mislead, the product page may block ordering, unexpected fees may appear, the page may lack trust, or the price may come as a shock. [L0652.012]</li>
+<li>A high CTR with a low CPC, lots of visitors and no sales usually means visitors are curious but not convinced. Likely causes are the offer, price, copy, the store's trust level, or the product itself. [L0691.008]</li>
+<li>Very high CTR with no sales can point to a checkout or offer problem rather than an ad problem. Test the checkout flow yourself and confirm it completes before judging the ad. [L0644.012]</li>
+<li>If most visitors leave within 9 to 10 seconds, the traffic is probably not qualified. Check the traffic source and campaign settings before changing the store itself. (2025) [L0837.028]</li>
+<li>Traffic sample sizes before you judge a result:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>What it means</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sessions recorded for behaviour review (Lucky Orange or similar)</td>
+<td>150 to 200</td>
+<td>Enough to see where customers drop off</td>
+<td>L0321.039</td>
+</tr>
+<tr>
+<td>Clicks with zero sales</td>
+<td>200 to 300</td>
+<td>Investigate by comparing with the top 3 to 5 competitor stores</td>
+<td>L0251.005</td>
+</tr>
+<tr>
+<td>Unique clicks from targeted traffic with zero sales</td>
+<td>300 or more</td>
+<td>Problem is the store, offer or presentation, not the ad strategy; check competitors before cutting the budget</td>
+<td>L0251.040</td>
+</tr>
+<tr>
+<td>Clicks from relevant search terms on one product, no sale</td>
+<td>More than 100</td>
+<td>Optimise that product page before changing campaigns, after negatives are cleaned up</td>
+<td>L0807.044</td>
+</tr>
+<tr>
+<td>Clicks across Google Ads campaigns over three weeks, no sales</td>
+<td>About 600</td>
+<td>Funnel needs checking; a couple of sales would normally be expected; check whether visitors reach checkout at all</td>
+<td>L0837.007</td>
+</tr>
+<tr>
+<td>Clicks</td>
+<td>About 1,000</td>
+<td>Meaningful sample; check search term relevance and product page before assuming the niche is wrong</td>
+<td>L0972.036</td>
+</tr>
+<tr>
+<td>Unique visitors</td>
+<td>About 200</td>
+<td>Too small to judge</td>
+<td>L1090.066</td>
+</tr>
+<tr>
+<td>Unique visitors with no sales</td>
+<td>About 2,000</td>
+<td>Investigate</td>
+<td>L1090.066</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="finding-the-stage-that-lost-performance">Finding the stage that lost performance</h2>
+<ul>
+<li>If conversion drops by 35%, check the metrics in sequence: did cost per link click rise, did CPM rise, did CTR fall, did add-to-cart percentage fall, did initiate-checkout percentage fall? Cost metrics point to top-of-funnel issues; percentage metrics point to website conversion. Each metric reveals which stage lost performance. [L0290.010, L0290.020]</li>
+<li>If sales or traffic dropped:
+<ol type="1">
+<li>Check the Google Ads numbers for changes in impressions, clicks and the keywords showing. [L1088.062]</li>
+<li>Check Google Analytics for changes in traffic and bounce rate on key pages. [L1088.062]</li>
+<li>Look for limited products or feed warnings that could be restricting ads. [L1088.062]</li>
+<li>If the dip continues into the next few days, review all ads and products more closely. [L1088.062]</li>
+</ol></li>
+<li>Shopify sales funnel, step by step:
+<ol type="1">
+<li>Open the Shopify analytics and look at the number of sessions. [L0626.013]</li>
+<li>Compare the number of add-to-cart actions with the number of sessions. [L0626.013]</li>
+<li>Compare the number of checkouts started with the number of add-to-cart actions. [L0626.013]</li>
+<li>Compare the number of completed checkouts with the checkouts started, and note the number of abandoned carts. [L0626.013]</li>
+<li>Identify the step where most visitors leave and focus the fixes there. [L0626.013]</li>
+</ol></li>
+<li>Each funnel metric points to a specific stage, so the funnel is faster to diagnose than aggregate metrics. [L0290.020]</li>
+<li>A store that ran $50 per day on Facebook ads got good traffic but no sales. The spend showed that the website was the problem; the founder rebuilt the site, and the test revealed the bottleneck that was not visible before. (Source E 2025-26) [L1016.062]</li>
+<li>When a product gets clicks but no sales, diagnose in this order:
+<ol type="1">
+<li>Check how many days the ads have been running before judging results. [L1177.060]</li>
+<li>Check the offer. [L1177.060]</li>
+<li>Check the landing page. [L1177.060]</li>
+<li>Check the checkout process for issues. [L1177.060]</li>
+<li>Check creative performance using CTR and CPC in the Facebook ads account. [L1177.060]</li>
+<li>In Shopify analytics, check the add-to-cart percentage, the initiate-checkout percentage and the visitor count, since low traffic can explain weak results in a new campaign. [L1177.060]</li>
+</ol></li>
+<li>Seasonality: a two-month-old store saw traffic rise, Google cost per click fall and add-to-carts increase, but conversion did not rise with them. Sales peaked during Black Friday, Cyber Monday and early Christmas shopping, then dropped as buyers spent their budgets. Wait a couple of weeks to see where sales level out, and check in Google Ads whether keywords have become less relevant, since falling costs can also mean weaker keyword matches. (older, 2020) [L0551.050]</li>
+<li>Holiday weekend check:
+<ol type="1">
+<li>Check the conversion rate for the product against its normal baseline before blaming a sales weekend. [L0468.094]</li>
+<li>Check the traffic first: confirm the keywords and products getting impressions and clicks. [L0468.094]</li>
+<li>Open the store as a buyer on mobile and on desktop and walk through the purchase. [L0468.094]</li>
+<li>Fix any step that interrupts the path from click to purchase. [L0468.094]</li>
+<li>Optimise the product pages before increasing ad spend. [L0468.094]</li>
+</ol></li>
+<li>Compare conversion results to a baseline, not to a single weekend. If normal conversion was already low, the problem is more likely traffic or the offer than the holiday. (older, 2020) [L0468.095]</li>
+</ul>
+<h2 id="traffic-or-store-attribution-checks">Traffic or store: attribution checks</h2>
+<ul>
+<li>Check the traffic before the store. Traffic quality comes before design: visitors who are not relevant to the product will not convert, regardless of volume. Check audience and keyword relevance before changing the page. (older, 2019) [L0356.045]</li>
+<li>A store can be well optimised and still not sell to the wrong visitors. Check that keywords reach buyers first, then optimise the store for conversions. (older, 2022) [L0803.054]</li>
+<li>A store with about 15 to 20 clicks per day on an $11 daily budget for about six weeks, roughly 1,000 visitors and no sales: the actions were to check keywords for buying intent, add negative keywords, lower max CPC on products that do not produce results, then work through the conversion lessons step by step. The traffic was sufficient, so the problem was conversion and traffic quality. (older, 2022) [L0803.055]</li>
+<li>A store that gets many visitors but few orders most likely has a problem on the site itself rather than in traffic, so review the site for conversion problems. (older, 2019) [L1069.058]</li>
+<li>Exclude non-customer traffic, such as suppliers and virtual assistants, before judging conversion, because they skew results. (older, 2019) [L1068.054]</li>
+<li>If visitors leave a product page within seconds, the traffic is usually the problem, not the page. Improving design or copy will not produce sales until the visitors who arrive match what the store sells. [L1254.004]</li>
+<li>Traffic checks in order, for a store with no sales after real traffic:
+<ol type="1">
+<li>Check the number of unique visitors. About 200 is too small to judge; about 2,000 visitors with no sales means something needs investigating. (older, 2021) [L1090.066]</li>
+<li>Check traffic quality by country (only countries you sell in) and by search term. Remove or add negatives for broad or irrelevant searches. (older, 2021) [L1090.066]</li>
+<li>If qualified visitors reach relevant product pages and still do not buy, focus on on-site conversion. (older, 2021) [L1090.066]</li>
+</ol></li>
+<li>Bounce and session-time check: a store showed an average session of 26 seconds and a bounce rate of 83.94%. Compare these numbers for mobile and desktop in Google Analytics, because slow mobile loading often causes most of the bounce. (older, 2021) [L1090.067]</li>
+<li>Traffic that is well targeted but only checked on one device: when most conversions come from one device, adjust bids by device. (older, 2024 framing applies to current account) [L0806.050]</li>
+<li>If a store has received traffic for many months without sales, the cause is usually a front-end problem driving visitors away. Have an experienced reviewer check the live store as a first-time buyer, looking for usability and trust problems, before spending more on traffic. [L0471.066]</li>
+<li>The 40-40-20 split puts traffic first. Read the search terms or audience settings that send visitors to the page before editing the page. (older, 2021-22) [L0473.002, L0473.005]</li>
+</ul>
+<h2 id="diagnosis-tree-low-add-to-cart">Diagnosis tree: low add-to-cart</h2>
+<ul>
+<li>Work the funnel top to bottom. Check the LP-to-ATC rate first. Only when it is healthy, check ATC-to-IC; only when IC is healthy, check IC-to-PUR. [L0776.003]
+<ol type="1">
+<li>LP to ATC below 6%: work on the offer, images, branding and trust, copywriting, friction and speed. [L0776.003]</li>
+<li>ATC to IC below 25% to 50%: work on audience quality, trust, shipping prices, taxes, address issues and currency. [L0776.003]</li>
+<li>IC to PUR below 50%: work on shipping prices, currency, payment processors and taxes. [L0776.003]</li>
+</ol></li>
+<li>If visitors do not add products to the cart, check these causes in order:
+<ol type="1">
+<li>Bad offer. [L0776.004]</li>
+<li>Poor product images. [L0776.004]</li>
+<li>Poor branding and weak trust factor. [L0776.004]</li>
+<li>Poor copywriting. [L0776.004]</li>
+<li>Too much friction on the page. [L0776.004]</li>
+<li>Speed-related issues. [L0776.004]</li>
+</ol></li>
+<li>When people do not add to cart, the usual causes are an overly complex page, a price that is too high, unexpected fees, shipping cost shock, a lack of trust, or a functional problem on the page. Simplify the page and remove surprises before lowering price. [L0950.033]</li>
+<li>Product that converts well at checkout but has low add-to-carts: the issue is usually the funnel, such as the product page or pricing. Check the funnel before concluding the product is weak. [L0660.023]</li>
+<li>Product detail page (PDP) check:
+<ol type="1">
+<li>Check whether the PDP converts visitors at a reasonable rate. [L1038.015]</li>
+<li>If conversion is weak, optimise the PDP first. [L1038.015]</li>
+<li>If conversion is still weak, check whether the landing page or the ad creative is the problem. [L1038.015]</li>
+<li>Keep testing until a winner appears, then scale it harder. [L1038.015]</li>
+</ol></li>
+<li>Visitors who reach a product page but never add to cart point to a page that is not driving the main action. The page should focus on the add-to-cart button; visitors who wander to the home page or collection pages may be distracted. (older, 2018) [L1085.056]</li>
+<li>Diagnosing a product page where many visitors do nothing:
+<ol type="1">
+<li>Check how long visitors stay on the product page and whether they scroll. [L1085.057]</li>
+<li>Load the page on mobile, including a slow connection (for example 3G), to see whether it appears quickly. [L1085.057]</li>
+<li>Check page speed, since visitors who see a blank screen or wait for loading often leave before the page appears. [L1085.057]</li>
+<li>Compare the result with the expected conversion rate on the actual number of visitors who reached the product page. [L1085.057]</li>
+</ol></li>
+<li>Time on page: if visitors stay under 15 seconds and do not add to cart, the messaging is not compelling. [L0321.039]</li>
+<li>Google Ads: when ads get clicks but few add-to-carts:
+<ol type="1">
+<li>In Google Ads, open the alpha and beta campaigns and go to the Keywords view. (2023) [L0970.096]</li>
+<li>Check which keywords triggered the clicks and whether they show buying intent. [L0970.096]</li>
+<li>Add vague or unrelated terms as negative keywords so budget goes to buying terms. [L0970.096]</li>
+<li>Compare the product page with the top two or three competitor pages side by side and check whether they make a stronger offer. [L0970.096]</li>
+</ol></li>
+<li>Product with clicks, add-to-carts but no sales: the store and pricing are the first suspects. [L0552.027]</li>
+<li>Diagnosing add-to-carts without purchases:
+<ol type="1">
+<li>Confirm add-to-carts are happening but no sales follow. [L0874.017]</li>
+<li>Place a test order to check that the checkout button and checkout flow work. [L0874.017]</li>
+<li>If checkout works, review the offer against competitors' offers. A broken checkout button alone can stop all sales even when add-to-carts are high. [L0874.017]</li>
+</ol></li>
+<li>Consider a full-page review using the six factors in the page-scoring section below. [L0473.005]</li>
+</ul>
+<h2 id="diagnosis-tree-low-checkout-completion">Diagnosis tree: low checkout completion</h2>
+<ul>
+<li>Checkout drop-off after add-to-cart: first check the functional and technical issues.
+<ol type="1">
+<li>Is the price displaying correctly? [L0067.028]</li>
+<li>Is the currency correct? [L0067.028]</li>
+<li>Are unexpected fees appearing at checkout? [L0067.028]</li>
+<li>Is the shipping cost visible before checkout? [L0067.028]</li>
+<li>Is there a payment method issue? [L0067.028]</li>
+</ol></li>
+<li>Shipping cost shock is the main reason for the typical drop. Use language like free tracked shipping instead of standard shipping to sound more attractive and trustworthy. [L0067.027]</li>
+<li>Some people add to cart only to see the final price. If the offer is not displayed clearly (for example a free gift revealed only after adding to cart), simplify: reduce the price by an equivalent amount and show the offer on the product page. [L0067.029]</li>
+<li>If add-to-cart is high but purchases are low, check in this order: the shipping price shown, the offer, the tax settings, and whether checkout is enabled for the visitor's country. These are the most common causes of drop-off after add-to-cart. [L0363.036]</li>
+<li>If ATC is strong but few visitors start checkout, work through these causes in order:
+<ol type="1">
+<li>Audience quality: if the audience is weak, test the offer again. [L0776.005]</li>
+<li>Trust factor. [L0776.005]</li>
+<li>Shipping prices. [L0776.005]</li>
+<li>Taxes. [L0776.005]</li>
+<li>Address-related issues. [L0776.005]</li>
+<li>Currency issues. [L0776.005]</li>
+</ol></li>
+<li>If ATC and IC are good but few visitors complete the purchase, check in order:
+<ol type="1">
+<li>Shipping prices. [L0776.006]</li>
+<li>Currency. [L0776.006]</li>
+<li>Payment processors. [L0776.006]</li>
+<li>Taxes. [L0776.006]</li>
+</ol></li>
+<li>Shipping prices, taxes and currency can cause drop-off both at checkout start and at the purchase step, so check them at both stages. [L0776.007]</li>
+<li>Diagnosis when a store gets clicks but no sales, in order:
+<ol type="1">
+<li>Check shipping options and whether shipping is charged. [L0773.006]</li>
+<li>Check that every targeted market and country is enabled in Shopify Markets. Customers from non-enabled countries cannot select their country at checkout and abandon the cart. [L0773.006]</li>
+<li>Test payment providers by placing a test order with a 95% discount code on PayPal, Shopify Payments and Stripe. If a provider fails, uninstall and reinstall it. [L0773.006]</li>
+</ol></li>
+<li>If checkout is poor, check the store's traffic and ads for the same issues. If traffic is high but conversion is zero over two months:
+<ol type="1">
+<li>First, test checkout functionality with a $1 product on desktop and mobile. [L0274.055]</li>
+<li>Second, check abandoned carts immediately. [L0274.055]</li>
+<li>Third, review traffic source keywords for quality. [L0274.055]</li>
+</ol></li>
+<li>Debugging a conversion problem, for example 1,835 clicks with fewer than one sale (older, 2020):
+<ol type="1">
+<li>Create a $1 test product and verify checkout works on desktop and mobile. [L0268.029]</li>
+<li>Add PayPal, Amazon Payments, Klarna and Affirm financing options. [L0268.029]</li>
+<li>Analyse Google Ads data: which keywords and products receive clicks? [L0268.029]</li>
+<li>Identify unrelated keywords and add them as negatives. [L0268.029]</li>
+<li>Find products with strong competitor pricing and adjust bids. [L0268.029]</li>
+<li>Check for checkout errors or technical issues on both devices. [L0268.029]</li>
+</ol></li>
+<li>Shoppers who reach checkout but do not buy: audit the website and compare it with established brands in the niche. Model the structure and presentation of those brands rather than guessing. [L1251.037]</li>
+<li>A store solution such as Debutify can support conversion at the final step, paired with a site audit to find the friction points. [L1251.038]</li>
+<li>Checkout drop-off test: about 50% drop-off between each stage is the expected range; a much larger drop-off indicates a problem. (older, 2021) [L0469.066]</li>
+<li>Abandoned checkouts: check them under Orders in the Shopify admin and call those customers for feedback. (older, 2021) [L1090.066]</li>
+<li>Mobile bounce: a bounce problem on mobile often hides a checkout or load-speed problem. [L1090.067]</li>
+</ul>
+<h2 id="diagnosis-tree-high-ctr-and-no-sales">Diagnosis tree: high CTR and no sales</h2>
+<ul>
+<li>Troubleshooting framework when a campaign shows poor performance or zero sales:
+<ol type="1">
+<li>Ad spend analysis at the ad level within each ad set: identify which individual ad or video consumes the majority of the budget versus the others. If one creative spends 80% or more of the ad set budget and shows poor metrics (no sales, low CTR, high CPC), deactivate that single ad and let the remaining creatives spend another full break-even amount to compete equally. [L0229.011]</li>
+<li>Evaluate all creatives: if all creatives in the ad set perform poorly despite balanced budget distribution, check their CTR. If CTR is below 1%, the creatives are not resonating with the audience; test entirely new video or image creatives. [L0229.011]</li>
+<li>Pre-click metrics: if CTR is 1.5% to 2% (good ad performance) but there are no sales, the issue is post-click (the website conversion funnel), not the ads. [L0229.011]</li>
+<li>Checkout and funnel verification: run a $1 test purchase from each targeted country to verify the checkout flow, shipping prices and absence of unexpected charges at the final step. Check that Shopify Markets are configured and activated in Settings. [L0229.011]</li>
+<li>Shipping and payment processing: verify shipping prices for each country and that the payment processor functions. Test both free and paid shipping models to see which converts better, but ensure no hidden charges appear between product page and checkout. [L0229.011]</li>
+<li>Offer optimisation: if ads bring traffic (good CTR and CPC) but no conversions, the offer may lack appeal. Test proven bundle and promotional offers: BOGO (buy one, get one free), buy 2 get 1 free, buy 2 get 50% off, free gift with purchase, or tiered bundles (single, duo, trio packs). [L0229.011]</li>
+<li>Website trust and design: display customer testimonials prominently, both text and video. Keep the website to a maximum of three to four colours (black, white and one brand colour); consistent visual design increases perceived trustworthiness. [L0229.011]</li>
+</ol></li>
+<li>Check the landing URL first. Confirm the ad opens the correct product or collection page. A wrong link can look like a conversion problem. [L0388.003, L0388.004]</li>
+<li>Diagnosing a high-CTR, low-conversion store in this order: [L0388.004]
+<ol type="1">
+<li>Confirm the ad link opens the correct product or collection page. [L0388.004]</li>
+<li>Check the add-to-cart rate in Shopify. If it is near zero while CTR is high, treat the offer as the first suspect. [L0388.004]</li>
+<li>Test price, bundles and offers before changing the design. [L0388.004]</li>
+<li>Once sales come in, split test the design: send part of the traffic to the standard landing page and another campaign to a page-builder version. [L0388.004]</li>
+<li>Choose the version that sells more before rolling it out. [L0388.004]</li>
+</ol></li>
+<li>A high CTR with almost no add-to-cart actions means the ad works but shoppers do not find the store offer convincing. Traffic is arriving, so the problem sits on the store side. [L0388.001]</li>
+<li>When ads have a strong CTR but no sales, the offer is usually the cause (a rough estimate of about 90%), while store design explains only about 10%. Test price, bundles and offers before redesigning the store. [L0388.002]</li>
+<li>If CTR is high and add-to-cart is near zero, the problem is almost always the store, not the ads; fix the store before changing the ads. [L0773.001]</li>
+<li>Diagnosing a product with high CTR, low CPC, lots of visitors and no sales:
+<ol type="1">
+<li>Check the add-to-cart rate and conversion rate. [L0691.007]</li>
+<li>If add-to-cart is below 4%, review the offer, the price, the copy and whether the product page looks trustworthy. [L0691.007]</li>
+<li>If add-to-cart is fine but conversion is low, check shipping cost (free or not) and run a test order through the whole funnel. [L0691.007]</li>
+<li>Only then decide whether the product itself is the issue. [L0691.007]</li>
+</ol></li>
+<li>Worked example: with a 6% add-to-cart rate and a 1% conversion rate, the problem sits in the offer or shipping, so check those first. Also run a test order through the funnel to confirm checkout works. [L0691.006]</li>
+<li>Case, French market: a seller testing a product got a high CTR and low CPC with many visitors but no sales. The add-to-cart rate was 2.5%, far below the 4% benchmark. The seller lowered the price and tried a second offer; neither changed the result, and the ads were stopped. The lesson is to check the offer, price, copy and page trust signals against the add-to-cart benchmark before concluding the product fails. Competitors scaling the same product in that market is normal. [L0691.034]</li>
+<li>Ads that perform but do not sell: the store's offer, pages and checkout need changes, not the ads. [L0773.005]</li>
+<li>Checklist before switching off ads after $300 spent with no sales:
+<ol type="1">
+<li>Improve the offer. [L1171.024]</li>
+<li>Improve pricing. [L1171.024]</li>
+<li>Improve copywriting. [L1171.024]</li>
+<li>Try another product name. [L1171.024]</li>
+<li>Improve the product description. [L1171.024]</li>
+<li>Activate markets so each targeted country sees prices in its own currency. [L1171.024]</li>
+<li>Check that payment providers work and everything is set up correctly. [L1171.024]</li>
+</ol></li>
+<li>Split test product pages:
+<ol type="1">
+<li>Confirm CTR and CPC are on target. [L1220.029]</li>
+<li>If there are no sales, change the store first. [L1220.029]</li>
+<li>Run the same product to different product pages with different offers, bundles and copy. [L1220.029]</li>
+<li>Compare which pages produce sales. [L1220.029]</li>
+<li>Keep the winning page and test the next variation. [L1220.029]</li>
+</ol></li>
+<li>A high CTR with no sales means the store is the problem, not the ads. Change the store design, offer, bundle, pricing or copy, and do not rely on the first version of the store. [L1220.030]</li>
+<li>Running ads to only one product page with one offer, then judging the product, is a mistake. Test several offers and bundles before concluding it fails. [L1220.031]</li>
+<li>Strong hook rate and CTR, few purchases: see the hook-rate note in the signals section. [L0652.012]</li>
+<li>Basic ad creatives can still drive traffic while a weak store fails to convert; see the attribution section. [L0502.047]</li>
+<li>If ads perform but the product page is too busy, reduce it to one clear decision that is largely made for the buyer. (Source E 2025-26) [L1016.074]</li>
+<li>Product page with clicks but no sales (high price): improve the product page before removing the product. Add education, reassurance, extra information or a bonus the competitor does not offer. (older, 2020) [L0468.097]</li>
+<li>Product page friction: do not add friction; reduce it at every step. [L1098.002]</li>
+<li>If search terms, bids and clicks are all in order but sales stay low, review the offer and the market before changing ads. [L0744.002]</li>
+<li>A product that converts poorly on a new page should be checked against the funnel before the product is blamed. [L0660.023]</li>
+<li>Ads that get clicks but no sales in a targeted market should be checked for market-level issues before changing the product. [L0715.019]</li>
+<li>Very high CTR with no sales on one ad; see the high-CTR framework above. [L0229.011]</li>
+<li>Product page with TikTok audience: if add-to-cart is high but purchases are low, audience quality is often the cause. Remove age groups that do not fit the product and test stronger offers. Example: removing the 18 to 24 group improved conversion even though add-to-cart fell. (2025-26) [L1259.049]</li>
+</ul>
+<h2 id="google-shopping-and-google-analytics-troubleshooting">Google Shopping and Google Analytics troubleshooting</h2>
+<p><strong>Google Shopping: clicks without sales</strong></p>
+<ul>
+<li>If Google Shopping underperforms after three months (older, 2022):
+<ol type="1">
+<li>Go to Google Ads. [L0272.021]</li>
+<li>Run a report for the past three months. [L0272.021]</li>
+<li>Identify products with many impressions but few clicks. [L0272.021]</li>
+<li>Focus the ad budget on the 20 to 30 products already getting traction. [L0272.021]</li>
+<li>Pause or reduce spend on products with no impressions. [L0272.021]</li>
+<li>Optimise landing pages for high-impression products to increase conversion rate. [L0272.021]</li>
+<li>Build up initial sales volume and margin before expanding to more products. [L0272.021]</li>
+</ol></li>
+<li>If the daily budget is not fully spent (older, 2022):
+<ol type="1">
+<li>Increase product-level CPC incrementally. Start at baseline (for example 50 cents), raise to 75 cents, then to $1. [L0272.022]</li>
+<li>Run each increase for several days. [L0272.022]</li>
+<li>Continue until the daily budget is fully spent each day. [L0272.022]</li>
+<li>Once all products show, there is enough data to identify winners and optimise. [L0272.022]</li>
+<li>Add negative keywords to prevent wasting money on non-relevant searches. [L0272.022]</li>
+</ol></li>
+<li>If impressions are high but clicks are low (for example 900 impressions, 4 clicks, 90% search impression share) (older, 2022):
+<ol type="1">
+<li>Check the product feed in Google Merchant Center or Microsoft Merchant Center. [L0272.023]</li>
+<li>Look for unapproved items, errors or warnings. [L0272.023]</li>
+<li>Clean up feed issues (missing fields, policy violations). [L0272.023]</li>
+<li>Resubmit the feed. [L0272.023]</li>
+<li>On Microsoft, try removing some negative keywords; the impact differs from Google. [L0272.023]</li>
+<li>Test a slightly higher CPC for a few days to improve ad position. [L0272.023]</li>
+</ol></li>
+<li>To find out why Google Shopping traffic does not convert (2020-22 framing, same method):
+<ol type="1">
+<li>In Google Ads, pull a keyword report for the Shopping campaigns and see which keywords get most of the clicks. [L0626.014]</li>
+<li>Flag irrelevant or too-broad keywords and add them as negatives (exact match for generic terms) so budget stops going to them. [L0626.014]</li>
+<li>Keep budget on quality keywords: brand names, product names and SKU numbers. [L0626.014]</li>
+<li>Find which products take most of the budget on quality keywords and where those clicks land on your store. [L0626.014]</li>
+<li>Open the product page on one side of a split screen and search for the same product on Google on the other side. [L0626.014]</li>
+<li>Open the top two or three competitor sites and ask why a shopper would choose them over your store, looking at the offer and not only the price. [L0626.014]</li>
+<li>Improve the product pages that receive quality traffic so the offer beats competitors, not just the visuals or price. [L0626.014]</li>
+</ol></li>
+<li>Product gets clicks but no sales on Google Shopping: audit competitor product pages.
+<ol type="1">
+<li>Search the product on Google Shopping as a shopper would. (older, 2022) [L0969.109]</li>
+<li>Open the other stores selling the same item. [L0969.109]</li>
+<li>Note anything their product page does more persuasively than yours (for example a clearer offer, trust elements, imagery or content). [L0969.109]</li>
+<li>Apply the changes that could realistically raise conversion on your own page. [L0969.109]</li>
+</ol></li>
+<li>Traffic quality for Google Shopping: check which search terms generate clicks to the page under review, and judge whether they come from buyers ready to purchase or from people still researching. (older, 2021-22) [L0473.006]</li>
+<li>Shopping and product-level checks, with a full 2019-era procedure (older):
+<ol type="1">
+<li>Run a test purchase on desktop and mobile after any app or code change, since changes can break one variant. [L0356.039]</li>
+<li>In Google Ads, find which products are getting clicks and which search terms triggered them. [L0356.039]</li>
+<li>Add irrelevant search terms as negative keywords. [L0356.039]</li>
+<li>For relevant keywords, search the product on Google Shopping and compare competitors' prices, shipping speed, policies, bonus gifts and review counts. [L0356.039]</li>
+<li>Use that data to improve your own product pages and add the conversion triggers competitors use. [L0356.039]</li>
+<li>Make sure every major payment method is offered and easy to use. [L0356.039]</li>
+<li>In Google Analytics, review the top exit pages and the bounce rate, and look for reasons visitors leave. [L0356.039]</li>
+<li>Check that the traffic reaching the store is relevant to the products. [L0356.039]</li>
+</ol></li>
+<li>Google Ads bids by device (2024): when most conversions come from one device:
+<ol type="1">
+<li>Open the alpha and beta campaigns in Google Ads. [L0806.050]</li>
+<li>Check historical conversions by device. [L0806.050]</li>
+<li>If most budget goes to mobile but sales come from desktop, lower the mobile bid. [L0806.050]</li>
+<li>Example: a 60 cent mobile CPC can be cut by 50%, to 30 cents, to shift traffic toward converting desktop users. [L0806.050]</li>
+</ol></li>
+<li>Conversion of Google Ads products (2024 procedure):
+<ol type="1">
+<li>Identify product pages receiving qualified clicks from Google Ads through the correct keywords. [L0253.038]</li>
+<li>Calculate expected sales: clicks ÷ 40 = expected sales at the 2.5% benchmark. [L0253.038]</li>
+<li>If actual sales are lower, visit competitor stores and pull up the same products side by side. [L0253.038]</li>
+<li>Compare product page layout, images, description, reviews, pricing and warranty information. [L0253.038]</li>
+<li>Identify visual or functional differences that favour the competitor. [L0253.038]</li>
+<li>Update the product page to match or exceed competitor pages. [L0253.038]</li>
+</ol></li>
+<li>Google Ads conversion check (2023 procedure):
+<ol type="1">
+<li>Monitor keyword quality by checking which keywords trigger your ads. [L0251.005]</li>
+<li>Review conversion rates on the ads, targeting a minimum of 2.5% from qualified traffic. [L0251.005]</li>
+<li>If a single product has received 200 to 300 clicks with zero sales, compare the store with the top 3 to 5 competitor stores. [L0251.005]</li>
+<li>Document differences in product presentation, pricing, descriptions or additional features. [L0251.005]</li>
+<li>Implement improvements based on the competitor analysis. [L0251.005]</li>
+</ol></li>
+<li>Products with impressions and clicks but no sales, when traffic itself is not the problem: work on the store page and conversion setup of those products before cutting them from the ads. [L0715.019]</li>
+<li>If a single product gets more than 100 clicks from relevant search terms and still has no sale, optimise that product page before changing campaigns. Do this only after negatives are cleaned up and the product has clear relevant traffic. [L0807.044]</li>
+<li>Clicks with no sales across Google Ads over three weeks: check whether visitors reach checkout at all. [L0837.007]</li>
+</ul>
+<p><strong>Google Analytics checks</strong></p>
+<ul>
+<li>Google Analytics Insights flags top landing pages whose e-commerce conversion rate is below the site average, for example below 0.46% when that is the site average. Use this flag to decide which product or landing page to fix first, then confirm the problem with the page's conversion rate column. (older, 2021-22) [L0721.035]</li>
+<li>Compare product pages with each other over time as traffic accumulates:
+<ol type="1">
+<li>Collect Google Analytics data for product pages over time. [L0293.005]</li>
+<li>Compare pages using average time on page and bounce rate. [L0293.005]</li>
+<li>Identify pages where visitors stay longer (low bounce rate, high time on page). [L0293.005]</li>
+<li>Study those high-performing pages to understand which design and content elements work. [L0293.005]</li>
+<li>Find pages with high bounce rates (visitors leave immediately). [L0293.005]</li>
+<li>Review those pages for errors, unclear messaging, design issues or missing elements that cause quick exits. [L0293.005]</li>
+</ol></li>
+<li>Behaviour data for a landing page (older, 2021-22): read bounce rate, time on site, time on page and exit rate for the page used as a landing page. [L0473.005]</li>
+<li>Read the page with Shopify's funnel report to see where add-to-cart, checkout start and purchase drop, then return to the Google Analytics figures. [L0400.017]</li>
+</ul>
+<h2 id="scoring-the-page-six-conversion-factors">Scoring the page: six conversion factors</h2>
+<p>Full-page diagnosis for a low-converting page (older, 2021-22):</p>
+<ol type="1">
+<li>Review traffic targeting: list the search terms or audience settings that send visitors to the page and judge whether they reach people near the top or the bottom of the funnel. [L0473.005]</li>
+<li>Check the traffic-to-page match: confirm the landing page fits the search intent and the customer awareness stage of the visitors. [L0473.005]</li>
+<li>Check follow-up: confirm retargeting and email exist, and that retargeting uses varied ads rather than one dynamic product ad for 30 days. [L0473.005]</li>
+<li>Review the offer: confirm it is a CURV offer, compare it with competitor offers, and check that it matches what visitors are looking for. [L0473.005]</li>
+<li>Test the page on desktop, mobile and tablet, on several devices and connections (cellular data and home Wi-Fi), and check page speed. [L0473.005]</li>
+<li>Read behaviour data in Google Analytics: bounce rate, time on site, time on page and exit rate for the landing page. [L0473.005]</li>
+<li>Score the page against the six e-commerce conversion factors: value proposition, relevance, clarity, anxiety, distraction and urgency. [L0473.005]</li>
+<li>Turn each weakness into a single test: change one element, then measure whether the conversion rate improves. [L0473.005]</li>
+</ol>
+<p>The six factors apply to any page meant to drive an action, including product pages and opt-in pages with a form. [L0473.020]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Question to ask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value proposition</td>
+<td>How well does the page explain the product's value, including the marketing offer, and what is the main perceived benefit for the customer?</td>
+</tr>
+<tr>
+<td>Relevance</td>
+<td>How closely does the content match what visitors expect, and how well does the value proposition address their primary problem?</td>
+</tr>
+<tr>
+<td>Clarity</td>
+<td>Does the page explain the value proposition, the offer and the calls to action clearly, with a logical sequence and enough white space?</td>
+</tr>
+<tr>
+<td>Anxiety</td>
+<td>What is missing or unclear that could make a buyer feel uneasy about completing the purchase?</td>
+</tr>
+<tr>
+<td>Distraction</td>
+<td>What does the visitor see first, and does anything compete with or pull attention away from the goal?</td>
+</tr>
+<tr>
+<td>Urgency</td>
+<td>What convinces the visitor to act now, through incentives, the offer itself, tone or message?</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0473.020]</p>
+<ul>
+<li>Value proposition: the visitor must associate enough value with the price. The page should explain the product's pros and cons, the marketing offer and the main benefit clearly enough that the price feels justified. (older, 2021-22) [L0473.021]</li>
+<li>Relevance: lead with the primary problem the visitor wants solved and show the product as the solution through its main promise. Naming the problem early is what holds visitors on the page. (older, 2021-22) [L0473.022]</li>
+<li>Clarity: the page must follow a clear sequence, make calls to action easy to find and identify, and leave plenty of white space. A cluttered page with too much text or too many elements lowers conversion even when the copy is good. (older, 2021-22) [L0473.023]</li>
+<li>Distraction: the first thing a visitor sees must support the goal. Intrusive pop-ups and stacked widgets such as chat, messenger and wishlist pull attention from the main call to action, so product pages should show very little beyond what is needed to buy. (older, 2021-22) [L0473.026]</li>
+<li>Split test the design after sales come in (see the high-CTR framework). Test one variation at a time. [L1220.029]</li>
+<li>Improve the product detail page before testing the ad: the product page is the lever for product-level conversion. [L1038.015]</li>
+</ul>
+<h2 id="when-to-kill-a-product">When to kill a product</h2>
+<ul>
+<li>Do not stay emotionally attached to a product because it generates some sales. If it is unprofitable, continuing to spend in hope of eventual profitability wastes capital. [L0037.004]</li>
+<li>A product with good CTR but very low conversion is first a problem with the offer or market, not a reason to stop immediately. Try another market, a new offer or a new marketing angle before killing the product. [L1161.034]</li>
+<li>Only kill a product when the loss has reached about $200 to $300. A product at break-even still deserves more offers, angles or markets. [L1161.036]</li>
+<li>Before abandoning a product after the first day or two of ads, check whether product validation was sound and whether each funnel stage has been optimised. The weakness is often in the store rather than the product. [L1259.014]</li>
+<li>Product kill checklist after $300 spent with no sales is in the high-CTR section; complete it before switching ads off. [L1171.024]</li>
+<li>If the product has been tested with all elements optimised and still does not convert after two testing rounds, switch products. [L0321.039]</li>
+<li>Do not judge a product before checking the days ads have run, the offer, the landing page, the checkout and CTR/CPC in the ad account. [L1177.060]</li>
+</ul>
+<p>Case, 70 EUR product (older, 2019-22 framing not applicable; current sources): a product priced at 70 EUR was tested for 14 days in January and produced 18 sales with no recorded returns, and customers said they were happy with it. Conversion stayed around 0.8%. The product was later relaunched with a new, better offer and new creatives: CTR was above 3%, but conversion was about 0.5% on the first day. Low conversion at this price points to weak demand, weak copy or an unconvincing offer, so the product page should be reviewed. A conversion rate around 1.5% could still be profitable at this price if the margin is good. [L0693.062]</p>
+<ul>
+<li>For a 70 EUR product, a conversion rate of 0.5% to 0.8% signalled weak demand or weak copy despite CTR above 3%. A conversion rate around 1.5% can still be profitable if the margin is good. [L0693.051]</li>
+</ul>
+<p>Case, 60 EUR product in one market: CTR was over 3% and sometimes 4%, while conversion after a week was 0.8%. The product was at break-even at about 60 euros, and the mentor would keep testing rather than kill a product at break-even. [L1161.035]</p>
+<p>Case, 60 EUR product in one market, full sequence: the product sold at around 60 euros, with strong ad metrics (CTR above 3%, sometimes 4%) but a conversion rate of about 0.8% after one week. About 400 euros had been spent and the campaign was at break-even. Several offers were tried with no change in conversion. Buyer data showed mostly male customers, so the product angle was rewritten around that group, which also produced no change, and all campaigns were paused over the weekend. The recommended next step was not to kill the product at break-even but to test a second market: translate the store with Shopify Translate, activate the UK market, set GBP prices such as 24.90 or 26.90, and spend about 100 euros on English ads with copy tied to a specific use situation. Losses of about 200 to 300 dollars would be the point to stop. [L1161.055]</p>
+<p>Kill triggers at a glance:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>Threshold</th>
+<th>Action</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loss reached</td>
+<td>About $200 to $300</td>
+<td>Kill the product</td>
+<td>L1161.036</td>
+</tr>
+<tr>
+<td>Spend with no sales</td>
+<td>$300</td>
+<td>Run the checklist before switching ads off</td>
+<td>L1171.024</td>
+</tr>
+<tr>
+<td>Break-even</td>
+<td>No loss yet</td>
+<td>Keep testing offers, angles or markets</td>
+<td>L1161.035, L1161.036</td>
+</tr>
+<tr>
+<td>Good CTR, very low conversion</td>
+<td>First suspect is offer or market</td>
+<td>Test another market, offer or angle before killing</td>
+<td>L1161.034</td>
+</tr>
+<tr>
+<td>Testing rounds completed, all elements optimised</td>
+<td>Two rounds</td>
+<td>Switch products</td>
+<td>L0321.039</td>
+</tr>
+<tr>
+<td>Day one or two of ads</td>
+<td>Before abandoning</td>
+<td>Check validation and each funnel stage</td>
+<td>L1259.014</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1161.036, L1171.024, L1161.035, L1161.034, L0321.039, L1259.014]</p>
+<p>Case, product with many add-to-carts but no sales (cross-check): when a product has many add-to-carts but no sales, check the checkout, price, shipping costs and trust elements, because the drop-off happens after the add-to-cart step. [L0552.027]</p>
+<p>Scaling and winning products: once a variant wins, scale it harder rather than adding more untested variants. [L1038.015]</p>
+<h2 id="funnel-stages-and-benchmarks">Funnel stages and benchmarks</h2>
+<ul>
+<li>A Shopify funnel has four stages: landing or product page, add to cart, initiate checkout, and purchase. Measure each stage on its own so the weakest step can be found. Strong ad metrics do not prove the store works, so the store must be analyzed separately. [L1345.001]</li>
+<li>Use these benchmarks as guidelines and check them against your niche:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Metric</th>
+<th>Benchmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Landing page to add to cart</td>
+<td>Add-to-cart rate</td>
+<td>6% or higher is good</td>
+</tr>
+<tr>
+<td>Add to cart to initiate checkout</td>
+<td>Checkout start rate</td>
+<td>25% to 50% is normal; aim for 50%</td>
+</tr>
+<tr>
+<td>Initiate checkout to purchase</td>
+<td>Purchase rate</td>
+<td>50% or higher is ideal</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1260.013, L1345.002]</p>
+<ul>
+<li>Use the following stage actions when a rate is below target. A rate of 1-2% at the add-to-cart stage is a clear failure. [L1260.061]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Funnel stage</th>
+<th>Metric</th>
+<th>Target</th>
+<th>If below target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Landing page to Add to Cart</td>
+<td>Add-to-cart rate</td>
+<td>6% or higher</td>
+<td>Fix the landing or product page; 1-2% is a clear failure</td>
+</tr>
+<tr>
+<td>Add to Cart to Initiate Checkout</td>
+<td>Checkout start rate</td>
+<td>25-50% (aim for 50%)</td>
+<td>Fix friction and trust on the way into checkout</td>
+</tr>
+<tr>
+<td>Initiate Checkout to Purchase</td>
+<td>Purchase rate</td>
+<td>50% or higher</td>
+<td>Fix checkout trust, payment options, shipping and taxes</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1260.061]</p>
+<ul>
+<li>Initiate checkout is counted once a visitor enters contact details such as an email address. [L1345.009]</li>
+<li>A 12-add-to-cart example: 12 add-to-carts should produce about 3 to 6 initiate checkouts, and 6 is the better result. [L1345.009, L1260.014]</li>
+<li>Initiate checkout to purchase should be at least 50%. If it is lower, optimize the checkout, including trust elements, shipping display, taxes, currency, and payment methods. [L1345.010]</li>
+</ul>
+<h2 id="calculating-the-rates">Calculating the rates</h2>
+<ul>
+<li><p>Calculate funnel rates from clean visitor counts, after removing bot and launch-spike traffic. [L1260.058]</p></li>
+<li><p>Use these formulas:</p>
+<ul>
+<li>Add-to-cart rate = add-to-cart events / landing-page visitors x 100</li>
+<li>Checkout start rate = initiate-checkout events / add-to-cart events x 100</li>
+<li>Purchase rate = purchases / initiate-checkout events x 100</li>
+</ul>
+<p>[L1260.058, L1345.003]</p></li>
+<li><p>Use genuine landing-page visitors as the denominator for the add-to-cart rate. Example: 12 add-to-carts from 200 genuine visitors gives 6%, which meets the benchmark. [L1345.003]</p></li>
+<li><p>Worked example: with 200 real visitors and 12 Add-to-Cart events, the Add-to-Cart rate is 6%, which meets the benchmark. Twelve add-to-carts leading to three to six checkout initiations would be within the 25-50% range. [L1260.015]</p></li>
+<li><p>A funnel judgment needs at least 150-200 real visitors. 50-100 visitors is too little data. [L1260.061]</p></li>
+</ul>
+<h2 id="stage-by-stage-check">Stage-by-stage check</h2>
+<ol type="1">
+<li>Check landing page to add to cart against the target of 6% or higher. If it is 1-2%, the landing page or product page is the problem. [L1260.014]</li>
+<li>Check add to cart to initiate checkout against the target of 25-50%. With 12 add-to-carts, that means at least 3 to 6 checkout starts. [L1260.014]</li>
+<li>Check initiate checkout to purchase against the target of 50% or higher. If it is lower, optimize the checkout. [L1260.014]</li>
+<li>Fix only the stage that fails before moving on. [L1260.014]</li>
+<li>Do not change checkout or other stages at the same time as the landing page, or the cause of a change cannot be identified. [L1345.004]</li>
+</ol>
+<h2 id="diagnosis-order">Diagnosis order</h2>
+<ul>
+<li>Diagnose a low conversion rate in this order and never skip ahead [L1456.001, older advice, 2021-22]:
+<ol type="1">
+<li>Evaluate traffic quality: look at search terms and whether visitors are the right people at the right stage of the buying journey. [L1456.001]</li>
+<li>Run competitor analysis: list every seller of the same product and compare price, returns policy, review count, site design and similar factors in a matrix. [L1456.001]</li>
+<li>Only then optimize the website and offer based on what the competitor comparison revealed. Doing the website first wastes effort and can make the position worse. [L1456.001]</li>
+</ol></li>
+<li>Speed and friction issues matter most when visitors arrive but do not add to cart. Fix these first before other changes. [L1260.037]</li>
+<li>If the landing-page add-to-cart rate is below benchmark, fix the landing or product page first and leave later funnel stages for now. [L1345.004]</li>
+</ul>
+<h2 id="diagnosis-low-add-to-cart">Diagnosis: low add-to-cart</h2>
+<ul>
+<li><p>Check the landing and product page first, because speed and friction issues matter most when visitors arrive but do not add to cart. [L1260.037, L1260.014]</p></li>
+<li><p>Product pages should clearly show these points, because gaps explain why competitors win sales [older advice, 2020]:</p>
+<ul>
+<li>stock status and shipping time</li>
+<li>the shipping and returns policy</li>
+<li>the price match policy</li>
+<li>more and better images</li>
+<li>descriptions that answer buyer questions</li>
+</ul>
+<p>[L1277.079]</p></li>
+</ul>
+<h2 id="diagnosis-low-checkout-completion">Diagnosis: low checkout completion</h2>
+<ul>
+<li>Check initiate checkout to purchase against the 50% target. If it is lower, check the checkout, including trust elements, shipping display, taxes, currency, and payment methods. [L1345.010, L1260.061]</li>
+<li>When TikTok traffic adds to cart but does not buy, check the offer, the trust signals and the checkout in that order. High add-to-cart with low purchases usually points to checkout or trust level rather than the ad. [L1377.045]</li>
+<li>When an ad brings many checkout starts but no sales, place a test order yourself through the full checkout to confirm payment works before changing the ad. [L1426.046]</li>
+<li>If the checkout works, run the original ad again to see whether the low conversion came from the ad or from a checkout fault that has since been fixed. [L1426.046]</li>
+</ul>
+<h2 id="diagnosis-high-add-to-cart-with-few-purchases">Diagnosis: high add-to-cart with few purchases</h2>
+<ul>
+<li>High add-to-cart with few purchases can be caused by a broad audience, for example TikTok audiences under 24 years old. Exclude non-buying age groups, such as 18-24, if they convert poorly, and test a stronger offer. [L1260.038]</li>
+<li>Example: a store with 18+ targeting had good add-to-carts but weak conversion. After removing the 18-24 age group, add-to-carts dropped but the conversion rate improved. The conversion rate is the goal to watch, not the add-to-cart count. [L1260.039]</li>
+</ul>
+<h2 id="diagnosis-high-ctr-with-no-sales">Diagnosis: high CTR with no sales</h2>
+<ul>
+<li>If CPC is below $1, CPM is below $10, and CTR is above 1.5% but the store converts poorly, work on the store instead of the ads. [L1375.008]</li>
+<li>Test new offers, a new store design, and new copywriting. Change something on the store every day until the conversion rate reaches the target. [L1375.008]</li>
+<li>When a product gets clicks and spend but no sales, check the parts you control in this order: landing page first, then creative, then offer, and only then the product itself. Changing the product before the page is fixed leaves the real cause unknown. [L1382.071]</li>
+<li>Clicks and spend may not show sales on the same day. Orders can come from people who clip an ad and keep it until a need appears, so a good ad can produce sales months after it stops running. Plan for delayed responses when measuring an ad campaign. [L1366.071]</li>
+</ul>
+<h2 id="diagnosis-traffic-but-no-sales">Diagnosis: traffic but no sales</h2>
+<ul>
+<li><p>Assuming a traffic problem when sales are missing is a mistake. If visitors arrive and do not convert, the issue is usually the store experience or the offer compared with competitors. [L1274.009, older advice, 2018]</p></li>
+<li><p>Diagnose in this order [L1274.008, older advice, 2018]:</p>
+<ol type="1">
+<li>Check the bounce rate on the pages that receive traffic.</li>
+<li>Check whether shoppers add products to the cart and then leave without completing the order.</li>
+<li>Check whether visitors are comparison shopping and leaving for better deals elsewhere.</li>
+<li>Re-research the top competitors, focusing on the pages already getting traffic, to see what they do differently.</li>
+<li>Only after you know what competitors offer, add incentives such as bonus gifts or expiring coupon codes to make buyers choose your store.</li>
+</ol>
+<p>[L1274.008]</p></li>
+<li><p>Case: a second store with over 100 products, running Google Ads and working on SEO, had been open since April, received a fair amount of traffic, and had zero conversions. The previous Black Friday produced zero revenue. The recommended diagnosis was a conversion problem, not a traffic problem: check the bounce rate and add-to-cart-then-leave behaviour, check comparison shopping, then re-research competitors on the pages that already get traffic. Set up email campaigns before peak season so non-buying visitors can be followed up. [L1274.084, older advice, 2018]</p></li>
+</ul>
+<h2 id="google-shopping-troubleshooting">Google Shopping troubleshooting</h2>
+<ul>
+<li>The Google Shopping conversion rate should be around 2.5 percent or higher, roughly five times the 0.5 percent that signals a problem. Measure it on Google Shopping traffic only, not overall site traffic. [L1277.077, older advice, 2020]</li>
+<li>Conversion fix when Google Shopping traffic does not convert [L1277.078, older advice, 2020]:
+<ol type="1">
+<li>In Google Ads, list the products that receive clicks and where the spend goes.</li>
+<li>Search those products on Google Shopping the way a customer would, and note which competitors show up.</li>
+<li>Open the competitor ads and product pages, and compare them side by side with your own pages.</li>
+<li>Check how each competitor shows shipping timing and stock, shipping and returns policy, price match policy, number and quality of images, and product descriptions.</li>
+<li>Cut spend on products that cost money without sales and that you cannot compete on.</li>
+<li>Improve your product pages where competitors are stronger, then move budget to products that convert.</li>
+</ol></li>
+</ul>
+<h2 id="traffic-versus-store-attribution">Traffic versus store attribution</h2>
+<ul>
+<li>Strong ad metrics do not prove the store works, so analyze the store separately. [L1345.001]</li>
+<li>Use the funnel stages to decide whether a problem sits in traffic or in the store. Ad clicks with a healthy landing-page add-to-cart rate point to later stages; a 1-2% add-to-cart rate points to the landing or product page. [L1260.061, L1260.014]</li>
+<li>Measure ad effect with delayed responses in mind, because a good ad can produce sales months after it stops running. [L1366.071]</li>
+<li>Do not treat a traffic problem as the cause of missing sales without checking the store. [L1274.009, older advice, 2018]</li>
+</ul>
+<h2 id="when-to-kill-a-product-1">When to kill a product</h2>
+<ul>
+<li>Do not conclude that a product is dead after the first day or two of traffic. Low sales often come from fixable problems in the offer, images, trust elements, or checkout, so optimize each level before giving up. [L1345.005]</li>
+<li>Before cutting a product, check the parts you control in this order: landing page, creative, offer, then the product itself. [L1382.071]</li>
+<li>Cut spend on products that cost money without sales and that you cannot compete on, then improve product pages where competitors are stronger before moving budget to products that convert. [L1277.078, older advice, 2020]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>In Phase 5 (Days 60-75), after 48-72 hours of ad testing, diagnose whether poor performance is caused by an ad problem (weak creative or ineffective targeting) or a funnel problem (low product page appeal, unclear offer, or checkout friction); this diagnosis determines which system requires optimization effort. [L0199.021]</li>
+</ul>
+</article><nav class="pn"><a href="../../06-conversion-optimization/02-when-to-start-readiness-and-the-pre-traffic-launch-checklist/"><span class="k">&larr; Previous</span><span class="v">When to start: readiness and the pre-traffic launch checklist</span></a><a class="nx" href="../../06-conversion-optimization/04-customer-research-feedback-and-behavior-analytics/"><span class="k">Next &rarr;</span><span class="v">Customer research, feedback and behavior analytics</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

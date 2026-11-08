@@ -1,0 +1,1144 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Profit tracking systems: per-order sheets, daily P&amp;L trackers and profit apps | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.16: Profit tracking systems: per-order sheets, daily P&amp;L trackers and profit apps.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/16-profit-tracking-systems-per-order-sheets-daily-p-l-trackers-/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Profit tracking systems: per-order sheets, daily P&amp;L trackers and profit apps | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.16: Profit tracking systems: per-order sheets, daily P&amp;L trackers and profit apps."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/16-profit-tracking-systems-per-order-sheets-daily-p-l-trackers-/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/16-profit-tracking-systems-per-order-sheets-daily-p-l-trackers-/">Plain version</a></div><h1>19.16 Profit tracking systems: per-order sheets, daily P&amp;L trackers and profit apps</h1><article><h2 id="why-profit-tracking-is-required">Why profit tracking is required</h2>
+<ul>
+<li>Always track profit with either a Shopify app or a spreadsheet. Without profit visibility you cannot scale effectively, and you risk going negative without knowing it. [L0037.010]</li>
+<li>Automate profit tracking once the store runs, so margin is measured per order rather than estimated from totals. [L0532.023]</li>
+<li>Spreadsheets are hard to keep accurate for profit tracking because every payment and cost source must be connected. Profit apps automate this by pulling data from payment providers. [L1213.024]</li>
+<li>Track profit for each individual order, not only total revenue, so that losing products, pricing problems and winning products become visible. A simple spreadsheet is enough while order volume is low, for example a few orders per day. [L1202.001]</li>
+<li>Track the net profit of every sale in a profit spreadsheet, so decisions about which products to scale or cut are based on real per-sale results. [L0970.149]</li>
+<li>A clear view of gross spend and net return is essential once sales start. Without it, a seller cannot tell whether a product is making money or losing it. This matters most when a product is being tested and when a store moves into the scaling phase. [L0678.006]</li>
+</ul>
+<h2 id="choosing-a-tracking-system">Choosing a tracking system</h2>
+<ul>
+<li>Older (2021-22): Review the current financial tracking system and check whether it gives a clear view of the business. If it does not work or leaves room for improvement, compare it with a proven tracking system and implement that one if it fits the business. [L0441.012]</li>
+<li>Older (2021): Google Sheets is enough for margin tracking at the start. Accounting software such as Xero can come later. [L0962.111]</li>
+<li>Older (2020): The December 2020 coaching call lists Wholesale Cost Tracking as a resource for tracking supplier (wholesale) costs. The lesson names it without describing its setup. [L0426.007]</li>
+<li>2023: A profit tracking spreadsheet is enough for a new store's bookkeeping. It costs nothing and tracks revenue, cost of goods, shipping, ad spend and profit. [L0855.033]</li>
+<li>2023: Use a profit tracking spreadsheet to track business profit. Xero is the accounting platform used for the business. Google Sheets was used for years before that and supported over $10 million in sales. [L0835.121]</li>
+<li>2024: Use Excel for product-level profit tracking to see which products to scale or drop. The team later moved accounting to Xero, which is not day-to-day work. [L0971.067]</li>
+<li>Shopify's own analytics shows all store reports and activity. When Shopify Payments is used, payments and finances are also visible in the same admin. [L0934.082]</li>
+<li>Profit apps are the alternative to spreadsheets; see the profit apps section below. [L0037.010, L1213.024]</li>
+</ul>
+<h2 id="per-order-profit-sheets-google-sheets">Per-order profit sheets (Google Sheets)</h2>
+<ul>
+<li>Module 7.9 (Profit tracking) calculates profit margin on every individual order, not just blended profit across all sales combined. Apply it retroactively to all January and February orders. [L0208.015]</li>
+<li>Older (2022): Module 7 includes a downloadable Profit Tracking Worksheet, used to track ROI indicators, monitor profitability by product and campaign, and make data-driven scaling decisions. [L0249.080]</li>
+<li>Older (2020): Track sales price, COGS, shipping cost and profit per order in separate columns, and calculate profit margin order by order. [L0268.039]</li>
+<li>Older (2020), procedure:
+<ol type="1">
+<li>Track profit per order in Google Sheets with columns: order date, sale price, COGS, shipping, total profit. [L0268.041]</li>
+<li>As order volume increases, assign this tracking to a virtual assistant. [L0268.041]</li>
+<li>Periodically review overall business profit. Take distributions based on monthly or weekly profit, not on a per-order basis. [L0268.041]</li>
+</ol></li>
+<li>Older (2022), procedure:
+<ol type="1">
+<li>Build a sheet with one row per order. [L1281.095]</li>
+<li>Record the sale price, product cost, merchant fees, shipping and ad cost. [L1281.095]</li>
+<li>Compare profit per order to see which products make real money and which need a higher price or removal. [L1281.095]</li>
+</ol></li>
+</ul>
+<h3 id="setting-up-the-order-sheet">Setting up the order sheet</h3>
+<ul>
+<li>Setup procedure:
+<ol type="1">
+<li>Open the template link and choose File &gt; Make a Copy. Keep the default name "Copy of" and click OK so the file is editable in your own Google Drive. [L1202.002]</li>
+<li>Right-click the tab labelled Duplicate this PNL and choose Duplicate to keep an untouched backup of the formulas. [L1202.002]</li>
+<li>Right-click the working tab and choose Rename to give it your own name. [L1202.002]</li>
+<li>Enter all order data only in the working tab and keep the backup tab as the reset copy. [L1202.002]</li>
+</ol></li>
+<li>Keep the blank template tab "DUPLICATE THIS - P&amp;L" unchanged and copy it for each new tracking period or store, so the column structure stays the same across all reports. [L0394.006]</li>
+<li>Column structure of the order-level profit sheet, tab "DUPLICATE THIS - P&amp;L", with one example row. [L0394.001]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Order #</th>
+<th>Date</th>
+<th>Net Profit</th>
+<th>Net Margin</th>
+<th>Supplier</th>
+<th>Product</th>
+<th>QTY</th>
+<th>Customer Paid</th>
+<th>Promotion Applied</th>
+<th>COGS</th>
+<th>Shipping</th>
+<th>Tax Collected</th>
+<th>Merchant Fees</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1200.0</td>
+<td>36526.0</td>
+<td>307.7</td>
+<td>0.3077</td>
+<td>Supplier ABC</td>
+<td>Product 12345</td>
+<td>1.0</td>
+<td>1000.0</td>
+<td>10% Off</td>
+<td>500.0</td>
+<td>100.0</td>
+<td>63.0</td>
+<td>29.3</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The Date column stores a spreadsheet date serial (36526 = 2000-01-01 in Excel), so format it as a date before reading it. [L0394.001]</li>
+<li>Net profit per order = Customer Paid − COGS − Shipping − Tax Collected − Merchant Fees. Example: 1000 − 500 − 100 − 63 − 29.3 = 307.7. [L0394.002]</li>
+<li>Net margin per order = Net Profit ÷ Customer Paid. Example: 307.7 ÷ 1000 = 0.3077, i.e. 30.77%. [L0394.003]</li>
+<li>Tax collected from the customer must be deducted from order revenue, because it is passed on to the tax authority and not kept as income. Leaving it out overstates net profit and margin on every sale that carries sales tax or VAT. [L0394.004]</li>
+<li>Record every order on its own row with the supplier, product, quantity and any promotion applied. This shows which suppliers, products and discounts actually produce profit, instead of total revenue only. [L0394.005]</li>
+</ul>
+<h3 id="entering-one-order">Entering one order</h3>
+<ul>
+<li>Entry procedure:
+<ol type="1">
+<li>Replace the example data with the Shopify order number and the date the order was placed. [L1202.003]</li>
+<li>Enter the supplier name and the product name. [L1202.003]</li>
+<li>Enter Quantity as the number of units the customer bought. [L1202.003]</li>
+<li>Enter Customer Paid as the amount shown in the Shopify orders section. [L1202.003]</li>
+<li>Enter any promotion used in Promotions Applied. [L1202.003]</li>
+<li>Enter COGS from the supplier invoice. [L1202.003]</li>
+<li>Enter Shipping and Tax Collected, and leave Merchant Fees to the formula. [L1202.003]</li>
+<li>Read Net Profit and Net Margin at the top of the sheet, which update automatically. [L1202.003]</li>
+</ol></li>
+<li>Customer Paid must be the amount the customer actually paid as shown in Shopify, not the product list price. If the customer paid for shipping, that amount belongs in Customer Paid, not in the shipping field. [L1202.004]</li>
+<li>Promotions Applied is only a reference column for spotting trends, such as a 10% off storewide sale. It does not change any calculation. Record each discount so you can later see which promotions were linked to higher or lower profit. [L1202.005]</li>
+<li>To add more orders: highlight the full row with all order data and formulas, then drag the fill handle at the bottom down to copy the row. The copied rows keep the calculation formulas, so you only overwrite the input cells for each new order. [L1202.012]</li>
+<li>Ad spend is not entered in the per-order sheet because it varies from order to order. Track it separately and analyse it with return on ad spend (ROAS) alongside the net margin figures. [L1202.019]</li>
+<li>Older (2021), period-level formulas:
+<ul>
+<li>Profit per order = sale price − Shopify card processing fee (2.9% for Shopify Payments credit card transactions in the source year 2021) − supplier cost − shipping cost. [L0962.109]</li>
+<li>Profit after ads and overheads = total profit per period − Google Ads, Facebook Ads and Bing Ads costs − 29 dollars per month for Shopify − other fees. [L0962.109]</li>
+</ul></li>
+<li>Older (2021), margin tracking in a spreadsheet:
+<ol type="1">
+<li>Create a sheet for each week or month. [L0962.110]</li>
+<li>For every sale, enter the sale price, Shopify fees, supplier product price and shipping cost. [L0962.110]</li>
+<li>Calculate profit per order. [L0962.110]</li>
+<li>Add that period's Google Ads, Facebook Ads, Bing Ads, 29 dollars Shopify fee and other fees. [L0962.110]</li>
+<li>Calculate the margin for the period. [L0962.110]</li>
+</ol></li>
+</ul>
+<h3 id="acting-on-per-order-results">Acting on per-order results</h3>
+<ul>
+<li>Example: After two months with 12 sales, six sales earned $400 net profit each, three earned $200, and three earned $50. The $50 sales should be investigated for too much ad spend or higher shipping cost than expected. Then ad spend can be cut or increased on the products that earn most. [L0970.148]</li>
+</ul>
+<h2 id="order-level-tracker-from-source-b-older-2021-22">Order-level tracker from Source B (older, 2021-22)</h2>
+<ul>
+<li>Tool: The Order Profit Tracker is a spreadsheet that calculates net profit and net margin for each order from the sale amount minus supplier cost, shipping, payment processor fees and other costs. It is used to know profit per order, and its instructions include a way to automate the data entry. [L1246.003]</li>
+<li>Each order is entered with the order amount, any discount, the payment processor fee, sales tax, the supplier total, the cost of products, shipping, other process fees and the amount received. Net profit and net margin are calculated from these entries. [L1246.019]</li>
+<li>The tracker reports a gross profit margin alongside the net margin. Rely on the net margin for decisions, because it shows what remains after shipping costs and all other order costs are subtracted. [L1246.018]</li>
+<li>During the early build phase, calculate the profit of every single order, because margins only become clear once real supplier costs, shipping, processor fees and fraud fees are included. [L1201.001]</li>
+<li>Enter and check the profit of at least the first 5 to 10 orders manually yourself before handing the task to someone else. [L1201.002]</li>
+<li>Logging procedure for one order in the Order Profit Tracker:
+<ol type="1">
+<li>When the store sends a new-sale notification, note the order. [L1201.004]</li>
+<li>Place the order with the supplier and wait for the invoice or order confirmation that lists all costs. [L1201.004]</li>
+<li>Open the Profit Per Order tab and add a new row with the order number and date. [L1201.004]</li>
+<li>Enter the customer name, the product and the quantity. Quantity is for reference only and does not change the calculation. [L1201.004]</li>
+<li>Enter the order amount: the total you actually received from the customer. [L1201.004]</li>
+<li>Enter the discount you gave. It is recorded for reference; the order amount already reflects what was received. [L1201.004]</li>
+<li>Select the payment method so it matches what Shopify fills in automatically. [L1201.004]</li>
+<li>Enter the sales tax. Leave it at 0 if no sales tax was charged. [L1201.004]</li>
+<li>Enter the supplier total: the product cost plus the shipping cost from the supplier invoice, plus the cost of any shipping you paid yourself through a freight forwarder or UPS on your own account. [L1201.004]</li>
+<li>Keep the shipping cost in its own separate cell as a reference note. [L1201.004]</li>
+<li>Read the automatically calculated values: processor fees, fraud insurance, total cost, gross profit, net profit and net margin. [L1201.004]</li>
+</ol></li>
+<li>For an order split across several suppliers, enter the supplier total as one sum of all invoices, including each separately paid shipping cost, using a typed equation such as <code>=1500+500</code> (or <code>=1400+100+500</code> if a 100 shipping cost is paid separately). Example check: 3,000 − 2,000 − 87.30 − 30 = 882.70. [L1201.014]</li>
+<li>Fraud insurance is entered in the insurance section: Signifyd at 1% of the order amount, with a checkbox column "Insure Checks/Financed Orders?". If you do not use fraud insurance, delete that fee. [L1201.017]</li>
+<li>Older (2021-22), dropshipping COGS: Recording COGS on an accrual basis for each individual order is effectively impossible for dropshipping. It requires accurate supplier invoices for every order, invoices change over time, and suppliers do not standardize their data. The work is very large, the benefit is small, and the return on investment is negative. [L0484.009]</li>
+<li>Older (2021-22): Using an order profit tracker to calculate profit on every individual order is not recommended for dropshipping. For the same reason as per-order COGS accrual, supplier invoices change and are hard to keep accurate, so the effort is large while the information gained is small. [L0484.022]</li>
+<li>Older (2021-22), growth phase: Recording every single order has diminishing returns, because the profit per additional sale of the same item barely changes while the time to collect invoices and costs is large. Weigh tracking time against what it returns. [L1246.004]</li>
+<li>Older (2021-22), growth-phase procedure:
+<ol type="1">
+<li>If you do not yet have a clear profit per product or order, use the tracker for a while without entering every order. [L1246.005]</li>
+<li>Spot check periodically to confirm that a product line, brand or best-selling product is still profitable. [L1246.005]</li>
+<li>When adding a new supplier or new product, track it for a while until you know how it performs. [L1246.005]</li>
+<li>Return to the tracker after supplier price changes or your own price changes to see how things have developed. [L1246.005]</li>
+<li>If you are still not confident about profit per order, use the tracker for a week at a time instead of continuously. [L1246.005]</li>
+</ol></li>
+</ul>
+<h2 id="fees-and-rates-to-enter">Fees and rates to enter</h2>
+<p>Sources give different fee rates. Each value applies to the case described.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Rate given</th>
+<th>When it applies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source B, older (2021-22)</td>
+<td>Shopify Payments 2.9% + $0.30; PayPal 2.9% + $0.30; Klarna 3.5% + $1.00</td>
+<td>Setup tab of the order tracker, with the payment method matched to Shopify [L1201.017]</td>
+</tr>
+<tr>
+<td>Source A, older (2021)</td>
+<td>2.9% Shopify card processing fee on Shopify Payments credit card transactions</td>
+<td>Profit per order in the 2021 sheet [L0962.109]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>Payment providers typically about 2-3% per transaction</td>
+<td>Estimate of what a payout is reduced by [L678.002]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>Extra 1% fee when Shopify Payments is not used</td>
+<td>Profitability tracker sheet [L875.021]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>Shopify transaction fee of 0.5%, 1% or 2%, depending on the plan</td>
+<td>Extra charges entered in a profit app [L1213.026]</td>
+</tr>
+<tr>
+<td>Source D 2026</td>
+<td>Shopify Fee % preset to 0.055 (5.5%); the same tracker lists 5.50%</td>
+<td>Daily P&amp;L tracker input [L1123.004, L1030.007]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Payment fees come from the Shopify Fee % setting. Their effect depends on the sheet version (see the following statements). [L1123.014]</li>
+<li>Source D 2026, worked day-1 example: profit equals revenue minus COGS minus ad spend ($140), so no fee was deducted there. Verify the Fees formula in your copy before relying on profit. [L1123.014]</li>
+<li>Source D 2026, if the Fees column applies 0.055 to the worked day-1 example: fees would be $300 × 0.055 = $16.50, profit would fall from $140 to $123.50, and net margin would fall from 46.67% to about 41.17%. Check whether your copy deducts this fee before trusting the $140 result. [L1123.024]</li>
+<li>Source D 2026: Before using the tracker, change its payment processor fee formula to match the fee rates of your own payment processor. [L1124.018]</li>
+<li>Source C: The Shopify 1% fee column header in a weekly sheet does not match its sample value. The sample 113.35 equals 0.5% of revenue 22670.38, not 1%. Check the actual fee rate before relying on the column. A 1% fee on that revenue would be 226.70 USD. [L900.019]</li>
+<li>Source C: Shopify income is recorded net of transaction costs, so transaction costs are not a separate income line. Shopify Fees are tracked as a separate expense line in the monthly sheet. [L550.011]</li>
+<li>Source B, older: Changing a fee rate in the Setup tab updates all order rows in real time. [L1201.019]</li>
+<li>Source B, older: The source gives a switch from Shopify Payments to Klarna changing the processor fee from 29.30 to 106.00 on a 3,000 order. Under the same source's rates, a 3,000 order on Shopify Payments gives 87.30 (2.9% of 3,000 + $0.30) and a 3,000 order on Klarna gives 106.00 (3.5% + $1.00). The 29.30 figure matches a 1,000 order at Shopify Payments rates, so verify it before reusing it. The choice of payment method changes net profit either way. [L1201.019, L1201.017, L1201.014]</li>
+<li>Source B, older: Exact processor fees matter only for the automation features. If you do not want to track the fee precisely, leave the payment method set to Shopify Payments, since most processors charge roughly 2.9% plus 30 cents. [L1201.018]</li>
+<li>Source C: Use Shopify Payments if it is available in your country, as it is the default payment processor. Stripe is the alternative where Shopify Payments is not available. In some markets Stripe has been integrated into Shopify Payments. Availability depends on the seller's country. [L678.003]</li>
+<li>Source C: Track the payout from Shopify Payments or Stripe, not the gross sales figure, because the payout already has transaction fees deducted. A 40 dollar sale might yield roughly 2-3 dollars less. [L678.002]</li>
+</ul>
+<h2 id="daily-pl-and-funnel-trackers">Daily P&amp;L and funnel trackers</h2>
+<h3 id="source-d-daily-pl-tracker">Source D daily P&amp;L tracker</h3>
+<ul>
+<li>The tracker is a Google Sheets file with a Daily P&amp;L Tracker tab. Open the shared link, use File &gt; Make a copy, and enter all data only in your own copy. [L1123.001]</li>
+<li>Sheet layout, in order: [L1123.008]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Block</th>
+<th>Columns in order</th>
+<th>Input or auto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header</td>
+<td>Source D ELITE title; Daily P&amp;L Tracker tab; Breakeven ROAS (editable); Shopify Fee % (0.055 preset)</td>
+<td>Breakeven ROAS input; fee preset</td>
+</tr>
+<tr>
+<td>Facebook Ads (daily)</td>
+<td>Day, Spend, CPC, CTR, CPM, ATC, IC, Purchases, ROAS</td>
+<td>Spend, CPC, CTR, CPM, ATC, IC, Purchases input; ROAS auto</td>
+</tr>
+<tr>
+<td>Shopify Daily Profit (daily)</td>
+<td>Day, Revenue, - COGS, - Ad Spend, - Fees, PROFIT, Net Margin %, ATC, IC, Purchases</td>
+<td>Revenue, COGS, Ad Spend, ATC, IC, Purchases input; PROFIT and Net Margin % auto; Fees per fee note</td>
+</tr>
+<tr>
+<td>Cost Metrics (daily)</td>
+<td>Cost/ATC, Cost/IC, Cost/Purchase</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>LAST 3 DAYS</td>
+<td>Spend, Revenue, Profit, ROAS, Net Margin</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>TOTAL row (above the daily rows)</td>
+<td>Spend, Revenue, COGS, Ad Spend, Fees, Profit across all 30 days; cost metrics show totals or dashes</td>
+<td>auto</td>
+</tr>
+<tr>
+<td>AVG row</td>
+<td>Averages of Cost/ATC, Cost/IC, Cost/Purchase</td>
+<td>auto</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Daily rows run from 1.0 to 30.0, one row per day. [L1123.008]</li>
+<li>The daily grid holds 30 rows, one per day, so the sheet covers a 30-day tracking period. [L1123.019]</li>
+<li>The TOTAL row sums spend, revenue, COGS, ad spend, fees and profit over all 30 day rows. The AVG row averages the cost metrics. The LAST 3 DAYS block summarizes spend, revenue, profit, ROAS and net margin for the most recent three days. [L1123.015]</li>
+<li>Daily entry routine:
+<ol type="1">
+<li>Make a copy of the shared template (File &gt; Make a copy) and work only in your copy. [L1123.009]</li>
+<li>Set the Breakeven ROAS cell to your break-in RAS target. [L1123.009]</li>
+<li>Find the row for the current day (1.0 to 30.0). [L1123.009]</li>
+<li>In the Facebook Ads block, enter Spend, CPC, CTR, CPM, ATC, IC and Purchases. [L1123.009]</li>
+<li>In the Shopify Daily Profit block, enter Revenue, COGS and Ad Spend. [L1123.009]</li>
+<li>In the Shopify Daily Profit block, enter ATC, IC and Purchases. [L1123.009]</li>
+<li>Read the auto-calculated ROAS, PROFIT, Net Margin % and the three cost metrics. [L1123.009]</li>
+<li>Check the cell color: green means above target, red means negative, zero means breakeven. [L1123.009]</li>
+<li>Review the LAST 3 DAYS block for the short-term trend and the TOTAL row for the full period. [L1123.009]</li>
+<li>Do not touch any dark purple cell. [L1123.009]</li>
+</ol></li>
+</ul>
+<h3 id="break-in-roas-and-status">Break-in ROAS and status</h3>
+<ul>
+<li>Break-in RAS is the minimum daily return target. A day only counts as profitable when its ROAS is above that number. The example target is 1.3, so each ad dollar must bring back more than $1.30 in revenue. [L1123.002]</li>
+<li>Enter your break-in RAS in the Breakeven ROAS cell at the top of the Daily P&amp;L Tracker tab. It is an editable parameter, so replace the example value 1.3 with your own target. [L1123.003]</li>
+<li>A day with ad spend but no revenue shows red, because a ROAS of zero is below the break-in target. [L1123.005]</li>
+<li>Cell colors signal status: green means the day is above the target and winning, red means the day is negative and losing, and zero means exact breakeven. [L1123.006]</li>
+<li>The tracker labels each day with one of three statuses: LOSING (red, negative profit), BREAKEVEN (zero, exact break-even) and WINNING (green, above target). Read the color together with the PROFIT value to see the status. [L1123.021]</li>
+<li>Judge each day by profit and net margin, not by ROAS alone. A ROAS of 3.0 can still leave a thin margin once COGS and fees are deducted. [L1123.017]</li>
+</ul>
+<h3 id="cell-categories-and-formulas">Cell categories and formulas</h3>
+<ul>
+<li>The tracker uses three cell categories: input cells that you fill in each day, AUTO-CALC cells (dark purple) that must not be typed into, and PROFIT/MARGIN cells that are calculated automatically and marked separately. Only the input cells change when you enter daily data. [L1123.022]</li>
+<li>Dark purple cells are auto-calculated. Never type into them. Fill only the input cells, because overwriting formulas corrupts the calculations. [L1123.007]</li>
+<li>Some auto-calculated cells pass a value through with an IF formula of this form, so they stay blank until the source input is filled:</li>
+</ul>
+<pre><code>=IF(source=&quot;&quot;,&quot;&quot;,source)</code></pre>
+<p>Do not overwrite these cells, because replacing the formula breaks the link to the input. [L1123.023]</p>
+<ul>
+<li>ROAS (RAS) = Revenue ÷ Ad Spend. Example: revenue $300 with ad spend $100 gives a ROAS of 3.0. [L1123.010]</li>
+<li>PROFIT = Revenue − COGS − Ad Spend − Fees. [L1123.011]</li>
+<li>Net Margin % = PROFIT ÷ Revenue. Example: profit $140 on revenue $300 gives a net margin of 46.67%. [L1123.012]</li>
+<li>Cost per metric = Ad Spend ÷ count of the event. Cost/ATC = Spend ÷ ATC, Cost/IC = Spend ÷ IC, Cost/Purchase = Spend ÷ Purchases. Example with spend $100, 14 ATC, 10 IC and 6 purchases: $7.14, $10.00 and $16.67. [L1123.013]</li>
+<li>Worked day-1 example: spend $100, CPC $1.00, CTR 3%, CPM $60, 14 ATC, 10 IC, 6 purchases, revenue $300, COGS $60, ad spend $100. Results: ROAS 3.0 (green, above the 1.3 target), profit $140, net margin 46.67%, cost per ATC $7.14, cost per IC $10.00, cost per purchase $16.67. [L1123.016]</li>
+<li>Cost per ATC, IC and purchase show where money is lost in the funnel. Compare them day over day: a cost per IC that rises while cost per ATC stays flat points to the checkout step rather than the ad. [L1123.018]</li>
+</ul>
+<h3 id="fee-aware-daily-sheet-and-the-30-day-grid">Fee-aware daily sheet and the 30-day grid</h3>
+<ul>
+<li>Daily P&amp;L tracker in Google Sheets, columns and inputs: [L1030.007]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Day</td>
+<td>Daily row</td>
+</tr>
+<tr>
+<td>CPC, CTR, CPM, ATC</td>
+<td>Facebook ad metrics from Ads Manager</td>
+</tr>
+<tr>
+<td>Cost/ATC, Cost/IC, Cost/Purchase</td>
+<td>Cost per add to cart, checkout initiated and purchase</td>
+</tr>
+<tr>
+<td>COGS</td>
+<td>Cost of goods sold</td>
+</tr>
+<tr>
+<td>Ad Spend</td>
+<td>Daily ad cost</td>
+</tr>
+<tr>
+<td>Fees</td>
+<td>Payment and platform fees</td>
+</tr>
+<tr>
+<td>Net Margin</td>
+<td>Profit after all costs</td>
+</tr>
+<tr>
+<td>ROAS</td>
+<td>Return on ad spend</td>
+</tr>
+<tr>
+<td>Breakeven ROAS</td>
+<td>Input, the ROAS needed to cover costs</td>
+</tr>
+<tr>
+<td>Shopify Fee %</td>
+<td>Input, set to 5.50%</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Input cells are filled in by hand, auto-calculated cells update themselves, and colour signals mark rows as WINNING or LOSING. [L1030.007]</li>
+<li>To add up profit over the last three days with data, use this formula in the tracker. The formula was partly legible on screen, so check the column letters against your own sheet before relying on it. [L1030.008]</li>
+</ul>
+<pre><code>=IFERROR(SUMPRODUCT((ROW(L9:L38)&gt;=MAX(IF(L9:L38&lt;&gt;&quot;&quot;,ROW(L9:L38)))-2)*(L9:L38&lt;&gt;&quot;&quot;)*(P9:P38)),&quot;&quot;)</code></pre>
+<ul>
+<li>A single red day can wipe out several days of accumulated profit. Judge a product on whether its daily profit holds above the threshold across consecutive days, not on the running total. Keeping a weak product also ties up budget that could test another product in the same niche. [L1030.033]</li>
+<li>Source D 2026, daily ad-and-profit sheet, one row per day: [L0560.032]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column group</th>
+<th>Columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook Ads</td>
+<td>Spend, CPC, CTR, CPM, ATC (add to cart)</td>
+</tr>
+<tr>
+<td>Shopify daily profit</td>
+<td>Purchases, ROAS, Revenue after discount, COGS, Ad spend, Fees, Profit, Net margin</td>
+</tr>
+<tr>
+<td>Summary and signals</td>
+<td>Breakeven figure at the top, Color signals, WINNING tab, TOTAL tab</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Colors flag days that are above or below the breakeven, and the net margin column shows profit as a percentage of revenue. [L0560.032]</li>
+<li>Estimated profit for recent days still in the sheet = revenue after discount × 0.9 × 0.25, which equals 22.5 percent of revenue. The cell label reads "As of X days based on revenue, less 10%, less 25%". Check example: 28,199.17 × 0.9 × 0.25 = 6,344.81. [L0560.033]</li>
+</ul>
+<h3 id="source-e-funnel-tracker">Source E funnel tracker</h3>
+<ul>
+<li>A daily D2C funnel tracker spreadsheet with three sections (unit economics, Meta ads, website) serves two purposes: finding the bottleneck in the whole e-commerce funnel, and acting as a scaling guide. It is filled in every day with the key funnel metrics, with a tab per month and per day so performance is visible over time. [L1354.001]</li>
+<li>To calculate unit economics and target metrics: 1) Enter the store listing price per unit, including shipping cost if applicable. 2) Enter the total cost of goods per unit. The sheet then calculates the product margin and the target metrics automatically. [L1354.003]</li>
+<li>Website section of the daily tracker, columns in order: [L1354.016]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add to carts (ATC)</td>
+<td>Count of add-to-cart events</td>
+</tr>
+<tr>
+<td>Purchases</td>
+<td>Count of orders</td>
+</tr>
+<tr>
+<td>Conversion rate (CVR)</td>
+<td>Purchases as a share of visits or sessions</td>
+</tr>
+<tr>
+<td>AOV (average order value)</td>
+<td>Average revenue per order</td>
+</tr>
+<tr>
+<td>Store revenue</td>
+<td>Total revenue for the day</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Track daily spend and top-of-funnel metrics in a shared Facebook metrics spreadsheet. It acts as a scaling guide that shows whether to scale or to put focus back on the ads or the website. [L1016.061]</li>
+</ul>
+<h2 id="weekly-monthly-and-product-level-sheets">Weekly, monthly and product-level sheets</h2>
+<h3 id="source-c-daily-and-weekly-profit-sheets">Source C daily and weekly profit sheets</h3>
+<ul>
+<li>Track profit in a profitability tracker sheet: record revenue, refunds, COGS, ad spend, processing fees and Shopify fees per day or per week. Weekly tracking gives a clearer view of average profit than single-day numbers. [L0445.020]</li>
+<li>The profitability tracker sheet records revenue, refunds, COGS, ad cost, payment processing fees and Shopify fees per day or per week. Profit equals revenue minus all expenses, and profit percentage is profit divided by revenue. Extra 1% fees apply when Shopify Payments is not used. [L0875.021]</li>
+<li>Daily profit tracking sheet in Google Sheets, one row per day: [L645.023]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date</td>
+<td>Day of trading</td>
+</tr>
+<tr>
+<td>Revenue</td>
+<td>Total sales for the day</td>
+</tr>
+<tr>
+<td>Facebook ad spend</td>
+<td>Amount spent on ads that day</td>
+</tr>
+<tr>
+<td>Product plus shipping cost</td>
+<td>Cost of goods sold including delivery</td>
+</tr>
+<tr>
+<td>Stripe and PayPal fees</td>
+<td>Payment processor costs</td>
+</tr>
+<tr>
+<td>Other expenses</td>
+<td>App fees and additional costs</td>
+</tr>
+<tr>
+<td>Returns and refunds</td>
+<td>Money returned to customers</td>
+</tr>
+<tr>
+<td>Net profit</td>
+<td>Revenue minus all the costs above</td>
+</tr>
+<tr>
+<td>Profit %</td>
+<td>Net profit divided by revenue</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A team member can fill in the revenue, ad data and costs daily, so you can see what a given ROAS means in profit. [L645.023]</li>
+</ul>
+<h3 id="weekly-profit-and-loss-sheet">Weekly profit and loss sheet</h3>
+<ul>
+<li>Weekly profit and loss sheet layout, with the sample row: [L900.016]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Revenue</th>
+<th>Refunds</th>
+<th>COGS</th>
+<th>Ads</th>
+<th>PP Fee (Stripe + Paypal + Klarna)</th>
+<th>Shopify 1% Fee</th>
+<th>Profit/Loss</th>
+<th>%PROFIT</th>
+<th>Paypal</th>
+<th>Monthly</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>July 22 - July 28</td>
+<td>22670.38</td>
+<td>0.0</td>
+<td>6500.86</td>
+<td>9765.33</td>
+<td>846.3542</td>
+<td>113.3519</td>
+<td>5444.4839</td>
+<td>24.01584755</td>
+<td>235.3842</td>
+<td>(empty)</td>
+<td>(empty)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Weekly profit = Revenue − Refunds − COGS − Ads − Payment processor fees (Stripe + PayPal + Klarna) − Shopify fee. Profit % = Profit ÷ Revenue. Sample week: 22670.38 − 0 − 6500.86 − 9765.33 − 846.3542 − 113.3519 = 5444.4839 USD, which is 24.02% of revenue. [L900.017]</li>
+<li>Refunds must be subtracted from revenue in the weekly profit calculation, not ignored. A week with zero refunds, as in the sample, overstates profit if returns are expected. Track refunds in the same period as the sales they relate to. [L900.018]</li>
+<li>A PayPal figure of 235.38 sits next to the profit column but is not part of the profit formula. Confirm whether PayPal fees are already included in the payment processor fee column to avoid counting them twice or missing them. [L900.020]</li>
+<li>Example, sample week of July 22 to July 28: revenue was 22670.38 USD, with COGS of 6500.86 USD and ad spend of 9765.33 USD. Payment fees were 846.35 USD and the Shopify fee was 113.35 USD, leaving a profit of 5444.48 USD, or 24.02% of revenue. [L900.024]</li>
+<li>Currency conversion, if the ad account is not USD: enter in the field "1 USD equals (in your currency)" the amount of your currency that equals one US dollar. The default value is 1.0 when the account runs in USD. [L900.022]</li>
+</ul>
+<h3 id="simple-finance-sheet-for-a-dropshipping-test">Simple finance sheet for a dropshipping test</h3>
+<ul>
+<li>Procedure, in order: [L678.001]
+<ol type="1">
+<li>Enter every expense as it happens, daily if possible, otherwise at least once a week. [L678.001]</li>
+<li>Record Facebook ad spend, fulfillment costs (with the platform name in the description) and cost of goods sold per entry. [L678.001]</li>
+<li>Record sales not as the gross Shopify sales figure but as the payout amount from Shopify Payments or Stripe, which is already net of transaction fees. [L678.001]</li>
+<li>Enter the planned test budget per product (for example 500) in the "planned" field so the summary shows the difference. [L678.001]</li>
+<li>Enter the starting budget and read the monthly profit from the summary. [L678.001]</li>
+</ol></li>
+<li>Monthly profit in a simple store finance sheet = net payouts received (after payment fees) + other income − Facebook ad spend − fulfillment costs − cost of goods sold − other expenses. Each part is entered as its own line so the summary can calculate it. [L678.042]</li>
+<li>Overspending is visible when daily entries exceed the planned budget for a product, so the summary shows the difference immediately. A non-red figure against the planned budget means the plan is on track, and spending should be monitored closely during product tests. [L678.005]</li>
+<li>A personal-finance style spreadsheet can track expenses, income and profit for a store, and the same sheet can also be used for personal income and expenses. Marking unused recurring subscriptions in red as they are entered helps identify ones to cancel. [L678.004]</li>
+</ul>
+<h3 id="monthly-budget-sheet">Monthly budget sheet</h3>
+<ul>
+<li>Monthly budget sheet layout, one month, values from the example: [L550.001]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Planned</th>
+<th>Is</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook Ads</td>
+<td>500</td>
+<td>600</td>
+<td>-100</td>
+</tr>
+<tr>
+<td>Shopify Fees</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>COGS</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total expenses</td>
+<td>500</td>
+<td>600</td>
+<td>-100</td>
+</tr>
+<tr>
+<td>Shopify (- Transaction Costs)</td>
+<td>700</td>
+<td>1037</td>
+<td>337</td>
+</tr>
+<tr>
+<td>Agency Client</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total income</td>
+<td>700</td>
+<td>1037</td>
+<td>337</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Top summary block: Start Budget 1000, Start 1000, End 1437, Monthly Result 437, Change in % 0.437 (format as a percentage, 43.7%). [L550.001]</li>
+<li>Monthly Result = total income Is minus total expenses Is (1037 − 600 = 437). End = Start Budget plus Monthly Result (1000 + 437 = 1437). Change in % = Monthly Result divided by Start Budget (437 / 1000 = 0.437). [L550.002]</li>
+<li>Difference is calculated differently per side. On expense lines it is Planned minus Is (500 − 600 = −100). On income lines it is Is minus Planned (1037 − 700 = 337). In both cases a negative value means the line is behind plan, so overspending on costs and underperforming on income both show as negative. [L550.003]</li>
+<li>Planned Monthly Result is planned income minus planned expenses, which in the example is 700 − 500 = 200. Comparing this planned result with the actual Monthly Result of 437 shows whether the month beat its plan. [L550.005]</li>
+<li>Tracking planned against actual amounts each month, with the Start Budget carried forward as the running balance, shows whether the business is growing its cash or losing it. The Change in % line turns the monthly result into a simple growth rate on the starting budget. [L550.010]</li>
+<li>Each expense category is entered once per line. The Total row sums all expense lines for Planned and Is separately. The same applies to all income lines, so the totals always match the sum of their categories. [L550.004]</li>
+<li>Transaction log sheet layout, two side-by-side blocks, each with the same four columns: [L550.006]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Expenses: Date</th>
+<th>Amount</th>
+<th>Description</th>
+<th>Category</th>
+<th>Income: Date</th>
+<th>Amount</th>
+<th>Description</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Jun 2023 (stored as 45078)</td>
+<td>500</td>
+<td>Testing</td>
+<td>Facebook Ads</td>
+<td>2 Jun 2023 (stored as 45079)</td>
+<td>800</td>
+<td>Sales</td>
+<td>Shopify (- Transaction Costs)</td>
+</tr>
+<tr>
+<td>2 Jun 2023 (stored as 45079)</td>
+<td>250</td>
+<td>CJ</td>
+<td>COGS</td>
+<td>3 Jun 2023 (stored as 45080)</td>
+<td>237</td>
+<td>SP Payout</td>
+<td>Shopify (- Transaction Costs)</td>
+</tr>
+<tr>
+<td>3 Jun 2023 (entered as 03.06.0203, wrong year)</td>
+<td>100</td>
+<td>Facebook Ads</td>
+<td>(empty)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Category names in the logs must match the category names in the monthly sheet exactly, so that totals pick them up. [L550.006]</li>
+<li>Older (2022), Module 7 lesson "Profit Tracking" worksheet: record monthly sales revenue, business expenses (shipping, Shopify fees, transaction fees, ads, COGS), and calculate net profit. [L0272.028]</li>
+</ul>
+<h3 id="product-level-margin">Product-level margin</h3>
+<ul>
+<li>Track each product's margin in a spreadsheet using the wholesale price, MAP and a shipping estimate. Update it when product prices or shipping costs change. [L1115.092]</li>
+<li>Excel is used for product-level profit tracking to see which products to scale or drop (see the choosing section). [L971.067]</li>
+</ul>
+<h2 id="profit-apps">Profit apps</h2>
+<h3 id="b-profit">B Profit</h3>
+<p>The sources spell the app as B Profit, B-Profit and BeProfit. The sources do not say whether these are the same product, so the B Profit and BeProfit walkthroughs are kept separate.</p>
+<ul>
+<li>B Profit is a Shopify app that automatically tracks profit, KPIs and profit margins, and shows whether the seller is at loss or profitable. Automatic cost fetching is possible for CJ Dropshipping, AliExpress and Auto DS. It can be used for free with a start plan. [L875.023]</li>
+<li>B-Profit is a Shopify app that automates profit tracking. Install it from the Shopify App Store, connect ad accounts such as Facebook Ads, and enter the cost per item, handling cost and shipping price. It also picks up Shopify and external gateway fees, and shows gross profit and costs in one dashboard. A free plan (start free) is available. [L445.021]</li>
+<li>The B-Profit dashboard shows gross profit, all costs and profit margin, so you can see whether you are at a loss or profitable and whether to scale right now. [L445.023]</li>
+<li>B-Profit setup for dropshipping: choose niche, select channel (e.g. Facebook Ads), set inventory type to dropshipping, pick supplier (CJ Dropshipping, AliExpress, AutoDS or "Other"), then enter product cost per item, handling cost (0 in the example) and shipping prices. Finally connect external payment gateways such as Stripe or PayPal. [L445.022]</li>
+<li>Setting up B Profit in Shopify for profit tracking: [L875.022]
+<ol type="1">
+<li>Open the Shopify app store via the recommended apps section and install B Profit. [L875.022]</li>
+<li>Create an account and open the B Profit dashboard. [L875.022]</li>
+<li>Select the niche (for example electronics) and the sales channels, for example Facebook Ads, and connect the ad account. [L875.022]</li>
+<li>Add the inventory source: choose the dropshipping provider (CJ Dropshipping, AliExpress or Auto DS can be connected automatically to fetch cost prices), or select Other for manual entry. [L875.022]</li>
+<li>Select the fulfillment provider, or choose Other. [L875.022]</li>
+<li>Enter the shipping prices and product cost per item (example: cost per item $5, handling cost $0). [L875.022]</li>
+<li>Click Next and connect any external payment gateway such as Stripe or PayPal. [L875.022]</li>
+<li>Shopify plan fees are fetched automatically. Click Finish and start with the free plan to see gross profit and costs on the dashboard. [L875.022]</li>
+</ol></li>
+<li>Cost: B Profit costs about $7,200 per month and is aimed at large, established stores rather than beginners. [L1213.025] The free start plan described above is what the sources give for beginners. [L875.023, L445.021]</li>
+<li>Profit app setup as a procedure: [L1213.026]
+<ol type="1">
+<li>Connect Shopify Payments, Stripe and/or PayPal to the profit app. [L1213.026]</li>
+<li>Enter the transaction fees and any other margin fees. [L1213.026]</li>
+<li>For each product and each variant, enter the cost of goods sold (COGS), shipping cost and any extra charges. [L1213.026]</li>
+<li>Add extra charges such as Shopify's transaction fee, which the speaker noted as 0.5%, 1% or 2% depending on the plan. [L1213.026]</li>
+<li>Let the app calculate profit and loss for every order. After one to two days you will have a reliable picture of your current numbers. [L1213.026]</li>
+</ol></li>
+</ul>
+<h3 id="beprofit-first-walkthrough">BeProfit (first walkthrough)</h3>
+<ul>
+<li>BeProfit setup as taught: [L477.030]
+<ol type="1">
+<li>Install app, create or log in. [L477.030]</li>
+<li>Enter store information (e.g. niche, home and garden). [L477.030]</li>
+<li>Choose ad platforms (Facebook) and marketing tools (Klaviyo). Connect Facebook and Instagram ad accounts and Klaviyo. [L477.030]</li>
+<li>Inventory: choose "I dropship my products", select supplier and drop-shipping management tool (AutoDS). [L477.030]</li>
+<li>Shipping provider: select if used (e.g. USPS) or "I don't use any shipping platform". [L477.030]</li>
+<li>Production costs: choose "individually update" and enter the total drop-shipping price for every variant. [L477.030]</li>
+<li>Connect payment gateways (Shopify Payments, Stripe, PayPal) so fees are calculated automatically. [L477.030]</li>
+<li>List expenses (e.g. Shopify plan $29, apps, VA, fixed costs) with status and payment frequency. [L477.030]</li>
+<li>Set calculation preferences (e.g. exclude unfulfilled orders, optional). [L477.030]</li>
+<li>Choose plan (start with free). [L477.030]</li>
+</ol></li>
+</ul>
+<h3 id="beprofit-second-walkthrough">BeProfit (second walkthrough)</h3>
+<ul>
+<li>BeProfit setup as the second source teaches it: [L1297.036]
+<ol type="1">
+<li>Click Add app in the Shopify App Store and log in or create a BeProfit account, then click Let's go. [L1297.036]</li>
+<li>Enter your store information, such as niche (here home and garden). [L1297.036]</li>
+<li>Select your ad platform (Facebook) and marketing tool (Klaviyo), then connect the Facebook and Instagram accounts and Klaviyo. Pause any ad blocker on the site first. [L1297.036]</li>
+<li>Choose how you handle inventory: dropship. Select the supplier and the drop shipping management tool (AutoDS). [L1297.036]</li>
+<li>Select the shipping provider (USPS in the example), or "I don't use any shipping platform". [L1297.036]</li>
+<li>Choose the option that everything is handled by your supplier, then click Next. [L1297.036]</li>
+<li>For production costs, choose Individually update and enter the total dropship cost for each variant, for example 69.95. [L1297.036]</li>
+<li>Connect the payment gateways (Shopify Payments, Stripe or PayPal) so fees are calculated automatically. [L1297.036]</li>
+<li>List all expenses, such as the Shopify plan ($29 per month), other paid apps, a VA, or fixed company costs, with status and payment frequency. [L1297.036]</li>
+<li>Set the calculation preferences. The option to exclude unfulfilled orders is available, but the example left all options off. [L1297.036]</li>
+<li>Choose a plan. The example started with the free plan and upgrades later. [L1297.036]</li>
+</ol></li>
+</ul>
+<h3 id="beprofit-reports-cost-of-goods-and-examples">BeProfit reports, cost of goods and examples</h3>
+<ul>
+<li>BeProfit tracks profit and loss by combining revenue, product costs, payment fees and expenses. The Financials section gives the profit and loss report. Settings &gt; cost of goods lets you update costs when supplier prices change. [L0477.031]</li>
+<li>In BeProfit, the Financials section shows the profit and loss report, and Settings &gt; cost of goods is where you change product costs. If variants are missing, fill in their costs there so profit is calculated correctly. [L1297.037]</li>
+<li>Entering the wrong cost of goods in BeProfit distorts profit figures. Enter the actual total dropshipping price for every variant you sell, as quoted by the supplier. [L477.032]</li>
+<li>Example: after entering only the $29 Shopify plan as an expense and no orders yet, the BeProfit dashboard showed a loss of about $27. Costs are counted from the first day, so a store with zero sales shows a loss equal to its fixed expenses. A negative profit before the first sale is therefore expected when only fixed costs are entered. [L477.035, L1297.038]</li>
+</ul>
+<h3 id="trueprofit-and-triple-whale">TrueProfit and Triple Whale</h3>
+<ul>
+<li>TrueProfit is an app for live profit tracking. It is cleaner than Triple Whale for straight profit tracking. [L1299.027]</li>
+<li>Triple Whale appears only in that comparison. No unit in this material describes its features. [L1299.027]</li>
+</ul>
+<h3 id="why-apps-and-what-they-miss">Why apps and what they miss</h3>
+<ul>
+<li>Profit apps typically capture about 80 to 90% of order costs automatically from connected payment accounts. The remaining share, such as extra returns, disputes, chargebacks and payment-provider charges, must be added manually to get a true margin. [L1213.081]</li>
+<li>Spreadsheets are hard to keep accurate because every payment and cost source must be connected. Profit apps automate this by pulling data from payment providers. [L1213.024]</li>
+</ul>
+<h2 id="shopify-reports-and-billing">Shopify reports and billing</h2>
+<ul>
+<li>Shopify Settings &gt; Billing lists every paid app subscription, what each costs, and when each bill is due. Check it regularly to track recurring app costs. [L1301.013]</li>
+<li>Paid apps that are no longer used keep billing every cycle. Review the Billing page and uninstall or cancel any app that is no longer needed. [L1301.014]</li>
+<li>Shopify analytics shows all store reports and activity. With Shopify Payments, payments and finances are also visible in the same admin. [L934.082]</li>
+</ul>
+<h2 id="fixed-costs-and-expenses">Fixed costs and expenses</h2>
+<ul>
+<li>Shopify monthly subscription costs and app subscriptions are fixed costs and are not included in the per-order profit sheet. The sheet measures the actual profit per sale, so fixed costs must be reviewed separately. [L1202.018]</li>
+<li>List every recurring cost as an expense with its status and payment frequency, for example the Shopify plan, other paid apps, a VA and fixed company costs. [L477.030, L1297.036]</li>
+<li>The monthly budget sheet holds fixed costs on their own lines, so the monthly result reflects them. [L550.001, L550.002]</li>
+<li>A personal-finance style spreadsheet can also show which recurring subscriptions are unused, marked in red as they are entered, so they can be cancelled. [L678.004]</li>
+</ul>
+<h2 id="review-cadence">Review cadence</h2>
+<ul>
+<li>Track profit daily at first, then switch to weekly reviews to see the average weekly profit. Weekly data smooths out daily noise and gives a steadier basis for scaling decisions. [L875.024]</li>
+<li>Weekly tracking gives a clearer view of average profit than single-day numbers. [L445.020]</li>
+<li>Compare cost per IC and cost per ATC day over day to locate the funnel step where money is lost. [L1123.018]</li>
+<li>Judge a product on whether its daily profit holds above the threshold across consecutive days, not on the running total. [L1030.033]</li>
+<li>Periodically review overall business profit. Take distributions based on monthly or weekly profit, not on a per-order basis. [L268.041]</li>
+<li>Spot check periodically to confirm that a product line, brand or best-selling product is still profitable. [L1246.005]</li>
+<li>Return to the tracker after supplier price changes or your own price changes to see how things have developed. [L1246.005]</li>
+</ul>
+<h2 id="sheet-building-rules">Sheet-building rules</h2>
+<ul>
+<li>Enter amounts as plain numbers and keep the currency in the header or a note. [L550.007]</li>
+<li>Check every date after entry, and make sure the cell is formatted as a date rather than text. [L550.008]</li>
+<li>Every expense and income row needs a category that matches the sheet. [L550.009]</li>
+<li>Customer Paid must be the amount the customer actually paid, as shown in Shopify. [L1202.004]</li>
+<li>Keep the shipping cost in its own separate cell as a reference note. [L1201.004]</li>
+<li>Keep the shipping column for what you paid out only. Customer-paid shipping belongs in Customer Paid. [L1202.015]</li>
+<li>The Date column stores a spreadsheet date serial, so format it as a date before reading it. [L0394.001]</li>
+<li>Use one row per order, with the supplier, product, quantity and promotion. [L0394.005]</li>
+<li>Keep the blank template tab unchanged and copy it for each new period or store. [L0394.006]</li>
+<li>Keep a duplicate backup tab with the formulas, and do all entry in the working tab. [L1202.002]</li>
+<li>Only enter data in the input cells. Dark purple (auto-calculated) cells must not be typed into. [L1123.007, L1123.022]</li>
+<li>Keep the IF pass-through formulas (<code>=IF(source="","",source)</code>) intact so the cells stay linked to their inputs. [L1123.023]</li>
+<li>Fill only the white input cells in the Source B order tracker. [L1201.020]</li>
+<li>Use the fill handle to copy a full formula row for each new order. [L1202.012]</li>
+<li>Enter a fee in the Setup tab for each payment method. Each processor name must match the payment method shown in Shopify. [L1201.017]</li>
+<li>Keep the order-level tracker separate from fixed costs; add fixed costs to the expense list or budget sheet. [L1202.018, L477.030]</li>
+<li>Enter the planned test budget per product in the planned field so the summary shows the difference. [L678.001]</li>
+<li>Keep the sheet's expense list and total in sync: the daily cost is derived from the entered total. [L900.021]</li>
+<li>The 30-row daily grid covers one 30-day period. [L1123.019]</li>
+</ul>
+<h2 id="template-mistakes">Template mistakes</h2>
+<ul>
+<li>Typing a fixed number over a calculated cell, such as gross profit, contribution margin or break-even ROAS, breaks the formula chain and makes every later figure wrong. Change the input cells instead and let the calculator recalculate. [L0433.019]</li>
+<li>Typing values into the colored, automatically calculated cells breaks all calculations in the tracker. Enter data only in the white cells. [L1201.020]</li>
+<li>Entering the product's list price in Customer Paid instead of the amount the customer actually paid. Discounts and paid shipping then distort the profit result and make the per-order numbers unreliable. [L1202.014]</li>
+<li>Entering shipping that the customer paid in the shipping column. The shipping column should hold only what you paid out, so customer-paid shipping belongs in Customer Paid. [L1202.015]</li>
+<li>Leaving Tax Collected empty or treating collected sales tax as revenue. It must be entered and deducted, otherwise net profit is overstated. [L1202.016]</li>
+<li>Working in the original template tab without keeping a duplicate backup. If the formulas or automations break, a clean duplicate is needed to restore the calculation. [L1202.017]</li>
+<li>Amounts entered with a currency symbol, such as "$250", are stored as text and are not counted in the totals. [L550.007]</li>
+<li>A date typed with a wrong year, such as 0203 instead of 2023, places the entry outside the month and breaks any date-based filtering. [L550.008]</li>
+<li>A log row without a category, like the 100 Facebook Ads entry without a category, will not appear in the category totals of the monthly sheet. [L550.009]</li>
+<li>The Shopify 1% Fee column header does not match the sample value, which equals 0.5% of revenue. Check the fee rate before relying on the column. [L900.019]</li>
+<li>A PayPal figure sits next to the profit column but is not part of the profit formula. Confirm whether PayPal fees are already in the payment processor fee column. [L900.020]</li>
+<li>The total cost of running the business is entered as 400 USD, but the listed monthly expenses add up to 606 USD (605 without the designer value of 1). The expense list and the total must be kept in sync. [L900.021]</li>
+<li>Entering the wrong cost of goods in BeProfit distorts profit figures. [L477.032]</li>
+<li>Older (2021-22): Using an order profit tracker to calculate profit on every single order is not recommended for dropshipping, because supplier invoices change and are hard to keep accurate. [L484.022]</li>
+</ul>
+<h2 id="when-per-order-tracking-stops-paying-off">When per-order tracking stops paying off</h2>
+<p>Sources disagree on per-order tracking. Each position applies to a different stage and case.</p>
+<ul>
+<li>Per-order tracking applies while the store is still learning which products make money. A simple spreadsheet is enough while volume is low, for example a few orders per day. [L1202.001]</li>
+<li>Per-order tracking applies during the early build phase. Calculate the profit of every single order, because margins only become clear once real supplier costs, shipping, processor fees and fraud fees are included. Older source (2021-22). [L1201.001]</li>
+<li>Once the store is established, tracking each order matters less. Older source (2021-22). [L1201.001]</li>
+<li>Before handing the task to someone else, enter and check the profit of at least the first 5 to 10 orders yourself. Older source (2021-22). [L1201.002]</li>
+<li>Per-order tracking has diminishing returns in the growth phase, because the profit per additional sale of the same item barely changes while the time to collect invoices and costs is large. Older source (2021-22). [L1246.004]</li>
+<li>Per-order COGS accrual is effectively impossible for dropshipping, and the return on investment is negative. Older source (2021-22). [L484.009]</li>
+<li>Per-order tracking for dropshipping is not recommended, because supplier invoices change. Older source (2021-22). [L484.022]</li>
+<li>When volume grows, assign the per-order tracking to a virtual assistant, and review overall profit periodically. Older source (2020). [L268.041]</li>
+<li>Automate profit tracking once the store runs, so margin is measured per order rather than estimated from totals. [L532.023]</li>
+<li>Per-sale tracking is the rule in the 2023 source: track the net profit of every sale in a spreadsheet. [L970.149]</li>
+<li>Adding a new supplier or product: track it for a while until you know how it performs. Older source (2021-22). [L1246.005]</li>
+<li>If you are still not confident about profit per order, use the tracker for a week at a time instead of continuously. Older source (2021-22). [L1246.005]</li>
+<li>Working rule that reconciles the positions: while product profitability is still unknown or changing, track per order; once products and supplier costs are stable, switch to periodic spot checks and weekly or monthly reviews. [L1202.001, L1246.004, L1246.005, L268.041]</li>
+</ul>
+<h2 id="daily-d2c-funnel-tracker">Daily D2C funnel tracker</h2>
+<p>The daily D2C funnel tracker has five sections: unit economics, Meta ads, website, and the inputs and calculations behind them. Each row lists what the column means and the benchmark stated for it [L1354.029].</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Section</th>
+<th>Column</th>
+<th>Meaning</th>
+<th>Benchmark stated for this tracker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit economics</td>
+<td>Store listing price</td>
+<td>Input, price per unit</td>
+<td>$150 in the example</td>
+</tr>
+<tr>
+<td>Unit economics</td>
+<td>COGS + shipping</td>
+<td>Input, cost per unit</td>
+<td>$35 in the example</td>
+</tr>
+<tr>
+<td>Unit economics</td>
+<td>Product margin</td>
+<td>Calculated</td>
+<td>76.67% in the example</td>
+</tr>
+<tr>
+<td>Unit economics</td>
+<td>Target CPP</td>
+<td>Calculated, max cost per sale</td>
+<td>$115 in the example</td>
+</tr>
+<tr>
+<td>Unit economics</td>
+<td>Break-even ROAS</td>
+<td>Calculated</td>
+<td>1.30 in the example</td>
+</tr>
+<tr>
+<td>Meta ads</td>
+<td>Ad spend</td>
+<td>Daily budget</td>
+<td>$100 per day in the example</td>
+</tr>
+<tr>
+<td>Meta ads</td>
+<td>CPM</td>
+<td>Cost per 1,000 impressions</td>
+<td>About $20 healthy; reevaluate near $60</td>
+</tr>
+<tr>
+<td>Meta ads</td>
+<td>CTR</td>
+<td>Click-through rate</td>
+<td>Above 1% good</td>
+</tr>
+<tr>
+<td>Meta ads</td>
+<td>CPC</td>
+<td>Cost per click</td>
+<td>$0 to $3 healthy; about $1 very good</td>
+</tr>
+<tr>
+<td>Meta ads</td>
+<td>CPP</td>
+<td>Cost per purchase</td>
+<td>Must stay below target CPP</td>
+</tr>
+<tr>
+<td>Meta ads</td>
+<td>ROAS</td>
+<td>Revenue / ad spend</td>
+<td>At or above break-even ROAS</td>
+</tr>
+<tr>
+<td>Website</td>
+<td>ATC</td>
+<td>Add to carts</td>
+<td>Count per day</td>
+</tr>
+<tr>
+<td>Website</td>
+<td>Purchases</td>
+<td>Sales count</td>
+<td>Count per day</td>
+</tr>
+<tr>
+<td>Website</td>
+<td>CVR</td>
+<td>Conversion rate</td>
+<td>2% in the example; 0.5% in a weak example</td>
+</tr>
+<tr>
+<td>Website</td>
+<td>AOV</td>
+<td>Average order value</td>
+<td>Should be good</td>
+</tr>
+<tr>
+<td>Website</td>
+<td>Store revenue</td>
+<td>Total daily revenue</td>
+<td>Input to ROAS</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each cell is coloured with one of three labels, Good, Improve or Bad, judged against the benchmark in the last column [L1354.029].</p>
+<h2 id="profit-errors-after-a-bogo-launch">Profit errors after a BOGO launch</h2>
+<ul>
+<li>Triple Whale averages cost per acquisition across all orders [L1404.010].</li>
+<li>When many new customers buy two units under a BOGO, the real average cost per order falls [L1404.010].</li>
+<li>Because of this, the averages shown in the tracker become inaccurate [L1404.010].</li>
+<li>Account for this effect when reading profit data after a BOGO launch [L1404.010].</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>B-Profit is a Shopify app that automates profit tracking. Install it from the Shopify App Store, connect ad accounts such as Facebook Ads, and enter the cost per item, handling cost and shipping price. It also picks up Shopify and external gateway fees, and shows gross profit and costs in one dashboard. A free plan (start free) is available. [L0445.021]</p></li>
+<li><p>B-Profit setup for dropshipping: choose niche, select channel (e.g. Facebook Ads), set inventory type to dropshipping, pick supplier (CJ Dropshipping, AliExpress, AutoDS or 'Other'), then enter product cost per item, handling cost (0 in the example) and shipping prices. Finally connect external payment gateways such as Stripe or PayPal. [L0445.022]</p></li>
+<li><p>The B-Profit dashboard shows gross profit, all costs and profit margin, so you can see if you are at a loss or profitable and whether to scale right now. [L0445.023]</p></li>
+<li><p>BeProfit setup as taught: 1) Install app, create or log in. 2) Enter store information (e.g. niche, home and garden). 3) Choose ad platforms (Facebook) and marketing tools (Klaviyo); connect Facebook and Instagram ad accounts and Klaviyo. 4) Inventory: choose I dropship my products, select supplier and drop-shipping management tool (AutoDS). 5) Shipping provider: select if used (e.g. USPS) or I don't use any shipping platform. 6) Production costs: choose individually update and enter the total drop-shipping price for every variant. 7) Connect payment gateways (Shopify Payments, Stripe, PayPal) so fees are calculated automatically. 8) List expenses (e.g. Shopify plan $29, apps, VA, fixed costs) with status and payment frequency. 9) Set calculation preferences (e.g. exclude unfulfilled orders, optional). 10) Choose plan (start with free). [L0477.030]</p></li>
+<li><p>Entering the wrong cost of goods in BeProfit distorts profit figures; enter the actual total dropshipping price for every variant you sell, as quoted by the supplier. [L0477.032]</p></li>
+<li><p>In BeProfit, after entering only the $29 Shopify plan as an expense and no orders yet, the dashboard showed a loss of about $27. A negative profit before the first sale is therefore expected when only fixed costs are entered. [L0477.035]</p></li>
+</ul>
+<p>Monthly budget sheet layout (one month, values from the example):</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Planned</th>
+<th>Is</th>
+<th>Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Facebook Ads</td>
+<td>500</td>
+<td>600</td>
+<td>-100</td>
+</tr>
+<tr>
+<td>Shopify Fees</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>COGS</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total expenses</td>
+<td>500</td>
+<td>600</td>
+<td>-100</td>
+</tr>
+<tr>
+<td>Shopify (- Transaction Costs)</td>
+<td>700</td>
+<td>1037</td>
+<td>337</td>
+</tr>
+<tr>
+<td>Agency Client</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total income</td>
+<td>700</td>
+<td>1037</td>
+<td>337</td>
+</tr>
+</tbody>
+</table></div>
+<p>Top summary block: Start Budget 1000, Start 1000, End 1437, Monthly Result 437, Change in % 0.437 (format as a percentage, 43.7%). [L0550.001]</p>
+<ul>
+<li><p>Monthly Result = total income Is minus total expenses Is (1037 - 600 = 437). End = Start Budget plus Monthly Result (1000 + 437 = 1437). Change in % = Monthly Result divided by Start Budget (437 / 1000 = 0.437). [L0550.002]</p></li>
+<li><p>Difference is calculated differently for each side: on expense lines it is Planned minus Is (500 - 600 = -100), and on income lines it is Is minus Planned (1037 - 700 = 337). In both cases a negative value means the line is behind plan, so overspending on costs and underperforming on income both show as negative. [L0550.003]</p></li>
+<li><p>Each expense category is entered once per line, and the Total row sums all expense lines for Planned and Is separately. The same applies to all income lines, so the totals always match the sum of their categories. [L0550.004]</p></li>
+<li><p>Planned Monthly Result is planned income minus planned expenses, which in the example is 700 - 500 = 200. Comparing this planned result with the actual Monthly Result of 437 shows whether the month beat its plan. [L0550.005]</p></li>
+</ul>
+<p>Transaction log sheet layout, two side-by-side blocks, each with the same four columns:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Expenses: Date</th>
+<th>Amount</th>
+<th>Description</th>
+<th>Category</th>
+<th>Income: Date</th>
+<th>Amount</th>
+<th>Description</th>
+<th>Category</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Jun 2023 (stored as 45078)</td>
+<td>500</td>
+<td>Testing</td>
+<td>Facebook Ads</td>
+<td>2 Jun 2023 (stored as 45079)</td>
+<td>800</td>
+<td>Sales</td>
+<td>Shopify (- Transaction Costs)</td>
+</tr>
+<tr>
+<td>2 Jun 2023 (stored as 45079)</td>
+<td>250</td>
+<td>CJ</td>
+<td>COGS</td>
+<td>3 Jun 2023 (stored as 45080)</td>
+<td>237</td>
+<td>SP Payout</td>
+<td>Shopify (- Transaction Costs)</td>
+</tr>
+<tr>
+<td>3 Jun 2023 (entered as 03.06.0203, wrong year)</td>
+<td>100</td>
+<td>Facebook Ads</td>
+<td>(empty)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Category names in the logs must match the category names in the monthly sheet exactly so that totals pick them up. [L0550.006]</p>
+<ul>
+<li><p>Amounts entered with a currency symbol, such as "$250", are stored as text and are not counted in the totals. Enter amounts as plain numbers and keep the currency in the header or a note. [L0550.007]</p></li>
+<li><p>A date typed with a wrong year, such as 0203 instead of 2023, places the entry outside the month and breaks any date-based filtering. Check every date after entry, and make sure the cell is formatted as a date rather than text. [L0550.008]</p></li>
+<li><p>A log row without a category, like the 100 Facebook Ads entry without a category, will not appear in the category totals of the monthly sheet. Every expense and income row needs a category that matches the sheet. [L0550.009]</p></li>
+<li><p>Tracking planned against actual amounts each month, with the Start Budget carried forward as the running balance, shows whether the business is growing its cash or losing it. The Change in % line turns the monthly result into a simple growth rate on the starting budget. [L0550.010]</p></li>
+<li><p>Shopify income is recorded net of transaction costs, so transaction costs are not a separate income line. Shopify Fees are tracked as a separate expense line in the monthly sheet. [L0550.011]</p></li>
+</ul>
+<p>Daily profit tracking sheet (Google Sheets), one row per day: | Column | Content | |---|---| | Date | Day of trading | | Revenue | Total sales for the day | | Facebook ad spend | Amount spent on ads that day | | Product plus shipping cost | Cost of goods sold including delivery | | Stripe and PayPal fees | Payment processor costs | | Other expenses | App fees and additional costs | | Returns and refunds | Money returned to customers | | Net profit | Revenue minus all the costs above | | Profit % | Net profit divided by revenue | A team member can fill in the revenue, ad data and costs daily, so you can see what a given ROAS means in profit. [L0645.023]</p>
+<ul>
+<li><p>Simple finance tracking sheet for a dropshipping test, in order: 1) Enter every expense as it happens, daily if possible, otherwise at least once a week. 2) Record Facebook ad spend, fulfillment costs (with the platform name in the description) and cost of goods sold per entry. 3) Record sales not as the gross Shopify sales figure but as the payout amount from Shopify Payments or Stripe, which is already net of transaction fees. 4) Enter the planned test budget per product (for example 500) in the 'planned' field so the summary shows the difference. 5) Enter the starting budget and read the monthly profit from the summary. [L0678.001]</p></li>
+<li><p>Track the payout from Shopify Payments or Stripe, not the gross sales figure, because the payout already has transaction fees deducted. Payment provider fees are typically around 2-3% per transaction, so a 40 dollar sale might yield roughly 2-3 dollars less. [L0678.002]</p></li>
+<li><p>Use Shopify Payments if it is available in your country, as it is the default payment processor; Stripe is an alternative where Shopify Payments is not available, and in some markets Stripe has been integrated into Shopify Payments. Whether Shopify Payments or Stripe is available depends on the seller's country. [L0678.003]</p></li>
+<li><p>A personal-finance style spreadsheet can track expenses, income and profit for a store, and the same sheet can also be used for personal income and expenses. Marking unused recurring subscriptions in red as they are entered helps identify ones to cancel. [L0678.004]</p></li>
+<li><p>Overspending is visible when the daily entries exceed the planned budget for a product, so the summary shows the difference immediately. A non-red figure against the planned budget means the plan is on track, and spending should be monitored closely during product tests. [L0678.005]</p></li>
+<li><p>Monthly profit in a simple store finance sheet = net payouts received (after payment fees) + other income - Facebook ad spend - fulfillment costs - cost of goods sold - other expenses. Each part is entered as its own line so the summary can calculate it. [L0678.042]</p></li>
+<li><p>Track real profit per sale in a Google Sheets automation after each sale, using wholesale price plus other costs; the Shopify back end holds only the wholesale price as a starting point. [L0856.095]</p></li>
+</ul>
+<p>Setting up B Profit in Shopify for profit tracking:</p>
+<ol type="1">
+<li>Open the Shopify app store via the recommended apps section and install B Profit.</li>
+<li>Create an account and open the B Profit dashboard.</li>
+<li>Select the niche (for example electronics) and the sales channels, for example Facebook Ads, and connect the ad account.</li>
+<li>Add the inventory source: choose the dropshipping provider (CJ Dropshipping, AliExpress or Auto DS can be connected automatically to fetch cost prices), or select Other for manual entry.</li>
+<li>Select the fulfillment provider, or choose Other.</li>
+<li>Enter the shipping prices and product cost per item (example: cost per item $5, handling cost $0).</li>
+<li>Click Next and connect any external payment gateway such as Stripe or PayPal.</li>
+<li>Shopify plan fees are fetched automatically; click Finish and start with the free plan to see gross profit and costs on the dashboard. [L0875.022]</li>
+</ol>
+<ul>
+<li><p>B Profit is a Shopify app that automatically tracks profit, KPIs and profit margins, and shows whether the seller is at loss or profitable. Automatic cost fetching is possible for CJ Dropshipping, AliExpress and Auto DS. It can be used for free with a start plan. [L0875.023]</p></li>
+<li><p>Track profit daily at first, then switch to weekly reviews to see the average weekly profit. Weekly data smooths out daily noise and gives a steadier basis for scaling decisions. [L0875.024]</p></li>
+</ul>
+<p>Weekly profit and loss sheet layout with the sample row: | Date | Revenue | Refunds | COGS | Ads | PP Fee (Stripe + Paypal + Klarna) | Shopify 1% Fee | Profit/Loss | %PROFIT | Paypal | Monthly | Notes | |---|---|---|---|---|---|---|---|---|---|---|---| | July 22 - July 28 | 22670.38 | 0.0 | 6500.86 | 9765.33 | 846.3542 | 113.3519 | 5444.4839 | 24.01584755 | 235.3842 | (empty) | (empty) | [L0900.016]</p>
+<ul>
+<li><p>Weekly profit = Revenue − Refunds − COGS − Ads − Payment processor fees (Stripe + PayPal + Klarna) − Shopify fee. Profit % = Profit ÷ Revenue. Sample week: 22670.38 − 0 − 6500.86 − 9765.33 − 846.3542 − 113.3519 = 5444.4839 USD, which is 24.02% of revenue. [L0900.017]</p></li>
+<li><p>Refunds must be subtracted from revenue in the weekly profit calculation, not ignored. A week with zero refunds, as in the sample, overstates profit if returns are expected. Track refunds in the same period as the sales they relate to. [L0900.018]</p></li>
+<li><p>The column header says Shopify 1% Fee, but the sample value 113.35 equals 0.5% of revenue 22670.38, not 1%. Check the actual fee rate before relying on the column. A 1% fee on that revenue would be 226.70 USD. [L0900.019]</p></li>
+<li><p>A PayPal figure of 235.38 sits next to the profit column but is not part of the profit formula. Confirm whether PayPal fees are already included in the payment processor fee column to avoid counting them twice or missing them. [L0900.020]</p></li>
+<li><p>The total cost of running the business is entered as 400 USD, but the listed monthly expenses add up to 606 USD (605 without the designer value of 1). The daily cost is derived from the entered total, so the expense list and the total must be kept in sync. [L0900.021]</p></li>
+<li><p>Currency Conversion (if ad account is not USD): enter in the field '1 USD equals (in your currency)' the amount of your currency that equals one US dollar. The default value is 1.0 when the account runs in USD. [L0900.022]</p></li>
+<li><p>In the sample week of July 22 to July 28, revenue was 22670.38 USD, with COGS of 6500.86 USD and ad spend of 9765.33 USD. Payment fees were 846.35 USD and the Shopify fee was 113.35 USD, leaving a profit of 5444.48 USD, or 24.02% of revenue. [L0900.024]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/15-influencer-affiliate-organic-and-content-measurement/"><span class="k">&larr; Previous</span><span class="v">Influencer, affiliate, organic and content measurement</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/17-bookkeeping-p-l-balance-sheet-and-cash-flow/"><span class="k">Next &rarr;</span><span class="v">Bookkeeping, P&amp;L, balance sheet and cash flow</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

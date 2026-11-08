@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bidding: cost cap, bid cap and automated rules | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.10: Bidding: cost cap, bid cap and automated rules.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/10-bidding-cost-cap-bid-cap-and-automated-rules/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Bidding: cost cap, bid cap and automated rules | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.10: Bidding: cost cap, bid cap and automated rules."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/10-bidding-cost-cap-bid-cap-and-automated-rules/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/10-bidding-cost-cap-bid-cap-and-automated-rules/">Plain version</a></div><h1>9.10 Bidding: cost cap, bid cap and automated rules</h1><article><h2 id="manual-and-automatic-bidding-the-options">Manual and Automatic Bidding: The Options</h2>
+<h3 id="campaign-bid-strategies-in-ads-manager">Campaign Bid Strategies in Ads Manager</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ads Manager name</th>
+<th>Type</th>
+<th>What it does</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Highest volume or value</td>
+<td>Automatic, default</td>
+<td>Meta gets the most results or purchase value for the budget</td>
+<td>Standard setup, beginners</td>
+</tr>
+<tr>
+<td>Cost per result goal (cost cap)</td>
+<td>Manual</td>
+<td>Aims for an average cost per result while maximizing volume</td>
+<td>Control over cost per purchase</td>
+</tr>
+<tr>
+<td>ROAS goal</td>
+<td>Manual</td>
+<td>Aims for a set return on ad spend (example: 2.5) while maximizing value</td>
+<td>Control over return</td>
+</tr>
+<tr>
+<td>Bid cap</td>
+<td>Manual</td>
+<td>Sets the highest bid Meta may pay in any auction</td>
+<td>Hard maximum per result</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0977.003]</p>
+<ul>
+<li>If the bid strategy is never changed, Meta uses Highest volume or value by default, which is the automatic strategy. All standard campaigns run this way unless the bid strategy is edited. [L0977.004]</li>
+<li>A ROAS goal asks Meta to reach a set return on ad spend, for example 2.5, while maximizing the total value of results such as average order value. Unlike a cost cap, which sets a target cost per purchase, this option sets the target by return on spend. [L0977.030]</li>
+<li>The Cost per result goal field only becomes editable when the campaign bid strategy is cost per result goal. With Highest volume it shows none and cannot be changed. [L0865.019]</li>
+</ul>
+<h2 id="automatic-bidding-as-the-default">Automatic Bidding as the Default</h2>
+<ul>
+<li>Automatic bidding typically outperforms bid capping. Lifetime budget is worth testing. Focus on making creative and copy very relevant to your audience, then let Facebook's algorithm find your audience. [L0067.023]</li>
+<li>For a product test, set the campaign bid strategy to highest volume when creating the CBO sales campaign. [L1193.012]</li>
+<li>Automatic bidding is still the recommended default, so manual bidding should be tested on your own account first. [L0977.009]</li>
+<li>Beginners should start with automatic bidding because it usually performs well. [L0977.008]</li>
+</ul>
+<h2 id="when-manual-bidding-makes-sense">When Manual Bidding Makes Sense</h2>
+<ul>
+<li>Manual bidding is meant for advanced ad accounts that spend roughly $10,000 to $20,000 or more on a single account. Higher spend (up to about $100,000) gives Meta more purchase data. Below that level, use the scaling and testing approach with automatic bidding instead. [L0977.001]</li>
+<li>Use manual bidding when you want control over the cost of each result, or when you need to spend a large amount in a short time, for example $10,000 in one day for an offer, with a stop-loss in place. [L0977.008]</li>
+<li>Cost cap is the most successful manual setup. Bid cap and ROAS goal campaigns are built in almost the same way. [L0977.009]</li>
+<li>The bid cap approach did not outperform automatic bidding in the lesson's experience. Cap the bid, raise it slowly until you find a sweet spot, but default to automatic bidding with relevant creative and copy and let Facebook find the audience. [L0640.034]</li>
+</ul>
+<h2 id="cost-cap-and-bid-cap-explained">Cost Cap and Bid Cap Explained</h2>
+<ul>
+<li>A cost cap (Cost per result goal) targets an average cost per result, not a limit on each individual result. Example: with a $20 cost cap, some purchases may cost $22 and others $19 as long as the average stays near $20. [L0977.005]</li>
+<li>A cost cap lets some purchases run above the target, for example $26 or $27, as long as the average is around the cap. [L0977.007]</li>
+<li>A bid cap is a maximum bid per auction. With a $25 bid cap, Meta cannot pay more than $25 for any single purchase. Every result is held under that limit, which is stricter than a cost cap average. [L0977.006]</li>
+<li>With a $25 bid cap, all purchases should land under $25. [L0977.007]</li>
+<li>Do not assume a cost cap guarantees that every purchase costs less than the cap, because Meta only aims for the average. If you need a hard per-purchase maximum, use a bid cap instead. [L0977.026]</li>
+<li>The same method used for cost cap (test a set of caps, apply automated rules, narrow the sweet spot) works for bid cap, with the same campaign structure. [L0977.025]</li>
+<li>The max CPC from the calculator applies to any cost-per-click campaign, on Google or Facebook. Use the same break-even and target values for both. (Older advice, Source B 2021-22.) [L0686.014]</li>
+</ul>
+<h2 id="setting-the-baseline-cost-per-purchase">Setting the Baseline Cost per Purchase</h2>
+<p>Determine the baseline cost per purchase before building a cost cap campaign:</p>
+<ol type="1">
+<li>Open a campaign or ad set that is profitable and has spent more than $1,000.</li>
+<li>Read its cost per purchase (cost per conversion) in Ads Manager.</li>
+<li>Round it to a working number, for example $50.79 becomes $51. This is the ideal cost per purchase.</li>
+<li>Optionally use the account-wide average cost per purchase if the whole account is profitable.</li>
+<li>Set this value as the first cost cap to test, then test a lower value (for example $49) to look for a better sweet spot.</li>
+</ol>
+<p>[L0977.010]</p>
+<ul>
+<li>Example: a campaign with about $45,000 in spend and profitable ROAS showed a cost per purchase of $50.79. It was rounded to $51 as the reference cost cap. The next test was a lower cap of $49 to check whether Meta still delivers profitable results. [L0977.011]</li>
+<li>The cost cap should always be set below the break-even cost per purchase. A cap above break-even makes the campaign unprofitable even with many sales. Example: a $70 cap when break-even is $60 gives an average purchase cost of $70. [L0977.012]</li>
+</ul>
+<h2 id="building-the-cost-cap-test-campaign">Building the Cost Cap Test Campaign</h2>
+<p>Build the cost cap test campaign in Ads Manager:</p>
+<ol type="1">
+<li>Click Create and select the Sales objective (buying type as usual).</li>
+<li>Turn on Advantage campaign budget.</li>
+<li>In Campaign bid strategy, click Edit and select Cost per result goal.</li>
+<li>Set a high campaign budget, starting at $1,000 to $2,000.</li>
+<li>Go to the ad set level and scroll down to the Cost per result goal field, then enter the first cost cap, 51.</li>
+<li>Select the times (ad scheduling) if needed.</li>
+<li>In targeting, create one ad set with a broad audience and duplicate it to create one ad set with a stacked winning interest audience. Keep countries, age and other settings the same.</li>
+<li>Duplicate each of these two ad sets four more times and change the cost cap for each pair: 51, 49, 47, 45, 43. Each cost cap value is used by one broad and one stacked interest ad set.</li>
+<li>Result: one high-budget CBO campaign with 10 ad sets.</li>
+<li>Add the automated rules described below to all 10 ad sets.</li>
+</ol>
+<p>[L0977.013]</p>
+<ul>
+<li>The structure is one CBO campaign with 10 ad sets. Each cost cap value (51, 49, 47, 45, 43) is shared by two ad sets, one broad and one stacked winning interest. The cap is reduced by $2 for each step down. [L0977.014]</li>
+<li>Use a higher campaign budget, starting at $1,000 to $2,000. A higher budget gets more auction priority and spends more. A very low budget such as $100 to $200 often does not spend at all, because the campaign loses auctions. [L0977.015]</li>
+<li>Mapping conflict: this build puts the cost cap on a CBO campaign [L0977.013, L0977.014]. Source D 2026 maps the bid strategies the other way round: CBO goes with bid cap, and ABO goes with cost cap [L1019.014]. Use the CBO-cost-cap build above when following the Source C test, and the Source D mapping when your structure is ABO or you are testing bid cap on CBO. [L0977.013, L0977.014, L1019.014]</li>
+</ul>
+<h2 id="automated-rules-for-cost-cap-campaigns">Automated Rules for Cost Cap Campaigns</h2>
+<h3 id="creating-the-rules">Creating the Rules</h3>
+<p>Create the automated rules for the cost cap campaign:</p>
+<ol type="1">
+<li>Select all ad sets inside the cost cap campaign.</li>
+<li>Click Rules, then Create a new rule, then Custom rule.</li>
+<li>Enter the rule name (Safeguard rule, Hard stop, Trim the fat or Revival).</li>
+<li>Enter the conditions and set the action to turn off the ad set (or turn it on for the revival rule), as described in the individual rules.</li>
+<li>Set the time range to from today and continuously.</li>
+<li>Save the rule and repeat for each of the four rules.</li>
+</ol>
+<p>[L0977.016]</p>
+<h3 id="safeguard-rule">Safeguard Rule</h3>
+<ul>
+<li>Rule: turn off an ad set when spend is greater than 3x the cost per add to cart, add to cart (Meta pixel) is less than 1, and website purchase is less than 1. Example: with a $10 cost per add to cart, the threshold is $30. [L0977.017]</li>
+<li>Purchase is added to the Safeguard rule because Meta sometimes fails to track add to cart while still tracking purchases. An ad set with zero add to carts but at least one purchase should not be turned off. [L0977.018]</li>
+<li>Purpose: the rule targets ad sets that produce no add to carts at all, which signals a delivery or relevance problem rather than a sales problem. Because it checks early engagement, it can remove weak ad sets before they reach the larger spend thresholds of the later rules. [L0977.029]</li>
+</ul>
+<h3 id="hard-stop-rule">Hard Stop Rule</h3>
+<ul>
+<li>Rule: turn off an ad set when spend is greater than 2x the cost per purchase and purchase (Meta pixel) is less than 1. Example: with a $25 cost per purchase, the threshold is $50. [L0977.019]</li>
+<li>Base the cost per purchase used for the hard stop and trim the fat rules on the average cost per purchase of the last week, not on your best days. Use a profitable average as the normal cost per purchase. [L0977.020]</li>
+</ul>
+<h3 id="trim-the-fat-rule">Trim the Fat Rule</h3>
+<ul>
+<li>Rule: turn off an ad set when spend is greater than 3x the cost per purchase, purchases are greater than 0, and website purchase ROAS is less than 2.0. Example: with a $25 cost per purchase, the spend threshold is $75. [L0977.021]</li>
+<li>Purpose: an ad set can earn one or two early purchases, which keeps it out of the hard stop rule, and then keep spending at poor returns. Turning off ad sets that have spent about three times the cost per purchase with ROAS below 2.0 stops this drain before it uses up a large campaign budget. [L0977.028]</li>
+</ul>
+<h3 id="revival-rule">Revival Rule</h3>
+<ul>
+<li>Rule: turn an ad set back on when its ROAS is greater than 2.0 and its spend is greater than $10. This restores ad sets that were turned off earlier but later received purchases because Meta attributed them late, sometimes after half a day. [L0977.022]</li>
+</ul>
+<h3 id="conflicting-figures-in-the-15x-breakeven-rule">Conflicting Figures in the 1.5x Breakeven Rule</h3>
+<ul>
+<li>Rule: set an automatic rule that turns off any CBO which spends 1.5 times the breakeven cost per purchase with zero sales. [L0693.037]</li>
+<li>Formula check: with a 60 USD breakeven, 1.5x gives 90 USD. The spoken example uses a 45 USD threshold, which does not match the formula. Verify the number before setting the rule. [L0693.037]</li>
+</ul>
+<h3 id="spend-limits-by-product-price">Spend Limits by Product Price</h3>
+<ul>
+<li>An automated rule can turn off an ad set when it has spent $10 and its CTR is below 1.5%. [L0642.013]</li>
+<li>For a higher ticket item, use a higher spend limit, for example $20 to $30, especially if CTR is above 1.5%. [L0642.013]</li>
+</ul>
+<h3 id="morning-ad-sets">Morning Ad Sets</h3>
+<ul>
+<li>If a morning ad set is losing money and the losses do not recover by the end of the day, shut it down or cut its budget by half. [L1127.025]</li>
+<li>If the ad set usually recovers by evening and makes money, let it run. [L1127.025]</li>
+</ul>
+<h2 id="finding-the-sweet-spot">Finding the Sweet Spot</h2>
+<ol type="1">
+<li>Check which caps are profitable in the campaign. Example: 51, 49 and 47 are profitable, 45 and 43 are not. [L0977.023]</li>
+<li>Launch a new test campaign with caps only between the last profitable and first unprofitable value, for example 47, 46.5, 46 and 45.5. [L0977.023]</li>
+<li>Repeat the narrowing until a profitable range of 0.5 to $1 is found. [L0977.023]</li>
+<li>Use the lowest profitable cap in that range as the best cost cap for the account or product. [L0977.023]</li>
+</ol>
+<h2 id="automated-rule-testing-for-interest-audiences">Automated Rule Testing for Interest Audiences</h2>
+<ol type="1">
+<li>Launch a batch of new interest audiences at once.</li>
+<li>Let each audience run for two to three days.</li>
+<li>An automated rule switches off any audience that does not meet the set criteria.</li>
+<li>Keep running the audiences that meet the criteria.</li>
+</ol>
+<p>[L0549.044]</p>
+<h2 id="estimated-bid-ranges-before-launch">Estimated Bid Ranges Before Launch</h2>
+<ul>
+<li>Facebook shows an estimated bid range for an audience, with an average, a maximum and a minimum price per click. [L0643.062]</li>
+<li>In the example, the average was 50 cents, the maximum about 65 cents and the minimum about 20 cents. The range helps you choose a starting bid before you launch. [L0643.062]</li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/09-campaign-structure-cbo-abo-objectives-and-budget-setup/"><span class="k">&larr; Previous</span><span class="v">Campaign structure: CBO, ABO, objectives and budget setup</span></a><a class="nx" href="../../09-meta-and-facebook-ads/11-audience-strategy-interests-broad-targeting-countries-and-de/"><span class="k">Next &rarr;</span><span class="v">Audience strategy: interests, broad targeting, countries and demographics</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

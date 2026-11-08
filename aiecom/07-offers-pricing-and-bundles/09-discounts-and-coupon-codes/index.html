@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Discounts and coupon codes | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 7.9: Discounts and coupon codes.">
+<link rel="canonical" href="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/09-discounts-and-coupon-codes/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Discounts and coupon codes | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 7.9: Discounts and coupon codes."><meta property="og:url" content="https://dlichters.com/aiecom/07-offers-pricing-and-bundles/09-discounts-and-coupon-codes/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">7. Offers, pricing and bundles</a> &rsaquo; <a href="../../../ecom/07-offers-pricing-and-bundles/09-discounts-and-coupon-codes/">Plain version</a></div><h1>7.9 Discounts and coupon codes</h1><article><h2 id="discount-types">Discount types</h2>
+<ul>
+<li>Percentage off is the default offer type for most stores. [L1404.016]</li>
+<li>Percentage and dollar-off are close to equivalent in effect; the Source E test found little difference. A common rule of thumb is dollar-off when the discount is over $100 and percentage-off below that, and mixing both is acceptable. [L1404.014]</li>
+<li>Percentage is the usual choice in Shopify. A code such as save 10 would be set to 10%. [L1322.005]</li>
+<li>Fixed-dollar discounts are easier for shoppers to picture than percentages. Use a dollar amount for pop-up and email codes where possible, and compare it against a percentage offer if conversion stalls. [L0476.004]</li>
+<li>Dollar-off offers such as "Save $20," "Save $30 on first orders," or "Save up to $80 sitewide" work best for higher-AOV products or when bundling multiple items. [L0232.003]</li>
+<li>Discount scopes to choose from:
+<ul>
+<li>Site-wide: one percentage on all products. [L1404.015]</li>
+<li>Specific SKUs: a set percentage or dollar amount on selected products. [L1404.015]</li>
+<li>Tiered: for example, spend $100, then get 20% off the amount after that. [L1404.015]</li>
+</ul></li>
+<li>Spend-threshold discount: spend 1,000 USD and save 100 USD on any order over 1,000 USD. This is simpler to understand than a percentage discount with a dollar cap. [L1090.081]</li>
+<li>Spend-and-save example for a homebrew equipment store in January: during the first week, orders over $500 save $50, and orders over $1,000 save $75. Spend thresholds can be varied freely to match the store's average order size. [L1205.006]</li>
+<li>Tiered discounts, such as 5% on orders of $250 or more and 10% on orders of $500 or more, are built by creating separate Shopify discount codes and setting a minimum order amount on each. <em>Older (2021).</em> [L0671.054, L0671.193]</li>
+<li>Tiered spend discount used for Black Friday promotions <em>(older, 2021)</em>:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Order spend</th>
+<th>Discount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400 dollars or more</td>
+<td>15% off</td>
+</tr>
+<tr>
+<td>800 dollars or more</td>
+<td>20% off</td>
+</tr>
+<tr>
+<td>1,200 dollars or more</td>
+<td>25% off</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0801.051]</p>
+<ul>
+<li>Low-value tiered coupons reward larger orders, for example $10 off at $500 spend and $20 off at $1,000 spend. Choose tier values based on what competitors offer in your niche. [L1357.008]</li>
+<li>Use a discount code rather than an automatic discount when the offer should be targeted. A code requires the shopper to enter it at checkout, while an automatic discount applies to every cart. [L1322.003]</li>
+<li>An automatic site-wide discount of 10% was active on the example product page. Compare an automatic discount against a coupon code with a deadline when setting up your own offer. [L0655.017]</li>
+<li>A monetary percentage promotion is a fixed percent off (for example 5% or 10%) for a set time, applied when the customer enters a coupon code. It can be shown store-wide, but it should be sent specifically to the audience that has engaged but not bought. [L1205.005]</li>
+<li>Time-limited discount codes create urgency. They can be offered as a reward for joining the email list, shown in an exit-intent popup when a visitor is about to leave, or displayed with a countdown timer for new customers. [L1400.005]</li>
+<li>Limited-time discount or coupon codes use urgency to push buyers to purchase sooner. They can be given to new email subscribers or shown in an exit-intent popup as the visitor is about to leave. [L1399.007]</li>
+</ul>
+<h2 id="discount-sizes">Discount sizes</h2>
+<ul>
+<li>Starting point for testing: a 5% order discount. You can create as many discount codes with different values as you need. [L1192.007]</li>
+<li>Coupon codes: offer 5-10%. 10% is competitive because most competitors either do not promote discounts or offer less than 10%. [L0137.002]</li>
+<li>Expiring coupon percentages: the typical levels used are 5%, 7% or 10% off, and this depends on the store. [L0531.005]</li>
+<li>Competitor first-order discount: about 10% in exchange for an email signup. <em>Competitor example, not dated.</em> [L0600.020]</li>
+<li>Welcome kit for newsletter sign-ups: usually 5-10%, which customers see as the usual reward. [L0605.029]</li>
+<li>Typical sign-up incentives are a 5% or 10% discount, or a fixed $5 discount. A 10% first-order discount is the standard used in this setup. [L0607.007]</li>
+<li>Volume offers: typically 20 to 50 percent. Discounts of 10 percent or 5 percent are seen as weak by the audience. [L1259.029]</li>
+<li>Bundles: 15% is a reasonable starting point, but it must fit the margin. [L1259.033]</li>
+<li>Ceiling for strong offers: a maximum discount of 70 percent off, with 50 percent off as the usual standard. [L1436.042, L1382.017]</li>
+<li>Launch discount: 50% off to generate rapid sales. [L0227.027]</li>
+</ul>
+<h2 id="sizing-discounts-to-margin">Sizing discounts to margin</h2>
+<ul>
+<li>Calculate margin after coupons, not before them. If net margin after discounts is only 12 to 15 percent, the current discount structure should be changed. [L1097.027]</li>
+<li>Only offer discounts on your site if you can afford them. [L0966.053]</li>
+<li>Before offering a first-order discount such as 5% or 10% off, check on the pricing sheet that gross profit stays positive at that discount. A small percentage can turn a product with thin margin into a loss. <em>Older (2021-22).</em> [L1148.026]</li>
+<li>Effect of discounts on Product A (list price $1,000, supplier cost $600, supplier shipping $150, free customer shipping; gross figures before processor and insurance fees):</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Discount on list price</th>
+<th>Price charged</th>
+<th>Gross profit</th>
+<th>Gross margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0%</td>
+<td>$1,000</td>
+<td>$250</td>
+<td>25.00%</td>
+</tr>
+<tr>
+<td>5%</td>
+<td>$950</td>
+<td>$200</td>
+<td>21.05%</td>
+</tr>
+<tr>
+<td>10%</td>
+<td>$900</td>
+<td>$150</td>
+<td>16.67%</td>
+</tr>
+<tr>
+<td>15%</td>
+<td>$850</td>
+<td>$100</td>
+<td>11.76%</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Older (2021-22).</em> [L1148.018]</p>
+<ul>
+<li>A 5% discount on a product with $1,000 net profit (for example, a $50 discount) remains profitable and is worth offering if it increases conversion rate. [L0253.011]</li>
+<li>A coupon such as 100 USD off orders over 1,000 USD can be offset by raising prices slightly, but if competitors undercut you, a smaller incentive such as 50 USD off orders over 1,000 USD is the safer option. [L0966.052]</li>
+<li>When margins are too thin, a sitewide discount of 10 percent off all orders can be lowered to 5 percent off all orders. This keeps a discount on the site while protecting margin on each order. [L1097.028]</li>
+<li>Replace a percentage-off code with a minimum-spend code, such as $50 off orders over $1,000, or $100 off orders over $2,000 for higher-priced stores. Create the rule in Shopify's discount codes so it applies automatically. This raises average order value while giving less discount per order. [L1097.029]</li>
+<li>Set eligibility by profit, not by a blanket rule. Example: 20 percent off orders over 250 dollars requires any starter kit, while free expedited shipping requires a premium kit. [L1204.041]</li>
+<li>Bundle headline math: a bundle is advertised as access to its listed tools at one tenth of their list price, and its title frames this as 95% off. If the extra 10% code applies to the bundle price, the total discount is about 91% off list, not 95%. Compare the final checkout total with the list prices of the tools you would actually buy, not with the headline percentage. [L1387.013]</li>
+<li>Discounts go straight to lost profit. Limit discounts or stop offering them entirely. Some stores have kept sales volume while refusing negotiated discounts, so the effect on orders can be tested. <em>Older (2021-22).</em> [L1046.039]</li>
+<li>Do not hand out irresistible deals without a reason. Offering a discount too early gives away margin to people who would have bought anyway, and it can also weaken the urgency of future deals. <em>Older (2021-22).</em> [L0799.020]</li>
+<li>Do not run a standing discount on product pages as a permanent sales tactic, especially when margins are thin. A permanent 5% discount erodes margin without making the offer more convincing. <em>Older (2021-22).</em> [L0409.028]</li>
+<li>Promotions such as discount codes or sitewide sales should be created with a set start and end date and tested against margin before launch, so that they do not erode profit unintentionally. [L0430.012]</li>
+<li>Price the store at MAP and apply all discounts off MAP, which is the compare-at price. Never raise the price first and then discount it. <em>Older (2021).</em> [L1090.076]</li>
+<li>Average order value in the examples ranged from about $300 to about $1,000, and a minimum of about $200 was recommended as a starting threshold. <em>Older (2020).</em> [L1111.091]</li>
+<li>Minimum order values can be set so a code only applies above a threshold, for example 2000 dollars, which means 10% off orders above 2000 dollars. [L1322.006]</li>
+</ul>
+<h2 id="shopify-setup">Shopify setup</h2>
+<ul>
+<li><p>Create the discount code in the Shopify admin before it is shown on any product page, because it has to work at checkout for shoppers who enter it in the cart. [L1192.004]</p></li>
+<li><p>Create any discount code in Shopify's discount section before you show it in the announcement bar or an exit-intent overlay. A code that does not exist in Shopify will not apply at checkout. <em>Older (2020).</em> [L1088.092]</p></li>
+<li><p>Procedure for a 5% order discount:</p>
+<ol type="1">
+<li>Log in to the Shopify admin.</li>
+<li>Click Discounts in the left navigation.</li>
+<li>Click Create discount at the top.</li>
+<li>Select the discount type Amount off order (a discount on the total order amount).</li>
+<li>Name the code in the format save plus the number, for a 5% code the name is save five.</li>
+<li>Set the discount value to Percentage and enter 5%.</li>
+<li>Under customer eligibility leave the setting on All customers.</li>
+<li>Leave the minimum purchase at none and the usage limit unlimited.</li>
+<li>Leave the start date at the default, which is the day the code is created.</li>
+<li>Leave the end date empty unless the code is for a timed promotion such as Black Friday or Cyber Monday.</li>
+<li>Click Save and confirm the code shows as active in the Discounts list.</li>
+</ol>
+<p>[L1192.005]</p></li>
+<li><p>When a shopper enters the code in the cart at checkout, the percentage is deducted from the entire order total. [L1192.008]</p></li>
+<li><p>Customer eligibility can be limited to specific customer segments, such as a segment of past buyers, which allows a code for returning customers only. Specific customers can also be selected by their email address. [L1322.007]</p></li>
+<li><p>The combination option for other promotions controls whether several discounts can stack on one order. Keep it turned off unless stacking is intended, because the default start date is the current date and time. [L1322.009]</p></li>
+<li><p>The start date defaults to the date and time when the discount is created, so leaving it unchanged makes the code active immediately. An end date can be added to limit the code to a set window. [L1322.010]</p></li>
+<li><p>Set an end date for limited promotions such as Black Friday, Cyber Monday, or 4th of July, after which the code stops working. Without an end date, a time-limited promotion stays valid indefinitely. [L1322.011]</p></li>
+<li><p>Regular Shopify plans do not automatically end a sale price. Set the discount code to stop working at the sale's end time, for example midnight on the last day, or use an app. <em>2025.</em> [L0857.026]</p></li>
+<li><p>When creating a discount code in Shopify, choose the collections it is eligible for. Leave out collections containing products the discount may not apply to, such as products from vendors whose MAP policy forbids discounts. [L0837.033]</p></li>
+</ul>
+<h2 id="code-naming">Code naming</h2>
+<ul>
+<li>Discount code names should reflect their value using the format save plus the number written out, so a 5% code is named <code>save five</code>. [L1192.006]</li>
+<li>Give every discount a named reason, such as a seasonal event or a Black Friday offer, so it looks realistic. A fixed-amount discount can also be named, for example as an $11 discount. [L1194.038]</li>
+<li>Name a discount code with a short word tied to the product or brand plus the percentage, so the shopper sees the saving in the code itself. The code in use was a 15% code with that format, and it was linked so the discount applies at checkout. [L0567.048]</li>
+<li>Code names used in the examples: <code>WELCOME10</code> for a 10% welcome code [L0607.010], <code>SAVE5</code> for a $5 pop-up code [L0634.005], <code>save five</code> for a $5 Klaviyo pop-up code [L1297.017], and <code>PARTNER5OFF</code> for an affiliate partner code [L0226.037].</li>
+</ul>
+<h2 id="limits-and-eligibility">Limits and eligibility</h2>
+<ul>
+<li><p>Limit sign-up coupon codes to one use per customer. Without this limit, a reusable code can be spread widely and erode your margin. [L0476.008]</p></li>
+<li><p>Discount codes that SMS apps generate automatically may be reusable by any customer by default, unlike the one-use-per-customer limit set in Shopify. Before launching an SMS discount flow, check the usage limit of each generated code so the offer does not spread beyond its intended audience and cost the store margin. [L0476.043]</p></li>
+<li><p>Maximum discount uses can be set to 5 uses in total, 10 uses in total, or once per customer. A code limited to one use in total can be redeemed by only one person. [L1322.008]</p></li>
+<li><p>Exclude customers who made recent purchases from discount promotions, specifically the most recent purchasers, to reduce complaints and buyer's remorse. [L0238.004]</p></li>
+<li><p>If the buyer's email address is not known, a personal code can be limited by a short end date instead of by naming the customer. Adding a single total use means only one person can redeem it. The short window also creates urgency for the buyer. [L1322.019]</p></li>
+<li><p>During peak sales, a discount code input can serve different customer segments with different codes, for example one code per customer tier. Each code entered in the cart shows its effect on the subtotal before checkout. [L1231.062]</p></li>
+<li><p>Keep a list of coupon codes the assistant may offer on its own, so standard discounts never need approval. Anything outside that list still requires the owner's approval. [L1000.057]</p></li>
+<li><p>Sample coupons: mark them for products that children could misuse as adults only, since children rarely mail coupons in. Pair this with a one-sample-per-household rule. [L1261.143]</p></li>
+<li><p>Do not announce coupon redemption dates in advance, because advance knowledge lets resellers buy up newspapers. Run such coupons in Sunday editions, which are harder to buy in bulk. [L1261.144]</p></li>
+<li><p>Military or first responder discount with low volume:</p>
+<ol type="1">
+<li>Create a content page explaining the discount policy.</li>
+<li>Ask customers to email proof of service.</li>
+<li>Send a discount code after the proof is checked.</li>
+</ol>
+<p>No app is needed at this volume. <em>Older (2022).</em> [L1281.041]</p></li>
+</ul>
+<h2 id="expiry-rules">Expiry rules</h2>
+<ul>
+<li>Coupon codes should include expiration dates to create urgency and motivate immediate purchase decisions. [L0040.012]</li>
+<li>A short validity window, such as 24 hours, creates urgency because the buyer must order before the code expires. Pairing the window with a personal code makes the offer feel specific to that buyer. [L1322.016]</li>
+<li>An end date is a fixed point in time. When a buyer is told when a code expires, state the date, the clock time and the time zone, for example midnight Eastern time. Saying only a relative word such as tomorrow leaves the deadline unclear. [L1322.020]</li>
+<li>Use one discount code with a fixed percentage that expires at a clear time on the same day, and link the button so the discount applies automatically at checkout. The offer in use was 15% off with a code that expires at midnight. [L0567.027]</li>
+<li>Strict expiry is not required on every offer. Coupons that look permanent lose their urgency, but a discount that is always "on sale" still works for buyers who use it now. [L1293.016]</li>
+<li>Example: a 15% code for first-time buyers that expires in 24 hours, shown in an exit popup. [L1400.005]</li>
+<li>Recurring expiring coupon codes, for example 5% or 10% off, rarely lead customers to see the discount as permanent. Returning customers are happy to use the code and save money. <em>Older (2019).</em> [L0960.038]</li>
+<li>Upfront expiring coupons and a bonus gift can be used to compete with a supplier's own website when you can match its pricing. <em>Older (2020).</em> [L0664.058]</li>
+</ul>
+<h2 id="expiring-code-cycles">Expiring-code cycles</h2>
+<ul>
+<li>Expire the promoted coupon code twice a week, typically at midnight on Wednesday and Sunday, and show a new code and offer for the next cycle. These specific days convert best; the source sets the times at midnight EST. [L0137.003, L0531.004]</li>
+<li>Update the code and the expiry text in the bar together each time. [L0531.004]</li>
+<li>In each expiring-code cycle the coupon code changes every time, but the discount percentage is only changed occasionally. A store that keeps the same percentage still has to refresh the code and the bar text on schedule. [L0531.021]</li>
+<li>Standard promotion: 10% off with an expiring coupon code, where the offer itself stays evergreen and only the coupon code and expiry date change. When one promotion ends, the next one starts with the same offer and a new code. <em>Older (2018).</em> [L1085.061]</li>
+<li>Expiring coupon promotions can run as a banner at the top of the store that ends on fixed weekdays, for example every Wednesday and Sunday. When one promotion ends, the next one starts right away with the same offer and a new coupon code, so the banner never goes empty. <em>Older (2018).</em> [L1085.100]</li>
+<li>Alternative rhythm: change coupons on a regular rhythm, such as every Tuesday and Thursday or every Saturday, and let them expire at least once a week. Do not make them expire every single day. [L1293.015]</li>
+<li>Expiring coupon block: it shows a coupon text such as 10% off and free shipping, followed by a coupon code field. The coupon code must already exist in Shopify before you enter it in the block, or it will not work for visitors. [L0976.019]</li>
+<li>Expiring coupon block settings: you can change the word before the date (default ends), set the number of days until the offer expires, and change the date format. The default date format can be switched to day-month-year for stores outside the US. [L0976.020]</li>
+<li>Dynamic Day Cart Coupon block: it requires a discount code that must be created in Shopify before it is configured. The block then takes three inputs: the discount code, the percentage off, and a custom text that describes the day-based deadline. [L1450.014]</li>
+<li>The block uses a day slot in its custom text, so the merchant writes the surrounding wording and the offer deadline day is shown dynamically in the cart. The merchant does not need to type a fixed weekday into the text each time. [L1450.020]</li>
+<li>A dynamic day coupon is not needed on a store without traffic. Hide or delete it at launch and add it once there is traffic, so its effect on conversion rates can be compared. [L1450.016]</li>
+<li>Meta ads: a promo code highlighted in the Meta ad setup appears to shoppers in the store and is applied automatically at checkout. Only use a code that will remain active permanently, such as an evergreen Shopify code, because an expired code breaks the running ads. [L1029.035]</li>
+</ul>
+<h2 id="coupon-pages-and-promotion-copy">Coupon pages and promotion copy</h2>
+<ul>
+<li><p>Create a coupon page on your store that lists current expiring coupons. Shoppers who are still comparing often search for these pages, so it can catch people who need one last push to buy. [L0920.010]</p></li>
+<li><p>Build a coupon page that lists your codes with a sense of urgency. The codes do not have to expire in reality; the page only needs to make the deal feel time-limited. Customers find it by searching your store name plus the word coupon, so an internal link is optional, and you can add a countdown timer. [L1357.010]</p></li>
+<li><p>Where the page states a specific end time to the buyer, the code must actually stop at that time. [L1322.020, L0857.026]</p></li>
+<li><p>Coupon pages can carry several offers, including product-specific codes. Savvy shoppers who search for coupons do not want to miss a deal, so an expiring offer is the final push to convert them. Test different versions to see which one works in your niche. [L1357.011]</p></li>
+<li><p>Coupon page copy pairs a light, friendly welcome with a deadline line. The welcome makes the visitor feel they found something exclusive, and the countdown line creates urgency to buy now.</p>
+<ul>
+<li><em>Example A:</em> You found our hidden savings page, so take 15 percent off before this code closes in 3 days.</li>
+<li><em>Example B:</em> Welcome to our insider deals list, and this bundle discount ends in 48 hours.</li>
+</ul>
+<p>[L1357.012]</p></li>
+<li><p>Discovery check: find discounts to use in this order:</p>
+<ol type="1">
+<li>Review the discounts your top competitors run.</li>
+<li>Use low-value, tiered coupons rather than deep one-off discounts.</li>
+</ol>
+<p>[L0920.008]</p></li>
+</ul>
+<h2 id="welcome-and-first-order-discounts">Welcome and first-order discounts</h2>
+<ul>
+<li><p>Competitor stores offer a first-order discount of about 10 percent in exchange for an email signup. Use a signup popup or banner with this offer to build an email list at the same time. [L0600.020]</p></li>
+<li><p>The welcome kit discount for newsletter sign-ups is usually 5-10%, which customers see as the usual reward. Offer a collection link right after the coupon code. [L0605.029]</p></li>
+<li><p>Customer VIP sign-up discount example: 30% off an $80 product for customers who sign up for the launch list before it goes live. [L0605.034]</p></li>
+<li><p>Create the matching welcome discount in Shopify before building the sign-up form:</p>
+<ol type="1">
+<li>In the Shopify store, open Discounts and click Create discount.</li>
+<li>Select Amount off order.</li>
+<li>Enter the discount code, for example WELCOME10.</li>
+<li>Set the value to 10 percent off.</li>
+<li>Set minimum requirements to no minimum.</li>
+<li>Limit the code to one use per customer.</li>
+<li>Click Save.</li>
+<li>Before creating a new code, check whether a suitable code already exists and reuse it.</li>
+</ol>
+<p>[L0607.010]</p></li>
+<li><p>Welcome series coupon: select a static coupon, enter the existing code (for example WELCOME10) and set it to 10 percent off. [L0607.020]</p></li>
+<li><p>Formula for a first-order offer: [discount amount] + [which order it applies to] + [time limit]. Naming all three makes the discount concrete and creates a deadline without vague promises. <em>Older (2021-22).</em> [L0571.035]</p>
+<ul>
+<li>Example 1: <em>Take 10% off your first order, valid for the next 48 hours after you join the list.</em></li>
+<li>Example 2: <em>Get 15% off your first order, valid for 36 hours after you subscribe.</em></li>
+</ul></li>
+<li><p>Do not offer a discount in the first two to three abandoned cart emails. Upfront discounts train customers to abandon carts and wait for rewards. Introduce the discount offer only after multiple high-value touchpoints (desire, pain, risk mitigation emails). [L0261.007]</p></li>
+<li><p>Use a two-tier welcome offer: email subscribers get 10% off sitewide, and SMS subscribers get an upgraded 15% code as a VIP reward. The higher tier for SMS rewards the channel that also needs consent. [L1470.007]</p></li>
+</ul>
+<h2 id="pop-up-sms-and-email-codes">Pop-up, SMS and email codes</h2>
+<ul>
+<li><p>Klaviyo pop-up code, created in Shopify:</p>
+<ol type="1">
+<li>Go to Discounts in the left menu and create a new discount.</li>
+<li>Enter a name, for example "save five".</li>
+<li>Choose fixed amount instead of percentage and enter $5.</li>
+<li>Optionally limit the code to one use per customer or set a minimum purchase, for example $50.</li>
+<li>Save the discount and give the code to the pop-up success step.</li>
+</ol>
+<p>[L1297.017]</p></li>
+<li><p>Clavio pop-up coupon, created in Shopify:</p>
+<ol type="1">
+<li>In Shopify, go to Discounts and click Create discount.</li>
+<li>Choose Amount off order.</li>
+<li>Enter a code name such as SAVE5.</li>
+<li>Select a fixed amount of 5 dollars.</li>
+<li>Set the usage limit to one use per customer.</li>
+<li>Click Save discount, then enter the same code in the Clavio pop-up coupon field.</li>
+</ol>
+<p>[L0634.005]</p></li>
+<li><p>SMS discount link: build it as your store domain followed by /discount/ and the code name, for example storedomain.com/discount/CODE. The discount must be set to auto-apply at checkout, so the customer does not need to type the code. [L1470.009]</p></li>
+<li><p>Before going live, test both the SMS code and the email code at checkout with a real item in the cart. Confirm the discount is applied automatically and the amount matches the offer shown in the message. [L1470.012]</p></li>
+<li><p>Test a customer who has both an email code and an SMS code, and confirm at checkout that the 15% code replaces the 10% code instead of stacking. Run this test with a cart of realistic value, such as about $110 in the example, so the discounted total is visible before payment. [L1470.033]</p></li>
+<li><p>Use a benefit-selection popup that asks what the visitor wants (for example focus and memory, reduce inflammation, boost immunity, improve gut health) and reveals a mystery discount. Include an exit option that says no thanks and pay full price. [L1164.042]</p></li>
+</ul>
+<h2 id="shopping-ad-and-merchant-center-promotions">Shopping, ad and Merchant Center promotions</h2>
+<ul>
+<li><p>Discount codes shown in Google Shopping ads appear as promotions. Advertising a discount on lower-margin products can cost margin without adding sales, so offer discounts only where the margin allows. <em>2025.</em> [L0472.057]</p></li>
+<li><p>Merchant Center promotions appear inside Shopping ads and are created in Google Merchant Center, not in Google Ads. They only become visible after the products have synced and the account is serving ads, so they will not show when the Merchant Center account is first created. [L0712.012]</p></li>
+<li><p>Create a Merchant Center promotion as follows:</p>
+<ol type="1">
+<li>Open the promotions section in the left column of Merchant Center.</li>
+<li>Enter an ID name for the promotion.</li>
+<li>Select the country in which the promotion should be served.</li>
+<li>Enter the promotion details.</li>
+<li>Enter the redemption code the customer will use.</li>
+<li>Apply the promotion to specific products or to all products.</li>
+</ol>
+<p>[L0712.013]</p></li>
+<li><p>Promotions must be clear and testable: the coupon code must work on the store because Google bots try to enter it. Submit promotions in advance so they can be re-submitted if not approved. <em>Older (2022).</em> [L0665.065]</p></li>
+<li><p>Set up promotions in Google Merchant Center; percent-off promotions on products can be configured there. <em>Older (2022).</em> [L0665.066]</p></li>
+<li><p>Do not offer free shipping in Google Merchant Center promotions without a coupon code if the policy has changed. Instead, use a different promotion type such as a fixed-amount discount on a large order. [L1115.067]</p></li>
+</ul>
+<h2 id="offer-strength-by-traffic-source-and-product-type">Offer strength by traffic source and product type</h2>
+<ul>
+<li><p>Traffic from TikTok expects strong deals: buy-two-get-10-percent-off or buy-two-get-5-percent-off offers are weak. Audiences look for discounts of roughly 20, 30, 40 or 50 percent. [L1260.020]</p></li>
+<li><p>Traffic from TikTok expects strong deals, typically 20%, 30%, 40%, or 50% off. Small discounts such as 5% or 10% off usually do not work for this audience. [L1345.021]</p></li>
+<li><p>Strong offers that work on the store include buy one get one free, buy this and get this item free with the product, and a maximum discount of 70 percent off; 50 percent off is the usual baseline. Electronics may not suit buy one get one free, while items like jewelry often suit it. [L1382.017]</p></li>
+<li><p>Bundle offer: buy two items and receive a fixed discount of 14 dollars. A separate code of 5 dollars was offered for customers who wanted to buy only one item, and both codes were used a lot. [L1439.033]</p></li>
+<li><p>Blanket example: the store offered a 30 unit discount on the blanket, with free shipping within Switzerland and delivery in 2 to 3 days from local stock. A buy-two offer saved 14, and a single-item code saved 5. [L0492.032]</p></li>
+<li><p>Partner and backlink coupon strategy:</p>
+<ol type="1">
+<li>Create exclusive coupon codes for affiliate partners (e.g., <code>PARTNER5OFF</code>).</li>
+<li>List coupons on coupon aggregator websites in your niche.</li>
+<li>Use free shipping coupons, percentage discounts (5% off), or holiday-specific codes.</li>
+<li>Monitor which coupons drive conversions and repeat best performers.</li>
+<li>Some aggregator sites provide backlinks; prioritize those.</li>
+</ol>
+<p>[L0226.037]</p></li>
+<li><p>Launch discount strategy: offer a 50% off coupon to generate rapid sales. Example: a 50% off coupon resulted in 402 sales in 2 weeks at break-even price. Benefits: drives rankings, generates reviews, creates repeat customers (especially for consumables like supplements). [L0227.027]</p></li>
+<li><p>Asking a supplier to include custom coupon cards in shipments is allowed. Some suppliers agree and others do not have the resources, so the request is worth making. <em>Older (2018).</em> [L1085.072]</p></li>
+</ul>
+<h2 id="where-sources-disagree">Where sources disagree</h2>
+<ul>
+<li><strong>Expiry cadence.</strong> Wednesday and Sunday midnight is the twice-weekly cycle in the Source A material [L0137.003, L0531.004, L1085.100]. The Tuesday/Thursday or Saturday rhythm is an alternative, with the same rule of at least one expiry per week and never daily [L1293.015]. Use the Wednesday and Sunday cycle when running a banner that refreshes twice weekly; use the alternative when a store wants a different rhythm.</li>
+<li><strong>Expiry on every offer.</strong> Expiration dates create urgency [L0040.012]. Strict expiry is not required on every offer, because always-on offers still work for buyers who use them now [L1293.016]. Use strict expiry for time-limited campaigns and dated promotions; use always-on offers for standing benefits.</li>
+<li><strong>Coupon-page deadlines.</strong> A coupon page only needs to feel time-limited, and the codes need not expire in reality [L1357.010]. Where the page or code states a specific end time, the code must stop at that time [L1322.020, L0857.026].</li>
+<li><strong>Percentage versus dollar-off.</strong> Percentage is the default [L1404.016] and the usual Shopify choice [L1322.005]. Dollar-off suits pop-ups and emails and higher-AOV or bundle offers [L0476.004, L0232.003]. Both are roughly equivalent in effect [L1404.014].</li>
+<li><strong>Size of discount.</strong> The starting test size is 5% [L1192.007]. Coupons are commonly 5-10% [L0137.002]. Volume and traffic offers need 20-50% [L1259.029, L1260.020]. Each figure depends on context: test size, competitor baseline, or audience expectation. Margin decides whether any of them is affordable [L1097.027, L1148.026].</li>
+<li><strong>Standing sitewide discounts.</strong> A standing discount erodes margin [L0409.028]. A sitewide 10% reduced to 5% keeps a site-wide discount while protecting margin [L1097.028]. An expiring sitewide code is an accepted format [L1085.061].</li>
+<li><strong>Minimum order values.</strong> Course A's example recommended a starting threshold of about $200 at AOVs of $300-$1,000 <em>(older, 2020)</em> [L1111.091]. The Shopify example sets $2,000 as the threshold [L1322.006]. Choose the threshold to match your own AOV.</li>
+<li><strong>Free shipping in promotions.</strong> Free shipping is an option on coupons [L0226.037]. Under Merchant Center policy changes, free shipping is not offered without a coupon code [L1115.067].</li>
+</ul>
+</article><nav class="pn"><a href="../../07-offers-pricing-and-bundles/08-price-testing-and-price-changes/"><span class="k">&larr; Previous</span><span class="v">Price testing and price changes</span></a><a class="nx" href="../../07-offers-pricing-and-bundles/10-checking-supplier-rules-before-discounting/"><span class="k">Next &rarr;</span><span class="v">Checking supplier rules before discounting</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

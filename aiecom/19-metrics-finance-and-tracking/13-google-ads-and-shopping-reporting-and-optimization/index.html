@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Google Ads and Shopping reporting and optimization | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.13: Google Ads and Shopping reporting and optimization.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/13-google-ads-and-shopping-reporting-and-optimization/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Google Ads and Shopping reporting and optimization | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.13: Google Ads and Shopping reporting and optimization."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/13-google-ads-and-shopping-reporting-and-optimization/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/13-google-ads-and-shopping-reporting-and-optimization/">Plain version</a></div><h1>19.13 Google Ads and Shopping reporting and optimization</h1><article><h2 id="core-metrics-and-definitions">Core metrics and definitions</h2>
+<ul>
+<li>Three core metrics measure Google Ads performance: ROAS (Return On Ad Spend), CPC (Cost Per Click) and conversion rate. [L0013.003]</li>
+<li>ROAS = conversion value ÷ cost, so $15 in sales from $1 of ad spend is a 15x ROAS. [L0750.020, L0746.003]</li>
+<li>ROAS = revenue generated from ads ÷ ad spend. [L0665.099] (2022, older)</li>
+<li>ROAS = conversion value ÷ ad cost. Use this formula in the Google Ads keyword report to rank products and keywords by return. [L0856.093]</li>
+<li>Google Analytics displays ROAS as a percentage: 10x shows as 1000%, and 8.25x shows as 825%. [L0721.004]</li>
+<li>Revenue per click = conversion value ÷ clicks. [L0745.033]</li>
+<li>Cost per transaction = ad cost ÷ number of transactions. Example: $50 spent on 100 clicks that produce one conversion gives a cost per transaction of $50. [L0721.004]</li>
+<li>Cost per sale for a keyword group = ad spend on that group ÷ number of sales it produced. Example: $300 spent on quality keywords that produced one sale gives $300 per sale, which signals that those keywords and their landing product page need review. [L0626.022]</li>
+<li>Of all paid traffic metrics, cost per transaction and ROAS are the two most important, because together they show whether a sale is actually profitable. [L0721.003] (2021-22, older)</li>
+<li>A target cost per transaction can be set from break-even or from a desired profit margin per sale, and a target ROAS can then be derived from it. [L0721.003] (2021-22, older)</li>
+<li>Cost = sum of all clicks multiplied by their cost per click. Example: 454 clicks at an average CPC of $0.32 equal a total cost of $144.72. [L1341.013, L1341.014]</li>
+<li>Cost per all conversions = spend ÷ number of conversions. Average CPC = average amount paid per click. [L1341.013]</li>
+<li>Impressions = how often the Shopping ad was shown. Clicks = visits to the website. [L1341.013]</li>
+<li>Judge a platform's profitability by checking its ROAS, not just cost per click, although CPC should still be kept under control. [L0665.100] (2022, older)</li>
+<li>Judge a store's Google Ads health from profit and ROAS rather than the optimization score, since some stores with poor scores are very profitable. [L1090.133] (2021, older)</li>
+</ul>
+<p><strong>ROAS and conversion reference values</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Context</th>
+<th>Value</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Shopping minimum ROAS for a winning product</td>
+<td>at least 10x</td>
+<td>L0856.092 (2024); L0665.099 (2022, older)</td>
+</tr>
+<tr>
+<td>Alpha campaign target</td>
+<td>about 15x, never below 10x (at least $10 sales per $1 spent)</td>
+<td>L0746.004</td>
+</tr>
+<tr>
+<td>Beta campaign target</td>
+<td>runs profitably at about 8x</td>
+<td>L0746.004</td>
+</tr>
+<tr>
+<td>Example threshold for a profitability alarm</td>
+<td>9x, but derive it from your own target cost per transaction</td>
+<td>L0721.005 (2021-22, older)</td>
+</tr>
+<tr>
+<td>Example target ROAS and actual</td>
+<td>target 6.6, actual 4.2: room to reduce bids</td>
+<td>L0745.010</td>
+</tr>
+<tr>
+<td>Shopping campaign target conversion rate</td>
+<td>2.5% or better, measured separately from the store-wide rate</td>
+<td>L0626.010</td>
+</tr>
+<tr>
+<td>Mature Shopping campaign example</td>
+<td>$12,000 spend, $31,000 revenue, 4.9% conversion rate</td>
+<td>L0745.007</td>
+</tr>
+<tr>
+<td>Store average conversion rate used as baseline in a search text ad example</td>
+<td>around 2%</td>
+<td>L0923.004</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="reporting-setup-in-google-ads">Reporting setup in Google Ads</h2>
+<p><strong>ROAS columns in the product group view</strong></p>
+<ol type="1">
+<li>Click <strong>Columns</strong>, then <strong>Modify columns</strong>. [L0750.021]</li>
+<li>Under Conversions, select <strong>Conversion value</strong> and <strong>Conversion value / Cost</strong>. [L0750.021]</li>
+<li>Move <strong>Conversion value</strong> directly below <strong>Cost</strong>, and move <strong>Conversion value / Cost</strong> below it. [L0750.021]</li>
+<li>Remove <strong>Benchmarks max CPC</strong>. Keep <strong>Search impression share</strong>. [L0750.021]</li>
+<li>Click <strong>Save your column set</strong>, give it a clear name such as ROAS, then click <strong>Save and apply</strong>. [L0750.022]</li>
+<li>The product group view now shows Cost, Conversion value and Conversion value / Cost (ROAS) in one table. [L0750.022]</li>
+</ol>
+<ul>
+<li>Default product group columns in the Shopping ad group view are: product group, max CPC (default $0.40), impressions, clicks, cost, average CPC, benchmarks max CPC and search impression share. [L0750.023]</li>
+<li>Keyword report columns for decision making are Cost, CPC, conversion value (revenue) and a calculated ROAS column (conversion value ÷ cost). [L0856.094]</li>
+<li>Product group reports show impressions, clicks, cost, cost per all conversions, conversion rate, average CPC, benchmark max CPC, click share and search impression share per product. These columns help decide which individual product bids to raise or lower. [L0747.020]</li>
+</ul>
+<p><strong>Where to find the numbers</strong></p>
+<ul>
+<li>Go to <strong>Goals &gt; Summary</strong> in the left navigation. It lists every conversion action set up on the store and how many conversions each one has recorded. [L0470.003]</li>
+<li>To view cost per click over time, change the date range and set one of the graph lines to CPC. No spreadsheet export is needed. [L0470.045] (2023)</li>
+<li>Google Ads reports which individual ad produces conversions and how much revenue each ad brings in, so you can compare ads directly and cut the ones that spend without returning money. Conversion tracking must be set up on the site for these per-ad numbers to be reliable. [L1455.017]</li>
+<li>Once ads are approved, the account shows how many people see the ads, click them and buy. All optimization decisions should be based on these numbers. [L0715.002]</li>
+<li>Google Shopping performance is judged by a store's own traffic and sales data. Reporting in Google Ads usually shows the same reports over and over, and Google Ads optimization is driven by these reports rather than by separate tools. [L1114.061] (2023)</li>
+</ul>
+<p><strong>Time zones and reporting delay</strong></p>
+<ul>
+<li>Google Ads reporting is not real time. Its dates use the account's time zone, which was GMT-04:00 Eastern Time in one example. Allow for this delay and time zone before comparing daily figures. [L0719.047] (2021-22, older)</li>
+<li>Google Ads reporting is not updated in real time. All dates and times follow the account's time zone, which was GMT-05:00 Eastern Time in another example. Set date ranges and compare results with this time zone in mind, not with the local time of the operator. [L0744.062] (2021-22, older)</li>
+</ul>
+<p><strong>Spreadsheet and multi-channel views</strong></p>
+<ul>
+<li>Use a spreadsheet outside the ad platform to compare product-level profitability before deciding budget allocation in Google Shopping campaigns. [L0575.008]</li>
+<li>Multi-channel feed dashboards combine performance across channels in one view, so revenue can be compared per channel. Google Shopping was expected to remain the largest channel, followed by Bing. Use this to decide where to direct budget. [L0454.031]</li>
+</ul>
+<h2 id="campaign-structure-and-budgets-alpha-and-beta">Campaign structure and budgets (Alpha and Beta)</h2>
+<p><strong>Principles</strong></p>
+<ul>
+<li>Allocate the largest share of daily budget to high-profit products in dedicated Alpha and Beta campaigns. Allocate a significant but lower share to mid-profit segments in separate campaigns. Keep low-profit products in the product feed but expose them only to free Google Shopping traffic with zero paid budget. [L0224.005]</li>
+<li>Set campaign budgets and default cost-per-click bids based on historical performance data from existing campaigns. Match these values as closely as possible to current Alpha and Beta campaigns to ensure comparable data during the learning phase. [L0224.012] (2024 and undated sources, not older)</li>
+<li>Review keyword and CPC performance from historic ad data to see which products get acceptable impressions, cost per click and conversions. Scale the parts of the account that produce profitable results. [L1283.101]</li>
+<li>Ad spend must match results. If a product gets clicks or sales, keep spending. If it gets no impressions or clicks, check the product feed, keywords and bids before increasing spend. [L0806.091] (2024)</li>
+<li>Before relaunching ads, review historical analytics and Google Ads data for what brought the first sales. Put most of the budget into the ads, products and devices that already proved to work. [L0806.090] (2024)</li>
+</ul>
+<p><strong>Setting up Alpha and Beta</strong></p>
+<ol type="1">
+<li>In Google Ads, create two separate Alpha and Beta campaigns. [L0274.057] (2023)</li>
+<li>Set a shared budget across both (for example $30 per day). [L0274.057] (2023)</li>
+<li>Set Alpha to High Priority and Beta to Low Priority. [L0274.057] (2023)</li>
+<li>Create Alpha 2 and Beta 2 for a different product group. [L0274.057] (2023)</li>
+<li>Set a separate shared budget for Alpha 2 and Beta 2. This allows flexible budget allocation across product groups. [L0274.057] (2023)</li>
+</ol>
+<p><strong>Default CPC and Beta control</strong></p>
+<ul>
+<li>The default CPC of the Alpha campaign can be raised to increase its traffic. If the Beta campaign converts profitably, leave its CPC unchanged. If it takes most traffic without converting well, lower its default CPC. [L0971.017] (2024)</li>
+</ul>
+<p><strong>Launch expectations</strong></p>
+<ul>
+<li>A new Shopping campaign on about 1,000 products with a $20 daily budget may need roughly four weeks for Google's learning phase, and some products can get almost no impressions during that time. Check impressions per product, not only clicks. [L1287.069] (2025)</li>
+<li>For a new high-ticket store, results from Google Ads may be weaker in the first two to five months. As the conversion rate and the store's track record improve, ad profitability tends to rise over time. [L1228.011] (2021-22, older)</li>
+<li>Google Ads profitability improves only when ad changes, website changes and other parts of the business are fine-tuned together. Improving the ads alone while the store stays weak will not produce the expected return. [L1228.015] (2021-22, older)</li>
+</ul>
+<p><strong>Budget-limited campaigns</strong></p>
+<ul>
+<li>A campaign at ROAS 9.3 that is limited by budget should get more budget, since a well-performing campaign should almost never be budget-limited. [L0745.010]</li>
+</ul>
+<h2 id="product-group-and-product-level-analysis">Product group and product-level analysis</h2>
+<p><strong>Per-product data</strong></p>
+<ul>
+<li>After the item ID subdivision, each product gets its own row, so impressions, clicks and sales are visible per product. Based on that data you can exclude weak products or raise and lower individual product bids. [L0746.024]</li>
+<li>Track ad spend and returns at the product level so you can see profit per product in Google Ads. This is set up inside the Google Shopping campaign structure. [L1277.111] (2020, older)</li>
+<li>Track search performance, cost per click and clicks by product in Google Ads. Use those numbers to decide product-level bids and to spot which products need attention. [L0801.139] (2021, older)</li>
+<li>Use click-through rate, conversion rate and return on ad spend per product to decide bid changes. Products with good click-through and conversion rates justify higher bids. [L1094.106] (2023)</li>
+<li>Use the spreadsheet method from L0575.008 to compare product profitability before deciding budget allocation. [L0575.008]</li>
+</ul>
+<p><strong>Ordering the work</strong></p>
+<ul>
+<li>Sort product groups or campaigns by cost first, to focus on the biggest spenders ("big fish") and work down the list. Compare each campaign's ROAS against its own target ROAS, since the target is not always labelled in the report. [L0745.009]</li>
+<li>Usually only one or two of many ad groups drag results down. Focus effort there rather than reviewing every ad group or thousands of products line by line, which costs a lot of time for little return. [L0719.022] (2021-22, older)</li>
+</ul>
+<p><strong>Zero-conversion products</strong></p>
+<ul>
+<li>A product with a conversion rate of zero that spends a large share of the ad budget pulls the overall rate down. Identify it at product level and either lower its cost per click or pause it. [L1092.081] (2022, older)</li>
+<li>Example: a $300 non-converting product removed from a campaign changes spend from $1,050 to $750. The same $4,500 revenue then gives a ROAS of 6.0 instead of about 4.29. [L0745.033]</li>
+<li>A product that consumed about $500 in ad spend with no sales is the kind of heavy-traffic, non-converting product that compare-period reporting can expose. [L0721.013] (2021-22, older)</li>
+</ul>
+<p><strong>Worked product examples</strong></p>
+<ul>
+<li>Top product example: $300 spend, ROAS 15.0, 9.6 conversions. Its CTR of 3.1% beat the competitor benchmark of 1.18%, while its CPC of $1.99 was above the competitor average of $1.68. Paying more was acceptable to capture more coverage. This product was the only converting product of its brand. [L0745.012]</li>
+<li>Mature campaign example: the campaign still had room to improve by segmenting weak products and reducing bids slightly to raise CTR and ROAS. [L0745.007]</li>
+<li>Early-stage bootstrapped example: $2,800 spend over one month generated $14,708 revenue, roughly a month or two after launch. The budget was raised from $1,000 to $2,800 once profitable. Across all Shopping campaigns the total ROAS was about 5.2. [L0745.008]</li>
+</ul>
+<p><strong>Product-level actions</strong></p>
+<ul>
+<li>Action items in order:
+<ol type="1">
+<li>Shopping boost: compare your CPC against the benchmark and aim for a 20% CPC discount. [L1031.037]</li>
+<li>Shopping boost: add customer search terms to Shopping ad titles. [L1031.037]</li>
+<li>Conversion rate boost: aim for a 26% lift by running DPAs and optimizing for CTR. [L1031.037]</li>
+<li>LTV boost: aim for a 10% lift by making sure the opt-in and email marketing work properly. [L1031.037]</li>
+</ol></li>
+<li>Optimized titles and descriptions help Google Shopping results and do not hurt them, because Google Shopping pulls product data from product pages. [L0963.033] (2022, older)</li>
+<li>Changes that raise click-through rate or traffic without moving rankings still reach the bottom line, because the same visitors arrive more often. A 5% CTR increase is permanent and compounds over time. [L0575.003]</li>
+</ul>
+<p><strong>Sample size before decisions</strong></p>
+<ul>
+<li>Google Shopping example math: 250 clicks at $1 CPC give $250 spend. Three sales of $1,000 each give $3,000 revenue, which is 12x ROAS and above target. But 120 clicks is still too small a sample to decide. [L0969.047] (2022, older)</li>
+</ul>
+<h2 id="search-term-and-negative-keyword-analysis">Search term and negative keyword analysis</h2>
+<p><strong>When to act on search terms</strong></p>
+<ul>
+<li>After about three weeks of Google Ads with several thousand impressions and hundreds of clicks, there is usually enough search term data to decide which terms to exclude as negatives. Make the negative keyword changes first and hold off on bid and budget changes until their effect shows. [L0807.053] (2025)</li>
+<li>Use pivot tables and filters in Google Sheets on the audited search terms:
+<ol type="1">
+<li>Filter Brand or non-brand to see how much spend goes to branded searches in prospecting campaigns. [L0876.022]</li>
+<li>Filter Intent stage to see which terms sit at top, middle or bottom of funnel. [L0876.022]</li>
+<li>Filter Relevant? = no and Recommended action = add as negative to build the negative list. [L0876.022]</li>
+<li>Filter Recommended action = promote to own ad group to find strong terms that deserve their own ad group or campaign. [L0876.022]</li>
+</ol></li>
+<li>Do not raise prices just because conversion is low. First analyze the campaign data, such as impressions, clicks and sales per search term and product, to find the real cause. [L0671.091] (2021, older)</li>
+</ul>
+<p><strong>Brand search terms</strong></p>
+<ul>
+<li>Brand name Search campaigns typically have the highest return on ad spend (ROAS) but the smallest budget, because they capture high-intent searches. Use this as proof that the strategy works even though overall spend may be low. [L0210.030]</li>
+<li>Do not rule out brand-level search terms because of an assumption about their conversion rate. In the lesson's example, a brand-level ad group reached a 1.79% conversion rate and a US$65.46 cost per conversion, against 1.01% and US$91.36 for a model-level ad group. The test result should decide. Compare cost per conversion and conversion rate together, and check them against the cost per click. [L0880.030] (2021-22, older)</li>
+</ul>
+<h2 id="impression-share-click-share-and-lost-impression-share">Impression share, click share and lost impression share</h2>
+<p><strong>Definitions</strong></p>
+<ul>
+<li>Click share = the percentage of eligible clicks the account actually receives compared with competitors. [L1341.016]</li>
+<li>Search impression share = the percentage of eligible impressions where the ad appeared, for example for the search term "infrared saunas" when the store sells infrared saunas. [L1341.016]</li>
+<li>Click share of 16.19% means you win only about 16% of the clicks available in the auctions where you appear. Search impression share of 34% means you appear in only about 34% of the auctions you are eligible for. A very low search absolute top impression share means you almost never show in the top position. [L0745.002]</li>
+<li>Search absolute top impression share shows how often the ad appears in the first position. [L1341.018]</li>
+<li>Search impression share shows what percentage of the potential search traffic for a product the ads are actually reaching. Raising bids increases it, for example from 50% toward 60% or 70%. [L0750.024]</li>
+<li>Search Impression Share is called Search Impression Share in Google Ads and has an equivalent term in Microsoft Ads. It is used to judge bid levels. [L0836.055] (2024)</li>
+</ul>
+<p><strong>Reading the levels</strong></p>
+<ul>
+<li>A Search Impression Share in the mid to high 90s means the ad group is effectively maxed out, and 100% is rarely seen. A share as low as 26% on high-value terms means bids are too low compared with competitors. [L0744.044] (2021-22, older)</li>
+<li>Impression share is the key scaling metric for a Google Ads campaign. A campaign with strong revenue but low Impression Share, for example 32% against a possible 66%, has room to grow and can be pushed by improving the campaign. Review it alongside revenue each month. [L0463.002]</li>
+<li>Search impression share below 10 percent, with no change after doubling the budget, means the bids or ads are not the main problem. Look at irrelevant search terms and negative keywords first. [L0806.089] (2024)</li>
+<li>Impression share after removing negative keywords shows how far the budget falls short of full coverage. [L0357.028] (2019, older)</li>
+</ul>
+<p><strong>Procedure for campaigns above target</strong></p>
+<ol type="1">
+<li>In the custom report, find the campaigns, ad groups or products whose ROAS is above your target. [L0719.023] (2021-22, older)</li>
+<li>Open them in Google Ads and check the search impression share. [L0719.023] (2021-22, older)</li>
+<li>If impression share is well below 100%, there is room to raise bids, since more impressions will bring more clicks and sales. [L0719.023] (2021-22, older)</li>
+<li>Expect cost per sale to rise and ROAS to fall when bids go up, and accept that as long as ROAS stays above target. [L0719.023] (2021-22, older)</li>
+<li>If impression share is close to 100%, no more traffic is available on that product, so look at other areas. [L0719.023] (2021-22, older)</li>
+<li>Use profit from strong products to fund bids on other products to test more exposure, while keeping the healthy ones where they are. [L0719.023] (2021-22, older)</li>
+</ol>
+<p><strong>Worked example</strong></p>
+<ul>
+<li>An ad group sits at 20x ROAS against a 10x target, and its search impression share is 40%. This leaves a buffer to raise bids and get more traffic, accepting a lower ROAS while total profit rises. [L0719.024] (2021-22, older)</li>
+</ul>
+<p><strong>Lost impression share</strong></p>
+<ul>
+<li>Lost impression share due to rank moves opposite to search impression share, but the two figures do not add up exactly to 100%. Lost impression share is therefore a useful signal rather than a precise complement. [L0879.033] (2021-22, older)</li>
+<li>Search impression share lost due to rank shows impressions lost because of quality score or cost per click. Cost per click is the main lever the advertiser controls. In the example, 65% of impressions were lost due to rank, meaning bids were too low relative to competitors. [L1341.018]</li>
+<li>Diagnosis example: with a CPC around $0.30 against a competitor benchmark of $0.91, but only 16% click share and 34% search impression share, the bids are likely too low and should be raised. [L1341.017]</li>
+<li>Benchmark max CPC shows the bid competitors are placing for the same products. If the account pays around $0.32 while the benchmark is $0.91, the account is getting clicks more cheaply than competitors. [L1341.015]</li>
+</ul>
+<p><strong>Acting on click and impression metrics</strong></p>
+<ul>
+<li>If the cost per click looks too high to raise bids, the problem is likely conversion rate. The ads may be showing for the wrong keywords, bad search terms should be cleared out, or the website should be optimized. Benchmark CTR shows competitors' click-through rate for comparison. [L1341.019]</li>
+</ul>
+<h2 id="cpc-and-ctr-trends">CPC and CTR trends</h2>
+<p><strong>Benchmarks</strong></p>
+<ul>
+<li>Benchmark max CPC in Google Shopping is the average CPC the competition is bidding. Any benchmark value means the average of competitors. Compare your own CPC and CTR against these competitor averages before changing bids. [L0745.001]</li>
+<li>Benchmark CTR of competitors in the example was 1.18%, while the own CTR was 0.76%. This signals an issue to investigate. [L0745.005]</li>
+<li>Benchmark CPC is based on the product category, not on the specific brand. A brand can therefore see its CPC rise sharply even when its CPC is close to the category benchmark. [L0879.034] (2021-22, older)</li>
+<li>Google may show no benchmark data for a product with too little information. In that case the benchmark columns appear empty. Add the CTR column in the report to compare your own CTR with the competitor benchmark. [L0745.013]</li>
+</ul>
+<p><strong>Rising CPC case</strong></p>
+<ul>
+<li>A top-selling brand was on back order, while a major retailer listed it as in stock and sold below the MAP price by about $100. The manufacturer did not enforce MAP despite repeated requests over several months. The CPC of that brand's campaign rose from $0.75 to over $2.00, and about two months later sales for the brand had almost stopped. [L0879.035] (2021-22, older)</li>
+<li>If a product's return on ad spend drops sharply from week to week, for example from 15x to 5x, check Google Shopping for competitors selling it below MAP. A sudden drop often traces back to a price violation. [L0968.072] (2021, older)</li>
+<li>Audit all ad accounts every week or every two weeks. When sales stop, check whether traffic dropped and look for causes such as a competitor breaking MAP by around 10%. [L0429.029] (2022, older)</li>
+</ul>
+<p><strong>Bid moves on CPC</strong></p>
+<ul>
+<li>Procedure example: with a $0.50 CPC and ROAS of 15X, there is room to increase the bid to 60 to 70 cents to get more impressions. Monitor ROAS continuously to ensure profitability. [L0274.023] (2023)
+<ol type="1">
+<li>Go to Google Ads. [L0274.023]</li>
+<li>Look at historical campaign data over a 30-day period. [L0274.023]</li>
+<li>Calculate ROAS: revenue ÷ ad spend. [L0274.023]</li>
+<li>If spending $0.50 CPC and ROAS is 15X, have room to increase bid to 60-70 cents to get more impressions. [L0274.023]</li>
+<li>Monitor ROAS continuously to ensure profitability. [L0274.023]</li>
+</ol></li>
+<li>Example campaign with target ROAS 6.6 and actual ROAS 4.2 indicates room to reduce bids to improve ROAS. [L0745.010]</li>
+<li>Products with good click-through and conversion rates justify higher bids. [L1094.106] (2023)</li>
+</ul>
+<p><strong>Search text ads</strong></p>
+<ul>
+<li>In a search text ad example, a max bid of $5 produced an average cost per click of about $3 in second place. Store average conversion rates of around 2 percent were used as the baseline for these calculations. [L0923.004]</li>
+<li>Search text ads usually have a higher cost per click than Shopping ads, and in at least 80% of cases this holds true. [L0751.009] (2021-22, older)</li>
+<li>Because the cost per click is higher, search text ads need a solid conversion rate to pay back the spend. Calculate the conversion rate needed to support the cost per click before scaling spend. [L0751.010] (2021-22, older)</li>
+</ul>
+<p><strong>Cost trends over time</strong></p>
+<ul>
+<li>In 2020, online sales rose during the pandemic while ad costs first fell to multi-year lows before rising again. Monitor cost trends monthly rather than assuming a fixed level. [L1277.112] (2020, older)</li>
+</ul>
+<h2 id="search-vs-shopping-and-other-channels">Search vs Shopping and other channels</h2>
+<p><strong>Comparison</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Cost per click</th>
+<th>Notes</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search text ads</td>
+<td>usually higher than Shopping (in at least 80% of cases)</td>
+<td>needs a solid conversion rate to pay back spend</td>
+<td>L0751.009, L0751.010 (2021-22, older)</td>
+</tr>
+<tr>
+<td>Shopping</td>
+<td>usually lower</td>
+<td>Shopping Actions provide no click data, see below</td>
+<td>L0751.009 (2021-22, older)</td>
+</tr>
+<tr>
+<td>Brand name Search</td>
+<td>not stated</td>
+<td>highest ROAS, smallest budget</td>
+<td>L0210.030</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Shopping Actions provide no click data and no detailed reporting. Merchant Center shows only order-based information, which can be imported into Shopify, and the ads do not appear in Google Analytics. [L0738.008] (2021-22, older)</li>
+<li>Shopify's built-in analytics is useful for sales and product reporting, especially on higher plans, but it does not contain paid traffic data such as cost per click or ad spend. It cannot judge paid campaign performance. [L0721.002] (2021-22, older)</li>
+<li>Google Ads results cannot be compared between markets because many factors differ, including competition, demand and product type. A store should measure its performance against its own goals and history, not against other markets. [L0713.008] (2021-22, older)</li>
+</ul>
+<p><strong>YouTube campaigns</strong></p>
+<ul>
+<li>Google Ads Audience Manager is used to build audiences. Affinity audiences (interests), in-market segments (active purchase research) and life-event audiences are available. For retargeting, the core audience is one's own website visitors and customer list. [L1510.026]</li>
+<li>Procedure for optimizing YouTube campaigns in Google Ads:
+<ol type="1">
+<li>Check each campaign's cost per view and spend. [L1510.038]</li>
+<li>Pause ads that are not working and keep the ones that do. [L1510.038]</li>
+<li>Review demographics and exclude age groups that underperform. The 65+ group was excluded in the example. [L1510.038]</li>
+<li>Review Topics and exclude irrelevant ones. [L1510.038]</li>
+<li>Review placements, which is where most time goes. Find expensive placements (for example ones with 20-cent views) and exclude them. [L1510.038]</li>
+<li>Use bid adjustments for devices only where cost per view differs meaningfully. [L1510.038]</li>
+</ol></li>
+<li>Example small YouTube campaign: about $300 spent with an average cost per view of $0.03. The campaign was an audience-based pre-roll for an audit video, with no keywords because audience-based targeting was used. Placement review revealed some 20-cent views that were excluded to lower average cost per view. [L1510.039]</li>
+<li>Cutting expensive placements is the fastest optimization. Exclude placements with high cost per view (for example 20 cents) to push average cost per view down, and keep the cheaper traffic. [L1510.040]</li>
+</ul>
+<h2 id="google-analytics-custom-report-for-roas">Google Analytics custom report for ROAS</h2>
+<p><strong>Why GA</strong></p>
+<ul>
+<li>Google Ads does not provide ROAS as a field, so a custom report in Google Analytics is needed to measure it. The report must be set up manually, is not a standard report, and is built around the attribution and conversion tracking setup. [L0719.018] (2021-22, older)</li>
+<li>Google Analytics can calculate ROAS and cost per transaction for paid traffic, which Google Ads does not provide as a field. GA is therefore preferred for reporting paid campaign performance. [L0721.001] (2021-22, older)</li>
+<li>Standard tracking via the Google Ads conversion tag is usually under-reporting compared with GA, so the GA report is often more reliable for conversion counts. [L0721.001] (2021-22, older)</li>
+<li>The GA custom report is considered slightly more accurate than the Google Ads interface. It counts sales that came from Google ads and excludes draft orders. [L0719.019] (2021-22, older)</li>
+</ul>
+<p><strong>Structure</strong></p>
+<ul>
+<li>The report breaks performance down by campaign, then ad group, then individual product. [L0719.019] (2021-22, older)</li>
+<li>The custom report pulls in Google Ads data only for campaigns in the Google Ads account linked to the GA property. It can be drilled down from campaign to ad group, then to individual products (for Shopping) or keywords, and finally to search terms. This shows cost, ROAS and cost per transaction at each level without manual calculation. [L0721.009] (2021-22, older)</li>
+</ul>
+<p><strong>Build steps</strong></p>
+<ol type="1">
+<li>Go to Customisation, click <strong>build a report</strong> or <strong>New custom report</strong>, and give it a title, for example Google Ads Performance. [L0721.006] (2021-22, older)</li>
+<li>Add metrics via <strong>+ add metric</strong>: Clicks, Impressions, CPC, Cost, CTR, E-commerce Conversion Rate, Transactions, Cost per Transaction, Revenue and ROAS. [L0721.006] (2021-22, older)</li>
+<li>Add dimensions via <strong>+ add dimension</strong> in this order: Campaign, Google Ads: Ad Group, Keyword, Search Query. [L0721.006] (2021-22, older)</li>
+<li>Add filters: Traffic Type exactly matches <code>paid</code> (include), and Source/Medium exactly matches <code>google / cpc</code> (include). [L0721.006] (2021-22, older)</li>
+<li>Save the report and set the date range to the period you need. [L0721.006] (2021-22, older)</li>
+</ol>
+<p><strong>Metric names and tabs</strong></p>
+<ul>
+<li>In the GA custom report metric list, use the plain metric names: Clicks, Impressions (not the variants offered in the drop-down), CPC, Cost, CTR, E-commerce Conversion Rate, Transactions, Cost per Transaction, Revenue and ROAS. [L0721.007] (2021-22, older)</li>
+<li>Metrics like Clicks and Impressions are incompatible with Map Overlay report tabs, so use Explorer or Flat Table tabs. [L0721.007] (2021-22, older)</li>
+<li>The conversion metric is labelled Transactions, the conversion rate is labelled E-commerce Conversion Rate, and revenue should be the plain Revenue metric. [L0721.008] (2021-22, older)</li>
+<li>The same custom report layout can be reused for other traffic sources by changing the traffic filter, for example organic search or email marketing. Build a separate report for each source so that paid, organic and email results are not mixed together. [L0721.034] (2021-22, older)</li>
+</ul>
+<p><strong>Compare option</strong></p>
+<ul>
+<li>Compare two date ranges side by side to see how ROAS, conversion rate and other metrics changed, for example month against month. This helps spot products that receive heavy traffic but do not convert. [L0721.013] (2021-22, older)</li>
+</ul>
+<h2 id="audit-and-troubleshooting-procedures">Audit and troubleshooting procedures</h2>
+<p><strong>Management approach</strong></p>
+<ul>
+<li>Check the overall account ROAS first against the profitability target. If the account is above target, no further action is needed. [L0721.011] (2021-22, older)</li>
+<li>If the account is not above target, drill into the campaigns below target, then their ad groups, then individual products. Fix only the specific underperformers instead of changing the whole account. [L0721.011] (2021-22, older)</li>
+<li>Example from the lesson: with a target of 9x ROAS, a campaign running at 16x and another at 12x are fine. An ad group at about 3x shows ad spend that is not profitable. The action is to find which products sit in that ad group and improve their conversion rate, instead of changing the whole campaign. [L0721.012] (2021-22, older)</li>
+<li>Example: an account with a 10x ROAS target shows 15x overall, but one of three Shopping campaigns runs at 3x while the other two run at 14x and 14x. The 3x campaign is pulling the account result down, so that campaign is the one to examine first. [L0719.021] (2021-22, older)</li>
+</ul>
+<p><strong>Drill-down procedure for an account below target</strong></p>
+<ol type="1">
+<li>In the custom report, start at the account or campaign level and compare total ROAS to your target. [L0719.020] (2021-22, older)</li>
+<li>If the total is at or above target, leave it unless you have time for a deeper review. [L0719.020] (2021-22, older)</li>
+<li>If it is below target, find the campaign with ROAS below target, since one weak campaign can drag the whole account down. [L0719.020] (2021-22, older)</li>
+<li>Open that campaign and find the ad groups below target. [L0719.020] (2021-22, older)</li>
+<li>Within those ad groups, list products that get clicks but do not convert. [L0719.020] (2021-22, older)</li>
+<li>For each product, check whether the margin is good enough to sell it. If not, stop advertising it. [L0719.020] (2021-22, older)</li>
+<li>If the margin works, research who else sells the product and compare price and offer, then improve your offer until ROAS is above target. [L0719.020] (2021-22, older)</li>
+<li>If that is not worth the time, lower bids so cost per click falls while conversion holds, or pause the product. [L0719.020] (2021-22, older)</li>
+</ol>
+<p><strong>Checking the numbers</strong></p>
+<ul>
+<li>Verify cost per sale against spend ÷ sales before making decisions. Example: $152 spend with 2 sales gives $76 and $54 with 1 sale gives $54. These do not match the reported $74 and $52, so the account figures should be checked. [L0748.004]</li>
+<li>Spend check: over three months the Alpha campaign spent $152 and the Beta campaign spent $54, a total of $206, or about $69 per month. A $10 daily budget would allow about $300 per month, so the campaigns were heavily underspending. [L0748.005]</li>
+<li>Keyword and CPC performance should be reviewed from historic ad data before changes. [L1283.101]</li>
+<li>A store's traffic and sales should be reviewed over about seven days before making bid changes. Changes made after less than a week of data can be based on noise and lead to poor decisions. [L1114.062] (2023)</li>
+</ul>
+<p><strong>Change history and recent drops</strong></p>
+<ol type="1">
+<li>Open Google Ads. [L0272.030] (2022, older)</li>
+<li>Click <strong>Campaigns</strong> in the left sidebar. [L0272.030] (2022, older)</li>
+<li>Click <strong>Change History</strong> to view all account modifications by date. [L0272.030] (2022, older)</li>
+<li>Scan recent changes (bid adjustments, negative keywords added, budget changes). [L0272.030] (2022, older)</li>
+<li>If you see a change that correlates with the performance drop, click the revert button to undo it. [L0272.030] (2022, older)</li>
+<li>Run for a few days and see if performance recovers. [L0272.030] (2022, older)</li>
+<li>This method identifies whether your own changes caused the issue. [L0272.030] (2022, older)</li>
+</ol>
+<p><strong>Tracing a sale</strong></p>
+<ol type="1">
+<li>Open each ad account (usually Google Ads and possibly Meta) and see which one sent the traffic. [L0429.015] (2022, older)</li>
+<li>Open the keyword breakdown in the campaign and find which keywords brought visitors who bought the same product. [L0429.015] (2022, older)</li>
+<li>If one product sold repeatedly through a Google Shopping campaign, put that product in its own product group to monitor it. [L0429.015] (2022, older)</li>
+<li>Keep the traffic level consistent over the next weeks. A drop from 100 visitors to 20 is a warning sign. [L0429.015] (2022, older)</li>
+</ol>
+<p><strong>Review order for a Google Shopping account</strong></p>
+<ol type="1">
+<li>Impressions: how often the Shopping ad was shown. [L1341.020]</li>
+<li>Clicks: how many visitors reached the website. [L1341.020]</li>
+<li>Cost: total clicks multiplied by their cost per click. [L1341.020]</li>
+<li>Cost per all conversions: spend divided by the number of conversions. [L1341.020]</li>
+<li>Average CPC: the average amount paid per click. [L1341.020]</li>
+<li>Benchmark max CPC: the bid competitors place for the same products. [L1341.020]</li>
+<li>Click share: the share of eligible clicks the account receives compared with competitors. [L1341.020]</li>
+<li>Search impression share: the share of eligible searches where the ad appeared. [L1341.020]</li>
+<li>Search absolute top impression share: how often the ad appears in the top position. [L1341.020]</li>
+<li>Search impression share lost due to rank: impressions lost because bids or quality score are too low. [L1341.020]</li>
+<li>Benchmark CTR: the competitors' click-through rate for comparison. [L1341.020]</li>
+</ol>
+<p><strong>Monitoring cadence</strong></p>
+<ul>
+<li>KPI monitoring for non-MAP products:
+<ol type="1">
+<li>Check Google Ads KPIs more often than for MAP products, on a fixed schedule such as every Monday, Wednesday and Friday, or at least twice a week, scaled to traffic volume. [L1051.009]</li>
+<li>Focus on the Google Shopping campaigns and watch for sharp drops in clicks or sales, which can signal that a competitor has undercut you. [L1051.009]</li>
+</ol></li>
+</ul>
+<p><strong>Targets for conversion and cost per sale</strong></p>
+<ul>
+<li>Target conversion rate for Google Shopping campaigns is 2.5% or better. Measure this campaign rate separately from the store-wide conversion rate. [L0626.010]</li>
+<li>Cost per sale for a keyword group that spends $300 for one sale signals a review of those keywords and their landing product page. [L0626.022]</li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/12-diagnosing-the-store-funnel-conversion-bounce-and-on-site-be/"><span class="k">&larr; Previous</span><span class="v">Diagnosing the store funnel: conversion, bounce and on-site behavior</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/14-email-retargeting-and-owned-channel-metrics/"><span class="k">Next &rarr;</span><span class="v">Email, retargeting and owned-channel metrics</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

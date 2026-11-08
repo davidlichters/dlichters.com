@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Collections, tags and filters | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 4.9: Collections, tags and filters.">
+<link rel="canonical" href="https://dlichters.com/aiecom/04-store-build-and-shopify/09-collections-tags-and-filters/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Collections, tags and filters | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 4.9: Collections, tags and filters."><meta property="og:url" content="https://dlichters.com/aiecom/04-store-build-and-shopify/09-collections-tags-and-filters/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">4. Store build and Shopify</a> &rsaquo; <a href="../../../ecom/04-store-build-and-shopify/09-collections-tags-and-filters/">Plain version</a></div><h1>4.9 Collections, tags and filters</h1><article><h2 id="collection-types">Collection types</h2>
+<ul>
+<li>A collection is a product category. It groups related products so visitors can find a product type, size, color, price range or featured group without searching. [L0371.001, L1312.001, L0083.001]</li>
+<li>Shopify has two collection types. A manual collection contains only the products added to it one by one. An automated collection includes every product that matches the conditions you set. [L1312.002, L0371.003, L0083.004]</li>
+<li>Automated collections suit a store that keeps uploading products, because new items sort themselves into the right collections. [L1312.002, L0083.002, L1303.006]</li>
+<li>Automated collections scale better and need no ongoing maintenance. [L0083.003]</li>
+<li>In a dropshipping store, automated collections should be used exclusively. [L0083.004]</li>
+<li>Manual collections only make sense when you want full control over a fixed list of products. [L0371.004]</li>
+<li>Stricter rule: do not assign products to collections manually at all. Use only tag-based automated collections. [L0088.007]</li>
+<li>Automated collections update in real time when products are tagged or untagged. No manual syncing is needed. [L0083.012]</li>
+<li>A product can belong to several collections at once, because each collection decides membership with its own rule. [L0083.001, L0971.089]</li>
+<li>Automated collections can also be built by supplier, so every product from one supplier lands in that supplier's collection. Price-based automated collections work the same way. [L0371.005]</li>
+<li>Typical product-type collections for a stand-up desk store: straight, curved and L-shaped stand-up desks. [L0083.016]</li>
+<li>Typical attribute collections: size, color, price range, featured items, bestsellers, staff picks, new arrivals and on-sale items. [L0083.016, L0371.002]</li>
+<li>Typical collections for a niche store: product types within the niche, size, color, material or feature, price ranges, and featured groups such as Bestsellers, Staff Picks, New Arrivals and Sale. [L0371.002]</li>
+<li>Example: a bamboo L-shaped desk tagged with both "L-shaped" and "bamboo" is listed automatically in the L-shaped collection and in the bamboo collection. [L0371.007]</li>
+<li>Collections can also group by skill level (beginner, intermediate, advanced) or by brand, because customers search for those groupings. (Source B, 2021-22, older.) [L1463.004]</li>
+<li>Product types and collections have separate jobs. Assign each product one product type based on what it is, for example hybrid, shortboard, mid-length or longboard. Use collections for shopping paths such as price band, skill level, kids or color. [L1287.022]</li>
+</ul>
+<h2 id="planning-which-collections-to-create">Planning which collections to create</h2>
+<ul>
+<li>Set up collections before importing products. New products are then placed in the right collections as they are added, which keeps the organization consistent from the start. [L0083.002]</li>
+<li>Before creating anything, list every collection you plan to use. Avoid over-building the structure and focus on collections that match your actual product range. [L0083.014]</li>
+<li>Do not create every possible collection at the start. Collections can always be added later, so begin with the ones you are most likely to use. [L0371.013, L1312.004]</li>
+<li>Build the main collections first as separate entries. Sub-collections are created afterwards as additional separate entries. [L0083.008]</li>
+<li>Sub-collections are created the same way as any other collection. Shopify has no special subcollection setting. The parent-child link is set later in the navigation menu. [L0371.018, L1312.008, L0083.008, L0083.015]</li>
+<li>Do not configure menu placement while creating a collection. Link collections to the navigation once all collections exist. [L0083.015, L1303.001]</li>
+<li>Brand collections should not be created until suppliers have approved your store, even if competitors show them. Other collections can be created first. [L0371.012, L1312.007]</li>
+<li>Product categories can be broader than one product type, as long as they are related. Unrelated categories look like a copied template and can trigger review. [L0855.105]</li>
+<li>Create one collection per product group when the store has several categories, for example couch covers, or beds and blankets. A store with only a few products can keep them all in one collection. [L1326.019]</li>
+<li>Decide how products are grouped before building collections. For a non-technical beginner this was the hardest part of Shopify setup. [L1437.013]</li>
+<li>Avoid massive collections. Keep them specific and narrow, because long lists of near-identical products increase confusion. Very large collections only suit a store with very different products, such as a department store. [L1522.009]</li>
+<li>The same product can appear in several collections under different names, when customers may use different terms for it. Each name a shopper uses can lead them to the product. [L1522.007]</li>
+<li>Create collections around sub-styles within a niche, such as a gothic style or a colorful style, and group matching products in each. [L1325.012]</li>
+<li>Before naming style collections, check whether the store already has blog posts on those styles. Use the same terms, because existing topics show which style words the audience already recognizes. [L1325.031]</li>
+<li>Starting set sizes differ by source:
+<ul>
+<li>Five starting collections built around the product types you will sell, or five variations of one main product. This is a placeholder set, so pick them quickly and refine later (Source B, 2021-22, older). [L1303.003, L1303.005]</li>
+<li>A starter set of six for a new demo store: Bestsellers, Staff picks, Top rated, New arrivals, On sale and one price-based collection such as Under 100. With three collections per row on desktop, six fill two rows. [L1309.064]</li>
+</ul></li>
+<li>Initial collections are placeholders and are not final. Rebuild them once suppliers are confirmed and the real product types are known. (Source B, 2021-22, older.) [L1303.005]</li>
+<li>Research collection ideas from competitors:
+<ol type="1">
+<li>Pick the two to three future competitor stores in your niche and open their navigation menus. [L0083.007]</li>
+<li>Hover over each main category in the navigation to see its subcategories. [L1312.006]</li>
+<li>Note how they group products: by type, brand, size or price range. [L1312.006]</li>
+<li>Write the ideas in a document such as Google Docs or Notes. List each main collection and indent its subcategories beneath it. [L1312.006]</li>
+<li>Keep the list focused. You need several collections, but not every possible one. [L1312.006]</li>
+</ol></li>
+<li>Empty category pages (soft 404) can be deleted if they are not needed, and re-added when products for them are found. (Source A, 2022, older.) [L0429.041]</li>
+</ul>
+<h2 id="creating-a-tag-based-automated-collection">Creating a tag-based automated collection</h2>
+<p>Procedure, merged from the three source procedures and the Source C variant:</p>
+<ol type="1">
+<li>Log in to the Shopify admin. Go to Products &gt; Collections. The collections area is the first link under Products. [L0083.009, L0371.009]</li>
+<li>Click Create collection in the top right corner. [L0371.014, L1312.009, L0371.009]</li>
+<li>If you do not sell in person, switch off the Point of sale option. [L0371.014, L1312.009]</li>
+<li>Enter the collection name in the Title field. The title is the name customers see. [L0083.009, L0371.014, L1312.009, L0371.015]</li>
+<li>Leave the Description blank for now. It is the text shown above the products and can be added later. [L0083.009, L0371.014, L1312.009]</li>
+<li>Skip images for now. They can be added later. [L0083.009, L0371.014, L1312.009]</li>
+<li>Keep the default theme template unless your theme offers a different one that fits. [L0371.014, L1312.009, L1303.030]</li>
+<li>Set Collection type to Automated. [L0083.009, L0371.014, L1312.009]</li>
+<li>Set the condition to Product tag, is equal to, and enter the tag exactly as it is used on the products, for example surfboards. [L0083.009, L0371.014, L1312.009, L1326.018]</li>
+<li>Check the Search engine listing and the URL handle. Verify the URL handle matches the collection name. Leave the meta description for the later SEO phase. [L0083.009, L0371.014, L1312.009, L0083.011, L0083.013]</li>
+<li>Click Save and confirm the collection appears in the Collections list. [L0083.009, L1312.009]</li>
+<li>Repeat for each collection on your list. [L0371.014]</li>
+</ol>
+<p>Source C variant (short form, same logic): create the collection, for example titled Headphones, set Product tag is equal to headphones, save, add the tag to each product that belongs in it, then open the collection and confirm the products appear. [L1326.018]</p>
+<h2 id="collection-conditions">Collection conditions</h2>
+<ul>
+<li>Shopify conditions are fields such as price, supplier, tag, product type, product title, compare-at price, weight or inventory. Tag-based conditions are the most commonly used approach. [L1312.003, L0083.005]</li>
+<li>Tag and Price are the two conditions used most in the course. [L0371.008]</li>
+<li>Set "Products must match" to all conditions if every condition has to be true. Set it to any condition if one match is enough. Conditions are the rules Shopify uses to decide membership automatically. (Source B, 2021-22, older.) [L1303.007]</li>
+<li>Available operators: is equal to, is not equal to, is greater than, is less than, starts with, ends with, contains and does not contain. Use is equal to when the value must match exactly and contains for partial matches. (Source B, 2021-22, older.) [L1303.009]</li>
+<li>Condition fields and typical use (Source B, 2021-22, older):</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Condition field</th>
+<th>Typical use in collections</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product title</td>
+<td>Match words in the product name</td>
+</tr>
+<tr>
+<td>Product type</td>
+<td>Match the product category set on each product</td>
+</tr>
+<tr>
+<td>Product vendor</td>
+<td>Match the brand or supplier name</td>
+</tr>
+<tr>
+<td>Product tag</td>
+<td>Match a keyword tag assigned to products (most common)</td>
+</tr>
+<tr>
+<td>Product price</td>
+<td>Filter by selling price</td>
+</tr>
+<tr>
+<td>Compare at price</td>
+<td>Filter by the compare-at price</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>Filter by product weight</td>
+</tr>
+<tr>
+<td>Inventory stock</td>
+<td>Filter by stock quantity</td>
+</tr>
+<tr>
+<td>Variant's title</td>
+<td>Match the variant name</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L1303.008]</p>
+<ul>
+<li><p>Tag the products of the same category with one shared keyword, then use the condition Product tag is equal to that keyword. Shopify pulls every product with the tag in automatically. (Source B, 2021-22, older.) [L1303.010]</p></li>
+<li><p>Matching by product title contains a keyword is an alternative to tags and works the same way if the keyword appears in product names. There is no single right method. Choose one and use it consistently across the initial collections. (Source B, 2021-22, older.) [L1303.011]</p></li>
+<li><p>Example of mixed conditions for an off-grid power products store (Source B, 2021-22, older):</p>
+<ul>
+<li>Solar Power: product tag is equal to solar</li>
+<li>Generators: product title contains generator</li>
+<li>Water Filtration: product title contains water</li>
+<li>Food Supplies: product tag is equal to food</li>
+<li>Waste Disposal: product tag is equal to waste</li>
+</ul>
+<p>Mixing tag and title conditions is acceptable at this starting stage because the collections are placeholders. [L1303.032]</p></li>
+<li><p>Creating a collection with generic conditions (Source B, 2021-22, older):</p>
+<ol type="1">
+<li>In the Shopify admin, click Products in the left-hand menu. [L1303.002]</li>
+<li>Under Products, open Collections. [L1303.002]</li>
+<li>In a new store, tick the box of the default Home page collection, then click Delete. [L1303.002]</li>
+<li>Click Create collection. [L1303.002]</li>
+<li>Enter the collection title, which is the name customers see. Leave the description empty if you do not need one. [L1303.002]</li>
+<li>Set Collection type to Automated. [L1303.002]</li>
+<li>Under Conditions, choose all conditions or any condition, then select a field, an operator and a value. [L1303.002, L1303.007]</li>
+<li>Click Save. [L1303.002]</li>
+</ol></li>
+</ul>
+<h2 id="price-band-collections">Price-band collections</h2>
+<ul>
+<li><p>Price-band automated collections group products into bands, for example products priced 1 to 200, 2 to 300 and 3 to 500 dollars. Link them in the navigation as "Shop by price". This gives shoppers price sorting without extra apps. (Source A, 2021, older.) [L0968.035]</p></li>
+<li><p>Each band is a separate collection, so each product lands in the one matching its price. [L0371.022]</p></li>
+<li><p>Example band set for a stand-up desk store: $300 to $500, $500 to $800, $800 to $1,000, and $1,000 and up. [L0371.022]</p></li>
+<li><p>Example of a $300 to $500 price collection. [L0371.005]</p></li>
+<li><p>Price-range procedure:</p>
+<ol type="1">
+<li>Navigate to Products &gt; Collections and click Create collection. [L0083.010]</li>
+<li>Select Collection type: Automated. [L0083.010]</li>
+<li>For items priced $2,000 and above, set the condition Price is greater than $2,000. [L0083.010]</li>
+<li>For items priced between $1,000 and $2,000, set two conditions: Price is greater than $999.99 AND Price is less than $2,000.01. [L0083.010]</li>
+<li>Click Save. [L0083.010]</li>
+</ol></li>
+<li><p>"$2,000 and up" setting: click Create collection, keep Collection type on Automated, change the condition field to Price, select "is greater than" and enter 2000. Keep Products must match on all conditions. Every product priced above that value that you upload later enters the collection automatically. [L1312.013]</p></li>
+<li><p>Price-range formula for $1,000 to $2,000 with Products must match set to all conditions:</p>
+<pre><code>Condition 1: Price is greater than 999.99
+Condition 2: Price is less than 2000.01
+Result: products priced above 999.99 and below 2000.01 are included,
+        so a product at exactly 1000.00 or 2000.00 belongs to this range.</code></pre>
+<p>[L1312.014]</p></li>
+<li><p>Boundary rule: Shopify price conditions use "is greater than" and "is less than", which do not match a product priced exactly at the threshold. For a range, set the lower bound a cent below and the upper bound a cent above, such as 999.99 and 2000.01. [L0371.021, L1312.014]</p></li>
+<li><p>When price collections meet at a boundary, use offset limits instead of exact values. The $2,000-and-up collection only takes prices above 2000, so a product at exactly 2000.00 sits in the range collection and does not fall between two collections or appear in both. [L1312.015]</p></li>
+<li><p>A higher tier is built the same way: a "$200 and up" tier uses the single condition Price is greater than 200. Tiers can be stacked by changing only the threshold values. A range tier uses two conditions as in the $1,000 to $2,000 example. [L1312.016]</p></li>
+<li><p>Threshold values differ by store. The course examples use $2,000 and up [L0083.010, L1312.013], $1,000 and up [L0371.022] and $200 and up [L1312.016]. Use the top band that matches your own price range. The same boundary rules apply in each case. [L0083.010, L1312.013, L0371.022, L1312.016, L1312.015]</p></li>
+</ul>
+<h2 id="featured-and-sorting-collections">Featured and sorting collections</h2>
+<ul>
+<li>Featured collections group products such as bestsellers, staff picks, new arrivals or items currently on sale, instead of grouping by product type. They help visitors find popular or timely products quickly. [L1312.005]</li>
+<li>Featured collection examples: Bestsellers, Staff Picks, New Arrivals, Sale. [L0371.002]</li>
+<li>Featured groups for a demo store: Bestsellers, Staff picks, Top rated, New arrivals, On sale. [L1309.064]</li>
+<li>Featured groups as a filter: bestsellers, staff picks, new arrivals and top rated. The tags must already exist on products in the store, because a tag list only lists tags applied to products. [L0369.014]</li>
+<li>Organize products into collections and sort each collection with best sellers first, on the homepage and collection pages. Shoppers look for what others want most, which reduces the chance they leave. [L1098.009]</li>
+<li>To see a store's best-selling products, open the collection URL /collections/all?sort_by=best_selling. [L0871.019]</li>
+</ul>
+<h2 id="product-types-and-tags">Product types and tags</h2>
+<h3 id="tag-basics">Tag basics</h3>
+<ul>
+<li>Apply multiple tags to a product. Tags place products automatically into the matching collections, so the store is organized by category without manual collection assignment. [L0036.015]</li>
+<li>Tags are created automatically the first time you enter them in the tags field. There is no separate place to create them first. [L0036.028]</li>
+<li>A product can carry several tags and then appears in every collection whose tag rule it matches. [L0371.006]</li>
+<li>Tag-based automated collections are the primary method. [L0371.006]</li>
+<li>Each tag is one collection rule. Tags assigned to a product on its page decide where it appears. [L0971.089, L0371.023]</li>
+<li>Once a product is saved with a tag, it is added automatically to every automated collection whose Product tag condition matches that tag. [L0371.023]</li>
+<li>A tag-based condition of "product tag is equal to" only picks up products that carry that exact tag name. Use the same spelling on every product that should appear. [L1312.010]</li>
+</ul>
+<h3 id="adding-tags-to-a-product">Adding tags to a product</h3>
+<p>Procedure, merged from the course variants:</p>
+<ol type="1">
+<li>Go to Shopify Admin &gt; Products and click into the product, or select the product. [L0103.005, L0369.010, L0890.005]</li>
+<li>Scroll to the Tags section, or open the Tags field. [L0103.005, L1326.018]</li>
+<li>Add relevant tags, for example longboards, blue, hybrid. Each product that should appear under a filter needs the matching tag. [L0103.005, L0369.010, L1326.018]</li>
+<li>Click Save. The product immediately becomes available in all matching filter tags and collections. [L0103.005, L0369.010, L0890.005]</li>
+<li>Refresh the storefront collection page to confirm the product appears. [L0890.011]</li>
+</ol>
+<h3 id="tag-hygiene">Tag hygiene</h3>
+<ul>
+<li>Tag spelling must be identical in the product tags and in the collection or filter entries. Example: "Shortboards" written as one word in both places. A spelling difference means the filter does not match the tagged products, so the grid shows fewer or no results. [L1010.022, L0369.008, L0890.007]</li>
+<li>A tag list only matches exactly, including spelling, spacing and capitalization. A mismatch hides that option even for tagged products. [L0369.008]</li>
+<li>Mistake, two-word tag: a tag written as one word did not match the two-word version, so only two of three options appeared until the tag was corrected. [L0369.011]</li>
+<li>Fixing case problems (Source A, 2020, older):
+<ol type="1">
+<li>Open the product in the Shopify admin. [L1111.061]</li>
+<li>Click edit. [L1111.061]</li>
+<li>Delete the existing tags. [L1111.061]</li>
+<li>Re-enter the tags in the correct case, such as lowercase. [L1111.061]</li>
+</ol></li>
+<li>Shopify has no bulk tag management interface. Tags cannot be deleted in one place. To remove a tag, it must be removed from every product individually. (Source A, 2025.) [L0255.029]</li>
+<li>Once a tag has been autocompleted in Shopify, the system remembers it. Removing it from all products does not delete it from autocomplete. (Source A, 2025.) [L0255.030]</li>
+<li>Tag lists can be filled in advance, but only tags carried by at least one product show as filter options. A tag such as "purple" with no matching product produces no option. [L0890.003]</li>
+</ul>
+<h3 id="changing-product-membership">Changing product membership</h3>
+<ul>
+<li>Membership is controlled from the product page, not from the collection. Removing a tag from a product makes it leave the collection. [L0971.027, L0971.089]</li>
+<li>Procedure to find why a product is in an unwanted collection (Source A, 2024):
+<ol type="1">
+<li>Open Shopify admin &gt; Products &gt; Collections. [L0971.028]</li>
+<li>Check the number of products and the condition of the collection. [L0971.028]</li>
+<li>Open the collection to confirm the rule, for example Product tag is equal to bestsellers. [L0971.028]</li>
+<li>Open the product page and review the tags applied. [L0971.028]</li>
+<li>Remove the tag to remove the product from the collection. [L0971.028]</li>
+</ol></li>
+<li>Duplicate collections: when collections created by hand and by the supplier share the same tag, products appear twice. Check the collection conditions and remove the shared tag from one of the collections. (Source A, 2024.) [L0856.067]</li>
+<li>Automated collections need no manual syncing. Refresh after saving changes, and if a new filter value is missing, wait a moment and refresh again before troubleshooting. [L0890.011, L0083.012]</li>
+</ul>
+<h2 id="seo-and-handle-fields">SEO and handle fields</h2>
+<ul>
+<li>The key fields on the Create collection form are Title, Description, Images, Theme template, Collection type, Conditions, Search engine listing and URL handle. [L0371.015]</li>
+<li>The Title is the name customers see. The Collection type decides whether products are added by hand or by conditions. [L0371.015]</li>
+<li>The URL handle is created from the Title by default. It usually looks like your-domain.com/collections/keyword. Always check it before saving, because it should end with the exact collection name. [L0371.016, L1312.011, L0083.011]</li>
+<li>The URL of a collection follows the pattern yourdomain.com/collections/keyword. The handle copies the title by default, so check it before saving. [L1312.011]</li>
+<li>Do not edit the SEO fields (collection description, page title, meta description) during the initial setup. They are configured in a later stage. [L0083.013]</li>
+<li>Check the search listing during setup, but leave the meta description for the later SEO phase. [L0371.014, L1312.009]</li>
+<li>Collection SEO is set under Search engine listing preview, then Edit website SEO. Add a title and description for search engines. The listing preview shows how the collection will appear in results. (Source B, 2021-22, older.) [L1303.012]</li>
+<li>The collection description is useful for SEO and appears above the product list. Long descriptions go below the product grid. [L1312.009, L0368.006]</li>
+<li>A short description of one or two sentences can stay at the top without a noticeable effect. [L0368.006]</li>
+<li>Renaming a collection: on an established store, rename it and add a redirect from the old URL. This keeps traffic and links to the old page. On a new store with no live products, redirects are not necessary. (Source A, 2023.) [L1114.027]</li>
+<li>Text over collection images is a theme option, not an image edit, so no Photoshop or Canva work is needed. Enable the text overlay in the theme settings and enter the text. Whether to use it is a preference, so judge by how it looks. (Source A, 2020, older.) [L0664.038]</li>
+</ul>
+<h2 id="collection-templates">Collection templates</h2>
+<h3 id="template-basics">Template basics</h3>
+<ul>
+<li>The Theme templates section of the collection editor has a Collection template field set to "collection" by default. This is the template customers see. Leave it at the default unless you have a reason to change it. (Source B, 2021-22, older.) [L1303.030]</li>
+<li>The Collection availability section lists the sales channels the collection is published to. On a new store it reads that the collection will be available to one sales channel, Online Store, with a Schedule availability option beneath it. (Source B, 2021-22, older.) [L1303.031]</li>
+<li>One template can be assigned to many collections. One default template covered 30 collections in the example. Separate templates are only needed if some collection pages must have a different sidebar or other layout. [L0369.002]</li>
+<li>Each custom collection template affects only the collection it is linked to. Separate templates can therefore be built for each collection, with different text, images and layout. Layout changes such as alignment, image width, hiding the button or adding sections are made in the template editor. [L0368.010]</li>
+</ul>
+<h3 id="creating-a-custom-template">Creating a custom template</h3>
+<p>Procedure, merged from the course variants:</p>
+<ol type="1">
+<li>Go to Shopify admin &gt; Online Store &gt; Themes &gt; Customize. [L0255.021, L0368.007]</li>
+<li>Open the template dropdown and select Collections. Click Create template. [L0255.021, L0368.007]</li>
+<li>Name the template after the collection or its keyword, for example "hybrid surfboards". [L0255.021, L0368.007]</li>
+<li>Base the template on the default collection. Set the preview to that collection, so the layout shows real products. [L0368.007]</li>
+<li>Add sections. Click the plus icon "Add section" and choose the section type, such as Rich text, collapsible content or images. [L0255.021, L0368.008, L0368.022]</li>
+<li>Drag sections to the desired order. [L0255.021]</li>
+<li>Save the template. [L0255.021]</li>
+<li>Go to Products &gt; Collections in the admin and open the collection. [L0255.021, L0368.009]</li>
+<li>Under Theme template, change "Default collection" to the new template. [L0255.021, L0368.009]</li>
+<li>Click Save and check the page with View. The content appears on the collection page. Without step 9 the template stays assigned to zero collections and the custom layout never appears. [L0255.021, L0368.009]</li>
+</ol>
+<h3 id="rich-text-and-sections">Rich text and sections</h3>
+<ul>
+<li>Rich text content procedure: in the collection template editor, click the plus icon "Add section" and choose Rich text. Replace the filler text "talk about your brand" with the target keyword, prefixed by a qualifier such as "shop". Paste the edited description into the text box and save. [L0368.008]</li>
+<li>Sections can be stacked on the same template. Individual buttons inside a section can be hidden by hovering over them, or deleted if they are not needed. [L0368.022]</li>
+<li>An "image with text" section places an image next to text. Image height and width, text alignment and animation can be changed. It can split a long collection description into blocks, for example one paragraph per column with an image beside it. [L0368.023]</li>
+</ul>
+<h3 id="manhattan-theme-template-editing">Manhattan theme: template editing</h3>
+<p>Procedure to edit a collection page in the Manhattan theme (Source A):</p>
+<ol type="1">
+<li>Open the Shopify admin. [L0369.001]</li>
+<li>Go to Online Store &gt; Themes. [L0369.001]</li>
+<li>Click Customize and confirm that the Manhattan theme is the active theme. [L0369.001]</li>
+<li>Open the page dropdown at the top and select Collections. [L0369.001]</li>
+<li>Open the default collection template, which is the template used by the collection pages. [L0369.001]</li>
+</ol>
+<ul>
+<li>Breadcrumbs option: shows Home &gt; current collection above the products. It should stay set to show. The option can be set to hide, but hiding it is not recommended. [L0369.003]</li>
+<li>Keep breadcrumb navigation enabled, since it helps both SEO and customer navigation. (Source B, 2021-22, older.) [L0370.001]</li>
+<li>The Collection banner section can show a collection image above the products. Uploading a collection image is not recommended in this layout, because it pushes the product grid and filters further down the page. [L0369.004]</li>
+<li>The Collection banner section has settings for image height, a color scheme and padding. The stock scheme is background 1, with a white background and black text. Gray and accent color schemes are available. Padding moves content up or down. Leave these on the stock values unless a change is needed. [L0369.005]</li>
+<li>The main menu can appear in the sidebar of a collection page, but it is not needed there because the main menu already sits at the top of the store. It can be removed from the sidebar. A different menu can be selected in the same settings if one is needed at the top. [L0369.006]</li>
+</ul>
+<h3 id="description-placement">Description placement</h3>
+<ul>
+<li>Place long collection descriptions below the product grid, not above it, so the products stay above the fold. [L0368.006]</li>
+<li>The description shown above the products is the one left blank at creation and added later. Use it for SEO content. [L0371.014, L1312.009]</li>
+</ul>
+<h2 id="collection-images">Collection images</h2>
+<ul>
+<li>Upload collection cover images directly in Shopify Admin &gt; Products &gt; Collections. This stops Shopify from randomly selecting product images as thumbnails, which would look unprofessional and undermine perceived store legitimacy. [L0101.006]</li>
+<li>A collection without its own image uses the picture of one of its products as the cover. This looks unfinished when the store has few products. Upload a dedicated image to each collection. [L0775.044, L1309.032]</li>
+<li>Upload procedure:
+<ol type="1">
+<li>Go to Products &gt; Collections and search for the collection. [L0775.045]</li>
+<li>Open it and click Add image under the image area. [L0775.045, L1309.032]</li>
+<li>Select the file and click Open. [L0775.045]</li>
+<li>Click Save and check the homepage preview. [L0775.045, L1309.032]</li>
+</ol></li>
+<li>Conflict on the collection banner: outside the Manhattan banner, upload a dedicated image to each collection [L0101.006, L0775.044]. Inside the Manhattan Collection banner, uploading an image is not recommended, because it pushes the grid and filters down [L0369.004].</li>
+</ul>
+<h2 id="collection-page-layout">Collection page layout</h2>
+<h3 id="opening-the-collection-page-editor">Opening the collection page editor</h3>
+<ul>
+<li>To reach the collection layout editor: Shopify admin &gt; Online Store &gt; Themes &gt; Customize. In the editor's top dropdown, switch the page from Homepage to Collections, then pick the Default collection to preview how any collection page looks. [L0890.001, L0103.001, L1010.014]</li>
+<li>Edit theme &gt; change the page view dropdown from Home page to Collections &gt; select Default collection to manage collection navigation. [L0146.012]</li>
+<li>Expand the Product Grid section using its expand or collapse arrow. The Product Grid section controls how products display and where filters appear. [L0103.001, L0890.002]</li>
+<li>By default, a collection page shows every product in that collection, followed by the footer menu and any other sections added to the page. Tag list filters are added on top of this default layout through the Product Grid section. [L0890.012]</li>
+</ul>
+<h3 id="sidebar-and-filter-layout">Sidebar and filter layout</h3>
+<ul>
+<li>A plain grid is the default. It is functional but basic. Adding filters improves usability and shows potential suppliers a scalable store structure. [L0103.002]</li>
+<li>Sidebar on or off (sources differ, both apply):
+<ul>
+<li>Keep the sidebar and filters from the start on a new store with demo or few products. A few simple filter lists are enough and should be set up early, then extended as more supplier products with more variations arrive. [L0369.017, L1098.011, L1522.008]</li>
+<li>Turn the sidebar off when no filters are needed yet. Go to the collection page section in the theme editor and uncheck "Show sidebar" under the SIDEBAR settings. This removes an empty white column. (Source B, 2021-22, older.) [L0370.001]</li>
+</ul></li>
+<li>Collection sidebar filtering helps visitors narrow products by style or print. [L1098.011]</li>
+<li>Effective filters let shoppers narrow similar products by the attributes they actually search for. Without filters, shoppers struggle to tell similar products apart. (Source B, 2021-22, older.) [L1522.008]</li>
+<li>The Manhattan theme includes filtering by default, so no third-party filter app is needed. Visitors can filter by availability (in stock or out of stock), by minimum and maximum price, and by Types and Vendors. Vendors shows the brand entered when the product was uploaded. [L0369.015]</li>
+<li>Product filters based on product tags need no extra cost. Filtering by metafields usually requires custom code and is more expensive. (Source A, 2024.) [L0666.058]</li>
+<li>Default Types and Vendors blocks can be deleted from the Manhattan sidebar and replaced with custom tag list blocks. The defaults are quick to recreate later if needed. [L0369.018]</li>
+<li>Settings for the Collection Grid Page in the theme editor (Source D 2026) include: Enable side filter menu; Collection settings with options to filter products on the page and set text, pricing and stock colors; and Pagination settings with Enable pagination, Products per page and an option to load all products on a single page. [L1013.013]</li>
+<li>Pagination source conflict: Source D shows the pagination settings in the theme editor [L1013.013]. Source A says pagination on Shopify is usually set in the theme code, so a developer may be needed to show all products on a category page [L0575.022]. Check the theme editor first. If no load-all setting is there, a developer is required.</li>
+</ul>
+<h3 id="utility-bar-and-other-layout-settings">Utility bar and other layout settings</h3>
+<ul>
+<li>Theme editor &gt; Collection pages &gt; Utility bar. Options are Show 'Sort by' dropdown, Show products per page links, Show grid/list view toggle and Show product counts. Collection pages also offer a Products per page value, a Pagination method (such as Jump-to-page) and a collection image banner at the top. These can stay at their defaults during the build phase. (Source B, 2021-22, older.) [L0370.027]</li>
+<li>A collection page lets shoppers buy several different products in one visit, which raises average order value and makes cross-selling easier. It suits products that customers buy in multiples or alongside each other. (Source C.) [L0388.012]</li>
+</ul>
+<h2 id="filter-setup-with-tag-lists">Filter setup with tag lists</h2>
+<h3 id="adding-a-tag-list-filter">Adding a tag-list filter</h3>
+<p>Procedure, merged from the course variants:</p>
+<ol type="1">
+<li>Open Shopify admin &gt; Online Store &gt; Themes and open the theme editor. [L0890.002]</li>
+<li>Switch the dropdown at the top from Homepage to Collections and select the Default collection preview. [L0890.002, L0103.004]</li>
+<li>Expand the Product Grid section. [L0103.004, L0890.002]</li>
+<li>Click Add block and choose Tag List. [L0103.004, L0890.002]</li>
+<li>Give the tag list a title, for example "Surfboards by Type", and enter the product tags to filter by, for example shortboards, mid length, longboards, hybrid. [L0103.004, L0890.002, L0103.006]</li>
+<li>Click Save. [L0103.004, L0890.002]</li>
+<li>Go to the live store, open the collection page and refresh it. The filter appears in the left navigation. [L0890.002, L0103.004]</li>
+<li>Repeat steps 4 to 6 for further filter dimensions, for example a "Color" tag list with yellow, red and blue. Drag the new tag list below the existing ones. [L0890.002, L0103.007]</li>
+<li>Click Save and refresh the live collection page to test. [L0890.002, L0103.004]</li>
+</ol>
+<h3 id="manhattan-theme-adding-a-tag-list-filter">Manhattan theme: adding a tag-list filter</h3>
+<ol type="1">
+<li>Open the collection template in the theme editor. [L0369.007]</li>
+<li>In the sidebar section, click Add block and choose Tag list. [L0369.007]</li>
+<li>Give the block a name that describes the filter, such as a product type or a color. [L0369.007]</li>
+<li>Enter the tag names separated by a comma followed by a space, using exactly the same spelling as the tags on the products. [L0369.007]</li>
+<li>Click Save. [L0369.007]</li>
+<li>Drag the block to the top of the sidebar if it should appear first. [L0369.007]</li>
+<li>Click Save again. [L0369.007]</li>
+</ol>
+<h3 id="updating-filters-after-new-products-arrive">Updating filters after new products arrive</h3>
+<ol type="1">
+<li>Review newly uploaded products. [L0146.014]</li>
+<li>Add relevant tags to each product, for example surfboard type, color or skill level. [L0146.014]</li>
+<li>Return to the collection page in the theme editor. [L0146.014]</li>
+<li>Expand tag lists in the collection sidebar based on the tags you added. [L0146.014]</li>
+<li>Save changes. [L0146.014]</li>
+</ol>
+<h3 id="how-filters-behave">How filters behave</h3>
+<ul>
+<li>A tag list block is not shown in the sidebar if none of the products in the store carries any of its tags. It appears once at least one product carries one of those tags. [L0369.009, L0103.003]</li>
+<li>Shopify only displays tags as filter options if products with those tags exist in the collection. Tags without matching products do not appear, even if they are defined. [L0103.003, L0890.003]</li>
+<li>Multiple tag lists combine. Selecting one value from each list narrows the results to products that carry both tags. For example, Long Boards AND Blue shows only products with both. [L0103.008, L0890.004]</li>
+<li>Example of stacked filters: selecting "Longboards" then "Blue" displays only products tagged with both. [L0103.008]</li>
+<li>When a visitor selects a filter, only products carrying that tag are shown. The other filter blocks then show only options that exist among the remaining products, so the number of options shrinks as more filters are applied. [L0369.012, L0369.021]</li>
+<li>Visitors can clear a selected filter by unchecking it. This restores the other filter options that were hidden. [L0369.021]</li>
+<li>One product can carry several tags from the same tag list and then appears under every matching option. For example, a yellow surfboard tagged with both mid length and longboard shows under both options in a product type filter. [L0369.019]</li>
+<li>Test case: a product tagged with both a product-type tag and a color tag appeared only when both matching filters were selected. The page then returned only the products carrying both tags, here two products in the same collection. [L0890.013]</li>
+</ul>
+<h3 id="filter-examples">Filter examples</h3>
+<ul>
+<li>A filter block titled "Surfboards by Type" with tags shortboards, mid length, longboards and hybrid appears as clickable options on the left side of the collection page. [L0103.006]</li>
+<li>A filter block titled "Color" with tags yellow, red and blue can sit below the Surfboards by Type filter. Visitors can refine by color after or instead of board type. [L0103.007]</li>
+<li>A color filter can be built as a tag list named Color with yellow, red and blue, each added to the matching products. Choosing yellow limits the page to yellow products and can remove other options, such as a product type the yellow product does not have. [L0369.013]</li>
+<li>A featured filter can be built as a tag list with bestsellers, staff picks, new arrivals and top rated. The tags must already exist on products in the store. [L0369.014]</li>
+</ul>
+<h3 id="what-to-show-on-a-demo-store">What to show on a demo store</h3>
+<ul>
+<li>For a demo store, add only one filter group: filter by product type to match the main menu structure. This shows a scalable structure while keeping the store simple and clean for supplier review. [L0103.009]</li>
+<li>Demo-store scope differs by source. Start with one group by product type [L0103.009] or with a few simple lists [L0369.017]. Extend the lists as more supplier products with more variations are added [L0369.017].</li>
+<li>Working collection filters, even on a small demo store, signal to suppliers reviewing it that the store has a complete, usable setup. Set up basic filters before contacting suppliers. [L0369.022]</li>
+</ul>
+<h3 id="checking-the-storefront">Checking the storefront</h3>
+<ul>
+<li>A newly added tag list may not appear in the theme editor preview after saving. Save, then open the live collection page and refresh it, rather than relying on the preview. [L0890.010, L0369.020]</li>
+<li>A tag list only shows on the storefront once the saved changes are live. After saving tag list changes, reload the live collection page to confirm the filter appears and works. [L0369.020]</li>
+<li>After a product's tags change, the storefront filter may lag briefly. Refresh the live collection page after saving. If the new value is still missing, wait a moment and refresh again before troubleshooting. [L0890.011]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Tag-based collections work by assigning each product a relevant tag and setting the collection to automatically include all products with that matching tag. [L0083.006]</p></li>
+<li><p>Collection filters are based on product tags. Only products with matching tags appear in filter options. [L0146.013]</p></li>
+<li><p>A collection works as a category that lets visitors browse and filter products. Collections are usually organized by product type, brand or another attribute that customers would want to filter by. [L1303.004]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../04-store-build-and-shopify/08-brand-assets-logo-colors-fonts-and-image-production/"><span class="k">&larr; Previous</span><span class="v">Brand assets: logo, colors, fonts and image production</span></a><a class="nx" href="../../04-store-build-and-shopify/10-navigation-and-menus/"><span class="k">Next &rarr;</span><span class="v">Navigation and menus</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Authorization, capture and out-of-Stock handling | Ecommerce Playbook</title>
+<meta name="description" content="- &quot;Authorize&quot; means the bank holds the money. &quot;Capture&quot; means you take it. Only capture after the product is confirmed in stock. - Use manual capture (you take the money yourself) while your supplier&#x27;s stock is unreliable. - A payment hold lasts ...">
+<link rel="canonical" href="https://dlichters.com/ecom/18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Authorization, capture and out-of-Stock handling | Ecommerce Playbook"><meta property="og:description" content="- &quot;Authorize&quot; means the bank holds the money. &quot;Capture&quot; means you take it. Only capture after the product is confirmed in stock. - Use manual capture (you take the money yourself) while your supplier&#x27;s stock is unreliable. - A payment hold lasts ..."><meta property="og:url" content="https://dlichters.com/ecom/18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../18-legal-tax-banking-and-payments/">18. Legal, tax, banking and payments</a></div><h1>Authorization, capture and out-of-Stock handling</h1><p class="meta">Section 18.14 &middot; 14 of 24 in this chapter &middot; 5 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>"Authorize" means the bank holds the money. "Capture" means you take it. Only capture after the product is confirmed in stock.</li>
+<li>Use manual capture <span class="ex">(you take the money yourself)</span> while your supplier's stock is unreliable.</li>
+<li>A payment hold lasts only 7 days. If you don't capture within 7 days, it cancels by itself.</li>
+<li>If the item is out of stock, don't charge the customer. Cancel the order or ask the customer first.</li>
+</ul>
+</div><nav class="toc"><p class="lab">On this page</p><ol><li><a href="#authorize-only-versus-automatic-capture">Authorize-only versus automatic capture</a></li><li><a href="#setting-up-manual-capture-in-shopify">Setting up manual capture in Shopify</a></li><li><a href="#capture-only-after-stock-is-confirmed">Capture only after stock is confirmed</a></li><li><a href="#core-out-of-stock-workflows">Core out-of-stock workflows</a></li><li><a href="#pre-authorization-workflow">Pre-authorization workflow</a></li><li><a href="#seven-day-authorization-window">Seven-day authorization window</a></li><li><a href="#backorders">Backorders</a></li><li><a href="#split-payment-for-backordered-items">Split payment for backordered items</a></li></ol></nav><article><h2 id="authorize-only-versus-automatic-capture">Authorize-only versus automatic capture</h2>
+<ul>
+<li><strong>Authorize-only</strong> confirms the order and approves the customer's payment method, but <strong>charges nothing</strong>. "Authorize" means the bank checks the card and reserves the money. You <strong>capture</strong> the payment manually, meaning you take the money yourself, to complete the charge once the product is confirmed in stock.</li>
+<li>After checkout, the money is <strong>authorised</strong> (reserved) on the customer's card or PayPal balance, but not yet <strong>captured</strong>. PayPal is an online payment service. Capturing transfers the money to you and sends it to your bank account.</li>
+<li><strong>Manual capture</strong> authorizes the card without charging it. A new store that is still learning which supplier stock is reliable should use manual capture. <strong>Automatic capture</strong> is acceptable once stock is consistently available.</li>
+</ul>
+<h2 id="setting-up-manual-capture-in-shopify">Setting up manual capture in Shopify</h2>
+<p>Shopify is the software that runs your online store. Follow these steps to turn on manual capture.</p>
+<ol type="1">
+<li>Go to <strong>Settings &gt; Payments</strong></li>
+<li>Scroll to <strong>Payment capture</strong></li>
+<li>Select <strong>Manually capture payment for orders</strong></li>
+<li>Keep the box <strong>Send a warning email when authorizations are close to expiring</strong> checked. This warns you before an authorization runs out.</li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<h2 id="capture-only-after-stock-is-confirmed">Capture only after stock is confirmed</h2>
+<ul>
+<li>Use <strong>manual capture</strong>, especially in <strong>high-ticket dropshipping</strong>. Dropshipping means your supplier ships the product straight to the customer, so you never hold stock yourself. High-ticket means expensive products. Products may be out of stock in this model.</li>
+<li>Capture only after you have <strong>confirmed stock</strong> with the supplier and <strong>placed the official order</strong>. Refunding a captured payment to the customer can take <strong>several days</strong>.</li>
+<li>Capture the customer's payment only after you have confirmed the item will ship. This avoids charging customers for orders you cannot fulfill.</li>
+<li><strong>Do not capture</strong> payment in Shopify until stock is confirmed and the order has been checked for <strong>risk warnings</strong>, which are alerts that an order may be fraud <span class="ex">(a scam or stolen card)</span>. Medium- and high-risk orders must be <strong>escalated</strong>, meaning passed up, to the business owner first.</li>
+<li>Authorize the customer's card at checkout, but <strong>charge it only after the supplier confirms stock</strong>. This way the customer is not billed for an item that cannot be delivered. The <strong>VA</strong> (virtual assistant, a helper who works for you remotely) then captures the charge in Shopify.</li>
+</ul>
+<h2 id="core-out-of-stock-workflows">Core out-of-stock workflows</h2>
+<p><strong>Protecting against out-of-stock orders</strong></p>
+<ol type="1">
+<li>Set your payment settings to <strong>authorize</strong> the customer's card <strong>without capturing</strong> the charge</li>
+<li>When an order comes in, <strong>confirm with the supplier</strong> that the item is in stock</li>
+<li><strong>Capture</strong> the payment in the <strong>Shopify admin</strong> (the back office where you manage orders)</li>
+<li><strong>Ship</strong> the order. This is when the customer is charged.</li>
+</ol>
+<p><strong>Payment capture when stock is uncertain (Shopify payment settings)</strong></p>
+<ol type="1">
+<li>In the Shopify payment settings, set the payment mode to <strong>authorize</strong>. The card is checked for the order total <strong>without taking the money</strong>.</li>
+<li>When the customer orders, the order goes through and you receive the usual notification</li>
+<li><strong>Contact the supplier</strong> and confirm the product is in stock and can ship right away</li>
+<li>If it is in stock, open the order in the Shopify admin and <strong>capture the payment</strong>, which sends the money to you</li>
+<li>If it is not in stock, <strong>email the customer</strong> and ask whether they want to wait or cancel</li>
+</ol>
+<h2 id="pre-authorization-workflow">Pre-authorization workflow</h2>
+<p><strong>Using pre-authorization instead of charging immediately</strong></p>
+<p>"Pre-authorization" means checking that the card has the money and holding it, without charging it yet.</p>
+<ol type="1">
+<li>When an order is placed, <strong>pre-authorize</strong> the card so the funds are confirmed as available, <strong>without charging</strong> the customer</li>
+<li><strong>Check with the supplier</strong> that the product is in stock</li>
+<li>If it is in stock, <strong>capture</strong> the payment, which charges the customer, and process the order</li>
+<li>If it is out of stock, <strong>cancel the order</strong> so the customer is never charged and no refund is needed</li>
+</ol>
+<p><strong>Order confirmation and pre-authorization rule</strong></p>
+<ul>
+<li>When an order is placed, the customer gets an <strong>order confirmation email</strong>, and the card is <strong>only pre-authorised, not charged</strong></li>
+<li>The store checks stock and charges the card only when the item is available for <strong>immediate shipment</strong>, within <strong>5 business days</strong>. A business day is a working day, not a weekend or holiday.</li>
+<li>If the item is on <strong>back-order</strong>, meaning it is sold but not yet in stock, the pre-authorisation is <strong>voided</strong> (cancelled, as if it never happened). The customer is then contacted by email about alternatives.</li>
+</ul>
+<p><strong>What to do when stock is not available</strong></p>
+<p>Different sources give different actions for an out-of-stock or back-ordered item. Choose the row that matches your situation.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Out of stock within the pre-authorization workflow</td>
+<td><strong>Cancel the order.</strong> The customer is never charged and no refund is needed</td>
+<td></td>
+</tr>
+<tr>
+<td>Stock not confirmed, item not in stock</td>
+<td><strong>Email the customer</strong> and ask whether they want to wait or cancel</td>
+<td></td>
+</tr>
+<tr>
+<td>Item on back-order under the 5-business-day rule</td>
+<td><strong>Void the pre-authorisation</strong> and email the customer about alternatives</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="seven-day-authorization-window">Seven-day authorization window</h2>
+<ul>
+<li>A payment <strong>authorization</strong> (the hold on the money) is valid for <strong>7 days</strong>. If it is not captured within 7 days, it is <strong>cancelled automatically</strong>, and the customer must <strong>re-enter their payment details</strong></li>
+<li>Some credit cards authorize a payment for only about <strong>seven days</strong>, so the authorization may not last through a long delay <span class="ex">(no date given)</span></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Consequence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not captured within 7 days</td>
+<td><strong>Authorization cancelled automatically</strong>; customer must re-enter payment details</td>
+<td></td>
+</tr>
+<tr>
+<td>Some credit cards</td>
+<td>Authorize a payment for only about <strong>seven days</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="backorders">Backorders</h2>
+<ul>
+<li>For a <strong>backorder</strong> (an item sold before it is in stock), check the supplier's <strong>ETA</strong> (estimated arrival date). If the supplier has a reliable ETA of about <strong>two to three weeks</strong>, confirm the backorder with the customer. Capture the payment right away once they confirm they are willing to wait.</li>
+<li>Do not charge the customer's card for a backorder that could last months with no reliable date.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Supplier situation</th>
+<th>Payment action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reliable ETA of about two to three weeks</td>
+<td><strong>Confirm with the customer</strong>, then capture once they agree to wait</td>
+<td></td>
+</tr>
+<tr>
+<td>No reliable date, could last months</td>
+<td><strong>Do not charge the card</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Item on back-order under the 5-business-day rule</td>
+<td><strong>Void the pre-authorisation</strong> (see pre-authorization section)</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="split-payment-for-backordered-items">Split payment for backordered items</h2>
+<p><strong>Splitting a payment through PayPal</strong></p>
+<p>A <strong>split payment</strong> means the customer pays in parts. Here, the customer pays part of the total now and the rest later.</p>
+<ol type="1">
+<li><strong>Confirm the customer's email address</strong></li>
+<li>Send a <strong>PayPal invoice</strong> (a payment request sent by email) to the customer's email, asking for the partial amount</li>
+</ol>
+<ul>
+<li>A basic Shopify plan at <strong>29 per month</strong> did not allow partial payments natively <span class="ex">(built in)</span>. On that plan, the PayPal invoice route was needed.</li>
+</ul>
+</article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../18-legal-tax-banking-and-payments/13-payment-methods-paypal-financing-and-local-options/"><span class="k">&larr; Previous</span><span class="v">Payment methods, PayPal, financing and local options</span></a><a class="nx" href="../../18-legal-tax-banking-and-payments/15-chargebacks-fraud-prevention-and-processor-holds/"><span class="k">Next &rarr;</span><span class="v">Chargebacks, fraud prevention and processor holds</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

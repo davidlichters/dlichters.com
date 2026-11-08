@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chargebacks, fraud prevention and processor holds | Ecommerce Playbook</title>
+<meta name="description" content="- Keep chargebacks (customer reversals of card payments) under 1% of orders to avoid a payout hold. - Shopify can hold 25% of your payout money if you ship orders too slowly. - PayPal can hold your money for up to 180 days for compliance checks ...">
+<link rel="canonical" href="https://dlichters.com/ecom/18-legal-tax-banking-and-payments/15-chargebacks-fraud-prevention-and-processor-holds/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Chargebacks, fraud prevention and processor holds | Ecommerce Playbook"><meta property="og:description" content="- Keep chargebacks (customer reversals of card payments) under 1% of orders to avoid a payout hold. - Shopify can hold 25% of your payout money if you ship orders too slowly. - PayPal can hold your money for up to 180 days for compliance checks ..."><meta property="og:url" content="https://dlichters.com/ecom/18-legal-tax-banking-and-payments/15-chargebacks-fraud-prevention-and-processor-holds/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../18-legal-tax-banking-and-payments/">18. Legal, tax, banking and payments</a></div><h1>Chargebacks, fraud prevention and processor holds</h1><p class="meta">Section 18.15 &middot; 15 of 24 in this chapter &middot; 26 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Keep chargebacks <span class="ex">(customer reversals of card payments)</span> under <strong>1%</strong> of orders to avoid a payout hold.</li>
+<li>Shopify can hold <strong>25%</strong> of your payout money if you ship orders too slowly.</li>
+<li>PayPal can hold your money for up to <strong>180 days</strong> for compliance checks <span class="ex">(rule checks)</span>.</li>
+<li>Do not ship orders you cannot verify. A <strong>high risk</strong> rating usually means fraud.</li>
+<li>Keep <strong>proof of delivery</strong> for every order.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>PayPal can <strong>hold</strong> (keep back) or <strong>restrict</strong> (limit) your money. Call PayPal, send proof that orders were shipped and delivered, and keep tracking numbers updated for every order.</li>
+<li>Move money out of PayPal <strong>often</strong>. Keep only a small balance there.</li>
+<li>Use <strong>more than one</strong> payment method, so one ban does not freeze all your money.</li>
+<li>Grow sales <strong>slowly</strong>, and never open a payment account in a country where you do not live.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 14 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="chargeback-rates-and-shopify-reserves"><summary><h2>Chargeback Rates and Shopify Reserves</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>Shopify Payments is Shopify's own payment service.</li>
+<li>Shopify Payments places a reserve <span class="ex">(money held back from your payouts, which are the payments sent to you)</span> when your chargeback rate is above <strong>1%</strong>.</li>
+<li>A chargeback is when a customer asks their bank to reverse a payment. The chargeback rate is the share of your orders that end in a chargeback.</li>
+<li>The reserve holds <strong>10%</strong> of payouts. Keeping the rate under 1% avoids this hold.</li>
+<li>Shopify Settings &gt; Payments &gt; Chargeback monitoring shows your current chargeback rate <span class="ex">(example: 3.81%)</span>.</li>
+<li>The same page shows whether payouts are held in reserve <span class="ex">(example: 10% held due to a high number of chargebacks)</span>. <strong>Check this section</strong> to see whether you are over the threshold.</li>
+<li>Two different holds exist. <strong>Do not confuse them.</strong></li>
+<li>The chargeback-rate reserve holds 10% of payouts and is tied to disputes <span class="ex">(formal challenges by the bank)</span>.</li>
+<li>The reserve payout for slow fulfillment holds 25% of payouts and is tied to delivery speed. Fulfillment means shipping and delivering your orders.</li>
+<li>A reserve payout can hold <strong>25%</strong> of your payout balance <span class="ex">(the money waiting to be paid to you)</span>.</li>
+<li>Shopify may do this when orders are not fulfilled fast enough, for example after about six weeks of slow fulfillment.</li>
+<li>The hold can last <strong>1, 2, 3 or 4 months</strong> depending on the case.</li>
+<li><strong>Shopify Finance &gt; Payouts</strong> shows the payout balance and the reserve.</li>
+<li>The reserve is the part of the payout balance set aside to cover disputes, refunds <span class="ex">(money returned to customers)</span> and chargeback risk <span class="ex">(the chance of a chargeback)</span>.</li>
+<li>Case: a store selling a niche product <span class="ex">(a narrow, specialized product group)</span> had a <strong>four-month</strong> reserve hold on payouts from roughly $30k in revenue, because orders were not fulfilled quickly enough.</li>
+<li>The owner expected a payout of about $32k to $33k once the disputes the store won were recovered.</li>
+<li>Takeaway: slow fulfillment led directly to a long cash freeze.</li>
+<li>Case: a seller with unfulfilled orders had their Shopify Payments account <strong>banned</strong> after about two months, and the whole payout was lost.</li>
+<li>A store with slow fulfillment can lose its payment processing <span class="ex">(taking card payments)</span> completely, not just a portion of payouts.</li>
+<li>A public accusation by a rights holder <span class="ex">(the owner of a brand or copyright)</span> that a seller is a fraud can push loyal buyers to dispute charges with their bank.</li>
+<li><strong>Each dispute</strong> adds to the chargeback rate and its fees.</li>
+<li>Threshold figures differ by source. Shopify Payments uses 1% as the reserve trigger.</li>
+<li>Another source advises keeping the chargeback rate below about 1.5% of transactions.</li>
+<li>Higher rates lead to fines and damage your payment processor profile <span class="ex">(the record a payment company keeps on how risky your store is)</span>.</li>
+<li>Use <strong>1%</strong> as the working target on Shopify Payments.</li>
+<li>Treat 1.5% as the outer limit cited elsewhere.</li>
+<li>Each chargeback can incur an extra processor fee <span class="ex">(a fee from the payment company)</span> of <strong>$15 to $30</strong>, depending on the processor.</li>
+<li><em>Older, 2021-22:</em> A payment processor can hold back money as a reserve, for example an amount such as 60,000 USD, when refunds and chargebacks are high.</li>
+<li>If the high level continues, the processor can <strong>close the account</strong>, and you can no longer take sales.</li>
+<li><em>Older, 2019:</em> A chargeback happens when a customer tells their bank that an order was fraud and the bank reverses the payment.</li>
+<li>Chargebacks are the <strong>main reason payouts get held</strong>.</li>
+</ul>
+</details><details class="part" id="cost-of-a-dispute"><summary><h2>Cost of a Dispute</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Shopify charges a fee of <strong>$15 per chargeback</strong>.</li>
+<li>The full order amount is taken from the seller and returned to the customer.</li>
+<li><strong>Budget for both</strong> the fee and the lost revenue <span class="ex">(set aside money for each)</span> when calculating the cost of a dispute.</li>
+<li>The fight window <span class="ex">(the time you have to respond)</span> for a chargeback is a few weeks, possibly up to about a month.</li>
+<li><strong>Respond within this window</strong> to contest the dispute.</li>
+<li>Chargeback insurance <span class="ex">(a paid policy that covers chargebacks)</span> is <strong>only worth paying</strong> when a single event could ruin the business financially.</li>
+<li>An occasional chargeback does not meet that condition.</li>
+<li>The operator in this example <span class="ex">(the person running the store)</span> chose to keep that money instead of buying the insurance.</li>
+</ul>
+</details><details class="part" id="chargeback-types-and-dispute-response"><summary><h2>Chargeback Types and Dispute Response</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Chargebacks come in two types: fraud with a stolen card, and customer dissatisfaction caused by a store error.</li>
+<li><strong>Each needs a different response.</strong></li>
+<li><em>Older, 2022:</em> Avoid chargebacks caused by store errors through <strong>good customer support</strong>, honest communication and quick responses when problems occur.</li>
+<li><em>Older, 2022:</em> Chargebacks in favor of the customer are hard to reverse after proof of fulfillment.</li>
+<li>Proof of fulfillment includes tracking <span class="ex">(a code showing where the parcel is)</span>, delivery, a five-star review, ID, and FaceTime verification <span class="ex">(a video call check)</span>.</li>
+<li>A chargeback filed for "item not as described" or "fraud" is a different reason code <span class="ex">(the code that says why the bank opened the dispute)</span>.</li>
+<li>That type may require an attorney <span class="ex">(a lawyer)</span> or a small claims action <span class="ex">(a simple court case for small sums)</span>.</li>
+<li><em>Older, 2022:</em> If a customer who received an item files a fraudulent chargeback <span class="ex">(a false claim)</span>, <strong>consult an attorney</strong>.</li>
+<li>A letter from an attorney or a small claims court can recover the money.</li>
+<li>If a customer files a chargeback after a shipment, <strong>stop the shipment</strong> with the carrier <span class="ex">(the shipping company)</span> first.</li>
+<li>Then <strong>submit evidence</strong> to Shopify.</li>
+<li>Then contact the customer to check whether the chargeback was intentional.</li>
+<li>Returning stock to the supplier <span class="ex">(the company that provides your products)</span> is a cost.</li>
+<li>It is still better than delivering to a fraudulent customer.</li>
+</ul>
+<p><strong>Chargeback response procedure</strong></p>
+<ol type="1">
+<li><strong>Stop the shipment</strong> with the shipping company.</li>
+<li><strong>Submit evidence</strong> to Shopify support.</li>
+<li><strong>Contact the customer</strong> to confirm whether the charge was intentional or a misunderstanding.</li>
+<li>If it was a misunderstanding, the customer can reverse the chargeback with their bank, and the shipment continues.</li>
+<li>If the customer does not respond, or it was fraud, <strong>arrange the return</strong> of the stock to the supplier.</li>
+</ol>
+</details><details class="part" id="fraud-analysis-and-risk-levels"><summary><h2>Fraud Analysis and Risk Levels</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Shopify Payments includes built-in fraud analysis <span class="ex">(automatic checks for cheating)</span> at <strong>no extra cost</strong>.</li>
+<li>It flags suspicious orders as "high risk", meaning Shopify suspects the order may be fraudulent.</li>
+<li>The information needed to review the order is on the same order page.</li>
+<li><em>Older, 2020:</em> Shopify includes built-in fraud detection and risk protection.</li>
+<li>A separate fraud protection service is <strong>optional</strong> and not required at launch.</li>
+<li>Any order that does not pass Shopify's checks should be verified with the customer before shipping.</li>
+<li>Sources describe the rating differently.</li>
+<li>One describes three levels: low, medium and high.</li>
+<li>Another describes the default tool as rating each order as high or low risk.</li>
+<li>That tool is the primary tool for fraud prevention <span class="ex">(stopping cheating before it happens)</span> and chargeback control.</li>
+<li><strong>Read the rating</strong> shown on the order and apply the handling below.</li>
+<li>Handling by risk level (2024):
+<ul>
+<li><strong>Low:</strong> usually safe.</li>
+<li><strong>Medium:</strong> verify with research on the customer's email or phone and the shipping address.</li>
+<li><strong>High:</strong> almost always fraud, best canceled without verification.</li>
+</ul></li>
+<li><em>Older, 2022:</em> <strong>High-risk orders</strong> are usually fraud, so check them before shipping.</li>
+<li>Sources differ on high-risk orders.</li>
+<li>The 2024 guidance cancels them without verification.</li>
+<li>The 2022 advice checks them before shipping.</li>
+<li>Both agree that an order that cannot be verified should <strong>not ship</strong>.</li>
+<li><em>Older, 2019:</em> A third-party <span class="ex">(from another company)</span> screening tool... (see the screening section below).</li>
+<li>Medium-risk order check:
+<ol type="1">
+<li><strong>Read</strong> the fraud analysis reason shown in Shopify.</li>
+<li><strong>Contact the customer</strong> to verify why the shipping address differs from their location.</li>
+<li>Optionally <strong>research</strong> the customer's email and phone number online to confirm they match.</li>
+<li><strong>Cancel the order</strong> if verification fails.</li>
+</ol></li>
+<li><strong>Do not automatically decline</strong> orders that fail an AVS (Address Verification System, a check that compares the billing address and postal code with the bank's records) postal code check.</li>
+<li>Treat the mismatch <span class="ex">(two details that do not match)</span> as one signal, meaning one clue and not proof.</li>
+<li>Review the Shopify Payments fraud analysis first.</li>
+<li>Reserve automatic cancellation for orders rated high risk.</li>
+<li><em>Older, 2019:</em> A billing address <span class="ex">(the address on the buyer's card)</span> that differs from the shipping address <span class="ex">(where the parcel goes)</span> is <strong>not proof of fraud</strong> on its own.</li>
+<li>Many legitimate buyers bill a business address and ship elsewhere.</li>
+<li>Treat the mismatch as one signal to combine with others, not as a reason to cancel alone.</li>
+<li><em>Older, 2021:</em> Shopify Payments can hold a first high-value order for up to <strong>120 days</strong> when the billing and delivery addresses differ.</li>
+<li>In one case the hold applied to a 4,700 dollar order.</li>
+<li><strong>Contact the customer</strong> for an alternative payment before fulfilling.</li>
+<li><em>Older, 2021:</em> Handling a payment hold on an order with mismatched addresses:
+<ol type="1">
+<li><strong>Contact the customer</strong> and confirm the order details.</li>
+<li><strong>Ask the customer</strong> for an alternative payment method, such as PayPal.</li>
+<li>If the customer cannot pay another way, <strong>refund and cancel</strong>.</li>
+<li><strong>Ask the payment provider</strong> for the reason and whether there is a threshold for address mismatch holds.</li>
+</ol></li>
+<li><em>Older, 2021:</em> When PayPal holds a payment, <strong>ask PayPal for the reason</strong>.</li>
+<li>Check whether the account is new and whether a tracking number is required.</li>
+</ul>
+</details><details class="part" id="verifying-suspicious-orders"><summary><h2>Verifying Suspicious Orders</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><em>Older, 2019:</em> Fraud check for a suspicious order:
+<ol type="1">
+<li><strong>Look for red flags</strong> (warning signs) such as fake-looking names, email addresses or phone numbers.</li>
+<li>Red flags also include an order far above your average order value <span class="ex">(the average amount per order)</span>.</li>
+<li>Another red flag is an IP location <span class="ex">(where the buyer's internet address points)</span> that does not match the billing or shipping address.</li>
+<li>If you are still unsure, <strong>call the customer</strong> using the phone number on the order.</li>
+<li><strong>Ask about the mismatch</strong>, for example the shipping state, billing state and IP location.</li>
+<li>Listen to whether the answers are consistent.</li>
+<li><strong>Cancel the order</strong> if it is clearly fraudulent or the verification is not convincing.</li>
+</ol></li>
+<li><em>Older, 2021:</em> If an order triggers a fraud warning, <strong>verify it before shipping</strong>.</li>
+<li>To verify: find the buyer online, check the phone number and IP address, and call the buyer.</li>
+<li><strong>Cancel any order</strong> that cannot be verified.</li>
+<li>Never accept wires <span class="ex">(direct bank transfers)</span> or payments outside Shopify.</li>
+<li><em>Older, 2022:</em> Verify a suspicious order:
+<ol type="1">
+<li><strong>Check the risk ranking</strong> that Shopify Payments assigns.</li>
+<li><strong>Google the shipping address</strong> and check whether the customer's name is linked to it.</li>
+<li><strong>Call the number</strong> given on the order.</li>
+<li>Fraudsters <span class="ex">(people who commit fraud)</span> usually do not answer, or the number is fake.</li>
+</ol></li>
+<li><em>2023:</em> Handling a flagged high-risk order:
+<ol type="1">
+<li><strong>Call the customer</strong> to find out why the order was flagged.</li>
+<li><strong>Verify identity</strong> and order details.</li>
+<li><strong>Process the order</strong> only once the risk is resolved.</li>
+<li><strong>Decline the order</strong> if the customer cannot be verified.</li>
+</ol></li>
+<li><em>Older, 2019:</em> An order far above your average order value is a fraud warning sign.</li>
+<li>Example: a $12,000 order when the average sale is about $500.</li>
+<li><strong>Check such an order</strong> before it is fulfilled.</li>
+<li><em>Older, 2019:</em> An order with a fake-looking name and an IP address from a country known as a common origin of online scams should be canceled if the suspicion is clear.</li>
+<li><strong>Cancel when the red flags are obvious</strong> and verification cannot resolve them.</li>
+</ul>
+</details><details class="part" id="scam-patterns-and-red-flags"><summary><h2>Scam Patterns and Red Flags</h2><span class="pm">2 min</span></summary>
+<ul>
+<li><strong>Check payments</strong> (paper checks) and wire payment requests carry a high fraud risk.</li>
+<li><strong>Verify payments</strong> with the customer before goods are released.</li>
+<li>Wire transfers <span class="ex">(direct bank transfers)</span> are legitimate for B2B orders <span class="ex">(business-to-business sales)</span>, government entities and institutional purchases such as schools.</li>
+<li>The scam pattern is an unsolicited buyer <span class="ex">(one who contacts you uninvited)</span> who makes an unusual request.</li>
+<li>Unusual requests include: shipping to an unexpected country, using a freight forwarder <span class="ex">(a company that moves goods for a buyer)</span>, or purchasing on behalf of someone else.</li>
+<li>Another unusual request is mentioning an atypical <span class="ex">(unusual)</span> payment method upfront.</li>
+<li><strong>Decline international wire transfers</strong> from unverified buyers.</li>
+<li>They carry <strong>over 99%</strong> probability of fraud.</li>
+<li>Genuine customer inquiries focus on stock availability and delivery timeline, not payment methods.</li>
+<li>If any hesitation arises about a wire request from an unknown buyer, refuse the order.</li>
+<li>Overpayment scam example: a buyer requests a $20,000 wire transfer but sends $40,000, then claims it was an accident and asks for the overage <span class="ex">(the extra amount)</span> back.</li>
+<li>After you refund, the original wire is reversed within <strong>2-3 days</strong> because it came from a fraudulent account.</li>
+<li>This leaves your account short by the full amount.</li>
+<li><strong>Always assume this pattern is fraudulent</strong> and refuse such requests.</li>
+<li><em>Older, 2021:</em> Large overseas orders <span class="ex">(from other countries)</span> that offer to pay shipping at double the product price are likely scams.</li>
+<li><strong>Verify the buyer's identity</strong> and organization before accepting such an order.</li>
+<li><em>Older, 2020:</em> Large orders from new buyers, such as a university purchase on 30-day terms <span class="ex">(the buyer pays 30 days after the order)</span>, should be verified before they are accepted.</li>
+<li>A safer approach is to have the supplier take the risk and pay a finder's fee <span class="ex">(a fee for bringing in a deal)</span> or commission <span class="ex">(a share of each sale)</span> of <strong>about 10% to 15%</strong>.</li>
+<li><em>Older, 2021:</em> Accepting orders by email from unknown customers who want to avoid Shopify checkout is a scam pattern.</li>
+<li><strong>Delete such requests.</strong></li>
+<li><em>Older, 2021:</em> <strong>Do not ship to addresses in Dubai.</strong></li>
+<li>Do not allow sales outside your store's sales region.</li>
+<li>Emails from buyers asking for Dubai delivery are often scams designed to cause losses.</li>
+<li><em>Older, 2019:</em> Red flags for a suspicious order include fake-looking names, email addresses or phone numbers.</li>
+<li>They also include an order far above your average order value.</li>
+<li>And they include an IP location that does not match the billing or shipping address.</li>
+<li><em>Older, 2019:</em> When red flags appear together with a fake-looking name and an IP address from a high-scam country <span class="ex">(a country known for many online scams)</span>, <strong>cancel if verification fails</strong>.</li>
+</ul>
+</details><details class="part" id="fraud-screening-tools-and-fees"><summary><h2>Fraud Screening Tools and Fees</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Shopify Payments fraud protection costs <strong>1.2%</strong> of order value, for example $12 on a $1,000 order.</li>
+<li>It reimburses <span class="ex">(pays back)</span> chargebacks from fraud on covered orders.</li>
+<li><em>Older, 2018:</em> <strong>Without paying extra</strong>, Shopify flags high-risk orders.</li>
+<li>You can review those orders and decide to process or cancel them yourself.</li>
+<li>Paying for fraud protection means fraudulent orders are refunded.</li>
+<li>Fraud insurance services such as Signifyd or ClearSale <span class="ex">(companies that check orders for fraud)</span> charge a percentage on each order, for example around <strong>1%</strong>.</li>
+<li>Include this fee in the net profit calculation <span class="ex">(your profit after all costs)</span> if you use the service.</li>
+<li><em>Older, 2022:</em> Fraud screening apps such as ClearSale typically charge a percentage of the sale.</li>
+<li>If an approved order turns out to be fraud, the provider <strong>refunds the money</strong>.</li>
+<li>This makes it a guarantee against chargebacks.</li>
+<li><em>Older, 2021-22:</em> ClearSale is a fraud-screening tool that reviews each order before you act on it.</li>
+<li>Early in a business it can be used on every order.</li>
+<li>You follow its decision before fulfilling or charging anything.</li>
+<li>Policy for stores that already screen every order: <strong>run every order</strong> through an outside fraud-screening service such as ClearSale before forwarding it to a supplier.</li>
+<li>Orders are only sent to suppliers after they pass the check.</li>
+<li><em>Older, 2019:</em> <strong>Use the built-in fraud protection by default</strong>, because keeping payment handling close to the payment source makes it simpler and easier to manage.</li>
+<li>Use a third-party screening tool only when fraud is a real, recurring pattern in your orders.</li>
+<li>Sources differ on screening every order.</li>
+<li>Use the built-in tool by default and a third-party tool only when fraud is a recurring pattern.</li>
+<li>Use screening on every order, as in, for stores whose supplier process depends on passing the check.</li>
+<li>In both cases the choice follows order volume and fraud pattern.</li>
+<li><em>Older, 2019:</em> A third-party fraud screening tool is worth considering when you see a pattern of fake names, fake email addresses, fake phone numbers, or messy shipping and billing details.</li>
+<li><strong>Compare rates</strong>, since the tools charge different percentages, and choose based on your order volume.</li>
+<li><em>Older, 2019:</em> The built-in fraud protection was sufficient for the stores described, so a separate fraud app was not used.</li>
+<li><em>Older, 2020:</em> The Fraud Prevention App is named as a resource in a December 2020 coaching call <span class="ex">(a live guidance session)</span> for screening orders against fraud.</li>
+<li>The source names it but does not describe how to set it up.</li>
+<li><em>Older, 2020:</em> Fraud protection tools are the right answer to fears about large fraudulent orders, such as a 1,000-dollar order that turns out to be fraud.</li>
+<li>With these tools in place, the risk of expensive products is manageable.</li>
+<li>Settings &gt; Payments &gt; Fraud prevention: <strong>keep CVV verification on</strong> to reduce credit and debit card fraud.</li>
+<li>CVV is the 3-digit security code on the card.</li>
+<li>This example also shows Payment capture method <span class="ex">(when the money is actually taken)</span> and Payment method customizations <span class="ex">(changes to which payment options buyers see)</span>.</li>
+<li>Both stay at default at the foundation stage <span class="ex">(the first setup stage)</span>.</li>
+</ul>
+</details><details class="part" id="paypal-holds-freezes-and-rolling-reserves"><summary><h2>PayPal Holds, Freezes and Rolling Reserves</h2><span class="pm">5 min</span></summary>
+<ul>
+<li>PayPal <span class="ex">(an online payment service)</span> can hold funds <span class="ex">(money)</span> for up to <strong>180 days</strong> for compliance checks <span class="ex">(rule checks)</span>.</li>
+<li>Exceeding 180 days requires proof of suspicious activity, which is very difficult to trigger.</li>
+<li>Case: a seller accumulated <strong>$324,000</strong> on a PayPal account held for exactly 180 days due to a compliance review.</li>
+<li>The full amount was released after the hold period.</li>
+<li>Without capital <span class="ex">(money to work with)</span> during that time, operations were strained.</li>
+<li>If PayPal freezes funds for compliance and you need working capital for fulfillment, your <strong>only options</strong> are: taking a credit loan, finding a personal loan from a friend, or refunding customers.</li>
+<li>There is no other mechanism to access frozen funds.</li>
+<li>PayPal accounts can have <strong>$2,000</strong> automatically deducted if the processor detects misinformation or policy violations claimed online.</li>
+<li>This is a recently introduced rule.</li>
+<li>PayPal processes <strong>30-35%</strong> of typical ecommerce store transactions.</li>
+<li>Reducing this dependency <span class="ex">(relying on one payment method)</span> is strategic due to recent policy tightening.</li>
+<li><em>Older, 2018:</em> PayPal often freezes an account when sales suddenly grow and asks for business documentation.</li>
+<li>Expect this as a normal event once volume <span class="ex">(the number of sales)</span> rises.</li>
+<li><em>Older, 2018:</em> After a PayPal account is unlocked, PayPal may apply a rolling reserve <span class="ex">(a share of each new payment held back for a set time)</span> of <strong>10 percent</strong> to new orders.</li>
+<li>That money is held for 90 days before release.</li>
+<li>Example: on a 1,000 dollar order, 100 dollars are held back for 90 days before that money is released.</li>
+<li><em>Older, 2022:</em> PayPal can hold funds for long periods on new accounts with high sales.</li>
+<li>It may attach a rolling reserve to established accounts.</li>
+<li><strong>Keep PayPal as one payment option</strong> rather than the only method.</li>
+<li>A share of buyers prefer it, and it increases total revenue.</li>
+<li>PayPal can hold payments at the start of a store's sales.</li>
+<li>It can also apply a second hold, called a delivery hold, until the product is delivered.</li>
+<li><strong>Money is only released after delivery</strong>, so plan cash flow <span class="ex">(the timing of money in and out)</span> with these holds in mind.</li>
+<li>PayPal can hold funds from an order for up to <strong>21 days</strong> when the account has processed few transactions.</li>
+<li><strong>Expect delayed payouts</strong> from a new PayPal account with little history.</li>
+<li>PayPal can hold funds for up to 21 days... Shopify fraud protection: see above.</li>
+<li>PayPal may lock accounts and hold funds, sometimes for <strong>two weeks or more</strong>, even after a large sale.</li>
+<li>Plan for this risk, because it is not a question of whether it happens but when.</li>
+<li>PayPal can hold funds in an account when orders look suspicious.</li>
+<li>In one case the amount held reached <strong>$75,000</strong> for up to a year before release.</li>
+<li>Enabling auto sweep <span class="ex">(automatic transfer of money to your bank)</span> on a business PayPal account reduces the risk of money getting stuck.</li>
+<li>Auto sweep does not eliminate holds.</li>
+<li>PayPal can impose a withdrawal limit <span class="ex">(a cap on how much you can take out)</span>.</li>
+<li>In this example, the threshold was <strong>18,000 EUR or USD</strong>: more than that could not be withdrawn in one go, and the cap applied per month.</li>
+<li>To lift it, register a tracking app with PayPal to show the business is legitimate.</li>
+<li>PayPal may withhold funds from stores without tracking numbers.</li>
+<li><em>Older, 2021-22:</em> The PayPal account should be connected to the <strong>primary business email</strong>, not a personal one.</li>
+<li>If details such as name, address or email differ between the store, PayPal and other platforms, PayPal may freeze the account.</li>
+<li>Logging into Shopify through a VPN <span class="ex">(a tool that hides your real internet location)</span> made the platform detect a login from two distant locations in a short time.</li>
+<li>That triggered a fraud check.</li>
+<li>The first payout was withheld for <strong>three months</strong>, which is very damaging to a business with high-ticket orders <span class="ex">(expensive products)</span>.</li>
+<li><strong>Avoid logging into Shopify through a VPN</strong> and use a separate browser for admin work <span class="ex">(store management tasks)</span> instead.</li>
+<li>When a payment processor withholds a payout, you may need to prove the item was delivered to get the funds released.</li>
+<li>Escalating <span class="ex">(raising the issue to a higher support level)</span> with support may not speed this up.</li>
+<li>So <strong>keep delivery proof for every order</strong>.</li>
+<li><em>Older, 2021-22:</em> Processing payments across borders, such as a US store paying out to a bank account in another country, goes against the terms of payment gateways <span class="ex">(the payment services' rules)</span> like PayPal and Shopify Payments.</li>
+<li>They can withhold your funds for <strong>90 to 120 days</strong>.</li>
+<li>This is a serious problem for dropshipping <span class="ex">(selling products that a supplier ships directly to the customer)</span>.</li>
+</ul>
+<p><strong>Hold durations at a glance</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Hold</th>
+<th>Duration or amount</th>
+<th>Trigger</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliance review, PayPal</td>
+<td>Up to 180 days; beyond that requires proof of suspicious activity</td>
+<td>Compliance check</td>
+<td></td>
+</tr>
+<tr>
+<td>New PayPal account with few transactions</td>
+<td>Up to 21 days</td>
+<td>Little transaction history</td>
+<td></td>
+</tr>
+<tr>
+<td>Volume jump, PayPal</td>
+<td>7 or 30 days of payout delay</td>
+<td>Sudden volume increase</td>
+<td></td>
+</tr>
+<tr>
+<td>Rolling reserve after unlock, PayPal</td>
+<td>10% of new orders held 90 days</td>
+<td>Account unlocked</td>
+<td></td>
+</tr>
+<tr>
+<td>Rolling hold, PayPal</td>
+<td>21-day rolling hold</td>
+<td>Monthly volume about $30k-40k</td>
+<td></td>
+</tr>
+<tr>
+<td>Hold after sudden growth, PayPal</td>
+<td>Release 10-20 days after accepted proof</td>
+<td>Growth without proof of shipment</td>
+<td></td>
+</tr>
+<tr>
+<td>Suspicious-order hold, PayPal</td>
+<td>Up to $75,000 held for up to a year</td>
+<td>Orders look suspicious</td>
+<td></td>
+</tr>
+<tr>
+<td>Large-sale hold, PayPal</td>
+<td>Two weeks or more</td>
+<td>Large sale</td>
+<td></td>
+</tr>
+<tr>
+<td>First high-value order, Shopify Payments</td>
+<td>Up to 120 days</td>
+<td>Billing and delivery addresses differ</td>
+<td></td>
+</tr>
+<tr>
+<td>Cross-border payout, processors</td>
+<td>90 to 120 days</td>
+<td>Payout to a bank in another country</td>
+<td></td>
+</tr>
+<tr>
+<td>Stripe <span class="ex">(another payment company)</span> hold</td>
+<td>About 30 days, extendable by 30 days</td>
+<td>Dispute rate keeps rising</td>
+<td></td>
+</tr>
+<tr>
+<td>Account with high volume, new</td>
+<td>180 days</td>
+<td>Sudden high volume after adding PayPal</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Sales growth from about 200 to 300 USD per day to <strong>5,000 USD per day</strong> is a typical trigger for holds.</li>
+<li>Processors hold funds to protect themselves from unfulfilled orders <span class="ex">(orders not yet shipped)</span>.</li>
+<li>So growth should be <strong>matched with proof of delivery</strong>.</li>
+<li>A PayPal rolling hold released funds up to about 15,000 USD to the bank.</li>
+<li>It held the amount above that for a set period.</li>
+<li>The release limit rose from about 15,000 USD to 20,000 USD, then 30,000 USD.</li>
+<li>This happened with consistent volume and a good dispute history <span class="ex">(few disputes)</span>.</li>
+<li>A seller at about 30,000 to 40,000 USD in monthly PayPal volume had about 40,000 USD held on a <strong>21-day rolling hold</strong>.</li>
+<li>See the Hong Kong case in the processor section.</li>
+<li>Case: a new store with traditional merchant accounts <span class="ex">(card accounts from a bank)</span> later added PayPal.</li>
+<li>Within a short time it processed about $50,000 in sales.</li>
+<li>PayPal flagged the account as high risk and held the balance for <strong>180 days</strong>.</li>
+<li><em>Older, 2018, PayPal:</em> PayPal account holds can start at a few thousand dollars.</li>
+<li>The volume at which holds appear varies by platform.</li>
+<li>(See the scaling section for the volume guidance.)</li>
+</ul>
+</details><details class="part" id="resolving-paypal-holds-and-restrictions"><summary><h2>Resolving PayPal Holds and Restrictions</h2><span class="pm">3 min</span></summary>
+<ul>
+<li><em>Older, 2018:</em> To resolve a PayPal account <strong>hold</strong> (PayPal keeps your money for now), <strong>call repeatedly</strong> until you reach a useful representative <span class="ex">(a support agent who can decide)</span>. Explain that you run an e-commerce business <span class="ex">(you sell products online)</span>.</li>
+<li><em>Older, 2018:</em> Emails and live chat were <strong>not effective</strong>.</li>
+<li><em>Older, 2019:</em> Recovering a <strong>locked</strong> PayPal account <span class="ex">(a locked account cannot send or receive money until PayPal reopens it)</span>:
+<ol type="1">
+<li><strong>Send</strong> PayPal the proof of delivery <span class="ex">(proof the customer received the order)</span> and any other documents they request.</li>
+<li><strong>Call</strong> PayPal directly, since email responses are slow and impersonal.</li>
+<li><strong>Keep calling</strong> and speaking with different representatives, because a later call can reverse an earlier decision.</li>
+<li><strong>Provide</strong> whatever documents are requested until the account is reopened.</li>
+</ol></li>
+<li><em>Older, 2021:</em> When PayPal holds a payment, <strong>ask PayPal for the reason</strong>.</li>
+<li><em>Older, 2021:</em> Check whether the account is new and whether a <strong>tracking number</strong> is required <span class="ex">(a tracking number is a code that shows where a package is)</span>.</li>
+<li><em>Older, 2022:</em> If a PayPal account is <strong>suspended</strong> (temporarily shut off), <strong>keep the account under follow-up</strong> and contact PayPal regularly. Some suspended accounts are restored after reaching the right person.</li>
+<li><em>Older, 2022:</em> Meanwhile, <strong>keep other payment methods running</strong>, such as Shop Pay, Apple Pay, Google Pay and Klarna <span class="ex">(other ways customers can pay)</span>.</li>
+<li><em>Hold procedure, Source C:</em> Procedure when PayPal places a hold on sales:
+<ol type="1">
+<li><strong>Connect</strong> a tracking app (TrackShow was named) to PayPal and the store. Tracking numbers are then sent automatically when orders ship.</li>
+<li>When a hold appears, <strong>provide proof of shipment</strong> for the sample transactions PayPal requests. Examples are a supplier invoice <span class="ex">(the bill from your supplier)</span>, tracking information or a shipping label.</li>
+<li><strong>Expect the release</strong> after about <strong>10 to 20 days</strong> once proof is accepted.</li>
+<li><strong>Check</strong> the PayPal account regularly and <strong>resolve disputes early</strong> (a dispute is when a customer asks their payment company to take money back) to protect the account.</li>
+</ol></li>
+<li>PayPal can <strong>permanently restrict</strong> a dropshipping account. Dropshipping means you sell products that a supplier ships directly to the customer.</li>
+<li>PayPal may ask for <strong>fulfillment proof</strong> (proof the supplier shipped the order) and <strong>delivery proof</strong>. Sellers usually get these from their supplier.</li>
+<li>Sending these documents <strong>does not guarantee</strong> the account is restored.</li>
+<li>Recovering a <strong>restricted</strong> PayPal account:
+<ol type="1">
+<li><strong>Send</strong> the fulfillment proof and delivery proof from the supplier when PayPal asks for them.</li>
+<li><strong>Verify</strong> the PayPal account <span class="ex">(prove your identity)</span> with the registered company details.</li>
+<li><strong>Keep syncing</strong> tracking numbers for every order. Syncing means keeping them matched automatically.</li>
+<li><strong>Stay in contact</strong> with PayPal. Ask for the specific reason for the restriction, because some reviews are made by automated systems that a conversation can override.</li>
+<li>At the same time, <strong>open a second PayPal account</strong> with a different email address and verify it.</li>
+</ol></li>
+<li>Step 5 conflicts with the advice on replacement accounts below. Both apply to different situations.</li>
+<li>The second account in step 5 is a <strong>parallel option</strong> (used at the same time as the first account) during a restriction.</li>
+<li>The replacement after a ban should <strong>wait until the cause is fixed</strong>.</li>
+<li>Around 300 orders produced only <strong>one</strong> PayPal dispute. It was answered with a tracking number and documents.</li>
+<li><strong>Missing a registered company</strong> was given as a cause of restrictions. A registered company is a business officially recorded with the government.</li>
+<li>PayPal accounts were verified with the registered company details. In the example, the company was a UK Ltd. (a limited company registered in the United Kingdom).</li>
+<li>Not registering a company and not verifying the PayPal account led to about <strong>15,000 USD</strong> being blocked.</li>
+<li>Registering the company and verifying the account <strong>released the funds</strong>.</li>
+</ul>
+</details><details class="part" id="tracking-sync"><summary><h2>Tracking Sync</h2><span class="pm">1 min</span></summary>
+<p>Tracking sync means keeping tracking numbers matched to your orders automatically.</p>
+<ul>
+<li>Not <strong>updating tracking numbers</strong> on PayPal for each order is a likely trigger for restrictions. PayPal needs evidence that orders are being fulfilled <span class="ex">(shipped and delivered)</span>.</li>
+<li>Apps such as tracky.pay <strong>sync tracking numbers automatically</strong> from a supplier account like CJ Dropshipping to PayPal.</li>
+<li>With these apps, every new order gets its tracking number <strong>without manual entry</strong> (without typing it by hand).</li>
+<li><strong>Connect</strong> a tracking app (TrackShow was named) to PayPal and the store. Tracking numbers are then sent automatically when orders ship.</li>
+<li>To lift a PayPal <strong>withdrawal limit</strong> (a cap on how much you can move out to your bank), <strong>register a tracking app</strong> with PayPal. This shows the business is legitimate.</li>
+<li>Keep <strong>delivery proof for every order</strong>.</li>
+<li>Processors <span class="ex">(companies that handle card payments)</span> may require delivery proof before releasing <strong>withheld payouts</strong> (money they are holding back).</li>
+</ul>
+</details><details class="part" id="withdrawing-funds-regularly"><summary><h2>Withdrawing Funds Regularly</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Prevent PayPal from holding funds by <strong>withdrawing regularly</strong> (move money to your bank), ideally daily.</li>
+<li>Keep only a <strong>small balance</strong> in PayPal.</li>
+<li>Transfer <strong>bulk funds</strong> (large amounts) to your business bank account.</li>
+<li>PayPal may lock large balances for <strong>six months or longer</strong>.</li>
+<li>Plan your <strong>cash flow</strong> (the movement of money in and out) around holds.</li>
+<li>A <strong>hold on incoming payments</strong> at the start of sales delays your access to money.</li>
+<li>A <strong>delivery hold</strong> keeps money locked until the order is delivered.</li>
+<li>If frozen funds leave you short of <strong>working capital</strong> (money for daily running costs), the <strong>only options</strong> are a credit loan, a personal loan from a friend, or refunding customers <span class="ex">(giving money back to buyers)</span>.</li>
+</ul>
+</details><details class="part" id="diversifying-processors-and-backup-payments"><summary><h2>Diversifying Processors and Backup Payments</h2><span class="pm">2 min</span></summary>
+<p>A processor is a company that handles card payments. A merchant account is the business account that receives those payments.</p>
+<ul>
+<li>Use PayPal as an <strong>additional payment method</strong> next to Shopify Payments (Shopify's own payment service).</li>
+<li>Do not use PayPal as your <strong>main merchant account</strong>.</li>
+<li>PayPal can apply holds, such as <strong>seven days or 30 days</strong> of payout delay <span class="ex">(waiting time before money reaches your bank)</span>, when volume <span class="ex">(how much money comes in)</span> jumps suddenly.</li>
+<li>Keep PayPal as <strong>one payment option</strong>, not the only method.</li>
+<li>A share of buyers prefer PayPal, and it <strong>increases total revenue</strong> (all the money you make).</li>
+<li>Keeping all sales and working balances on a <strong>single payment account</strong> leaves the business exposed.</li>
+<li>A ban <span class="ex">(the account is shut down)</span> can freeze funds for around <strong>180 days</strong>.</li>
+<li>Keep a <strong>backup payment option</strong> ready before problems start.</li>
+<li>While a PayPal account is suspended, <strong>keep other payment methods running</strong>, such as Shop Pay, Apple Pay, Google Pay and Klarna.</li>
+<li>Shopify Payments runs on Stripe <span class="ex">(another payment company)</span> in the background.</li>
+<li>Shopify Payments has been reported to hold funds earlier than Stripe, around <strong>20,000 to 30,000 USD</strong> in volume.</li>
+<li>Stripe itself was reported to show holds around <strong>35,000 to 40,000 USD</strong>.</li>
+<li>Every processor can hold funds at scale <span class="ex">(large amounts)</span>.</li>
+<li>Stripe holds usually last about <strong>30 days</strong>.</li>
+<li>A hold can be extended by another 30 days if the <strong>dispute rate</strong> (the share of orders customers complain about) keeps rising.</li>
+<li><strong>Resolving holds quickly</strong> and <strong>lowering disputes</strong> can speed up the release and remove the hold.</li>
+<li><em>Case:</em> a Hong Kong company after PayPal holds. At about 30,000 to 40,000 USD in monthly PayPal volume, about <strong>40,000 USD</strong> was held on a 21-day rolling hold <span class="ex">(a hold where money is kept back for a set number of days)</span>.</li>
+<li>The seller <strong>moved to a Hong Kong company</strong> with Hong Kong PayPal and Stripe accounts.</li>
+<li>Later, the seller reported much higher volume <strong>without holds</strong>.</li>
+<li>Opening a company in Hong Kong to get a PayPal account is a <strong>high-risk shortcut</strong>.</li>
+<li>In one reported case, the setup cost about <strong>700 USD</strong>, and the account was <strong>banned within a week</strong>.</li>
+<li>In that same case, about 5,000 USD was held for <strong>180 days</strong>.</li>
+<li>Use a payment account that matches <strong>the country where the owner lives</strong> instead.</li>
+<li>The two Hong Kong reports differ in outcome. The shortcut in ended in a ban, while the relocated seller in had accounts matching their new residence.</li>
+<li>Use a payment account in <strong>the country where the owner actually lives</strong>.</li>
+</ul>
+</details><details class="part" id="account-setup-identity-and-bans"><summary><h2>Account Setup, Identity and Bans</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Register a PayPal account in <strong>the country where the owner lives</strong>.</li>
+<li>When you move, <strong>open a new account</strong> in the new country.</li>
+<li>A mismatch between residence <span class="ex">(where you live)</span> and account location can contribute to bans and frozen funds.</li>
+<li>Sales outside your store's region, and payouts across borders <span class="ex">(money sent to other countries)</span>, <strong>expose the account to holds</strong>.</li>
+<li>See and in the sections above.</li>
+<li>Connect the PayPal account to the <strong>primary business email</strong> (your main company email address).</li>
+<li>Keep <strong>name, address and email the same</strong> across the store, PayPal and other platforms.</li>
+<li>After a payment account is banned, a replacement account in another country can be <strong>closed within days</strong>.</li>
+<li>This happened with a US account opened <strong>two days</strong> after a ban.</li>
+<li>Find out the cause of the ban and <strong>fix it</strong> before opening any new account for the same business.</li>
+<li>Shopify Payments <strong>banned</strong> an account with unfulfilled orders <span class="ex">(orders not yet shipped)</span> after about <strong>two months</strong>.</li>
+<li>The whole payout <span class="ex">(all the money)</span> was lost.</li>
+</ul>
+</details><details class="part" id="scaling-volume-gradually"><summary><h2>Scaling Volume Gradually</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Scale the store gradually</strong>, meaning grow it slowly.</li>
+<li>A sudden jump from a few thousand dollars to very large monthly volume can trigger a payment processor's <strong>risk review</strong> (a check by the processor).</li>
+<li><em>Older, 2021:</em> A new PayPal account went from zero to about <strong>$50,000</strong> in sales within a few weeks.</li>
+<li><em>Older, 2021:</em> The rapid growth triggered a <strong>reserve</strong> (part of your money kept back) on the account.</li>
+<li>A merchant account may place a reserve when <strong>chargebacks are high</strong> (customers reverse their card payments through their bank) or revenue rises very quickly on a new account.</li>
+<li>Holds are likely when sales volume jumps sharply, for example from about 200 to 300 USD per day to <strong>5,000 USD per day</strong>.</li>
+<li><strong>Match growth with proof of delivery.</strong></li>
+<li>At <strong>$100k-500k per month</strong>, chargebacks, payment processing holds and monthly processing limits become likely.</li>
+<li>A payment processing agent <span class="ex">(a paid helper who watches your payments)</span> can monitor chargebacks, monthly volume and processing statistics, at about <strong>$8-12 per hour</strong>.</li>
+<li>A payment processor can hold a first high-value order for up to <strong>120 days</strong> when addresses differ.</li>
+<li>Scaling into high-ticket products <span class="ex">(expensive items)</span> is safer with <strong>fraud tools</strong> (tools that catch fake orders) in place.</li>
+<li><em>Older, 2019:</em> Shopify fraud protection costs <strong>1.2% per order</strong>.</li>
+<li>Include this cost in your cost of scaling when you use it.</li>
+<li><em>2023:</em> A new store with traditional merchant accounts that later added PayPal processed about <strong>$50,000</strong> in sales in a short time.</li>
+<li>PayPal flagged the account as <strong>high risk</strong> and held the balance for <strong>180 days</strong>.</li>
+<li>Sudden high volume on a new account can trigger holds.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/18-legal-tax-banking-and-payments/15-chargebacks-fraud-prevention-and-processor-holds/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/"><span class="k">&larr; Previous</span><span class="v">Authorization, capture and out-of-Stock handling</span></a><a class="nx" href="../../18-legal-tax-banking-and-payments/16-store-policies-and-legal-pages/"><span class="k">Next &rarr;</span><span class="v">Store policies and legal pages</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

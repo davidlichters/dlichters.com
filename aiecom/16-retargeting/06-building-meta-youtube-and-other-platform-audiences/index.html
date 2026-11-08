@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Building Meta, YouTube and other platform audiences | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.6: Building Meta, YouTube and other platform audiences.">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/06-building-meta-youtube-and-other-platform-audiences/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Building Meta, YouTube and other platform audiences | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.6: Building Meta, YouTube and other platform audiences."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/06-building-meta-youtube-and-other-platform-audiences/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/06-building-meta-youtube-and-other-platform-audiences/">Plain version</a></div><h1>16.6 Building Meta, YouTube and other platform audiences</h1><article><h2 id="audience-tiers-by-engagement-depth">Audience Tiers by Engagement Depth</h2>
+<p>Source C sorts retargeting audiences into low-level and high-level engagement. Low-level audiences are easy to capture on fresh pixels and ad accounts. High-level audiences need Shopify or Klaviyo data and more historic data. [L0375.030, L0376.030, L0376.031]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Engagement level</th>
+<th>Audience</th>
+<th>Data needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low level</td>
+<td>Video views 50% to 95%</td>
+<td>Easy to capture on fresh pixels and ad accounts</td>
+</tr>
+<tr>
+<td>Low level</td>
+<td>All website visitors, 30 days</td>
+<td>Easy to capture on fresh pixels and ad accounts</td>
+</tr>
+<tr>
+<td>Low level</td>
+<td>FB/IG engagement</td>
+<td>Easy to capture on fresh pixels and ad accounts</td>
+</tr>
+<tr>
+<td>High level</td>
+<td>People who added to cart</td>
+<td>Shopify/Klaviyo data, needs more historic data</td>
+</tr>
+<tr>
+<td>High level</td>
+<td>All email subscribers</td>
+<td>Shopify/Klaviyo data, needs more historic data</td>
+</tr>
+<tr>
+<td>High level</td>
+<td>Buyers (great for LLAs)</td>
+<td>Shopify/Klaviyo data, needs more historic data</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0375.030, L0376.030, L0376.031]</p>
+<h2 id="meta-website-visitor-audiences">Meta Website Visitor Audiences</h2>
+<ul>
+<li>Meta website-visitor audiences can be built for 7, 30 or 180 days. A new store with little traffic should use the largest available window, which is the 180-day audience. [L1029.013]</li>
+<li>Facebook website-visitor custom audiences should be built for the last 7, 30, 60 and 180 days. Each window can carry different ads, and the audience gets less warm as the window grows. [L1076.061]</li>
+<li>The sources differ on window sets. L1029.013 lists 7, 30 and 180 days. L1076.061 adds 60 days. Use the 7/30/180 set for a new store with little traffic, and the 7/30/60/180 set when each window needs its own ads. [L1029.013, L1076.061]</li>
+<li>Source C lists "All website visitors, 30 days" as a fresh-pixel audience. Source A recommends 180 days for a new store with little traffic. The sources do not state a traffic threshold between the two. [L0375.030, L1029.013]</li>
+<li>A newly created Meta custom audience can take up to 3 days to finish matching profiles. Ads can run during this time, but the audience grows as it populates. [L1029.014]</li>
+</ul>
+<h2 id="engagement-audiences-on-meta-youtube-and-facebook-pages">Engagement Audiences on Meta, YouTube and Facebook Pages</h2>
+<ul>
+<li>Many ad platforms let you target people who have interacted with a website, YouTube channel or Facebook page. Knowing where your buyers already spend time gives you a shortcut to placing ads and offers in front of them. [L0478.024] <em>(older advice, 2021-22)</em></li>
+<li>Subscribers of a niche YouTube channel or a Facebook page are a pre-qualified audience for targeting. Because they chose to follow a niche source, they are more likely to engage with your offer. [L0478.025] <em>(older advice, 2021-22)</em></li>
+<li>Facebook can also build segmented audiences from user behavior on your site and on the Facebook network, in addition to Google segmentation. [L0563.022] <em>(older advice, 2021-22)</em></li>
+<li>People who engage with a boosted post, through likes, comments or shares, can be saved as remarketing audiences. These audiences can be used later for remarketing campaigns and to show future page posts to some of them. [L0666.065]</li>
+<li>A brand that had been posting content built a Facebook engagement audience of about 280,000 people and an Instagram custom audience of about 140,000 people who engaged in the past 365 days. Pools of this size can be shown new content at very low cost per reach, so check their size regularly as the audience grows. [L0487.071]</li>
+</ul>
+<h2 id="cold-video-ads-and-the-bof-warm-pool">Cold Video Ads and the BOF Warm Pool</h2>
+<ul>
+<li>Cold video ads automatically feed the BOF warm pool. Viewers who complete 50% or more of a cold video are automatically added to a custom audience for BOF retargeting, with no manual setup required. [L0315.010]</li>
+<li>Source C lists "Video views 50% to 95%" as a retargeting audience. Source D uses 50% or more as the entry point to the warm pool. The sources do not explain the 95% upper bound. [L0315.010, L0375.030]</li>
+</ul>
+<p>Procedure:</p>
+<ol type="1">
+<li>Deploy cold video ads to broad audiences. Some viewers convert immediately, but most do not. [L0315.011]</li>
+<li>Automatically, viewers who complete 50% or more of the video are added to a custom warm audience pool. [L0315.011]</li>
+<li>BOF ads immediately retarget this pool with all five concept angles at lower CPMs. [L0315.011]</li>
+<li>As cold video spending continues, the warm pool grows daily, and BOF ROAS increases automatically without BOF campaign changes. [L0315.011]</li>
+</ol>
+<h2 id="audience-growth-cycle-content-engagement-and-lookalikes">Audience Growth Cycle: Content, Engagement and Lookalikes</h2>
+<ul>
+<li>Retarget the seed audience and the engagement audiences with new content each time a post is published. Then build lookalike audiences from those groups and repeat the cycle. [L0487.046]</li>
+</ul>
+<p>Procedure:</p>
+<ol type="1">
+<li>Publish content that is funny or educational and promote it to the seed audience. [L0487.047]</li>
+<li>Build custom audiences from people who liked, commented on, or shared the content. [L0487.047]</li>
+<li>Create lookalike audiences from the seed and engagement audiences. [L0487.047]</li>
+<li>Show new content to the seed, engagement, and lookalike audiences. [L0487.047]</li>
+<li>Repeat until the target market knows the brand. [L0487.047]</li>
+</ol>
+<h2 id="lookalike-and-similar-audiences-from-retargeting-pools">Lookalike and Similar Audiences from Retargeting Pools</h2>
+<ul>
+<li>Any retargeting audience can be turned into a similar audience in Google or a lookalike audience in Facebook. The platform then finds new users who resemble that group in behavior and demographics, which gives more targeted cold traffic than broad prospecting. [L1390.016] <em>(older advice, 2021-22)</em></li>
+<li>Buyers are the strongest seed for lookalike audiences. Source C marks them as "great for LLAs" and needs Shopify or Klaviyo data to build them. [L0375.030, L0376.031]</li>
+</ul>
+<h2 id="google-remarketing-for-cart-and-product-page-visitors">Google Remarketing for Cart and Product-Page Visitors</h2>
+<ul>
+<li>Set up Google remarketing for cart and product-page visitors using lesson 6.1.8, so you reach the same audience you are targeting on Facebook. [L0276.007]</li>
+</ul>
+</article><nav class="pn"><a href="../../16-retargeting/05-building-google-audiences-google-ads-and-ga4/"><span class="k">&larr; Previous</span><span class="v">Building Google audiences (Google Ads and GA4)</span></a><a class="nx" href="../../16-retargeting/07-audience-size-eligibility-and-troubleshooting/"><span class="k">Next &rarr;</span><span class="v">Audience size, eligibility and troubleshooting</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

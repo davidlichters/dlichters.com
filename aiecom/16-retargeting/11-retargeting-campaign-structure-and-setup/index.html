@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Retargeting campaign structure and setup | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 16.11: Retargeting campaign structure and setup.">
+<link rel="canonical" href="https://dlichters.com/aiecom/16-retargeting/11-retargeting-campaign-structure-and-setup/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Retargeting campaign structure and setup | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 16.11: Retargeting campaign structure and setup."><meta property="og:url" content="https://dlichters.com/aiecom/16-retargeting/11-retargeting-campaign-structure-and-setup/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">16. Retargeting</a> &rsaquo; <a href="../../../ecom/16-retargeting/11-retargeting-campaign-structure-and-setup/">Plain version</a></div><h1>16.11 Retargeting campaign structure and setup</h1><article><h2 id="campaign-architecture-on-meta">Campaign Architecture on Meta</h2>
+<p>Use one ABO campaign for retargeting. A CBO campaign can replace it if it performs better in the account. [L0375.027, L0376.027]</p>
+<pre><code>Retargeting campaign structure:
+1 ABO campaign (a CBO campaign can be used if it works better in the account).
+Ad sets with MOF (middle of funnel) and BOF (bottom of funnel) audiences:
+- 1 ad set for 75% video views and 95% video views.
+- 1 ad set for website visitors.
+- 1 ad set for FB/IG engagements.</code></pre>
+<p>[L0375.027]</p>
+<p>The structure is one ABO campaign (CBO is an option if it works for the account) with ad sets for MOF and BOF audiences. Build these ad sets:</p>
+<ul>
+<li>Video views at 75% and 95% (combined)</li>
+<li>Website visitors</li>
+<li>FB/IG engagers</li>
+</ul>
+<p>[L0376.027]</p>
+<h2 id="campaign-architecture-on-google">Campaign Architecture on Google</h2>
+<ul>
+<li>Build the Google remarketing campaign as a separate campaign from Shopping. Its purpose is to bring back visitors who viewed the store but did not buy, show them the products they looked at, and win the sale against competitors. [L0734.001]</li>
+<li>Use standard display campaigns for remarketing and for monthly promotions to existing audiences. [L0964.127] (2023)</li>
+<li>Older advice (Source B, 2021-22): build each retargeting ad group around one audience or one message. Name the ad group after its target audience so the campaign list reads at a glance. [L1342.008]</li>
+<li>Older advice (Source B, 2021-22): the same Google display and Facebook setup used for retargeting also works for cold traffic. Only the targeting changes, so campaign structure, budgets and ad formats can be reused. [L1342.047]</li>
+</ul>
+<h2 id="step-by-step-setup-on-google-display">Step-by-Step Setup on Google Display</h2>
+<ol type="1">
+<li><p>Log in to Google Ads, click Campaigns in the left navigation, click New Campaign, then select "Create a campaign without guidance." [L0189.001]</p></li>
+<li><p>Select Display as the campaign type and click Continue. [L0189.001]</p></li>
+<li><p>Enter your store's homepage URL as the Website. Create a Campaign name in the format [YourStore].com Remarketing. Choose the Country where you sell and set Language to English (or your store's primary language). [L0189.001]</p></li>
+<li><p>Scroll to More settings, enable Dynamic ads, and check "Use dynamic ads feed for personalized ads." Select your Google Merchant Center product feed and leave Product filter on "No filters" (include all products). [L0189.001]</p></li>
+<li><p>Under Content exclusions, exclude: Content not yet labeled, All sensitive content categories, and Live streaming videos. Click Next. [L0189.001]</p></li>
+<li><p>Set Daily budget to approximately 10% of your total Shopping Ads budget (example: $10/day Shopping = $2/day Remarketing). Change Bidding focus to "Viewable impressions" and set Viewable CPM to $10. Click Next. [L0189.001]</p></li>
+<li><p>Click "Edit Audience segments." Select your [YourStore].com Visitors, 30 Days segment. Disable "Optimized Targeting" (critical; do not skip). Click Next. [L0189.001]</p></li>
+<li><p>Set Final URL to your homepage and Business name to your store name. Products are pulled automatically from Merchant Center. For the ad:</p>
+<ul>
+<li>Headline: "Shop [Store Name]"</li>
+<li>Long headline: "Come back and complete your order"</li>
+<li>Description: "The official [Store Name] store"</li>
+</ul>
+<p>Turn OFF auto-generated video. Turn OFF native formats. Add 1 landscape image and 1 square image. [L0189.001]</p></li>
+<li><p>Review for errors and click "Publish campaign." [L0189.001]</p></li>
+<li><p>Navigate to the new campaign, go to Audiences, keywords, and content → Audiences. Scroll to Exclusions. Add the [YourStore].com Purchase, 30 Days exclusion. Save changes. [L0189.001]</p></li>
+</ol>
+<ul>
+<li>In step 7, add the audience under targeting: use the audience segments option to add the 30-day website visitor segment created earlier, and select it so it appears in the targeted audience list. [L0734.019]</li>
+</ul>
+<h2 id="static-vs-dynamic-setup">Static vs. Dynamic Setup</h2>
+<ul>
+<li>Static and dynamic remarketing differ only at campaign creation. For dynamic remarketing, link the product feed at the first setup step. For static remarketing, skip the option to link the product feed. [L0836.064] (2024)</li>
+<li>A static Google Display Network banner for a specific offer can be set up as a Repeat audience campaign aimed at product viewers. Use a Shop Now call to action, and show the same deal stated in the banner as in the matching Facebook ad. [L0799.023] (Source B, 2021-22, older)</li>
+</ul>
+<h2 id="bidding-choice">Bidding Choice</h2>
+<ul>
+<li>Google Display, as set up in the procedure, uses Bidding focus "Viewable impressions" with a Viewable CPM of $10. [L0189.001]</li>
+<li>In the early stage, the goal of remarketing is reach, not conversions. Do not optimize remarketing campaigns for add-to-cart events. Focus on getting ads in front of people, especially when starting out. [L0965.047] (2024)</li>
+<li>Conversion bidding often underperforms for retargeting, especially at low volume, because retargeting frequently aims to bring visitors back rather than force an immediate sale. Click-based or traffic-based bidding is the more practical default for these campaigns. [L1342.002] (Source B, 2021-22, older)</li>
+<li>A higher-ticket store may not reach the number of conversions a Facebook conversion campaign needs within its optimization window. In that case, a traffic campaign is the practical choice. Test conversion campaigns once the store has shown sales and steady volume. [L1342.003] (Source B, 2021-22, older)</li>
+<li>How the sources fit together: the Viewable CPM setup applies to Google Display. The click/traffic default and the conversion-later rule (Source B) describe Facebook campaigns, where the store's volume decides between traffic and conversion bidding. [L0189.001, L1342.002, L1342.003]</li>
+</ul>
+<h2 id="budgets-per-ad-set-and-campaign">Budgets per Ad Set and Campaign</h2>
+<ul>
+<li>A retargeting ad set can run on a low budget of $10 to $15 per day each. [L0375.028, L0376.029]</li>
+<li>Adjust the remarketing ad budget per campaign rather than with one shared budget. Each window should still reach an acceptable return on ad spend. [L1094.056] (2023)</li>
+<li>On Google, set the Daily budget at about 10% of the Shopping Ads budget (example: $10/day Shopping = $2/day Remarketing). [L0189.001]</li>
+</ul>
+<h2 id="meta-learning-phase-and-changes">Meta Learning Phase and Changes</h2>
+<p>Procedure (Source A, 2020, older):</p>
+<ol type="1">
+<li>When the campaign launches, Facebook shows a random sample of the audience to set costs. [L0268.038]</li>
+<li>Once costs stabilize at the desired level, don't pause the campaign, because that resets the learning phase. [L0268.038]</li>
+<li>If you modify a campaign, pause the ad set (not the campaign), unpause it after 5 days, let it run 1 day, and pause again if needed. [L0268.038]</li>
+<li>Budget changes over 20% also reset the learning phase. Make large budget changes in small increments. [L0268.038]</li>
+<li>If the campaign is paused for 5-7 days and restarted, the learning phase resets and costs will likely increase. [L0268.038]</li>
+</ol>
+<p>Pausing strategy (merged with step 3 and step 5 above; both ids kept):</p>
+<ul>
+<li>When an established campaign needs modification, pause the ad set, not the campaign. Unpause within 5-7 days if needed, which preserves learning phase costs. If the campaign itself is paused for 5-7 days and restarted, the learning phase resets and costs likely increase. [L0268.080, L0268.038] (2020, older)</li>
+</ul>
+<h2 id="performance-max-caveats">Performance Max Caveats</h2>
+<ul>
+<li>Performance Max is not recommended for remarketing. It can work for a few months, but return on ad spend drops once remarketing audiences saturate. [L0837.053] (2025)</li>
+<li>For remarketing and monthly promotions to existing audiences, use standard display campaigns instead. [L0964.127] (2023)</li>
+</ul>
+</article><nav class="pn"><a href="../../16-retargeting/10-dynamic-product-ads-on-meta/"><span class="k">&larr; Previous</span><span class="v">Dynamic product ads on Meta</span></a><a class="nx" href="../../16-retargeting/12-search-retargeting-rlsa-and-branded-search/"><span class="k">Next &rarr;</span><span class="v">Search retargeting (RLSA) and branded search</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

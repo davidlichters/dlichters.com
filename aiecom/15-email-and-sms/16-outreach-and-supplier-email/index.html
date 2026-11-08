@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Outreach and supplier email | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 15.16: Outreach and supplier email.">
+<link rel="canonical" href="https://dlichters.com/aiecom/15-email-and-sms/16-outreach-and-supplier-email/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Outreach and supplier email | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 15.16: Outreach and supplier email."><meta property="og:url" content="https://dlichters.com/aiecom/15-email-and-sms/16-outreach-and-supplier-email/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">15. Email and SMS</a> &rsaquo; <a href="../../../ecom/15-email-and-sms/16-outreach-and-supplier-email/">Plain version</a></div><h1>15.16 Outreach and supplier email</h1><article><h2 id="mailbox-setup-and-profile-photo">Mailbox setup and profile photo</h2>
+<ul>
+<li><p>Send outreach from a personal address: either a real name at your own domain, or a new personal mailbox on that domain. Generic addresses such as contact@, info@ or support@ read as spam and lower the reply and link rate. <em>(older, 2021-22)</em> [L0574.002]</p></li>
+<li><p>A profile photo on the sending Google account appears in recipients' inboxes next to every email. A real face makes outreach feel personal and tends to raise the chance of a positive reply, whether it is your own face or someone else's. <em>(older, 2021-22)</em> [L0574.003]</p></li>
+<li><p>If the profile photo upload fails, follow this procedure:</p>
+<ol type="1">
+<li>Open your Google account, click the profile picture, choose a photo from your computer, crop it and set it as profile photo.</li>
+<li>If the upload fails, open the Google Admin console and type 'profile edit' into the search bar, or go to Apps &gt; Additional Google Services &gt; Directory settings, then open Profile editing.</li>
+<li>Tick the Photo option ('Users can customise their public profile photo and cover photo').</li>
+<li>Click Save.</li>
+<li>Go back to the Admin console home page, wait, and try the photo upload again.</li>
+<li>If it still fails with an error code, leave it and retry later, because changes can take up to 24 hours to propagate to all users.</li>
+</ol>
+<p><em>(older, 2021-22)</em> [L0574.004]</p></li>
+</ul>
+<h2 id="warm-up-limits">Warm-up limits</h2>
+<ul>
+<li><p>Sending a large batch of cold emails from a mailbox that normally sends little can make Google suspect unusual behaviour, and it may suspend the account (usually temporarily). Warm the mailbox up by raising the daily sending volume gradually over time rather than jumping straight to hundreds per day. <em>(older, 2021-22)</em> [L0574.016]</p></li>
+<li><p>Warm-up ramp for a new outreach mailbox or domain: <em>(older, 2021-22)</em> [L0574.017]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Timing (as taught)</th>
+<th>Max emails per day</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>First campaigns</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Step 2</td>
+<td>After about 2 weeks</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Step 3</td>
+<td>After several more weeks</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Ceiling</td>
+<td>Keep increasing over time</td>
+<td>up to 300</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mailshake spreads the batch across days up to the limit, so a large list does not need to go out in one day. <em>(older, 2021-22)</em> [L0574.017]</p></li>
+<li><p>Start every new campaign with a sending limit of 20 emails per day. A large list can take a week or more to finish, and that is expected. <em>(older, 2021-22)</em> [L0946.033]</p></li>
+<li><p>A steady trickle of responses is easier to manage than a single large batch sent at once. Spreading sends over days also protects deliverability and keeps the inbox manageable. <em>(older, 2021-22)</em> [L0946.034]</p></li>
+</ul>
+<h2 id="signature-and-unsubscribe-handling">Signature and unsubscribe handling</h2>
+<ul>
+<li><p>Use this signature for every outreach email from the connected mailbox. Insert the link on the words 'click here' with the unsubscribe placeholder described in the setting below. Keep the signature simple, with no large fonts, bright colours or many links. <em>(older, 2021-22)</em> [L0574.019]</p>
+<pre><code>[Your name]
+[Company name]
+[Phone number]
+If you&#39;d like to stop receiving emails from us, click here to unsubscribe.</code></pre></li>
+<li><p>Keep the email signature short and plain. Mailshake advises avoiding large font sizes, colours and images, not adding too many links, and starting with a blank line. A signature may be left empty if you prefer. <em>(older, 2021-22)</em> [L0574.020]</p></li>
+<li><p>Add the unsubscribe link to the signature by selecting the words 'click here' and inserting a link. Use {{unsubscribe_url}} as the URL and do not add an http prefix. This placeholder lets Mailshake add the recipient to an unsubscribed list and automatically stop future emails, including follow-ups. <em>(older, 2021-22)</em> [L0574.021]</p></li>
+<li><p>An unsubscribe link in every outreach email gives recipients a way to opt out, so they are less likely to mark the email as spam. Including it by default in the signature means it is never forgotten in a template. A visible opt-out is considered common practice and a courtesy. <em>(older, 2021-22)</em> [L0574.022]</p></li>
+<li><p>Mailchimp handles opt-outs automatically when a campaign contains its special unsubscribe link, and it compiles a list of contacts who unsubscribed. Outside Mailchimp, the Mailshake {{unsubscribe_url}} placeholder fills the same role for the sending tool. <em>(older, 2021-22)</em> [L0574.031]</p></li>
+<li><p>In Mailshake, the left sidebar has an Unsubscribes section that lists contacts who clicked the unsubscribe link. Check it before reusing a contact list, so that people who opted out are not emailed again, including in follow-ups. <em>(older, 2021-22)</em> [L0574.032]</p></li>
+<li><p>If you receive emails from a business you are already enrolled with, the signup email may differ from the one on your email list. Send an unsubscribe request from the address that receives the emails, stating that you are already a member. <em>(older, 2019)</em> [L0960.067]</p></li>
+</ul>
+<h2 id="cold-outreach-sequence">Cold outreach sequence</h2>
+<ul>
+<li><p>Scope: cold email outreach to business decision makers is not part of this approach, so do not use it to sell to B2B buyers. Reach trade customers through a dedicated trade page with a contact form and a phone number instead. <em>(older, 2020)</em> [L1088.096]</p></li>
+<li><p>Cold outreach emails must be very short, simple and straight to the point, because a stranger gives only a few seconds of attention. State the exact request in the first email and avoid long explanations. <em>(older, 2021-22)</em> [L0946.001]</p></li>
+<li><p>Build a three-email outreach sequence in this order: <em>(older, 2021-22)</em> [L0946.002]</p>
+<ol type="1">
+<li>Initial email: makes the first request and is the most detailed of the three.</li>
+<li>Follow-up #1: a short reminder that refers back to the first email.</li>
+<li>Follow-up #2: a final, short message that closes the loop.</li>
+</ol>
+<p>Send all three, because many responses come only after the follow-ups. <em>(older, 2021-22)</em> [L0946.002]</p></li>
+<li><p>Always follow up on any outreach or sales request, because most positive responses come from follow-ups. Mailshake can automate the follow-up sends once they are added to the campaign. <em>(older, 2021-22)</em> [L0946.003]</p></li>
+<li><p>Wait 5 days between the initial email and each follow-up, and between follow-up #1 and follow-up #2. Keep the default reply-chain setting unchanged so follow-ups appear as replies in the recipient's inbox. <em>(older, 2021-22)</em> [L0946.004]</p></li>
+<li><p>In the Mailshake campaign composer, follow-ups are added with ADD FOLLOW-UP, next to the ADD DRIP and ADD ON CLICK options. Keep the default five-day wait between follow-ups and the default reply-chain setting. Use the recipient counter, such as 1 of 35 recipients, to step through each personalized email before clicking NEXT, because edits are saved when you switch recipients or click NEXT. <em>(older, 2021-22)</em> [L0946.039]</p></li>
+</ul>
+<h2 id="subject-lines">Subject lines</h2>
+<ul>
+<li>Keep subject lines simple and generic so they do not trigger spam filters. Use 'you' and questions to feel personal, but do not mention links, content, outreach or collaboration in the subject, because that makes people skip the email. <em>(older, 2021-22)</em> [L0946.005]</li>
+<li>Subject-line formula: a short, personal question or open phrase that creates curiosity without revealing the request. It works because it looks like a human note, avoids spam trigger words and gets the email opened, after which the body makes the ask. Examples in this pattern: 'Would this fit your post on {{Topic}}?' and 'Any thoughts on an idea for your guide?' <em>(older, 2021-22)</em> [L0946.006]</li>
+<li>Each follow-up subject line starts with 're:' followed by the original subject line. This keeps all three emails in one visible thread for the recipient. <em>(older, 2021-22)</em> [L0946.007]</li>
+<li>Putting links, outreach words or product names in the subject line makes recipients skip the email. Also avoid spammy wording in the subject line, because it can send the email to spam. <em>(older, 2021-22)</em> [L0946.036]</li>
+</ul>
+<h2 id="outreach-templates">Outreach templates</h2>
+<ul>
+<li><p>Ready-to-send opening email. Leave every double-brace field as it is, because Mailshake fills them with data from the spreadsheet. Swap each square-bracket prompt for your own words and remove the prompt itself. Mailshake adds the signature automatically. <em>(older, 2021-22)</em> [L0946.008]</p>
+<pre><code>Subject: [Write your subject line following the subject-line pattern]
+
+Hi {{Firstname/[Add a creative fallback here]}},
+
+My name is [Name] and I write for [website], a site that [describe your site in one line].
+
+I&#39;m getting in touch about your article at {{Prospect URL}} [explain why a link to us is worth their time]
+
+[Ask them to look at your link]
+
+[Insert your link here]
+
+[Ask them for feedback]
+
+Thanks,
+[Name]</code></pre></li>
+<li><p>In the introduction, state what the site helps people do in one line, and name the specific article that was found using the prospect URL field. Then ask for a link and a reason why it is worth the recipient's time in the same message. <em>(older, 2021-22)</em> [L0946.014]</p></li>
+<li><p>Ready-to-send first follow-up. Leave the double-brace field as it is and replace each square-bracket prompt with your own words. The subject line is 're:' followed by the original subject. <em>(older, 2021-22)</em> [L0946.009]</p>
+<pre><code>Subject: re: [Original subject line]
+
+Hi {{name/creative fallback}},
+
+[Introduce yourself again: your name and the site you write for]
+
+[Ask whether they&#39;ve had a chance to read my earlier email]
+
+Thanks.</code></pre></li>
+<li><p>Paste-ready template for follow-up #2, the final message. Keep the double-brace field unchanged and replace each square-bracket instruction with your own text. Use the subject line 're:' followed by the original subject. <em>(older, 2021-22)</em> [L0946.010]</p>
+<pre><code>Subject: re: [Original subject line]
+
+Hey {{name/creative fallback}},
+
+[Remind them who you are and what you are asking them to look at]
+
+[Ask if they got the chance to check out your proposal]
+
+[State that this is the last message and that you will leave it there if they are not interested]
+
+Thanks.</code></pre></li>
+<li><p>Final follow-up formula: state clearly that this is the last message and that you will leave it there if they are not interested. It works because it respects the recipient's time, reduces unsubscribes and closes the thread politely. Examples in this pattern: 'This is my last note, so I will leave it there if this is not a fit.' and 'Last check-in from me. If the idea is not for your site, no problem at all.' <em>(older, 2021-22)</em> [L0946.035]</p></li>
+<li><p>Early follow-up email template for a contact who asked to talk by phone. Use it after a call, and keep the text as written:</p>
+<pre><code>Today&#39;s discussion was valuable. I want to confirm it covered everything I need from you. Here are my contact details. Thank you for your time, and I&#39;m eager to begin our working relationship.</code></pre>
+<p><em>(older, 2021-22)</em> [L0235.005]</p></li>
+</ul>
+<h2 id="supplier-follow-up">Supplier follow-up</h2>
+<ul>
+<li>Use an automated email sequence that sends follow-up questions after each reply, which shows which suppliers respond. Use it to get responsive suppliers to reply in English. [L0832.034]</li>
+<li>If a supplier asks you to send an email after a phone call, send the day one email from the tool. You can copy it directly and edit it before sending. [L0936.009]</li>
+<li>If the day one email gets no reply, send the day two follow-up email. It refers to your earlier message, states the launch timing and asks for the application steps. [L0936.010]</li>
+<li>Formula for a supplier follow-up email: refer to your earlier message, state a near-term launch window, commit to paying by credit card and following the supplier's pricing rules, then ask for the application steps. It works because it reminds the supplier of your request, signals you are a low-risk new account and makes the next reply easy. [L0936.011]
+<ul>
+<li>Example 1: 'Following up on my note from last week. We launch in the coming months and want to present your brand properly. We will pay by card and follow your pricing policy. Could you send me the application steps?'</li>
+<li>Example 2: 'Checking in on my email from Monday. Our store opens within a few weeks and we plan to represent your products carefully. We will pay by credit card and respect your listed prices. What are the next steps to apply?'</li>
+</ul></li>
+</ul>
+<h2 id="composer-fallbacks-checks-and-campaign-settings">Composer fallbacks, checks and campaign settings</h2>
+<ul>
+<li>Mailshake fallback: if the recipient's first name cannot be found, the fallback text entered in the highlighted field is shown instead of the field name. Write a neutral or creative fallback for every name placeholder, because a literal field name looks broken. Fallbacks are never perfect, but they look better than an empty or raw field. <em>(older, 2021-22)</em> [L0946.011]</li>
+<li>The sender name in the email must match the name in the body, and the sending address must match the website named in the introduction. Use only one from-address per campaign, and keep the signature personal. <em>(older, 2021-22)</em> [L0946.012]</li>
+<li>Before clicking Next in the composer, check that every text replacement field exists for all recipients. Mailshake warns when some recipients are missing a field. Use only fields that all recipients have, or add a fallback. <em>(older, 2021-22)</em> [L0946.030]</li>
+<li>Review each email before sending: <em>(older, 2021-22)</em> [L0946.031]
+<ol type="1">
+<li>Use the preview to read the subject, the body and the signature, including the unsubscribe line that Mailshake adds.</li>
+<li>Confirm the email sounds like a human, the signature is correct and the call to action is clear.</li>
+<li>Send a test email and check it on a phone.</li>
+<li>Click Next.</li>
+</ol></li>
+<li>Campaign options in Mailshake: enable Track opens and Track link clicks if you want the data, use Schedule this send to pick a start time in the local time zone, and leave Lead Catcher enabled so replies are captured. Accept the terms about anti-spam laws and the important notes, then click Next to start. <em>(older, 2021-22)</em> [L0946.032]</li>
+<li>Mailshake's composer can save a written email as a reusable template with SAVE AS TEMPLATE, and CHOOSE TEMPLATE loads saved ones, so a template library builds up inside the account. Use SEND TEST before launching to receive the email yourself and check it. <em>(older, 2021-22)</em> [L0946.038]</li>
+<li>When text pasted into the Mailshake composer carries colours or other formatting, Mailshake may offer to auto clean the formatting. You can decline that offer and then check the preview, which shows the subject, body and signature as the recipient will see them. <em>(older, 2021-22)</em> [L0946.040]</li>
+</ul>
+<h2 id="pitfalls">Pitfalls</h2>
+<ul>
+<li>Deleting or renaming the double-brace or bracketed fields breaks personalization or leaves raw field names in the email. Only change the square-bracket instructions and the text around them. <em>(older, 2021-22)</em> [L0946.029]</li>
+<li>Long, detailed outreach emails reduce replies because recipients give only brief attention. Keep the request in the first two or three lines. <em>(older, 2021-22)</em> [L0946.037]</li>
+</ul>
+<h2 id="customer-support-email">Customer support email</h2>
+<ul>
+<li>Customer support email should be answered within 24 hours, Monday through Friday. <em>(older, 2021)</em> [L1090.116]</li>
+<li>Customer emails can be answered any day of the week, but phone calls to customers should not be made on Sundays. <em>(older, 2021)</em> [L1090.115]</li>
+<li>Contact-form and store inbox messages before a purchase are sales leads and should be treated as valuable, possibly more valuable than a paid click. Questions about options or features indicate demand, and repeated requests can be a signal to add that feature. [L0910.016]</li>
+<li>When building an AI Workflow to generate automatic email replies, add as much context as possible to the system prompt: details about the recipient, your preferred response tone, how you typically handle similar requests, any specific business information the AI should reference, and any guidelines about what topics you do or do not discuss. Rich context in the prompt dramatically improves the relevance and quality of generated replies. [L0287.021]</li>
+</ul>
+</article><nav class="pn"><a href="../../15-email-and-sms/15-testing-measurement-and-optimization/"><span class="k">&larr; Previous</span><span class="v">Testing, measurement and optimization</span></a><a class="nx" href="../../15-email-and-sms/17-other-details/"><span class="k">Next &rarr;</span><span class="v">Other details</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

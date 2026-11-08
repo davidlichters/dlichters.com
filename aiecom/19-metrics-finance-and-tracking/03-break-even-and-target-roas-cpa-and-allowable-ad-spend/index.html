@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Break-even and target ROAS, CPA and allowable ad spend | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 19.3: Break-even and target ROAS, CPA and allowable ad spend.">
+<link rel="canonical" href="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/03-break-even-and-target-roas-cpa-and-allowable-ad-spend/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Break-even and target ROAS, CPA and allowable ad spend | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 19.3: Break-even and target ROAS, CPA and allowable ad spend."><meta property="og:url" content="https://dlichters.com/aiecom/19-metrics-finance-and-tracking/03-break-even-and-target-roas-cpa-and-allowable-ad-spend/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">19. Metrics, finance and tracking</a> &rsaquo; <a href="../../../ecom/19-metrics-finance-and-tracking/03-break-even-and-target-roas-cpa-and-allowable-ad-spend/">Plain version</a></div><h1>19.3 Break-even and target ROAS, CPA and allowable ad spend</h1><article><h2 id="core-definitions-roas-cpa-and-cost-per-purchase">Core definitions: ROAS, CPA and cost per purchase</h2>
+<ul>
+<li><strong>ROAS</strong> is revenue divided by ad spend. Examples: $100 ÷ $25 = 4x; $1,000 ÷ $100 = 10x; $1 spent that returns $1.60 gives 1.6; $10 spent that returns $80 gives 8; $1 that returns $2 gives 2. [L0327.011, L0327.012, L0445.003, L0645.007, L0875.003]</li>
+<li>Source B defines ROAS as revenue attributed to the ads divided by ad spend, so 15x means 15 units of revenue for every unit spent on ads. [L0719.016] <em>(older, 2021-22)</em></li>
+<li>Source B also defines ROAS as sale price ÷ cost per acquisition. A $2,000 product at a $500 CPA gives 4x (400% in Google Analytics). [L0446.006] <em>(older, 2021-22)</em></li>
+<li>Google Analytics shows ROAS as a percentage: 4x appears as 400% and 10x as 1,000%. Compare analytics ROAS with calculated targets in the same format. [L0446.018, L0686.008] <em>(older, 2021-22)</em></li>
+<li>Source A gives the same ROAS definition with a 10x example: $100,000 revenue from $10,000 spend equals 10x. [L0808.033]</li>
+<li>Cost per acquisition (CPA), cost per purchase (CPP) and cost per sale describe the same measure: the cost to win one customer or one order. They are used interchangeably in ad platforms and reports. [L0446.019, L0875.030]</li>
+<li>CPA = total ad spend ÷ number of purchases. Read it in Meta Ads Manager or calculate it from Shopify data. [L0445.007, L0875.007]</li>
+<li>Cost per sale = total ad spend ÷ orders from that spend in the same period. Example: $14,000 over 366 orders is about $38.25 per sale. This figure should fall when paid traffic converts better. [L0400.018] <em>(older, 2021-22)</em></li>
+<li>The total campaign spend for cost per sale must include clicks on every product in the campaign, including products that never sold. Otherwise the figure is understated. Example: $152 of spend with 2 sales gives $76 per sale. [L0748.017]</li>
+<li>Compare ROAS against CPA: a $20 CPA acquisition that generates $100 in revenue is more profitable than a $10 CPA that generates $50, because profit per sale matters more than cost per acquisition. [L0327.010]</li>
+<li>Source A: minimum product price = cost per sale × target ROAS. At a 10x target, a $74 sale needs a product priced at least $740, and a $52 sale needs at least $520. Any product priced above this threshold gives a ROAS above 10x. [L0748.002]</li>
+</ul>
+<h2 id="break-even-roas-and-break-even-cpa">Break-even ROAS and break-even CPA</h2>
+<h3 id="definition-and-calculation">Definition and calculation</h3>
+<ul>
+<li>Break-even ROAS is the minimum ROAS at which revenue exactly covers COGS and ad spend, leaving zero profit and zero loss. Above it the campaign is profitable; below it is a loss. Knowing it shows which campaigns are viable. [L0327.014]</li>
+<li>Formula (Source A): Break-even ROAS = Revenue ÷ (Revenue − COGS) = Revenue ÷ Profit. Example: $1,000 revenue with $400 COGS gives $600 profit, so $1,000 ÷ $600 = 1.67x. [L0327.015]</li>
+<li>Simple example: $1,000 revenue with 50% COGS ($500) leaves $500 profit. If all profit is spent on ads, break-even ROAS = $1,000 ÷ $500 = 2.0x. Above 2.0x is profitable; below is a loss. [L0327.016]</li>
+<li><strong>Conflict within the Source A source:</strong> one formula line reads "(Revenue − Cost of Goods) ÷ Revenue", which as written gives 0.6, not 1.67. The worked result of 1.67x matches Revenue ÷ Profit. Use Revenue ÷ (Revenue − COGS). [L0225.015, L0327.015]</li>
+<li>Sauna example: $400 sourcing cost, $1,000 revenue, $600 gross profit. A $300 ad budget gives a target ROAS of 3.3x (1,000 ÷ 300) and a break-even ROAS of 1.67x (1,000 ÷ 600). [L0225.033]</li>
+<li>Google Ads version (Source A): Breakeven ROAS = Revenue ÷ (Revenue − COGS &amp; Fees). Example: revenue $10,000, COGS plus fees $6,000, profit before ads $4,000, so break-even ROAS = 2.5x. [L0329.001]</li>
+<li>Your margin before ads, as a percentage of revenue, equals the maximum ad spend percentage at break-even. A 40% margin lets you spend up to 40% of sales on ads and still break even. Reducing COGS and fees raises the profit available for scaling ads. [L0329.003]</li>
+<li>Source C: Break-even ROAS = Selling Price ÷ (Selling Price − Expenses). At the start, Expenses = product cost + shipping. This is an early estimate that does not yet cover other costs, so calculate it before launch and judge every ad set against it. [L0375.009, L0375.010]</li>
+<li>Break-even ROAS = Selling price ÷ (Selling price − COGS). For $60 with $20 COGS this gives 1.5. Dividing by the $20 cost alone would give 3 and is wrong. [L0875.026]</li>
+<li><strong>Conflict within the Source C source:</strong> L0445.004 and L0875.004 write the formula as Selling price ÷ COGS, which gives 3 for $60 and $20, yet both state the result as 1.5. The 1.5 matches Selling price ÷ (Selling price − COGS), as L0875.026 says. Use the corrected form. [L0445.004, L0875.004, L0875.026]</li>
+<li>Source C tool example: COGS $10, selling price $40, break-even ROAS 1.3x. This matches Selling price ÷ (Selling price − COGS). [L0229.009]</li>
+<li>Gross-margin shortcut: Break-even ROAS = 1 ÷ gross margin %, since at that ROAS the margin covers ad spend. [L0693.050]</li>
+<li>Break-even ROAS before fees = selling price ÷ (selling price − product − shipping). Payment and app fees raise the number, so include them for the real break-even. [L0645.020]</li>
+<li>Dropship Toolkit example: a product costing $18 sold at $39.99 has a break-even ROAS of 1.85 in the tool. A plain price-minus-cost calculation gives 1.82 (39.99 ÷ 21.99), so the tool likely deducts some extra cost. [L0661.065]</li>
+<li>Example with a $39.90 price and $17 fulfilment cost: $22.90 margin gives 1.74. A stated profit of $22 gives 1.81. Check which profit figure a calculator uses before relying on it. [L0440.066]</li>
+<li>Source C KPI sheet formula: Break-even ROAS = AOV ÷ (AOV × (1 − fee %) − COGS). Example: 60 ÷ (60 × 0.96 − 20) = 1.60. The daily business cost is not part of this ROAS formula. [L0900.006]</li>
+<li>Source E: Break-even ROAS = new-customer AOV (tax-inclusive, as shown in ad platforms) ÷ cost per order that makes contribution margin zero (gross profit per order). Example: $238.49 ÷ $130.27 = 1.83. At 1.83 the business neither makes nor loses money on first orders. [L0433.009]</li>
+<li>Break-even ROAS of 1.3-1.5 is the stated ideal range for any product. A break-even near 1.9 means only a thin profit even at a ROAS of 2. [L0645.018]</li>
+<li>Aim for a break-even ROAS of 1.6 or lower, which gives roughly three times the margin on the product. This leaves room for ad spend, app and staff costs and payment fees. [L0875.015]</li>
+<li>For a product with break-even ROAS 1.5, a ROAS of about 1.6-1.8 or higher is profitable. A ROAS of about 1.3-1.4 or lower is a loss. Small ROAS changes decide profit or loss. [L0875.028]</li>
+</ul>
+<h3 id="break-even-cost-per-purchase-margin-per-order">Break-even cost per purchase (margin per order)</h3>
+<ul>
+<li>Break-even cost per purchase = selling price − (product cost + shipping cost). Example: $6 product + $4 shipping, $40 price: break-even margin $30 per purchase. This $30 is the minimum the ad set must spend before you decide to continue, pause or kill it. [L0229.002]</li>
+<li>Break-even cost per purchase = selling price − COGS. Example: $60 − $20 = $40. CPA below $40 yields profit; above $40 yields a loss. [L0445.005, L0875.005]</li>
+<li>Break-even cost per purchase is the profit margin per product. Spend at least this amount on an ad set or ad before judging it, and judge at ad level later for more precision. [L0640.014]</li>
+<li>For first tests, fees and other expenses can be ignored, but subtract them later as they become known, for example transaction fees. Example: $30 price − $10 product − $10 shipping = $20. [L0648.030]</li>
+<li>Full break-even CPP with the KPI sheet: AOV × (1 − average fee %) − average COGS including shipping − daily cost of running the business. Example: 60 × (1 − 0.04) − 20 − 0.9524 = $36.65. This is lower than the simple $40 margin because fees and daily costs are included. [L0900.001]</li>
+<li>Break-even CPP must be checked against actual cost per purchase. If CPA is $40 and break-even CPA is $36.65, the seller loses about $3.35 per sale (the source text says $3.50). [L0445.016, L0875.018]</li>
+<li>Procedure: calculate break-even cost per acquisition, write it down, and keep the actual cost per purchase below it. Any cost above it means the product is losing money. [L0692.022]</li>
+<li>Per product: know COGS, break-even ROAS and break-even cost per purchase before running paid ads. These are the baseline KPIs that show whether a product can make money at all. [L0445.001]</li>
+<li>Source C formula for break-even CPP as the margin, plus the note on kill rules: use it to set kill rules for campaigns. [L0693.050, L0692.022]</li>
+</ul>
+<h3 id="break-even-cpa-and-max-cost-source-b-older">Break-even CPA and max cost (Source B, older)</h3>
+<ul>
+<li>The maximum you can pay through paid traffic is the break-even CPA, equal to net profit before marketing when you count one purchase per customer. If you use customer lifetime value, the maximum can be set against it, which may mean a loss on the first order. [L0446.003] <em>(older, 2021-22)</em></li>
+<li>Break-even is not a good target for every sale, because a business that only breaks even earns nothing. Set the ideal target CPA below break-even so the chosen margin stays in the business. [L0446.004] <em>(older, 2021-22)</em></li>
+<li>Formula: Break-even CPA = net profit before traffic per sale. Target CPA = net profit before traffic − profit to keep per sale. Example: $500 net profit before traffic and $300 wanted profit gives a target CPA of $200. [L0446.005] <em>(older, 2021-22)</em></li>
+<li>Worked example: a product sold for $200 and bought for $100 leaves $100 gross profit. Free shipping and other per-sale costs take $20, so net profit before marketing is $80. Keeping $40 as profit and spending up to $40 per sale on ads gives a target CPA of $40. [L0446.002] <em>(older, 2021-22)</em></li>
+<li>The unit cost is the total cost of one sale before marketing: product cost, shipping, staff costs such as customer service, and all other overheads divided down to a single sale. Net profit before traffic = selling price − this full unit cost. [L0686.004] <em>(older, 2021-22)</em></li>
+<li>Break-even max cost per sale is normally calculated on a single first purchase. A store with repeat buyers can instead use customer lifetime value, which may allow a maximum above break-even and means accepting a loss on the first order. [L0686.002] <em>(older, 2021-22)</em></li>
+<li>Before scaling paid traffic, know the maximum cost per sale and the ideal cost per sale for each product, or at least for product groups on average. Without both numbers, decisions to scale or pull back are guesswork. [L0686.001] <em>(older, 2021-22)</em></li>
+<li>The ideal cost per sale sits below the maximum so that each sale keeps a chosen margin. Running every sale at break-even means the business never earns money. [L0686.003] <em>(older, 2021-22)</em></li>
+</ul>
+<h3 id="break-even-by-units-and-volume">Break-even by units and volume</h3>
+<ul>
+<li>Break-even units for a one-time sponsorship fee = fee ÷ revenue per unit. Example: a $10,000 fee at $100 per unit needs 100 units sold to recover the fee in revenue, not profit. [L0492.051]</li>
+<li>Break-even sales per month = total monthly fixed costs ÷ margin left per sale after product, fees and acquisition costs. This shows how many sales cover overhead. [L0436.011]</li>
+<li>Paid-ad dropshipping customer acquisition cost is often about $5-15 per new customer, depending on niche and market. Use your own measured figure once ads run. [L0436.005]</li>
+<li>Paid ads cost roughly $7-12 in ad spend per conversion for the products discussed. Include this when judging whether a product can sell at a profit with ads. [L0706.008]</li>
+<li>Include more costs than COGS and ads once orders are numerous: payment processing (around 4% for Shopify Payments, Stripe or PayPal), app subscriptions, Shopify transaction fees, and virtual assistant or staff costs. Add them to the break-even calculation after the first few profitable weeks. [L0875.014]</li>
+<li>For a store with several products, calculate one break-even ROAS from the average selling price and average fulfilment cost. Keep prices and fulfilment costs close across products so this one number stays accurate. [L0642.049]</li>
+<li>Calculate for each acquisition channel the cost to acquire one customer, the time to break even, and the point at which that customer becomes profitable. These three numbers set how much you can safely spend on traffic. [L0378.085]</li>
+</ul>
+<h2 id="target-and-desired-roas-from-profit-allocation">Target and desired ROAS from profit allocation</h2>
+<h3 id="target-roas-with-a-profit-share-source-a">Target ROAS with a profit share (Source A)</h3>
+<ul>
+<li>Target ROAS = Revenue ÷ (Profit × Allocation %), where Allocation % is the share of profit you choose to spend on ads. Example: $1,000 revenue, $600 profit, 50% allocated to ads gives 1,000 ÷ 300 = 3.3x. [L0327.018]</li>
+<li>Procedure:
+<ol type="1">
+<li>Calculate break-even ROAS first (e.g. 1.67x).</li>
+<li>Decide the percentage of profit to spend on ads (e.g. 50%).</li>
+<li>Calculate target ad spend = Profit × Percentage (e.g. $600 × 50% = $300).</li>
+<li>Calculate target ROAS = Revenue ÷ Ad spend (e.g. $1,000 ÷ $300 = 3.3x).</li>
+<li>A higher target ROAS means a lower ad spend allocation and more profit remaining. [L0327.019]</li>
+</ol></li>
+<li>Example: $1,000 revenue with $600 profit before ads. Allocating 50% of profit to ads gives $300 ad spend and a target ROAS of 3.3x. $300 of profit remains after paying for ads. [L0327.020]</li>
+<li>Spreadsheet columns for break-even and target ROAS, in calculation order, with the lesson's example values:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Example value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revenue</td>
+<td>$1,000</td>
+</tr>
+<tr>
+<td>COGS and fees ($)</td>
+<td>$400</td>
+</tr>
+<tr>
+<td>COGS and fees (%)</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>Profit before ads ($)</td>
+<td>$600</td>
+</tr>
+<tr>
+<td>Profit before ads (%)</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>Break-even ROAS</td>
+<td>1.67x</td>
+</tr>
+<tr>
+<td>Share of profit spent on ads</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>Target ad spend</td>
+<td>$300</td>
+</tr>
+<tr>
+<td>Target ROAS</td>
+<td>3.3x</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0327.026]</p>
+<ul>
+<li>Break-even is the point where all profit before ads is spent on advertising. With $1,000 revenue and $600 profit before ads, spending $601 on ads loses $1, while spending $599 keeps $1. Every dollar of ad spend above profit before ads is a dollar of loss. [L0327.025]</li>
+</ul>
+<h3 id="desired-roas-for-a-profit-target-source-c">Desired ROAS for a profit target (Source C)</h3>
+<ul>
+<li>Desired ROAS is the ROAS a campaign must reach to hit a chosen profit target, such as 15% or 20%. Calculate it from COGS and average order value, not only from break-even ROAS. [L0445.006]</li>
+<li>Desired ROAS = AOV ÷ Profit Target CPP. Example: 60 ÷ 27.65 = 2.17. [L0900.007]</li>
+<li>Desired ROAS for a target margin uses COGS, AOV and the chosen profit percentage (for example 10%, 15% or 20%). It is read from a KPI calculation sheet. [L0875.006]</li>
+<li>Required ROAS for a profit target = 1 ÷ (margin after COGS and all non-ad costs, as a share of revenue, minus target profit share). Non-ad costs include payment fees, app fees and staff costs. Example: 66.7% margin, 4% fees, 15% target gives 1 ÷ 0.477 ≈ 2.1. A sheet with extra costs can land slightly higher, such as 2.17. [L0875.032]</li>
+<li>For a 15% profit target with COGS $20 and a given AOV, the target ROAS is 2.17. If Facebook ads alone run at 2.17 ROAS, the 15% margin is reached. Higher ROAS means a larger margin and possibly a reason to scale. [L0445.015, L0875.017]</li>
+<li>A cost per purchase near $27.65 corresponds to roughly 15% profit under the same COGS and AOV, so it is a good target when using the calculation sheet. [L0875.019]</li>
+<li>Source C benchmark ROAS formula: Benchmark ROAS = BE-ROAS + 20% margin. Your own benchmark can use a different margin, because not everyone aims for 20%. [L0376.020]</li>
+<li>Scaling target: aim for a ROAS above break-even by at least one point (break-even ROAS + 1). [L0650.045]</li>
+</ul>
+<h3 id="desired-roas-from-first-order-contribution-source-e">Desired ROAS from first-order contribution (Source E)</h3>
+<ul>
+<li>Target ROAS for a desired first-order contribution margin: amount to keep = AOV × target margin %. Required ROAS = AOV ÷ (gross profit per order − amount to keep). Example with $238.49 AOV and $130.27 gross profit: for 15% margin, keep $35.77, and required ROAS = 238.49 ÷ (130.27 − 35.77) = 2.52. For 25% margin, required ROAS = 3.38. [L0433.010]</li>
+<li>Break-even ROAS shows the minimum ad return to avoid losses, but target ROAS sets the margin you want. Set targets from the profit you want to keep, and compare them with ROAS in the ad account. If ad ROAS meets the target but profit is still low, the problem is unit economics, not advertising. [L0433.011]</li>
+</ul>
+<h2 id="maximum-acquisition-cost-and-the-10-rule">Maximum acquisition cost and the 10% rule</h2>
+<h3 id="maximum-acquisition-cost">Maximum acquisition cost</h3>
+<ul>
+<li>Maximum acquisition cost = profit per sale × share of profit you are willing to give to the ad platform. Example: $50 product with $15 profit gives a maximum of $7 if you keep 50% of profit (the source says $7; 50% of $15 is $7.50), or up to $14.95 with a much thinner margin. [L0643.043]</li>
+<li>Lifetime value changes the ceiling. A $50 product with a historical customer lifetime value of $500 can afford $450 to acquire that customer. Without lifetime value data, the same business can only justify spending up to its first-order profit. [L0643.042]</li>
+<li>Know two dollar figures immediately: the maximum you can afford to spend to acquire one customer, and the target cost per acquisition for your ideal profit position. Both depend on your specific business; there is no universal correct amount. [L0414.011] <em>(older, 2021-22)</em></li>
+<li>Use the maximum affordable acquisition cost and the target CPA to decide where to advertise, where not to, and where to spend more. Check these numbers across the full customer journey and against customer lifetime value. [L0414.012] <em>(older, 2021-22)</em></li>
+<li>Keep a financial system that shows at any moment whether actual CPA is at or below target, and why or why not. Hitting the target CPA is the marketing-side indicator of profitability. [L0414.013] <em>(older, 2021-22)</em></li>
+<li>To find the maximum you can spend per sale in the Profitable Traffic Calculator, enter 0 as target profit per sale. Enter the profit you want to keep as a currency amount (e.g. $300), not a percentage. The break-even results then show the highest CPA, ROAS and max CPC you can accept. [L0686.018] <em>(older, 2021-22)</em></li>
+<li>Ad cost per sale should be compared against average order value. A 10x ROAS target allows ad cost of one tenth of the order value. [L0472.062] <em>(2025)</em></li>
+</ul>
+<h3 id="the-10-rule">The 10% rule</h3>
+<ul>
+<li><p>Set ad spend at up to 10% of product price per sale. A $200 product supports up to $20 of ad spend per customer; a $1,000 product supports up to $100. [L0358.027] <em>(older, 2020)</em></p></li>
+<li><p>Keep customer acquisition cost (CAC) at a maximum of 10% of product price. For a $1,000 product, up to $100 of ad spend per sale. [L0759.018]</p></li>
+<li><p>The 10% CAC limit is a rough average rule. Real acquisition costs fluctuate between campaigns, so judge it over many sales rather than one. [L0759.019]</p></li>
+<li><p>Maximum customer acquisition cost is about 10% of the sale price, which is the 10x ROAS target. On a $1,000 product, spend up to $100 per customer. [L0855.032] <em>(2023)</em></p></li>
+<li><p>Source A 2022 budget per sale:</p>
+<ol type="1">
+<li>Set the minimum advertised price (MAP) at least 2X wholesale cost. Example: $500 wholesale means a $1,000 MAP.</li>
+<li>Aim for a target ROAS of 10X, so every $1 on ads returns at least $10 in sales. Example: a $1,000 product allows up to $100 ad spend per sale.</li>
+<li>Typical cost structure per sale: COGS about 50% of selling price, a 2.9% transaction fee, shipping covered, leaving about 10% of the price for traffic. The source does not itemise the remainder, so check it against your own costs.</li>
+</ol>
+<p>[L0429.044] <em>(older, 2022)</em></p></li>
+<li><p>Use a minimum ROAS of 10x when budgeting ads for a product, leaving margin for shipping and the merchant fee. [L0834.098] <em>(older, 2021)</em></p></li>
+<li><p>Low ROAS on lower-priced products has three possible causes: ads not targeted tightly enough, keywords too broad, and low website conversion rate. Review all three before deciding a niche is wrong. Focus first on costs you control, such as shipping rates and ad spend. [L0358.029] <em>(older, 2020)</em></p></li>
+</ul>
+<h2 id="revenue-per-click-and-maximum-cpc">Revenue per click and maximum CPC</h2>
+<h3 id="core-formulas">Core formulas</h3>
+<ul>
+<li>Revenue per click (RPC) = total conversion value (revenue) ÷ total clicks. It is the average revenue each click generates and the basis for all bid calculations. [L0299.003, L0454.003]</li>
+<li>Predicted revenue per click comes from historical performance data for each product. Combined with target ROAS, it determines the maximum CPC you can profitably bid. [L0299.002]</li>
+<li>Target CPC (maximum bid) = Revenue per click ÷ Target ROAS. Divide revenue per click by target ROAS to get the highest CPC that still keeps you profitable. [L0299.011, L0510.053]</li>
+<li>Example: 100 clicks generating $1,000 revenue gives $10 RPC. At a 10x target ROAS the target CPC is $1. [L0454.003]</li>
+<li>Maximum CPC for a target ROAS = RPC ÷ target ROAS. Example: a $1,000 budget earning $2,000 has ROAS 2. With RPC $2, the maximum CPC for ROAS 2 is $1. [L0510.053]</li>
+<li>Source B: Maximum CPC = target CPA × conversion rate. At a $500 CPA and 1% conversion, break-even max CPC is $5. At a $200 target CPA and 1% conversion, max CPC is $2. [L0446.007] <em>(older, 2021-22)</em></li>
+<li>Source B: a higher bid is only profitable if conversion rate rises in step. Paying above target max CPC pushes profit below your target per sale, and a falling conversion rate makes existing bids unprofitable. [L0686.011] <em>(older, 2021-22)</em></li>
+<li>Bid, conversion rate and ROAS are linked: a high bid stops being profitable when conversion falls too low, so check every bid level against the conversion rate it actually produces. [L0740.013] <em>(older, 2021-22)</em></li>
+</ul>
+<h3 id="worked-case-competitor-and-optimised-advertiser-source-a">Worked case: competitor and optimised advertiser (Source A)</h3>
+<ul>
+<li>Competitor baseline: $1,000 budget at $1 CPC gives 1,000 clicks. At a 1% conversion rate that is 10 conversions. At $200 customer value, that is $2,000 revenue, ROAS 2 and RPC $2. The highest CPC that still holds ROAS 2 is $1. [L0510.054]</li>
+<li>Optimised advertiser with the same $1,000 budget: shopping title and quality score lowered the rate to $0.80 CPC, giving 1,250 clicks. Facebook retargeting raised conversion to 1.26%, giving about 16 conversions. The email lift raised customer value to $220, so revenue is about $3,520, and the maximum CPC for ROAS 2 becomes $1.41. [L0510.055]</li>
+<li>The source quotes $3,500 ÷ $1,000 as 4. The correct result is 3.5. Use exact figures and recalculate with your own revenue before setting a bid target. [L0510.056]</li>
+<li>The competitor and optimised advertiser both had a $1,000 budget. The optimised one reached about $3,500 revenue (a stated 76% increase from better titles, dynamic retargeting and email opt-ins, which is 75% on the given figures), with a much higher ROAS. The gap made it hard for the competitor to match the bid. [L0510.057]</li>
+</ul>
+<h2 id="profitable-traffic-calculators">Profitable traffic calculators</h2>
+<h3 id="source-b-profitable-traffic-calculator-older">Source B Profitable Traffic Calculator (older)</h3>
+<ul>
+<li><p>The Profitable Traffic Calculator is a free spreadsheet (Excel or Numbers, and a Google Sheets copy). It calculates break-even and target CPA, ROAS and max CPC from price, cost, target profit and conversion rate. It works for Google Ads, Facebook or any cost-per-click channel. [L0446.016] <em>(older, 2021-22)</em></p></li>
+<li><p>It is a spreadsheet used to work out target cost per sale and target ROAS. Both targets are needed before any bid or budget decision. [L0744.010] <em>(older, 2021-22)</em></p></li>
+<li><p>Procedure:</p>
+<ol type="1">
+<li>Enter the product price in the blue input field (example: $2,000).</li>
+<li>Enter the unit price: the total cost of the sale before marketing, including supplier cost, shipping, wages and overheads (example: $1,500). The calculator shows net profit before traffic (example: $500).</li>
+<li>Enter target profit per sale. Use $0 to aim for break-even sales (example: $300).</li>
+<li>Enter the conversion rate, for the store or the individual product (example: 1%).</li>
+<li>Read the outputs: break-even CPA, break-even ROAS, break-even max CPC, target CPA, target ROAS and target max CPC.</li>
+<li>Change the conversion rate to see how allowed bids move (example: 0.5%).</li>
+</ol>
+<p>Only blue fields are entered by hand; pink and green fields calculate automatically. [L0446.017] <em>(older, 2021-22)</em></p></li>
+<li><p>Sheet labels include Product Price, Unit Price, Target Profit Per Sale, Conversion Rate and current-average inputs (Current Avg CPA, Current Avg CPC, Current Avg ROAS, with Actual conversion rate). Required entries are marked "YOU NEED TO ENTER" and optional ones "YOU CAN OPTIONALLY ENTER". Outputs include Net Profit Before Traffic, Break Even CPA, Break Even CPC, Break Even ROAS, Target CPA, Target Max CPC and Target ROAS. Enter current averages from your ad account to compare live performance with the targets. [L0446.021] <em>(older, 2021-22)</em></p></li>
+<li><p>Inputs are product price, unit price, target profit per sale, and conversion rate (blue fields). Result cells (pink and green) calculate automatically and should not be overwritten. [L0686.009] <em>(older, 2021-22)</em></p></li>
+<li><p>Procedure:</p>
+<ol type="1">
+<li>Enter the product price.</li>
+<li>Enter the unit price: total cost of one sale before marketing (including shipping, staff and overheads per sale).</li>
+<li>Enter target profit per sale.</li>
+<li>Enter the store conversion rate or, if known, the product's own rate.</li>
+<li>Read net profit before traffic and the break-even results (break-even CPA, ROAS and CPC).</li>
+<li>Read the target results (target CPA, ROAS and max CPC).</li>
+<li>Compare target max CPC with current bids and conversion rate before raising any bid.</li>
+</ol>
+<p>[L0686.010] <em>(older, 2021-22)</em></p></li>
+<li><p>Formulas used by the calculator:</p></li>
+</ul>
+<pre><code>Net profit before traffic = product price - unit cost
+Break-even CPA = net profit before traffic
+Break-even ROAS = product price / break-even CPA
+Break-even max CPC = break-even CPA x conversion rate
+Target CPA = net profit before traffic - target profit per sale
+Target ROAS = product price / target CPA
+Target max CPC = target CPA x conversion rate</code></pre>
+<p>[L0686.005] <em>(older, 2021-22)</em></p>
+<ul>
+<li><p>Worked example: product price $2,000, unit cost $1,500, net profit before traffic $500. Target profit $300, conversion rate 1%. Results: break-even CPA $500, break-even ROAS 4x, break-even max CPC $5, target CPA $200, target ROAS 10x, target max CPC $2. [L0686.006] <em>(older, 2021-22)</em></p></li>
+<li><p>At a conversion rate of 0.5%, target CPA stays $200 but target max CPC falls to $1. The lower rate halves the affordable bid. [L0686.007] <em>(older, 2021-22)</em></p></li>
+<li><p>If a single product's conversion rate is unknown, use the store-wide rate. The result is much closer to reality than running no calculation. [L0686.016] <em>(older, 2021-22)</em></p></li>
+<li><p>Setting targets for a large catalogue:</p>
+<ol type="1">
+<li>List the prices of all products.</li>
+<li>Group them into price buckets, e.g. around $2,000, $1,700, $1,500 and $1,300.</li>
+<li>Run the calculator once per bucket price.</li>
+<li>Use the stepped results as average guidance for max CPC and related targets, and avoid limits so tight they block profitable sales.</li>
+</ol>
+<p>[L0686.017] <em>(older, 2021-22)</em></p></li>
+<li><p>Before any bid change, check target max CPC against current bids and conversion rate (see L0686.010 steps 6-7). [L0686.010]</p></li>
+</ul>
+<h3 id="source-c-and-dropship-calculators">Source C and dropship calculators</h3>
+<ul>
+<li>The Course C dropshipping calculator returns break-even ROAS from COGS (product plus shipping) and selling price. Enter both to get the result. [L0445.024]</li>
+<li>The tool is on ecommercementoring.com/tools. Enter COGS (including shipping to warehouse or supplier cost) and selling price; the tool returns the break-even ROAS threshold. [L0229.009]</li>
+<li>The Source C KPI calculation sheet takes COGS and average order value as inputs. It outputs break-even KPIs and profit-target KPIs, including break-even ROAS, break-even cost per purchase and the ROAS for each profit target. Its built-in fee and app cost assumptions can be used directly. [L0875.020]</li>
+<li>Check which profit figure any calculator uses before relying on its output. [L0440.066]</li>
+</ul>
+<h2 id="kpi-baseline-sheets">KPI baseline sheets</h2>
+<h3 id="baseline-procedure-per-product">Baseline procedure per product</h3>
+<ul>
+<li><p>Before running paid ads, know three numbers for each product: COGS, break-even ROAS and break-even cost per purchase. [L0445.001]</p></li>
+<li><p>Procedure to calculate the KPI baseline for a product:</p>
+<ol type="1">
+<li>Add COGS (product price plus shipping).</li>
+<li>Add average order value.</li>
+<li>Read the break-even KPIs (minimum ROAS and maximum CPA that avoid a loss).</li>
+<li>Set a profit target (e.g. 10% or 15%) and read the profit-target KPIs.</li>
+<li>Compare live campaign ROAS and CPA against these numbers before deciding to scale, hold or kill the product.</li>
+</ol>
+<p>[L0445.012]</p></li>
+<li><p>Build the KPI sheet in this order:</p>
+<ol type="1">
+<li>Enter average order value, average fee % and average COGS including shipping per order.</li>
+<li>Enter the daily cost of running the business (the sheet's value is total monthly cost ÷ monthly orders: 400 ÷ 420).</li>
+<li>Enter the profit target %.</li>
+<li>Calculate break-even CPP, then the profit-target CPP by subtracting profit target % × AOV.</li>
+<li>Enter add-to-cart %, reached-checkout % and purchased %.</li>
+<li>Work backwards from CPP to CPIC, then CPATC, then CPVC using the funnel rates.</li>
+<li>Calculate break-even ROAS and profit-target ROAS.</li>
+<li>If the ad account is not in USD, enter how many units of your currency equal 1 USD.</li>
+<li>Compare the goal CPC with actual CPC and funnel rates.</li>
+</ol>
+<p>[L0900.011]</p></li>
+<li><p>Breakeven KPIs cover the costs of the sale and leave no profit. Profit-target KPIs are the stricter limits to aim for. Each funnel-stage cost is derived from the next stage's cost times the conversion rate between them. Higher conversion at any stage allows a higher cost at the stage above. [L0900.012]</p></li>
+</ul>
+<h3 id="funnel-formulas-kpi-sheet">Funnel formulas (KPI sheet)</h3>
+<ul>
+<li>Profit Target CPP = Breakeven CPP − (profit target % × AOV). Example: 36.65 − (0.15 × 60) = 36.65 − 9.00 = 27.65. [L0900.002]</li>
+<li>Cost Per Initiate Checkout (CPIC) = CPP × (purchased % ÷ reached checkout %). Example: 36.65 × (2 ÷ 4) = 18.32 at breakeven; 27.65 × (2 ÷ 4) = 13.82 at the profit target. [L0900.003]</li>
+<li>Cost Per Add to Cart (CPATC) = CPIC × (reached checkout % ÷ add to cart %). Example: 18.32 × (4 ÷ 6) = 12.22 at breakeven; 13.82 × (4 ÷ 6) = 9.22 at the profit target. [L0900.004]</li>
+<li>Cost Per View Content (CPVC) = CPATC × add to cart %. Example: 12.22 × 0.06 = 0.73 at breakeven; 9.22 × 0.06 = 0.55 at the profit target. [L0900.005]</li>
+</ul>
+<h3 id="sheet-values-example-inputs">Sheet values (example inputs)</h3>
+<ul>
+<li>Example inputs: AOV $60, fees 4%, COGS $20 including shipping, daily cost $0.9524 (total $400 ÷ 420 items per month), profit target 15%, add to cart 6%, reached checkout 4%, purchased 2%. [L0900.008, L0900.009]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Breakeven (no profit, no loss)</th>
+<th>Profit target (15%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cost Per Purchase (CPP)</td>
+<td>36.64761905</td>
+<td>27.64761905</td>
+</tr>
+<tr>
+<td>Cost Per Initiate Checkout (CPIC)</td>
+<td>18.32380952</td>
+<td>13.82380952</td>
+</tr>
+<tr>
+<td>Cost Per Add to Cart (CPATC)</td>
+<td>12.21587302</td>
+<td>9.215873016</td>
+</tr>
+<tr>
+<td>Cost Per View Content (CPVC)</td>
+<td>0.732952381</td>
+<td>0.552952381</td>
+</tr>
+<tr>
+<td>Return on Ad Spend (ROAS)</td>
+<td>1.595744681</td>
+<td>2.170168791</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0900.008]</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average Order Value</td>
+<td>60.0</td>
+<td>$</td>
+</tr>
+<tr>
+<td>Average Fees</td>
+<td>4.0</td>
+<td>%</td>
+</tr>
+<tr>
+<td>Average COGS (incl. Shipping)</td>
+<td>20.0</td>
+<td>$</td>
+</tr>
+<tr>
+<td>Daily cost of running a business</td>
+<td>0.9523809524</td>
+<td>$</td>
+</tr>
+<tr>
+<td>Profit Target</td>
+<td>15.0</td>
+<td>%</td>
+</tr>
+<tr>
+<td>Add to cart</td>
+<td>6.0</td>
+<td>%</td>
+</tr>
+<tr>
+<td>Reached checkout</td>
+<td>4.0</td>
+<td>%</td>
+</tr>
+<tr>
+<td>Purchased</td>
+<td>2.0</td>
+<td>%</td>
+</tr>
+<tr>
+<td>Currency conversion: 1 USD equals (in your currency)</td>
+<td>1.0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Baseline PUR conversion rate (est.)</td>
+<td>0.01666666667</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Total cost of running a business</td>
+<td>400.0</td>
+<td>$</td>
+</tr>
+<tr>
+<td>Approximate number of items generated per month</td>
+<td>420.0</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Goal CPC (calculated)</td>
+<td>0.6207936508</td>
+<td>$</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0900.009]</p>
+<h3 id="goal-cpc-from-a-single-product">Goal CPC from a single product</h3>
+<ul>
+<li><p>Procedure:</p>
+<ol type="1">
+<li>Margin per sale: product price $75 − COGS $29 = $46.</li>
+<li>With a 3% conversion rate, one sale comes from about 33 clicks (100 ÷ 3).</li>
+<li>Keep $25 of the $46 margin for ad spend, as the sheet example does, so the sale still breaks even.</li>
+<li>Divide the ad budget by clicks per sale: 25 ÷ 33 = $0.76 goal CPC (the sheet example rounds this to $0.75).</li>
+</ol>
+<p>[L0900.013]</p></li>
+</ul>
+<h2 id="reading-results-and-acting-on-them">Reading results and acting on them</h2>
+<ul>
+<li>Compare actual ROAS with break-even and target ROAS. Above target: performing well. Between target and break-even: profitable but short of goals. Below break-even: losing money. [L0327.022]</li>
+<li>Calculate break-even ROAS before launching any ads, because it is the reference number for profit or loss. Compare every campaign, keyword and product against it. [L0327.023]</li>
+<li>Break-even ROAS depends on each product's COGS and fees, so calculate it per product or per product category rather than one number for the whole store. This can be a single spreadsheet covering all products or products grouped by category. [L0327.024]</li>
+<li>Campaigns below break-even lose money on each order; the funnel must be fixed or the product removed. Campaigns above break-even but below the profit target need optimisation before scaling. [L0875.013]</li>
+<li>Judge an ad set against break-even cost per purchase. Use ad-level data later for more precise decisions. [L0640.014]</li>
+<li>Use the break-even cost per purchase to set kill rules for campaigns. [L0693.050]</li>
+<li>Know four numbers before reviewing ad performance: target cost per sale, target ROAS, break-even ROAS and break-even cost per sale. Work them out at least roughly; without a target, report data means nothing. [L0719.017] <em>(older, 2021-22)</em></li>
+<li>Track cost per product and cost per creative alongside ad spend to see which products and creative types cost the most to support. [L0885.021]</li>
+<li>True ROAS = attributable revenue ÷ (Meta ad spend + cost to produce the creatives). Including creative cost gives a more accurate return than ad spend alone. [L0885.020]</li>
+<li>If ad ROAS is at or above target but profit is still low, the problem lies in unit economics, not advertising. [L0433.011]</li>
+<li>A ROAS of 2.6-3 on the same margins was reported to give about 35% profit, against about 15-20% at a ROAS of 2-2.5 with break-even of 1.3-1.5. [L0645.021]</li>
+<li>Example: a ROAS of 3.5-4.5 on CAD 1,000 daily spend and CAD 3,500 sales gives a stated net daily profit of CAD 1,100-1,200. [L0298.003]</li>
+<li>Winter ad spend of about $5,000 produced about $18,000 in sales in November. The brand roughly broke even overall, which was accepted because the strategy was long term. [L0492.052]</li>
+<li>Source C example: $1 spent that returns $1.60 gives a ROAS of 1.6. [L0445.003]</li>
+<li>Ad cost per conversion should always be read against the margin per sale before deciding whether a product sells profitably with ads. [L0706.008]</li>
+</ul>
+<h2 id="roas-benchmarks-by-business-model">ROAS benchmarks by business model</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Business model</th>
+<th>ROAS benchmark</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Online course sales</td>
+<td>2x to 3x typical; 5x is excellent</td>
+<td>[L0719.014] (older, 2021-22)</td>
+</tr>
+<tr>
+<td>High-ticket dropshipping</td>
+<td>About 10x on average or better is needed to be profitable</td>
+<td>[L0719.014] (older, 2021-22)</td>
+</tr>
+<tr>
+<td>General ecommerce (Source A)</td>
+<td>Minimum 10x</td>
+<td>[L0208.001, L0358.028, L0359.094, L0808.034]</td>
+</tr>
+<tr>
+<td>Source C paid ads</td>
+<td>Break-even 1.3-1.5 ideal; 1.6 or lower planning target</td>
+<td>[L0645.018, L0875.015]</td>
+</tr>
+<tr>
+<td>Facebook and TikTok at scale</td>
+<td>About 2 to 2.5 when working well; higher possible but not a planning basis</td>
+<td>[L0871.033, L0875.016]</td>
+</tr>
+<tr>
+<td>Source C general</td>
+<td>4.5 is strong when break-even is 1.8; above 2.5 is solid margin</td>
+<td>[L0298.001]</td>
+</tr>
+<tr>
+<td>Source C scaling</td>
+<td>5-7 average held over 3-7 days is an ideal scaling target</td>
+<td>[L0298.002]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The ROAS you need is set by your margins and costs, not by a universal standard. High-ticket margins mean a 2x-3x result that is good in other models would lose money. [L0719.015] <em>(older, 2021-22)</em></li>
+<li>A break-even ratio of 1.16 was quoted for a $50 product bought at $2-3 bulk cost, with about 30-50% profit at $7 unit cost on Facebook scaling at 2-2.5 ROAS. Check these figures against your own unit cost, fees and shipping before using them. [L0871.034, L0871.033]</li>
+<li>Source A 2026: set a minimum ROAS target of 10x for ad campaigns. Keep scaling spend only while the 10x minimum holds. [L0808.034]</li>
+<li>Source A: a $1,000 budget earning $2,000 is ROAS 2; the 10x minimum target is the standard the source applies to scaling. [L0208.001, L0208.003]</li>
+<li>Source A example: $923 monthly ad spend should generate $9,230 at 10x. A store that spent $923 and generated $6,700 had 7.3x blended ROAS. Reaching 10x needed $2,530 more revenue. [L0208.001, L0208.003]</li>
+<li>Low ROAS on lower-priced products: review targeting, keyword breadth and conversion rate first; costs you control include shipping rates and ad spend. [L0358.029] <em>(older, 2020)</em></li>
+<li>Source A 2025: a 10x ROAS target allows ad cost of one tenth of order value. [L0472.062]</li>
+<li>Source B: a ROAS below target (for example 7x against a 10x target) signals the need for optimisation through bid adjustments, keyword management or other changes. [L0256.014] <em>(older, 2021-22)</em></li>
+<li>Key figures for dropshipping: a break-even ROAS of 1.5 and ROAS above it is profitable; a ROAS of 2.5 or higher on paid ads is the planning band for solid margins. [L0875.004, L0298.001]</li>
+</ul>
+<h2 id="core-metrics-roas-cpa-cpc-and-the-kpi">Core metrics: ROAS, CPA, CPC and the KPI</h2>
+<ul>
+<li>A KPI is the goal you set before advertising, such as cost per sale or the return you need, so every campaign has a clear number to reach. Without a defined target you cannot judge whether a campaign is working [L1021.001].</li>
+<li>ROAS is the most important KPI in the reporting view [L1024.042].</li>
+<li>ROAS = revenue generated by the ads ÷ ad spend over the same period [L1020.010, L1049.017, L1110.047, L1111.148, L1038.009, L1135.052, L1215.037, L1217.052, L1508.008, L1002.074, L0969.048, L0970.147, L0972.054, L1203.002].</li>
+<li>Worked examples of the ROAS formula:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ad spend</th>
+<th>Revenue</th>
+<th>ROAS</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$1,000</td>
+<td>$3,000</td>
+<td>3.0</td>
+<td>[L1049.017]</td>
+</tr>
+<tr>
+<td>$100</td>
+<td>$300 (3x)</td>
+<td>3.0</td>
+<td>[L1038.009]</td>
+</tr>
+<tr>
+<td>$100</td>
+<td>$1,000</td>
+<td>10x</td>
+<td>[L1110.047] (older, 2019)</td>
+</tr>
+<tr>
+<td>$2,000</td>
+<td>$20,000</td>
+<td>10x</td>
+<td>[L1111.148] (older, 2020)</td>
+</tr>
+<tr>
+<td>$1,600</td>
+<td>about $17,000</td>
+<td>about 10x</td>
+<td>[L0969.048] (older, 2022)</td>
+</tr>
+<tr>
+<td>$1,000</td>
+<td>$20,000</td>
+<td>20x, a sign to test a larger budget</td>
+<td>[L0970.147]</td>
+</tr>
+<tr>
+<td>$30 per day for 30 days ($900)</td>
+<td>$13,500 at 15x</td>
+<td>15x</td>
+<td>[L0972.054]</td>
+</tr>
+<tr>
+<td>$50</td>
+<td>$200</td>
+<td>4x</td>
+<td>[L1508.008]</td>
+</tr>
+<tr>
+<td>$1</td>
+<td>$1.80</td>
+<td>1.8</td>
+<td>[L1174.009]</td>
+</tr>
+<tr>
+<td>$1</td>
+<td>$2.50</td>
+<td>2.5</td>
+<td>[L1217.052]</td>
+</tr>
+<tr>
+<td>$100</td>
+<td>$3.50</td>
+<td>3.5</td>
+<td>[L1215.037]</td>
+</tr>
+<tr>
+<td>100 (Source E tracker, 3 purchases at $150 = $450)</td>
+<td>$450</td>
+<td>4.5</td>
+<td>[L1354.027]</td>
+</tr>
+<tr>
+<td>$100</td>
+<td>$60</td>
+<td>0.6x, spending more on ads than earned</td>
+<td>[L1203.002]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A rising spend with falling ROAS signals that extra traffic is not profitable. Keep ROAS high while raising bids or budgets [L1002.074] (older, 2019).</li>
+<li>Track ROAS against two targets: the target ROAS you aim for, and the break-even ROAS where ad revenue covers ad spend and COGS. Both shift when cost per click or average order value changes [L1038.010].</li>
+<li>CPA = amount spent on the campaign ÷ number of purchases. Example: $104.49 spent with one purchase gives a CPA of $104.49 [L1124.009].</li>
+<li>Ad spend = cost per click × number of clicks. CPA = ad spend ÷ number of sales. Example: $3 × 100 clicks = $300 spend. At 2% conversion (2 sales), CPA is $150. At 3% (3 sales), CPA drops to $100 [L0923.003].</li>
+<li>Cost per sale = cost per click ÷ conversion rate. At $1 CPC, 100 visitors at 5% gives 5 sales for $100 total, or $20 per sale. 500 visitors at 1% gives 5 sales for $500, or $100 per sale. The lower-CTR, higher-conversion version is far cheaper per sale [L1401.017].</li>
+<li>CPA = cost per click ÷ conversion rate. At 0.5% conversion, a $0.25 click gives a CPA of $50, while a $1.50 click gives $300. The same term is profitable at one bid and not at the other [L1328.036].</li>
+<li>Paid traffic math: ad spend = clicks × CPC; conversions = clicks × conversion rate; revenue = conversions × average value per conversion; ROAS = revenue ÷ ad spend. Example: 500 clicks × $1.20 = $600 spend; 500 × 2% = 10 conversions; 10 × $300 = $3,000 revenue; ROAS = 5 [L1455.002].</li>
+<li>Paid traffic is only worth scaling when ad revenue exceeds ad spend, so the target is a positive return on ad spend. A campaign that earns more in sales than it costs can justify a higher budget [L1455.003].</li>
+<li>Stores with a profitable paid setup often run budgets without a fixed cap, as long as the return stays positive. The key control is knowing conversion rate and value per conversion, so the spend limit follows from the numbers [L1455.004].</li>
+<li>Before launching a campaign, know your average cost per click, your site conversion rate and the value of one sale. These three numbers decide whether the campaign can be profitable, and without them you cannot calculate break-even or the ROAS you need [L1455.013].</li>
+<li>Your cost per click or acquisition must fit the conversion rate your site achieves on that traffic. If you pay more for traffic than your conversion rate supports, sales will not be profitable. Set financial targets for paid-traffic sales before scaling spend [L1507.006] (older, 2021-22).</li>
+<li>Filtering out buyers unlikely to convert, through ad text and pre-click qualifiers, improves cost-to-revenue more than a higher click-through rate does. Judge ad changes by cost per sale or revenue per dollar spent, not by CTR alone [L1401.018].</li>
+</ul>
+<h2 id="break-even-roas-definition-and-rules">Break-even ROAS: definition and rules</h2>
+<ul>
+<li>Break-even ROAS is the minimum return on ad spend an offer needs to avoid a loss. Any ROAS above it makes money and any ROAS below it loses money [L0986.014].</li>
+<li>Break-even ROAS is the point where a campaign is neither profitable nor loss-making. A ROAS above it is profitable; below it means a loss [L1217.053].</li>
+<li>The break-even ROAS is the point where revenue equals COGS plus ad spend. Profit turns from negative to positive above it [L1203.003].</li>
+<li>Break-even ROAS is the return at which a campaign covers its costs. The mentor gave no fixed target above it, but described a ROAS of about 1.7 as acceptable and about 3 as great [L1107.007].</li>
+<li>Before running ads for an offer, compare its break-even ROAS with the ROAS you expect or measure. Keep ads running only while measured ROAS stays above break-even. Do this for every offer, including bundles and buy-X-get-Y offers [L0986.015].</li>
+<li>Calculate the minimum ROAS for each campaign, keyword and other segment before launch, and let that minimum guide every bidding and budget decision [L1203.001].</li>
+<li>Compare ROAS with break-even: above it the campaign is profitable, below it the campaign is at a loss [L1024.042].</li>
+<li>Knowing the break-even ROAS for every candidate product before testing is essential, because it sets the minimum return a product's ads must generate [L1162.007].</li>
+<li>Break-even ROAS depends on margin, so always compare ROAS with break-even before deciding whether to keep or cut an ad set [L0950.024].</li>
+<li>Break-even ROAS changes with the product's margin and costs. Calculate your own floor for each product rather than using another store's figure [L0977.027, L1203.004].</li>
+</ul>
+<h3 id="break-even-roas-formulas">Break-even ROAS formulas</h3>
+<p>Sources define the cost base differently. The formulas below are not interchangeable. Use the one that matches the costs you have:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Formula</th>
+<th>Cost base</th>
+<th>Worked example</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total revenue ÷ margin $</td>
+<td>Margin after all per-order costs (Source D)</td>
+<td>Buy 1: 43 ÷ 32.50 = 1.32. Buy 2 get 1 free: 83 ÷ 60.30 = 1.38</td>
+<td>[L0986.004]</td>
+</tr>
+<tr>
+<td>Selling price ÷ (selling price − product cost), before fees, shipping and returns</td>
+<td>Product cost only</td>
+<td>$6 cost, $20 price: 20 ÷ 14 ≈ 1.43</td>
+<td>[L0995.050]</td>
+</tr>
+<tr>
+<td>Selling price ÷ (selling price − product − shipping)</td>
+<td>Product plus shipping</td>
+<td>$40 price, $20 product plus shipping: 40 ÷ 20 = 2</td>
+<td>[L1217.054]</td>
+</tr>
+<tr>
+<td>Selling price ÷ (selling price − expenses), where expenses at the start = COGS (supplier price + shipping to customer)</td>
+<td>Product plus shipping at the start</td>
+<td>$36 price, $12 COGS ($6 product + $6 shipping): 36 ÷ 24 = 1.5</td>
+<td>[L1174.006, L1174.007]</td>
+</tr>
+<tr>
+<td>Selling price ÷ gross profit per order, where gross profit is after product cost, fees, shipping and fulfilment</td>
+<td>Fully loaded</td>
+<td>Not given numerically</td>
+<td>[L1182.015]</td>
+</tr>
+<tr>
+<td>Selling price ÷ gross profit per unit (price minus COGS); shipping, transaction fees and ad costs must also be deducted for a realistic value</td>
+<td>Product cost, with other costs deducted later</td>
+<td>$50 price, $20 COGS: gross profit $30, break-even about 1.67 before other costs</td>
+<td>[L1159.014]</td>
+</tr>
+<tr>
+<td>1 ÷ gross margin as a fraction</td>
+<td>Gross margin</td>
+<td>Campaign needing 1.4x-1.5x to break even and reaching about 2x is profitable and suitable for scaling</td>
+<td>[L1382.041]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Break-even ROAS in the tracker example = listing price ÷ (listing price − cost of goods) = 150 ÷ (150 − 35) ≈ 1.30. This matches the 76.67% product margin shown in that example [L1354.007, L1354.028].</li>
+<li>The dropshipping ROAS calculator linked in the course gives the BE ROAS for each product. Enter the result in the BE ROAS column of the product sheet [L1159.013].</li>
+<li>Enter COGS and selling price in the calculator linked from the testing sheet to get the value you must reach to avoid losing money on ads [L1162.006].</li>
+<li>Before running ads, calculate break-even ROAS from product cost plus shipping and the average selling price competitors use. The dropshiptoolkit.com calculator can do this [L1217.055].</li>
+<li>Example at COGS $4.02 ($2.02 product + $2 shipping to the US) sold at $24.99: break-even ROAS about 1.2, with profit margin of 21 shown by the calculator. The 1.2 was judged a very good result [L1174.008].</li>
+<li>The same $6-product, $20-price example appears with two values in one source: 1.43 from the formula [L0995.050] and "1.5:1" in the lesson text, which notes it differs from another example of 1.1 to 1.11 [L0995.023]. Use 1.43 when working from the formula, and reconcile before using either as a hard threshold.</li>
+<li>For near-zero-cost digital products, break-even ROAS was estimated at about 1.02 to 1.05. A ROAS of 1.3 was cited as a profitable target [L1431.059].</li>
+</ul>
+<h2 id="break-even-cpa-and-cost-per-purchase">Break-even CPA and cost per purchase</h2>
+<ul>
+<li>Break-even CPA = selling price − product cost − other per-order costs. Example: $10 product cost and a selling price of at least $30 gives a margin of about $20, so break-even CPA was about $20 to $21 [L1124.010].</li>
+<li>Break-even CPA = selling price − (product cost + shipping cost). Example: $30 price with $10 cost gives $20. $40 price with $10 product cost gives $30 [L1436.059].</li>
+<li>Break-even cost per purchase (the most you can spend to acquire one customer) = selling price − product cost − shipping cost. Example: $30 price, $10 product plus shipping gives $20. A $40 price with a $10 product cost gave $30 before shipping [L1382.039].</li>
+<li>Target cost per purchase = the maximum you can spend on ads to acquire one sale and still profit. Example: $150 price, $35 COGS gives $115 (price − COGS − other per-unit costs as the sheet defines them). Any cost per purchase above it is unprofitable [L1354.006].</li>
+<li>Cost per purchase = listing price − COGS. Set the cost-per-purchase and ROAS targets inside the ad account from your actual margin [L1225.065].</li>
+<li>Target CPA in the Ecom Margin Calculator = dollar margin per order (listing price − total cost). Cost per purchase in the ad account must stay below it to be profitable. Example: $200 listing, $60 total cost gives a target CPA of $140 [L0987.021].</li>
+<li>Profitable target CPA: $70 or less when the listing price is $100 and total cost is $30 [L0987.011].</li>
+<li>Break-even CPA check for a product: compare CPA with profit margin per sale. With a $30 margin, target a CPA of roughly $16 to $20 at most. For VAT-adjusted markets, include the extra VAT (for example 20%) in the break-even calculation before running ads to that market [L0950.023].</li>
+<li>Calculate break-even CPA before judging whether an ad set is working [L0950.022].</li>
+<li>Plan customer acquisition costs of roughly $15 to $20 per customer on paid platforms, with some estimates as low as $10. Product margin must be high enough to cover these costs [L1174.012].</li>
+</ul>
+<h2 id="target-roas-and-target-cpa">Target ROAS and target CPA</h2>
+<ul>
+<li>Set the target ROAS above break-even with a small buffer for unexpected costs. Example: break-even 1.3, target 1.4. The ROAS should never be below break-even [L1215.027].</li>
+<li>Benchmark (profitable) ROAS = break-even ROAS adjusted for profit margin. Example: break-even 1.5 with 20% profit margin gives a benchmark of 1.8 [L1335.035].</li>
+<li>Target ROAS at a given margin is calculated the same way as break-even, with profit set to that margin [L1182.015].</li>
+<li>Target ROAS for profitability in the ad account is 1.43 or higher when the product has a 70% gross margin [L0987.010].</li>
+<li>Target CPA = margin $ ÷ target ROAS. Use it as the maximum CPA for the chosen target ROAS. For a 2+ target, CPA must stay at or below margin ÷ 2. For a 2.5+ target, divide by 2.5 instead [L0986.006, L0986.016].</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Offer</th>
+<th>Margin $</th>
+<th>Target 2+ ROAS</th>
+<th>Target 2.5+ ROAS</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Buy 1</td>
+<td>32.50</td>
+<td>16.25</td>
+<td>13.00</td>
+<td>[L0986.006]</td>
+</tr>
+<tr>
+<td>Buy 2 get 1 free</td>
+<td>60.30</td>
+<td>30.15</td>
+<td>24.12</td>
+<td>[L0986.006]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Set a specific ROAS goal when choosing products. Choose only products whose break-even ROAS leaves enough room to reach that target [L1217.059].</li>
+<li>When comparing candidates, prefer the lower break-even ROAS. Example: 1.3 over 2.0 [L1174.010].</li>
+<li>Break-even ROAS should stay around 1.6 to 1.7 at most, which is the maximum that still makes money [L1171.018].</li>
+<li>Break-even ROAS should be below about 1.5 to 1.6 so that a campaign reaching 2 to 2.5 ROAS leaves room for real profit. A product with a high break-even is risky even when ads look good [L1217.057].</li>
+<li>Example: break-even ROAS 1.9 with campaign ROAS 2 gives profit of only about 3 to 5%. The margin is too thin to scale safely [L1217.058].</li>
+<li>Minimum ROAS target for a product is 2.5x. Do not run products below this level [L1171.019].</li>
+<li>Target a break-even ROAS between 1.3 and 1.6 for a product [L1174.010].</li>
+<li>Profit per order decides how much spend is possible [L0999.057].</li>
+<li>Scaling a product with about $23 margin on a $49 sale requires a CPA of $15 to $20 and leaves little room. Increase average order value or margin before aggressive scaling [L0999.056].</li>
+<li>A product with a $15 cost on a $45 sale allowed a CPA of about $15. A margin of about $30 was described as strong, but still faced scaling challenges [L0999.057].</li>
+<li>The ROAS of 2.0 used in one example was the minimum acceptable return for a 10% profit margin and the threshold for the trim-the-fat rule. Calculate your own ROAS floor before setting that rule [L0977.027].</li>
+<li>A ROAS of 2.2 (quoted elsewhere as 4.4x) can be profitable. Whether it is depends on break-even, so always compare [L0950.024].</li>
+<li>With an aggressive budget, a ROAS near 3:1 is not enough to scale unless break-even is close [L0995.023].</li>
+<li>Daily results can be inconsistent. One losing day in a week of mostly profitable days is normal. Keep break-even as low as possible and raise average order value so each order carries more margin [L1127.022].</li>
+</ul>
+<h2 id="the-10-rule-and-maximum-acquisition-cost">The 10% rule and maximum acquisition cost</h2>
+<p>Sources give different bases for the maximum you may pay to acquire a sale. Use the base that matches your data:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Formula</th>
+<th>Example</th>
+<th>Source</th>
+<th>Applies when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10% of sale price</td>
+<td>Max CPA ≈ 10% of price</td>
+<td>$2,000 item: spend up to $200</td>
+<td>[L1109.048] (older, 2018)</td>
+<td>Quick screen per product</td>
+</tr>
+<tr>
+<td>Price ÷ 10 at a 10:1 ROAS on Google</td>
+<td>Max acquisition cost = price ÷ 10</td>
+<td>$800 → $80; $1,500 → $150</td>
+<td>[L0960.052] (older, 2019)</td>
+<td>Google target of 10x</td>
+</tr>
+<tr>
+<td>10% of price per sale</td>
+<td>Up to about 10% of price for one sale</td>
+<td>$800 → about $80</td>
+<td>[L0965.042]</td>
+<td>One sale per block of spend</td>
+</tr>
+<tr>
+<td>10% of gross profit after COGS</td>
+<td>Max ad spend per sale = 10% of gross profit after COGS</td>
+<td>$1,000 sale → up to $100</td>
+<td>[L1274.055] (older, 2018)</td>
+<td>When COGS is known</td>
+</tr>
+<tr>
+<td>Margin ÷ target ROAS</td>
+<td>Max CPA = margin $ ÷ target ROAS</td>
+<td>Margin $32.50 at 2+ ROAS → $16.25</td>
+<td>[L0986.016]</td>
+<td>When margin and target ROAS are set</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Sources give different bases for the cap. The price-based rules are a first screen when costs are not yet known. Use the margin-based rules once COGS, shipping and fees are known [L1109.048, L0960.052, L0965.042, L1274.055, L0986.016].</li>
+<li>Work backward from the budget per sale to set bids and targets [L1109.048].</li>
+<li>Ad budget per sale is what remains after costs: sale price − COGS − shipping − processing fees − team costs − target net profit [L1109.049] (older, 2018).</li>
+<li>Budgets depend on each product's average click cost and conversion rate, not on price alone. Calculate budgets per product [L0960.053, L0960.054] (older, 2019).</li>
+<li>Some products above $1,000 have been acquired for under $50 per customer, so high-priced products can still be profitable [L0960.054] (older, 2019).</li>
+</ul>
+<h2 id="margin-left-for-ads-and-ad-budget-per-product">Margin left for ads and ad budget per product</h2>
+<ul>
+<li>Margin left for ads = MAP − wholesale cost − shipping cost − 2.9% merchant fee − other expenses. Wholesale cost can be estimated as MAP ÷ 2 for a ballpark figure [L0961.037] (older, 2020).</li>
+<li>Example: MAP 1,000 USD, estimated wholesale 500 USD, shipping 100 USD. About 400 USD remains for ads, the 2.9% merchant fee and other expenses [L0961.038] (older, 2020).</li>
+<li>Set the ad budget per product from the margin left after wholesale and shipping are subtracted from MAP, not from revenue. Calculate that amount before choosing a daily or per-order ad spend [L0934.119].</li>
+<li>Derive a target CPA from margins:
+<ol type="1">
+<li>Write down the selling price of the product.</li>
+<li>Subtract supplier cost and other costs per sale.</li>
+<li>Decide your profit target. The remaining amount is what you can pay Google per sale, which is your target CPA.</li>
+<li>Repeat for each product, since margins differ [L1328.014].</li>
+</ol></li>
+<li>Use break-even math for each product. A higher margin lets you outbid competitors on paid clicks [L1153.074].</li>
+<li>On Amazon, a $1.50 bid per click is affordable when the product earns about $9 profit before ads and the competitor's conversion is lower [L1153.073].</li>
+</ul>
+<h2 id="revenue-per-click-and-max-cpc">Revenue per click and max CPC</h2>
+<ul>
+<li>Profitability per click: revenue per click must exceed cost per click. The more revenue per click relative to cost, the better. Example: $6 revenue per click at $1 CPC is a 6x ratio, the target to aim for [L1328.015].</li>
+<li>Reducing cost per click by 30% has a very large effect on return on ad spend. Lower click costs are one of the strongest levers for profitable paid traffic [L1226.012].</li>
+<li>Derive the maximum CPC from the target CPA and the conversion rate (see [L1328.036] for the CPA = CPC ÷ conversion rate relation and [L1328.014] for the target CPA procedure).</li>
+</ul>
+<h2 id="calculators-models-and-the-roas-chart">Calculators, models and the ROAS chart</h2>
+<p>Procedure: build a ROAS chart in Excel [L1203.005]:</p>
+<ol type="1">
+<li>Enter how much was spent on paid traffic in a period (example: $1,000).</li>
+<li>Enter the revenue that spend generated (example: $10,000, a 10x multiple).</li>
+<li>Plot in the COGS for that revenue, i.e. what it costs to sell $10,000 worth of goods.</li>
+<li>Calculate the final profit after COGS and ad spend.</li>
+<li>Plug in other scenarios and find the switch point where ROAS moves from negative to positive profit.</li>
+<li>Use the resulting minimum ROAS to judge every campaign.</li>
+</ol>
+<ul>
+<li>In the example cost structure, break-even ROAS was 2x. Above 2x the campaign makes money; below 2x it loses money. Calculate break-even from your own store's COGS, because COGS differs per store [L1203.004].</li>
+<li>Break-even tools: dropshipping ROAS calculator (BE ROAS per product) [L1159.013]; calculator linked from the testing sheet [L1162.006]; dropshiptoolkit.com calculator [L1217.055]; Ecom Margin Calculator target CPA [L0987.021].</li>
+<li>Paid traffic model: spend, conversions, revenue and ROAS [L1455.002].</li>
+<li>Source C benchmark ROAS: break-even adjusted for margin [L1335.035].</li>
+</ul>
+<h2 id="measuring-what-pays-cost-per-reply-cost-per-customer-cost-per-dollar-of-sale">Measuring what pays: cost per reply, cost per customer, cost per dollar of sale</h2>
+<ul>
+<li>Cost per reply = ad spend ÷ replies. Cost per customer = ad spend ÷ customers acquired. Cost per dollar of sale = ad spend ÷ sales revenue, the most useful measure for deciding whether an ad pays [L1261.012].</li>
+<li>Example: two ads for a $5 product cost $0.85 and $14.20 per reply. At 250,000 replies a year, the first costs about $212,500 and the second $3,550,000. Cutting cost per reply directly protects profit [L1261.013].</li>
+<li>An ad producing replies at an average of $0.41 for two years is the benchmark that new ads must beat [L1261.014].</li>
+<li>Final conclusions about an ad should rest on cost per customer or cost per dollar of sale, not on the number of responses. An ad can bring many worthless replies, while another brings fewer valuable ones [L1261.015].</li>
+<li>Use sample requests and coupon counts to measure interest, but judge each lead's final value by cost per customer. Cheap inquiries that never convert are not savings [L1261.022].</li>
+<li>Direct mail: calculate the response rate needed to break even before the mailing goes out. A mailing needing about 0.5% response failed entirely at one-tenth of that rate, so the number must be known in advance [L1366.036, L1366.097] (merged: true duplicates).</li>
+<li>Cost per order = cost per mailed piece ÷ response rate. Example: a $0.04 piece with a 4.5% response gives about $0.89 per order [L1369.086].</li>
+</ul>
+<h2 id="platform-bidding-steps">Platform bidding steps</h2>
+<ul>
+<li>Example cost-per-purchase targets for TikTok manual bidding ad groups: $12, $11.50, $11, $10.50 and $10, starting from an average cost per purchase of $12 [L1376.026].</li>
+</ul>
+<h2 id="roas-benchmarks-by-model-and-source">ROAS benchmarks by model and source</h2>
+<p>The figures below come from different margin structures and eras. Apply each only within the model it describes. Calculate your own floor first [L0977.027, L1203.004].</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Year</th>
+<th>Benchmark</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source A</td>
+<td>2019 (older)</td>
+<td>Minimum target 10x for paid campaigns. Well-optimized campaigns reach about 40x, so 10x is a floor, not a ceiling</td>
+<td>[L1110.048]</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>2019 (older)</td>
+<td>Google: target 10x return; revenue at least 10x ad spend</td>
+<td>[L0960.053]</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>2022 (older)</td>
+<td>Minimum blended ROAS of 10x across all campaigns; below is a real concern</td>
+<td>[L0969.045]</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>2022 (older)</td>
+<td>5 to 8x is a strong starting point for a healthy campaign; a drop to 1.5x after scaling is a warning sign</td>
+<td>[L0963.142]</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>2023</td>
+<td>Target at least 10x. A stable 20x is a good target when the store is profitable</td>
+<td>[L0970.146, L1283.098]</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>2025</td>
+<td>15x ROAS example on a $30 daily budget</td>
+<td>[L0972.054]</td>
+</tr>
+<tr>
+<td>Source A</td>
+<td>2024</td>
+<td>Spend up to about 10% of price per sale; judge over several blocks of spend</td>
+<td>[L0965.042]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>n/a</td>
+<td>Break-even about 1.7 acceptable, about 3 great</td>
+<td>[L1107.007]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>n/a</td>
+<td>Minimum target 2.5x; do not run below</td>
+<td>[L1171.019]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>n/a</td>
+<td>Meta ads expected to reach 2 to 2.5, up to 3 for well-scaled campaigns</td>
+<td>[L1174.011]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>n/a</td>
+<td>Facebook and TikTok ads reach about 2 to 2.5 with consistent sales during scaling</td>
+<td>[L1217.056]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>n/a</td>
+<td>One brand targets at least 4x; spending continues while that holds</td>
+<td>[L1508.010]</td>
+</tr>
+<tr>
+<td>Source D</td>
+<td>2026</td>
+<td>Example targets 2+ and 2.5+</td>
+<td>[L0986.006]</td>
+</tr>
+<tr>
+<td>Source E</td>
+<td>2025-26</td>
+<td>1.43 or higher at 70% gross margin; Meta break-even 1.30 in the example</td>
+<td>[L0987.010, L1354.007]</td>
+</tr>
+<tr>
+<td>Source C</td>
+<td>n/a</td>
+<td>Near-zero-cost digital products: break-even about 1.02 to 1.05, 1.3 a profitable target</td>
+<td>[L1431.059]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Break-even ROAS sits at 1.6 to 1.7 at most, but a target of 2.5x minimum applies to the Source C product rule [L1171.018, L1171.019].</li>
+</ul>
+<h2 id="where-sources-disagree">Where sources disagree</h2>
+<ul>
+<li>Break-even ROAS for the $6 product at $20: 1.43 from the formula [L0995.050] versus 1.5 in the lesson text [L0995.023]. Use 1.43 when calculating from the formula.</li>
+<li>Break-even ROAS of 1.5 in the example [L1135.052] versus 1.2 as "very good" [L1174.008] and 2 in another example [L1217.054]. Each depends on its cost base (see the formula table above).</li>
+<li>Break-even ROAS upper limits: at most about 1.6 to 1.7 [L1171.018], target 1.3 to 1.6 [L1174.010], below about 1.5 to 1.6 [L1217.057]. Treat 1.5 as the practical ceiling for scaling. Each unit is from a different example.</li>
+<li>Maximum acquisition cost: 10% of sale price [L1109.048] (older), 10% of gross profit after COGS [L1274.055] (older), and margin ÷ target ROAS [L0986.016]. Apply the margin-based rule once costs are known.</li>
+<li>Target ROAS: 10x across all campaigns [L0969.045] (older) and at least 10x [L0970.146] versus 2.5x minimum [L1171.019] and 2 to 2.5 Meta [L1174.011]. These come from different margin structures. Apply each to its own model.</li>
+<li>ROAS of 2.2 [L0950.024] versus 4.4x in the same statement, as quoted [L0950.024]. Both forms refer to the same ratio and must be compared with break-even.</li>
+<li>Cost per acquisition for Meta: $15 to $20 [L1174.012] versus as low as $10 in some estimates [L1174.012].</li>
+</ul>
+<h2 id="kpi-baseline-sheets-and-checks">KPI baseline sheets and checks</h2>
+<ul>
+<li>Set KPI benchmarks from your own history, such as last year or the previous month. Check whether current add-to-cart and other numbers are above or below that benchmark, to judge whether a campaign is improving or declining [L1508.013].</li>
+<li>Stable ROAS of 20x is a good target when the store is profitable. Big budget changes can destroy profitability [L1283.098] (2023).</li>
+<li>Before a mailing, calculate the break-even response rate and check whether a test can measure it [L1366.036].</li>
+<li>Baseline conversion rate in the sample sheet: 0.01666666667 (about 1.67%), equal to 1 ÷ 60 (the AOV used in the example). The sheet presents it as an estimate. Replace it with measured data when available [L0900.023].</li>
+<li>The CPC GOAL cell in the sheet shows 0.6208 USD. It does not match the hand calculation of about 0.75 USD from the product example. Check which inputs feed the cell before using it as a bid target. The two methods use different inputs and should be reconciled [L0900.014].</li>
+<li>The hand calculation rounds 25 ÷ 33 down to 0.75 USD. The exact result is 0.76 USD, so the rounded figure understates the allowed CPC [L0900.015].</li>
+<li>Keep a daily record of break-even, target ROAS and CPA per product, and compare each campaign with them [L1024.042, L0986.015].</li>
+</ul>
+<h2 id="break-even-sales-and-targets-for-a-first-campaign">Break-even sales and targets for a first campaign</h2>
+<ul>
+<li>Source A's break-even example: $100 revenue ÷ $25 net profit per order = 4. Every $1 of ad spend needs $4 in sales to break even, so $25 of spend needs $100 in sales [L0920.006, L1357.005] (merged: true duplicates).</li>
+<li>Give this break-even ROAS to your paid advertising agency as the target. Any campaign running below it is losing money at that margin [L0920.007].</li>
+<li>The same break-even comparison applies to every campaign and offer. Compare ROAS with break-even before deciding to keep or cut [L1024.042].</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>To calculate break-even ROAS: 1. Determine revenue target (e.g., $1,000). 2. Calculate COGS in dollars (e.g., $400) and percentage (e.g., 40%). 3. Calculate profit before ads = Revenue - COGS (e.g., $1,000 - $400 = $600) and as percentage (e.g., 60%). 4. Calculate break-even ROAS = Revenue ÷ Profit (e.g., $1,000 ÷ $600 = 1.67x). 5. ROAS above this number is profitable; below is a loss. [L0327.017]</p></li>
+<li><p>Calculating and using the target cost per sale: 1) Calculate the target cost per sale using the traffic calculator. 2) Write down the resulting numbers. 3) Compare these targets with the actual figures in the financial tracking system. 4) Check profit on a day-to-day basis against the targets. [L0441.013]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../19-metrics-finance-and-tracking/02-unit-economics-margin-cogs-and-net-profit-per-sale/"><span class="k">&larr; Previous</span><span class="v">Unit economics: margin, COGS and net profit per sale</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/04-traffic-conversion-and-funnel-math-for-planning/"><span class="k">Next &rarr;</span><span class="v">Traffic, conversion and funnel math for planning</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

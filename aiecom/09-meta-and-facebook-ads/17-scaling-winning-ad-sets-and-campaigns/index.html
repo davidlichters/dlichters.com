@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Scaling winning ad sets and campaigns | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.17: Scaling winning ad sets and campaigns.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/17-scaling-winning-ad-sets-and-campaigns/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Scaling winning ad sets and campaigns | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.17: Scaling winning ad sets and campaigns."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/17-scaling-winning-ad-sets-and-campaigns/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/17-scaling-winning-ad-sets-and-campaigns/">Plain version</a></div><h1>9.17 Scaling winning ad sets and campaigns</h1><article><h2 id="readiness-check-and-scaling-triggers">Readiness Check and Scaling Triggers</h2>
+<ul>
+<li>Know the break-even ROAS before scaling. Break-evens in the lessons range from 1.1 to 1.5 ROAS, and a 3 ROAS at small spend does not by itself make an ad ready to scale. [L0999.028]</li>
+<li>Confirm the campaign setup is correct first. A wrong campaign structure is a reason to stop the ads, correct the structure, and restart. [L1161.027]</li>
+<li>Scale only an ad set that has cleared Rule 4: it spent double the break-even amount and reached break-even ROAS or higher. Scale that exact audience-and-creative combination, because it shows product-market fit for that segment. [L0229.015]</li>
+<li>Start scaling when ROAS reaches break-even + 1. Example: break-even 1.6 gives a scaling threshold of 2.6. [L0642.015]</li>
+<li>Sales-count thresholds differ by source:
+<ul>
+<li>Scale an interest ad set after 6 to 7 sales while it stays profitable. The 6 to 7 figure applies to testing interests, not to scaling a campaign that already works. [L0693.032]</li>
+<li>Wait until the ad set has more than six or seven sales. Scaling earlier builds budget on too little data. [L0774.032]</li>
+<li>About six profitable sales show consistency. [L0646.032]</li>
+<li>Seven profitable sales is the more reliable scaling trigger. Seven sales in one day is excellent, but seven spread over several days is the typical case. [L1107.027]</li>
+<li>Five profitable sales is an earlier signal some advertisers use, but seven is more reliable. Sales must be profitable, not just numerous, so check profit per sale before increasing budget. [L1107.037]</li>
+<li>Alternative rule: start scaling once an ad set has at least 6 to 7 purchases while staying above break-even ROAS, or once it has run for more than 4 days with a profitable ROAS over the last 4 days and at least 6 purchases in that window. [L1335.001]</li>
+<li>Lighter signal: CTR is good, there are about four to five sales in a few days, and ROAS is strong. [L0650.007]</li>
+<li>Stricter alternative: wait for five days in a row of consistently profitable sales. [L0693.033]</li>
+</ul></li>
+<li>Testing CBO entry: run a testing CBO when one asset reaches seven profitable sales at least 0.5 above break-even ROAS. [L0646.025]</li>
+<li>Audience-level gate: scale a winning audience only after at least six sales with ROAS at least 0.5 above break-even, and only once there are at least three winning audiences so the product does not depend on one audience. [L0646.016]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>ROAS signal</th>
+<th>What it means</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Break-even + 0.5</td>
+<td>Reasonable point to start thinking about scaling</td>
+<td>L0646.032, L0646.016</td>
+</tr>
+<tr>
+<td>Break-even + 1 (break-even 1.6 → 2.6)</td>
+<td>Start scaling</td>
+<td>L0642.015</td>
+</tr>
+<tr>
+<td>Break-even + 1.5</td>
+<td>Advisable margin for aggressive scaling, where ROAS is expected to be cut in half after doubling</td>
+<td>L0646.032</td>
+</tr>
+<tr>
+<td>ROAS 2 to 2.5</td>
+<td>Scale slowly, for example doubling 10 → 20 or 30 per day</td>
+<td>L0646.019</td>
+</tr>
+<tr>
+<td>ROAS about 3</td>
+<td>Raise slowly, about $20 per step</td>
+<td>L0999.030, L0999.032, L1335.008</td>
+</tr>
+<tr>
+<td>Very strong ROAS</td>
+<td>Scaling can be more aggressive</td>
+<td>L0646.019</td>
+</tr>
+<tr>
+<td>ROAS double break-even</td>
+<td>Scale horizontally and check after four days</td>
+<td>L0646.026</td>
+</tr>
+<tr>
+<td>ROAS far above break-even (1.5 break-even, 3.5 actual), results clearly strong</td>
+<td>Duplicate at the same budget or a bigger one such as 50 or 100</td>
+<td>L0693.041</td>
+</tr>
+<tr>
+<td>ROAS 1.4 with break-even 1.5, one ad at ROAS 0.5 taking spend</td>
+<td>Keep the ad set, switch off the inefficient ad</td>
+<td>L0646.036</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Keep scaling tied to performance, not a calendar: double the budget as long as ROAS holds. [L0646.013]</li>
+<li>Test the ad level before you judge the ad set. A winning ad set can contain a losing ad that absorbs spend. [L0646.036, L0646.034]</li>
+</ul>
+<h2 id="frequency-and-fatigue-signals">Frequency and Fatigue Signals</h2>
+<ul>
+<li>Sources give different frequency thresholds. Use each for its stated purpose:
+<ul>
+<li>7-day frequency of 2 or 3: increase budget so people see the ads closer to once a day. Above 5: no budget increase is needed. At 7 or higher: do not increase spend. [L0360.054]</li>
+<li>Scaling ad frequency: keep it under 2. At 2 or more, people have seen the ad at least twice and creative fatigue begins, so new creatives go into the same ad set. [L1177.038]</li>
+<li>Fatigue filter: frequency above 1.5 indicates high audience fatigue. Filter creatives in the Fatigued Ads report in Insights and pause them before ROAS drops. [L0207.016]</li>
+</ul></li>
+<li>Check frequency after three or four days of a scaling campaign, because frequency rises as the audience sees the same ad again. [L1177.039]</li>
+<li>Facebook now provides fatigue scores for ads in the Ad Manage.ai reporting dashboard. Monitor fatigued ads (declining performance from audience oversaturation) and pause them before ROAS drops significantly. [L0207.008]</li>
+<li>Stop raising the budget when frequency rises or ROAS starts to break. [L0941.058]</li>
+<li>Winning audiences rarely die on their own. A drop usually comes from ad fatigue, rising CPM and falling numbers. Adding new creatives to the same winning audience can revive it. [L0646.050]</li>
+</ul>
+<h2 id="vertical-and-horizontal-scaling">Vertical and Horizontal Scaling</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Definition</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertical</td>
+<td>Raise the budget of an existing winning ad set or campaign</td>
+<td>L0646.025, L1021.021</td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td>Test more audiences, or split spend across several ad sets or campaigns</td>
+<td>L0376.013, L1426.002</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Horizontal scaling means testing more audiences. While the product stays profitable, launch 2 to 3 new interests per day in the early phase and turn off underperforming ad sets. [L0376.013]</li>
+<li>Horizontal scaling also means splitting spend across several ad sets with different interests and different daily budgets, rather than raising one ad set sharply. Pick distinct interests, because overlapping ones make ad sets compete for the same users. [L1426.002]</li>
+<li>Example: daily budgets of 10, 20 and 25 per ad set for different interests. This worked for a store whose products sold best in peak season, while demand was lower outside it. [L1426.003]</li>
+<li>Scale by adding interest-based ad sets at lower budgets instead of raising a single ad set. [L0644.014]</li>
+<li>Meta's delivery does not spread budget evenly while a campaign is learning. Large budget jumps make the algorithm search harder and can trigger learning-limited status. Scaling in steps keeps delivery more stable. [L1426.004, L0644.015]</li>
+<li>Scaling too fast can get the account capped, or the budget reduced again within a day. One speaker saw this after several raises within 10 days. Raise budgets gradually and monitor delivery after each change. [L1426.005]</li>
+<li>Expect inconsistency when scaling. Find the maximum budget a product can handle before running it steadily. Test both vertical and horizontal scaling, since either can win depending on the week. [L0690.016]</li>
+<li>Winners take off for hard-to-predict reasons, such as hitting a different audience pocket or strong engagement. Test both CBO and ABO and follow whichever produces the money. [L0646.031]</li>
+<li>Allocate about 20 to 30 percent of budget to finding new audiences, so new winners keep appearing. Relying on one audience is risky. [L0646.022]</li>
+<li>Sequence: scale vertically first, then horizontally. Add new ad sets only once the existing campaign budget is stable. [L1021.021]</li>
+<li>Changing scaling campaigns too often stops Meta from collecting enough data. Make changes deliberately and let the campaign stabilise between adjustments. [L1021.020]</li>
+<li>A stalled example: a seller duplicated an ad set horizontally and then vertically, and sales stalled at about $4.5K to $5K per day. The seller suspected the algorithm became confused. [L1127.026]</li>
+<li>Scaling method and horizontal/vertical choice:
+<ul>
+<li>After five days of a profitable CBO, scale horizontally by duplicating the campaign at 50, 100 or higher, or vertically by raising the budget 20 to 30 percent. [L0646.025]</li>
+<li>If ROAS is double break-even, scale horizontally and check after four days. If still profitable, scale again. Vertical scaling should be cautious, with changes at four-day intervals relative to break-even. [L0646.026]</li>
+<li>If a raise (e.g., 65 to 70 dollars) is unprofitable after four days, go back down. If the lower budget (50 per day) is still unprofitable after another four days, turn the campaign off. Test both methods, since the best one varies by account. [L0646.027]</li>
+<li>Scaling a winning ad set has three possible routes, and the best one should be tested per account: (1) raise the ad set budget step by step, about every three days while profitable; (2) duplicate the winner as a CBO with a budget like $50, running three days; (3) duplicate the ad set several times inside the same campaign (for example four ad sets at $5 each) for horizontal scaling. [L0642.017]</li>
+<li>Scaling a winning ad set is also possible by raising its budget 20 to 25 percent, or doubling it to about 20 units. Duplicating the winner with a higher budget such as 20, 30 or 50 is the other route. The choice depends on available budget and how aggressive the scaling should be. [L0646.018]</li>
+</ul></li>
+<li>Example of scale path: from 1k to 5k to 10k to 50k per day by increasing budget while the algorithm finds the right customers, with good creative systems and account structure. [L0296.003]</li>
+<li>Simpler account structures work better in some cases: prospecting ad sets plus retargeting, scaled by budget. [L0650.009]</li>
+</ul>
+<h2 id="budget-step-rules-and-cadence">Budget Step Rules and Cadence</h2>
+<p><strong>Step ladders</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Ladder</th>
+<th>Condition</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$5 → $10 → $20 → $50 → $100 → $250</td>
+<td>Raise about every three days while profitable</td>
+<td>L0642.017</td>
+</tr>
+<tr>
+<td>$5 → $10 → $20 → $50 → $100 → $200 → $500</td>
+<td>Standard winner ladder; if results drop, switch to 20% steps</td>
+<td>L0773.031, L0774.031</td>
+</tr>
+<tr>
+<td>$5 → $10 → $20 → $50, or 20% per step</td>
+<td>Two ways to scale; test which fits the account</td>
+<td>L0209.004</td>
+</tr>
+<tr>
+<td>$10 → $20 → $50</td>
+<td>Ad set in ABO testing campaign</td>
+<td>L0693.034</td>
+</tr>
+<tr>
+<td>$10 → $20 → $50 → $100, or 20% per step</td>
+<td>Winning ad set, when CTR, offer and store conversion are good</td>
+<td>L0650.007, L0650.060</td>
+</tr>
+<tr>
+<td>$5 → $10 → $20 → $50 → $100</td>
+<td>Aggressive ABO scaling while profitable</td>
+<td>L1316.015</td>
+</tr>
+<tr>
+<td>$20 → $50 → $100 → $200</td>
+<td>Aggressive pattern used by some advertisers; faster than 20%, riskier</td>
+<td>L0693.042</td>
+</tr>
+<tr>
+<td>$100 → $200 → $400</td>
+<td>Profitable ABO ad moved into a scaling campaign</td>
+<td>L0999.030</td>
+</tr>
+<tr>
+<td>$10 → $50 → $100 or $200, or 2x to 3x</td>
+<td>Duplicating a winning ad set at a higher budget</td>
+<td>L1335.034</td>
+</tr>
+<tr>
+<td>$20 step per increase</td>
+<td>Ad with ROAS about 3 on small spend</td>
+<td>L0999.069, L0999.032</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Percentage rules</strong></p>
+<ul>
+<li>15 to 20 percent steps are considered safe because they do not push the campaign out of learning or damage optimisation. [L1016.058]</li>
+<li>20 percent is the safe step. Larger jumps can disrupt optimisation, so avoid sudden budget changes that reset learning. [L0693.040]</li>
+<li>The 20 percent rule exists to scale slowly. If scaling aggressively, use duplication or doubling, which avoids learning-phase resets. [L0298.010]</li>
+<li>20 to 25 percent every 48 hours avoids resetting learning. Avoid sudden large increases, which cause fluctuation. [L1335.033]</li>
+<li>20 percent every 48 hours, only when the campaign stays consistently above break-even ROAS. [L1335.006]</li>
+<li>Conservative ABO: raise the ad set budget 20 percent every second day instead of duplicating. The right method depends on the account. [L1316.014]</li>
+<li>Scaling by 20 percent every one to two days, stopping when frequency rises or ROAS starts to break. [L0941.058]</li>
+<li>Winner in ABO audience testing: increase by about 20 percent every two to three days, or every three to four days. [L0398.038]</li>
+<li>Vertical CBO step: 20 to 30 percent. [L0646.025]</li>
+<li>Vertical scaling in four-day intervals relative to break-even. [L0646.026]</li>
+<li>Budget formula: starting budget × 1.2 for each increase. From 100, two increases give 144 (100 × 1.2 × 1.2). [L1161.053]</li>
+<li>Check the arithmetic before planning steps. A daily budget step from 5 to 7 is a 40 percent increase, not 20 percent. [L1017.022]</li>
+<li>Doubling: if ROAS is around 2 to 2.5, scale slowly, for example from 10 to 20 or 30 per day. [L0646.019]</li>
+<li>Doubling as long as ROAS holds, so the step follows performance rather than a fixed calendar. [L0646.013]</li>
+</ul>
+<p><strong>Cadence: the sources disagree</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Cadence</th>
+<th>When it applies</th>
+<th>Ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Every 24 hours</td>
+<td>Not recommended; the 48-hour rule replaces it for learning reasons</td>
+<td>L0298.009</td>
+</tr>
+<tr>
+<td>Every 48 hours</td>
+<td>Default safe interval for profitable CBO and learning protection</td>
+<td>L0298.009, L1335.006, L1335.033</td>
+</tr>
+<tr>
+<td>Every second day</td>
+<td>Conservative ABO</td>
+<td>L1316.014</td>
+</tr>
+<tr>
+<td>Every 1 to 2 days</td>
+<td>Slow scaling with stop rules (frequency or ROAS)</td>
+<td>L0941.058</td>
+</tr>
+<tr>
+<td>Every 2 to 3 days, or 3 to 4 days</td>
+<td>ABO audience winner</td>
+<td>L0398.038</td>
+</tr>
+<tr>
+<td>About every 3 days</td>
+<td>Step ladder while profitable; ad-level ramp</td>
+<td>L0642.017, L0999.030</td>
+</tr>
+<tr>
+<td>After every fourth day</td>
+<td>ABO performing ad sets; reduce if results slow</td>
+<td>L0646.014</td>
+</tr>
+<tr>
+<td>Four-day checks</td>
+<td>Vertical and horizontal changes relative to break-even</td>
+<td>L0646.026, L0646.027</td>
+</tr>
+<tr>
+<td>Day five, then every four days</td>
+<td>CBO start</td>
+<td>L0693.039</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Same-day increase, older guidance versus recent experience:
+<ul>
+<li>Older guidance held that raising a winning ad set's budget by more than 25 percent every two to three days resets the learning phase. [L0646.020]</li>
+<li>Recent experience: a same-day increase during strong momentum (for example 4 to 5 ROAS with more than 3 sales) boosted performance without resetting the algorithm. [L0646.020]</li>
+<li>Same-day doubling during strong momentum tends to boost performance, but a raise of 25 percent or more could in the past reset the algorithm. [L0646.024]</li>
+<li>Test the current behaviour in each account before relying on either rule. [L0646.020]</li>
+</ul></li>
+<li>Any change to an ad set resets the learning phase. The reset is acceptable during events but should be avoided on normal days. [L0298.011]</li>
+<li>Waiting 48 hours between 20 percent adjustments (not 24) prevents resetting learning. [L0298.009]</li>
+<li>Large jumps reset learning: the budget can be reset by Facebook so spend falls back the next day. Scale in smaller steps and check the budget after each change. [L0644.017]</li>
+<li>Going down: if an increase is unprofitable after four days, return to the previous budget. [L0646.027]</li>
+<li>Changes that remove the budget entirely cause instability. Budgets cut from about $1,000 per day to zero and restarted at $100 to $200 gave unstable results. Change budgets gradually. [L1127.027]</li>
+<li>Raising the budget of a proven ad set reaches more people within the same audience, which brings more quality traffic and sales. Raise only when CTR, the offer and store conversion rate are already good. [L0650.060]</li>
+<li>Budget ladder for a newly profitable product: start a CBO at 50 USD per day if ROAS is acceptable; consider 100 USD only if ROAS for that interest is very high. [L0693.035]</li>
+<li>Scaling a profitable ad on ABO with a small budget: start at $20 per day, run a few days, and add another $20 if it stays profitable. Repeat about every three days. [L0999.069]</li>
+<li>Duplicating a winning ad set at a higher budget (for example $10 to $50 to $100 or $200, or 2x to 3x) is covered in the duplication section. [L1335.034]</li>
+</ul>
+<h2 id="duplication-methods">Duplication Methods</h2>
+<ul>
+<li>Older guidance: duplicating ad sets was effective two years ago but no longer works well, so treat it as a deprecated scaling method. [L0209.001]</li>
+<li>Conflicting guidance: duplicating winning ad sets is still used in several structures below. Duplicates compete with each other in the same auction, but a copy can reach a different group or gain engagement. [L0646.030]</li>
+<li>Duplication with CBO delivers more consistent scaling than budget increases alone. Duplicate from 200 to 500 dollars of budget for campaigns with 4+ ROAS. [L0298.005]</li>
+<li>Duplicating a winning ad set into a CBO and running it three days is one route. [L0642.017]</li>
+<li>Duplicating a winning ad set four times inside the same campaign (for example four ad sets at $5) is the horizontal route. [L0642.017]</li>
+<li>Duplicating an ad set to a higher budget keeps the same audience and creatives, so the winning combination stays intact. [L1335.034]</li>
+<li>Duplicate a winning ad set into a new campaign with the budget type set to Advantage campaign budget (formerly CBO), a minimum daily budget of $50, and four ad sets with the same audience and creatives so the algorithm can find different audience pockets. Leave ad-set budgets empty. [L1335.005]</li>
+<li>Duplicating an ad set on a higher budget and a fresh set of creatives: create a new ad set with a fresh batch of creatives rather than adding to a working ad set. [L1225.062]</li>
+<li>Ways to use duplicates:
+<ul>
+<li>Duplicate the winning ad set as a CBO with a daily budget of 20, then duplicate that CBO three times for a total of 60 dollars per day. Kill weaker CBOs once they have spent about 50 dollars, and keep raising the winner from 20 to 50, 100, 200 and so on. [L0646.012]</li>
+<li>Once an audience is a winner, create a CBO for that audience with four ads using the same audience and creative, starting at 100. [L0646.021]</li>
+<li>Duplicate the winning asset four times into a new CBO. [L0646.025]</li>
+<li>Duplicate a winning ad set into a CBO with 20 budget, after building the ad set to 5 sales and then 10 budget. [L0646.011]</li>
+</ul></li>
+<li>Triple duplication case: three CBO triple-duplication campaigns, each with the same ad set at $100 ($300 total), were stopped after about $50 to $70 each with zero sales, leaving about $200 spent. Earlier, a single interest in a testing campaign had about 20 sales and very high ROAS, but in a CBO scaling campaign it returned under 1 ROAS. The response was to check the setup, verify results with UTMs, and retest after a couple of weeks at a different budget such as $200 or $50. [L0349.033]</li>
+<li>Other ad sets targeting the same interest usually lose delivery and results when one ad set is scaled. Keep testing ad sets separate from scaling ones. [L0524.038]</li>
+<li>Never turn off a winning interest that runs in ABO just because you launch a CBO with it. Both can run side by side, and audiences of 30 million or more rarely overlap enough to matter. [L0645.014]</li>
+</ul>
+<p><strong>Procedures</strong></p>
+<p>Procedure: Scale a winning audience by duplicating (ABO audience-testing campaign)</p>
+<ol type="1">
+<li>Increase the budget by about 20% every two to three days, or every three to four days. [L0398.038]</li>
+<li>When the performance drops, do not edit the ad set; duplicate the same audience. [L0398.038]</li>
+<li>Replace the creative in the duplicate, or paste in the new winning creative. [L0398.038]</li>
+<li>If the duplicate also fails, turn it off. [L0398.038]</li>
+</ol>
+<p>Procedure: Scale a winning interest in ABO testing (horizontal copy)</p>
+<ol type="1">
+<li>Keep the winning interest ad set in the ABO testing campaign. [L0693.034]</li>
+<li>Raise its budget step by step, for example from 10 to 20 and then to 50. [L0693.034]</li>
+<li>Alternatively, duplicate the ad set inside the same testing campaign with a higher budget, such as 50. [L0693.034]</li>
+</ol>
+<p>Procedure: Duplicating a winning ad set at a higher budget</p>
+<ol type="1">
+<li>Duplicate the ad set. [L1335.034]</li>
+<li>Set a higher budget, for example from $10 to $50 to $100 or $200, or 2x to 3x. [L1335.034]</li>
+<li>Change only the budget and start time. [L1335.034]</li>
+<li>Keep the audience, creatives and all other settings identical, since the winning combination must stay intact. [L1335.034]</li>
+</ol>
+<p>Procedure: Horizontal scaling of a winning ad</p>
+<ol type="1">
+<li>Take the winning ad set and place it in a separate scaling campaign by itself. [L0999.031]</li>
+<li>Duplicate it, for example 10 times as ABO ad sets with $20 each. [L0999.031]</li>
+<li>Turn off the ad sets with no sales after the test period, usually about one day with no sales. [L0999.031]</li>
+<li>Keep the ad sets that perform well and let them scale. [L0999.031]</li>
+</ol>
+<p>Procedure: Testing and scaling a new interest with a small budget</p>
+<ol type="1">
+<li>Start a new audience at 5 units of budget in a single-interest ad set. [L0646.011]</li>
+<li>Once the ad set reaches 5 sales, raise its budget to 10. [L0646.011]</li>
+<li>Leave the ad set running for two to three days at least. [L0646.011]</li>
+<li>If orders stay consistent with good ROAS, start scaling by duplicating the ad set four times into a CBO with a 20 budget. [L0646.011]</li>
+</ol>
+<p>Procedure: Second testing method (ABO)</p>
+<ol type="1">
+<li>Start with multiple similar interests in one ad set at 5 dollars. [L0646.014]</li>
+<li>Duplicate that ad set a few times within the same testing campaign to increase spend. [L0646.014]</li>
+<li>Compare results. [L0646.014]</li>
+<li>Increase the budget of performing ad sets by 20 percent after every fourth day, and reduce it if results slow. [L0646.014]</li>
+</ol>
+<p>Procedure: Duplicate a winning asset into a CBO</p>
+<ol type="1">
+<li>Create a CBO campaign for the audience with four ads using the same audience and creative. [L0646.021]</li>
+<li>Launch it at 100 as a start budget. [L0646.021]</li>
+</ol>
+<p>Procedure: Testing and scaling procedure for CBO</p>
+<ol type="1">
+<li>Run a testing CBO when one asset reaches seven profitable sales and at least 0.5 above break-even ROAS. [L0646.025]</li>
+<li>Duplicate that asset four times into a new CBO. [L0646.025]</li>
+<li>Keep the campaign with the most sales and kill the rest. [L0646.025]</li>
+<li>Start each at 50 or 100 dollars depending on how high ROAS is. [L0646.025]</li>
+<li>After five days of a profitable CBO, scale horizontally by duplicating the campaign at 50 or 100 or higher, or vertically by raising the budget 20 to 30 percent. [L0646.025]</li>
+</ol>
+<p>Procedure: Testing and scaling procedure for CBO (three-CBO close-out)</p>
+<ol type="1">
+<li>Duplicate the ad set into a CBO campaign. [L0774.031]</li>
+<li>Run three CBOs. [L0774.031]</li>
+<li>Close the two weakest and scale the budget of the winning CBO. [L0774.031]</li>
+</ol>
+<h2 id="cbo-scaling-structures">CBO Scaling Structures</h2>
+<ul>
+<li>Use a CBO with exactly five ad sets inside as a secondary scaling method when other approaches fail. [L0209.002]</li>
+<li>Scaling failures are caused by the scaling method used, not the business manager or ad account. Switch scaling approaches rather than replacing accounts. [L0209.005]</li>
+<li>Scale with CBO only when both the audience and the creative are proven. CBO removes ad set and creative variables and gives Facebook control over where to spend. [L1177.037]</li>
+<li>Scaling setup: a CBO with a daily budget of about 100 dollars, one ad set with the same winning interest, and one winning image creative. 80 dollars is acceptable as a lower start. [L1177.036]</li>
+<li>Austrian/Australian case: when scaling a winning product in Australia, a CBO tested one narrow audience: women 45 and older with an interest in astrology, in Sydney and Melbourne. These were the best-performing locations, so the budget was concentrated there. [L0388.044]</li>
+<li>Stacked interests in one CBO work only when each winning interest gives consistent strong results. With only a few sales, stacking all interests together may not work. [L0646.023]</li>
+<li>CBO results can be inconsistent across days. An account may perform well for a while and then drop. Check results over several days before deciding a structure works. [L0650.061]</li>
+<li>CBO did not work well for one speaker's accounts. He scaled by increasing ad set budgets under ABO or by placing the winner into an ABO scaling campaign. Test both formats, since account response varies. [L0646.010]</li>
+<li>If CBOs do not work for scaling horizontally or vertically, try ABO, which can work better. Keep testing new interests and new creatives, because winning interests eventually die out. [L0646.028]</li>
+<li>Scaling analysis is done at ad-set level. Within a CBO, do not switch off or edit individual ads too early. If one ad takes most of the spend while performing poorly, switch that ad off so the others get budget, but only after it has spent around the cost per acquisition. [L0646.034]</li>
+<li>Facebook may allocate budget to an ad because of early engagement even when it is not profitable. Watch ad-level spend and results, not early engagement alone. [L0646.038]</li>
+<li>An ad set can be kept even if it is not fully above break-even, for example at ROAS 1.4 when break-even is 1.5, if one of its ads takes spend with very poor results (such as ROAS 0.5). Switch off that inefficient ad and let the rest spend. [L0646.036]</li>
+<li>A CBO that has stopped being profitable can be refreshed (see the refresh section). [L0398.035]</li>
+<li>CPA usually rises as you scale, because Facebook must find buyers in a smaller pool as spend grows. No fixed threshold applies, so monitor CPA against your break-even figure at each budget level. [L0692.023]</li>
+<li>Scale on the performance of the CBO, not the calendar, and expect the CBO to behave differently by day. [L0650.061]</li>
+</ul>
+<p><strong>Procedures</strong></p>
+<p>Procedure: Running a profitable CBO</p>
+<ol type="1">
+<li>Wait four to five days after launching a CBO so the campaign can optimise. [L0693.039]</li>
+<li>If it is profitable on day five, increase the budget by 20 percent. [L0693.039]</li>
+<li>Check again every four days and raise the budget by 20 percent again while it stays profitable. [L0693.039]</li>
+</ol>
+<p>Procedure: Refresh a running CBO</p>
+<ol type="1">
+<li>After the initial five profitable days, leave it running for four more days. [L0646.029]</li>
+<li>Each day, review the previous four days. [L0646.029]</li>
+<li>Replace unprofitable ad sets with new ad sets created by duplicating the winners. [L0646.029]</li>
+</ol>
+<p>Procedure: Budget scaling in a Cost Cap CBO (scaling track, Source D)</p>
+<ol type="1">
+<li>Use a CBO campaign with the bid strategy Cost Cap. [L1021.019]</li>
+<li>Pull the winning Post IDs from the testing campaign. [L1021.019]</li>
+<li>Give each winning Post ID its own ad set. [L1021.019]</li>
+<li>Set the cost cap to the average cost per purchase from the testing campaign. [L1021.019]</li>
+<li>If an ad set spends, keep it running; if it does not spend, raise the cost cap slowly. [L1021.019]</li>
+<li>Add a minimum spend to new ad sets, because some winners are lower-funnel audiences that need consistent spend. [L1021.019]</li>
+<li>Increase the CBO campaign budget once the campaign is stable. [L1021.019]</li>
+<li>Let the campaign run to collect data. [L1021.019]</li>
+<li>Scale vertically first by raising the budget, and horizontally afterwards by adding ad sets. [L1021.019]</li>
+</ol>
+<ul>
+<li>Scaling track structure: a CBO winner campaign with a bid cap and an inflated budget, one campaign per region (US, UK, CA, AU, NZ), and monthly winner ad sets divided by landing page. [L1019.043]</li>
+<li>After testing is finished, move the winning ad sets back into the main CBO. [L1019.009]</li>
+<li>A graveyard campaign collects ads that had good signals but could not scale, plus past winners that faded out. [L1019.044]</li>
+<li>Advantage+ campaigns can perform well early and then slowly become unprofitable. Plan to refresh or switch them off when results decline. [L1107.026]</li>
+<li>An Advantage+ campaign can produce several sales in the first days and then fade within about three to four days. If results drop, return to the previous budget. If still unprofitable after about a week, close it and scale a winning interest with CBO campaigns. [L1161.054]</li>
+<li>Advantage+ example: a winning ad was scaled from about 5 to about 500 euros per day and stopped working after an audience-fatigue recommendation appeared. Duplicating the ad set made the first day good, but the next day sales dropped to zero. Budgets were doubled in ABO duplicates, and the next day brought zero sales again. The operator kept the ads to day three and closed them when there were still no sales. Advantage+ was then tested: the first week was profitable, the second week lost the profit. The lesson was that broad campaigns worked better than interest targeting, and that the scaling method, not only the ad, needs control. [L1316.020]</li>
+</ul>
+<h2 id="abo-winners-and-winning-audiences">ABO Winners and Winning Audiences</h2>
+<ul>
+<li><p>Scaling a profitable ad on ABO:</p>
+<ol type="1">
+<li>Move the winning ad into a new scaling campaign and keep it as an ABO. [L0999.030]</li>
+<li>Test it against a higher budget, for example $100 per day. [L0999.030]</li>
+<li>If it holds, increase to $200, then $400, and so on. [L0999.030]</li>
+<li>For a ROAS around 3, raise the budget slowly, adding about $20 per step. [L0999.030]</li>
+<li>Run each increase for a few days. If the ad holds, add another $20 after about three days. [L0999.030]</li>
+<li>Repeat and keep raising the budget gradually while the ROAS holds. [L0999.030]</li>
+</ol></li>
+<li><p>An ad with a ROAS of about 3 on small spend: add about $20 to the existing ad set rather than starting new campaigns, because the ad already has engagement and Facebook has begun learning from it. [L0999.032]</p></li>
+<li><p>A profitable ad set at about 3 ROAS or higher can have its budget raised, doubled, or duplicated at a higher budget. The winning audience can be duplicated with a higher launch budget to keep scaling the same audience. [L1335.008]</p></li>
+<li><p>Case: a brand running about $50 per day at ROAS 4 to 6 during testing saw ROAS fall to about 4 at $10 per day outside peak season, which was not enough to scale in its own campaign. Scaling was then done with the $20 step method and horizontal duplication. [L0999.060]</p></li>
+<li><p>Winning audiences need at least three winners before scaling, so the product does not rely on a single audience. [L0646.016]</p></li>
+<li><p>Lookalike audiences should be tested only after roughly 150 to 200 accumulated purchases. [L1335.003]</p></li>
+<li><p>Test new interests and audiences to find new winning pockets (horizontal scaling). [L1335.003]</p></li>
+<li><p>Interest-based ad sets: after a product sells, create several ad sets, each targeting a different interest. [L0644.014]</p></li>
+<li><p>Give each interest ad set its own daily budget, for example £10, £20 or £25 per day. [L0644.014]</p></li>
+<li><p>Avoid interests that are too similar, because ad sets with overlapping audiences compete for the same space. [L0644.014]</p></li>
+<li><p>Facebook delivers cheap results well at small daily budgets. Larger budgets make the system work harder to find buyers, which can trigger learning-limited status. Scaling often needs more creative and audience options. [L0644.015]</p></li>
+<li><p>Do not expect Facebook support to resolve budget cap problems. Plan scaling around the account limits you can see yourself. [L0644.018]</p></li>
+<li><p>Raising a budget in large jumps can get reset by Facebook. Scale in smaller steps. [L0644.017]</p></li>
+<li><p>Ad-level ABO spend example: a single ad can absorb spend without delivering results if Facebook allocates budget on early engagement. [L0646.038]</p></li>
+<li><p>Scale a winning audience only after it shows at least six sales with ROAS at least 0.5 above break-even. [L0646.016]</p></li>
+</ul>
+<p><strong>Procedures</strong></p>
+<p>Procedure: Scale a winning ad set (step-up from $20)</p>
+<ol type="1">
+<li>Start at $20 per day. [L0999.069]</li>
+<li>Run it for a few days. [L0999.069]</li>
+<li>If it stays profitable, add another $20. [L0999.069]</li>
+<li>Repeat the step after about three days to raise the budget gradually. [L0999.069]</li>
+</ol>
+<h2 id="creative-testing-campaigns-for-winning-audiences">Creative Testing Campaigns for Winning Audiences</h2>
+<ul>
+<li><p>Test the new creative in a separate ad set with the same winning interest. Do not put it in the same ad set as a winning creative that already has significant engagement (for example 250 likes), because Facebook will spend the whole budget on the winner. [L0067.013]</p></li>
+<li><p>Creative testing campaign:</p>
+<ol type="1">
+<li>Create an ABO campaign and name it creative testing ABO. [L0398.026]</li>
+<li>Add one ad set per winning audience, for example one interest, one country or a lookalike such as a 1-3% lookalike built from people who watched 25% of a video. Keep the other settings the same across ad sets. [L0398.026]</li>
+<li>In every ad set, add the hook variations of the same video, for example video one with hook one, video one with hook two and video one with hook three. [L0398.026]</li>
+<li>Keep three to five creatives in each ad set so Meta can find the combination that works. [L0398.026]</li>
+<li>Change only the creative variable between tests. [L0398.026]</li>
+<li>Read the results with the winner rules before you change anything. [L0398.026]</li>
+</ol></li>
+<li><p>Single-creative ad sets give control in testing, for example about $20 spent on one creative to see how it performs. For scaling in CBO or cost-cap campaigns, use at least two to three creatives per ad set, preferably three to five, so delivery does not concentrate on one creative. [L0398.029]</p></li>
+<li><p>Creative testing: use winning ad sets to build a new testing campaign with a winning audience and interest. Start with 5 ad sets, 3 ads per ad set, and compare CTR to choose the best creative. New winning ads go into the running ad sets. [L0773.036]</p></li>
+<li><p>Creative test campaign: create one campaign on ABO so the budget sits at ad set level. Start with two to three ad sets, each targeting exactly one winning interest that already performed well, so no other targeting variable interferes. [L0902.019]</p></li>
+<li><p>Each ad set in the creative test campaign targets only one winning interest. Do not add random new interests, because minimising variables isolates the concept and hook being tested. [L0902.020]</p></li>
+<li><p>Publish each video as its own ad during testing to measure how well the creative resonates. Once you move to scaling, run existing posts as ads so their engagement carries over. [L1347.011]</p></li>
+<li><p>Split test beside a working campaign: keep the working campaign as it is and run a new campaign structure as a split test next to it. Do this only once cash flow can absorb the extra spend. [L1225.063]</p></li>
+<li><p>When raising budget, create a new ad set with a fresh batch of creatives rather than adding to a working ad set. Adding creatives to a working ad set can reset its learning. [L1225.062]</p></li>
+<li><p>Creative testing before budget: a testing campaign at low budget isolates whether the creative works before any scaling. Ad sets that test different creatives on the same winning interest should not be mixed with ad sets that scale. [L0067.013, L0524.038]</p></li>
+</ul>
+<h2 id="refreshing-dying-campaigns-and-ads">Refreshing Dying Campaigns and Ads</h2>
+<ul>
+<li><p>Do not edit ad sets or campaigns that perform well. Adding creative or changing settings restarts the learning phase. Leave winning ABO and CBO setups alone. [L0398.034]</p></li>
+<li><p>Swap creative inside a live ad set only if it is already dying, because swapping restarts the learning phase. Duplicating the ad set and launching with new creative is safer. [L0398.036]</p></li>
+<li><p>Old creatives with lots of engagement but weak conversions still get budget from Meta. A refresh should launch with new creative only. Adding a few proven creatives is possible, but new creative drives the difference. [L0398.037]</p></li>
+<li><p>Refresh a CBO that has stopped being profitable:</p>
+<ol type="1">
+<li>Confirm that the campaign was profitable for days or weeks and has now declined. This points to creative fatigue rather than the audience. [L0398.035]</li>
+<li>Duplicate the whole CBO with the same structure. [L0398.035]</li>
+<li>In the duplicate, place only new creatives, using two or three new combinations. [L0398.035]</li>
+<li>Turn off the old campaign once the duplicate runs. [L0398.035]</li>
+<li>Compare the two campaigns side by side to see the difference. [L0398.035]</li>
+</ol></li>
+<li><p>Switched-off ad sets can be turned back on after about two weeks, because they keep their data and can perform again. Before reactivating, check the last 30 days of data, because reporting is often delayed. [L0398.039]</p></li>
+<li><p>Never turn off a campaign that performs well. A restarted campaign usually does not return to its previous performance. If you must stop spending, lower the daily budget to $1 instead of switching the campaign off. [L0643.016]</p></li>
+<li><p>Case: one account lowered its daily budget to $1 instead of switching off. It recorded 5 conversions for $1 on the day of the change. The campaign had been declining before the budget was reduced, so the result shows the value of keeping campaigns alive. [L0643.018]</p></li>
+<li><p>A previously working CBO with the same creatives may start working again, and adding new creatives to the same winning audience can revive it. [L0646.050]</p></li>
+<li><p>Keep testing new interests and new creatives, because winning interests eventually die out. [L0646.028]</p></li>
+<li><p>Winning ads take off for reasons that are hard to predict. Test both CBO and ABO and follow whichever produces the money. [L0646.031]</p></li>
+<li><p>Do not duplicate the same ad set too often in the same auction, because duplicates compete with each other. A duplicated winning ad can still work. [L0646.030]</p></li>
+<li><p>Pause fatigued ads before ROAS drops significantly. [L0207.008, L0207.016]</p></li>
+</ul>
+<h2 id="daily-budget-learning-phase-and-delivery-issues">Daily Budget, Learning Phase and Delivery Issues</h2>
+<p><strong>Learning phase</strong></p>
+<ul>
+<li>Any change to an ad set resets the learning phase. This is acceptable during events but should be avoided on normal days. [L0298.011]</li>
+<li>Learning phase end: reported to finish after about 50 conversions per week. This figure was given from memory and should be checked in Meta's current documentation. [L0639.023]</li>
+<li>Learning Limited means the ad set has not reached about 50 conversions per week. Exiting that status needs roughly 50 sales per week from that one campaign, which requires a very large budget. [L0694.005]</li>
+<li>Learning Limited is a Meta recommendation, not a verdict on performance. Ad sets can stay in learning limited for months while consistently delivering profitable ROAS. Ignore the warning if the campaign performs well. [L0316.027, L0694.005]</li>
+<li>Learning Limited can appear as budgets grow, which is why scaling often needs more creative and audience options. [L0644.015]</li>
+<li>Fragmentation: when Meta reports ad sets competing against each other, do not simply add budget to each ad set. [L1017.021]</li>
+</ul>
+<p><strong>Procedure: Fragmentation warning</strong></p>
+<ol type="1">
+<li>Combine the competing ad sets into one ad set. [L1017.021]</li>
+<li>Increase the budget of the combined ad set and allow about three to four days before judging the result. [L1017.021]</li>
+<li>Judge the campaign on CTR, add-to-cart and checkout rates, not sales alone. [L1017.021]</li>
+</ol>
+<ul>
+<li>Adding budget to separate ad sets after a fragmentation warning did not restore results. [L1017.022]</li>
+<li>Changing scaling campaigns too often prevents Meta from collecting enough data. Make changes deliberately and let the campaign stabilise between adjustments. [L1021.020]</li>
+</ul>
+<p><strong>Daily budget thresholds</strong></p>
+<ul>
+<li>Around $50 per day collects enough data but cannot sustain a stable scale. Consistency usually starts around $100 to $200 per day, so budget decisions should be tied to unit economics. [L1016.059]</li>
+<li>Scaling hit a barrier above about £50 daily spend per ad set, where delivery became less efficient and returns dropped. The owner explained that the algorithm must reach a wider pool of users as spend rises, and iOS tracking limits made that harder. Scaling past the barrier may require more ad sets or other channels rather than one ad set with a higher budget. [L1077.011]</li>
+<li>At lower budgets, around $50 per day, results can swing strongly from day to day, for example a strong day followed by a very weak one. This variance is normal and should not be read as a single trend. [L0692.024]</li>
+<li>Results often dip after a scale step. When you scale, ROAS and CTR usually drop at first because the pixel reaches a larger audience and must learn who matches the product. If the audience fits, performance recovers after two to three days, though it can take up to two days. [L1316.016, L0773.031]</li>
+<li>Do not judge a scaled campaign on its first day or two after a budget increase. The drop in ROAS and CTR is normal. Wait a few days before deciding whether the scaling worked. [L1316.017]</li>
+<li>Scaling procedure, dip rule: if results drop after an increase, raise the budget by 20% instead and expect a dip for about two days while the pixel adjusts to the bigger audience. [L0773.031, L0774.031]</li>
+<li>Facebook scaling in smaller steps keeps delivery more stable than doubling spend at once. [L1426.004]</li>
+<li>Scaling too fast can cap the account or reduce the budget again within a day. Raise budgets gradually and monitor delivery after each change. [L1426.005]</li>
+<li>Scaling by raising the budget of the same ad set worked better in one case than CBO campaigns, which were inconsistent. Keep the account structure simple and test the approach that works best for each store. [L0650.009]</li>
+<li>Test the scaling method on each account: one account can respond to 20 percent steps while another responds to doubling or to duplicates. [L0209.004, L0646.018]</li>
+</ul>
+<p><strong>Procedure: Scaling a winning ad set (full sequence)</strong></p>
+<ol type="1">
+<li>Start each ad set with a budget of 5 USD per day. [L0774.031]</li>
+<li>Increase the budget step by step: 5 to 10, 10 to 20, 20 to 50, 50 to 100, 100 to 200, 200 to 500 USD. [L0774.031]</li>
+<li>If results drop after an increase, raise the budget by 20% instead and expect a dip for about two days while the pixel adjusts to the bigger audience. [L0774.031]</li>
+<li>If that still does not work, duplicate the ad set into a CBO campaign, run three CBOs, close the two weakest and scale the budget of the winning CBO. [L0774.031]</li>
+</ol>
+<p><strong>Procedure: Budget scaling for a winning ad set (ladder version)</strong></p>
+<ol type="1">
+<li>Start at 5 USD per ad set. [L0773.031]</li>
+<li>Increase step by step: 5 → 10 → 20 → 50 → 100 → 200 → 500 USD. [L0773.031]</li>
+<li>If results drop after a step, increase by 20% at a time, and expect a temporary performance drop for about two days because the pixel must adapt to a bigger audience. [L0773.031]</li>
+</ol>
+<ul>
+<li>Before scaling an ad set, wait until it has more than six or seven sales. [L0774.032]</li>
+<li>Budget decisions go with unit economics. A profitable CBO is judged by profit per sale, not sales count alone. [L1107.037]</li>
+<li>Advertisers reporting a budget decrease caused by Facebook's review: budgets reduced within a day after raises indicate delivery limits, so raise budgets gradually and monitor delivery after each change. [L1426.005]</li>
+<li>CPA usually rises when you scale. Monitor CPA against break-even at each budget level. [L0692.023]</li>
+<li>Scaling expects some inconsistency. Find the maximum budget a product can handle before running it steadily. [L0690.016]</li>
+<li>Scaling a campaign that already works uses the scaling-campaign rules, not the testing thresholds. Interests need 6 to 7 sales; the threshold applies to testing, not to scaling a campaign that already works. [L0693.032]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li>Increasing the budget directly on the ad set itself is currently the most reliable Facebook scaling method. [L0209.003]</li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/16-diagnosing-performance-metrics-aida-and-benchmarks/"><span class="k">&larr; Previous</span><span class="v">Diagnosing performance: metrics, AIDA and benchmarks</span></a><a class="nx" href="../../09-meta-and-facebook-ads/18-retargeting-custom-audiences-and-lookalikes/"><span class="k">Next &rarr;</span><span class="v">Retargeting, custom audiences and lookalikes</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

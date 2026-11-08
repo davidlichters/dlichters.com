@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bidding, budgets and bid optimization | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 10.12: Bidding, budgets and bid optimization.">
+<link rel="canonical" href="https://dlichters.com/aiecom/10-google-ads-and-shopping/12-bidding-budgets-and-bid-optimization/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Bidding, budgets and bid optimization | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 10.12: Bidding, budgets and bid optimization."><meta property="og:url" content="https://dlichters.com/aiecom/10-google-ads-and-shopping/12-bidding-budgets-and-bid-optimization/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">10. Google Ads and Shopping</a> &rsaquo; <a href="../../../ecom/10-google-ads-and-shopping/12-bidding-budgets-and-bid-optimization/">Plain version</a></div><h1>10.12 Bidding, budgets and bid optimization</h1><article><h2 id="choosing-the-bid-strategy">Choosing the Bid Strategy</h2>
+<ul>
+<li>Campaigns with fewer than 30 conversions per month need manual bid adjustments based on product performance. Campaigns with 30 or more conversions per month can use automated Google Ads bid strategies. [L0299.001]</li>
+<li>Start every new campaign on Manual CPC to keep full control over spend and acquisition. [L0743.014, L0225.018]</li>
+<li>In a new account, uncheck the Enhanced CPC checkbox, which is checked by default. Google would otherwise raise bids on products it has not yet proven to sell. [L0746.013]</li>
+<li>Use Manual CPC over Google's automated conversion-focused bidding unless the account already tracks high conversion volume, with multiple conversions daily. [L0262.003]</li>
+<li>Do not use Maximize Clicks for profit-focused campaigns. Use it only if the goal is traffic volume rather than profitability. [L0225.024, L0746.012]</li>
+<li>Target ROAS and Maximize Clicks do not work for the Source B shopping funnel. [L0742.009] <em>(older advice, 2021-22)</em></li>
+</ul>
+<h3 id="automation-thresholds-by-source">Automation Thresholds by Source</h3>
+<p>The sources give different conversion thresholds. Each applies to the situation described.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Threshold</th>
+<th>What it unlocks</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>About 20 conversions per month</td>
+<td>Automated bidding on a Shopping campaign is reasonable to turn on</td>
+<td>[L0454.020]</td>
+</tr>
+<tr>
+<td>30 or more conversions per month</td>
+<td>Switch from manual to Target ROAS or Enhanced CPC, so Google has data to optimise</td>
+<td>[L0225.018, L0225.024, L0299.001]</td>
+</tr>
+<tr>
+<td>More than about 30 conversions per month</td>
+<td>Portfolio bid strategies (Target ROAS) should be activated; about two months to optimise at 30 per month, about one month at 60 to 120 per month</td>
+<td>[L0745.028]</td>
+</tr>
+<tr>
+<td>50 sales per month</td>
+<td>Enhanced CPC or Smart Shopping, before that threshold they "blow through money" <em>(older advice, 2020)</em></td>
+<td>[L0245.017]</td>
+</tr>
+<tr>
+<td>50 sales</td>
+<td>Switch both campaigns to Enhanced CPC, so Google can find extra sales</td>
+<td>[L0715.011]</td>
+</tr>
+<tr>
+<td>50 tracked conversions</td>
+<td>Enhanced CPC may be turned on (rule of thumb); accounts without tracked sales must switch it off <em>(older advice, 2021-22)</em></td>
+<td>[L0742.009, L0742.010]</td>
+</tr>
+<tr>
+<td>50 or more sales per month</td>
+<td>Target ROAS makes sense; before this, Google has nothing to optimise against <em>(older advice, 2021-22)</em></td>
+<td>[L0746.012]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The 30-conversion figure is the most recent guidance for moving to automation, while 50 is the stricter bar for Enhanced CPC and Target ROAS in new or thin accounts. [L0225.018, L0245.017, L0746.012]</li>
+<li>Enhanced CPC should only be tested once the store is profitable, negative keywords are in place, and the alpha and beta split is set. It is not guaranteed to improve results. [L0468.116]</li>
+</ul>
+<h2 id="core-bid-formulas">Core Bid Formulas</h2>
+<ul>
+<li>Target ROAS = total conversion value (revenue) ÷ total cost spent on the campaign. [L0113.001]</li>
+<li>Target CPC (maximum bid) = revenue per click (RPC) ÷ target ROAS. [L0113.002]</li>
+<li>Worked example: 100 clicks generating $1,000 gives an RPC of $10. For a 5× ROAS, $10 ÷ 5 = $2 maximum CPC. At $2 per click with $10 expected revenue, you will consistently hit 5×. [L0299.004]</li>
+<li>Verification: multiply the target CPC by the target ROAS. The result should match the RPC, allowing minor rounding. Example: $1.96 × 6 = $11.76, matching an RPC of $11.78. If it does not match, recalculate RPC ÷ target ROAS. [L0299.028]</li>
+<li>Choosing targets: the alpha campaign example uses a target ROAS of 3.3×, calculated as revenue ÷ desired ad spend. Adjust to your actual margins and profit requirements. [L0225.016]</li>
+<li>The beta campaign uses a lower target, such as 2.5×, because beta captures less qualified research and comparison searches. [L0225.017]</li>
+<li>Keywords use the same formula: keyword RPC ÷ target ROAS. [L0745.021]</li>
+</ul>
+<h2 id="starting-bids-and-budgets">Starting Bids and Budgets</h2>
+<h3 id="starting-cpc">Starting CPC</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Campaign or context</th>
+<th>Starting CPC</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alpha, general example</td>
+<td>$0.50</td>
+<td>[L0225.021]</td>
+</tr>
+<tr>
+<td>Beta, general example</td>
+<td>$0.20</td>
+<td>[L0225.021, L0746.015]</td>
+</tr>
+<tr>
+<td>Alpha, alternative (double beta)</td>
+<td>$0.40</td>
+<td>[L0746.015]</td>
+</tr>
+<tr>
+<td>Shopping base, 2020</td>
+<td>about $0.25 to $0.30 before adjustment</td>
+<td>[L0468.110]</td>
+</tr>
+<tr>
+<td>Source B low-value campaign (High priority)</td>
+<td>20 to 30 cents, 30 cents as example</td>
+<td>[L0742.019, L0744.007] <em>(older, 2021-22)</em></td>
+</tr>
+<tr>
+<td>Source B medium-value campaign (Medium priority)</td>
+<td>60 cents</td>
+<td>[L0742.020, L0744.007] <em>(older, 2021-22)</em></td>
+</tr>
+<tr>
+<td>Source B high-value campaign (Low priority)</td>
+<td>about $1.20</td>
+<td>[L0742.021, L0744.007] <em>(older, 2021-22)</em></td>
+</tr>
+<tr>
+<td>Example default</td>
+<td>50 cents</td>
+<td>[L0272.038] <em>(older, 2022)</em></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Alpha's bid must always stay above beta's bid, because alpha converts at a higher rate. [L0225.021, L0746.015]</li>
+<li>The starting CPC should be set below the benchmark, not above it. Raise it in small steps of about 5 to 10 cents. [L0470.096]</li>
+<li>Adjust starting values once conversion data comes in. [L0744.007]</li>
+<li>The sources disagree on the exact starting figure. Each figure is a starting point for its own context: the alpha and beta split, the funnel tier, or the store type. [L0225.021, L0742.019, L0468.110]</li>
+</ul>
+<h3 id="daily-budget-and-cpc-limit">Daily Budget and CPC Limit</h3>
+<ul>
+<li>Start with the same daily budget in alpha and beta. The course team launches new campaigns at about $20 per day each. A 27-product merchandise store used $15 per day each. A lower budget means slower data collection. [L0746.014]</li>
+<li>A $25 daily budget is an example starting point for testing. Budget is independent of the alpha and beta split. Each campaign can share a budget or have its own. [L0225.022]</li>
+<li>Start Google Shopping with a daily budget between $15 and $35. [L0468.110]</li>
+<li>A common starting setup is a daily budget of about $20 with a cost-per-click limit of $1. The maximum daily budget to start with is about $33. [L0551.043]</li>
+<li>Set both a daily budget and a CPC limit. Spend stops when the daily budget is reached. Ads usually begin running 2 to 3 days after setup. [L0551.042]</li>
+<li>Do not set the CPC limit too low at launch. A very low cap restricts impressions and slows data collection. A limit near $1 is a common starting point. Adjust it once the data shows which products are over- or underbid. [L0551.080]</li>
+<li>Use "standard" delivery, not "accelerated." Accelerated delivery spends the budget as fast as possible and may exhaust it before the day ends. [L0225.019]</li>
+<li>Test with a small budget first and increase spending only after the tests show results. [L0586.009]</li>
+<li>To control spend without losing campaign history, lower the daily budget instead of pausing, for example from $50 to $10 per day. Pausing causes a messy restart. [L0469.081]</li>
+</ul>
+<h3 id="new-campaign-launch-procedure-older-2021">New Campaign Launch Procedure <em>(older, 2021)</em></h3>
+<ol type="1">
+<li>Upload all available products.</li>
+<li>Confirm every product is approved and receiving impressions.</li>
+<li>Set a very small default cost per click.</li>
+<li>Wait a few days for impressions and clicks.</li>
+<li>Once clicks arrive, raise the cost per click by about 0.05 at product level every couple of days.</li>
+</ol>
+<p>[L0247.050]</p>
+<ul>
+<li>Raising budgets and bids right after launch is a common error. Products that are not yet approved do not enter the auction, so the increase has no effect. [L0247.051]</li>
+</ul>
+<h2 id="raising-cpc-in-steps">Raising CPC in Steps</h2>
+<h3 id="waiting-between-changes">Waiting Between Changes</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Wait before next change</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product with no impressions in a new campaign</td>
+<td>2 to 3 days before going higher</td>
+<td>[L0470.096]</td>
+</tr>
+<tr>
+<td>Zero impressions after several days</td>
+<td>A few days between each step</td>
+<td>[L0251.033]</td>
+</tr>
+<tr>
+<td>First raises, clicks just arriving <em>(older, 2021)</em></td>
+<td>Every couple of days</td>
+<td>[L0247.050]</td>
+</tr>
+<tr>
+<td>Ongoing CPC adjustment</td>
+<td>Every 1 to 2 weeks</td>
+<td>[L0193.012]</td>
+</tr>
+<tr>
+<td>Any bid change</td>
+<td>One full week, then compare the last two weeks</td>
+<td>[L0715.010]</td>
+</tr>
+<tr>
+<td>Beta with little traffic</td>
+<td>One week between each change</td>
+<td>[L0746.016]</td>
+</tr>
+<tr>
+<td>Budget increase</td>
+<td>1 to 2 weeks, then review</td>
+<td>[L0193.014]</td>
+</tr>
+<tr>
+<td>Shared budget or bid change under "Limited by budget"</td>
+<td>A couple of days, then check status</td>
+<td>[L0744.016]</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="when-data-is-enough-to-change-a-bid">When Data Is Enough to Change a Bid</h3>
+<ul>
+<li>Wait for at least 100 impressions before changing a product's CPC. Use 200 impressions to be safer. Then raise or lower the CPC depending on whether clicks cost too much or too little. [L0470.014]</li>
+<li>Start with low bids. If ads are approved and get some impressions but no clicks, or too few impressions in total, raise bids gradually. [L0715.008]</li>
+<li>About 100 impressions per week is far too few for a product. Raise the bid in small steps, for example from 25 cents to 30 or 35 cents. Never jump to one dollar. [L0715.009]</li>
+<li>Each optimisation session takes about 15 minutes once familiar. Adjust cost-per-click bids every 1 to 2 weeks. [L0193.012]</li>
+</ul>
+<h3 id="step-patterns">Step Patterns</h3>
+<ul>
+<li><p><strong>Zero-impression ladder</strong> <em>(older, 2022 variant)</em>: default 50 cents. Products with no impressions go to 75 cents. If the budget still is not fully spent after a week, raise to $1.00. Continue incrementally until the daily budget depletes. [L0272.038]</p></li>
+<li><p><strong>Zero-impression ladder</strong> (2023): start at $0.50, see no impressions, raise to $0.60, wait a few days, then $0.70, $0.80, and $1.00. This method reveals the competitive bid landscape without requiring Google's benchmark data. [L0251.033]</p></li>
+<li><p><strong>Underspent campaign:</strong> raise CPC gradually, for example from $0.35 to $0.40, rather than making large jumps such as $0.50. Small steps show whether more traffic is available at the current budget. [L0360.039]</p></li>
+<li><p><strong>Formula for underspent products:</strong> new CPC = current CPC + $0.05 (for example, $0.35 becomes $0.40). Apply this only to underspent products and do not raise every CPC at once. [L0360.040]</p></li>
+<li><p><strong>Beta ladder:</strong> start Beta at $0.20. After one week with no traffic, raise to $0.25. Wait another week. If traffic is still very low, raise to $0.30 and continue the same way. If traffic is good, leave the bid unchanged. [L0746.016]</p></li>
+<li><p><strong>Inch-up method</strong> <em>(older, 2019)</em>:</p>
+<ol type="1">
+<li>Start from the current cost per click, for example 10 cents.</li>
+<li>Raise the bid in the evening, for example to 15 cents.</li>
+<li>The next day, check impressions, clicks and sales.</li>
+<li>If results rise but not enough, raise again (for example to 20 cents) and repeat daily.</li>
+<li>Stop when ads get impressions and clicks and sales are profitable. This is the sweet spot.</li>
+</ol>
+<p>[L0357.032]</p></li>
+<li><p>There is no universal average bid. Cost per click varies by niche, brand and product group. Judge a bid by the results it produces, not a fixed number. [L0357.036] <em>(older, 2019)</em></p></li>
+</ul>
+<h3 id="raising-bids-carefully">Raising Bids Carefully</h3>
+<ul>
+<li><p>Do not double all bids at once when spend is low. Raise them in measured steps. [L0466.030] <em>(older, 2018)</em></p></li>
+<li><p>Low spend with low impressions means other advertisers are bidding higher. A bid of a fraction of a cent would spend almost nothing even with a million-dollar budget. [L0466.029] <em>(older, 2018)</em></p></li>
+<li><p>Raise bids, not budgets, when a daily budget is not being spent and impressions are low, because low bids lose auctions to competitors. [L0466.028] <em>(older, 2018)</em></p></li>
+<li><p>Raise bids on products that you want to sell but that get no impressions, so they start appearing. [L0469.083] <em>(older, 2021)</em></p></li>
+<li><p>Before raising CPC in a new account:</p>
+<ol type="1">
+<li>Review the past month of data.</li>
+<li>Make the optimisations recommended in the optimisation lessons using that data.</li>
+<li>Then raise CPC so the full daily budget is spent on the products with the most potential.</li>
+</ol>
+<p>[L0360.043]</p></li>
+</ul>
+<h2 id="product-level-bids">Product-Level Bids</h2>
+<h3 id="why-each-product-needs-its-own-bid">Why Each Product Needs Its Own Bid</h3>
+<ul>
+<li>Conversion rates differ strongly between products, even between size or colour variants of one product. A single bid overpays for weak products and underbids strong ones. Bids should be set per product. [L0503.002]</li>
+<li>In one real store, product conversion rates ranged from 0.2 to 3.2%, with most between 0.6 and 0.9%. The best product converted 16 times better than the weakest (3.2 ÷ 0.2). [L0503.003]</li>
+<li>Leaving dozens of products under one shared bid hides large differences in conversion rate and cost per sale. Strong products get underfunded and weak products keep spending. [L0503.013]</li>
+<li>A 30-day campaign example: $671 spend, $5,278 revenue, 1.45% conversion rate, 7.8× ROAS. Products within it ranged from 0.5% to 8.3% conversion rate and from 0.04 to 90 ROAS, despite nearly identical bids. [L0299.005]</li>
+<li>Do not bid the same amount on products with vastly different conversion rates and ROAS. Each product needs a bid tailored to your profitability target. [L0299.006]</li>
+</ul>
+<h3 id="applying-the-formula-to-products">Applying the Formula to Products</h3>
+<ul>
+<li><strong>Strong performer:</strong> Product 1 shows an RPC of $11.78 with a 6× target ROAS. $11.78 ÷ 6 = $1.96 target CPC. Raise the bid from $1.00 to $1.96, because this product converts above target and can bid more aggressively for more traffic. [L0299.012]</li>
+<li>The principle: when RPC exceeds the target, the strong conversion rate supports the higher CPC. Higher bids increase volume while maintaining profitability. [L0299.013]</li>
+<li>A strong product with low search impression share (for example 29%) gains both traffic and impression share when its bid is raised. This captures demand you are missing. [L0299.014]</li>
+<li><strong>Weak performer:</strong> Product 2 shows an RPC of $5.62 with a current bid of $1.00. $5.62 ÷ 6 = $0.93 target CPC. Reduce the bid to $0.93 to move it toward target profitability. [L0299.015]</li>
+<li>For products with very low RPC relative to target (for example $0.56 RPC with a 6× target gives $0.09 target CPC), either pause the product to free budget and inventory for better performers, or reduce the bid to the calculated amount and continue at minimal scale. [L0299.029]</li>
+<li>A product's maximum CPC can be lowered when it is overpriced, so Google spends the budget on products that convert. [L0468.123] <em>(older, 2020)</em></li>
+<li>Remove products that do not reach the target ROAS and move the remaining budget to the most profitable products. [L0664.063] <em>(older, 2020)</em></li>
+<li>Decreasing CPC is preferred to removal for low performers. They can still generate organic traffic or profitable sales at lower ad costs. [L0249.059] <em>(older, 2022)</em></li>
+<li>Lower CPC on unprofitable products after months of data. After six to seven months, reduce CPC possibly to zero, or moderately, for example from $0.50 to $0.25. Add negative keywords to remove irrelevant search terms first. [L0469.085] <em>(older, 2021)</em></li>
+</ul>
+<h3 id="products-that-are-far-above-competitors-or-not-converting">Products That Are Far Above Competitors or Not Converting</h3>
+<ul>
+<li>For a product whose CPC is far above competitors and above what its converting items pay, lower the bid to just under its current average CPC first, not to a calculated target. A bigger cut is only justified if the item is not converting at all. [L0745.031]</li>
+<li>Example: in one product group, the only converting item paid about $1.40 per click, while the others paid $3.00 and $5.44. Lowering the overpaying items was expected to bring the group to a ROAS of 6 or better within about 30 days. [L0745.032]</li>
+<li>Example: a product with 190 clicks, $300 spend and no conversion should have converted by now. Pausing it redirected the budget to the top product and, in the example, lifted campaign ROAS from 4.2 to about 6.0 without losing revenue. [L0745.016]</li>
+<li>Alternative to pausing: reduce the bid drastically (example: to $0.50) and keep some low-cost traffic, but only if you are confident conversion rate can be improved through website work. [L0745.017]</li>
+<li>Adjust bids before pausing. Poor ROAS is often a symptom of wrong bids. [L0454.001]</li>
+<li>In a two-keyword example, the weak keyword (ROAS 1.8, bid $304, cost $4,100) was not paused. Its bid was lowered to $211. Its ROAS rose to 3.9 over time, cost per click fell and conversion rate stayed the same. [L0454.002]</li>
+<li>Where the actual CPC is far below the calculated target because competition is low, keep the bid above the formula value. [L0745.020]</li>
+<li>A product that gets impressions but not enough clicks may need a higher CPC. Test increases on the top 20% of valuable products first. [L0274.056]</li>
+</ul>
+<h3 id="prioritising-products">Prioritising Products</h3>
+<ul>
+<li>Raise CPC first on the 20% of highest-price products that are not getting impressions. Monitor impressions and clicks, then slowly repeat for the remaining products. This prioritises valuable inventory. [L0274.012] <em>(older-era advice, 2023)</em></li>
+<li>Aim for high impression share only on top-performing products. Segment out low performers. [L0745.006]</li>
+</ul>
+<h3 id="bid-structure-and-editing-in-google-ads">Bid Structure and Editing in Google Ads</h3>
+<ul>
+<li>Ad group bids are not the main bid in Google Shopping. The product-level bid matters, but a starting bid must still be entered on the ad group. [L0742.018] <em>(older, 2021-22)</em></li>
+<li>Bids appear per ad group as Default max. CPC in the Ad groups view, with enhanced CPC in brackets. Check them there when adjusting bids within a campaign. [L0744.049] <em>(older, 2021-22)</em></li>
+<li>Update path (Source B funnel): within a campaign, go to Product groups, tick all product groups, choose Edit &gt; Change bids, enter the bid and apply. Do not set bids for excluded product groups. [L0742.026] <em>(older, 2021-22)</em></li>
+<li>When the Max CPC field is grayed out for a product group (campaign level), go to the ad group level. Under each product group, hover over Max CPC, click the box that appears, and enter the new value. [L0253.040] <em>(older, 2024)</em></li>
+<li>If the "Everything else in [category]" row is grayed out, hover over it, click the plus icon, and subdivide into individual products. Each product's Max CPC can then be adjusted individually. [L0253.051] <em>(older, 2024)</em></li>
+<li>Procedure: before a bid change, verify with the bid formula that the target matches your RPC. [L0299.028]</li>
+</ul>
+<h2 id="segment-bids">Segment Bids</h2>
+<h3 id="why-segments-multiply-the-work">Why Segments Multiply the Work</h3>
+<ul>
+<li>Google Ads lets you set separate bids by gender, age range, household income, location, day of week, hour of day, and device. Each dimension multiplies the number of bids for one keyword, so manual management quickly becomes impossible. This is the main reason to use automated bidding. [L0454.004]</li>
+<li>Dimensions interact. A group that looks valuable overall may only be valuable within certain age ranges. Analysing combinations can reverse conclusions drawn from a single dimension. Segment bids by combinations, not one factor alone. [L0454.006]</li>
+<li>Choose bid dimensions based on price point. For high-ticket products, household income is relevant, because many buyers in lower income brackets cannot afford the item. [L0454.051]</li>
+<li>Apply the same bid optimisation formula to all dimensions, not just products. [L0299.024]</li>
+</ul>
+<h3 id="bid-count-example">Bid Count Example</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Values</th>
+<th>Running total of bids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gender</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Age range</td>
+<td>6</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Household income level</td>
+<td>6</td>
+<td>72</td>
+</tr>
+<tr>
+<td>Geographic location</td>
+<td>55,423</td>
+<td>about 3.9 million</td>
+</tr>
+<tr>
+<td>Day of week</td>
+<td>7</td>
+<td>about 27.9 million</td>
+</tr>
+<tr>
+<td>Hour of day</td>
+<td>24</td>
+<td>about 670 million</td>
+</tr>
+<tr>
+<td>Device (phone, desktop, tablet)</td>
+<td>3</td>
+<td>about 2 billion</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0454.007]</p>
+<h3 id="demographics">Demographics</h3>
+<ul>
+<li><p>Procedure for a target CPC per segment (example: gender):</p>
+<ol type="1">
+<li>Pull the number of clicks for each segment, for example men and women.</li>
+<li>Pull the revenue for each segment.</li>
+<li>Calculate RPC for each segment by dividing revenue by clicks.</li>
+<li>Divide RPC by the target ROAS to get the target CPC for each segment.</li>
+<li>Repeat for each added dimension, such as age ranges and income levels.</li>
+</ol>
+<p>In one example, women converted 56% more valuably than men. [L0454.005]</p></li>
+<li><p>Adjust bids on age ranges, geographic locations, and time periods by their individual RPC versus target ROAS. [L0299.024]</p></li>
+</ul>
+<h3 id="devices">Devices</h3>
+<ul>
+<li><p>Keep desktop and mobile traffic in one campaign rather than separate ad groups, because separating them showed no clear gains. If mobile converts much worse, reduce mobile bid adjustments by roughly −20% to −30%. [L0429.027] <em>(older, 2022)</em></p></li>
+<li><p>Procedure for mobile and desktop bids:</p>
+<ol type="1">
+<li>Run the campaign on both mobile and desktop at the start.</li>
+<li>Track conversion rates by device over time.</li>
+<li>If mobile converts clearly lower, open the campaign settings and decrease mobile bids by a percentage.</li>
+<li>Example: a desktop bid of $0.50 per click with a 10% decrease for mobile.</li>
+</ol>
+<p>[L0359.069]</p></li>
+<li><p>Device bid adjustments must be mathematically based, not arbitrary. Increase bids on mobile if mobile converts better than your target ROAS, and decrease bids on tablets and other devices using the same RPC formula. [L0299.023]</p></li>
+<li><p>Device adjustment formula: device conversion value per cost (ROAS) ÷ target ROAS − 1. Example: mobile conversion value over cost 3.55 with target 6 gives 3.55 ÷ 6 = 0.59, minus 1 = −41%, so mobile bids are reduced by 41%. [L0745.026]</p></li>
+<li><p>Do not adjust a device with too few clicks. Example: a tablet with 29 clicks lacks confidence. [L0745.026]</p></li>
+<li><p>Leave device bid modifiers unset and bid equally on all devices. Around 80% of internet traffic is mobile and most Google Shopping conversions occur on mobile. [L0742.013] <em>(older, 2021-22)</em></p></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equal bids on all devices, no modifiers</td>
+<td>Funnel where most conversions are mobile <em>(older, 2021-22)</em></td>
+<td>[L0742.013]</td>
+</tr>
+<tr>
+<td>Single campaign, mobile −20% to −30% if much worse</td>
+<td>Mobile converts much worse <em>(older, 2022)</em></td>
+<td>[L0429.027]</td>
+</tr>
+<tr>
+<td>Percentage decrease for mobile after tracking</td>
+<td>Mobile converts clearly lower over time</td>
+<td>[L0359.069]</td>
+</tr>
+<tr>
+<td>Formula-based adjustment (ROAS ÷ target − 1)</td>
+<td>Any device with enough clicks</td>
+<td>[L0745.026, L0299.023]</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="locations">Locations</h3>
+<ul>
+<li><p>Google Ads offers 55,423 geographic biddable locations. Location modifiers can be set far below country or state level. A state can carry a modifier such as 10% more value, but rural and urban areas inside a large state can convert very differently. Review at a finer level before settling on modifiers. [L0454.008]</p></li>
+<li><p>Geographic bid adjustment workflow:</p>
+<ol type="1">
+<li>Open the geographic report.</li>
+<li>Set the time range (example: all time). Remove the columns for location type, most specific location and city, leaving the region or state level.</li>
+<li>Only make decisions on regions with at least 100 clicks. With fewer clicks the data is too noisy, unless the conversion rate is very high (around 3.3% or more).</li>
+<li>Sort from high to low and compare conversion rate and ROAS per state.</li>
+<li>Save the data and export it to Excel for analysis.</li>
+<li>Calculate the bid adjustment: divide the state's current ROAS by the target ROAS, subtract 1, and apply the result as a percentage.</li>
+<li>Enter the state in the campaign's location targeting and enter the adjustment percentage.</li>
+</ol>
+<p>[L0745.024]</p></li>
+<li><p>Geographic bid adjustment formula: (current ROAS ÷ target ROAS) − 1. A positive result means raising the bid by that percentage. A negative result means lowering it. With target ROAS 6:</p></li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>State example</th>
+<th>Current ROAS</th>
+<th>Calculation</th>
+<th>Adjustment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>California</td>
+<td>7.36</td>
+<td>7.36 ÷ 6 = 1.22, minus 1</td>
+<td>+22%</td>
+</tr>
+<tr>
+<td>A state</td>
+<td>4.28</td>
+<td>4.28 ÷ 6 = 0.71, minus 1</td>
+<td>−28%</td>
+</tr>
+<tr>
+<td>A state</td>
+<td>9.38</td>
+<td>9.38 ÷ 6 = 1.56, minus 1</td>
+<td>+56%</td>
+</tr>
+<tr>
+<td>A state</td>
+<td>13.8</td>
+<td>13.8 ÷ 6 = 2.30, minus 1</td>
+<td>+130%</td>
+</tr>
+</tbody>
+</table></div>
+<p>[L0745.025]</p>
+<ul>
+<li>Use judgement and statistical significance for adjustments. Evaluate data in chunks based on how many conversions were expected given the conversion rate, not on raw click counts alone. [L0745.027]</li>
+</ul>
+<h3 id="time-of-day-and-day-of-week">Time of Day and Day of Week</h3>
+<ul>
+<li>Control the schedule of ads by time of day. Switch off unprofitable hours (the example given is 22:00 to 04:00) and raise bids for periods of higher demand, such as Valentine's Day for gift buyers. [L0720.003]</li>
+<li>Time periods use the same RPC versus target ROAS formula as other dimensions. [L0299.024]</li>
+</ul>
+<h2 id="pause-thresholds">Pause Thresholds</h2>
+<ul>
+<li>Pause threshold formula: divide 1 by the average conversion rate to find the minimum expected clicks per conversion, then multiply by 1.5 to add a 50% safety buffer. At a 1.2% conversion rate: (1 ÷ 0.012) × 1.5 = 125, typically rounded to 120 clicks without conversion as the pause trigger. [L0299.016]</li>
+<li>Standard thresholds by conversion rate:</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Conversion rate</th>
+<th>Threshold</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.2%</td>
+<td>Pause at 120 clicks without conversion (minimum 83 clicks plus 50% buffer)</td>
+<td>[L0299.017]</td>
+</tr>
+<tr>
+<td>1.0%</td>
+<td>Pause at 100 clicks</td>
+<td>[L0299.017]</td>
+</tr>
+<tr>
+<td>2.0%</td>
+<td>Evaluate every 50 clicks</td>
+<td>[L0299.017]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The formula and the table disagree at other rates. The formula gives 150 clicks at 1.0% and 75 clicks at 2.0%, while the table gives 100 and "every 50." The source does not say which governs. Check both before pausing. [L0299.016, L0299.017]</li>
+<li>Example: a geographic area (South Carolina) with 122 clicks and no conversion at a 1.2% average conversion rate has passed the 120-click threshold. It is approaching the point where reducing bids or pausing that location makes financial sense. [L0299.026]</li>
+<li>Do not make major bid or pausing decisions on products with fewer than 100 clicks. Extend the data window, for example from 30 to 60 days, to accumulate enough clicks. [L0299.007]</li>
+</ul>
+<h2 id="data-windows-and-minimum-data">Data Windows and Minimum Data</h2>
+<ul>
+<li>A 60-day window gives more reliable data than a 30-day window with fewer clicks per product. Example: $1,438 spend, $8,200 conversion value, 5.8× ROAS against a 6× target. [L0299.008]</li>
+<li>Use a 60-day window when possible to collect more data. Only apply the bid formula to items that have passed the minimum click threshold. Add the revenue-per-click column for product-level optimisation. [L0745.019]</li>
+<li>Keyword example: a keyword with RPC 28.29 at target ROAS 6 gives a bid of about $4.60 per the source. The arithmetic gives 28.29 ÷ 6 = 4.72. The keyword had only 6 clicks, so it lacked data confidence and should not be changed yet. [L0745.021]</li>
+<li>Before raising CPC in a new account, use the past month of data (see Raising Bids Carefully). [L0360.043]</li>
+</ul>
+<h2 id="automated-bidding">Automated Bidding</h2>
+<h3 id="enhanced-cpc">Enhanced CPC</h3>
+<ul>
+<li>Enhanced CPC uses the manual bid as a baseline. It lets Google raise bids on searches with a higher chance of converting, while keeping baseline manual bids for other searches. It is a middle ground between full manual control and full automation. [L0225.025, L0715.012]</li>
+<li>Google raises a manual bid when a search looks more likely to convert and lowers it when a sale looks unlikely. This matches the account's conversion history with customer behaviour. Without conversion data the algorithm only guesses. [L0742.036] <em>(older, 2021-22)</em></li>
+<li>Enhanced CPC only works well once enough sales data exists. [L0715.012]</li>
+<li>For Search and Display, new campaigns no longer offer Enhanced CPC because it was deprecated. New campaigns should use Target ROAS. Existing campaigns keep Enhanced CPC until it is switched off in March, and should not be changed in the meantime. [L0360.037] <em>(2024)</em></li>
+<li>Enhanced CPC can be switched on later in the campaign settings once sales are tracked. [L0742.036] <em>(older, 2021-22)</em></li>
+</ul>
+<h3 id="target-roas">Target ROAS</h3>
+<ul>
+<li><p>Do not use Target ROAS in a new account. Without sales data Google has nothing to optimise against. [L0746.012] <em>(older, 2021-22)</em></p></li>
+<li><p>Do not set a target far above current performance. If current ROAS is 3×, start at 5× and move to 8× only after 5× is reached. Larger jumps create volatility and slow the strategy down. [L0454.018]</p></li>
+<li><p>Setup procedure:</p>
+<ol type="1">
+<li>In Google Ads, use the search bar at the top of the account.</li>
+<li>Type "bid" and select portfolio bid strategies, Google's list of automated bid strategies.</li>
+<li>Create a new strategy and choose Target ROAS bidding.</li>
+<li>Give the strategy a name.</li>
+<li>Enter the target ROAS as a percentage, where 5× is entered as 500%.</li>
+<li>When asked for a minimum or maximum bid, leave the fields empty, as the lesson advises against setting them.</li>
+</ol>
+<p>[L0454.017]</p></li>
+<li><p>Portfolio setup: choose the target return on ad spend option and enter the target as a percentage (example: 600). Minimum and maximum bid fields under advanced options are usually left empty. [L0745.029]</p></li>
+<li><p>Set Target ROAS as the bidding strategy once you have 30 or more conversions per month. For alpha, enter the calculated target (for example 3.3×). [L0225.024]</p></li>
+<li><p>Once active, the portfolio strategy takes over individual product and bid adjustments. [L0745.028]</p></li>
+</ul>
+<h3 id="maximize-clicks">Maximize Clicks</h3>
+<ul>
+<li>Do not use Maximize Clicks unless the goal is traffic volume over profitability. [L0225.024]</li>
+<li>Use Manual CPC instead of Maximize Clicks in a new account. [L0746.012]</li>
+</ul>
+<h2 id="shared-budgets-and-limited-by-budget">Shared Budgets and Limited by Budget</h2>
+<h3 id="setting-up-a-shared-budget">Setting Up a Shared Budget</h3>
+<ul>
+<li><p>Procedure (shared budget for alpha and beta):</p>
+<ol type="1">
+<li>In Google Ads, go to Tools &gt; Budgets and bidding &gt; Shared budgets.</li>
+<li>Click the plus icon, name the budget (for example "alpha beta 2026"), check both alpha and beta campaigns, and set the daily budget.</li>
+<li>After assignment, both campaigns show the "shared" budget with the split figure, so total daily spend is divided between them.</li>
+</ol>
+<p>[L0743.021]</p></li>
+<li><p>Create the shared budget as a new object. Do not recreate campaigns. [L0253.020] <em>(older, 2024)</em></p></li>
+<li><p>Set the shared budget to the combined daily budget of the campaigns. Example: $20 for two $10 campaigns. [L0253.020] <em>(older, 2024)</em></p></li>
+<li><p>When two $10 campaigns are added to a new shared budget, Google shows it as $20 per day by default. Click edit on the daily budget and set the total you want, for example $10. Both campaigns then show the split average, about $5 per day each, with the label "shared." [L0743.029]</p></li>
+<li><p>A shared budget stops one campaign from exhausting the daily budget before the other receives impressions. [L0253.020] <em>(older, 2024)</em></p></li>
+<li><p>Use a shared budget for alpha and beta so Google can move spend to where the searches happen. This removes the need to set separate budgets. [L0470.062] <em>(2023)</em></p></li>
+<li><p>Funnel example: a shared budget called "Google Shopping Shared Budget" from the shared library (US$50 per day in the example) serves all three campaigns. [L0742.011] <em>(older, 2021-22)</em></p></li>
+<li><p>A funnel uses one shared daily budget. Budget changes affect every campaign in the funnel at once. [L0744.008] <em>(older, 2021-22)</em></p></li>
+</ul>
+<h3 id="limited-by-budget">Limited by Budget</h3>
+<ul>
+<li><p>In the Campaigns view, the Status column shows "Limited by budget" when a campaign is capped and "Eligible" when it runs normally. The Budget column shows the daily shared budget, for example US$300.00 per day. [L0744.015] <em>(older, 2021-22)</em></p></li>
+<li><p>The status also appears in the header of the ad group view and the search terms view. Check this before reading search term data, because a capped budget changes which campaign receives which terms. [L0744.059] <em>(older, 2021-22)</em></p></li>
+<li><p>"Limited by budget" warnings are common, even for well-performing campaigns. They are not a reason to raise the budget. Raise the shared budget only as performance justifies it. [L0429.072] <em>(older, 2022)</em></p></li>
+<li><p>Why it matters: once a funnel is limited, Google overrides campaign priority settings and sends most traffic to the campaign with the highest bid. That defeats the purpose of the funnel. [L0744.013] <em>(older, 2021-22)</em></p></li>
+<li><p>Letting the shared budget run out daily is one of the most common reasons a shopping funnel stops working as designed. The funnel only works when the budget lasts the whole day. [L0744.014] <em>(older, 2021-22)</em></p></li>
+<li><p>Fix procedure (in this order):</p>
+<ol type="1">
+<li>Check whether the campaigns are profitable against the target cost per sale and target ROAS.</li>
+<li>If they are profitable, increase the shared budget first. Open the Budget explorer icon in the Campaigns view to see Google's recommended daily budget.</li>
+<li>If the budget is not raised, lower bids in the campaigns that drive most clicks, for example from $0.30 to $0.20, so the average CPC lands at $0.20 or below.</li>
+<li>Let the change run for a couple of days and check whether the status returns to Eligible.</li>
+<li>If that is not enough, add more negative keywords to cut the number of search terms the ads can show for.</li>
+</ol>
+<p>[L0744.016] <em>(older, 2021-22)</em></p></li>
+<li><p>Budget explorer: when the status is "Limited by budget," the Budget explorer opens a Change daily budget panel. It lists the current budget (for example US$300.00, current) and a recommended higher budget (for example US$370.00, recommended), with estimated extra weekly clicks and cost for each. Apply saves the chosen amount. Cancel closes the panel without changes. [L0744.058] <em>(older, 2021-22)</em></p></li>
+<li><p>Google's budget explorer recommended raising a $300 daily shared budget to $370. A step of about $70 on a $300 base is a small jump, which the lesson treats as acceptable. [L0744.017] <em>(older, 2021-22)</em></p></li>
+<li><p>A large jump, such as from $300 to $1,000 per day in one step, is significant extra spend. Test before committing to a large increase. [L0744.018] <em>(older, 2021-22)</em></p></li>
+<li><p>If the funnel is profitable and the budget limits it, raise the budget as far as profit allows. Clicks keep coming in at the same cost, so as long as conversion rate holds, more profitable sales follow. [L0744.019] <em>(older, 2021-22)</em></p></li>
+<li><p>Lowering bids reduces the cost of each click and can bring daily spend back under budget. The trade-off is weaker auction position, so some traffic is lost to competitors. [L0744.020] <em>(older, 2021-22)</em></p></li>
+<li><p>Raise the daily budget when it is used up every day, all useful negative keywords are added, and products are getting impressions and clicks. Otherwise, optimise product pages or lower CPC on products that get no clicks. [L0470.016] <em>(2023)</em></p></li>
+<li><p>Raising the daily budget alone will not make a campaign spend more if its bids are limiting it. Bids such as CPC must rise for the extra budget to be used. [L0360.042] <em>(2024)</em></p></li>
+</ul>
+<h2 id="scaling-budgets-gradually">Scaling Budgets Gradually</h2>
+<h3 id="gates-before-scaling">Gates Before Scaling</h3>
+<ul>
+<li>Only increase daily ad budgets after negative keywords are optimised, CPCs are adjusted, and ROAS is consistently at least 10×. [L0193.013]</li>
+<li>Start at $10 to $30 per day and achieve 10× or higher ROAS within two weeks. [L0270.037] <em>(older, 2021)</em></li>
+<li>Scaling a budget that is hitting a ceiling: first confirm the campaign converts and that the budget is fully spent every day. [L0429.038] <em>(older, 2022)</em></li>
+</ul>
+<h3 id="stepping-up">Stepping Up</h3>
+<ul>
+<li><p>Procedure (incremental increase):</p>
+<ol type="1">
+<li>Increase budgets gradually in increments such as $15 → $20 → $30 → $40 → $50.</li>
+<li>After each increase, wait 1 to 2 weeks.</li>
+<li>Review campaign performance.</li>
+<li>Repeat the negative keyword review, CPC adjustment, and budget increase steps.</li>
+<li>Continue until ROAS drops below 10× or diminishing returns appear.</li>
+</ol>
+<p>[L0193.014]</p></li>
+<li><p>Scaling sequence (2021): increase daily budget incrementally, for example $30 → $50 → $70 or more, while monitoring ROAS. Continue monthly increases as long as ROAS stays above 10×. Focus on scaling without reducing profitability. [L0270.037] <em>(older, 2021)</em></p></li>
+<li><p>Scaling best products (2020): set a daily budget for your best products, for example $20 per day. Let it run a few days. If spend rises by 25%, clicks and sales should also rise by about 25%. If so, raise the budget in steps, for example to $25, $30 and then $40 per day, letting each step run for a few days. Stop increasing when profitability falls. [L0551.041] <em>(older, 2020)</em></p></li>
+<li><p>Scaling a budget that hits a ceiling (2022): raise the daily budget modestly, for example from $35 to $45 or $50 per day. Wait one to two weeks and check results. [L0429.038] <em>(older, 2022)</em></p></li>
+<li><p>Consider adding Microsoft Ads only after Google spend is close to maxed out. [L0429.038] <em>(older, 2022)</em></p></li>
+<li><p>Increase Google Ads budgets faster than Facebook budgets, because Google's search volume can absorb larger jumps. Doubling a Google budget can roughly double results, though this is not guaranteed. [L0247.053] <em>(older, 2021)</em></p></li>
+<li><p>Monthly spend cap: a Shopping campaign's daily budget caps monthly spend at the daily budget multiplied by the average number of days in a month. On individual days the campaign may spend less than the daily budget or up to twice as much. [L0742.037] <em>(older, 2021-22)</em></p></li>
+</ul>
+<h3 id="stopping">Stopping</h3>
+<ul>
+<li>Stop scaling when ROAS drops below 10× or diminishing returns appear. Pivot to other traffic sources instead of continuing to increase spend. [L0193.015]</li>
+</ul>
+<h2 id="impression-share-and-click-share">Impression Share and Click Share</h2>
+<h3 id="metrics">Metrics</h3>
+<ul>
+<li>Search Impression Share (SIS) is the percentage of relevant searches where your ad appears. [L0299.014]</li>
+<li>Absolute impression share is checked separately to identify remaining opportunities. [L0274.049, L0274.064]</li>
+<li>Click share shows how often a visible ad gets the click. [L0274.014, L0274.064]</li>
+<li>Search lost impression share due to rank (around 30% in the example) signals whether to raise bids to capture those impressions or lower bids to improve click-through rate and ROAS. [L0745.006]</li>
+<li>Search lost rank is read per product in the product view of Google Ads. [L0360.038] <em>(2024)</em></li>
+</ul>
+<h3 id="reading-the-signals">Reading the Signals</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Interpretation</th>
+<th>Action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High ROAS, low impression share</td>
+<td>Profitable traffic is missed</td>
+<td>Increase CPC</td>
+<td>[L0193.011]</td>
+</tr>
+<tr>
+<td>High spend, no conversions</td>
+<td>Budget is being wasted</td>
+<td>Lower CPC</td>
+<td>[L0193.011]</td>
+</tr>
+<tr>
+<td>No clicks, low impression share</td>
+<td>Demand is unknown</td>
+<td>Raise CPC slightly to test demand</td>
+<td>[L0193.011]</td>
+</tr>
+<tr>
+<td>Impression share 97%, click share 65%</td>
+<td>Visible but lower-ranked</td>
+<td>Increase CPC cautiously</td>
+<td>[L0274.014]</td>
+</tr>
+<tr>
+<td>Impression share 85% to 97%, click share under 65%</td>
+<td>Visible but ranked lower than competitors</td>
+<td>Check absolute impression share, then raise CPC by 10 cents to reach higher positions</td>
+<td>[L0274.064]</td>
+</tr>
+<tr>
+<td>Impression share 85% to 97% with gaps</td>
+<td>Remaining inventory not captured</td>
+<td>Check absolute impression share; if campaign is profitable, raise CPC by 10 cents</td>
+<td>[L0274.049]</td>
+</tr>
+<tr>
+<td>Search impression share under 10%, high click count</td>
+<td>Keywords too broad or bids too low</td>
+<td>Review search term report, add irrelevant broad terms as negatives, then raise CPC on targeted keywords</td>
+<td>[L0274.048]</td>
+</tr>
+<tr>
+<td>High search lost rank for a product</td>
+<td>Product ranks too low</td>
+<td>Raise CPC (fast); product page SEO helps but acts more slowly</td>
+<td>[L0360.038]</td>
+</tr>
+<tr>
+<td>230 products, 50 with impressions, 7 with clicks</td>
+<td>Low-impression products likely need higher bids</td>
+<td>Test higher CPC on top 20% of valuable products first</td>
+<td>[L0274.056]</td>
+</tr>
+<tr>
+<td>Sales below target cost per sale</td>
+<td>Bids may need raising</td>
+<td>Raise bids only for those products. Low impression share alone is not a reason</td>
+<td>[L0744.045]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>A bid increase only stays profitable if conversion rate rises by the same factor. Otherwise cost per sale rises, and when more traffic comes in, conversion rate often falls for a while. [L0744.046] <em>(older, 2021-22)</em></li>
+<li>Judge bid competitiveness by search impression share, not by benchmark max CPC. [L0744.048] <em>(older, 2021-22)</em></li>
+</ul>
+<h2 id="benchmarks-and-competitor-signals">Benchmarks and Competitor Signals</h2>
+<ul>
+<li><p>Google's suggested CPC benchmarks are typically higher than actual market rates. Do not use them as targets. Adjust bids dynamically based on your own impression and conversion data. [L0251.034] <em>(2023)</em></p></li>
+<li><p>Benchmark max CPC is a column in the Product groups view, not in the Ad groups view. It does not appear when an ad group has too few impressions or too few competing bids on similar products. It is estimated from similar auctions and products that may include brands the store does not sell. [L0744.057] <em>(older, 2021-22)</em></p></li>
+<li><p>If no paid ads show above the gray line in Google Shopping for a keyword, cheap clicks may be available. First confirm it is not a glitch by checking whether ads appear for other, broader searches. [L0469.080] <em>(older, 2021)</em></p></li>
+<li><p>Competitor check procedure <em>(older, 2019)</em>:</p>
+<ol type="1">
+<li>Search for the products that get impressions, in an incognito Google window, as a customer would.</li>
+<li>Find what competitors show that you do not, such as free shipping.</li>
+<li>Model those differences on your store.</li>
+<li>Only if your listing already matches, adjust the bids: raise the maximum bid by about 10% and wait a few days before changing it again.</li>
+</ol>
+<p>[L0663.068]</p></li>
+</ul>
+<h2 id="mistakes-to-avoid">Mistakes to Avoid</h2>
+<ul>
+<li>Raising budgets and bids right after launch, before products are approved. [L0247.051]</li>
+<li>Bidding the same amount on products with very different conversion rates and ROAS. [L0299.006, L0503.013]</li>
+<li>Doubling all bids at once. Raise in measured steps. [L0466.030]</li>
+<li>Making major bid or pausing decisions on fewer than 100 clicks. [L0299.007]</li>
+<li>Raising bids on the assumption that extra traffic will convert better. Check profitability at the actual conversion rate first. [L0686.013] <em>(older, 2021-22)</em></li>
+<li>Raising bids without checking profitability. Stores that struggle with profit usually pay too much per click, and the fix is to reduce bids. [L0744.047] <em>(older, 2021-22)</em></li>
+<li>Pausing a weak keyword before adjusting its bid. [L0454.001, L0454.002]</li>
+<li>Letting the shared budget run out daily. [L0744.014] <em>(older, 2021-22)</em></li>
+<li>Raising the budget only because the status shows "Limited by budget." [L0429.072] <em>(older, 2022)</em></li>
+<li>Using Maximize Clicks for profit-focused campaigns. [L0225.024]</li>
+<li>Using accelerated delivery, which may exhaust the budget before the day ends. [L0225.019]</li>
+<li>Setting the CPC limit too low at launch. [L0551.080] <em>(older, 2020)</em></li>
+<li>Using benchmark max CPC as a target. [L0251.034, L0744.048]</li>
+<li>Turning on automated bidding before the conversion threshold is met. [L0245.017, L0225.018, L0454.020]</li>
+</ul>
+<h2 id="campaign-structure-and-bid-levels">Campaign structure and bid levels</h2>
+<ul>
+<li><em>Older (2021-22):</em> A Google Shopping campaign is layered as campaign, ad group, product group and individual product. Bids can be set at ad group, product group or individual product level, and a bid on a lower level overrides the ad group bid. Product group and individual product bids therefore always take priority over ad group bids. [L0747.001]</li>
+<li><em>Older (2021-22):</em> The ideal setup is one bid per product, which requires every product to be identifiable inside the campaigns. Products differ in sale price and profit margin, so paying more per click for one product than another can be justified, and the structure must make that easy to do. [L0747.002]</li>
+<li>Within one product group, all products share the same bidding strategy, so automated bidding cannot be set differently inside a single group. If products need different bids, split them into separate product groups or ad groups. [L1033.004]</li>
+<li>Do not exclude product variants from Google Shopping by default. Adjust bids per product instead, unless the product is already proven not to convert. [L1094.036]</li>
+<li>Give a handful of products with the biggest opportunity a higher CPC, and keep products you want in free listings without funding ads at one cent. This focuses paid spend on the best products. [L0934.038]</li>
+<li>Set higher max CPC on a few high-potential products while the rest keep the default, so budget flows to the products most likely to sell. [L1112.021]</li>
+<li>To prioritise specific products, open the product group view, edit the CPC box for those product groups, and raise them. For example, raise the top three products from the 50 cent default to 75 cents. [L1279.063]</li>
+<li><em>Older (2021-22):</em> Max CPC is a ceiling, not a fixed price. With a 1 dollar CPC and a 10 dollar daily budget you get at most about 10 clicks per day across all products, not 10 different products. Check the historical actual cost per click in Google Ads, because it differs per product. [L1112.001]</li>
+<li>Stopping a product: open the product groups (products are set as individual product groups), find the product and set its cost per click (CPC) to 0 cents. [L0854.046]</li>
+<li>As an alternative to excluding products in the feed, open the product groups of each Shopping campaign (for example alpha and beta), find all products under $200, and set their max CPC to $0 or $0.01. Clicks on them then cost almost nothing, so they do not consume the budget. [L0748.009]</li>
+</ul>
+<h2 id="shared-budgets">Shared budgets</h2>
+<ol type="1">
+<li>Before building Google Shopping campaigns, go to Tools and Settings, then under Shared Library open Shared budgets. [L0749.001]</li>
+<li>Click the blue circle with the plus sign to start a new one. [L0749.001]</li>
+<li>In the New shared budget form, fill in Budget name (e.g. 'Google Shopping Shared Budget') and the average amount to spend each day in the amount field, then click SAVE. [L0749.002]</li>
+<li>"Add to campaign(s)" is optional and can be left empty at creation. [L0749.002]</li>
+</ol>
+<ul>
+<li>A shared budget is one campaign budget that several campaigns can draw from at the same time, so each shared budget must be large enough to cover all campaigns linked to it. [L0749.003]</li>
+<li>The shared budget amount should reflect the total you are willing to spend per day across all your Google Shopping campaigns, since it covers them together. [L0749.009]</li>
+<li><em>Older (2021-22):</em> Example: a starting value of $50 per day, saved as 'Google Shopping Shared Budget'. The new budget appears in the shared budget list, with the confirmation "Your shared budget was created". [L0749.008]</li>
+<li>Tools and Settings &gt; Shared Library is the hub for reusable account assets. Besides shared budgets it lists Audience manager, Bid strategies, Negative keyword lists, Location groups and Placement exclusion lists, so the same asset can be reused across campaigns. [L0749.010]</li>
+<li>The daily amount for a shared budget is an average, not a hard cap per day. Actual daily spend may vary, so some days spend more or less than the set figure, and the budget should be judged over a longer period. [L0749.011]</li>
+<li>Use a shared budget for alpha and beta campaigns so the budget is split evenly even when one supplier's products draw more traffic. This avoids creating new campaigns just to balance spend. [L0856.019]</li>
+<li>Do not balance traffic by adding multiple negative keywords one by one across campaigns. Use a shared budget so each campaign gets an even split. [L0856.021]</li>
+<li>Use one shared budget across the Alpha and Beta campaigns, for example $33 per day total. Do not split it evenly into $16.50 each, because Google then allocates spend to where results are best. [L1068.057]</li>
+<li>Combine the alpha and beta campaign budgets into one shared budget equal to their sum. For example, two campaigns at 10 USD per day each become one shared budget of 20 USD per day, linked to both campaigns. [L1090.085]</li>
+<li>When one alpha or beta campaign runs out of budget early in the day, its search terms move to the other campaign. A shared budget keeps both campaigns running until the same point of the day, which reduces this leakage. [L1090.086]</li>
+<li>If a campaign budget runs out every day, set a shared budget across alpha and beta so spend is not wasted on one campaign while the other is starved. [L0970.113]</li>
+<li>For a single alpha and beta pair, use one shared budget, because shared budgets let the campaigns use the full daily budget together. If each alpha/beta group has its own tier, give each group its own shared budget. [L1115.041]</li>
+<li>Giving one alpha and beta pair two separate budgets can cause one campaign to use the whole daily budget early in the day. The lower-priority campaign then stops showing ads for the rest of the day, so one shared budget is usually safer for one pair. [L1115.101]</li>
+<li><em>Older (2021-22):</em> Shared budget in use: a campaign with a daily budget of 20 USD, getting no traffic, combined with a second campaign into one shared 40 USD budget. No new campaigns are needed, and the platform splits the spend. [L1281.099]</li>
+</ul>
+<p>Fixing a campaign that gets no traffic when two campaigns share a budget:</p>
+<ol type="1">
+<li>Check whether one campaign spends its full daily budget while the other gets nothing. [L1281.099]</li>
+<li>Set both campaigns to share a single budget, such as two $20 budgets becoming one shared $40 budget. [L1281.099]</li>
+<li>No new campaigns are needed, and the platform splits the spend. [L1281.099]</li>
+</ol>
+<p>When two campaigns, such as alpha and beta, each have a set daily budget but only part of it is spent:</p>
+<ol type="1">
+<li>Raise the cost per click on the campaign that is underspending. [L1092.061]</li>
+<li>Consider a shared budget instead, for example combining two 20 USD daily budgets into a 40 USD shared budget, or two 10 USD budgets into a 20 USD shared budget. [L1092.061]</li>
+</ol>
+<h2 id="starting-bids-and-the-inch-up-method">Starting bids and the inch-up method</h2>
+<p>Starting bids and the first weeks:</p>
+<ol type="1">
+<li>Start with a bid of $0.20. [L1341.011]</li>
+<li>Check the clicks the next day. [L1341.011]</li>
+<li>If fewer than 100 clicks per week are on pace, raise the bid by $0.10. [L1341.011]</li>
+<li>Check again whether the campaign is on pace for 100 clicks per week. [L1341.011]</li>
+<li>If not, raise the bid a little further and check again. [L1341.011]</li>
+<li>Repeat every week until the Shopping campaign gets about 100 clicks per week. [L1341.011]</li>
+</ol>
+<p>At a 1% conversion rate, 100 clicks per week should bring about one conversion per week. Whether this is acceptable depends on the site's economics, which may work at 0.5% or fail at 2%. [L1341.011]</p>
+<p>Inch-up method for raising Shopping bids (about 20% per step):</p>
+<ol type="1">
+<li>Raise the CPC by about 20 percent (for example 10 cents to 12 cents, 25 cents to 30 cents). [L0856.007]</li>
+<li>Let it run for a few days. [L0856.007]</li>
+<li>If performance holds or improves, raise again by about 20 percent. [L0856.007]</li>
+<li>If the same or fewer sales come in for more money, step back one increment and keep that bid. [L0856.007]</li>
+<li>Do not double bids, because Google will spend the extra budget on whatever traffic exists and the bid will likely be overpaid. [L0856.007]</li>
+</ol>
+<ul>
+<li>The inch-up method raises bids and daily budgets gradually, not in large jumps like tripling. Keep increasing while you maintain a positive return on ad spend, until you reach your maximum spend per sale. [L1274.056]</li>
+<li><em>Older (2018):</em> Do not double your bids or budget at once to spend more quickly. This skips finding the efficient level and can spend the whole budget with poor results. [L1109.052]</li>
+<li>Google Shopping CPC change: increase by about 20 percent, for example from 10 cents to 12 cents. [L0856.026]</li>
+<li>Sample: 50 cents raised by 20 percent becomes 60 cents, and it runs for a few days to check the effect. [L0856.027]</li>
+<li>Google Shopping campaign budgets and CPC bids should be changed by about 20 percent at a time. The goal is the highest spend that still reaches target ROAS, not the highest traffic. [L0856.022]</li>
+<li>Set bids by increasing them slowly until the sweet spot is found. Google's suggested bids often cause overpaying for traffic that can be bought for much less. [L0963.016]</li>
+<li><em>Older (2018):</em> If an alpha campaign has a daily budget that is not fully spent, raise bids by about 20% step by step. If the budget is spent every day, raise the daily budget to collect more data and clicks. [L1274.057]</li>
+<li><em>Older (2018):</em> If only about 10% of a daily budget is being spent, your bids are far too low. Raise bids more aggressively, for example to $0.75 and $0.50 in the call's example, and review after a few days. [L1274.058]</li>
+<li><em>Older (2019):</em> If the budget goes unspent because products get few impressions, keep the daily budget unchanged and raise the cost-per-click bid gradually, about 10% per day. Keep watching return on ad spend while you do this. [L1002.046]</li>
+<li><em>Older (2019):</em> When click-through rate is very low, keep raising bids in small steps, such as from 20 cents to 25 cents. Audit keywords every day and raise the budget only slightly, about 10%, while checking whether spend increases and better keywords appear. [L1002.047]</li>
+<li><em>Older (2019):</em> To grow traffic on a working campaign, raise the cost-per-click bid in small steps, for example from $0.25 to $0.30 the next day, and measure how much more traffic results. Raise the daily budget only when the campaign keeps spending its full daily budget and the traffic quality is still good. [L1086.017]</li>
+<li>Raise the default cost per click in small steps when impressions stay low, for example from 40 to 45 cents. Wait a few days and check the results. If impressions remain low, move up again, for example to 50 cents. [L0803.041]</li>
+<li><em>Older (2021-22):</em> To raise the default cost per click in a Google Shopping campaign that gets too few clicks: wait at least a few days after any change before judging the result. If clicks still lag, raise in small steps, such as from 35 cents to 45 cents. Wait 3 to 5 days after each step before raising again. [L0853.051]</li>
+<li>When a campaign gets very few clicks, raise the cost per click (CPC) by about 50 cents and let the change run for one week before judging the result. [L0836.024]</li>
+<li>Only raise a CPC when the campaign is not spending. Raise it slowly, for example from 50 cents to 65 cents, then 75 cents, and wait a few days between steps. [L0804.074]</li>
+<li>When a store gets very little spend but has few visitors, increasing the cost-per-click bid is the first step, so that more traffic arrives and data can build. [L0855.014]</li>
+<li><em>Older (2021-22):</em> Increasing bids for products that get too few clicks: keep the daily budget unchanged, raise the max CPC for those products by a small step such as 5 cents (for example from 15 cents to 20 cents), wait about three days, and if impressions are still low, raise it again by a similar amount. [L0962.059]</li>
+<li><em>Older (2021-22):</em> Do not double the CPC or raise it sharply because a platform support rep suggests it. If a product already gets clicks at a lower CPC, increase the bid only in small steps. [L0962.060]</li>
+<li><em>Older (2019):</em> Google's estimated cost-per-click refers to search text ads and does not carry over to Shopping campaigns. Keep Shopping targeting to product names, brand names and SKU numbers, and never bid close to a high keyword estimate. [L1086.018]</li>
+</ul>
+<h2 id="bid-formulas-and-cpa-targets">Bid formulas and CPA targets</h2>
+<p>Worked example for the generic term 'men's sunglasses' with a 0.5% conversion rate, a 200 USD cart value and 1,000 clicks: a 0.25 USD bid costs 250 USD and returns 1,000 USD (about 4x), while a 1.50 USD bid costs 1,500 USD for the same 1,000 USD and loses money. [L1328.005]</p>
+<ul>
+<li>Before setting bids you need a target cost per acquisition (CPA) for each product and its current CPA. CPA is the ad spend needed to produce one sale. The gap between current and target tells you how much to raise or lower the bid. [L1328.013]</li>
+<li>Setting bids once and never adjusting them wastes budget, because low-converting products keep drawing expensive clicks. Review bids against a target CPA using real data. [L1328.012]</li>
+<li>Bid modifier = (target CPA / current CPA) - 1. A negative result means a bid reduction of that percentage. Examples: current CPA 50 with target 25 gives -50%; current CPA 4 with target 2 gives -50%; current CPA 135 with target 50 gives about -63%. [L1328.016]</li>
+<li>Apply the modifier to the current max CPC: new max CPC = current max CPC x (1 + modifier). A modifier of -50% halves the bid and +50% raises it by half. Calculate the modifier first, then enter the resulting bid in the campaign. [L1328.038]</li>
+<li>Mobile and time-of-day bid adjustments use the same calculation: take the CPA for that segment (mobile, or a specific day), divide your target CPA by it and subtract one. The result is the bid modifier for that segment. [L1328.017]</li>
+<li>Limit any single bid change to about 50%, even if the calculation suggests more, such as a 101% increase. Make the rest of the change after more data has come in, so the decision rests on a statistically meaningful sample. [L1328.020]</li>
+<li>Keep the target CPA for every product in one spreadsheet in a fixed order, so the bid calculation runs consistently each time. Products with different margins will have different targets. [L1328.021]</li>
+<li>Daily budget for a target number of clicks equals the average CPC over about seven days multiplied by the target clicks. For example, an average CPC of $1.00 with a target of 100 clicks needs a daily budget of about $100. [L1114.057]</li>
+</ul>
+<p>Optimise product bids in a spreadsheet:</p>
+<ol type="1">
+<li>In the Shopping campaign, open the product groups tab and click the download tab to export the data. [L1328.018]</li>
+<li>Open the file in Excel or Google Sheets and check the columns campaign, ad group, product group, partition type, max CPC and cost per conversion. [L1328.018]</li>
+<li>Add a column with your target CPA for each product. [L1328.018]</li>
+<li>Enter the formula target CPA / current CPA - 1 in the first row, then drag it down to all products. [L1328.018]</li>
+<li>Apply the resulting bid changes to the campaign. [L1328.018]</li>
+</ol>
+<ul>
+<li>AdWords Editor imports hundreds of bid changes at once, which is faster than editing products one by one in the interface. Use it after you have calculated the bid changes in the spreadsheet. [L1328.022]</li>
+<li>AdWords rules and scripts generally cannot be applied to product listing ad campaigns, although they work for text ads. For bulk changes to Shopping campaigns, the Optimizer tool or the spreadsheet method (free) were the options named. [L1328.024]</li>
+</ul>
+<h2 id="return-and-impression-share-thresholds">Return and impression share thresholds</h2>
+<p>Metrics and rules for judging a product:</p>
+<ul>
+<li>The main decision metric for raising or lowering bids is return on ad spend (ROAS = conversion value divided by cost). Compare the ROAS of each product or keyword against the minimum ROAS the business needs, and use it rather than click counts. [L0856.008]</li>
+<li>Judge a Google Shopping product by ROAS, not by a fixed number of conversions. A ROAS above 10x marks a winner even with only one or two sales, so do not remove a product just because it has few conversions yet. [L0856.001]</li>
+<li>In Google Ads, bidding has the largest influence on ROAS, so optimisation effort should start there. [L1033.001]</li>
+<li>If a store gets good traffic and some conversions but ROAS is too low for profit, the cost per click is likely too high. Bid less and accept less traffic in exchange for profitable sales. Dropshipping margins need a much higher ROAS than many other e-commerce models. [L1456.009]</li>
+<li>Use campaign or ad group ROAS to decide bids: where ROAS beats target, raise bids to gain volume; where ROAS is far below target, cut weak spend or lower bids. In the example, an ad group at about 1.63 ROAS was the clear laggard against ad groups at about 4.15 and 6.2, and the threshold for lowering bids was a ROAS under 2.75. [L1236.010]</li>
+<li>Use a high-ROAS keyword to raise its product's CPC:
+<ol type="1">
+<li>Open the keyword report in the campaign. [L0856.009]</li>
+<li>Add the columns cost, CPC and conversion value (revenue), and compute ROAS as conversion value divided by cost. [L0856.009]</li>
+<li>For keywords well above the minimum ROAS (for example 20x against a 10x target), increase the CPC of the matching product by about 20 percent (for example 50 cents to 60 cents). [L0856.009]</li>
+<li>Let it run a few days and check traffic and conversion rate. [L0856.009]</li>
+<li>Keep stepping up in small increments to find the sweet spot. [L0856.009]</li>
+</ol></li>
+<li>Search Impression Share procedure:
+<ol type="1">
+<li>In the Google Ads dashboard, add the column Search Impression Share. [L0836.021]</li>
+<li>Identify a profitable product with a ROAS around 15x that has low impression share (for example 30%). [L0836.021]</li>
+<li>Raise the CPC (for example from 1 USD to 1.25 USD), run it for one week, and check ROAS and impression share again. [L0836.021]</li>
+<li>Keep raising the CPC step by step while ROAS stays healthy. In the example, 1.50 USD gave about 70% impression share with ROAS of 13x, and 2 USD dropped ROAS to 8x. [L0836.021]</li>
+<li>Step back to the level that gives a healthy impression share and an acceptable ROAS. [L0836.021]</li>
+<li>Do not decide overnight. Collect a sufficient sample first, since high-ticket campaigns often get fewer than hundreds of clicks per day. [L0836.021]</li>
+</ol></li>
+<li>Search Impression Share target for Google Shopping is above 10%, provided ROAS stays positive. [L0836.022]</li>
+<li>Bidding test: raise the CPC from 1 USD to 1.50 USD, then to 2 USD if needed, and monitor ROAS after each change. [L0836.025]</li>
+<li>Impression share is the share of available impressions you capture. Check it in the campaign data before deciding that a product's visibility is limited. [L0962.062]</li>
+<li><em>Older (2021-22):</em> Increase a product's bid when it has a strong return on ad spend but limited impression share because budget or bid position caps its visibility. [L0962.062]</li>
+<li><em>Older (2021-22):</em> A product with very low impressions and clicks can be pushed with small bid increases, while a product with strong sales and ROAS can be scaled through higher bids. [L0962.063]</li>
+<li>Click-through rate on Google Shopping depends on the search and the position among the competing ads. Track cost per click and aim to be near the top of the results to get more clicks. [L0801.060]</li>
+</ul>
+<p>The threshold table below lists every ROAS, impression-share and spend figure in this section. Where sources differ, each row states when it applies.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Threshold</th>
+<th>When it applies</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product is a winner</td>
+<td>ROAS above 10x, even with 1-2 sales</td>
+<td>Source A's store, 10x target</td>
+<td>[L0856.001]</td>
+</tr>
+<tr>
+<td>Raise a product's CPC</td>
+<td>ROAS above 10X and impression share below 70%</td>
+<td>Re-check after about one week</td>
+<td>[L0750.015]</td>
+</tr>
+<tr>
+<td>Raise the daily budget</td>
+<td>ROAS 10x or higher and budget maxed every day</td>
+<td>Campaigns that are fully dialled in</td>
+<td>[L0941.066]</td>
+</tr>
+<tr>
+<td>Lower bids on an ad group</td>
+<td>ROAS below 2.75</td>
+<td>Ad group well below target ROAS</td>
+<td>[L1236.010]</td>
+</tr>
+<tr>
+<td>Impression share target</td>
+<td>Above 10%, provided ROAS stays positive</td>
+<td>Standing target for Shopping</td>
+<td>[L0836.022]</td>
+</tr>
+<tr>
+<td>Impression share example</td>
+<td>About 70% at ROAS 13x (1.50 USD bid)</td>
+<td>Example case, 2 USD dropped ROAS to 8x</td>
+<td>[L0836.021]</td>
+</tr>
+<tr>
+<td>Dropshipping ROAS</td>
+<td>"Much higher" than other e-commerce models</td>
+<td>Break-even depends on margin</td>
+<td>[L1456.009]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Note: the 10x figure is a benchmark from one store, while the dropshipping source says margins need a much higher ROAS. Use the minimum ROAS your own margins require (see [L0856.008]) rather than 10x.</p>
+<h2 id="decisions-on-products-without-sales">Decisions on products without sales</h2>
+<ul>
+<li>Products without sales yet can stay in the feed at a very low bid, for example one cent, until they reach about 100 unique clicks. Only remove products that you do not want to sell. [L0804.073]</li>
+<li>For products with zero conversions, first look at a longer date range, because some items sell only every few months. If they still have no sales, pause them or set a very low bid, such as 0.10 USD, and collect more data. [L1328.019]</li>
+<li>Lower CPC on products that have spent at least 50 without a conversion, even down to one cent, so the budget flows toward products that have already converted. [L0941.065]</li>
+<li>When a product has at least 100 clicks from Google Shopping and no sales, review its product page and the top two or three competitor results before reducing its cost per click or removing it. Cut waste by adding negative keywords. [L1113.059]</li>
+<li>A product that receives 200 unique clicks in Google Ads without conversions, even after a competitor comparison and page optimisation, should have its cost per click reduced to limit its spend. [L1092.064]</li>
+<li>Products that cost money but do not convert: lower the default CPC instead of removing them (example: 0.50 to 0.30). Test lower bids for a few days and see whether the product becomes profitable. [L0969.059]</li>
+<li>If a product gets many clicks and a high impression share but no conversions, first check the product page conversion elements in the store, then lower its max CPC so it does not take budget. [L0750.015]</li>
+<li>Lower the CPC on products that spend money but do not sell, and keep it higher on high-profit products or products that already convert. This directs more of the daily budget to the products that earn a return. [L1094.026]</li>
+<li>Lowering the bid on an unprofitable product does not stop its traffic entirely. It moves budget toward proven products and can make the remaining sales profitable. [L0970.115]</li>
+<li><em>Older (2019):</em> Lowering Google Shopping bids without optimising the product catalog and negative keywords can lead to traffic that does not convert. Lower bids should go together with catalog and campaign optimisation. [L0960.051]</li>
+<li>A high cost per click is not automatically a problem, because some clicks may convert profitably. Analyse spend by keyword and product before cutting bids or budgets. [L1116.032]</li>
+</ul>
+<h2 id="low-visibility-and-zero-click-products">Low-visibility and zero-click products</h2>
+<ul>
+<li>A product with fewer than 100 impressions after a few weeks in campaign should have its CPC raised to get Google to show it. Products with over 100 impressions are judged by click-through rate and conversions before changing bids. [L1094.027]</li>
+<li>Example: a store with 100 products where 40 get under 50 impressions after a month should increase CPC for those 40 products. The aim is to give them enough exposure to get data. [L1094.028]</li>
+<li>For products over 100 impressions, raise the bid when click-through rate and conversions are good, and lower the bid when clicks cost money without sales. Make the decision separately for alpha and beta campaigns. [L1094.029]</li>
+<li>Products with very low impressions can get more visibility by raising their target cost per click. [L1113.060]</li>
+<li><em>Older (2018)?</em> Not used. [-]</li>
+</ul>
+<p>Inching up bids for products with no impressions:</p>
+<ol type="1">
+<li>Do not raise all campaign bids at once. [L1114.052]</li>
+<li>Open the product groups in the Alpha campaign and select only the products with no impressions. [L1114.052]</li>
+<li>Raise each one from its current CPC by a small step, for example from $1.70 to $1.95 or $2.00. [L1114.052]</li>
+<li>Let it run for one week. [L1114.052]</li>
+<li>If impressions are still missing, raise it in small steps again. [L1114.052]</li>
+</ol>
+<ul>
+<li>Raising all bids from $1.70 to $3.00 at once can overspend on products that already convert and does not fix the real cause of missing impressions. Missing impressions can come from low search demand, weak relevance or too much competition, so check these first. [L1114.053]</li>
+<li>A Shopping product with a high bid spends at the level the traffic supports, so a high bid on a product with a lot of search demand will spend heavily. Bids should therefore be inched up rather than raised sharply. [L1114.055]</li>
+<li><em>Older (2021-22):</em> Products with very low impressions and clicks can be pushed with small bid increases. [L0962.063]</li>
+</ul>
+<p>Raising bids for products with no clicks:</p>
+<ol type="1">
+<li>Keep high-performing products (over 50 clicks, profitable) at current bids or raise them. [L0969.060]</li>
+<li>Raise CPC on zero-click products in small steps (for example 0.50 to 0.60, then 0.65) and wait a few days each time. [L0969.060]</li>
+<li>Do the same with products under 10 clicks, moving up more slowly (for example 0.55, then 0.60). [L0969.060]</li>
+<li>Then decide budget changes based on results. [L0969.060]</li>
+</ol>
+<ul>
+<li>Raising the total daily budget on a campaign usually sends most of the extra money to products that already get clicks, so zero-click products stay at zero. To give them traffic, raise their cost per click in small steps and wait a few days after each step. Only then decide on budget changes. [L0969.111]</li>
+</ul>
+<p>Pushing sales on products that get few clicks:</p>
+<ol type="1">
+<li>Keep the CPC on the top-clicking product at its current level, such as 50 cents. [L0941.064]</li>
+<li>Raise the CPC on the other products, such as to 60 cents. [L0941.064]</li>
+<li>Wait a few days and check the results. [L0941.064]</li>
+<li>Keep raising CPC until those products start spending and the daily budget is used up. [L0941.064]</li>
+<li>Only then increase the daily budget. [L0941.064]</li>
+</ol>
+<ul>
+<li>Raise a converting product's traffic: find the keyword and product behind the first sale in Google Ads, check whether impressions and clicks are low for it, and if so, raise the default cost per click for that product in Google Shopping, since it has already converted. [L0963.017]</li>
+<li><em>Older (2022):</em> Keep the same one to two weekly sales while lowering spend. [L0804.070], see the cutting section below.</li>
+</ul>
+<h2 id="bid-adjustments-on-converting-products">Bid adjustments on converting products</h2>
+<ul>
+<li>Bid adjustments tell Google to bid less for products that do not convert and more for products that earn the most. This concentrates the budget on items that make money. [L0750.016]</li>
+<li>Example: a product with a return on ad spend of 20 but a search impression share of 30% is profitable and under-shown. Raise its max CPC from $0.40 to $0.50, then check again one week later. [L0750.017]</li>
+<li>Adjust max CPC per product in Google Shopping:
+<ol type="1">
+<li>Go to Campaigns, open the alpha campaign, click Ad groups, and open the alpha ad group to see the product groups. [L0750.015]</li>
+<li>Product groups are subdivided per product. Each product starts with the same max CPC of $0.40. [L0750.015]</li>
+<li>Review each product's clicks, cost, conversion value, return on ad spend and search impression share, ideally every one to two weeks. [L0750.015]</li>
+<li>If the return is above 10X and the search impression share is below 70%, raise the max CPC for that product (for example from $0.40 to $0.50), then re-check after about one week. [L0750.015]</li>
+<li>Keep raising the max CPC in weekly steps while the return stays above 10X and the impression share stays below 70%, until the spend limit is reached or the return drops. [L0750.015]</li>
+<li>If a product gets many clicks and a high impression share but no conversions, first check the product page conversion elements in the store, then lower its max CPC so it does not take budget. [L0750.015]</li>
+<li>If a product has a low impression share (for example 20%) and no clicks, raise its max CPC to make it visible and test whether it sells. [L0750.015]</li>
+<li>Repeat the same steps in the beta ad group. [L0750.015]</li>
+</ol></li>
+<li>The Benchmarks max CPC column shows the bid Google suggests, which is always higher than what a product needs. Do not use it to set your own max CPC. It can be removed from the product group columns. [L0750.029]</li>
+<li>Google Shopping placement depends on both bid and relevance, so a highly relevant campaign can get cheaper clicks even at lower bids. Relevance is improved through negative keywords and a well-optimised product catalog. [L0960.049]</li>
+<li><em>Older (2019):</em> Optimising Google Shopping before lowering bids: add negative keywords to block irrelevant search terms; optimise the product catalog so each product is described clearly; lower bids if high bids did not convert, and keep monitoring. Review campaigns at least every other week, and probably weekly when you are first starting. [L0960.050]</li>
+</ul>
+<p>Cutting cost on an underperforming supplier:</p>
+<ol type="1">
+<li>Open the product groups view inside Google Ads that shows each product's cost per click. [L0834.066]</li>
+<li>Lower the CPC for only the underperforming supplier's products, leaving the default CPC for alpha and beta unchanged. [L0834.066]</li>
+<li>Set the reduction based on profitability. If a supplier costs $1 to make $5 in sales, halve its CPC to reach $0.50 per $5. [L0834.066]</li>
+<li>Optionally, split the supplier into its own campaign (e.g. alpha beta two) and keep other suppliers in the original campaign. [L0834.066]</li>
+</ol>
+<ul>
+<li>Google Ads spend should go toward clicks that are likely to convert, especially at the start. Optimise around keywords that bring quality clicks and products that sell at specific price points. [L0835.059]</li>
+</ul>
+<h2 id="reducing-spend-and-scaling-winners">Reducing spend and scaling winners</h2>
+<p>Case: after raising bids, daily traffic rose from 2 to 3 visitors to the point of hitting the daily budget. One product had over 800 views and no sales and consumed much of the budget. Actions: add negative keywords for window-shopper terms, use exact or phrase match for niche keywords, and lower the CPC for only that product (for example from 50 cents to 30 cents) while other products keep the default CPC, so spend shifts to them. [L0803.039]</p>
+<ul>
+<li>To control spend per product, open the Shopping campaign, break down the results by product ID, and lower the CPC for that individual product instead of the whole campaign. [L0803.040]</li>
+<li>Lowering the CPC on a product that takes many impressions but matters little to you moves budget to your other products. For example, if 800 of 1,000 impressions go to one product you do not care about, reduce its bid so Google shifts budget elsewhere. [L0801.062]</li>
+</ul>
+<p>Cutting a Google Shopping budget without losing sales:</p>
+<ol type="1">
+<li>Review keywords for impressions, clicks, CPC and sales. [L0804.069]</li>
+<li>Add keywords that bring clicks but no sales and are unrelated as negatives. [L0804.069]</li>
+<li>Review product groups and find the top spenders, about 30% of budget. [L0804.069]</li>
+<li>Lower CPC on high-spend, low-conversion product groups without removing them from the feed. [L0804.069]</li>
+<li>Raise CPC on product groups that are selling if you want more volume. [L0804.069]</li>
+</ol>
+<p>Case: a new store spent $45 per day on Google ads and made one to two sales per week, and wanted to cut to $30 per day. The fix was to review the keyword list, add unrelated no-sale keywords as negatives to remove waste, and lower CPC on high-spend product groups that did not sell. The goal was to keep the same one to two weekly sales while dropping about $15 of daily waste, and then to scale the winners. [L0804.070]</p>
+<p>Reducing the cost of a large product group while protecting proven sellers:</p>
+<ol type="1">
+<li>Identify the products that generated most of the revenue, for example 11,000 USD from 4 out of 200 products. [L0836.026]</li>
+<li>Lower the CPC for the remaining products to a low level, for example from 1 USD to 0.20 USD, to get cheap traffic. [L0836.026]</li>
+<li>Lower the total daily budget, for example from 50 to 30 USD per day. [L0836.026]</li>
+<li>Keep most of the budget on the proven products (roughly 80/20 split). [L0836.026]</li>
+<li>Raise CPC on low-cost products only once they start converting. [L0836.026]</li>
+</ol>
+<ul>
+<li>Allocate about 80% of the ad budget to proven winning products and about 20% to new products being tested. [L0836.027]</li>
+</ul>
+<p>Reducing wasted ad spend when a product brings traffic but does not pay for itself:</p>
+<ol type="1">
+<li>Check how much was spent on impressions and clicks for each product that generated a sale. [L1092.062]</li>
+<li>If a sale costs a large share of its value, for example 50 to 100 USD in ads for a 215 USD sale, lower that product group's cost per click, for example from 50 cents to 25 cents. [L1092.062]</li>
+<li>Move the remaining budget toward products where the profit is higher. [L1092.062]</li>
+</ol>
+<p>Reducing spend on a store with many products and little traffic-to-sales conversion:</p>
+<ol type="1">
+<li>Review historical Google Ads spend by keyword and by product. [L1092.077]</li>
+<li>Remove products that consume budget without sales, or lower their cost per click. [L1092.077]</li>
+<li>Move the freed budget to products that convert. [L1092.077]</li>
+<li>Compare any product page with 100 or more unique visitors and no sales against the top two competitors. [L1092.077]</li>
+</ol>
+<p>Lowering bids on unprofitable products:</p>
+<ol type="1">
+<li>Open the alpha campaign and then the beta campaign, one at a time. [L0970.114]</li>
+<li>Open the Product groups view, where each product appears with its Max CPC. [L0970.114]</li>
+<li>Leave the winning products at their current bid. [L0970.114]</li>
+<li>For unprofitable products, open the bid setting (the gear icon) and lower Max CPC, for example from $0.50 to $0.30 or $0.25. [L0970.114]</li>
+<li>Do this in both campaigns and check the account the next day. Lower bids further if spend is still going to the wrong products. [L0970.114]</li>
+</ol>
+<ul>
+<li>The main lever for controlling Google Shopping spend across alpha and beta campaigns is the cost per click set per product in each campaign. Negative keywords should be correct before adjusting CPC. [L1094.025]</li>
+<li>For low-margin or low-priced products, set a very low default CPC, for example 2 to 3 cents, so they are rarely shown but cost little. Products with real margin should take most of the budget. [L1094.035]</li>
+<li>When traffic is spread across both Alpha and Beta campaigns, apply CPC increases to both, based on the traffic data. [L0837.051]</li>
+<li>For non-MAP products that do not leave enough profit at competitor prices:
+<ol type="1">
+<li>Open both the Alpha and the Beta Shopping campaigns. [L0857.004]</li>
+<li>Set the CPC of every non-MAP product to 0.01 dollars (one cent). [L0857.004]</li>
+<li>Leave the existing bids on MAP products unchanged. [L0857.004] This tells Google not to spend much on uncompetitive products, so the budget goes to products that earn money. [L0857.004]</li>
+</ol></li>
+<li>For all products priced under $200, set the Google Ads CPC to $0.01 so that they do not absorb budget. Direct spend toward products that earn more when they sell. Add-on products under $200 that sell well can receive the same $0.01 CPC, or be excluded entirely. [L0837.016]</li>
+</ul>
+<h2 id="budget-or-bid-which-one-to-change">Budget or bid: which one to change</h2>
+<ul>
+<li>If a campaign does not spend its full daily budget, the audience may be too small or the bid too low for impressions. Increase the bid, not the budget. [L0805.010]</li>
+<li>If the budget is spent every day, keep the bid where it is and increase the budget. [L0805.010]</li>
+<li>Google Ads budget logic: if a campaign does not spend its full daily budget, raise the bid; if it spends the full daily budget every day, raise the budget. [L0805.011]</li>
+<li>Do not raise the ad budget while the account is not profitable, even if Google says the campaign is budget limited. Google benefits from larger budgets, and a higher budget spreads spend across less qualified traffic. [L1068.058]</li>
+<li>Raise the budget only when the campaign keeps spending its full daily budget and the traffic quality is still good. [L1086.017]</li>
+</ul>
+<p>Procedure: when the daily budget is not being spent:</p>
+<ol type="1">
+<li>Compare the daily budget with the daily ad spend in Google Ads. [L0837.020]</li>
+<li>If the full daily budget is not being spent, raise the default CPC by 10 cents, for example from 20 cents to 30 cents. [L0837.020]</li>
+<li>Monitor traffic for one to two weeks. [L0837.020]</li>
+<li>If the daily budget is still not spent, raise the default CPC by another 10 cents. [L0837.020]</li>
+</ol>
+<ul>
+<li>After raising the default CPC by 10 cents, check traffic again about one week later. If traffic has not increased and the daily budget is still not fully spent, raise the default CPC by another 10 cents. [L0837.065]</li>
+<li><em>Older (2021-22):</em> Procedure to raise the default CPC: wait a few days, step up 5 to 10 cents at a time, and decide budget changes only after bids have had time to work. [L0853.051], (see the bid steps above)</li>
+<li><em>Older (2018):</em> If only about 10% of a daily budget is being spent, your bids are far too low. [L1274.058], (see the bid steps above)</li>
+</ul>
+<h2 id="scaling-budgets-gradually-1">Scaling budgets gradually</h2>
+<ul>
+<li>Larger daily budgets reach wider audiences, and the widest audiences convert least, so return on ad spend tends to fall as budget grows. The smallest budgets capture the highest-intent searches and usually give the best return. Scaling is still possible, but expect the return to drop as reach widens. [L0837.019]</li>
+<li>The "limited by budget" status alone does not explain poor performance. See the section below. [L0837.018]</li>
+<li><em>Older (2021-22):</em> Google often recommends large budget jumps that are not needed. Increase budgets gradually, for example from 20 to 30 dollars for about a week, then raise them again in steps. [L1279.061]</li>
+<li><em>Older (2019):</em> Use the inch-up approach to budgets: raise the daily budget slightly, about 10%, while watching whether spend increases and the quality of the traffic holds. [L1002.047]</li>
+<li>Scale Google Shopping from the start:
+<ol type="1">
+<li>Set the daily budget and default CPC across all products. [L0941.066]</li>
+<li>If the budget is not spent, look at which products get impressions and clicks. [L0941.066]</li>
+<li>Raise CPC on products with too few impressions and clicks. [L0941.066]</li>
+<li>Add negative keywords and lower CPC on products that get clicks but no sales. [L0941.066]</li>
+<li>When campaigns reach a ROAS of 10x or higher and the daily budget is maxed every day, raise the daily budget. [L0941.066]</li>
+</ol></li>
+<li>Google budgets can be scaled faster than Facebook budgets. Doubling the daily budget has worked once everything is dialled in. Expect three to five days of bad results after a jump, let it run about a week, and scale back if it does not level out. [L0941.067]</li>
+<li>Scaling is the path, but the goal is the highest spend that still reaches target ROAS, not the highest traffic. [L0856.022]</li>
+</ul>
+<h2 id="limited-by-budget-1">Limited by budget</h2>
+<ul>
+<li>Google Ads shows "limited by budget" on almost all campaigns. This is normal, because Google wants you to spend more. The status alone does not explain poor performance. [L0837.018]</li>
+<li>A Google Shopping "limited by budget" message is not a warning and does not require raising the budget. Hovering over it shows estimated conversions at higher budgets. [L1285.049]</li>
+<li>Do not raise the ad budget while the account is not profitable, even if Google says the campaign is budget limited. [L1068.058]</li>
+</ul>
+<h2 id="segment-bids-device-demographics-geography-and-time">Segment bids: device, demographics, geography and time</h2>
+<p>Device bids:</p>
+<ul>
+<li>Start with no adjustments for mobile or desktop. Once sales come in, review the conversion split in Google Ads, and if mobile produces no sales, reduce the mobile bid, for example to 50% of desktop. [L0804.076]</li>
+<li>Adjust device bids in Google Ads by going to Campaigns, opening the device settings, and increasing or decreasing the bid for mobile, tablet or desktop. For example, reduce mobile by 30 percent if desktop converts better. [L0962.054]</li>
+<li>Mobile bids can be raised or lowered when setting up campaigns, which is useful when most traffic comes from phones (example: 80% mobile). [L1085.053]</li>
+<li>Mobile bid adjustment in a Google Shopping campaign: open the campaign's bid adjustment for mobile devices, choose decrease, and set it to 100% to exclude mobile traffic. [L1274.064]</li>
+<li>Google Ads &gt; bid adjustments for devices &gt; mobile set to about -50% relative to desktop. Test this setting and raise mobile bids again if return on ad spend drops. [L1275.040]</li>
+<li>Example: with a -95% mobile bid adjustment on a $100 ad set, Google put about $95 toward desktop and only about $5 toward mobile. Sales and return on ad spend then dropped across the board. [L1275.041]</li>
+<li>Cutting mobile bids to nearly zero can also lower desktop conversions. Mobile visitors who return later on desktop to buy stop being reached. [L1275.042]</li>
+<li>Adjust search bids by device (mobile vs. desktop) based on where sales are strong. Google Ads also allows bid differences by gender (added in the 12 months before the talk), so raise bids for segments more likely to convert, such as men buying gifts. [L1203.023]</li>
+</ul>
+<p>Demographic and geographic bids:</p>
+<ul>
+<li>Google Ads lets you exclude the lower 50 percent of household income from seeing search ads, shown in the geographic settings of the demonstration. This suits premium or luxury products. Age range, financial status and other demographic options can also be used to build better-targeted search campaigns. [L1203.024]</li>
+<li>Do not bid by location, time of day, or device at the budget levels most stores use, because the added control usually hurts performance. [L1115.042]</li>
+</ul>
+<p>Time-of-day bids follow the segment formula in the section "Bid formulas and CPA targets". [L1328.017]</p>
+<p>Where sources differ: the 2023 guidance starts with no device adjustment and reduces mobile only after it proves weak. The 2018 and 2019 examples applied large cuts (-100% and -95%) that cut desktop conversions too. The device adjustment should be made gradually, and a large cut should be reversed if return falls. [L0804.076, L1274.064, L1275.040, L1275.041, L1275.042]</p>
+<h2 id="automated-and-enhanced-bidding">Automated and enhanced bidding</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Approach</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>New accounts or campaigns being built</td>
+<td>Manual CPC</td>
+<td>[L0971.092], [L1279.062], [L1094.033], [L1092.067]</td>
+</tr>
+<tr>
+<td>Stable history and consistent conversions</td>
+<td>Enhanced CPC, only on those campaigns</td>
+<td>[L1112.015], [L0967.082]</td>
+</tr>
+<tr>
+<td>Reducing manual work while holding ROAS</td>
+<td>Automated bidding as the main lever</td>
+<td>[L1033.001]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Manual CPC bidding is preferred over Google's automated or AI bidding for Shopping campaigns, because automated bidding tends to charge more than the required amount. Keep manual control of the bids while the campaigns are being built. [L0971.092]</li>
+<li>Automated bidding is the main lever for reducing manual work while keeping ROAS high. This source contrasts with the advice above, which keeps manual control while campaigns are being built. Use automation once data is stable, and keep manual control while building. [L1033.001]</li>
+<li>Do not switch the campaigns to the fully automated bid strategy that Google recommends after enhanced bidding is discontinued. Keep manual CPC-based bidding. [L1094.033]</li>
+<li>Manual bidding gives more control than enhanced CPC. Switch back to manual if sales dropped after enhanced CPC was enabled, and compare which products earned the first sales with where the budget is going now. [L0853.074]</li>
+<li>Manual bidding gives more control. Switching to a target ROAS with a larger budget often changes results unpredictably, so keeping manual control is preferred for alpha and beta campaigns. [L1092.067]</li>
+<li><em>Older (2020):</em> Enhanced max CPC should only be used once a campaign has many conversions. A rep's guideline was about 50 conversions per week, so it is almost never used early on. [L0967.082]</li>
+<li><em>Older (2021-22):</em> Enable Enhanced CPC only on campaigns that already have a stable history and consistent conversions. Turning it on everywhere at once makes the budget run out much faster. [L1112.015]</li>
+<li><em>Older (2021-22):</em> Do not enable Enhanced CPC on new accounts. Google does not have enough data and will overspend on random keywords and triggers. [L1279.062]</li>
+<li><em>Older (2021-22):</em> Manual CPC bidding was still available in Google Ads, so manual CPC remained a valid strategy despite reports of its removal. Monitor changes Google announces before adjusting structure. [L1090.102]</li>
+</ul>
+<h2 id="keyword-estimates-benchmarks-and-competitive-position">Keyword estimates, benchmarks and competitive position</h2>
+<ul>
+<li>Pre-launch average cost-per-click figures from keyword research tools do not predict what an alpha campaign will pay, because you do not bid on generic keywords. Use the cost data from your own campaign dashboard after the ads start running. [L0961.060]</li>
+<li><em>Older (2022):</em> Do not use the niche research tool's data to estimate CPC. Its data is based on search text ads that are not run for niche keywords. [L0963.015]</li>
+<li><em>Older (2019):</em> Legal and malpractice-type search terms can carry estimated cost-per-clicks around $80, but these figures do not apply to product listing ads in the same niche. [L1086.019]</li>
+<li>Keywords for products sold by one or two small craftspeople usually cost less on Google Shopping than keywords for the top brands, because there is less competition for the same searches. [L1125.014]</li>
+<li><em>Older (2018):</em> In Google Shopping, most shoppers click one of the top three listings, so an identical offer ranked fourth gets few clicks. Moving up requires higher bids or an offer that stands out from competitors, not a higher listed price. [L1109.070]</li>
+<li><em>Older (2019):</em> Search the product as a customer on Google, compare competitor prices, look for MAP violations and compare offers such as free shipping, and check where your listing appears among the competing stores. If pricing and offers are competitive, make a small bid adjustment to move your listing higher. [L1275.043]</li>
+</ul>
+<p>Diagnosis from the Benchmark column: if the average CPC is well below the Benchmark max CPC, but click share and search impression share are low and search impression share lost due to rank is high, the bids are too low and should be raised. For example, a CPC of about $0.30 against a $0.91 benchmark with 16% click share, 34% search impression share and 65% of impressions lost to rank points to raising bids. If the cost per click already looks too high to raise bids, the likely problem is the conversion rate, so bad keywords and search terms should be removed and the website optimised. [L1341.021]</p>
+<p>Where sources differ: the Benchmark column is not used to set bids. It is used only as a diagnostic signal, to compare your CPC and share of impressions with what competitors pay. [L0750.029, L1341.021]</p>
+<h2 id="tools-and-reviewing-search-terms">Tools and reviewing search terms</h2>
+<ul>
+<li><em>Older (2021-22):</em> Procedure to review search terms and set negatives: review search terms to see where spend goes; add negative keywords to the alpha and beta campaigns; check impressions and click-through rate for products; raise the target CPC for products worth more spend, and lower it for those that should get less. [L1279.065]</li>
+<li>Adjust a product's bid in the product groups view by editing the CPC box. Work from the product group level, not the campaign level. [L1279.063]</li>
+<li>Keep the CPC changes and their dates in a log, so each step can be judged after its wait period. [L0853.051, L0837.065]</li>
+</ul>
+<h2 id="plain-cpc-campaigns">Plain CPC Campaigns</h2>
+<ul>
+<li>Plain CPC (pay-per-click) campaigns bring traffic but do not optimize return on ad spend. [L1508.007]</li>
+<li>Plain CPC is therefore not the best way to start with a small budget. [L1508.007]</li>
+</ul>
+<h2 id="when-to-use-cpc">When to Use CPC</h2>
+<ul>
+<li>CPC is better used later, when scaling a product that already performs. [L1508.007]</li>
+</ul>
+<h3 id="further-details">Further details</h3>
+<ul>
+<li><p>Once a conversion rate is established, it shows how far bids can be raised or lowered to hit the target cost per sale and target ROAS. Bids are adjusted in whichever direction brings the cost per sale to target. [L0744.012]</p></li>
+<li><p>Target bid from revenue per click: Target bid = Revenue per click ÷ target ROAS. Example: a product with revenue per click of 15.5 and target ROAS 6 gives a target bid of about $2.59. A product with revenue per click of 0.8 and target ROAS 6 gives a bid of about $0.13. [L0745.018]</p></li>
+</ul>
+</article><nav class="pn"><a href="../../10-google-ads-and-shopping/11-negative-keywords-building-matching-and-maintaining/"><span class="k">&larr; Previous</span><span class="v">Negative keywords: building, matching and maintaining</span></a><a class="nx" href="../../10-google-ads-and-shopping/13-campaign-segmentation-tiers-and-scaling-structure/"><span class="k">Next &rarr;</span><span class="v">Campaign segmentation, tiers and scaling structure</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

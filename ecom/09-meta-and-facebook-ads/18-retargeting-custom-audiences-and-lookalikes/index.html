@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Retargeting, custom audiences and lookalikes | Ecommerce Playbook</title>
+<meta name="description" content="- Build six audiences from what people do on your store, before you start ads. - The Meta pixel (a small tracking code on your store) must be installed and linked first. Without it, store audiences cannot be built. - Check that all six audiences ...">
+<link rel="canonical" href="https://dlichters.com/ecom/09-meta-and-facebook-ads/18-retargeting-custom-audiences-and-lookalikes/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Retargeting, custom audiences and lookalikes | Ecommerce Playbook"><meta property="og:description" content="- Build six audiences from what people do on your store, before you start ads. - The Meta pixel (a small tracking code on your store) must be installed and linked first. Without it, store audiences cannot be built. - Check that all six audiences ..."><meta property="og:url" content="https://dlichters.com/ecom/09-meta-and-facebook-ads/18-retargeting-custom-audiences-and-lookalikes/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../09-meta-and-facebook-ads/">9. Meta and Facebook ads</a></div><h1>Retargeting, custom audiences and lookalikes</h1><p class="meta">Section 9.18 &middot; 18 of 22 in this chapter &middot; 46 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Build <strong>six</strong> audiences from what people do on your store, before you start ads.</li>
+<li>The Meta pixel <span class="ex">(a small tracking code on your store)</span> must be installed and linked first. Without it, store audiences cannot be built.</li>
+<li>Check that all <strong>six</strong> audiences exist before you launch.</li>
+<li>Building audiences costs <strong>no</strong> ad money.</li>
+<li>Run new-customer ads <span class="ex">(cold interest targeting)</span> as the main plan. Retargeting, which shows ads to people who already know the store, is a smaller part.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>Give retargeting about <strong>10%</strong> of the ad budget. Adjust it by return (ROAS, the money earned per dollar spent).</li>
+<li>Stop ads to recent buyers. Exclude everyone who bought in the last <strong>180 days</strong>.</li>
+<li>Create the <code>Purchased 180 days</code> audience before you publish, so Meta knows who already bought.</li>
+<li>Showing the same ad to one person too often makes them tired of it. Change the ad instead of repeating it.</li>
+<li>Add-to-cart audiences can stop selling without warning. Check their results every one to two days.</li>
+<li>A new audience needs time to fill with people before you judge its size.</li>
+<li>Start retargeting only after your ads have run for more than two weeks.</li>
+<li>Connect the tracking code <span class="ex">(pixel)</span> first, or your website audiences will be empty.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 55 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="audience-types-and-what-they-are-for"><summary><h2>Audience types and what they are for</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>A <strong>store audience</strong> is a group of people defined by actions on your store, such as visiting pages or buying.</li>
+<li>Your store runs on Shopify <span class="ex">(online store software)</span>. Once it is linked to Meta <span class="ex">(the company behind Facebook and Instagram)</span>, those actions are sent to Meta.</li>
+<li>Then ads can target people by how they behave.</li>
+<li>Creating audiences costs <strong>no</strong> ad spend. They should already hold people by the time ads launch.</li>
+<li>You need <strong>two</strong> store audience types: website visitor audiences <span class="ex">(people who visited the site)</span> and customer audiences <span class="ex">(people who placed orders)</span>.</li>
+<li>Custom audiences <span class="ex">(groups you build from your own data)</span> can come from customer contacts, website traffic or a mobile app.</li>
+<li>For store audiences, select the <strong>website</strong> source.</li>
+<li>Website visitor audiences are built from the tracking pixel. They can feed retargeting <span class="ex">(showing ads again to people who already came)</span> or a lookalike <span class="ex">(a new group of people similar to your buyers)</span>.</li>
+<li>Customer data files are a second source. An example is an export of Shopify customer emails.</li>
+<li>The Audience menu offered <strong>four</strong> audience source options at the time.</li>
+<li>Page and Instagram engagement audiences include people who liked, commented, shared or followed.</li>
+<li>They can reach shoppers that Facebook can no longer track on the website since iOS 14 (an Apple phone update that limits tracking).</li>
+<li>Engagement audiences are used for remarketing and as the base for lookalike audiences.</li>
+<li>Engaged audience: people who added to cart <span class="ex">(put an item in the basket)</span>, started checkout, visited the website, or are on the email list, but have <strong>not</strong> completed a purchase.</li>
+<li>Existing customer audience: everyone who has made a purchase with the brand. They are tracked through the Facebook pixel or identified through the email list.</li>
+<li>A window is the number of past days a person counts in. Warm audiences <span class="ex">(people who already know your brand)</span> with low traffic start with broad <strong>180-day</strong> windows.</li>
+<li>With high traffic, split them into <strong>7, 30, 60 and 90</strong> day windows.</li>
+<li>The six core audiences, based on behavior and time frame:
+<ol type="1">
+<li>Visited website in last <strong>180</strong> days.</li>
+<li>Engaged on Facebook in last <strong>180</strong> days.</li>
+<li>Engaged on Instagram in last <strong>180</strong> days.</li>
+<li>Visited website in last <strong>7</strong> days.</li>
+<li>Made a purchase in last <strong>7</strong> days.</li>
+<li>Made a purchase in last <strong>180</strong> days.</li>
+</ol></li>
+<li>High-ticket products <span class="ex">(expensive items)</span>: build a custom audience from value purchases. For example, use buyers who spent more than the average order value (such as <strong>100 USD</strong>). Then create lookalikes from it.</li>
+</ul>
+</details><details class="part" id="pixel-prerequisites"><summary><h2>Pixel prerequisites</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>The Meta pixel must already be installed on the Shopify store and linked to the Meta ad account <span class="ex">(the account that runs ads)</span> before store audiences can be built.</li>
+<li>Without that link, the pixel will not show as active (<strong>green</strong>) in the audience source field. Purchase events <span class="ex">(records of sales)</span> will not reach Meta.</li>
+<li>A Meta ad account should normally hold only <strong>one</strong> Meta pixel. Every website-based audience then uses that single pixel as its source.</li>
+<li>If more than one pixel appears, pick the one linked to the Shopify store and the ad account.</li>
+</ol>
+</details><details class="part" id="building-store-audiences-in-business-manager-and-ads-manager"><summary><h2>Building store audiences in Business Manager and Ads Manager</h2><span class="pm">3 min</span></summary>
+<p>Business Manager is Meta's admin tool for businesses. Ads Manager is where ads are made and managed.</p>
+<p><strong>Business Manager route <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Go to <strong>business.facebook.com</strong>.</li>
+<li>Click the three-line menu.</li>
+<li>Click <strong>Audiences</strong>.</li>
+<li>Create a website visitors audience named <code>website visits 180 days</code>, with the window set to <strong>180</strong> days.</li>
+<li>Create a Facebook engagement audience with a <strong>180</strong>-day window.</li>
+<li>Create an Instagram engagement audience with a <strong>180</strong>-day window.</li>
+<li>Create a website visitors audience with a <strong>7</strong>-day window.</li>
+<li>Create <strong>purchaser audiences</strong> for the last 7 days and the last 180 days.</li>
+</ol>
+<p>These audiences update automatically as people enter or leave each window.</p>
+<p><strong>Ads Manager route <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Log in to Meta Business Manager.</li>
+<li>Click the three-line hamburger menu <span class="ex">(the icon of three stacked lines)</span> in the top left corner.</li>
+<li>Scroll down the side menu and click <strong>Audiences</strong>.</li>
+<li>If no audiences exist yet, three creation options appear. Choose <strong>Create custom audience</strong> (the top option).</li>
+<li>Under sources, check the box <strong>Website</strong>. The next screen opens automatically.</li>
+</ol>
+<p><strong>Website visitor audiences <span class="ex">(procedure)</span></strong></p>
+<p>Retention is how many days back the audience looks.</p>
+<ol type="1">
+<li>Start a new custom audience and select the source <strong>Website</strong>.</li>
+<li>Under source, select the store's pixel <span class="ex">(the one linked to the store and the ad account)</span>. Confirm it shows <strong>green</strong>.</li>
+<li>Leave Events on the default <strong>All website visitors</strong>. Events are the actions the audience counts.</li>
+<li>Set Retention to <strong>7 days</strong> and name the audience, following the naming pattern, for example <code>website visitors - 7 days</code>.</li>
+<li>Click the blue <strong>Create audience</strong> button at the bottom.</li>
+<li>Repeat steps 1 to 5 with Retention <strong>30</strong> and the name <code>website visitors - 30 days</code>.</li>
+<li>Repeat steps 1 to 5 with Retention <strong>180</strong> and the name <code>website visitors - 180 days</code>.</li>
+</ol>
+<p>All other settings stay identical across the three audiences.</p>
+<p><strong>Customer <span class="ex">(purchased)</span> audiences <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Click <strong>Create custom audience</strong> in the Audiences section.</li>
+<li>Select the source <strong>Website</strong>.</li>
+<li>Select the same pixel, which should be the only pixel in the ad account. Confirm it shows <strong>green</strong>.</li>
+<li>Under Events, open the dropdown and choose <strong>Purchase</strong> instead of All website visitors.</li>
+<li>Set Retention to <strong>7 days</strong> and name the audience <code>purchased - 7 days</code>.</li>
+<li>Click <strong>Create audience</strong>.</li>
+<li>Repeat steps 1 to 6 with Retention <strong>30</strong> and the name <code>purchased - 30 days</code>.</li>
+<li>Repeat steps 1 to 6 with Retention <strong>180</strong> and the name <code>purchased - 180 days</code>.</li>
+</ol>
+<ul>
+<li>Keeping the Events field on All website visitors builds a visitor audience, not a buyer audience.</li>
+<li>Choose <strong>Purchase</strong> in the Events dropdown so only buyers are included.</li>
+</ul>
+<p><strong>Workaround for a new store <span class="ex">(procedure)</span></strong></p>
+<p>Use this when Purchase does not appear under Events, because no sale has been recorded.</p>
+<ol type="1">
+<li>In the Shopify back end <span class="ex">(the admin area of your store)</span>, create a test product (any name, for example <code>test product 123</code>) priced at <strong>$1</strong>.</li>
+<li>Open the store as a customer and buy the test product.</li>
+<li>Wait until the purchase is recorded. Shopify then notifies Meta that an e-commerce purchase took place.</li>
+<li>Return to the Meta Audiences section and open the Events dropdown again. <strong>Purchase</strong> should now be listed.</li>
+<li>Build the purchase audiences with the same settings as above.</li>
+</ol>
+<p>If the pixel was already active and sales had already come through, Purchase appears by default. No test product is needed.</p>
+<p><strong>Checkpoint before ads</strong></p>
+<ul>
+<li><strong>Six</strong> audiences must exist before you move on: <code>website visitors - 7 days</code>, <code>website visitors - 30 days</code>, <code>website visitors - 180 days</code>, <code>purchased - 7 days</code>, <code>purchased - 30 days</code> and <code>purchased - 180 days</code>. Their retention is 7, 30 and 180 days.</li>
+<li>Check all six in the Audiences section of Meta Business Manager before you start ads.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Source</th>
+<th>Event</th>
+<th>Retention</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Website visitors</td>
+<td>Website pixel</td>
+<td>All website visitors</td>
+<td>7 days</td>
+<td><code>website visitors - 7 days</code></td>
+</tr>
+<tr>
+<td>Website visitors</td>
+<td>Website pixel</td>
+<td>All website visitors</td>
+<td>30 days</td>
+<td><code>website visitors - 30 days</code></td>
+</tr>
+<tr>
+<td>Website visitors</td>
+<td>Website pixel</td>
+<td>All website visitors</td>
+<td>180 days</td>
+<td><code>website visitors - 180 days</code></td>
+</tr>
+<tr>
+<td>Purchasers</td>
+<td>Website pixel</td>
+<td>Purchase</td>
+<td>7 days</td>
+<td><code>purchased - 7 days</code></td>
+</tr>
+<tr>
+<td>Purchasers</td>
+<td>Website pixel</td>
+<td>Purchase</td>
+<td>30 days</td>
+<td><code>purchased - 30 days</code></td>
+</tr>
+<tr>
+<td>Purchasers</td>
+<td>Website pixel</td>
+<td>Purchase</td>
+<td>180 days</td>
+<td><code>purchased - 180 days</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Name pattern: the Ads Manager procedure uses <code>website visitors - N days</code>. The Business Manager procedure uses <code>website visits 180 days</code>. Both use the same windows.</li>
+</ul>
+</details><details class="part" id="audience-windows-the-numbers-in-use"><summary><h2>Audience windows: the numbers in use</h2><span class="pm">2 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Window in sources</th>
+<th>When it applies</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engaged <span class="ex">(cart, checkout, visitors, email)</span></td>
+<td>30 to 60 days</td>
+<td>Most buying cycles <span class="ex">(the time from first look to purchase)</span> do not run much longer.</td>
+<td></td>
+</tr>
+<tr>
+<td>Add-to-cart retargeting</td>
+<td>Test 30, 60, 90 and 180 days</td>
+<td>Check results every one to two days, because these audiences can stop delivering sales suddenly.</td>
+<td></td>
+</tr>
+<tr>
+<td>Existing customers <span class="ex">(pixel)</span></td>
+<td>180 days</td>
+<td>180 days is the maximum lookback the Facebook pixel can use to identify customers, so it is the standard window.</td>
+<td></td>
+</tr>
+<tr>
+<td>Purchasers, Ads Manager set</td>
+<td>7, 30 and 180 days</td>
+<td>Created as a set. The 7-day list is used for exclusions <span class="ex">(leaving people out of ads)</span> and the 180-day list for promotions.</td>
+<td></td>
+</tr>
+<tr>
+<td>Website visitors for dynamic remarketing</td>
+<td>7 and 30 days</td>
+<td>These lists cost nothing to keep populated, so leave them running.</td>
+<td></td>
+</tr>
+<tr>
+<td>Website visitors for monthly promotions</td>
+<td>180 days</td>
+<td>Used with promotion emails.</td>
+<td></td>
+</tr>
+<tr>
+<td>Warm audiences, low traffic</td>
+<td>Broad 180 days</td>
+<td>Start here when traffic is low.</td>
+<td></td>
+</tr>
+<tr>
+<td>Warm audiences, high traffic</td>
+<td>7, 30, 60 and 90 days</td>
+<td>Split once traffic is high.</td>
+<td></td>
+</tr>
+<tr>
+<td>Instagram engagement</td>
+<td>180 days</td>
+<td>Standard window in the setup procedures.</td>
+<td></td>
+</tr>
+<tr>
+<td>Instagram engagement, older lookback</td>
+<td>365 days</td>
+<td>Example lookback for Instagram engagers.</td>
+<td></td>
+</tr>
+<tr>
+<td>Video viewers</td>
+<td>14 to 30 days <span class="ex">(common windows 7, 14 and 30)</span></td>
+<td>14 to 30 days is the usual range: enough data without being too small.</td>
+<td></td>
+</tr>
+<tr>
+<td>Page and Instagram engagement</td>
+<td>7, 14 or 30 days (30 used in example)</td>
+<td>Created in the Audiences section.</td>
+<td></td>
+</tr>
+<tr>
+<td>Page and Instagram engagement</td>
+<td>180 days</td>
+<td>Use the correct Page for each business in Business Manager.</td>
+<td></td>
+</tr>
+<tr>
+<td>Thank-you audience</td>
+<td>Purchasers of last 7 days</td>
+<td>Free to set up.</td>
+<td></td>
+</tr>
+<tr>
+<td>Catch-all customer audience</td>
+<td>Customers of last 180 days</td>
+<td>Free to set up.</td>
+<td></td>
+</tr>
+<tr>
+<td>Older split (2019)</td>
+<td>7, 14 and 30 days</td>
+<td>Website visitors in the past 7, 14 and 30 days for separate ad sets.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The 7-day audience always holds the most recent 7 days. So reuse audiences rather than making new ones for each ad set <span class="ex">(a group of ads with its own audience and budget)</span>.</li>
+<li>Create the audiences in Business Manager. Then select them inside new ad sets in each campaign.</li>
+</ul>
+</details><details class="part" id="engagement-and-video-audiences"><summary><h2>Engagement and video audiences</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Video retargeting based on watch depth <span class="ex">(how much of a video someone watched)</span> is a classic approach.</li>
+<li>People who watched 50 percent or 75 percent of a video are retargeted with an offer.</li>
+<li>It still works after iOS, though fewer people are trackable.</li>
+<li><strong>75</strong> percent video view depth has performed best.</li>
+<li>Stack audiences <span class="ex">(combine them)</span> in the middle of the funnel <span class="ex">(the path from first look to buying)</span> and bottom of the funnel. Middle: video viewers and page engagers. Bottom: add to cart and engaged with brand.</li>
+<li>Test different view depths (25%, 50%, 75%). Or stack them into one large audience to maximize reach <span class="ex">(how many different people see your ads)</span>.</li>
+<li>A common retargeting option is people who watched <strong>75%</strong> of a video.</li>
+<li>Stack related audiences <span class="ex">(video views, engagement, page views, added to cart)</span> into one larger audience. Facebook tracks retargeting poorly, so one big audience helps.</li>
+</ul>
+<p><strong>Video-view custom audience <span class="ex">(procedure)</span></strong></p>
+<ul>
+<li><p>Go to Ads Manager &gt; All tools &gt; Audiences &gt; Create audience &gt; Custom audience.</p></li>
+<li><p>Select video engagement and choose the relevant video ads.</p></li>
+<li><p>Set a people-who-watched-at-least-<strong>25%</strong>-of-video threshold <span class="ex">(the minimum watch amount that counts)</span>.</p></li>
+<li><p>Select a retention window. The common windows are 7, 14 and 30 days. <strong>14 to 30 days</strong> is the usual range.</p></li>
+<li><p>Engagement audiences as seeds <span class="ex">(the starting group a lookalike is built from)</span>: a <strong>1%</strong> lookalike built from purchase events shows high intent <span class="ex">(a strong sign of buying)</span>. 75 percent video-view audiences may also work as a seed.</p></li>
+<li><p>Page and Instagram engagement custom audiences: create them in the Audiences section with a window of <strong>7, 14 or 30</strong> days (30 days in the example).</p></li>
+<li><p>Website audiences are built from pixel events such as add to cart, initiate checkout and purchase.</p></li>
+<li><p>Engagement audience case: a Facebook page engagement audience <span class="ex">(past 30 days, about 3,600 engagers)</span> built a top 1% lookalike <span class="ex">(the closest 1% of matches)</span>. It reached about <strong>720,000</strong> people.</p></li>
+</ul>
+</details><details class="part" id="engaged-audience-and-existing-customer-segments"><summary><h2>Engaged audience and existing-customer segments</h2><span class="pm">1 min</span></summary>
+<p><strong>Engaged audience <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Click <strong>Create custom audience</strong>.</li>
+<li>Select <strong>Website</strong> as the source, because that is where the actions happen.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Set the time window to <strong>30 to 60 days</strong>.</li>
+<li>Select the three events: website visitors, add to cart and initiate checkouts.</li>
+<li>Click <strong>Create audience</strong> to add it to your engaged audience.</li>
+</ol>
+<ul>
+<li>Include <strong>three</strong> events in the engaged audience: website visitors, add to cart and initiate checkout.</li>
+<li>The custom audience form includes an Exclude people field with a limit of <strong>0/50</strong>. It excludes certain audiences from the definition.</li>
+<li>Engaged audiences are still treated as new customers for targeting and reporting, because they have not yet made a purchase.</li>
+</ul>
+<p><strong>Existing customers</strong></p>
+<ul>
+<li>Define existing customers as people who made a purchase in the last <strong>180</strong> days, based on the Facebook pixel.</li>
+<li>Existing customers include email-list purchasers as well as pixel-tracked ones.</li>
+</ul>
+<p><strong>Syncing a Klaviyo purchaser segment <span class="ex">(procedure)</span></strong></p>
+<p>Klaviyo is an email tool. A segment is a saved group of contacts.</p>
+<ol type="1">
+<li>In Klaviyo, create a segment for everyone who made a purchase, so the segment <strong>updates continuously</strong>.</li>
+<li>Go to Klaviyo's APIs and integrations section <span class="ex">(the settings for connecting other tools)</span>.</li>
+<li>Connect Facebook to Klaviyo.</li>
+<li>Follow Klaviyo's steps to complete the synchronization. Your Klaviyo audience will then sync as a Facebook custom audience.</li>
+</ol>
+</details><details class="part" id="audience-segment-reporting"><summary><h2>Audience segment reporting</h2><span class="pm">1 min</span></summary>
+<p><strong>Setup and display</strong></p>
+<ul>
+<li>Audience segments let you define groups of customers. You then receive performance reporting broken down by those definitions.</li>
+<li>This shows how ad spend <span class="ex">(money spent on ads)</span> flows between new and existing audiences.</li>
+<li>In Ads Manager, go to <strong>Advertiser Settings &gt; Audience Segments</strong> to define and edit the engaged audience and the existing customer audience.</li>
+<li>At campaign level, the Audience segment reporting section displays the defined segments. Click <strong>Edit in advertiser settings</strong> from there to modify the definitions.</li>
+<li>After changing segment definitions, allow a <strong>few minutes</strong> for the changes to reach reporting. The confirmation message states that changes typically happen within a few minutes.</li>
+</ul>
+<p><strong>Breakdown <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Go to the campaign level in Ads Manager.</li>
+<li>Click <strong>Breakdown</strong>.</li>
+<li>Search for <code>audience segments</code>, or navigate to Demographics &gt; Audience segments.</li>
+<li>Campaign performance is displayed broken down by new audience, engaged audience and existing customers.</li>
+</ol>
+<p><strong>Check of spend split <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Break down your campaign by audience segments.</li>
+<li>Verify that the <strong>majority</strong> of ad spend goes to new and engaged audiences.</li>
+<li>If the majority does not go to new audiences, investigate two things. First, whether campaign exclusions exist. Second, whether they are configured tightly enough.</li>
+</ol>
+<ul>
+<li>Rule: make sure the <strong>majority</strong> of ad spend goes to new and engaged audiences, not existing customers.</li>
+</ul>
+</details><details class="part" id="customer-list-uploads-and-seed-sources"><summary><h2>Customer list uploads and seed sources</h2><span class="pm">2 min</span></summary>
+<p><strong>Creating a custom audience from an email list <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Go to <strong>Audiences</strong> in the Ads Manager sidebar and create a custom audience.</li>
+<li>Choose the data file option, then give the audience a name and description.</li>
+<li>Upload the file as a CSV <span class="ex">(a spreadsheet file type)</span> or TXT file. It must contain only <strong>one</strong> column of email addresses.</li>
+<li>If the audience shows as not ready, wait about <strong>10 seconds</strong>, refresh the page and wait again. Processing can take a couple of hours.</li>
+<li>When it is ready, check how many profiles matched the email addresses.</li>
+</ol>
+<p><strong>Uploading a customer list</strong></p>
+<ul>
+<li>To upload a customer list: go to Audiences, click Create Audience, choose Custom Audience. Then select the existing customer list option instead of website traffic.</li>
+<li>Facebook accepts email addresses or phone numbers. Names are not needed.</li>
+<li>A customer list needs a minimum of <strong>100</strong> customers before Facebook will create a lookalike audience from it.</li>
+<li>Upload the list. Facebook returns the audience in about <strong>35 seconds</strong>.</li>
+<li>Upload an existing customer list to Meta, even a small one of about 100 orders. This gives the pixel a head start in finding similar buyers.</li>
+<li>Use a customer list uploaded to Facebook as a custom audience when running Advantage+ campaigns (Meta's automated campaign type).</li>
+<li>In one example, broad targeting with the list still underperformed. So test it rather than assume it works.</li>
+</ul>
+<p><strong>Mistakes and match rates</strong></p>
+<ul>
+<li>A match rate is the share of your emails that Meta recognizes. Match rates are not guaranteed.</li>
+<li>In one example, <strong>1,300 of 2,000</strong> emails (65%) matched.</li>
+<li>Uploading an email list unrelated to your niche gives weak results. The lookalike built from it will not represent your buyers.</li>
+<li>Do not use custom audiences in the early testing phase.</li>
+<li>Start with interest targeting <span class="ex">(choosing people by their hobbies and interests)</span> and add custom audiences later.</li>
+</ul>
+<p><strong>Opted-in leads and LinkedIn</strong></p>
+<p>Opted-in leads are people who agreed to hear from you.</p>
+<ol type="1">
+<li>Build your LinkedIn connections with the people who fit your target buyer.</li>
+<li>Export that contact list.</li>
+<li>Upload it to Facebook <span class="ex">(and Twitter)</span> as a custom audience.</li>
+<li>Market a product that is relevant to their office or role.</li>
+</ol>
+<ul>
+<li>Cold ad sets <span class="ex">(ads aimed at people who do not know you yet)</span> use interest audiences and lookalikes.</li>
+<li>Build lookalikes from customers when there is enough data. Otherwise, build them from opted-in leads. If needed, build them from website visitors.</li>
+</ul>
+</details><details class="part" id="lookalike-audiences"><summary><h2>Lookalike audiences</h2><span class="pm">3 min</span></summary>
+<p>A lookalike is a new group of people who are similar to a group you already have. That group is the seed.</p>
+<p><strong>Creating a lookalike <span class="ex">(procedure)</span></strong></p>
+<ol type="1">
+<li>Go to <strong>Audiences</strong>, choose create audience and then lookalike audience.</li>
+<li>Select the custom audience you created as the <strong>source</strong>.</li>
+<li>Select the country to target.</li>
+<li>Set the audience size to <strong>similarity</strong>, not reach <span class="ex">(how many people it can touch)</span>. Reach-based optimization gave the opposite effect in testing.</li>
+<li>Create the audience and wait, usually a couple of hours, until it shows as ready.</li>
+<li>Enter the lookalike audience into the custom audience field of your precise interest ad set to narrow it. Do not target the lookalike alone.</li>
+</ol>
+<p><strong>Size bands and seeds</strong></p>
+<ul>
+<li>Choose the top <strong>1%</strong> of similar people for the largest reach. Or choose narrower bands, such as the top 1 to 2% or top 2 to 4%, for closer matches.</li>
+<li>Create the lookalike with engagers as the source. An example is people who engaged with the Facebook page in the past 30 days.</li>
+<li>Split purchaser lookalikes into size ranges such as 0 to 1, 1 to 2 and 2 to 3 percent. Test which pool converts best.</li>
+<li>The 1% band gives the largest reach. Start there before testing narrower bands.</li>
+<li>Build lookalikes from both seed audiences and engagement audiences. Then rotate new content through all of them.</li>
+<li>Lookalikes are a cheap way to start on Facebook without wasting money on guesses.</li>
+<li>Lookalikes are less effective than before. One-percent lookalikes for purchase events still show high intent.</li>
+<li>Build lookalikes after a product has several proven audiences, usually <strong>three to four</strong> winners <span class="ex">(audiences that already bring sales)</span>.</li>
+<li>Each winner can be scaled on its own. Lookalikes made from those winners help Meta find similar people at a larger size.</li>
+</ul>
+<p><strong>Reach and results</strong></p>
+<ul>
+<li>A lookalike built from a small customer list <span class="ex">(even around 100 emails)</span> typically landed near <strong>2 million</strong> people.</li>
+<li>It works best as a narrowing layer on top of an interest-based ad set. It is not a stand-alone target.</li>
+<li>With a niche-relevant list, the combined audience was expected to fall to about <strong>200,000 to 250,000</strong> people.</li>
+<li>In another example, a customer list of 100 or more people produced a lookalike of about <strong>170,000</strong> people. The maximum reach can go up to 2 million.</li>
+<li>Narrowing that lookalike to people who also like a proven interest reduced it to about half or a third. But it made the audience far more targeted.</li>
+<li>Run a split test between a precise interest campaign and a lookalike campaign. A split test shows two options side by side.</li>
+<li>Compare <strong>cost per conversion</strong> (what one sale costs). Test the lookalike against interest targeting rather than assuming it is better.</li>
+</ul>
+<p><strong>Case: CrossFit equipment store</strong></p>
+<ul>
+<li>Starting point: the whole United States audience of about <strong>150 to 250 million</strong> people.</li>
+<li>Targeting a large niche brand page narrowed it to about 500,000 to 600,000 people. Adding related pages raised it to about 700,000 to 800,000.</li>
+<li>The lead ad set on a single precise interest showed a potential audience of about <strong>560,000</strong> people.</li>
+<li>A customer email list of about 2,000 addresses, mostly not CrossFit-related, matched <strong>1,300 profiles (65%)</strong>. It produced a lookalike of about <strong>2.1 million</strong> people.</li>
+<li>Combined with the precise interest ad set, the potential audience dropped to about <strong>38,000</strong>, because the list was off-niche. A niche-relevant list was expected to bring it to about 200,000 to 250,000.</li>
+<li>Over two days, the lookalike campaign reached a cost per conversion of <strong>0.93 dollars</strong>. The precise interest campaign reached <strong>1.20 dollars</strong>. That is a saving of about <strong>30%</strong>. Savings of up to half were seen in other cases.</li>
+</ul>
+<p><strong>Formula and seeds <span class="ex">(formula)</span></strong></p>
+<ul>
+<li>Lookalike audience: give Facebook a seed audience, such as a retargeting list of past site visitors. Ideally, use people who converted <span class="ex">(bought)</span>.</li>
+<li>Ask Facebook to find new people with similar attributes. These are cold users, people who have not visited the site yet.</li>
+<li>An example lookalike reached <strong>1.2 million</strong> people.</li>
+</ul>
+<p><strong>Size and sources: a note on conflicts</strong></p>
+<ul>
+<li>Lookalike size depends on the seed. One source gives the top 1% as the largest reach. Another shows about 2 million from a small generic list. A third shows about 170,000 from a list of 100 or more people.</li>
+<li>Use the size band that matches your seed. Then test before scaling.</li>
+<li>The processing time differs by source. A customer-list lookalike returned in about 35 seconds in one example. Another source said a couple of hours.</li>
+<li>Expect a couple of hours for a lookalike to show as ready. Check the status before launch.</li>
+</ul>
+</details><details class="part" id="retargeting-by-timing-and-funnel-position"><summary><h2>Retargeting by timing and funnel position</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>Retargeting (showing ads again to people who already visited or engaged with your store) from the store is limited.</li>
+<li><strong>Run</strong> cold interest targeting as the main strategy. Cold means new people who have never visited the store, chosen by their interests.</li>
+<li>Email to a list of customers can drive strong revenue. Email to customers is a form of retargeting.</li>
+<li>Use Facebook retargeting mainly during <strong>promotions</strong>, such as targeting past purchases.</li>
+<li>The Facebook funnel <span class="ex">(the path from first contact to purchase)</span> has three stages.</li>
+<li>The top of the funnel is the first stage. Use <strong>cold interest</strong> audiences there.</li>
+<li>The middle of the funnel uses engagement audiences: people who interacted with your page, Instagram or ads.</li>
+<li>The bottom of the funnel uses website visitors and add-to-cart audiences. Add-to-cart means the person put a product in their cart.</li>
+<li>Cold interest targeting often <strong>outperformed</strong> retargeting after the iOS 14 update. iOS 14 is an Apple iPhone software update that limited ad tracking.</li>
+<li><strong>Prioritize</strong> interests that have worked before over retargeting channels.</li>
+<li><strong>Run</strong> cold interest targeting and retargeting as separate campaigns.</li>
+<li>Target interests that have worked before.</li>
+<li><strong>Retarget</strong> website visitors, especially same-day visitors.</li>
+<li>Also retarget form fillers <span class="ex">(people who filled in a form)</span>, post engagers <span class="ex">(people who interacted with a post)</span>, and anyone who visited the webpage.</li>
+<li><strong>Run</strong> multiple campaigns at the same time.</li>
+<li>Retargeting can work on Facebook when an offer or message overcomes an objection. An objection is a reason not to buy.</li>
+<li>Use <strong>testimonials</strong> (customer reviews) for trust problems.</li>
+<li>Use a <strong>discount</strong> for price concerns.</li>
+<li>Use proof for doubt that the product can solve the problem.</li>
+<li>Showing the <strong>same ad again</strong> rarely works.</li>
+<li><strong>Retarget</strong> people who already acted on a page or post, such as page views or engagement.</li>
+<li>Do not add extra age or demographic limits <span class="ex">(limits by age, gender and similar traits)</span>. The audience was already qualified at the top of the funnel.</li>
+<li><strong>Target</strong> engaged shoppers as an audience. This was reported to perform well.</li>
+<li>Interest targeting by job title was not tested, and the audience may be too small.</li>
+<li>Facebook retargeting ads for store visitors are worth running. They have a specific setup.</li>
+<li>Retargeting is a standard practice used by the store.</li>
+<li><strong>Set up</strong> Facebook remarketing audiences <span class="ex">(saved groups of people to show ads to)</span> before running remarketing ads. Remarketing is another word for retargeting.</li>
+<li>Keep Facebook targeting <strong>simple</strong> at the start.</li>
+<li>Dynamic retargeting <span class="ex">(ads that automatically show each person the exact products they viewed)</span> only needs site visitors.</li>
+<li><strong>Skip</strong> age ranges and interest-group testing.</li>
+<li><strong>Use</strong> an ad that shows the product the person previously viewed.</li>
+<li><strong>Segment</strong> remarketing by how long ago someone visited without buying. Segment means split into groups.</li>
+<li>Recent visitors get <strong>direct-response ads</strong> (ads that push for a sale now) that bring them back to the product.</li>
+<li>Older visitors get ads that build <strong>trust and credibility</strong>.</li>
+<li>Shorter remarketing <strong>windows</strong> (the number of days back you look for visitors) are more profitable.</li>
+<li>A visitor who left recently is more likely to buy than one who left months ago.</li>
+<li>until Facebook is consistently profitable, run <strong>only</strong> dynamic product ad remarketing. A dynamic product ad (DPA) is an ad that shows products automatically from your product catalog.</li>
+<li><strong>Avoid</strong> promotions segmented for cold audiences.</li>
+<li>The most successful stores also reach people who are not searching for their product. They do this through pre-sales engagement, which is content that builds interest before the sales pitch.</li>
+<li>Search campaigns and site-visitor retargeting reach only people already in market. In market means already looking to buy.</li>
+<li>So <strong>add</strong> cold content to grow beyond them.</li>
+</ul>
+</details><details class="part" id="sales-funnel-procedure"><summary><h2>Sales funnel procedure</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Serve</strong> pre-sales engagement content to a cold lookalike audience. A lookalike audience is new people who look like your existing buyers.</li>
+<li>If the visitor buys right away, the sale is done.</li>
+<li>If the visitor views a product but does not buy, enter dynamic product ad retargeting.</li>
+<li>If the visitor only reaches the home page, retarget with more commercial pre-sales content, such as comparison charts, buyer's guides <span class="ex">(guides that help people choose)</span>, user stories, or uses of products the store sells.</li>
+<li>At the buying stage, use Product Listing Ads (PLAs, Google ads that show a product image and price), search text ads, and search audience ads.</li>
+</ol>
+</details><details class="part" id="exclusions"><summary><h2>Exclusions</h2><span class="pm">2 min</span></summary>
+<ul>
+<li><strong>Use</strong> exclusions <span class="ex">(rules that hide ads from certain people)</span> to keep specific audiences, such as recent buyers, out of campaigns that should not show them ads.</li>
+<li>To stop showing ads to people who bought in the last <strong>180 days</strong>, add a purchasers exclusion in the audience controls.</li>
+<li>Exclusions matter most when many existing customers are being targeted.</li>
+<li>Exclusions matter less when audiences are mostly new.</li>
+<li>For a custom audience <span class="ex">(a saved list of people)</span> of past purchasers, exclude only the <strong>180-day purchaser audience</strong>.</li>
+<li>The 7-day and 30-day purchaser audiences are subsets <span class="ex">(smaller groups inside a bigger group)</span> of the 180-day audience. They need <strong>no separate exclusions</strong>.</li>
+<li><strong>Exclude</strong> website purchasers from the last 180 days.</li>
+<li><strong>Exclude</strong> existing Shopify customers (Shopify is an online store platform) from prospecting campaigns. Prospecting means reaching new people.</li>
+<li><strong>Use</strong> 7-day click and 1-day view attribution for these campaigns. Attribution is the rule that decides which ad gets credit for a sale. A 7-day click means the person clicked an ad within 7 days. A 1-day view means they saw an ad within 1 day.</li>
+<li>Promotion Meta ads should repeat the message of the promotion's emails. Meta is the company behind Facebook and Instagram.</li>
+<li><strong>Show</strong> promotion ads to all website visitors from the last 180 days.</li>
+<li><strong>Exclude</strong> all customers who purchased in the last <strong>30 days</strong>.</li>
+<li>For Meta retargeting, use all website visitors from the last 180 days.</li>
+<li><strong>Exclude</strong> all customers from the last <strong>30 days</strong>.</li>
+<li>The same audience can show each promotion's offer several times within a three-month span.</li>
+<li><strong>Always exclude</strong> purchasers and website visitors from middle-of-funnel retargeting ad sets. An ad set is a group inside a campaign that shares one audience and budget.</li>
+<li><strong>Exclude</strong> purchasers from bottom-of-funnel audiences as well. This keeps audiences from overlapping, meaning the same people are not in two places.</li>
+<li><strong>Remove</strong> bias audiences <span class="ex">(audiences that skew results)</span> unless retargeting for a new product or special offer.</li>
+<li>In the remarketing ad set, add <code>Purchased 180 days</code> as the ad exclusion.</li>
+<li>Existing customers can show as <strong>undefined</strong> in reporting <span class="ex">(the results screens)</span>.</li>
+<li>Without the <code>Purchased 180 days</code> audience defined there, Meta does not know who has already bought.</li>
+<li><strong>Set</strong> the <code>Purchased 180 days</code> audience before publishing.</li>
+</ul>
+</details><details class="part" id="advantage-shopping-and-catalog-campaigns"><summary><h2>Advantage+ shopping and catalog campaigns</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="advantage-shopping"><summary><h2>Advantage+ shopping</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Advantage+ is Meta's set of automated campaign and ad features. Advantage+ shopping campaigns are one of them.</li>
+<li>Advantage+ shopping campaigns take creatives <span class="ex">(ad images and text)</span> and a customer list.</li>
+<li>They use broad targeting and let Meta find buyers.</li>
+<li>When this was written, the cost was <strong>high</strong>, and significant budget was needed. Results were not yet proven for many advertisers.</li>
+<li>Advantage+ shopping campaigns (Facebook's version of Google's Performance Max, an automated campaign type) performed well for the author.</li>
+<li>They require a <strong>substantial budget</strong> to perform.</li>
+<li>In Advantage+ campaigns, Facebook asks the advertiser what <strong>percentage</strong> should go to retargeting and what percentage to prospecting.</li>
+<li>Facebook then assigns time to the retargeting audience.</li>
+</ul>
+</details><details class="part" id="advantage-catalog-ads"><summary><h2>Advantage+ catalog ads</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Advantage+ catalog ads were formerly called dynamic ads.</li>
+<li>They use machine learning <span class="ex">(software that learns patterns from data)</span> to scale ads automatically when a store has a broad range or a large volume of products.</li>
+<li>Each person is shown the products they are most likely to want, including people who viewed products on the site.</li>
+<li>The product catalog <span class="ex">(your full list of products with names, images and prices)</span> feeds dynamic ads.</li>
+<li>The catalog must be linked to the campaign, or the carousel <span class="ex">(a row of product cards)</span> cannot show the viewed products.</li>
+<li>Advantage+ catalog ads use the linked product catalog to show relevant products. They base this on each person's interests, intent <span class="ex">(signs they want to buy)</span> and actions.</li>
+<li>For dynamic remarketing, <strong>keep</strong> this option switched on.</li>
+</ul>
+</details><details class="part" id="remarketing-campaign-build"><summary><h2>Remarketing campaign build</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="campaign-level-principles"><summary><h2>Campaign-level principles</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>A Meta remarketing campaign built this way serves ads on Facebook, Instagram, Messenger and the Audience Network (Meta's partner apps and websites) from one setup.</li>
+<li>Meta adapts the single set of inputs to each placement's format. A placement is the spot where an ad appears.</li>
+<li>The remarketing campaign depends on the website-visitor and purchaser audiences and the product catalog built earlier.</li>
+<li><strong>Do not start</strong> it until those are in place.</li>
+<li>Manual sales setup is chosen over Advantage+ shopping because it gives precise control over who sees the ads.</li>
+<li>For remarketing, this control matters more than Meta's broader automated targeting.</li>
+<li><strong>Keep</strong> the Advantage+ audience switched to original audience options for remarketing.</li>
+<li>Advantage+ audience expands reach beyond the defined custom audiences. This breaks the control the campaign needs.</li>
+<li><strong>Keep</strong> Advantage placements on for remarketing. Advantage placements means Meta picks where ads show.</li>
+<li>The audience is narrow, and Meta places ads where these people are.</li>
+<li>Manual placements remain possible if you want to restrict the ads to a single platform.</li>
+<li><strong>Build</strong> the campaign as evergreen <span class="ex">(it keeps running)</span>: no spending limit and no end date. This lets it keep selling as the audience fills.</li>
+<li>The only regular change is the <strong>daily budget</strong>.</li>
+<li>The Meta pixel <span class="ex">(a tracking code on your store)</span> records website activity.</li>
+<li><strong>Select</strong> it under Tracking with Website events, so visitor audiences and purchase conversions <span class="ex">(sales Meta counts)</span> can be built.</li>
+<li><strong>Choose</strong> the main pixel created earlier.</li>
+<li>If several product catalogs are linked to the Meta account, the wrong one can be attached to the campaign.</li>
+<li><strong>Check</strong> the catalog dropdown <span class="ex">(the menu of catalogs)</span> and select the correct catalog.</li>
+<li>For a dynamic remarketing campaign, <strong>set</strong> Buying type to Auction <span class="ex">(bid-based buying)</span> and Campaign objective to Sales.</li>
+<li>Within Sales, the catalog sales result shows product-specific ads from the store catalog.</li>
+<li>Other Sales results, such as Messenger, Instagram, WhatsApp and calls, serve different goals.</li>
+<li>In a dynamic remarketing carousel, each viewer sees the products they most recently viewed on the store, pulled from the linked catalog.</li>
+<li>This is shown rather than a general selection.</li>
+<li>The audience and the catalog must be <strong>connected</strong> for the ads to match each person's browsing.</li>
+</ul>
+</details><details class="part" id="campaign-level-procedure"><summary><h2>Campaign level <span class="ex">(procedure)</span></h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>Log in to the Meta Ads account and click the green <strong>Create</strong> button.</li>
+<li>Keep Buying type on <strong>Auction</strong>.</li>
+<li>Set Campaign objective to <strong>Sales</strong>. If it is not preselected, click Sales.</li>
+<li>Click <strong>Continue</strong>.</li>
+<li>Choose <strong>Manual setup</strong> (manual sales campaign) instead of Advantage+ shopping campaign, then click Continue.</li>
+<li>Rename the campaign to a descriptive name, for example <code>Store Name Dynamic Remarketing Campaign</code>.</li>
+<li>Special ad categories: leave empty and scroll past. Special ad categories are topics Meta has extra rules for. Leave it empty unless the business falls under financial products and services, employment, housing, social issues, elections or politics.</li>
+<li>Campaign spending limits: <strong>leave empty</strong>, because the campaign is evergreen and runs until switched off manually.</li>
+<li><strong>Keep</strong> Advantage+ catalog ads switched on and select the product catalog. If several catalogs are linked to the account, pick the correct one from the dropdown.</li>
+<li>Set the Advantage campaign budget <span class="ex">(one budget Meta shares across the campaign's ad sets)</span> as the daily budget. Use <strong>10%</strong> of the Google Shopping daily budget. Google Shopping means Google's product ads.</li>
+<li>Keep Campaign bid strategy on <strong>Highest volume</strong>. The bid strategy is how Meta spends the budget to get results.</li>
+<li><strong>Leave</strong> time-of-day bidding and day-of-week scheduling at their defaults. Time-of-day bidding means paying more at certain hours.</li>
+<li><strong>Keep</strong> A/B testing off. A/B testing compares two versions against each other.</li>
+<li>Under Reporting, check that Existing customers shows <strong>Defined</strong>.</li>
+<li>If it does not, click the caret <span class="ex">(the small arrow)</span>, search for the audience <code>Purchased 180 days</code>, and select it.</li>
+</ol>
+</details><details class="part" id="ad-set-level-procedure"><summary><h2>Ad set level <span class="ex">(procedure)</span></h2><span class="pm">2 min</span></summary>
+<ol type="1">
+<li>Click <strong>New sales ad set</strong> in the left navigation and rename it, for example <code>Store Name Dynamic Remarketing Ad Set</code>.</li>
+<li><strong>Ignore</strong> the templates option.</li>
+<li>Set Performance goal to <strong>Maximize number of conversions</strong> and the conversion event to <strong>Purchase</strong>. The performance goal is what the ad set aims for. A conversion event is the action Meta counts as success.</li>
+<li>Under Show more settings, <strong>leave</strong> the attribution settings at default.</li>
+<li>Under Product set <span class="ex">(the group of products the ads can show)</span>, <strong>keep</strong> All products.</li>
+<li>Do not narrow by product category or any other breakdown.</li>
+<li>Under Budget and scheduling <span class="ex">(when ads run and how much they spend)</span>, do not set a future start date beyond immediate start. Set no end date and no spending limits. Leave everything at default.</li>
+<li>Under Audience controls <span class="ex">(the settings that choose who sees the ad)</span>, <strong>set</strong> the location to the country where you do business <strong>only</strong>.</li>
+<li>Do not add other criteria, and do not set a minimum age.</li>
+<li>Under Advantage+ audience, click <strong>Switch to original audience options</strong>.</li>
+<li>Keep location on your business country, age range at the default 18 to 65+, and gender on all genders.</li>
+<li>Leave Advantage detailed targeting <span class="ex">(demographics, interests, behaviors)</span> <strong>completely blank</strong>.</li>
+<li>Under Custom audiences, click Search existing audiences and add <code>Website visitors 180 days</code> as the included audience.</li>
+<li>Under Ad exclusions, add the <code>Purchased 180 days</code> audience.</li>
+<li>Make sure the checkbox that lets Meta reach beyond the custom audience when it predicts better performance stays <strong>unchecked</strong>. Meta may tick it automatically when you add the exclusion.</li>
+<li>Keep Placements on Advantage placements.</li>
+<li>Leave Show more options at default.</li>
+</ol>
+<ul>
+<li>Bidding objective conflict: the ad set procedure uses Maximize number of conversions with the Purchase event.</li>
+<li>An older 2020 source says to set the bidding objective to <strong>Reach</strong> (showing ads to as many people as possible), not to Conversions, for Facebook remarketing.</li>
+<li>Conversions would show ads only to the few people most likely to buy. That is too small for a remarketing audience.</li>
+<li>Example: with 1,000 website visitors from the last 30 days, Reach shows the ad to all 1,000.</li>
+<li>Conversions might show it to only about <strong>50</strong>.</li>
+<li><strong>Use Reach</strong> if the audience is small and the goal is to fill it.</li>
+<li><strong>Use</strong> Maximize number of conversions with Purchase when the audience is large enough to learn from purchases.</li>
+</ul>
+</details><details class="part" id="ad-level-procedure"><summary><h2>Ad level <span class="ex">(procedure)</span></h2><span class="pm">2 min</span></summary>
+<ol type="1">
+<li>Click <strong>New sales ad</strong> and rename it, for example <code>Store Name Dynamic Remarketing Ad</code>.</li>
+<li>Keep Partnership ad switched <strong>off</strong>. A partnership ad runs under a partner's page.</li>
+<li>Under Identity, confirm the correct Facebook page and Instagram account are linked, so the ads show your business profile.</li>
+<li>Set Format to <strong>Carousel</strong> and keep Multi-advertiser ads on. Multi-advertiser ads is Meta's option to show your ads together with other advertisers' ads.</li>
+<li>Leave Show more options at default.</li>
+<li>Under Add creative, choose <strong>Multiple products</strong> and ignore product categories.</li>
+<li>Select the linked catalog and set the card display to <strong>Single image</strong>. This shows one image per catalog item.</li>
+<li>Leave Edit creative at default.</li>
+<li>Keep Headline on the dynamic product name field. This pulls the product name from the product feed <span class="ex">(the file that lists your products)</span>.</li>
+<li>Product description: leave empty, or click the plus next to ad catalog feed to insert a feed field <span class="ex">(a data column)</span> such as price. Delete any field you do not want.</li>
+<li>Primary text: enter your text. Meta also generates AI rewrites as variations. Select the ones you like, and they will be tested alongside yours.</li>
+<li>Set Call to action to <strong>Shop now</strong>.</li>
+<li>Advantage+ creative: click Edit, toggle to All optimizations, click Save, and confirm it shows <strong>8 out of 8</strong> enhancements on. The default is 6 out of 8.</li>
+<li>Destinations <span class="ex">(where clicks lead)</span>: switch from Manual destination to <strong>Advantage destination</strong>.</li>
+<li>Enter the store URL. Set Display link <span class="ex">(the web address shown in the ad)</span> to the domain without https. A domain is your store address, such as yourstore.com.</li>
+<li>Leave Override catalog deep links <strong>off</strong>. Deep links open a specific page inside an app.</li>
+<li>Leave Languages <strong>off</strong>, since ads only show where you do business.</li>
+<li>Leave App <strong>blank</strong>.</li>
+<li>Under Tracking, select Website events and choose your main Meta pixel.</li>
+<li>Promo codes: optional. Only add a code that will always stay active in the store.</li>
+<li>Click <strong>Advanced preview</strong> and review the placements.</li>
+<li>Click <strong>Publish</strong>.</li>
+</ol>
+</details><details class="part" id="status-sequence-and-budget-changes"><summary><h2>Status sequence and budget changes</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>The campaign shows Processing under Delivery <span class="ex">(the column that shows whether ads are running)</span>.</li>
+<li>It then moves to In review. This can take about <strong>30 minutes</strong> or a few hours for the first campaign on the account.</li>
+<li>Once approved, it becomes Active. Impressions <span class="ex">(times an ad is shown)</span> can take a few days to start on a store with low traffic. They then continue daily as the audience fills.</li>
+</ol>
+<ul>
+<li>To change the budget later, open the campaign view in Meta Ads Manager (Meta's ad control screen). Click the pencil icon next to the daily budget, enter the new amount and publish.</li>
+<li>Keep the budget at <strong>10%</strong> of the current Google Shopping daily budget.</li>
+</ul>
+</details><details class="part" id="why-these-settings"><summary><h2>Why these settings</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Manual sales setup is chosen over Advantage+ shopping because it gives precise control over who sees the ads.</li>
+<li>Advantage+ audience stays on original audience options for remarketing, as described in the campaign-level principles above.</li>
+</ul>
+</details><details class="part" id="dynamic-product-ad-settings-and-ctr"><summary><h2>Dynamic product ad settings and CTR</h2><span class="pm">1 min</span></summary>
+<p>CTR means click-through rate, the share of viewers who click the ad.</p>
+</details><details class="part" id="facebook-dpa-remarketing"><summary><h2>Facebook DPA remarketing</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Send</strong> visitors back to the exact product page they viewed.</li>
+<li>Start with a <strong>2-day</strong> audience for people who visited the store recently.</li>
+<li>If the audience is too small, expand to 7, 14 or 28 days.</li>
+<li>Minimum audience size is <strong>100 people</strong>.</li>
+<li>If fewer than 100 people visit in the window, extend the time window, for example from 2 to 3 days.</li>
+<li>Daily budget starting point: about <strong>10%</strong> of the Google Shopping spend, for example 10 dollars with 100 dollars on Shopping.</li>
+<li>Until Facebook is consistently profitable, run <strong>only</strong> dynamic product ad remarketing.</li>
+<li>Shorter remarketing windows are more profitable.</li>
+</ul>
+</details><details class="part" id="audience-size-and-objective"><summary><h2>Audience size and objective</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>If the dynamic product ad audience is small, <strong>optimize</strong> for link clicks instead of website conversions. Optimize means telling Meta what result to aim for.</li>
+<li>This serves ads more often to people who click. That lifts the relevance score (Meta's rating of how well an ad fits its audience) and lowers CPC <span class="ex">(cost per click)</span>.</li>
+<li><strong>Split</strong> retargeting audiences, for example by add-to-cart versus product view, only when the audience is large enough. Split means divide into separate groups.</li>
+<li>A list of about <strong>1,000</strong> people is too small to split.</li>
+<li>A cookie audience <span class="ex">(people tracked by a small file stored in their browser)</span> above about <strong>10,000</strong> can support separate campaigns.</li>
+<li>When building a Facebook dynamic product ad retargeting audience for a Shopify store, <strong>enter</strong> the audience length in days in the audience settings.</li>
+<li>For most advertisers, <strong>30 days</strong> is a reasonable starting point. Adjust it by product price and sales cycle <span class="ex">(the time from first look to purchase)</span>.</li>
+<li>Improve audience duration: a higher product price supports a longer audience, a lower price a shorter one.</li>
+</ul>
+</details><details class="part" id="improving-dpa-ctr-procedure"><summary><h2>Improving DPA CTR <span class="ex">(procedure)</span></h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li><strong>Update</strong> dynamic product ads every <strong>two weeks</strong>.</li>
+<li>Improve audience duration: a higher product price supports a longer audience, a lower price a shorter one.</li>
+<li>Use <strong>dynamic ad text</strong> (ad text filled in from product data).</li>
+<li><strong>Optimize</strong> the product feed.</li>
+<li>Use <strong>ad overlays</strong> (text or graphics placed on top of an image).</li>
+<li>Use <strong>link clicks</strong> as the optimization target.</li>
+</ol>
+<ul>
+<li>With dynamic product ads, the advertiser has little direct control over CTR. It must be improved indirectly through the product feed, audience and creative settings. Creative means the ad's images and text.</li>
+</ul>
+</details><details class="part" id="placements-and-google-merchant-center"><summary><h2>Placements and Google Merchant Center</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Google Merchant Center is Google's product data tool. When its dynamic remarketing is disapproved <span class="ex">(rejected by Google)</span>, use Meta retargeting.</li>
+<li><strong>Select</strong> the Audience Network placement, which is suitable for remarketing. It is not suitable for cold traffic.</li>
+</ul>
+</details><details class="part" id="pattern-dynamic-product-remarketing-pattern"><summary><h2>Pattern: dynamic product remarketing <span class="ex">(pattern)</span></h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Show</strong> a carousel of the exact products the visitor viewed on the store.</li>
+<li>The ad text reminds them they have not finished checking out.</li>
+<li>It offers a <strong>percentage-off</strong> coupon code.</li>
+<li>The creative is pulled directly from the site.</li>
+<li>Example variant: a shopper who viewed three ovens sees those three ovens with a 10% coupon.</li>
+</ul>
+</details><details class="part" id="where-dpa-belongs"><summary><h2>where DPA belongs</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>In Facebook Business Manager (Meta's business account tool), <strong>create</strong> custom audiences for website visitors in the past 7, 14 and 30 days.</li>
+<li><strong>Create</strong> a remarketing campaign.</li>
+<li>Inside that campaign, create one ad set per audience and select that audience in each ad set.</li>
+<li>Place near-identical ads inside each ad set, changing some of the copy.</li>
+</ol>
+<ul>
+<li><strong>Use</strong> Facebook and Instagram dynamic product ads only for remarketing to past site visitors.</li>
+<li><strong>Do not use</strong> them for cold traffic <span class="ex">(new people who have never visited)</span> to the store until you have a proven system for that.</li>
+</ul>
+</details><details class="part" id="budget-share"><summary><h2>Budget share</h2><span class="pm">1 min</span></summary>
+</details><details class="part" id="share-of-the-total-budget"><summary><h2>Share of the total budget</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Facebook remarketing should get about <strong>10 percent</strong> of the total ad budget.</li>
+<li>Example: if Google Shopping gets $30 per day, Facebook remarketing gets about $3 per day.</li>
+<li>The daily budget for a Meta remarketing campaign should be <strong>10%</strong> of the daily budget of your Google Shopping campaigns.</li>
+<li>Example: a $50 per day Google Shopping budget means a $5 per day Meta budget.</li>
+<li><strong>Allocate</strong> about <strong>10%</strong> of the budget to middle-of-funnel and bottom-of-funnel retargeting.</li>
+<li>This is especially true once the account has reached about <strong>100 purchases</strong>.</li>
+<li><strong>Keep</strong> cold interest targeting as the main strategy. Treat retargeting as a share of the budget, not the whole budget.</li>
+</ul>
+</details><details class="part" id="conditions-based-on-return"><summary><h2>Conditions based on return</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>ROAS <span class="ex">(return on ad spend, sales divided by ad cost)</span> below <strong>1x</strong> means Facebook retargeting should be reduced or ended. 1x means you earn back exactly what you spend.</li>
+<li>Above 1x, you can keep retargeting but cap its share of the total budget.</li>
+<li>For lost visitors <span class="ex">(people who left without buying)</span>, use a Facebook dynamic product ad campaign for remarketing.</li>
+<li>Use a small share of the budget, for example about $200 of $300 per month in the 90/10 split. A 90/10 split divides the budget into 90 for new people and 10 for retargeting.</li>
+<li>The Facebook retargeting spend should not <strong>oversaturate</strong> people with ads <span class="ex">(show them too many)</span>. Too many remarketing impressions lower returns.</li>
+<li>A small budget of <strong>$20 to $30 per day</strong>, split between Facebook and Google remarketing, is a good way to bring back visitors who already showed interest.</li>
+<li>Remarketing is the most profitable spend early on.</li>
+<li>Keep retargeting campaigns to people who interacted with ads small. The example given has a maximum budget of <strong>5 dollars</strong>.</li>
+<li>Run retargeting for every traffic source <span class="ex">(where visitors come from, such as Google or Facebook)</span> that engages with the ads.</li>
+<li>Thank-you video ad <span class="ex">(an ad video that thanks the buyer)</span> for new customers only: budget of about <strong>5 dollars per day</strong>.</li>
+<li>Filming and creating the video takes about <strong>1 to 2 hours</strong>.</li>
+<li><strong>Use</strong> a simple phone-shot video thanking the customer and restating the shipping time.</li>
+</ul>
+</details><details class="part" id="how-the-numbers-differ"><summary><h2>How the numbers differ</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The share of budget varies by source.</li>
+<li>About <strong>10%</strong> of total budget (2020).</li>
+<li>About <strong>10%</strong> of Google Shopping spend (2022).</li>
+<li>About <strong>10%</strong> of the Google Shopping daily budget <span class="ex">(current remarketing setup)</span>.</li>
+<li>About <strong>10%</strong> for middle and bottom funnel once the account reaches about 100 purchases.</li>
+<li>Use the <strong>10% rule</strong> as the starting point in every case. Then adjust by ROAS.</li>
+</ul>
+</details><details class="part" id="frequency-fatigue-and-window-checks"><summary><h2>Frequency, fatigue and window checks</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Check <strong>frequency</strong>, which is how many times the same person sees your ad on average. When frequency is about <strong>five or higher</strong>, the same person sees the ad five times, which lowers performance and can lead to negative reports <span class="ex">(people flagging the ad as unwanted)</span>. Change the creative <span class="ex">(the ad itself: image, video or text)</span>, the angle <span class="ex">(the reason or message behind the ad)</span> or the proof <span class="ex">(evidence such as reviews)</span> rather than repeating the ad.</li>
+<li>Bottom-of-funnel (BOF) retargeting, meaning ads for people close to buying, can have very high frequency, with people seeing the same ad around <strong>10 times</strong>, which annoys them. Set frequency caps <span class="ex">(limits on how often one person sees an ad)</span> or manage the audience budget to avoid repetition.</li>
+<li>Buyers often need <strong>six to eight contacts</strong> with a product before their first purchase, so repeated ad exposure can still turn viewers into buyers, even for products that seem saturated <span class="ex">(the market has seen the same ads a lot)</span>.</li>
+<li>For add-to-cart audiences <span class="ex">(people who put an item in their basket but did not buy)</span>, check results <strong>every one to two days</strong>, because they can stop delivering sales suddenly. Turn off the audience, let others run, and turn it back on later. Test windows <span class="ex">(how many days back the audience looks)</span> of 30, 60, 90 and 180 days.</li>
+<li>Lookalike audiences <span class="ex">(new people who look like your existing customers)</span> and retargeting audiences fill slowly after creation, so a new audience can show low numbers for a while. To test the problem, create a new <strong>30-day</strong> website visitor audience <span class="ex">(people who visited your site in the last 30 days)</span> and compare its size with the old one.</li>
+<li>A Meta (Facebook and Instagram) audience created later than the same Google audience shows fewer people, even with the same window, because audiences need time to fill. Give a new audience <strong>time</strong> before judging its size.</li>
+</ul>
+</details><details class="part" id="creative-rotation-and-promotions"><summary><h2>Creative rotation and promotions</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>For retargeting <span class="ex">(showing ads again to people who already showed interest)</span>, <strong>rotate several different creatives</strong> (ads such as reviews, offers and testimonial videos) for the same audience, so people do not tire of the same content. One retargeting audience of around 100k (100,000 people) was mentioned with about 10 creatives added to it.</li>
+<li>Warm audiences <span class="ex">(people who visited or engaged recently)</span> from the last 180 days can see a short carousel <span class="ex">(a row of swipeable images)</span> or static ad <span class="ex">(a still image)</span> that offers a free bonus product with a mattress or similar main purchase. Bonus-gift angles work well as one of the <strong>three to four ads</strong> in the static remarketing set <span class="ex">(a group of still-image ads shown to the same audience)</span>, because they give a reason to buy without a direct discount.</li>
+<li>Build the thank-you audience <span class="ex">(people who just bought)</span> from customers who purchased in the <strong>last 7 days</strong>, and the catch-all audience <span class="ex">(a wide group of all past buyers)</span> from customers in the last 180 days. Both are free to set up in the Facebook account.</li>
+<li>A Facebook thank-you video ad, shown only to new customers, needs a budget of about <strong>5 dollars per day</strong>. Budget is the money you set to spend each day.</li>
+</ul>
+</details><details class="part" id="starting-and-restarting-campaigns"><summary><h2>Starting and restarting campaigns</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Start a small Facebook remarketing campaign <span class="ex">(a campaign is one ad project with its own goal and budget)</span> early, but it needs <strong>clicks from Google</strong> first to have enough visitors to retarget.</li>
+<li>If a remarketing campaign still does not spend <span class="ex">(spend is the money the ads actually use)</span>, <strong>rebuild it</strong>. (Procedure, 2024.)
+<ol type="1">
+<li><strong>Leave the existing remarketing campaign running</strong> or switch it off later, without changing anything else.</li>
+<li>In Meta, <strong>create a new remarketing campaign</strong> with the same settings as the old one.</li>
+<li>Use a <strong>30-day audience window</strong> for it <span class="ex">(the number of days back the audience looks)</span>, since the store's traffic is large enough to fill it.</li>
+<li><strong>Check whether the new campaign starts spending.</strong> If it still does not spend, <strong>rebuild the campaign again</strong>.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="placements-page-followers-and-reporting"><summary><h2>Placements, page followers and reporting</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The Facebook Business Page <span class="ex">(your public company page on Facebook)</span> follower list shows <strong>counts, not names</strong>, and that is normal. Facebook remarketing campaigns for the full product catalog <span class="ex">(your complete list of products)</span> should be running.</li>
+<li>Page and Instagram engagement audiences <span class="ex">(people who liked, commented or interacted with your page or account)</span> can reach shoppers Facebook can no longer track on the website since iOS 14 (an Apple phone update that limits tracking). <strong>Use a 180-day window.</strong></li>
+<li>Retargeting based on video watch depth <span class="ex">(how much of a video people watched)</span> still works after iOS, though fewer people are trackable.</li>
+</ul>
+</details><details class="part" id="store-audience-setup-summary-of-settings"><summary><h2>Store audience setup: summary of settings</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Facebook: Audiences &gt; Create custom audience &gt; Website, to build website visitor lists for <strong>7, 30 and 180 days</strong>. Use the 7-day and 30-day lists for dynamic remarketing <span class="ex">(ads that show each visitor the products they viewed)</span> and the 180-day list for monthly promotions. The 7-day and 30-day lists cost nothing to keep populated, so <strong>leave them running</strong>.</li>
+<li>Purchaser audiences from the website Purchase event <span class="ex">(a signal the store sends when someone buys)</span>: <strong>a 7-day list for exclusions</strong> (leaving people out of an audience) and a 180-day list for promotions. Once the store is linked to Facebook, purchases send the data automatically.</li>
+<li>Instagram business profile: Create custom audience &gt; Instagram business profile, select the Instagram account and set engagement criteria over 180 days. Name it for the purpose, for example <code>Instagram engagement 180 days</code>.</li>
+<li>Engagement audiences: create a Facebook page engagement audience with a 180-day window, <strong>choosing the correct Page</strong> for each business in Business Manager (Meta's tool for managing pages and ad accounts).</li>
+</ul>
+</details><details class="part" id="older-advice-2019-to-2022-marked"><summary><h2>Older advice (2019 to 2022), marked</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>create custom audiences for website visitors in the past <strong>7, 14 and 30 days</strong>, then create one ad set per audience. An ad set is a group of settings and audiences inside a campaign.</li>
+<li><strong>reuse audiences, not ad sets.</strong> Custom audiences are free to create, update automatically, and are selected inside new ad sets in each campaign.</li>
+<li>use Facebook and Instagram dynamic product ads <span class="ex">(ads that show products from your catalog automatically)</span> <strong>only for remarketing</strong> to past site visitors.</li>
+<li>remarketing budget of about <strong>10%</strong> of the total ad budget.</li>
+<li>set the remarketing bidding objective to <strong>Reach</strong>, not Conversions. (The objective is the goal of a campaign. Reach means how many people see the ad. Conversions means sales or sign-ups.)</li>
+<li>The Facebook Business Page follower list shows <strong>counts, not names</strong>.</li>
+<li>retargeting below <strong>1x ROAS</strong> should be reduced or ended. ROAS <span class="ex">(return on ad spend)</span> is the revenue you get back for each dollar spent, so 1x means you get back what you spent.</li>
+<li>dynamic product ad remarketing with the 2-day to 28-day audience expansion <span class="ex">(the audience window widens from 2 days up to 28 days)</span> and the <strong>100-person minimum</strong>.</li>
+<li><strong>run only dynamic product ad remarketing</strong> until Facebook is consistently profitable <span class="ex">(making money)</span>.</li>
+<li><strong>avoid oversaturating</strong> people with ads <span class="ex">(showing the same people too many ads)</span>.</li>
+<li>small budget of <strong>$20 to $30 per day</strong>, split between Facebook and Google remarketing.</li>
+</ul>
+</details><details class="part" id="funnel-stages-and-audience-temperature"><summary><h2>Funnel stages and audience temperature</h2><span class="pm">1 min</span></summary>
+<p>The funnel is the path a person takes from first seeing your brand to buying. Audience temperature describes how close people are to buying.</p>
+<ul>
+<li><strong>Cold audiences</strong> have not interacted yet and are reached through <strong>prospecting</strong> (showing ads to new people who do not know you).</li>
+<li><strong>Middle-of-funnel (MOF)</strong> audiences have engaged with ads, the page or the site, such as likes, comments, post engagement or site visits, without high-intent actions <span class="ex">(strong signs they want to buy)</span>.</li>
+<li><strong>Bottom-of-funnel (BOF)</strong> audiences have taken high-intent actions such as add to cart, initiate checkout or purchase.</li>
+</ul>
+</details><details class="part" id="video-view-audiences"><summary><h2>Video view audiences</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Build separate <strong>video-view custom audiences</strong> (lists of people who watched your videos) at the <strong>25%, 75% and 95%</strong> watch thresholds <span class="ex">(how much of a video they watched)</span>, each with its own window.</li>
+<li>The <strong>25% audience</strong> is the usual retargeting base.</li>
+<li>Viewers at <strong>50% and above</strong> are the preferred seeds for lookalikes <span class="ex">(the starting group Meta copies to find similar people)</span>.</li>
+<li>Video audiences can be built from people who watched a set share of your videos, such as 95% or 75%, <strong>within a chosen number of days</strong>. Use this for video ad campaigns.</li>
+</ul>
+</details><details class="part" id="website-visitor-audiences"><summary><h2>Website visitor audiences</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The website audience option only shows pixel events <span class="ex">(signals sent by the tracking code)</span>, so the <strong>pixel must be connected first</strong>. The pixel is a small code on your store that reports visits and purchases to Facebook.</li>
+<li>For a retargeting audience of website visitors without buyers:
+<ol type="1">
+<li><strong>Create a Website audience</strong> from pixel events with a 90-day window.</li>
+<li><strong>Exclude the purchase audience</strong> with the same 90-day window.</li>
+</ol></li>
+<li>When creating a website custom audience, the pixel is chosen at the top of the dialog <span class="ex">(the pop-up box)</span>, and URL rules <span class="ex">(rules that match web addresses)</span> only use data from that pixel. <strong>Choose the correct pixel first</strong>, or the audience will be empty even if the URL rule is right.</li>
+<li>The dropdown "Include people who meet ANY of the following criteria" controls how several rules combine. ANY includes people who match at least one rule, so <strong>check this setting</strong> whenever you stack more than one condition <span class="ex">(add several conditions together)</span>.</li>
+<li>Create a website custom audience:
+<ol type="1">
+<li>In Audiences, click Create a Custom Audience and <strong>choose Website</strong>.</li>
+<li>Under People who visited specific web pages, <strong>choose URL</strong> and an operator <span class="ex">(a comparison word)</span> such as contains, equals or doesn't contain.</li>
+<li>For Shopify product pages (Shopify is the store software), <strong>enter products</strong> as the URL value.</li>
+<li><strong>Set the time range</strong>, for example the last 7 days, using Further refine by... in the past X days.</li>
+<li><strong>Add a second URL condition</strong> to narrow the audience, for example product pages that also viewed a content page.</li>
+<li>Use <strong>Include More People or Exclude People</strong> as needed.</li>
+<li>Name the audience, optionally add a description, and <strong>click Create Audience</strong>.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="customer-list-audiences"><summary><h2>Customer list audiences</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Create a customer list audience:
+<ol type="1">
+<li><strong>Accept Facebook's terms for customer files.</strong></li>
+<li>Either paste the customer details in or <strong>upload a CSV file</strong> (a spreadsheet saved as plain text with commas between the values).</li>
+<li><strong>Use the customer file template exported from Shopify.</strong> It does not include lifetime value <span class="ex">(the total money one customer spends over time)</span>.</li>
+<li>Include <strong>at least first name, last name and email</strong>. Add zip code <span class="ex">(postal code)</span> and other fields if you have them, because more matching fields improve results.</li>
+</ol></li>
+</ul>
+</details><details class="part" id="page-engagement-audiences"><summary><h2>Page engagement audiences</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Page engagement audiences include people who engaged with your Page, any post or ad, or clicked any call-to-action button <span class="ex">(the button that asks people to act)</span>. The example uses a window of <strong>365 days</strong>.</li>
+</ul>
+</details><details class="part" id="audiences-overview"><summary><h2>Audiences overview</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>In Facebook Ads Manager (Meta's control panel for ads), go to Audiences. There are three options:
+<ul>
+<li><strong>Create a Custom Audience</strong>: from customer list, website traffic, mobile app, Facebook page or video.</li>
+<li><strong>Create a Lookalike Audience</strong>: from page likers, conversion pixels or existing custom audiences.</li>
+<li><strong>Create a Saved Audience</strong>: from demographics <span class="ex">(age, gender and place)</span>, interests and behaviours.</li>
+</ul></li>
+<li>Facebook is said to hold up to about <strong>4,000 data points</strong> per user <span class="ex">(single facts about a person, such as an age or a like)</span>, and lookalike matching draws on that information.</li>
+</ul>
+</details><details class="part" id="retargeting-campaign-timing-and-structure"><summary><h2>Retargeting campaign timing and structure</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Start retargeting only after the ads have run for <strong>more than two weeks</strong>, so the pixel and ad account <span class="ex">(the account that pays for ads)</span> hold enough warm-audience data.</li>
+<li><strong>ABO</strong> (Ad Set Budget Optimization, where the budget is set on each ad set) with one ad set per retargeting audience is the usual structure.</li>
+<li><strong>CBO</strong> (Campaign Budget Optimization, where one budget covers the whole campaign) can be <strong>tested as an alternative</strong> if it performs better.</li>
+</ul>
+</details><details class="part" id="retargeting-budget"><summary><h2>Retargeting budget</h2><span class="pm">1 min</span></summary>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Budget</th>
+<th>When it applies</th>
+<th>IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source C</td>
+<td>$10 to $15 per day</td>
+<td>Typical retargeting budget, because retargeting audiences are small and higher budgets would show the same ads repeatedly.</td>
+<td></td>
+</tr>
+<tr>
+<td>Source B</td>
+<td>Test budget of 20 USD per day</td>
+<td>Test campaign in the setup below.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</details><details class="part" id="retargeting-creative"><summary><h2>Retargeting creative</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Retargeting ads work best as UGC-style images <span class="ex">(made to look like real customer content)</span> or testimonial videos <span class="ex">(customer praise videos)</span> with an added offer such as <strong>10% or 20% off</strong>. Warm audiences already know the product and mainly need trust and a reason to buy.</li>
+</ul>
+</details><details class="part" id="step-by-step-retargeting-traffic-campaign-with-a-static-image-ad"><summary><h2>Step-by-step: retargeting traffic campaign with a static image ad</h2><span class="pm">1 min</span></summary>
+<ol type="1">
+<li>In Ads Manager, create a new campaign and <strong>choose the objective Traffic</strong> (send people to a website).</li>
+<li>Enter a <strong>campaign name</strong>.</li>
+<li><strong>Turn off Create Split Test</strong> (a test that compares two versions) and turn off Campaign Budget Optimization (CBO).</li>
+<li>Set the daily budget (test budget: <strong>20 USD</strong>).</li>
+<li>Set the bid strategy to <strong>Lowest cost</strong> (Meta aims for the most results for your money). No bid cap <span class="ex">(a maximum price you allow per result)</span> or cost cap <span class="ex">(an average price limit per result)</span> is used in this setup.</li>
+<li><strong>Create the ad set</strong> and name it to describe the audience, for example the 7 to 14 day product viewers.</li>
+<li>Set the destination to Website. <strong>Do not turn on dynamic creative</strong> (Meta automatically mixing ad parts), and do not add an offer <span class="ex">(a discount or deal attached to the ad)</span>.</li>
+<li>Under audience, add the custom audience Product Viewers 14 Days and <strong>exclude Product Viewers 7 Days</strong> (leave those people out). This gives an audience of people who viewed products 7 to 14 days ago.</li>
+<li><strong>Set location to the target country</strong>, and skip extra demographics <span class="ex">(extra age or gender limits)</span>.</li>
+<li><strong>Keep placements on Automatic</strong> (placements are where your ad appears, and Meta chooses them).</li>
+<li>Set optimization for ad delivery to <strong>Link clicks</strong> (clicks that take people to your website).</li>
+<li><strong>Leave the schedule running continuously</strong>, unless it is a time-limited promotion that needs a start and end date.</li>
+<li><strong>Create the ad</strong>: choose the Facebook page and the connected Instagram account so the ad can show on Instagram.</li>
+<li>Choose a <strong>single image or video</strong>, and add the media <span class="ex">(your image or video file)</span>.</li>
+<li><strong>Fill in primary text</strong> (the main ad text), headline and description, then set the destination website URL, display link <span class="ex">(the short web address shown on the ad)</span> and call to action <span class="ex">(the button)</span>.</li>
+<li>Facebook pixel tracking is loaded automatically from the store. <strong>Click Confirm</strong> to finish.</li>
+</ol>
+</details><details class="part" id="lookalike-audience-principle"><summary><h2>Lookalike audience principle</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A <strong>lookalike audience</strong> (a new group of people who share traits with a source group) <strong>reaches new people</strong> who share characteristics with an existing source audience: customers, purchasers, video viewers, website visitors or engagers <span class="ex">(people who interacted)</span>.</li>
+<li>It is created from <strong>custom audiences only</strong>.</li>
+<li>It is tested inside a campaign by <strong>selecting it at ad-set level</strong>.</li>
+</ul>
+</details><details class="part" id="creating-a-lookalike-audience"><summary><h2>Creating a lookalike audience</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Create it from the Audiences section, or from a custom audience's actions menu <span class="ex">(the list of options)</span> by <strong>choosing Create lookalike</strong>.</li>
+<li><strong>Choose the source</strong> and the countries, for example United States, United Kingdom, Australia or Canada.</li>
+<li><strong>Select a percentage range</strong>: 0-2%, 2-4%, 4-6%, 6-8% or 8-10%. (A smaller percentage means people more similar to the source.) The 5 ranges give audiences of about 3 to 5 million people.</li>
+</ul>
+</details><details class="part" id="lookalike-source-quality"><summary><h2>Lookalike source quality</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Strong lookalike sources <span class="ex">(the groups Meta copies)</span> include <strong>50%+ video viewers</strong> (people who watched at least half of a video), 30-day website visitors, Facebook and Instagram engagers, and purchasers.</li>
+<li>Buyer lookalikes are the highest quality, so <strong>0-1% and 1-2%</strong> lookalikes of purchasers are recommended.</li>
+</ul>
+</details><details class="part" id="testing-lookalikes"><summary><h2>Testing lookalikes</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Test a lookalike audience in an audience testing campaign by <strong>adding it at ad-set level</strong> instead of any interest targeting <span class="ex">(targeting by hobbies or topics)</span>. Winning creatives <span class="ex">(the ads that perform best)</span> go inside.</li>
+<li><strong>Add countries at ad-set level</strong> if they were not set in the lookalike. Otherwise the ad set is identical to a normal interest ad set.</li>
+</ul>
+</details><details class="part" id="advantage-shopping-and-remarketing-measurement"><summary><h2>Advantage+ Shopping and remarketing measurement</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>A new Meta Advantage+ Shopping campaign (Meta's automated shopping campaign type) was launched with a starting budget of $20/day and an expected target of <strong>more than 10x ROAS</strong> (ROAS is revenue divided by ad spend).</li>
+<li>Updated creative for Meta remarketing ads was measured against a 90-day trailing CTR baseline of <strong>5%</strong>, with the goal of raising CTR. CTR <span class="ex">(click-through rate)</span> is the share of people who see the ad and click it. A trailing baseline is the average of past results, used as the starting point for comparison.</li>
+</ul>
+</details><details class="part" id="further-details"><summary><h2>Further details</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Hot Traffic Dynamic campaign settings: buying type <strong>Auction</strong> (you bid for each ad space), objective Catalog Sales <span class="ex">(the goal is selling products from your catalog)</span>, and campaign budget optimization turned on. <strong>A built product catalog is required</strong> before it can run.</li>
+<li>Retargeting campaign structure: <strong>create a Sales campaign</strong> with manual setup and ABO budget, add one ad set per custom audience (middle-of-funnel video views, page engagement, Instagram engagement, website visitors), and place a start date of next day at midnight.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/09-meta-and-facebook-ads/18-retargeting-custom-audiences-and-lookalikes/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../09-meta-and-facebook-ads/17-scaling-winning-ad-sets-and-campaigns/"><span class="k">&larr; Previous</span><span class="v">Scaling winning ad sets and campaigns</span></a><a class="nx" href="../../09-meta-and-facebook-ads/19-lead-generation-engagement-and-audience-building/"><span class="k">Next &rarr;</span><span class="v">Lead generation, engagement and audience building</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

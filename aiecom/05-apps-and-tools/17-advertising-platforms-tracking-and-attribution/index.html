@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Advertising platforms, tracking and attribution | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 5.17: Advertising platforms, tracking and attribution.">
+<link rel="canonical" href="https://dlichters.com/aiecom/05-apps-and-tools/17-advertising-platforms-tracking-and-attribution/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Advertising platforms, tracking and attribution | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 5.17: Advertising platforms, tracking and attribution."><meta property="og:url" content="https://dlichters.com/aiecom/05-apps-and-tools/17-advertising-platforms-tracking-and-attribution/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">5. Apps and tools</a> &rsaquo; <a href="../../../ecom/05-apps-and-tools/17-advertising-platforms-tracking-and-attribution/">Plain version</a></div><h1>5.17 Advertising platforms, tracking and attribution</h1><article><h2 id="ad-accounts-ownership-and-risk">Ad Accounts, Ownership and Risk</h2>
+<ul>
+<li>A personal ad account has no dedicated support, and once it is banned it is gone. An agency account is the safer choice for scaling, because the agency handles support and replacement accounts. [L0351.033]</li>
+<li>The Kuro Network client portal menu lists: Ad Accounts, Request Top-Up, Funds Transfer, Request BM Transfer, Request Unban, Request BM Verification and Support Chat. [L0351.055]</li>
+<li>Meta Business Manager (business.facebook.com) is free and holds the Facebook page, Instagram page, pixel and audiences. Audiences are created there under the menu Audiences. [L0649.056]</li>
+<li>A Meta Ads account and a Google Ads account, each with remarketing audiences built, are required before a holiday promotion starts. [L1221.009]</li>
+<li>Older advice (2020): to link Instagram to a Facebook Business account without mixing personal profiles, log in to Facebook Business Manager &gt; Settings &gt; Assets &gt; Add Instagram Account, and select only your business Instagram account. [L0245.073]</li>
+<li>Microsoft Advertising is Bing's paid advertising platform and needs its own account. It is separate from Bing Webmaster Tools, which is free and only reports on organic search performance. [L0303.015]</li>
+<li>Older advice (2020): Bing offered a start credit of about 75 to 100 USD for new advertisers. Search for the Bing credit offer and sign up through the Microsoft link to claim it. [L1277.068]</li>
+</ul>
+<h2 id="google-ads-tools-and-setup">Google Ads Tools and Setup</h2>
+<ul>
+<li>Google Ads management tools: Keyword Planner for keyword research, Google Ads Settings for campaign configuration, Google Shopping for product listing ads, and AdWords Express for simplified ad creation. [L0020.005]</li>
+<li>The native Google Ads dashboard is free and needs no add-on. Supermetrics is an add-on that should be treated as paid, so check current pricing before budgeting for it. Start with the native dashboard and add Supermetrics when a combined multi-platform sheet is needed. [L1236.025]</li>
+<li>To create a native Google Ads dashboard:
+<ol type="1">
+<li>Open the native Dashboards feature in Google Ads and create a new dashboard, which starts blank. [L1236.027]</li>
+<li>Add a widget, for example a chart of conversions by device. [L1236.027]</li>
+<li>Resize the widget as needed. [L1236.027]</li>
+<li>Add further widgets, such as conversion rate by device, geographic performance by state or a campaign view. [L1236.027]</li>
+<li>Click Save. [L1236.027]</li>
+<li>Return to the saved dashboard at any time to check metrics and bid adjustments without navigating through campaigns. [L1236.027]</li>
+</ol></li>
+<li>Google Shopping competitor check: open the Google Analytics Content report (left sidebar) to see the store pages that get the most traffic. Search those top product pages in Google Shopping to check what competitors charge. [L1090.061]</li>
+<li>Older advice (2021): Microsoft Advertising (Bing) can import Google Ads campaigns. Bing does not group multiple sellers of the same product in one listing, so the price comparison that Google shows does not happen there. [L1090.063]</li>
+</ul>
+<h2 id="google-analytics-ga4-and-tracking-foundations">Google Analytics, GA4 and Tracking Foundations</h2>
+<ul>
+<li>Google Analytics is a tracking tool that monitors which pages visitors view, which pages they exit from, and how long they stay on the website. [L0293.006]</li>
+<li>Google Analytics 4 (GA4) tracks website traffic, conversions, user behavior, and creates remarketing audiences. It replaced Universal Analytics. [L0274.032]</li>
+<li>Universal Analytics has been phased out in many accounts, so stores should use GA4. Migration from Universal Analytics to GA4 is done through the GA4 migration lesson in the analytics module, and analytics setups should be updated to GA4. [L1114.040] (2023)</li>
+<li>Shopify requires GA4 to be connected through the Google channel app. Google removes the old Universal Analytics connection on July 1. Do not rely on the old Universal Analytics entry for tracking. [L0723.014]</li>
+<li>Conversion Pixel App: a Shopify app that manages the conversion tracking pixel required to link customer purchases to Google Ads campaigns for attribution. [L0032.005]</li>
+<li>Google and YouTube app: a free Shopify app for connecting Google Analytics to the store. Its free plan is enough for this purpose, and it is now owned by Google LLC. [L0722.008]</li>
+<li>To link Google Analytics to a Shopify store:
+<ol type="1">
+<li>Enter the store URL in the Google Analytics setup. If Google recognizes a Shopify store, it offers Install with Shopify. Click Next to see the instructions. [L0722.002]</li>
+<li>In the Shopify admin, search the Shopify App Store for the Google and YouTube app and choose the free plan. [L0722.002]</li>
+<li>Click Install. [L0722.002]</li>
+<li>After installation, the app appears under Sales Channels in the Shopify admin. [L0722.002]</li>
+<li>In Google Analytics, copy the Tag ID of the data stream. [L0722.002]</li>
+<li>In the Google and YouTube app, follow the Google Analytics connection option one, which uses the guided Shopify video. Do not use option two, because it is more complex. [L0722.002]</li>
+<li>Paste the Tag ID where the setup asks for it. [L0722.002]</li>
+<li>Open the app's Settings and confirm that only one Google Analytics property is connected. [L0722.002]</li>
+</ol></li>
+<li>Connect neither Google Ads nor Google Merchant Center through the Google and YouTube app. That app is meant solely for linking Google Analytics. If either Google Ads or Merchant Center appears as connected under that app's Settings, remove the connection. [L0722.009]</li>
+<li>The person who links Google Analytics to a Shopify store through the Google and YouTube app needs administrator rights on that Google Analytics account. Without them, the guided connection cannot be completed. [L0722.013]</li>
+<li>The Google channel setup offers to turn on Google emails and to manage Merchant Center from there. Do not activate these during the Google Analytics connection. Set up Merchant Center in its own later step. [L0723.018]</li>
+<li>Use the feed app's integration for the Google tracking tag. If tracking fails after moving from Universal Analytics to GA4, contact that app's support through its help button with a screenshot. [L1094.058] (2023)</li>
+<li>Keep GA4's default user engagement event settings when integrated directly with Shopify, since changing them could affect Shopify analytics. Default user engagement events count visitors after about 10 seconds on the site. [L1094.059] (2023)</li>
+<li>Google Analytics real-time view shows how many people are on the site at a given moment. Open it during a large influencer post to see the traffic it generates. [L0790.023]</li>
+<li>Check traffic platform by platform in Google Analytics (for example Pinterest traffic under Traffic sources) to see whether traffic and sales come from that platform before judging its cost per click. [L0665.045] (2022)</li>
+<li>The Facebook Pixel should be installed on the store before running paid traffic, so that analytics data accumulates in advance. Business Manager at business.facebook.com is free to set up and is where the pixel and analytics are managed. [L1243.015]</li>
+<li>Meta Pixel Helper is a browser extension used to check whether the Meta pixel is installed and firing correctly on a store's pages. [L0984.001]</li>
+<li>Facebook Pixel Helper is a free Chrome extension that stays in the top-right area of the browser. It shows which Facebook Pixel events fire on any website you open, which lets you examine competitor tracking. [L1243.006]</li>
+<li>Before enabling Microsoft UET tracking through the feed app, check the Shopify store for any existing conversion tracking or UET scripts. If you are unsure about an existing script or tag, contact the app's support first. The support link is at the bottom of the setup page under "Get support". [L1036.015]</li>
+</ul>
+<h2 id="meta-ads-creation-bulk-building-and-testing">Meta Ads: Creation, Bulk Building and Testing</h2>
+<ul>
+<li>Facebook Power Editor is a tool for building and editing many ads in bulk. The lesson places it after the audience and message work, which should be finished first. [L0643.063]</li>
+<li>AdEspresso or Qwaya (also called Choir) generates split test variations of text, image and color, and can set up 240 or more variations in about two minutes. Use them for split testing, especially when the monthly ad spend is around $2,000 or more. [L0643.051]</li>
+</ul>
+<h2 id="ad-manageai-media-buying-automation">Ad Manage.ai: Media Buying Automation</h2>
+<ul>
+<li>Ad Manage.ai automates media buying through batch ad launching, integrated Meta Ads Manager, AI-assisted creative generation, and cross-platform automation rules. It integrates with Dropbox, Google Drive, Frame.io, SharePoint, AIR, Focal, Shade, Iconik, Brandfolder, Canva, Figma, YouTube, and TikTok asset libraries. The platform saves 20-40 hours per month on media management tasks. [L0207.001]</li>
+<li>Pricing: a 40% discount on the first month is available through partnership. The Essential plan is recommended for starting. The In-House Plus plan offers advanced automation features including cross-platform scaling. [L0207.012]</li>
+<li>Launch procedure:
+<ol type="1">
+<li>Navigate to the Launcher section and select your ad account. [L0207.003]</li>
+<li>Click the blue launch button and select "Select media to use". [L0207.003]</li>
+<li>Choose a content source: Dropbox, Google Drive, Frame.io, YouTube, TikTok asset library, or other integration. [L0207.003]</li>
+<li>Paste a shareable link or browse folders, then select specific files or videos to import. [L0207.003]</li>
+<li>Either add creatives to an existing ad set (if 20 or fewer new ads) or duplicate an existing ad set and rename it. [L0207.003]</li>
+<li>Select launch status: Active (starts spending immediately) or Paused (delays launch). [L0207.003]</li>
+<li>Load a saved copy template or create new copy with primary text, headlines, description, call-to-action, and URL parameters including UTM tracking. [L0207.003]</li>
+<li>Review all settings and click "Launch Ads". [L0207.003]</li>
+<li>Wait approximately one minute for the launch to complete. [L0207.003]</li>
+</ol></li>
+<li>Ads launch in approximately one minute on average in Ad Manage.ai, compared to longer sequential steps and upload times in Meta's native Ads Manager. [L0207.005]</li>
+<li>Click 'Edit in Table Mode' to assign different settings to individual ads within the same batch launch. Card view applies identical settings to all ads. Table Mode lets you customize targeting, budget, or other fields per ad. [L0207.014]</li>
+<li>The Existing Ads tab in Media Library displays all ads currently in your connected Meta ad account, whether active, paused, or inactive. View their total spend, ad count, and launch status to prevent duplicate creatives and track performance. [L0207.015]</li>
+<li>When duplicating an ad set, a "Copy ads to new ad set" checkbox appears. Leave it unchecked if you only want to replicate the ad set structure and settings. Check it only if you also want to copy the original ads into the new ad set. [L0207.017]</li>
+<li>After launching ads in Ad Manage.ai, click "View in Meta" or "View Launch" to open that ad directly in Meta's native Ads Manager. [L0207.018]</li>
+<li>Ad Manage.ai includes a free Google Sheets plugin for bulk ad launches. Connect your spreadsheet to trigger automatic ad launches directly from Sheets without using the platform interface. [L0207.019]</li>
+<li>The Inspiration tab's Clone Ad feature operates on a 1,000-credit monthly cycle, resetting every 3 days. Each cloned ad consumes credits. Once depleted, the feature is unavailable until the next cycle resets. [L0207.020]</li>
+<li>Ad Manage.ai's API reports take 20-30 minutes to refresh with current data from Meta. While loading, the platform displays the most recent available data for Top Creatives, Fatigued Ads, Landing Pages, and custom reports. [L0207.013]</li>
+</ul>
+<h2 id="tiktok-ads">TikTok Ads</h2>
+<ul>
+<li>TikTok pixel setup: in TikTok Ads Manager, create the pixel under Tools &gt; Events &gt; Manage Web Events, then Create Pixel &gt; Partner Setup &gt; Next &gt; Shopify. Set Data Sharing for the pixel to Maximum. [L1373.002]</li>
+<li>TikTok Pixel Helper is a Shopify app used to connect the TikTok pixel to a Shopify store. [L1376.025]</li>
+<li>A new TikTok Ads account is under review after setup and can take up to 24 hours to be activated before campaigns can run. The account is active once TikTok Marketing shows as Active. [L1373.005]</li>
+<li>TikTok Ads Manager is used to run Spark Ads through a generated authorization code or to upload traditional ads. A separate Ads Manager with its own email is recommended for paid work. [L1381.033]</li>
+<li>TikTok UTM procedure, to track ads after iOS tracking limits:
+<ol type="1">
+<li>Open a UTM builder for TikTok, for example the one offered by PP Ads. [L1377.033]</li>
+<li>Paste the product page URL into the builder. [L1377.033]</li>
+<li>Copy the generated URL. [L1377.033]</li>
+<li>Paste the generated URL into the website URL field of the TikTok ad. The UTM parameters pass campaign, ad group and ad names to Shopify so you can track ads after iOS tracking limits. [L1377.033]</li>
+</ol></li>
+</ul>
+<h2 id="pinterest-ads-account-profile-and-verification">Pinterest Ads: Account, Profile and Verification</h2>
+<ul>
+<li>Pinterest traffic: Pinterest performs better in some niches than others. It is worth connecting when the store already gets Pinterest traffic or it fits the marketing plan. Connecting it through Shopify is simple and carries little cost, so there is rarely a reason not to try. [L0666.056] (2024)</li>
+<li>Older advice (2021): Pinterest can be connected to a store, and small-budget Pinterest ads can be tested. [L0671.097]</li>
+<li>Pinterest business account setup, option A (convert an existing personal account via settings, or create one directly at ads.pinterest.com):
+<ol type="1">
+<li>Either convert a normal Pinterest account to a business account via Settings, or go directly to ads.pinterest.com. [L1133.003]</li>
+<li>Fill in the basic business details. [L1133.003]</li>
+<li>Wait until the account shows as ready. [L1133.003]</li>
+</ol></li>
+<li>Pinterest business account setup, option B (full checklist):
+<ol type="1">
+<li>Either convert your existing personal account to a business account in the account settings, or create a new account at ads.pinterest.com. [L1135.017]</li>
+<li>Enter the profile name as your store name. For a general store, use the general store name. [L1135.017]</li>
+<li>Enter your website link. [L1135.017]</li>
+<li>Select a country: your home country or the US, since Pinterest allows targeting of any country. [L1135.017]</li>
+<li>Select the brand focus. If unsure, choose Other or Home. [L1135.017]</li>
+<li>Select up to three options from the focus list, such as sell more products. [L1135.017]</li>
+<li>Describe the business as online retail or marketplace and select Shopify as the platform. [L1135.017]</li>
+<li>Answer yes to being interested in advertising. [L1135.017]</li>
+<li>Enter your phone number if you want to use Pinterest support, or skip it. [L1135.017]</li>
+</ol></li>
+<li>Account setup details: fill in store name, website, country (your own country is fine, there is no need to choose United States only), brand focus (top three options, e.g. "sell more products"), business type "Online retail or marketplace" with Shopify selected, and answer yes to being interested in advertising. [L1134.003]</li>
+<li>Check the business account: the profile should show the label "Business", and the menu should show an "Ads" section. Profile &gt; Settings is where these details are verified. [L1135.018]</li>
+<li>The business profile checklist: a business account shows "Business" on the profile and an "Ads" section. [L1134.004]</li>
+<li>Profile preparation procedure:
+<ol type="1">
+<li>Change the username to match the brand or product. [L1133.004]</li>
+<li>Change the profile image. [L1133.004]</li>
+<li>Add a short About Us section. [L1133.004]</li>
+<li>Add a cover image. [L1133.004]</li>
+<li>Claim the website by adding a TXT record to the domain DNS or by adding the HTML tag. [L1133.004]</li>
+</ol></li>
+<li>Profile detail: set the username to the store name (or product name), upload the store or brand logo as profile image, write a short "about" section of about five to six lines (this can be generated with ChatGPT), and add a cover image such as a store banner. [L1134.004]</li>
+<li>Entering a phone number is optional and is not used for verification. Add it only if you want access to Pinterest support for banned accounts or ad insights. Do not rely on their guidance, because their agents are not focused on direct response marketing. [L1135.019]</li>
+<li>Website verification (HTML tag option):
+<ol type="1">
+<li>In Pinterest settings, go to Claimed account, then Claim website, and choose the HTML tag option. [L1134.005]</li>
+<li>Copy the meta tag. [L1134.005]</li>
+<li>Paste it into the Shopify theme file theme.liquid just below the canonical URL line, then save. [L1134.005]</li>
+<li>Return to Pinterest, click Continue, enter the store name and click Verify. [L1134.005]</li>
+</ol></li>
+</ul>
+<h2 id="pinterest-ads-shopify-connection-payment-and-conversions">Pinterest Ads: Shopify Connection, Payment and Conversions</h2>
+<ul>
+<li>Install the Pinterest app in Shopify:
+<ol type="1">
+<li>In Shopify, go to Apps, then App settings, then the Shopify App Store. [L1135.022]</li>
+<li>Search for Pinterest and install the Pinterest app. [L1135.022]</li>
+<li>Connect your Pinterest account through the sales channel. [L1135.022]</li>
+<li>Go to the Marketing section and confirm that the Pinterest tag is installed. This is the key step for tracking. [L1135.022]</li>
+<li>Continue the setup in the app and proceed to billing. [L1135.022]</li>
+</ol></li>
+<li>Pinterest setup in Shopify, in order:
+<ol type="1">
+<li>Install the Pinterest app from the Shopify App Store and connect the Pinterest account. [L1134.002]</li>
+<li>Add the Sales channel. [L1134.002]</li>
+<li>Go to the Marketing section and confirm the Pinterest tag is installed. This is the key step for tracking. [L1134.002]</li>
+<li>Click continuous setup. [L1134.002]</li>
+<li>Go to ads, then billing, and enter business details. [L1134.002]</li>
+<li>Add a payment method: a credit or debit card or a virtual card. PayPal is not accepted. [L1134.002]</li>
+</ol></li>
+<li>Pinterest does not allow listing a product without merchant approval. Merchant approval is a non-essential extra. Rejections often come from weak product descriptions, so a rejected shopping merchant account should not stop the ad setup. [L1134.001]</li>
+<li>Shopping merchant approval can stay pending or be rejected, often because of product description issues. This blocks product listings but is not required to run Pinterest ads, so it is not a reason to stop. [L1135.023]</li>
+<li>Enabling conversion campaigns when the error "increase your conversion events" appears:
+<ol type="1">
+<li>Open a product page of the store. [L1134.006]</li>
+<li>Open the browser developer tools (right-click &gt; Inspect, or More tools &gt; Developer tools if inspect is disabled). [L1134.006]</li>
+<li>Go to the Console. [L1134.006]</li>
+<li>Paste the provided conversion-trigger code (the code is not reproduced in this unit) and run it 10 to 20 times. [L1134.006]</li>
+<li>Wait 5 to 10 minutes until the conversion event is active and the conversion campaign option appears. [L1134.006]</li>
+</ol></li>
+</ul>
+<h2 id="microsoft-ads-bing">Microsoft Ads (Bing)</h2>
+<ul>
+<li>Import from Google Ads: Microsoft Ads can import Google Ads campaigns. Make changes in Google Ads first, where most data and sales are, and sync to Microsoft once a batch of changes is approved. Optionally sync only new updates. [L0968.049] (2021)</li>
+<li>Import procedure (2025):
+<ol type="1">
+<li>Import your Google Ads campaigns into Microsoft Ads. [L0837.022]</li>
+<li>Immediately lower the budgets of the imported campaigns, since imports carry over the Google budgets. For example, a $20 per day Google budget should be reduced to $5 per day in Microsoft. [L0837.022]</li>
+<li>Scale the Microsoft budgets gradually over time. [L0837.022]</li>
+</ol></li>
+</ul>
+<h2 id="retargeting-roi-hunter">Retargeting: ROI Hunter</h2>
+<ul>
+<li>ROI Hunter is a Shopify app that sets up dynamic retargeting without coding. Search for the exact name "ROI Hunter" in the Shopify App Store, because a generic search for Shopify dynamic retargeting returns other apps. [L0558.003]</li>
+<li>ROI Hunter is a free Shopify app, so dynamic retargeting on Google Display Network can be set up without paying for a separate developer or code work. Installing it and syncing it with the store is all that is needed to create the audiences and campaigns. [L0558.012]</li>
+<li>Do not manage ROI Hunter campaigns from inside Shopify. Make all campaign and budget changes directly in Google Ads, since the app's Shopify side is only for setup and sync. [L0558.005]</li>
+</ul>
+<h2 id="break-even-and-pre-launch-checks">Break-Even and Pre-Launch Checks</h2>
+<ul>
+<li>Dropship Toolkit is a website with a break-even ROAS calculator for dropshipping stores. Enter the selling price, the cost of goods and fulfillment to get the break-even ROAS before setting scaling thresholds. Use it before running ads to check whether a product can be profitable at a given price. [L0642.050, L0661.046]</li>
+</ul>
+<h2 id="attribution-and-profit-tracking">Attribution and Profit Tracking</h2>
+<p>Conflict note: sources disagree on when to adopt Triple Whale. One source says to use it for early-stage testing when accuracy matters for budget decisions. Two others say to consider it only once the store is consistently profitable and to compare it with a cheaper option first. Apply the first when verifying metrics before scaling. Apply the second when deciding whether to pay for a tool.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Cost</th>
+<th>Accuracy (as stated)</th>
+<th>Use when</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triple Whale</td>
+<td>$300/month</td>
+<td>80% for sales, ROAS and ad performance</td>
+<td>Early-stage testing and verifying metrics before scaling; or, once the store is consistently profitable</td>
+<td>L0309.032, L0309.034, L0694.008, L0694.044</td>
+</tr>
+<tr>
+<td>Northbeam</td>
+<td>$900/month</td>
+<td>100%</td>
+<td>Only if the business generates enough profit margin to justify the cost</td>
+<td>L0309.034</td>
+</tr>
+<tr>
+<td>Cometly</td>
+<td>Not stated</td>
+<td>Not reliable</td>
+<td>Do not use</td>
+<td>L0309.033</td>
+</tr>
+<tr>
+<td>Converge</td>
+<td>Possibly lower than Triple Whale</td>
+<td>Not stated</td>
+<td>Compare with Triple Whale before paying</td>
+<td>L0694.044</td>
+</tr>
+<tr>
+<td>Free UTM tracking app</td>
+<td>Free option</td>
+<td>Not stated; UTM data is not perfect either</td>
+<td>Cross-check Facebook data against actual sales</td>
+<td>L0694.008</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Triple Whale is attribution software used to capture precise ad performance metrics when analyzing and iterating creatives. [L0258.024]</li>
+<li>Triple Whale is a tracking and analytics platform costing $300/month. It is 80% accurate in measuring sales, ROAS, and ad performance. Use it to verify your metrics before scaling ads, as inaccurate tracking wastes budget. [L0309.032]</li>
+<li>Triple Whale is used to track sales and ROAS for winning products. It replaces manual tracking of other ad metrics once a product is clearly profitable. [L1173.016]</li>
+<li>Cometly is a tracking platform that does not work reliably and wastes money. Do not use it. Choose Triple Whale or Northbeam instead. [L0309.033]</li>
+<li>Northbeam is a tracking platform costing $900/month and providing 100% accuracy. Use it only if your business generates sufficient profit margin to justify the cost. Otherwise, use Triple Whale ($300/month, 80% accuracy) for early-stage testing. [L0309.034]</li>
+<li>Triple Whale is a paid attribution tool that reconciles Facebook-reported sales with real orders. Attribution alternatives such as Converge exist at possibly lower prices. Because the tool costs money, consider it only once the store is consistently profitable, and compare it with a cheaper option first. [L0694.044]</li>
+<li>A UTM tracking app with a free option can be used to cross-check Facebook data against actual sales, because UTM data is not perfect either but is a useful second source. A paid attribution tool such as Triple Whale is worth considering once the store is consistently profitable, and cheaper alternatives exist. [L0694.008]</li>
+<li>True Profit shows profit per campaign and can be used on its highest plan, reported at about $150 per month. It helps make more calculated scaling decisions but is not essential at the beginning. [L1476.044]</li>
+<li>Conversios GA4 app connects Google Analytics 4 and supports Google SEO tracking. It is needed when scaling, not at the foundation stage. Microsoft Clarity is an additional analytics tool shown in Customer events. [L1327.041]</li>
+<li>Unique coupons, dedicated phone numbers or separate addresses for each ad allow every response to be traced to its source. Use them to compare headlines, publications and offers on a cost-per-customer basis. [L1261.048]</li>
+<li>Telephone response lines are more convenient for many people than mailing a coupon, and they can be measured as a separate response channel. Include a phone option in offers and track it separately. [L1261.051]</li>
+</ul>
+<h2 id="utm-tracking-for-partners-and-banners">UTM Tracking for Partners and Banners</h2>
+<ul>
+<li>Add a referral or banner partner link with UTM tracking:
+<ol type="1">
+<li>Choose the destination URL. [L0971.024]</li>
+<li>Open a UTM builder. [L0971.024]</li>
+<li>Set utm_source to banner ad, utm_medium to banner, and utm_campaign to the partner URL. [L0971.024]</li>
+<li>Leave campaign ID empty. [L0971.024]</li>
+<li>Copy the generated link and send it to the partner. [L0971.024]</li>
+<li>Check the traffic, country and sales of that source in Google Analytics. [L0971.024]</li>
+</ol></li>
+</ul>
+<h2 id="reporting-and-ai-reporting-limits">Reporting and AI Reporting Limits</h2>
+<ul>
+<li>Supermetrics is a Google Sheets add-on that connects to ad accounts such as Google Ads, Bing Ads and Facebook Ads and pulls their data into a sheet. Because the data lands in a regular spreadsheet, Google Sheets formulas and conditional formatting can be applied to it directly. [L1236.024]</li>
+<li>Manus is an AI agent that can connect to a Meta ad account through Meta marketing tools, read the ad-level names and build a report. It processes the exported data with Python code to produce the final file. [L0885.014]</li>
+<li>Manus is an AI agent that can connect to a Meta ad account and load a Meta Ads analysis skill before pulling data. At the time of recording, it had just been acquired by Meta (Facebook), so its roadmap and features may change. [L0885.025]</li>
+<li>Setting up an AI creative-count report in Manus:
+<ol type="1">
+<li>Go to Manus and integrate (connect) the Meta ad account. [L0885.015]</li>
+<li>Send a prompt that names the ad account, describes the report and attaches an example report. [L0885.015]</li>
+<li>State what to exclude (iterations and new concepts) and which field to group by (product type from the ad-level naming convention). [L0885.015]</li>
+<li>Review the delivered report, which can be produced as a spreadsheet. [L0885.015]</li>
+</ol></li>
+<li>Prompt for the creative-count report (use as written, replacing the bracketed placeholders):</li>
+</ul>
+<pre><code>I need you to look at the ad account [AD ACCOUNT LINK]. I need a report like the attached example that tracks the total number of creatives launched per month per product. Now note that we do not track iterations or new concepts. What I need is the report by product type, which is part of our naming convention at the ad level (for example: Mixed, Oodie, Weighted Blanket, [OTHER PRODUCT TYPES]). Count each ad once in the month it launched, show the monthly totals per product type, and deliver the final report as a spreadsheet.</code></pre>
+<p>[L0885.016]</p>
+<ul>
+<li>When asking an AI agent for an ad account report, you can attach a screenshot or recording of an example report, or describe the output in exact words. In the words, state what must be counted, what must be excluded (for example iterations or new concepts), and which naming field to group by. [L0885.026]</li>
+<li>Conflict note on AI reporting: Manus can connect to and build reports from a Meta account [L0885.014, L0885.015], but current AI reporting tools such as Manus are not yet reliable for interpreting ad account results. Use the AI for data gathering and file production. Use human analysis from mentors, group calls or one-on-one coaches to interpret the data. [L0885.017]</li>
+<li>In Excel, the status bar shows Average, Count and Sum for a selected range of cells. Example: selecting 5 values that sum to 273 gives an average of 54.6. [L0885.018]</li>
+</ul>
+<h2 id="automation-limits">Automation Limits</h2>
+<ul>
+<li>Conflict note on automation: Ad Manage.ai offers cross-platform automation rules [L0207.001]. Older advice (2020) states that automating ads with tools like Zapier is not recommended. Facebook's built-in automated rules are occasionally useful but rarely worth the effort. [L1088.069]</li>
+<li>Preflect AI is an ad automation tool that runs campaigns across Facebook, Google and TikTok for about $500 per month, with no minimum ad spend. It suits owners who want a hands-off setup, but someone still has to read the data and decide the next test. [L1184.065]</li>
+</ul>
+<h2 id="click-fraud-protection">Click Fraud Protection</h2>
+<ul>
+<li>Older advice (2019): a separate click fraud app is not necessary. Monitor all ad campaigns and exclude Google Display Network sites that bring in little value or show poor results. [L1068.050]</li>
+<li>Older advice (2022): a click-fraud protection app was tested for one month by one operator and did not save any ad money, so it was not recommended. Compare any savings against the monthly fee within the first month before keeping such a tool. [L1092.108]</li>
+</ul>
+</article><nav class="pn"><a href="../../05-apps-and-tools/16-product-feeds-google-merchant-center-and-shopping-feed-apps/"><span class="k">&larr; Previous</span><span class="v">Product feeds, Google merchant center and shopping feed apps</span></a><a class="nx" href="../../05-apps-and-tools/18-conversion-testing-site-speed-and-monitoring/"><span class="k">Next &rarr;</span><span class="v">Conversion testing, site speed and monitoring</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161617" media="(prefers-color-scheme: dark)">
+<title>Imprint</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--bar:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;
+--link:#0071e3;--chev:#aeaeb2;--ring:rgba(0,0,0,.1);--press:#f5f5f7;
+--grad:linear-gradient(96deg,#0071e3 0%,#5e5ce6 52%,#9b3fd6 100%)}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--bar:#161617;--card:#1c1c1e;--text:#f5f5f7;--muted:#a1a1a6;
+--line:#38383a;--link:#2997ff;--chev:#636366;--ring:rgba(255,255,255,.14);--press:#2c2c2e;
+--grad:linear-gradient(96deg,#2997ff 0%,#7d7aff 52%,#da8fff 100%)}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.47 -apple-system,BlinkMacSystemFont,"SF Pro Text",
+"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+a:focus-visible{outline:2px solid var(--link);outline-offset:2px;border-radius:6px}
+p,li{overflow-wrap:break-word}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.bar{background:var(--bar);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px}
+.bar nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px;color:var(--text)}
+.brand{display:inline-flex;align-items:center;min-height:44px;color:var(--text);font-weight:600;letter-spacing:-.02em}
+main.wrap{padding-top:44px;padding-bottom:64px}
+h1{margin:0;font-weight:700;font-size:clamp(34px,8.6vw,48px);line-height:1.08;letter-spacing:-.028em}
+h2{font-weight:700;font-size:22px;line-height:1.2;letter-spacing:-.018em}
+.hero h1{font-size:clamp(40px,10.6vw,64px);line-height:1.05}
+.grad{color:var(--link)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){.grad{background:var(--grad);
+-webkit-background-clip:text;background-clip:text;color:transparent}}
+.lead{margin:18px 0 0;font-size:21px;line-height:1.38;color:var(--muted);letter-spacing:-.02em}
+.lead.second{margin-top:10px;font-size:17px;line-height:1.47;letter-spacing:-.01em}
+.sec{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:52px 0 20px;padding-bottom:8px;
+border-bottom:1px solid var(--line)}
+.sec h2{margin:0;font-size:28px;line-height:1.14;letter-spacing:-.022em}
+.sec a,.foot a,.back{display:inline-flex;align-items:center;min-height:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin:20px 0}
+.card h2{margin:0 0 10px}
+.card p{margin:0 0 14px}.card>:last-child{margin-bottom:0}
+.list{padding:0;overflow:hidden}
+.row{position:relative;display:flex;align-items:center;gap:16px;min-height:52px;padding:12px 44px 12px 16px;
+color:var(--text)}
+.row:hover{text-decoration:none}.row:active{background:var(--press)}
+@media (hover:hover){.row:hover{background:var(--press)}}
+.row::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-5px;
+border:solid var(--chev);border-width:2px 2px 0 0;transform:rotate(45deg)}
+.row+.row::before{content:"";position:absolute;top:0;right:0;left:92px;border-top:1px solid var(--line)}
+.row img{flex:none;width:60px;height:60px;border-radius:13.5px;box-shadow:0 0 0 1px var(--ring)}
+.row .t{display:flex;flex-direction:column;min-width:0}
+.row strong{font-weight:600;line-height:1.3}
+.row .t span{margin-top:2px;color:var(--muted);font-size:15px;line-height:1.35;letter-spacing:-.005em}
+.links .row+.row::before{left:16px}
+.checks{margin:0;padding:4px 20px;list-style:none}
+.checks li{display:flex;gap:14px;align-items:flex-start;padding:14px 0}
+.checks li+li{border-top:1px solid var(--line)}
+.checks svg{flex:none;width:22px;height:22px;margin-top:1px;color:var(--link)}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:980px;
+font-size:17px;line-height:1.2;background:#0071e3;color:#fff}
+.btn:hover{text-decoration:none}.btn:active{opacity:.85}
+.btn.ghost{background:transparent;color:var(--link);box-shadow:inset 0 0 0 1px currentColor}
+.app-hero .icon{display:block;width:112px;height:112px;border-radius:25px;margin:0 0 24px;
+box-shadow:0 0 0 1px var(--ring),0 4px 16px rgba(0,0,0,.12)}
+.app-hero h1 span{display:block;margin-top:8px;color:var(--muted);font-size:22px;font-weight:600;line-height:1.25;
+letter-spacing:-.018em}
+.app-hero .lead{color:var(--text);font-weight:600;font-size:19px;letter-spacing:-.015em;margin-top:16px}
+.app-hero .promo{margin:12px 0 0;color:var(--muted)}
+.app-hero+.card,.app-hero+.feat{margin-top:36px}
+.feat h2{margin:0 0 12px}.feat .card{margin:0}
+.back{gap:8px;margin:-12px 0 12px}
+.back::before{content:"";width:9px;height:9px;margin-left:3px;border:solid currentColor;border-width:0 0 2px 2px;
+transform:rotate(45deg)}
+.legal{max-width:680px}
+.legal h1{font-size:clamp(32px,8.2vw,44px)}
+.legal h1+p{margin:12px 0 0;color:var(--muted);font-size:15px}
+.legal h2{margin:40px 0 10px}.legal h3{font-size:17px;margin:24px 0 6px}
+.legal p{margin:0 0 14px}.legal ul{margin:0 0 14px;padding-left:22px}.legal li{margin:8px 0}
+.legal .card{margin:28px 0}.legal .card h2{margin-top:0}
+.legal a.url{overflow-wrap:anywhere;-webkit-hyphens:none;hyphens:none}
+.legal .group{padding:0}.legal .group section{padding:20px}
+.legal .group section+section{border-top:1px solid var(--line)}
+.legal .group h2{margin:0 0 8px;font-size:19px}.legal .group p:last-child{margin-bottom:0}
+.legal section:not(.card)+.card,.legal h1+p+.card{margin-top:32px}
+.foot{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:0 24px;padding-top:8px;
+padding-bottom:32px}
+.foot nav{display:flex;gap:24px}
+</style></head>
+<body>
+<header class="bar"><div class="wrap"><a class="brand" href="../">Lichters</a><nav aria-label="Support"><a href="mailto:support@lichtersapps.com">Support</a></nav></div></header>
+<main class="wrap">
+<p><a href="../">← Lichters</a></p><article class="card legal"><h1>Imprint</h1>
+<h2>Information according to § 5 DDG (German Digital Services Act)</h2>
+<p>David Lichters<br>Maurenbrecherstraße 16<br>47803 Krefeld</p>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:support@lichtersapps.com">support@lichtersapps.com</a></p>
+<h2>Responsible for the content</h2>
+<p>David Lichters, address as above</p>
+<h2>Consumer dispute resolution</h2>
+<p>We are neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board.</p></article>
+</main>
+<footer class="foot"><div class="wrap"><span>© 2026 David Lichters</span>
+<nav><a href="../imprint/">Imprint</a><a href="mailto:support@lichtersapps.com">Support</a></nav></div></footer>
+</body></html>

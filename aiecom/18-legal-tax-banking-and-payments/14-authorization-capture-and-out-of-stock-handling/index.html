@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Authorization, capture and out-of-Stock handling | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 18.14: Authorization, capture and out-of-Stock handling.">
+<link rel="canonical" href="https://dlichters.com/aiecom/18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Authorization, capture and out-of-Stock handling | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 18.14: Authorization, capture and out-of-Stock handling."><meta property="og:url" content="https://dlichters.com/aiecom/18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">18. Legal, tax, banking and payments</a> &rsaquo; <a href="../../../ecom/18-legal-tax-banking-and-payments/14-authorization-capture-and-out-of-stock-handling/">Plain version</a></div><h1>18.14 Authorization, capture and out-of-Stock handling</h1><article><h2 id="authorize-only-versus-automatic-capture">Authorize-only versus automatic capture</h2>
+<ul>
+<li>Authorize-only confirms the order and authorizes the customer's payment method, but charges nothing. You capture the payment manually to complete the charge once the product is confirmed in stock (older advice, 2019) [L0243.026]</li>
+<li>After checkout, the money is authorised (reserved) on the customer's card or PayPal balance but not yet captured. Capturing transfers it to you and sends it to your bank account (older advice, 2021-22) [L0677.018]</li>
+<li>Manual capture authorizes the card without charging it. A new store that is still learning which supplier stock is reliable should use manual capture. Automatic capture is acceptable once stock availability is consistent (older advice, 2020) [L1111.182]</li>
+</ul>
+<h2 id="setting-up-manual-capture-in-shopify">Setting up manual capture in Shopify</h2>
+<ol type="1">
+<li>Go to Settings &gt; Payments (older advice, 2021-22) [L0677.019]</li>
+<li>Scroll to Payment capture (older advice, 2021-22) [L0677.019]</li>
+<li>Select Manually capture payment for orders (older advice, 2021-22) [L0677.019]</li>
+<li>Keep the box Send a warning email when authorizations are close to expiring checked (older advice, 2021-22) [L0677.019]</li>
+<li>Click Save (older advice, 2021-22) [L0677.019]</li>
+</ol>
+<h2 id="capture-only-after-stock-is-confirmed">Capture only after stock is confirmed</h2>
+<ul>
+<li>Use manual capture, especially in high-ticket dropshipping where products may be out of stock (older advice, 2021-22) [L0677.020]</li>
+<li>Capture only after you have confirmed stock with the supplier and placed the official order. Refunding a captured payment to the customer can take several days (older advice, 2021-22) [L0677.020]</li>
+<li>Capture the customer's payment only after you have confirmed that the item will ship. This avoids charging customers for orders you cannot fulfill (older advice, 2021-22) [L0949.011]</li>
+<li>Do not capture payment in Shopify until stock is confirmed and the order has been checked for risk warnings. Medium- and high-risk orders must be escalated to the business owner first [L1119.012]</li>
+<li>Authorize the customer's card at checkout but charge it only after the supplier confirms stock, so the customer is not billed for an item that cannot be delivered. The VA then captures the charge in Shopify [L1473.014]</li>
+</ul>
+<h2 id="core-out-of-stock-workflows">Core out-of-stock workflows</h2>
+<p><strong>Protecting against out-of-stock orders</strong></p>
+<ol type="1">
+<li>Set your payment settings to authorize the customer's card without capturing the charge (older advice, 2021) [L0671.200]</li>
+<li>When an order comes in, confirm with the supplier that the item is in stock (older advice, 2021) [L0671.200]</li>
+<li>Capture the payment in the Shopify admin (older advice, 2021) [L0671.200]</li>
+<li>Ship the order, which is when the customer is charged (older advice, 2021) [L0671.200]</li>
+</ol>
+<p><strong>Payment capture when stock is uncertain (Shopify payment settings)</strong></p>
+<ol type="1">
+<li>In the Shopify payment settings, set the payment mode to authorize, so the card is checked for the order total without taking the money (older advice, 2021) [L0469.043]</li>
+<li>When the customer orders, the order goes through and you receive the usual notification (older advice, 2021) [L0469.043]</li>
+<li>Contact the supplier and confirm the product is in stock and can ship right away (older advice, 2021) [L0469.043]</li>
+<li>If it is in stock, open the order in the Shopify admin and capture the payment, which sends the money to you (older advice, 2021) [L0469.043]</li>
+<li>If it is not in stock, email the customer and ask whether they want to wait or cancel (older advice, 2021) [L0469.043]</li>
+</ol>
+<h2 id="pre-authorization-workflow">Pre-authorization workflow</h2>
+<p><strong>Using pre-authorization instead of charging immediately</strong></p>
+<ol type="1">
+<li>When an order is placed, pre-authorize the card so the funds are confirmed as available without charging the customer (older advice, 2021) [L0968.029]</li>
+<li>Check with the supplier that the product is in stock (older advice, 2021) [L0968.029]</li>
+<li>If it is in stock, capture the payment, which charges the customer, and process the order (older advice, 2021) [L0968.029]</li>
+<li>If it is out of stock, cancel the order so the customer is never charged and no refund is needed (older advice, 2021) [L0968.029]</li>
+</ol>
+<p><strong>Order confirmation and pre-authorization rule</strong></p>
+<ul>
+<li>When an order is placed, the customer gets an order confirmation email and the card is only pre-authorised, not charged (older advice, 2021-22) [L1264.019]</li>
+<li>The store checks stock and charges the card only when the item is available for immediate shipment, within 5 business days (older advice, 2021-22) [L1264.019]</li>
+<li>If the item is on back-order, the pre-authorisation is voided and the customer is contacted by email about alternatives (older advice, 2021-22) [L1264.019]</li>
+</ul>
+<p><strong>What to do when stock is not available</strong></p>
+<p>The sources give different actions for an out-of-stock or back-ordered item. Choose by the situation:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Out of stock within the pre-authorization workflow</td>
+<td>Cancel the order. The customer is never charged and no refund is needed (older advice, 2021)</td>
+<td>[L0968.029]</td>
+</tr>
+<tr>
+<td>Stock not confirmed, item not in stock</td>
+<td>Email the customer and ask whether they want to wait or cancel (older advice, 2021)</td>
+<td>[L0469.043]</td>
+</tr>
+<tr>
+<td>Item on back-order under the 5-business-day rule</td>
+<td>Void the pre-authorisation and email the customer about alternatives (older advice, 2021-22)</td>
+<td>[L1264.019]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="seven-day-authorization-window">Seven-day authorization window</h2>
+<ul>
+<li>A payment authorisation is valid for 7 days. If it is not captured within 7 days, it is cancelled automatically and the customer must re-enter their payment details (older advice, 2021-22) [L0677.021]</li>
+<li>Some credit cards authorize a payment for only about seven days, so the authorization may not last through a long delay (no date given) [L0359.086]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Consequence</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not captured within 7 days</td>
+<td>Authorization cancelled automatically; customer must re-enter payment details (older advice, 2021-22)</td>
+<td>[L0677.021]</td>
+</tr>
+<tr>
+<td>Some credit cards</td>
+<td>Authorize a payment for only about seven days</td>
+<td>[L0359.086]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="backorders">Backorders</h2>
+<ul>
+<li>For a backordered product whose supplier has a reliable ETA of about two to three weeks, confirm the backorder with the customer. Capture the payment right away once they confirm they are willing to wait [L0359.085]</li>
+<li>Do not charge the customer's card for a backorder that could last months with no reliable date [L0359.086]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Supplier situation</th>
+<th>Payment action</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reliable ETA of about two to three weeks</td>
+<td>Confirm with the customer, then capture once they agree to wait</td>
+<td>[L0359.085]</td>
+</tr>
+<tr>
+<td>No reliable date, could last months</td>
+<td>Do not charge the card</td>
+<td>[L0359.086]</td>
+</tr>
+<tr>
+<td>Item on back-order under the 5-business-day rule</td>
+<td>Void the pre-authorisation (see pre-authorization section) (older advice, 2021-22)</td>
+<td>[L1264.019]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="split-payment-for-backordered-items">Split payment for backordered items</h2>
+<p><strong>Splitting a payment through PayPal</strong></p>
+<ol type="1">
+<li>Confirm the customer's email address (older advice, 2021) [L0247.111]</li>
+<li>Send a PayPal invoice to the customer's email requesting the partial amount (older advice, 2021) [L0247.111]</li>
+</ol>
+<ul>
+<li>A basic 29-per-month Shopify plan did not allow partial payments natively, so the PayPal invoice route was needed on that plan (older advice, 2021) [L0247.111]</li>
+</ul>
+</article><nav class="pn"><a href="../../18-legal-tax-banking-and-payments/13-payment-methods-paypal-financing-and-local-options/"><span class="k">&larr; Previous</span><span class="v">Payment methods, PayPal, financing and local options</span></a><a class="nx" href="../../18-legal-tax-banking-and-payments/15-chargebacks-fraud-prevention-and-processor-holds/"><span class="k">Next &rarr;</span><span class="v">Chargebacks, fraud prevention and processor holds</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

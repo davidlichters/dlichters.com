@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ads manager columns, custom metrics and naming | Ecommerce Playbook</title>
+<meta name="description" content="- Build all base columns first, then save them as a preset. Creating a custom metric before saving deletes your unsaved column work. - Name the preset main dash. It stays saved across logins and page refreshes. - Create custom metrics only after the ...">
+<link rel="canonical" href="https://dlichters.com/ecom/09-meta-and-facebook-ads/07-ads-manager-columns-custom-metrics-and-naming/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Ads manager columns, custom metrics and naming | Ecommerce Playbook"><meta property="og:description" content="- Build all base columns first, then save them as a preset. Creating a custom metric before saving deletes your unsaved column work. - Name the preset main dash. It stays saved across logins and page refreshes. - Create custom metrics only after the ..."><meta property="og:url" content="https://dlichters.com/ecom/09-meta-and-facebook-ads/07-ads-manager-columns-custom-metrics-and-naming/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../09-meta-and-facebook-ads/">9. Meta and Facebook ads</a></div><h1>Ads manager columns, custom metrics and naming</h1><p class="meta">Section 9.7 &middot; 7 of 22 in this chapter &middot; 14 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Build <strong>all base columns first</strong>, then <strong>save them as a preset</strong>. Creating a custom metric before saving deletes your unsaved column work.</li>
+<li>Name the preset <strong><code>main dash</code></strong>. It stays saved across logins and page refreshes.</li>
+<li>Create custom metrics <strong>only after</strong> the preset is saved: CVR, ATC% and IC%.</li>
+<li>Set the attribution setting to <strong>7-Day Clicks</strong> for every campaign and ad set.</li>
+<li>Pick <strong>one naming pattern</strong> and never change it midway. Changes make old ads hard to compare.</li>
+</ul>
+</div><article><div class="parts-bar"><span>This section has 11 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="column-presets-build-order-and-saving"><summary><h2>Column presets: build order and saving</h2><span class="pm">3 min</span></summary>
+<ul>
+<li>Build <strong>all base columns first</strong>. Save them as a preset. Only then create custom metrics.</li>
+<li>A <strong>column</strong> is one data field in the Ads Manager table (Ads Manager is Meta's tool for running ads on Facebook and Instagram).</li>
+<li>A <strong>custom metric</strong> is a number you calculate yourself from other columns.</li>
+<li>Creating a custom metric before the preset is saved <strong>deletes all unsaved column work</strong>. You must start over.</li>
+<li>The correct order is: <strong>add columns, save preset, create custom metrics</strong>.</li>
+<li>Save the column setup as a <strong>Column Preset</strong>, which is a saved column layout you can reload later.</li>
+<li>Use a consistent name. The standard name is <strong><code>main dash</code></strong>.</li>
+<li>The preset saves automatically. It <strong>persists across logins, account switches and page refreshes</strong>.</li>
+<li>Reselect it from the <strong>Columns dropdown</strong> at any time. You do not need to rebuild it.</li>
+</ul>
+<h3 id="base-column-procedure">Base column procedure</h3>
+<ol type="1">
+<li><strong>Log into Ads Manager.</strong></li>
+<li>Click <strong>Columns &gt; Customize Columns</strong> (at the bottom).</li>
+<li><strong>Delete all columns except Delivery and Actions.</strong></li>
+<li><strong>Add columns in this exact order.</strong>
+<ul>
+<li>Bid Strategy <span class="ex">(the rule Meta uses to spend your budget)</span></li>
+<li>Budget</li>
+<li>Amount Spent</li>
+<li>Purchase: check the <strong>Value</strong> checkbox and uncheck the others</li>
+<li>ROAS <span class="ex">(return on ad spend, the money earned per money spent)</span>: uncheck other options</li>
+<li>Average Purchase Conversion Value (AOV, average order value)</li>
+<li>Cost per Purchase</li>
+<li>Attribution Setting <span class="ex">(the rule for which clicks or views count as a sale)</span></li>
+<li>Reach <span class="ex">(how many different people saw the ad)</span></li>
+<li>Impressions <span class="ex">(how many times the ad was shown)</span></li>
+<li>Frequency <span class="ex">(how often one person sees the ad on average)</span></li>
+<li>Link Clicks</li>
+<li>Cost per Link Click (CLC)</li>
+<li>CTR (Link Click-Through Rate, the share of viewers who click the link)</li>
+<li>CPM <span class="ex">(cost per 1,000 impressions)</span></li>
+<li>Add to Carts: select <strong>Total</strong>, uncheck in-app, offline and Meta versions, keep <strong>Website only</strong></li>
+<li>Cost per Add to Cart</li>
+<li>Initiate Checkout: select <strong>Total</strong> and <strong>Cost</strong></li>
+<li>Cost per Initiate Checkout</li>
+<li>Results: select <strong>Purchases</strong></li>
+<li>Cost per Purchase again</li>
+</ul></li>
+<li><strong>Do not create custom metrics yet.</strong> Click <strong>Save as Column Preset</strong> and name it <strong><code>main dash</code></strong> (or any name you choose).</li>
+<li>The preset saves automatically. It stays available across logins and account switches.</li>
+</ol>
+<h3 id="add-to-carts-selection">Add to Carts selection</h3>
+<ul>
+<li>When adding the Add to Carts column, <strong>select Total</strong>. Then uncheck the individual options:
+<ul>
+<li>in-app add to carts <span class="ex">(only for app downloads)</span></li>
+<li>offline add to carts <span class="ex">(only for stores that uploaded purchases to Facebook)</span></li>
+<li>Meta add to carts <span class="ex">(only for Meta Shop or Instagram Shop)</span></li>
+</ul></li>
+<li>For standard e-commerce, choose <strong>Website add to carts</strong>.</li>
+</ul>
+<h3 id="tool-columns">Tool columns</h3>
+<ul>
+<li><strong>Link Ad Settings:</strong> add this column to see the landing page <span class="ex">(the page a click opens)</span> for each ad. You do not need to edit each campaign.</li>
+<li>Type <strong><code>link</code></strong> or <strong><code>ad</code></strong> in the search field to find it.</li>
+<li>The column shows <strong>only at the ad level</strong>, not the campaign level.</li>
+<li>It saves time. You no longer click into each ad to check its landing page.</li>
+<li>Place the Link Ad Settings column <strong>right after Bid Strategy</strong> in the main dashboard preset.</li>
+<li>This keeps setup information together at the top, so you can see landing page assignments quickly.</li>
+<li><strong>Last Significant Edit:</strong> add this column to see recent changes to campaigns, ad sets and ads.</li>
+<li>Changes include bid caps, cost caps, minimum ROAS, or cost per goal settings. You can see them without checking account history.</li>
+<li>It is visible at the <strong>ad set and ad level</strong>. It helps you find when a campaign's bidding strategy was last changed.</li>
+</ul>
+<h3 id="common-mistakes">Common mistakes</h3>
+<ul>
+<li><strong>Do not join a call</strong> with a Facebook mentor or account manager <strong>before</strong> these custom columns are set up.</li>
+<li>Setting them up live wastes <strong>5-7 minutes</strong> of the mentor's call time.</li>
+</ul>
+</details><details class="part" id="custom-metrics"><summary><h2>Custom metrics</h2><span class="pm">2 min</span></summary>
+<h3 id="definitions-at-a-glance">Definitions at a glance</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Formula</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hook rate <span class="ex">(attention)</span></td>
+<td>3-second video plays ÷ total impressions × 100, shown as a percentage</td>
+<td>,</td>
+</tr>
+<tr>
+<td>Hold rate <span class="ex">(engagement)</span></td>
+<td>Video plays at 50% ÷ 3-second video plays × 100, shown as a percentage</td>
+<td>,</td>
+</tr>
+<tr>
+<td>CVR (Source E version)</td>
+<td>Purchases ÷ Link Clicks, format Percentage</td>
+<td></td>
+</tr>
+<tr>
+<td>CVR (Source C version)</td>
+<td>Unique outbound clicks from the Facebook ad that resulted in a purchase, as a percentage</td>
+<td></td>
+</tr>
+<tr>
+<td>CBR <span class="ex">(custom conversion rate)</span></td>
+<td>Purchases ÷ unique outbound clicks × 100, shown as a percentage</td>
+<td></td>
+</tr>
+<tr>
+<td>ATC% (Add to Cart Percentage)</td>
+<td>Add to Carts ÷ Link Clicks, format Percentage</td>
+<td></td>
+</tr>
+<tr>
+<td>IC% (Initiate Checkout Percentage)</td>
+<td>Initiate Checkout ÷ Link Clicks, format Percentage</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="hook-rate-and-hold-rate">Hook rate and hold rate</h3>
+<ul>
+<li><strong>Hook rate</strong> is the percentage of people who watch the <strong>first 3 seconds</strong> of a video, out of total impressions.</li>
+<li>To create it, go to <strong>Columns &gt; Create custom metric</strong>.</li>
+<li>Hook rate measures the share of impressions where viewers watched the first three seconds of the video ad.</li>
+<li><strong>Hold rate</strong> is the percentage of people who watch <strong>at least 50%</strong> of a video, out of those who watched the first 3 seconds.</li>
+<li>Hold rate measures how many viewers who passed the three-second mark kept watching to the halfway point.</li>
+<li>Hold rate is <strong>only meaningful with high traffic</strong>.</li>
+<li>When spend is small, read differences between ads <strong>carefully</strong>.</li>
+<li>Example: a <strong>CTR of 2.27% against 0.41%</strong> can be caused by too little data.</li>
+</ul>
+<h3 id="cvr-and-cbr-two-denominators">CVR and CBR: two denominators</h3>
+<ul>
+<li>A <strong>denominator</strong> is the number you divide by. Sources use different denominators for the conversion rate <span class="ex">(the share of clicks that become sales)</span>. Both are kept here.</li>
+<li><strong>Do not compare</strong> a rate built on unique outbound clicks with a rate built on Link Clicks.
+<ul>
+<li><strong>Source C method:</strong> purchases ÷ unique outbound clicks. Outbound clicks are clicks that leave Facebook for your store.</li>
+<li>Use <strong>unique</strong> outbound clicks, not total clicks. Facebook's page-view tracking is unreliable.</li>
+<li>Unique clicks count one person once, even if they click several times.</li>
+<li>This version is called <strong>CBR</strong>.</li>
+<li><strong>Source E method:</strong> purchases ÷ Link Clicks. This is named <strong>CVR</strong> and placed next to AOV.</li>
+<li>The same method builds <strong>ATC%</strong> and <strong>IC%</strong> on the same Link Clicks base.</li>
+</ul></li>
+<li>Meta tracks outbound clicks <strong>more reliably</strong> than website sessions. This is the reason for the Source C denominator.</li>
+</ul>
+<h3 id="creating-the-custom-metrics">Creating the custom metrics</h3>
+<ul>
+<li>Do this <strong>only after</strong> the base preset is saved.</li>
+</ul>
+<ol type="1">
+<li>Go to <strong>Columns &gt; Customize Columns &gt; Create custom metric</strong>.</li>
+<li><strong>Create CVR:</strong> name it <code>CVR</code>, set format to <strong>Percentage</strong>, enter formula <code>Purchases ÷ Link Clicks</code>, press <strong>Create metric</strong>.</li>
+<li><strong>Create ATC%:</strong> name it <code>ATC%</code>, set format to <strong>Percentage</strong>, enter formula <code>Add to Carts ÷ Link Clicks</code>, press <strong>Create metric</strong>.</li>
+<li><strong>Create IC%:</strong> name it <code>IC%</code>, set format to <strong>Percentage</strong>, enter formula <code>Initiate Checkout ÷ Link Clicks</code>, press <strong>Create metric</strong>.</li>
+<li>Place <strong>CVR next to AOV</strong>. Place <strong>ATC% after the Add to Carts column</strong>. Place <strong>IC% after the Initiate Checkout column</strong>.</li>
+<li><strong>Save the updated preset.</strong></li>
+</ol>
+</details><details class="part" id="funnel-column-order"><summary><h2>Funnel column order</h2><span class="pm">2 min</span></summary>
+<p>A <strong>funnel</strong> is the path from seeing an ad to buying. Columns are arranged left to right in the order a buyer moves through it.</p>
+<h3 id="source-c-custom-funnel-view">Source C: custom funnel view</h3>
+<ul>
+<li>To build a funnel column view in Meta Ads Manager:
+<ol type="1">
+<li>Open the <strong>campaign view</strong>.</li>
+<li>Click <strong>Customize columns</strong>.</li>
+<li><strong>Add custom metrics first</strong>, then reorder the columns on the right-hand side.</li>
+<li>Keep the <strong>ad set name, budget per day, amount spent, results and cost per result</strong>.</li>
+<li><strong>Remove bid strategy</strong> when you are not running advanced bidding.</li>
+<li>Save the final selection as a preset (for example <code>mix funnel</code>) and apply it.</li>
+</ol></li>
+<li>The Source E base preset <strong>keeps Bid Strategy</strong> as its first column. This Source C view <strong>removes it</strong> when no advanced bidding runs. Both apply to different setups.</li>
+<li>The <strong>Source C snapshot section</strong> includes:
+<ul>
+<li>ad set name</li>
+<li>last significant edit</li>
+<li>daily budget</li>
+<li>total spend over the period</li>
+<li>result <span class="ex">(conversions)</span></li>
+<li>cost per result</li>
+</ul></li>
+<li>The <strong>funnel section</strong> includes:
+<ul>
+<li>impressions</li>
+<li>CPM</li>
+<li>3-second video plays <span class="ex">(hook rate)</span></li>
+<li>hold rate</li>
+<li>unique clicks</li>
+<li>unique CTR %</li>
+<li>cost per click</li>
+<li>add-to-cart</li>
+<li>purchases</li>
+<li>custom conversion rate metric</li>
+<li>ROAS</li>
+</ul></li>
+</ul>
+<h3 id="recommended-funnel-order">Recommended funnel order</h3>
+<ul>
+<li>Read <strong>left to right</strong>. Uncheck default columns you do not need, so the funnel is not cluttered.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Column</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Amount spent</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Budget per day <span class="ex">(summary at top)</span></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Purchases</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cost per purchase <span class="ex">(result)</span></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Impressions</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3-second video plays</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hook rate (%)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>50% video plays</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Hold rate (%)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Unique link clicks</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Unique CTR (%)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Unique cost per click</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CBR (%)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Purchases</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Return on ad spend (ROAS)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The <strong>result column</strong> depends on your optimization goal <span class="ex">(what Meta tries to get more of)</span>.</li>
+<li>If you optimize for <strong>clicks</strong>, the result column becomes <strong>cost per click</strong>.</li>
+<li>If you optimize for <strong>purchases</strong>, the result column is <strong>cost per purchase</strong>.</li>
+</ul>
+<h3 id="source-d-reporting-preset-order">Source D: reporting preset order</h3>
+<ul>
+<li>Read the columns <strong>left to right</strong> in this order. The funnel is then easy to follow.</li>
+<li>A <strong>soft metric</strong> is an early sign, such as a click or a cart. A <strong>hard metric</strong> is a sale or money result.</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount spent</td>
+<td>Base cost of the ad</td>
+</tr>
+<tr>
+<td>CPM <span class="ex">(cost per 1,000 impressions)</span></td>
+<td>Cost of reach</td>
+</tr>
+<tr>
+<td>CTR <span class="ex">(all)</span></td>
+<td>Click rate on all clicks</td>
+</tr>
+<tr>
+<td>CPC <span class="ex">(all)</span></td>
+<td>Cost per click on all clicks</td>
+</tr>
+<tr>
+<td>CPC <span class="ex">(cost per link click)</span></td>
+<td>Cost per link click</td>
+</tr>
+<tr>
+<td>Link clicks</td>
+<td>Soft metric</td>
+</tr>
+<tr>
+<td>Website adds to cart</td>
+<td>Soft metric</td>
+</tr>
+<tr>
+<td>Cost per add to cart</td>
+<td>Soft metric cost</td>
+</tr>
+<tr>
+<td>Checkouts initiated</td>
+<td>Soft metric</td>
+</tr>
+<tr>
+<td>Cost per checkout initiated</td>
+<td>Soft metric cost</td>
+</tr>
+<tr>
+<td>Purchase ROAS <span class="ex">(return on ad spend)</span></td>
+<td>Hard metric</td>
+</tr>
+<tr>
+<td>Purchases</td>
+<td>Hard metric</td>
+</tr>
+<tr>
+<td>Cost per result</td>
+<td>Secondary cost</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Ad fatigue indicator</td>
+</tr>
+<tr>
+<td>Delivery</td>
+<td>Delivery status</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Add <strong>CTR <span class="ex">(link click-through rate)</span></strong> next to CTR <span class="ex">(all)</span>.</li>
+<li>Link CTR divides link clicks by impressions. It shows <strong>how many people actually reach the store</strong>.</li>
+</ul>
+</details><details class="part" id="video-retention-columns"><summary><h2>Video retention columns</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Video retention</strong> means how long people keep watching a video.</li>
+<li>To see these metrics, open <strong>Customize columns</strong> and add the video metrics. Examples: video plays at <strong>25, 50 and 95 percent</strong>, <strong>through plays</strong>, and <strong>video average play time</strong>.</li>
+<li>Facebook has renamed and added columns over time. The names you see may differ.</li>
+<li>Add the <strong>Through plays</strong> column via Customize columns.</li>
+<li>Through plays counts how often a video was played <strong>to completion or for at least 15 seconds</strong>.</li>
+<li>Read Through plays <strong>together with video average play time</strong>.</li>
+</ul>
+</details><details class="part" id="attribution-setting-columns"><summary><h2>Attribution setting columns</h2><span class="pm">1 min</span></summary>
+<ul>
+<li><strong>Attribution</strong> is the rule for how long after a click or view a sale still counts.</li>
+<li>Use <strong>7-Day Clicks</strong> as the attribution setting for <strong>all campaigns</strong>.</li>
+<li>The setting must be <strong>the same across all campaigns and ad sets</strong>.</li>
+<li>The Attribution Setting column <span class="ex">(from the base procedure)</span> shows this at a glance. You can spot <strong>different attribution windows</strong> right away.</li>
+<li>The Columns menu also offers <strong>Compare attribution settings</strong>. Use it to check the effect of different windows.</li>
+</ul>
+</details><details class="part" id="reporting-presets-and-dashboard-setup"><summary><h2>Reporting presets and dashboard setup</h2><span class="pm">1 min</span></summary>
+<h3 id="two-presets">Two presets</h3>
+<ul>
+<li>Set up <strong>two column presets</strong> in Meta Ads Manager:
+<ul>
+<li>a <strong>desktop preset</strong> for photo editing, UGC work (UGC means user-generated content, such as customer-made videos) and managing the ad account</li>
+<li>a <strong>phone preset</strong> for checking lifetime data when you are away from the computer</li>
+</ul></li>
+<li>Build them via <strong>Columns &gt; Customise columns</strong>.</li>
+<li>The menu also offers presets such as <strong>Performance and clicks</strong> and <strong>Engagement and Delivery</strong>.</li>
+<li>It also offers <strong>View your column presets</strong>, <strong>Compare attribution settings</strong>, <strong>Conditional formatting</strong> (colors that flag numbers) and <strong>Reset column width</strong>.</li>
+</ul>
+<h3 id="layout-and-reading">Layout and reading</h3>
+<ul>
+<li>Place related metrics <strong>side by side</strong>: ROAS, purchases and AOV.</li>
+<li><strong>Do not scroll back and forth</strong> between them when you decide. This cuts decision time a lot.</li>
+<li>Compare <strong>one ad across several ad sets</strong> by sorting the Ads Manager table by <strong>ad name</strong>. The same creative then appears side by side.</li>
+<li>In Ads Manager you can:
+<ul>
+<li>read ad set and ad performance</li>
+<li>check CTR and spend</li>
+<li>add interests via the <strong>Suggestions</strong> function</li>
+<li>create and duplicate ad sets</li>
+<li>change budgets</li>
+</ul></li>
+<li>The <strong>Facebook block</strong> in the daily record shows, for each day, alongside daily ad spend:
+<ul>
+<li>CPC <span class="ex">(cost per click)</span></li>
+<li>CTR <span class="ex">(clicks ÷ impressions)</span></li>
+<li>CPM <span class="ex">(cost per 1,000 impressions)</span></li>
+<li>ATC <span class="ex">(add to cart)</span></li>
+<li>IC <span class="ex">(initiate checkout)</span></li>
+<li>purchases</li>
+</ul></li>
+</ul>
+<h3 id="reporting-principles">Reporting principles</h3>
+<ul>
+<li>A <strong>clean, consistent naming convention</strong> (a fixed rule for naming) is the base of any reliable creative report.</li>
+<li>Reason: AI analysis is only as good as the data it reads.</li>
+<li>Start the convention <strong>now</strong>, at any brand size. Then year-on-year comparisons are possible later.</li>
+<li><strong>Keep one convention stable.</strong> Renaming products or changing the naming system midway makes older ads hard to compare.</li>
+<li>History beyond <strong>about 12 months</strong> became difficult to read after such changes.</li>
+</ul>
+</details><details class="part" id="campaign-naming"><summary><h2>Campaign naming</h2><span class="pm">1 min</span></summary>
+<h3 id="core-rules">Core rules</h3>
+<ul>
+<li>Name each campaign so you can tell <strong>what is inside from the name alone</strong>.</li>
+<li>Include: the product, the brand or account identifier, the budget type (for example CBO, campaign budget optimization, where Meta shares one budget across ad sets), the creative type <span class="ex">(for example UGC)</span> and the launch date.</li>
+<li>This lets you read data later <strong>without guessing</strong>.</li>
+<li>For sales that <strong>repeat every year</strong>, put the <strong>year</strong> in the campaign name.</li>
+<li>Example: <code>Black Friday Sale 2026</code> instead of <code>Black Friday Sale</code>.</li>
+<li>Without the year, comparing the same sale across years becomes very hard.</li>
+</ul>
+<h3 id="naming-patterns-in-the-sources">Naming patterns in the sources</h3>
+<ul>
+<li><strong>Source C:</strong> name campaigns and ad sets with these fields: product name, ABO or CBO (ABO means the budget is set per ad set), objective, date, interest name, country code and age group.
+<ul>
+<li><strong>Date:</strong> add it only once a product has run for <strong>more than about two months</strong>.</li>
+<li><strong>Country codes:</strong> short codes such as <code>T4</code> for the US, Canada, Australia and UK, or <code>DE</code> for Germany.</li>
+<li><strong>Age group:</strong> for example <code>20+</code>.</li>
+</ul></li>
+<li><strong>Source D:</strong> name Meta campaigns by <strong>audience, purpose and budget type</strong>.
+<ul>
+<li>Examples: <code>Broad - Scale - CBO</code> or <code>Testing ABO</code>.</li>
+<li>Test and scale campaigns are then easy to tell apart.</li>
+</ul></li>
+<li><strong>Source D:</strong> campaign name = <code>[today's date] [product name] CBO</code>.
+<ul>
+<li>Example: <code>2404 SleepMask CBO</code>.</li>
+<li>Here the <strong>date comes first</strong>. Source C adds the date only after about two months.</li>
+</ul></li>
+<li><strong>Source D:</strong> name a duplicated campaign that has a custom cover and custom UGC as <code>CBO - [product code] / Custom</code>.
+<ul>
+<li>This keeps the custom test <strong>separate from the original</strong> in the Ads Manager list.</li>
+</ul></li>
+</ul>
+</details><details class="part" id="ad-set-naming"><summary><h2>Ad set naming</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Name each ad set after <strong>the creative inside it</strong>. Example fields: the format, the number of ads, the launch date and the message type.</li>
+<li>You can see the contents <strong>without opening the ad set</strong>.</li>
+<li><strong>Source D pattern:</strong> the ad set name is a broad targeting label, for example <code>Top 5 Broad</code>.</li>
+<li><strong>Source C pattern:</strong> the ad set name includes the <strong>interest name</strong>, along with the campaign fields above.</li>
+</ul>
+</details><details class="part" id="ad-naming"><summary><h2>Ad naming</h2><span class="pm">2 min</span></summary>
+<h3 id="principles">Principles</h3>
+<ul>
+<li>Put the <strong>product name first</strong> in every Meta ad name. Creative reports group by that field.</li>
+<li>Keep the other fields <span class="ex">(ad type, launch date, creator name)</span> in <strong>the same fixed order</strong> for every ad. Then names can be read by a program.</li>
+<li>Keep the <strong>product type</strong> in the ad-level name. The report groups creatives by product from this field.</li>
+<li>For ads with <strong>several products</strong>, use a separate product type, such as <code>mixed</code>.</li>
+<li><strong>Start the naming now. Do not change it midway.</strong></li>
+<li>The launch date is recommended from the start. This avoids rebuilding names later.</li>
+</ul>
+<h3 id="fields">Fields</h3>
+<ul>
+<li>A usable ad name carries:
+<ul>
+<li>The product name <span class="ex">(examples: sleep, tea, bathrobe)</span></li>
+<li>The ad type <span class="ex">(video, UGC or sale ad)</span></li>
+<li>The launch date</li>
+<li>The creator name</li>
+</ul></li>
+<li>License tags and other extra fields are <strong>not needed</strong> for a creative-count report.</li>
+<li>The launch date is <strong>not strictly needed</strong> for a creative-count report. It is still recommended, because the report is pulled from the <strong>Meta API</strong> (the program that lets other tools read Meta's data).</li>
+<li>Name each ad with its <strong>creative type</strong> and a <strong>unique counter</strong>. Example: UGC followed by a number, such as <code>A123</code>.</li>
+<li>This lets you match an ad in Ads Manager to its <strong>source file</strong> and its results.</li>
+<li><strong>Source D pattern:</strong> ad name = <code>[today's date] [product name] CBO &gt; [ad set name] &gt; [number] Ad</code>.
+<ul>
+<li>Example: <code>2404 SleepMask CBO &gt; Top 5 Broad &gt; 1 Ad</code>.</li>
+</ul></li>
+</ul>
+<h3 id="pipe-separated-example">Pipe-separated example</h3>
+<ul>
+<li>A <strong>pipe-separated</strong> name uses the symbol <code>|</code> between fields.</li>
+<li>It can contain fields such as:
+<ul>
+<li>product type <span class="ex">(for example OODIE or BLANKET)</span></li>
+<li>audience (ADULTS)</li>
+<li>license status (LICENSED)</li>
+<li>format (IMAGE or video)</li>
+<li>production source (STUDIO)</li>
+<li>launch type (NEW PRODUCT)</li>
+<li>a category tag <span class="ex">(for example F&amp;B)</span></li>
+<li>a design or character name</li>
+</ul></li>
+<li>For a <strong>creative-count report</strong>, only product type, ad type, launch date and creator name are needed. The other fields can be left out.</li>
+</ul>
+<h3 id="older-advice">Older advice</h3>
+<ul>
+<li>Older advice from 2021-22: name each Facebook ad so the name <strong>shows what differs</strong> from the other ads in the ad group.</li>
+<li>Without this, <strong>split test results</strong> (tests that compare versions side by side) cannot be linked back to the creative that produced them.</li>
+</ul>
+</details><details class="part" id="audience-naming"><summary><h2>Audience naming</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Name <strong>custom audiences</strong> (groups of people you target) with: <strong>product name, funnel stage, event and window</strong>. This lets you tell them apart later.</li>
+<li>Example: <code>product, MOF, 25 plus video views, 30d</code>. (MOF means middle of funnel. 30d means a 30-day window.)</li>
+<li>Use the <strong>same pattern</strong> for engagement audiences, such as <code>FP engagement</code> with a 30-day window.</li>
+<li>Use the same pattern for <strong>website visitor audiences</strong>.</li>
+</ul>
+</details><details class="part" id="utm-parameters-and-url-tracking"><summary><h2>UTM parameters and URL tracking</h2><span class="pm">1 min</span></summary>
+<p>A <strong>UTM parameter</strong> is a short tag added to a link. It tells your analytics tool where a sale came from.</p>
+<h3 id="where-the-url-goes">Where the URL goes</h3>
+<ul>
+<li>Enter the URL of the <strong>product page that belongs to that specific ad</strong> in the ad's <strong>Website URL</strong> field.</li>
+<li>URL parameters are <strong>no longer typed there</strong>.</li>
+<li>They are managed in the <strong>Tracking section</strong>, opened with <strong>Go to Tracking</strong>.</li>
+</ul>
+<h3 id="method-a-dynamic-placeholders-at-ad-level">Method A: dynamic placeholders at ad level</h3>
+<ul>
+<li>A <strong>placeholder</strong> is a stand-in that Meta fills with the real name each time.</li>
+<li>In the ad-level UTM parameters on Meta:
+<ul>
+<li><code>utm_source</code> is fixed to <strong><code>Facebook</code></strong></li>
+<li><code>utm_medium</code> is fixed to <strong><code>cpc</code></strong></li>
+<li><code>utm_campaign</code>, <code>utm_content</code> and <code>utm_term</code> are filled with Meta's dynamic name placeholders for the <strong>campaign name, ad name and ad set name</strong>.</li>
+</ul></li>
+<li>This lets you trace <strong>each sale</strong> back to the exact campaign, ad and ad set in analytics.</li>
+</ul>
+<h3 id="method-b-build-a-url-parameter">Method B: Build a URL parameter</h3>
+<ol type="1">
+<li>Go to <strong>Ad level &gt; Tracking section &gt; Build a URL parameter</strong>.</li>
+<li>Set <strong>Campaign source</strong> = <code>facebook</code>.</li>
+<li>Set <strong>campaign medium</strong> = campaign name.</li>
+<li>Set <strong>campaign name</strong> = ad set name.</li>
+<li>Set <strong>content</strong> = ad name.</li>
+<li>Optional extra parameters (for example <code>utm_term</code>) can be added with <strong>Add parameter</strong>.</li>
+<li>Click <strong>Apply</strong> so they are embedded in the destination link.</li>
+</ol>
+<h3 id="conflict-between-the-two-methods">Conflict between the two methods</h3>
+<ul>
+<li>The two methods give <strong>different values</strong> for the same parameters:
+<ul>
+<li><code>utm_medium</code>: <code>cpc</code> in Method A, campaign name in Method B</li>
+<li><code>utm_source</code>: <code>Facebook</code> in Method A, <code>facebook</code> in Method B</li>
+</ul></li>
+<li>Both are kept here. The sources do not say <strong>when to use each</strong>.</li>
+<li><strong>Pick one method and use it for all ads.</strong> Then the trace in analytics stays comparable.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/09-meta-and-facebook-ads/07-ads-manager-columns-custom-metrics-and-naming/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../09-meta-and-facebook-ads/06-pixel-events-conversions-api-and-shopify-integration/"><span class="k">&larr; Previous</span><span class="v">Pixel, events, conversions API and Shopify integration</span></a><a class="nx" href="../../09-meta-and-facebook-ads/08-attribution-settings-and-the-march-2026-changes/"><span class="k">Next &rarr;</span><span class="v">Attribution settings and the march 2026 changes</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

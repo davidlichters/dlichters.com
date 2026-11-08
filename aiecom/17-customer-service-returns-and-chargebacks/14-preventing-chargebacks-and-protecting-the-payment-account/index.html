@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Preventing chargebacks and protecting the payment account | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 17.14: Preventing chargebacks and protecting the payment account.">
+<link rel="canonical" href="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/14-preventing-chargebacks-and-protecting-the-payment-account/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Preventing chargebacks and protecting the payment account | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 17.14: Preventing chargebacks and protecting the payment account."><meta property="og:url" content="https://dlichters.com/aiecom/17-customer-service-returns-and-chargebacks/14-preventing-chargebacks-and-protecting-the-payment-account/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">17. Customer service, returns and chargebacks</a> &rsaquo; <a href="../../../ecom/17-customer-service-returns-and-chargebacks/14-preventing-chargebacks-and-protecting-the-payment-account/">Plain version</a></div><h1>17.14 Preventing chargebacks and protecting the payment account</h1><article><h2 id="chargeback-causes">Chargeback causes</h2>
+<ul>
+<li>Late fulfillment and customers who believed the product was not authentic or not as described were the main causes in one documented case. Some customers also disputed charges after the brand owner publicly called the seller a scammer. [L0351.009]</li>
+<li>A low-quality product can lead to high chargebacks. Enough of them can get the payment processor to shut the account down, even after the store reaches high sales. Check quality before scaling. [L0335.034]</li>
+<li>Selling a seasonal product outside its season increases chargebacks, because buyers dispute orders for items they do not need in the current weather. Plan the sales window so the product is sold only while its season matches the buyer's need. [L0347.032]</li>
+<li>Dropshipping models with long delivery times and difficult returns carry more chargeback risk, because customers who wait weeks often dispute payments. (Older, 2019.) [L0357.056]</li>
+<li>Customers file chargebacks through their bank or card issuer, not through Shopify. The merchant receives a notification and can respond with evidence, but the card network or the bank decides the outcome. (Older, 2019.) [L1086.062]</li>
+<li>Chargebacks stay rare when products arrive quickly, the store responds to customers, and the product matches what the customer expected. Most chargeback losses come from delays and unclear product expectations. (Older, 2019.) [L1086.065]</li>
+<li>A chargeback can be lost even after delivery if a stolen card was used to order an item shipped to a reachable address. Prevent this with fraud prevention measures on the store, because evidence submitted after the dispute is often not enough. (Older, 2021.) [L1112.036]</li>
+<li>Higher order volume brings more returns, complaints and chargebacks, especially on Shopify Payments or Stripe. Products with thin margins become a risk as sales grow. [L0440.052]</li>
+<li>Orders paid with credit or debt carry higher chargeback risk. The store's economic exposure is higher during a downturn, when customers are panicking. [L1440.048]</li>
+<li>In fashion and streetwear, younger UK buyers (about 21 to 30) converted very well, but refunds and chargebacks were much higher with them. Older UK buyers were easier to sell to. [L1440.047]</li>
+<li>A supplier dispute or a quality problem can raise the PayPal dispute rate. Changing suppliers can therefore cause temporary spikes in disputes. [L1440.049]</li>
+<li>Most German buyers pay with PayPal. Poor customer support leads to many chargebacks in Germany. [L1184.049]</li>
+<li>Chargebacks rise during peak and holiday seasons. A single chargeback can threaten a small merchant. [L1231.047]</li>
+<li>Unsupported health claims may pass for a while, but they eventually cause trouble with platforms. When the promised result does not happen, customers become angry and more likely to return the product or dispute the charge. (Source B course, 2021-22.) [L0416.018]</li>
+</ul>
+<h2 id="chargeback-rate-thresholds">Chargeback rate thresholds</h2>
+<p>The sources give different figures because they describe different contexts. Use the reference that matches your account and payment method.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Reference point</th>
+<th>Value</th>
+<th>When it applies</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visa and Mastercard expectation</td>
+<td>Below 1%, meaning no more than about 1 chargeback per 100 orders. Above that, card networks issue warnings and the processor may close the account. (Older, 2020.)</td>
+<td>General card network rule</td>
+<td>[L0468.140]</td>
+</tr>
+<tr>
+<td>US Stripe and PayPal accounts</td>
+<td>About 1% dispute rate described as the point of risk for holds or closure</td>
+<td>US accounts, account-specific</td>
+<td>[L1512.030]</td>
+</tr>
+<tr>
+<td>Hong Kong accounts</td>
+<td>Up to 6% described as tolerated (account-specific, verify before relying on it)</td>
+<td>Hong Kong accounts only</td>
+<td>[L1512.030]</td>
+</tr>
+<tr>
+<td>Reserve case</td>
+<td>3.36% chargeback rate over the last 90 days led Shopify to place 10% of payouts in reserve</td>
+<td>Shopify Payments store that had unfulfilled orders charged back</td>
+<td>[L1327.017]</td>
+</tr>
+<tr>
+<td>Example ratio</td>
+<td>17.5% for the period without alert prevention</td>
+<td>Lesson example, not a benchmark</td>
+<td>[L0351.012]</td>
+</tr>
+<tr>
+<td>Occasional chargebacks</td>
+<td>Two chargebacks across more than 1,000 orders</td>
+<td>Treated as a normal cost of business that sales volume covers</td>
+<td>[L0910.036]</td>
+</tr>
+<tr>
+<td>Shopify shutdown trigger</td>
+<td>Three chargebacks in one week</td>
+<td>Can get a Shopify store shut down</td>
+<td>[L1299.030]</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The chargeback rate is disputes divided by orders. Raising average order value spreads the same number of disputes over more revenue, which is the main practical way to bring the rate back below 1%. [L0351.002]</li>
+<li>Keep chargeback rates low. A high chargeback ratio is one of the main triggers for a merchant account to hold a reserve. (Older, 2021.) [L0671.107, L0671.244]</li>
+<li>Excessive chargebacks can cause a payment provider to stop supporting a store. (Older, 2020.) [L1088.074]</li>
+</ul>
+<h2 id="account-holds-and-closures">Account holds and closures</h2>
+<ul>
+<li>Shopify rarely closes stores. Closures mostly happen for prohibited products or serious chargeback problems. (Older, 2021.) [L0671.106, L0671.243]</li>
+<li>Account closures for chargebacks are rare. They usually follow from unanswered customers, missed shipments or repeated fraud. To stay within the limits, respond to customers, ship on time and avoid prohibited products. (Older, 2020.) [L0468.141]</li>
+<li>Three chargebacks in one week can get a Shopify store shut down. Shopify may ban the store immediately, without refunding the money it holds. [L1299.030]</li>
+<li>A wrong Disputifier setup can let chargebacks through, which can lead to this situation. [L1299.030]</li>
+</ul>
+<p><strong>Case: Stripe hold.</strong> A seller's Stripe account was placed on a 30-day hold. The seller contacted customers early to resolve complaints, and the disputes were resolved quickly. About 20 days after the hold, the money was released, the dispute rate fell, and no further holds followed. [L1512.053]</p>
+<p><strong>Case: PayPal hold.</strong> A seller with PayPal holds at about 27,000 USD in volume uploaded fulfillment documents when requested, and the funds were released about a week later. The store also found that PayPal made up only about 5% of its payments. The seller paused PayPal for a few days and saw no drop in conversion. Judge holds against how much a payment method actually contributes to sales. [L1512.054]</p>
+<h2 id="prohibited-products">Prohibited products</h2>
+<ul>
+<li>Products on Shopify's prohibited list, such as supplements, can cause the processor to cancel the account and hold funds. Check the prohibited products list on Shopify's legal page before listing a product. (Older, 2020.) [L0468.142]</li>
+<li>Avoid unsupported health claims. They create platform trouble and lead to angry customers who dispute charges. (Source B course, 2021-22.) [L0416.018]</li>
+</ul>
+<h2 id="responsiveness-and-proactive-communication">Responsiveness and proactive communication</h2>
+<ul>
+<li>Not replying to customer emails is the most common cause of chargebacks. Answer every message quickly, reassure the buyer and show empathy. A customer who receives no answer will often dispute the charge. [L0352.022]</li>
+<li>Ignoring customers who ask where their order is leads to chargebacks. Even a reply that only explains a delay keeps the customer from disputing the payment. [L0661.050]</li>
+<li>Contact the customer as soon as a delay is known. Most chargebacks from legitimate customers can be avoided this way, because the frustration that leads to disputes is prevented. [L0360.059]</li>
+<li>Most chargebacks may be prevented with better communication: clear product descriptions, accurate shipping times and a friendly, responsive contact channel. Angry customers who dispute a payment often have unrelated problems, but the store controls what it communicates before the dispute. [L0910.037]</li>
+<li>Unanswered customer tickets make customers angrier. This raises the share of refunds. A rising share of refunds leads to a rising share of chargebacks, so the damage grows faster than sales. (Source B course, 2021-22.) [L0632.013]</li>
+<li>Chargebacks and refunds mostly happen when customers are not answered in time. A fast email reply with a discount code for the next order protects against chargebacks, even with long shipping. [L0820.031]</li>
+<li>Put in the shipping and refund policies that customers must contact the store before filing a chargeback. Keep records of all customer emails. A bank can use a screenshot of the customer's email and an unanswered reply as evidence. [L1381.052]</li>
+</ul>
+<h2 id="terms-checkbox-and-evidence">Terms checkbox and evidence</h2>
+<ul>
+<li>Turn on the terms and conditions checkbox in the checkout area, so customers must agree before checkout. Link it to your terms pages using inline HTML. [L1231.046]</li>
+<li>A recorded terms checkbox and a screenshot of it are evidence to include in a chargeback response. They may not win every dispute. [L1231.047]</li>
+<li>For orders that were shipped as planned, enter the tracking number as evidence to win the dispute. Keeping proof of shipment is what makes this possible. (Source A course, 2024.) [L0360.062]</li>
+</ul>
+<h2 id="disputifier-disputely-and-rdr-settings">Disputifier, Disputely and RDR settings</h2>
+<p><strong>Disputifier</strong></p>
+<ul>
+<li>Disputifier is an app that blocks chargebacks and helps handle disputes when orders go wrong. Set it up before the store starts scaling. [L1299.029]</li>
+<li>A wrong setup can let chargebacks through. [L1299.030]</li>
+</ul>
+<p><strong>Disputely</strong></p>
+<ul>
+<li>Disputely is a chargeback monitoring and dispute tool. It connects to the store, sends chargeback alerts and fights disputes to recover funds. The lesson presents it as one of the cheapest options. Its billing page lists alert types RDR, CDRN and Ethoca, with prices of $16.00 and $25.00 per alert. [L0351.010]</li>
+<li>Each chargeback costs about $30 in total. Fighting a chargeback with Disputely costs about $20 to $30. The merchant pays these fees even when the chargeback is won. [L0351.011]</li>
+<li>The Disputely dashboard shows the chargeback ratio over time, chargebacks prevented, and the true cost of avoided chargebacks. [L0351.012]</li>
+<li>The Disputes view lists each case with a status such as Enriching or Evidence Ready and a countdown to the deadline. The tool submits evidence automatically about 5 days before the deadline, so review cases and add notes or extra evidence before that point. [L0351.016]</li>
+</ul>
+<p><strong>RDR setting</strong></p>
+<ul>
+<li>In Disputely Billing, the RDR (Rapid Dispute Resolution) alert setting must show Not active. When it is Not active, the automatic actions read: No refunds will be issued and no subscriptions will be canceled. [L0351.013]</li>
+<li>If RDR stays active, customers can be refunded automatically even after the order has shipped, when the order is seen as not fulfilled fast enough. The merchant then loses the ad spend, the cost of goods and the sale. [L0351.014]</li>
+</ul>
+<p><strong>Procedure: stop automatic RDR refunds</strong></p>
+<ol type="1">
+<li>Open the Disputely billing page and check the RDR alert status. [L0351.015]</li>
+<li>Write an email to Disputely support asking them to disable RDR on your account. [L0351.015]</li>
+<li>Wait for confirmation, then check that the RDR alert shows Not active and that the automatic refund action reads No refunds will be issued. [L0351.015]</li>
+</ol>
+<h2 id="pre-dispute-refunds-and-early-resolution">Pre-dispute refunds and early resolution</h2>
+<ul>
+<li>Automatic refunds triggered by RDR are a loss, not a protection, so keep RDR at Not active. [L0351.013, L0351.014]</li>
+<li>Mitigator sends signals before a chargeback is filed to a Stripe or Shopify Payments account. This allows earlier resolution. Third-party gateways with better merchant protection were reported to cost around 400 to 500 (period and currency not stated). Their lower acceptance rate can reduce conversion, so they fit mainly when holds or disputes already occur. [L1512.046]</li>
+<li>Replying quickly with a discount code, before a customer opens a dispute, is the earliest form of resolution available. [L0820.031]</li>
+</ul>
+</article><nav class="pn"><a href="../../17-customer-service-returns-and-chargebacks/13-fraud-screening-and-risky-orders/"><span class="k">&larr; Previous</span><span class="v">Fraud screening and risky orders</span></a><a class="nx" href="../../17-customer-service-returns-and-chargebacks/15-responding-to-chargebacks-and-payment-disputes/"><span class="k">Next &rarr;</span><span class="v">Responding to chargebacks and payment disputes</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

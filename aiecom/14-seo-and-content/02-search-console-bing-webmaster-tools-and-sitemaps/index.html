@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Search console, bing webmaster tools and sitemaps | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 14.2: Search console, bing webmaster tools and sitemaps.">
+<link rel="canonical" href="https://dlichters.com/aiecom/14-seo-and-content/02-search-console-bing-webmaster-tools-and-sitemaps/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Search console, bing webmaster tools and sitemaps | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 14.2: Search console, bing webmaster tools and sitemaps."><meta property="og:url" content="https://dlichters.com/aiecom/14-seo-and-content/02-search-console-bing-webmaster-tools-and-sitemaps/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">14. SEO and content</a> &rsaquo; <a href="../../../ecom/14-seo-and-content/02-search-console-bing-webmaster-tools-and-sitemaps/">Plain version</a></div><h1>14.2 Search console, bing webmaster tools and sitemaps</h1><article><h2 id="overview-what-the-search-tools-do">Overview: What the Search Tools Do</h2>
+<ul>
+<li>Google Search Console is a free Google tool for tracking organic (non-paid) search traffic. It shows how your store appears in Google's organic results, tracks organic clicks and impressions, reveals the search keywords people used to find your site, displays indexed pages and products, and identifies site experience issues such as page speed problems, errors, and usability problems. [L0171.001]</li>
+<li>It is reached at search.google.com. It reports organic search performance and site errors, and it needs no paid traffic. [L0735.001]</li>
+<li>It does not run ads or report paid ad performance. It reports free organic listings and their clicks, while paid campaign data lives in the ad platform. [L0736.013]</li>
+<li>It shows which problems hold back organic rankings, which keywords bring free traffic, and how much free traffic arrives. Its error reports should be fixed so the site can rank higher. [L0735.002]</li>
+<li>Set it up early. It collects data over time, and data only starts filling in after verification. [L0736.001]</li>
+<li>Set it up early so organic traffic has time to build. Organic rankings in Google can produce buyers without paid ads. [L1393.001]</li>
+<li>A newly verified property shows no data at first, because coverage data (valid pages and pages with errors) needs time to accumulate. [L0736.006]</li>
+<li>Organic search traffic and keyword data appear over time. Only sites that receive organic traffic show meaningful performance reports, and unbranded product stores may see little organic traffic. [L0736.010]</li>
+<li><em>Older (2019):</em> Google Webmaster Tools, now Search Console, is free and reports errors when Google cannot read the website. It is mainly used for SEO monitoring. [L1275.038]</li>
+<li><em>Older (2020):</em> Search Console is listed as a resource in the December 2020 coaching call for monitoring how a store appears in Google search. The lesson names it without describing setup steps. [L0426.013]</li>
+<li><em>Older (2021-22):</em> Search Console is mandatory. It shows how Google crawls the site and which pages are and are not indexed, and the domain must be registered in the tool. [L1272.002]</li>
+</ul>
+<h2 id="account-email-and-ownership">Account, Email and Ownership</h2>
+<ul>
+<li>Log in with the same email address used for the Google Analytics account, so that both tools link together. [L0735.001]</li>
+<li>Use the same Google account email in Search Console as in Google Analytics, so the two tools link without extra work. [L0736.002]</li>
+<li>One source gives a different login: log in with your store's Google Workspace email. [L0171.003]</li>
+<li>Email rule in practice: the sources name two emails. The Analytics email is the one that links the tools [L0735.001, L0736.002, L0735.012]. The Workspace email is the wording in the setup procedure [L0171.003].</li>
+<li>Mistake: signing in with a different email than the one used for Google Analytics makes the two tools harder to link. [L0735.012]</li>
+<li>Mistake: adding a verification TXT record for a domain already verified in another Search Console account can transfer ownership away from the existing account. Check ownership before adding a new verification record. [L0736.005]</li>
+<li>One Search Console account can hold several domains. After login, every verified property appears, and more store domains can be added to the same login later. [L0735.014]</li>
+</ul>
+<h2 id="setup-procedures-three-source-versions">Setup Procedures: Three Source Versions</h2>
+<p>The sources give three complete setup procedures. They differ in admin path and record wording and are kept as written.</p>
+<p><strong>Version A (16 steps, Settings &gt; Domains)</strong></p>
+<ol type="1">
+<li>Go to search.google.com and log in with your store's Google Workspace email.</li>
+<li>Select Domain as the property type.</li>
+<li>Enter your full domain (example: yourstore.com) and click Continue.</li>
+<li>Copy the entire TXT verification record provided by Google.</li>
+<li>In Shopify Admin, go to Settings &gt; Domains.</li>
+<li>Click your domain.</li>
+<li>Open Domain settings.</li>
+<li>Add a TXT record.</li>
+<li>Paste the verification record.</li>
+<li>Click Save/Confirm.</li>
+<li>Return to Google Search Console and wait for verification to complete.</li>
+<li>Click Go to Property.</li>
+<li>Copy your sitemap URL: yourstore.com/sitemap.xml (use your actual domain).</li>
+<li>In Search Console, click Sitemaps in the left menu.</li>
+<li>Paste your sitemap URL.</li>
+<li>Click Submit. [L0171.003]</li>
+</ol>
+<p><strong>Version B (9 steps, Domain settings &gt; Add custom record)</strong></p>
+<ol type="1">
+<li>Open search.google.com and log in with the same email address used for the Google Analytics account.</li>
+<li>Enter the domain in the property field and select the property type 'Domain' (not URL prefix).</li>
+<li>Click Continue; Search Console shows a DNS TXT verification record. Copy the full text line.</li>
+<li>In the store admin, go to Settings &gt; Domains, click the domain, then open Domain settings.</li>
+<li>Click Add custom record, choose the record type TXT, paste the copied value, and confirm.</li>
+<li>Return to Search Console and click Verify. Propagation can take a minute or so; refresh if it does not pass at once.</li>
+<li>After ownership is verified, click 'Go to property'.</li>
+<li>Open Sitemaps in the left navigation.</li>
+<li>Enter the sitemap URL in the form yourdomain.com/sitemap.xml (the store's own sitemap file, copied from the browser) and click Submit. [L0735.004]</li>
+</ol>
+<p><strong>Version C (11 steps, Sales channels &gt; Online Store &gt; Domains)</strong></p>
+<ol type="1">
+<li>Go to search.google.com/search-console and click 'Start now'.</li>
+<li>Enter the domain name and click Continue.</li>
+<li>Choose verification via DNS record and copy the TXT (text) record value that Google shows.</li>
+<li>In the Shopify admin, go to Sales channels &gt; Online Store &gt; Domains.</li>
+<li>Click 'DNS settings'.</li>
+<li>Click 'Add custom record' and choose 'Text record'.</li>
+<li>In the Name field enter @.</li>
+<li>In the Text value field paste the code copied from Google.</li>
+<li>Click Confirm.</li>
+<li>Return to Google Search Console and click Verify.</li>
+<li>Once verified, open the Search Console dashboard for the domain. [L0736.003]</li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Version A</th>
+<th>Version B</th>
+<th>Version C</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Admin path</td>
+<td>Settings &gt; Domains, then click the domain, then Domain settings</td>
+<td>Settings &gt; Domains, then the domain, then Domain settings</td>
+<td>Sales channels &gt; Online Store &gt; Domains, then DNS settings</td>
+<td>[L0171.003, L0735.004, L0736.003]</td>
+</tr>
+<tr>
+<td>Record type</td>
+<td>TXT</td>
+<td>TXT</td>
+<td>Text record</td>
+<td>[L0171.003, L0735.004, L0736.003]</td>
+</tr>
+<tr>
+<td>Name field</td>
+<td>Not specified</td>
+<td>Not specified</td>
+<td>@</td>
+<td>[L0736.003]</td>
+</tr>
+<tr>
+<td>Adding the record</td>
+<td>Add a TXT record</td>
+<td>Add custom record</td>
+<td>Add custom record</td>
+<td>[L0171.003, L0735.004, L0736.003]</td>
+</tr>
+<tr>
+<td>Verify step</td>
+<td>Wait for verification to complete</td>
+<td>Click Verify</td>
+<td>Click Verify</td>
+<td>[L0171.003, L0735.004, L0736.003]</td>
+</tr>
+</tbody>
+</table></div>
+<p>Admin paths differ between the sources. Give both paths and use whichever matches the admin menu you see. [L0171.003, L0735.004, L0736.003]</p>
+<h2 id="verification-details">Verification Details</h2>
+<ul>
+<li>Choose the property type Domain, not URL prefix. This verifies the whole domain (all subdomains and protocols) through a DNS text record. [L0735.006, L0735.004, L0171.003]</li>
+<li>Add the TXT record on the store's domain in the store admin, using the path shown in the table above. [L0735.005]</li>
+<li>If the domain is registered outside Shopify, add the same TXT record in that registrar's DNS settings. Look up how to change DNS records for that provider. [L0736.004]</li>
+<li>Propagation can take a minute or so. Refresh the page if verification does not pass at once. [L0735.004]</li>
+<li>If the verification TXT record is already present in the store's DNS settings, ownership can show as verified immediately. A page refresh is only needed when the record is not yet visible in the store admin. [L0735.015]</li>
+</ul>
+<h2 id="shopify-sitemap-behaviour-and-limits">Shopify Sitemap: Behaviour and Limits</h2>
+<ul>
+<li>Shopify generates the sitemap automatically at yourstore.com/sitemap.xml. You do not need to create it manually. [L0171.004]</li>
+<li>The sitemap is generated automatically and does not need to be created or edited. [L0736.008]</li>
+<li><em>Older (2021-22):</em> Shopify generates an XML sitemap automatically at the store's root domain under /sitemap.xml, so no manual creation is needed. [L1333.001]</li>
+<li>The sitemap index links to child sitemaps: products (sitemap_products_1.xml), pages (sitemap_pages_1.xml), collections (sitemap_collections_1.xml) and blogs. [L0736.008]</li>
+<li>In the Search Console Sitemaps page, the submitted Shopify sitemap is listed with type 'Sitemap index'. [L1333.015] <em>(Older, 2021-22.)</em></li>
+<li>If the store has videos, they are listed in the Sitemaps report too. [L1271.006]</li>
+<li>To see exactly what is sent to Google, open yourstore.com/sitemap.xml in a browser. The page shows every URL being sent to Google, so you can confirm the right pages are included. [L0965.077]</li>
+<li>The sitemap URL follows the format yourdomain.com/sitemap.xml. Copy the full URL from the browser and submit it under Sitemaps. [L0735.009]</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Limit or behaviour</th>
+<th>Detail</th>
+<th>Source ids</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Images per product</td>
+<td>The standard Shopify XML sitemap lists only one image per product. Product images beyond the first may never be submitted to search engines. Products with many distinct images, each with its own file name and alt text, lose potential image-search visibility. <em>(Older, 2021-22.)</em></td>
+<td>[L1333.002]</td>
+</tr>
+<tr>
+<td>Separate image sitemap</td>
+<td>For an image sitemap, enter the URL the app provides (for example images.xml) and submit it the same way. <em>(Older, 2021-22.)</em></td>
+<td>[L1333.004]</td>
+</tr>
+<tr>
+<td>Sitemap is a convenience</td>
+<td>Search engines can still discover pages through internal links. The sitemap speeds up discovery and picks up updates faster. <em>(Older, 2021-22.)</em></td>
+<td>[L1333.001]</td>
+</tr>
+<tr>
+<td>Unpublished pages</td>
+<td>The sitemap submits unpublished pages by default unless they are excluded.</td>
+<td>[L1271.004]</td>
+</tr>
+<tr>
+<td>Google without submission</td>
+<td>Google will often find and index a store on its own. Submitting helps Google crawl the site consistently. <em>(Older, 2021.)</em></td>
+<td>[L0671.135, L0671.270]</td>
+</tr>
+<tr>
+<td>Ranking without submission</td>
+<td>Pages can still rank without submission, but Google crawls the whole site regularly once submitted. <em>(Older, 2021.)</em></td>
+<td>[L0962.156]</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="submitting-the-sitemap">Submitting the Sitemap</h2>
+<p>Four procedures are given. Each is kept as written.</p>
+<p><strong>Procedure 1 (undated)</strong></p>
+<ol type="1">
+<li>In the sidebar, under Index, click Sitemaps.</li>
+<li>In the 'Add a new sitemap' field, the domain prefix is already shown; type sitemap.xml after it.</li>
+<li>Click Submit.</li>
+<li>Status first shows 'Pending', then 'Success'.</li>
+<li>Once successful, the report shows how many URLs were found and any errors to fix. [L0736.007]</li>
+</ol>
+<p><strong>Procedure 2 (<em>older, 2021-22</em>)</strong></p>
+<ol type="1">
+<li>Verify the website in Google Search Console (usually a quick process when first opening the tool).</li>
+<li>Open the Sitemaps section in the left menu.</li>
+<li>In the field "Add a new sitemap", enter the sitemap path only, e.g. sitemap.xml for Shopify, after the domain already shown.</li>
+<li>Press SUBMIT.</li>
+<li>Check that the submitted sitemap appears in the list with status Success and a last-read date.</li>
+<li>For an image sitemap, enter the URL the app provides (e.g. images.xml) and submit it the same way. [L1333.004]</li>
+</ol>
+<p><strong>Procedure 3 (2023)</strong></p>
+<ol type="1">
+<li>Find your sitemap URL, for example yourdomain.com/sitemap.xml.</li>
+<li>Open Google Search Console and go to the Sitemaps section.</li>
+<li>Submit the current sitemap URL as a new sitemap.</li>
+<li>Check that the pages listed reflect the current store. Old 404 pages should disappear because they are no longer in the current sitemap. [L0835.090]</li>
+</ol>
+<p><strong>Procedure 4 (<em>older, 2021</em>)</strong></p>
+<ol type="1">
+<li>Open Google Search Console.</li>
+<li>Sign in with the same Google account used for Google Analytics and Google Ads.</li>
+<li>Submit the store's sitemap. Google then crawls the whole site regularly and reports errors that affect organic ranking, although pages can still rank without submission. [L0962.156]</li>
+</ol>
+<p><strong>Entry format in the submission form</strong></p>
+<ul>
+<li>The form shows the domain prefix already. Enter the path only, for example sitemap.xml. [L1333.004, L0736.007]</li>
+<li>Other sources say to paste the full sitemap URL, for example yourdomain.com/sitemap.xml. [L0171.003, L0735.004]</li>
+</ul>
+<p><strong>Reading the submitted sitemap</strong></p>
+<ul>
+<li>Status first shows Pending, then Success. Success is expected. [L0736.007, L1333.005, L1333.015] <em>(Older, 2021-22 for the last two.)</em></li>
+<li>The submitted sitemaps table shows Type, Submitted date, Last read date, Status and discovered URL count. [L1333.005, L1333.015] <em>(Older, 2021-22.)</em></li>
+<li>Check the submitted sitemap and the number of discovered pages in Sitemaps. [L1271.006]</li>
+<li>Submitting a sitemap makes Google crawl the store more often. Updates to pages, collections, blog posts and products are picked up sooner, so ranking changes can happen faster. A regularly updated sitemap is the basis for organic visibility. [L1271.003]</li>
+<li>Submitting a sitemap lets Google know the site exists and which pages and products it contains, so it can crawl and index them for organic results. Indexing takes time, so data only fills in gradually after setup. [L0735.003]</li>
+</ul>
+<h2 id="checking-indexing-and-reports">Checking Indexing and Reports</h2>
+<p><strong>Check that the right pages are indexed</strong></p>
+<ol type="1">
+<li>Open the indexed pages report.</li>
+<li>Click view examples of indexed pages.</li>
+<li>Confirm that the homepage, contact page, privacy policy, shipping and returns page, blog posts and all product page URLs appear there. [L0373.002]</li>
+</ol>
+<p><strong>What the reports show</strong></p>
+<ul>
+<li>Once data populates, the reports show organic impressions and clicks, indexed page counts, the search queries (keywords) that brought visitors, and any site experience issues. [L0171.005]</li>
+<li>The Coverage report is the most useful free SEO diagnostic, because it reflects what Google's own crawler experienced on the site. Check it regularly to spot pages Google cannot index or cannot reach. <em>(Older, 2021-22.)</em> [L1333.007]</li>
+<li>Third-party audit tools are useful, but their findings may differ from Google's view. <em>(Older, 2021-22.)</em> [L1333.007]</li>
+<li>Search Console and Bing Webmaster Tools report which external links point to a site and which search terms generate impressions. This data is limited in both tools, so use it as a basic view next to a third-party SEO tool. <em>(Older, 2021-22.)</em> [L1272.015]</li>
+</ul>
+<h2 id="smart-seo-sitemap-control">Smart SEO Sitemap Control</h2>
+<p>Smart SEO is a Shopify app that controls which pages go into the sitemap submitted to Google.</p>
+<ol type="1">
+<li>Open the Smart SEO app from inside the Shopify admin. [L1271.001]</li>
+</ol>
+<ul>
+<li>Google Search Console must already be set up for the store before Smart SEO is connected to it. The app then adds the website to Search Console and submits the sitemap through that existing property. [L1271.020]</li>
+<li>The app's sitemap section lists the store's pages individually. To keep a specific page out of the sitemap submitted to Google, click Exclude next to that page. Excluded pages are no longer submitted, so they will not rank. [L1271.019]</li>
+<li>Excluding a page stops it from being submitted to Google, so it will not rank. Exclusions are useful for inactive products, duplicate pages or pages you do not want in search results. Use them sparingly. [L1271.004]</li>
+<li>Mistake: excluding pages without need removes them from the sitemap and therefore from Google's search index. Do not exclude products that should rank. [L1271.005]</li>
+<li>Mistake: do not assume unpublished pages are hidden from Google unless they are explicitly excluded. [L1271.005, L1271.004]</li>
+</ul>
+<h2 id="recrawling-and-updating-after-changes">Recrawling and Updating After Changes</h2>
+<p><strong>Recrawl by resubmitting the sitemap (<em>older, 2022</em>)</strong></p>
+<ol type="1">
+<li>Open Google Search Console.</li>
+<li>Click Sitemaps in the left navigation.</li>
+<li>Delete the old sitemap if needed, then add your sitemap address (yourdomain.com/sitemap.xml).</li>
+<li>Submit it so Google crawls it again; results appear in real time, usually within minutes. Search Console only offers community support, with answers from forum experts. [L0429.020]</li>
+</ol>
+<p><strong>Recrawl old pages after changing collections (<em>older, 2019</em>)</strong></p>
+<p>Source wording: Google Webmaster Tools (google.com/webmasters). This name predates Search Console.</p>
+<ol type="1">
+<li>Log in with the same email address used for Google Ads, Google Shopping and Google Analytics, creating the account if it does not exist.</li>
+<li>Verify the URL of the website.</li>
+<li>Use the option to crawl the website so that Google's bots revisit the site and update the pages.</li>
+</ol>
+<p>Pages that still show old URLs and return 404 errors are usually still indexed by Google and get updated after the recrawl. [L0467.019]</p>
+<p><strong>Timing</strong></p>
+<ul>
+<li>Resubmitting the sitemap makes Google read it again, and results can appear within minutes. <em>(Older, 2022.)</em> [L0429.020]</li>
+<li>After changing page content, Google recrawls the site over a few weeks. Request a recrawl after changing product page meta or content to speed up ranking changes. [L0964.137]</li>
+<li>The best time to request indexing is after updating product page meta information. Waiting a couple of weeks lets the rankings settle. [L0964.138]</li>
+<li>Use both timings together. The sitemap read can show within minutes, while ranking changes from content updates take a few weeks. [L0429.020, L0964.137, L0964.138]</li>
+</ul>
+<h2 id="bing-webmaster-tools">Bing Webmaster Tools</h2>
+<p><strong>Why add Bing</strong></p>
+<ul>
+<li>Bing is a second organic search channel that works without paid advertising. It adds traffic on top of Google. [L0303.012]</li>
+<li>Bing tools work like Search Console for Bing. Register the site there too, because Bing can deliver organic traffic and sales even though it is a smaller search engine. <em>(Older, 2021-22.)</em> [L1272.003]</li>
+<li>Set up Bing before or alongside paid campaigns. Set it up before building Shopping ads, so organic results can be added alongside the paid campaigns. [L1034.009, L1034.010]</li>
+<li>Most checks available in Search Console have an equivalent in Bing Webmaster Tools. <em>(Older, 2021-22.)</em> [L1333.014]</li>
+</ul>
+<p><strong>Setup by import from Search Console</strong></p>
+<ol type="1">
+<li>Open bing.com/webmasters.</li>
+<li>Click Get started.</li>
+<li>Sign in with a Microsoft, Google or Facebook account.</li>
+<li>On the Welcome to Bing Webmaster Tools page, use the import option for sites already verified in Google Search Console.</li>
+<li>Click Import.</li>
+<li>Select the Google account that owns the Search Console property; Bing identifies the account by its email address.</li>
+<li>Click Allow to approve sharing.</li>
+<li>If several domains are linked to that Search Console account, select the domain you want and keep it ticked.</li>
+<li>Click Import.</li>
+<li>When Bing confirms that one site was imported, click Done.</li>
+<li>Wait while Bing processes the data, which can take up to 48 hours.</li>
+<li>Review the dashboard, whose sidebar links mirror Google Search Console. [L0303.002]</li>
+</ol>
+<p><strong>Sitemap in Bing</strong></p>
+<ul>
+<li>If the site was imported from Search Console, the sitemap is already carried over and does not need to be submitted again in Bing. [L0303.008]</li>
+<li>A sitemap can also be submitted manually in Bing, or linked through the Google Search Console account. Both methods work. [L0303.008]</li>
+<li>Submit the same XML sitemap URL in Bing as in Search Console. <em>(Older, 2021-22.)</em> [L1333.014]</li>
+<li>Submitting the sitemap makes sure every page of a Shopify store, including product pages, is crawled by Bing and added to its search index. Indexed pages can appear in Bing search results and be checked in the Bing tools. [L0303.009]</li>
+</ul>
+<p><strong>Mistakes and alerts</strong></p>
+<ul>
+<li>Mistake: Bing matches the Google account during import by its email address. If you sign in with a Google account that uses a different email than the one that set up the Search Console property, the site will not be available to import. [L0303.016]</li>
+<li>Bing sends automatic email notifications when it detects problems on a website. Fixing these issues helps the site earn as much organic traffic from Bing as possible. [L0303.011]</li>
+</ul>
+<h2 id="ongoing-routine">Ongoing Routine</h2>
+<ul>
+<li>Fix the error reports in Search Console so the site can rank higher. [L0735.002]</li>
+<li>Check the Coverage report regularly for pages Google cannot index or reach. <em>(Older, 2021-22.)</em> [L1333.007]</li>
+<li>Respond to alerts. Google emails the account owner when it detects errors on the site, so these issues can be fixed promptly. [L0736.009]</li>
+<li>Bing also sends automatic email notifications for detected problems. [L0303.011]</li>
+<li>Keep the sitemap current. Submitting a regularly updated sitemap keeps updates to pages, collections, blog posts and products visible to search engines sooner. [L1271.003]</li>
+<li>Give organic data time. Keyword and performance data fill in gradually after setup. [L0171.005, L0735.003]</li>
+</ul>
+<h2 id="older-procedure-2019">Older Procedure (2019)</h2>
+<p>The following procedure predates the current Search Console interface. It is kept as written.</p>
+<ol type="1">
+<li>Open Google Webmaster Tools (today Google Search Console) with the same login used for Google Analytics; it is free.</li>
+<li>Review the report for every URL and any errors, and fix errors on the homepage that stop Google from showing it.</li>
+<li>Submit the sitemap at yoursite.com/sitemap.xml so Google crawls and indexes every URL, including the homepage. [L0356.019]</li>
+</ol>
+</article><nav class="pn"><a href="../../14-seo-and-content/01-seo-strategy-priorities-and-timelines/"><span class="k">&larr; Previous</span><span class="v">SEO strategy, priorities and timelines</span></a><a class="nx" href="../../14-seo-and-content/03-keyword-research-and-tools/"><span class="k">Next &rarr;</span><span class="v">Keyword research and tools</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>

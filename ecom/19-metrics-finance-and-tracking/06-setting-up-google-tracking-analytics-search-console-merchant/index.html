@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Setting up Google tracking: analytics, search console, merchant center, ads | Ecommerce Playbook</title>
+<meta name="description" content="- Use one business Google login for every Google service, never a personal address. - Set up Google Analytics before traffic arrives, and use GA4, the current version. Universal Analytics stopped in July 2023. - Raise Event data retention from 2 ...">
+<link rel="canonical" href="https://dlichters.com/ecom/19-metrics-finance-and-tracking/06-setting-up-google-tracking-analytics-search-console-merchant/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Setting up Google tracking: analytics, search console, merchant center, ads | Ecommerce Playbook"><meta property="og:description" content="- Use one business Google login for every Google service, never a personal address. - Set up Google Analytics before traffic arrives, and use GA4, the current version. Universal Analytics stopped in July 2023. - Raise Event data retention from 2 ..."><meta property="og:url" content="https://dlichters.com/ecom/19-metrics-finance-and-tracking/06-setting-up-google-tracking-analytics-search-console-merchant/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../19-metrics-finance-and-tracking/">19. Metrics, finance and tracking</a></div><h1>Setting up Google tracking: analytics, search console, merchant center, ads</h1><p class="meta">Section 19.6 &middot; 6 of 23 in this chapter &middot; 27 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>Use <strong>one business Google login</strong> for every Google service, never a personal address.</li>
+<li>Set up Google Analytics <strong>before traffic arrives</strong>, and use GA4, the current version. Universal Analytics stopped in <strong>July 2023</strong>.</li>
+<li>Raise Event data retention from <strong>2 months to 14 months</strong> before you build remarketing audiences.</li>
+<li>In the Google &amp; YouTube app, connect only Analytics. Google Ads must show <strong>Inactive</strong> and Merchant Center <strong>Not connected</strong>.</li>
+<li>Never use an ID that starts with <strong>UA-</strong>. It belongs to the old system and no longer records sales.</li>
+</ul>
+<details><summary>More key points</summary><ul>
+<li>Link Search Console and Google Analytics so search data shows up in your reports.</li>
+<li>Set up conversion tracking so you can see which ads bring sales.</li>
+<li>Set up tags with one app, and remove any old duplicate tags.</li>
+<li>A tag that shows "unverified" right after setup is normal. It becomes active once visitors arrive.</li>
+<li>Keep your Merchant Center shipping settings exactly the same as your real store shipping.</li>
+</ul>
+</details></div><article><div class="parts-bar"><span>This section has 19 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="same-google-login-for-every-service"><summary><h2>Same Google login for every service</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Use the store's <strong>business Google email</strong> for Google Analytics, Search Console, Merchant Center and Google Ads. A business email is a Google Workspace account, a paid company email and tools package. Search Console is Google's tool that shows how search finds your site. Merchant Center is Google's tool that holds your product list for shopping ads. Google Ads is Google's paid advertising system. Never use a personal address. Log in with the business email <strong>before you start any Google setup</strong>. It prevents permission problems, makes linking far easier, and lets the properties share access.</li>
+<li>with the <strong>same email</strong> for Analytics, Ads and Search Console, site ownership verifies immediately.</li>
+<li>A personal account and a business account for the same service are a common reason data and audiences go missing. Check that <strong>every linked account number</strong> is the intended one.</li>
+<li>The store build team usually creates these accounts and links them. Link Google Analytics, Google Ads and Merchant Center to the store. When the setup offers GA4 alongside the pixel <span class="ex">(a small tracking code placed on the site)</span>, connect <strong>both platforms</strong>.</li>
+</ul>
+</details><details class="part" id="what-google-analytics-reports-and-why-to-set-it-up-early"><summary><h2>What Google Analytics reports and why to set it up early</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Google Analytics is Google's free tool for measuring visitors and sales. It reports <strong>visitor numbers</strong>, traffic sources and countries, pages viewed, time spent on each page, general behaviour patterns, which products and traffic sources produce revenue, and where buyers were referred from.</li>
+<li>It measures the <strong>return on Google Ads spending</strong>.</li>
+<li>Analytics records visits, sales and user behaviour. It can only analyse what is fed into it, so <strong>every connected source</strong> should send data to it.</li>
+<li>Set up Analytics <strong>before traffic arrives</strong>, even if you do not analyse the data yet. Data then builds up for future use and for linking with Google Ads, Search Console and Merchant Center. From the first visitors you can see which sources, pages and products work and which need improvement.</li>
+<li>Analytics attributes each sale to the product, the order amount and the traffic source. Attribution means matching a sale to where the buyer came from. Example: a <strong>$1,000 sale</strong> shows what was bought, the $1,000 spent and where the buyer came from. Review revenue by source and by product over time to decide which traffic to increase and which pages to improve.</li>
+<li>Connecting Analytics to Shopify attributes <strong>every sale</strong> to its traffic source, so you can see which channels are profitable and which are not.</li>
+<li>Google Tag Manager is a control panel for tracking tags <span class="ex">(small pieces of code that report an action)</span>. It is set up together with Google Analytics and GA4 so that <strong>all tracking runs from one place</strong>. It does not replace analytics.</li>
+</ul>
+</details><details class="part" id="account-property-and-data-stream"><summary><h2>Account, property and data stream</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>The hierarchy is <strong>account, then property, then data stream</strong>. An account is the top folder for the business. A property is the data container for one website. A data stream is the pipe that sends site data into Analytics. One account can hold several properties, and <strong>one property is enough for one store</strong>.</li>
+<li>An account represents the business and a property represents one website. Use <strong>one property per store</strong> unless the business runs several websites under one parent company.</li>
+<li>one Google account can manage several stores, each added as a separate property. You switch between them with the drop-down menu at the top left.</li>
+<li>A data stream is the source that sends information to Analytics. For a store without an app, select the <strong>Web</strong> stream type <span class="ex">(the type for a normal website)</span> and enter the store URL.</li>
+<li>Account, property and data stream names are <strong>internal labels</strong> that nobody else sees. They can match the store name but do not need to match the URL.</li>
+<li>Enter the URL of the <strong>live store</strong>, not a development or test version. Google must be able to reach the site to collect data.</li>
+<li>Time zone and currency should match the business location. Example: United States, Eastern time, <strong>US dollar</strong>.</li>
+<li>The Analytics currency must match the currency the store takes payments in. Otherwise e-commerce sales are reported in another currency and will not match the store's own figures.</li>
+<li>If the store already has a Google Analytics account, <strong>skip sign-up and account creation</strong>. Connect the existing GA4 property to Shopify and choose the property that belongs to this store from the drop-down.</li>
+</ul>
+</details><details class="part" id="procedure-a-ga4-account-and-shopify-connection-through-the-google--youtube-app-24-steps"><summary><h2>Procedure A: GA4 account and Shopify connection through the Google &amp; YouTube app (24 steps)</h2><span class="pm">1 min</span></summary>
+<p><strong>Procedure A: create the GA4 account and connect it to Shopify. Source: Source A, undated.</strong></p>
+<ol type="1">
+<li>Go to <strong>analytics.google.com</strong>.</li>
+<li>Click <strong>Start Measuring</strong>.</li>
+<li>For Account name, enter your store name. It is for your reference only.</li>
+<li>Leave all sharing settings <strong>checked</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>For Property name, enter your domain name <span class="ex">(for example yourstore.com)</span>.</li>
+<li>Select your <strong>correct time zone</strong>.</li>
+<li>Confirm the <strong>currency</strong> is correct.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>For Industry category, select <strong>Shopping</strong>.</li>
+<li>For Business size, select <strong>Small (1-10 employees)</strong>.</li>
+<li>For Business objectives, select <strong>Drive sales</strong> and <strong>Understand web traffic</strong>. You can select multiple.</li>
+<li>Click <strong>Create</strong> and accept Google's terms.</li>
+<li>Choose <strong>Web</strong> as the data source.</li>
+<li>Enter your <strong>website URL</strong>.</li>
+<li>Name the data stream. This is for internal reference only.</li>
+<li>Leave <strong>Enhanced Measurement turned ON</strong>.</li>
+<li>Click <strong>Create and Continue</strong>.</li>
+<li>When Google detects your Shopify site, click <strong>Next</strong> to install the Shopify integration.</li>
+<li>In Shopify Admin <span class="ex">(the store's back office)</span>, search for the <strong>Google &amp; YouTube app</strong>.</li>
+<li>Install the app on the <strong>free plan</strong>.</li>
+<li>Copy your <strong>Measurement ID / Tag ID</strong> from your Google Analytics account. This is the code that tells Google which account the data belongs to.</li>
+<li>Paste it into the Google &amp; YouTube app when prompted.</li>
+<li>Use the <strong>Shopify/Google tutorial (Option 1)</strong> to complete the connection.</li>
+</ol>
+</details><details class="part" id="procedure-b-ga4-account-and-web-data-stream-19-steps"><summary><h2>Procedure B: GA4 account and web data stream (19 steps)</h2><span class="pm">1 min</span></summary>
+<p><strong>Procedure B: create a GA4 account and web data stream for a Shopify store. Source: Source A, undated.</strong></p>
+<ol type="1">
+<li>Open <strong>analytics.google.com</strong> while signed in with the <strong>Google Workspace account</strong> of the store.</li>
+<li>Click <strong>Start Measuring</strong>.</li>
+<li>Enter an account name. It is only for your reference.</li>
+<li>Under the sharing settings, keep <strong>all four options checked</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Enter a property name <span class="ex">(required)</span>. Naming it after the website domain is a sensible choice.</li>
+<li>Set the <strong>time zone</strong> to the time zone where you operate.</li>
+<li>Check that the <strong>currency</strong> matches the currency your shop uses. Change it if the default differs.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Under business details, choose <strong>Shopping</strong> as the industry.</li>
+<li>Choose <strong>small, one to 10 employees</strong> as the business size.</li>
+<li>Click <strong>Next</strong>.</li>
+<li>Under business objectives, tick <strong>Drive sales</strong> and <strong>Understand web and/or app traffic</strong>. Ticking more options does not change the account.</li>
+<li>Click <strong>Create</strong>.</li>
+<li>Read the Google Terms of Service, <strong>accept them</strong>, and accept the policies.</li>
+<li>On the data collection screen, choose <strong>Web</strong>, because no app is involved.</li>
+<li>Enter the <strong>store URL</strong> and name the data stream. Only you will see the name.</li>
+<li>Keep <strong>Enhanced measurements switched on</strong> with all default items enabled. Enhanced measurement means automatic tracking of page views and clicks.</li>
+<li>Click <strong>Create and Continue</strong>.</li>
+</ol>
+<p>Notes to Procedure B:</p>
+<ul>
+<li>Keep <strong>all four sharing options checked</strong>.</li>
+<li>Keep Enhanced measurements <strong>on with all default tracking items enabled</strong>.</li>
+</ul>
+</details><details class="part" id="procedure-c-ga4-account-and-link-to-shopify-12-steps"><summary><h2>Procedure C: GA4 account and link to Shopify (12 steps)</h2><span class="pm">2 min</span></summary>
+<p><strong>Procedure C: create a GA4 account and link it to Shopify, in this order. Source: Source A, undated.</strong></p>
+<ol type="1">
+<li>Open the Google Analytics sign-up page and click <strong>Get started today</strong>. Only do this if the store <strong>does not already have a Google Analytics account</strong>.</li>
+<li>Sign in with the <strong>business email address</strong>.</li>
+<li>Enter the account name. It is internal only, so the store name is fine.</li>
+<li>Leave <strong>data sharing enabled</strong> and click <strong>Next</strong>.</li>
+<li>Enter the property name, for example the store name.</li>
+<li>Set the <strong>reporting time zone</strong> to the place where the business is based. Set the <strong>currency</strong> too. The example uses US Eastern time and US dollar.</li>
+<li>Do <strong>not</strong> select the Universal Analytics option under advanced options. Skip the advanced options and continue.</li>
+<li>Fill in the business information: Industry category <strong>Shopping</strong>, business size usually <strong>1 to 10 employees</strong> for a small store, and any intended-use options that apply. These answers only inform Google and do not change the account.</li>
+<li>Leave <strong>App installs unchecked</strong> if the store has no app.</li>
+<li>Click <strong>Create</strong>, check both boxes for the Google terms of service, and click <strong>I accept</strong>.</li>
+<li>Choose the platform <strong>Web</strong>, enter the store URL (with www, for example <a href="http://www.example.com">www.example.com</a>), enter an internal stream name, keep <strong>Enhanced measurement on</strong>, and click <strong>Create stream</strong>.</li>
+<li>Do <strong>not</strong> use the manual installation code shown in the pop-up. Connect the stream to Shopify through the Google channel instead.</li>
+</ol>
+<p>Notes to Procedure C:</p>
+<ul>
+<li>Keep <strong>data sharing enabled</strong> so that Google platforms added later can exchange data with each other.</li>
+<li>Industry category <strong>Shopping</strong> and business size <strong>1 to 10 employees</strong> for a small store. Leave <strong>App installs off</strong> when there is no mobile app.</li>
+<li>Keep <strong>Enhanced measurement on</strong>. It tracks events such as page views and other interactions automatically.</li>
+<li>Do <strong>not</strong> install Analytics on Shopify with the manual code from the pop-up.</li>
+<li>Do <strong>not</strong> create a Universal Analytics property from the advanced options. Create only the GA4 property.</li>
+</ul>
+</details><details class="part" id="business-size-and-objectives-two-versions"><summary><h2>Business size and objectives: two versions</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>For a small store, use <strong>Small (1-10 employees)</strong>. Source: Procedures A, B and C.</li>
+<li>business size was set to <strong>Small to medium</strong>, with these intended uses: measure customer engagement, optimize site, optimize advertising cost, increase conversions and analyze online sales.</li>
+<li>Business objectives in the current procedures: <strong>Drive sales</strong> and <strong>Understand web traffic</strong> (A), or <strong>Drive sales</strong> and <strong>Understand web and/or app traffic</strong> (B). Ticking more options does not change the account.</li>
+</ul>
+</details><details class="part" id="older-method-universal-analytics-plus-ga4-2021-22"><summary><h2>Older method: Universal Analytics plus GA4 (2021-22)</h2><span class="pm">1 min</span></summary>
+<p><strong>Do not use this method now.</strong> Universal Analytics (UA, the old Google Analytics system) <strong>stopped processing data in July 2023</strong>. The steps are kept for reference.</p>
+<p><strong>Older procedure, 2021-22: create a GA4 and a Universal Analytics property at once.</strong></p>
+<ol type="1">
+<li>Open Google Analytics, click <strong>Start measuring</strong>, and enter the business name as the account name.</li>
+<li>Leave the default account data-sharing options unchanged.</li>
+<li>Name the property after the website. One account can hold several properties, but a single store needs only one.</li>
+<li>Set the reporting time zone to the location of the business.</li>
+<li>Set the currency to the currency of the country you sell in.</li>
+<li>Click <strong>Show advanced options</strong>.</li>
+<li>Select <strong>Create both a Google Analytics 4 property and a Universal Analytics property</strong>. This was the recommended method in the 2021 setup.</li>
+<li>Enter the base website URL.</li>
+<li>Click <strong>Next</strong>. Set the business size to <strong>Small to medium</strong> and select the intended uses: measure customer engagement, optimize site, optimize advertising cost, increase conversions and analyze online sales.</li>
+<li>Select your country, tick the terms of service box, and accept.</li>
+<li>Close the data stream setup screen <strong>without selecting any options</strong>. They are not needed at this stage.</li>
+</ol>
+<p>Older notes (2021-22):</p>
+<ul>
+<li>Creating both properties at once creates two properties with connected site tags, so the website is tagged <strong>only once</strong>. Universal Analytics measures websites only, not apps.</li>
+<li>In 2021 GA4 was new and integrated poorly with Shopify. That is why both properties were created.</li>
+<li>Older e-commerce path (2021-22): <strong>Admin</strong>, then the <strong>View</strong> column, then <strong>Ecommerce Settings</strong>. Turn on <strong>Enable Ecommerce</strong> and enhanced e-commerce reporting, then save. Without this, Analytics does not record sales data.</li>
+</ul>
+</details><details class="part" id="connecting-analytics-to-shopify-google--youtube-app"><summary><h2>Connecting Analytics to Shopify (Google &amp; YouTube app)</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>The Google &amp; YouTube app (Shopify's app for connecting Google services) is used <strong>only to connect Google Analytics</strong>. Do not use it to connect Merchant Center or Google Ads through its basic setup, because those need different setup with more control. If either is connected automatically, <strong>disconnect it in the app Settings</strong>.</li>
+<li>Newer source (2024): the app can also be used for Google Ads conversion tracking. A conversion is a completed goal, such as a purchase. The app tracks <strong>all sales in GA4</strong>. The 2023 rule above is therefore a stricter version of the same setup.</li>
+<li>Do <strong>not</strong> use the advanced manual setup option when connecting Analytics through the app. Always use the <strong>Shopify/Google tutorial (Option 1 only)</strong> so the Measurement ID / Tag ID is configured properly.</li>
+<li>Paste the <strong>Measurement ID</strong> into the Analytics field of the store and save. Shopify then adds the tracking code, so <strong>no theme or Liquid edits</strong> are needed for basic Analytics tracking. Liquid is Shopify's template code, the code that builds your pages.</li>
+<li>The YouTube option is not needed. Only the <strong>Google option</strong> needs to be on if you do not use YouTube.</li>
+<li>A Google sales channel <span class="ex">(a place outside your store where products are sold)</span> can show a <strong>calendar icon</strong> in Shopify. This is normal and only means the app is installed.</li>
+<li>GA4 is connected through the Google &amp; YouTube app, so <strong>no extra tagging</strong> is needed to track sales. If test sales do not appear, check the GA4 connection.</li>
+</ul>
+<p><strong>Check the connection: Shopify Admin, Sales Channels, Google &amp; YouTube.</strong></p>
+<ol type="1">
+<li>In Shopify Admin, go to <strong>Sales Channels &gt; Google &amp; YouTube</strong>.</li>
+<li>Verify that <strong>Google Analytics shows as Active</strong>.</li>
+<li>Verify that <strong>Google Ads shows as Inactive</strong>.</li>
+<li>Verify that <strong>Merchant Center shows as Not connected</strong>.</li>
+<li>If Google Ads or Merchant Center are connected, open app <strong>Settings</strong> and disconnect them.</li>
+</ol>
+<p>A correct connection shows Google and YouTube under Sales Channels, with <strong>Google Analytics active</strong>, <strong>Google Ads inactive</strong> and <strong>Merchant Center not connected</strong>.</p>
+</details><details class="part" id="enhanced-ecommerce-and-data-sharing"><summary><h2>Enhanced ecommerce and data sharing</h2><span class="pm">2 min</span></summary>
+<p><strong>Enhanced ecommerce through Shopify <span class="ex">(newer method)</span>.</strong> Enhanced ecommerce means extra tracking of product views, carts, checkouts and orders.</p>
+<ol type="1">
+<li>In Shopify, go to <strong>Online Store &gt; Preferences</strong> and open the Google Analytics section.</li>
+<li>Click to <strong>create a new Google Analytics account</strong> and enter the store URL and a category.</li>
+<li>Under data sharing, <strong>keep all options checked</strong>: early access to data, new features, Google Analytics specialist debug access and Google Ads linking.</li>
+<li>Accept the terms of service and copy the generated <strong>Google Analytics measurement ID</strong>.</li>
+<li>Paste it into the <strong>Google Analytics field</strong> in Shopify and save.</li>
+<li>Mark the <strong>Enhanced Ecommerce option</strong> in Shopify and save again.</li>
+<li>In Google Analytics, link the property to the Google Ads account using the <strong>same email</strong>. Name the link after the store and share all views.</li>
+<li>Enable <strong>demographics and interests reporting</strong>, enable <strong>remarketing</strong> (showing ads again to people who already visited) and advanced reporting features, and turn on <strong>individual user ID tracking</strong> under tracking info data collection. Save each change.</li>
+</ol>
+<ul>
+<li>Keep <strong>all data-sharing checkboxes active</strong>: early data access, new features, Analytics specialist access for debugging, and sharing with Google Ads. Beta features and debugging support then stay available.</li>
+<li>With Enhanced Ecommerce switched on in the Shopify integration, <strong>sessions</strong> (single visits), product views, <strong>add-to-cart events</strong> (clicks on add to cart), checkout steps and <strong>transactions</strong> (completed orders) are tracked automatically, with <strong>no custom code</strong>.</li>
+<li>Confirm that <strong>Use Enhanced Ecommerce</strong> is ticked in the Shopify Analytics field and that the connection records ecommerce data.</li>
+<li>Older method (2020): in Analytics, open the <strong>gear icon</strong> for Admin, then under your website's data open <strong>E-commerce settings</strong>. Toggle on <strong>Enable e-commerce</strong> and <strong>Enable enhanced e-commerce reporting</strong>, then <strong>Save</strong>. In the Shopify back end, open the Google Analytics settings and check <strong>Use enhanced e-commerce</strong>.</li>
+<li>Conflict to know: the older method (2020, 2021-22) uses the Universal Analytics path. The newer method switches on Enhanced Ecommerce in Shopify and tracks automatically in GA4. <strong>Use the newer method for a new store.</strong></li>
+<li>Enhanced Ecommerce is only available <strong>after upgrading to the latest version</strong> of Google Analytics.</li>
+<li><strong>Do not use an ID that starts with UA-.</strong> It belongs to Universal Analytics, which stopped processing data in July 2023, so it <strong>no longer records sales</strong>. Connect a GA4 property and verify that it captures purchases. (Older advice in the 2021-22 source, still valid.)</li>
+<li>Before launch, Analytics must be connected to Shopify and ecommerce tracking must be active. The traffic-value and ad-performance decisions depend on this data.</li>
+</ul>
+</details><details class="part" id="data-collection-retention-and-demographics"><summary><h2>Data collection, retention and demographics</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Set <strong>Data settings &gt; Data collection</strong>: turn on <strong>every data collection option</strong> and accept the user data collection acknowledgement. This passes Analytics data to Google Ads at the highest sharing level.</li>
+<li>Set <strong>Data settings &gt; Data retention</strong>: change <strong>Event data retention</strong> from the default of <strong>2 months</strong> to <strong>14 months</strong>, then click <strong>Save</strong>. Retention means how long data is kept. The longer period lets audiences <span class="ex">(groups of visitors chosen by rules)</span> draw on a longer user history.</li>
+<li>Mistake: leaving Event data retention at <strong>2 months</strong> limits how far back user data is kept, so audiences built on it are smaller. <strong>Raise it to 14 months</strong> before creating remarketing audiences.</li>
+<li>Demographics and interests reporting can be enabled under data collection. Demographics means age, gender and interest groups. They can be used as audience ideas in Google Ads.</li>
+<li>Older path (2021-22): <strong>Admin &gt; Property Settings &gt; Tracking Info &gt; Data Collection</strong>. Turn on the option that collects additional data. This enables demographics and interest reporting for other ads, such as Google search text ads. Click <strong>Save</strong>.</li>
+<li>Individual user ID tracking is switched on under tracking info data collection settings, then saved. It lists the behaviour of <strong>individual users</strong> on the site, not only aggregated sessions.</li>
+<li>Enhanced measurement is <strong>on by default</strong> and tracks events such as page views automatically. Keep it on with all default items enabled.</li>
+<li>Older caution (2021-22): enhanced measurement automatically records interactions such as link clicks and embedded video plays. Make sure <strong>no personal information</strong> (PII, data that identifies a person, such as names or emails) is sent to Google through these page elements. The setting can be left on or switched off in the property details.</li>
+</ul>
+</details><details class="part" id="universal-analytics-sunset-and-migration"><summary><h2>Universal Analytics sunset and migration</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Universal Analytics <strong>stopped processing data in July 2023</strong>. A new store needs a GA4 property connected through Shopify's GA4 option.</li>
+<li>Google Analytics 4 replaces Universal Analytics. New tracking must be set up in GA4. (Source dated 2022.)</li>
+<li>The GA4 setup in Shopify should use <strong>Shopify's native setting</strong>, not custom code. The source described this as the expected approach from March 2023 onward.</li>
+<li>Earlier, the source expected the Shopify update for the direct integration in March 2023. After that, the setup would be <strong>a few clicks</strong>.</li>
+<li>Migration time differs by source: about <strong>33 minutes</strong> for Shopify accounts (2023), and about <strong>45 minutes to an hour</strong> when you follow a step-by-step process alongside your own setup (2023). Both are estimates from the source.</li>
+<li>Mistake: <strong>do not plan around an older timeline</strong>. The speaker expected removal around mid-2023, but Universal Analytics stopped processing data in July 2023, and GA4 is the current property.</li>
+<li>Mistake: <strong>do not create a Universal Analytics property</strong> from advanced options.</li>
+</ul>
+</details><details class="part" id="linking-analytics-and-google-ads"><summary><h2>Linking Analytics and Google Ads</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Link the property to Google Ads with the <strong>same email</strong>, name the link after the store and share all views.</li>
+<li>Linking shares data in both directions and shares remarketing lists between the platforms. Audiences do not need to be built separately in each one.</li>
+<li>Linking Google Ads and Analytics before launch gives Analytics the Google Ads data it needs to value traffic and measure ad performance.</li>
+</ul>
+<p><strong>Link Google Ads and Google Analytics so audiences can be shared. Source: Source B.</strong></p>
+<ol type="1">
+<li>Open <strong>Admin</strong> in Google Analytics.</li>
+<li>In the property column, go to <strong>Product Linking</strong> and open <strong>Google Ads Linking</strong>.</li>
+<li>Check whether the accounts are already linked. If not, <strong>link them</strong>.</li>
+<li>Turn on <strong>auto-tagging</strong> as part of the link. Auto-tagging automatically marks ad clicks so Analytics can read them.</li>
+</ol>
+<p><strong>Checking audiences that are missing from Google Ads. Source: Source A.</strong></p>
+<ol type="1">
+<li>Open the Analytics account and click the <strong>gear icon (Admin)</strong> at the bottom left.</li>
+<li>Under <strong>Audience definitions</strong>, choose <strong>Audiences</strong>.</li>
+<li>Confirm the audience is <strong>listed</strong>.</li>
+<li>Check that the <strong>Google Ads account is linked</strong> to Analytics.</li>
+<li>Under <strong>audience destinations</strong>, click <strong>Edit</strong> and select the <strong>correct Google Ads account</strong>.</li>
+<li>In Google Ads, under <strong>shared audiences</strong>, <strong>remove any filters</strong>.</li>
+<li>If it still does not appear, <strong>create a couple more audiences</strong> to check whether the issue is specific to one audience.</li>
+</ol>
+</details><details class="part" id="linking-search-console"><summary><h2>Linking Search Console</h2><span class="pm">1 min</span></summary>
+<p>Search Console is Google's free tool that shows how your site appears in Google search. Google Analytics is Google's free tool that counts visitors and sales on your site.</p>
+<p><strong>Link Search Console to Google Analytics. Source: Source A, undated.</strong></p>
+<ol type="1">
+<li><strong>Log in</strong> to Google Analytics with the same email used for Search Console.</li>
+<li>Click the <strong>gear icon</strong> (Admin, the settings area) at the bottom left.</li>
+<li>Scroll down to the <strong>Product links</strong> column in the middle.</li>
+<li>Click <strong>Search Console links</strong>.</li>
+<li>Click <strong>Link</strong>.</li>
+<li>Click <strong>Choose accounts</strong> and select the correct Search Console property <span class="ex">(the one site entry you want to connect)</span>.</li>
+<li>Click <strong>Next, Next, Next</strong>, then <strong>Review and submit</strong> (Confirm).</li>
+<li>Click <strong>Save</strong>.</li>
+</ol>
+<ul>
+<li>After linking, <strong>organic search</strong> data flows into Analytics reports. Organic search means free search results, not ads. It also shows which search keywords led to sales.</li>
+<li>Search Console reports only organic search results. <strong>Paid search</strong> (visits from ads you pay for) appears in Analytics when you filter by traffic source. (Source dated 2022, older.)</li>
+</ul>
+</details><details class="part" id="google-ads-conversion-tracking"><summary><h2>Google Ads conversion tracking</h2><span class="pm">6 min</span></summary>
+<p>Google Ads is Google's tool for paid ads.</p>
+<p><strong>Principles</strong></p>
+<ul>
+<li>Good <strong>conversion and remarketing tracking</strong> gives four things. It gives accurate purchase attribution <span class="ex">(matching each sale to the ad that brought it)</span>. It gives ad-level profit reports. It gives remarketing audiences <span class="ex">(lists of past visitors to show ads to again)</span>. It gives full view across Analytics and Google Ads.</li>
+<li><strong>Conversion tracking</strong> connects website purchases to Google Ads campaigns <span class="ex">(groups of ads)</span>, so ad spend is linked to real returns.</li>
+<li><strong>Conversion tracking</strong> tells you which ads are profitable. Without it, ad optimisation <span class="ex">(improving your ads)</span> is guesswork.</li>
+<li>Conversion tags <span class="ex">(small pieces of code that report events to Google)</span> let Google Ads see visits, add-to-cart events <span class="ex">(a shopper putting a product in the basket)</span> and purchases from ads. Linking Analytics to Google Ads also shows in Analytics which sources generate sales.</li>
+<li>Once conversion tracking is active, Google Ads reports which sales came from <strong>Shopping ads</strong> (product ads with a photo and price).</li>
+</ul>
+<p><strong>What counts as a conversion</strong></p>
+<p>A conversion is any action you choose to count as a goal. Most often that goal is a sale.</p>
+<ul>
+<li>A conversion in Google Ads can be defined as anything. Examples are a product view, an add-to-cart click, page views, time spent on site or a repeat visitor. <strong>Check what the account actually tracks.</strong> Google's smart goals <span class="ex">(automatic goal settings)</span> and automated conversions may not represent actual sales.</li>
+<li>Google Ads counts every action marked as a conversion. This includes page views, add-to-cart and initiate checkout <span class="ex">(the first step of paying)</span>. This can distort cost per conversion <span class="ex">(what each conversion costs you)</span>. <strong>Review all conversion actions</strong> and count only the intended ones, such as purchase.</li>
+<li>create one <strong>purchase conversion action</strong> (one goal that counts only purchases), because only purchases need to be tracked. Conversions appear under Tools and settings &gt; Conversions.</li>
+<li>The <strong>conversion tag</strong> on the thank you page <span class="ex">(the page after checkout)</span> records a conversion each time a visitor reaches it. It uses cookies <span class="ex">(small files stored in the visitor's browser)</span> to link the purchase to the original traffic source <span class="ex">(where the visitor came from)</span> and campaign.</li>
+</ul>
+<p><strong>Simprosys app for Shopify</strong></p>
+<p>Shopify is an online store platform. Simprosys is an app <span class="ex">(an add-on)</span> for Shopify.</p>
+<p><strong>Procedure: set up conversion tracking for Google Ads with the Simprosys app.</strong></p>
+<ol type="1">
+<li>In the Shopify store, open the Simprosys app and <strong>log in</strong>.</li>
+<li>Hover over <strong>Tracking Tags</strong> and click <strong>Google dynamic remarketing and conversion tracking</strong>. Dynamic remarketing means ads that show the exact products a visitor viewed.</li>
+<li><strong>Run the wizard</strong> (a step-by-step setup window). First connect the newly created Google Ads account by selecting it from the list of accounts.</li>
+<li><strong>Confirm</strong> the connected account details shown from Google Ads.</li>
+<li><strong>Answer yes</strong> when asked whether to set up the Google Ads tracking tags. The app then creates them in the Google accounts automatically.</li>
+<li>Check that the tags show as <strong>unverified</strong> at first. They change to active once traffic reaches the site. Unverified means Google has not yet seen the tag working. Active means it is working.</li>
+</ol>
+<ul>
+<li>The Google Ads account <strong>must already exist</strong> before the wizard runs, because the first step connects an existing account. Creating it later would require repeating the tag setup.</li>
+<li>After the wizard is completed with the tag option set to yes, the app creates the tags itself. The merchant <span class="ex">(the store owner)</span> <strong>does not need to build them manually</strong> or revisit this setup.</li>
+<li>Newly created tags stay unverified until real traffic arrives. An unverified status right after setup is <strong>normal</strong>.</li>
+<li>Conflict on verification: in the 2021-22 source, the tag stays unverified until the <strong>first sale</strong> is made on the website, and that sale verifies it. In the Simprosys procedure above, the tags become active once traffic reaches the site.</li>
+</ul>
+<p><strong>Feed app for Google Shopping</strong></p>
+<p>Google Shopping is Google's product listing area for shopping ads. A feed is the product list file you send to Google. A feed app sends that list for you.</p>
+<p><strong>Procedure: set up conversion tracking in Feed for Google Shopping.</strong></p>
+<ol type="1">
+<li>Open the feed app and hover over the <strong>tracking tags</strong> link at the top.</li>
+<li>Choose <strong>Google dynamic remarketing and conversion tracking</strong>.</li>
+<li>If no Google Ads account is linked yet, click the button to <strong>link one</strong>. If the wrong account is linked, click <strong>change</strong> and choose the correct one.</li>
+<li>On the permissions screen, click <strong>allow</strong>. This lets the app manage Google Ads campaigns, product listings and accounts, and the domains you control.</li>
+<li>In the drop-down, select the Google Ads account for this store and click <strong>link your account</strong>.</li>
+<li>Under what needs to be included in the script, make sure <strong>dynamic remarketing, conversion tracking, add to cart tracking and begin checkout tracking</strong> are all selected. Begin checkout means the first payment step.</li>
+<li>Click <strong>update conversion tags</strong>. If the account is new, the button may say create conversion tags. Click it and the tags will be created.</li>
+</ol>
+<ul>
+<li>Tags installed through the app keep working even if the Shopify theme <span class="ex">(the store's design template)</span> is changed. The app route is considered the <strong>more reliable and simpler</strong> option.</li>
+<li>Manual setup is also possible. You add the Google remarketing tag to the Shopify theme yourself, following Google Ads support instructions. It works but is <strong>more work and more error-prone</strong>.</li>
+<li><strong>Mistake:</strong> if the site already has a Google dynamic remarketing tag, remove it before using the app's tracking. Keeping both tracks every sale twice.</li>
+<li>If conversion tracking was set up through a tracking app, do <strong>not add the tag to the site manually</strong>. A warning about no conversions can appear simply because no conversion has been recorded since the tag was added.</li>
+</ul>
+<p><strong>Older feed-app methods</strong></p>
+<ul>
+<li>install the Feed for Google Shopping app from the Shopify App Store (Shopify's app shop). Open the app settings, scroll to Google remarketing and conversion tracking, and click in to link your Google account. This adds the conversion tracking pixel <span class="ex">(a tiny tracking code)</span>. Use the reported data to see where sales come from inside Google.</li>
+<li>in the feed app, click Google dynamic remarketing and conversion tracking. <strong>Enable only</strong> Dynamic remarketing and Conversion tracking, not the other two options. Log in to Google Ads, allow access and link the account so the app inserts the tags into the site.</li>
+<li>add the Google Ads conversion tag through the Feeds for Google Shopping app so Google Ads can record the sales and conversions from your traffic.</li>
+</ul>
+<p><strong>Remarketing tag code</strong></p>
+<p>A remarketing tag is the code that lets Google show ads again to past visitors. Replace AW-XXXXXXXXX with your Google Ads ID <span class="ex">(the code that starts with AW-)</span>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Google Ads global site tag: replace AW-XXXXXXXXX with your Google Ads ID --&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> async src</span><span class="op">=</span><span class="st">&#39;https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX&#39;</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">window</span><span class="op">.</span><span class="at">dataLayer</span> <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">dataLayer</span> <span class="op">||</span> []<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> gtag{dataLayer<span class="op">.</span><span class="fu">push</span>(<span class="kw">arguments</span>)<span class="op">;</span>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gtag</span>(<span class="st">&#39;js&#39;</span><span class="op">,</span> <span class="kw">new</span> <span class="bu">Date</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gtag</span>(<span class="st">&#39;config&#39;</span><span class="op">,</span> <span class="st">&#39;AW-XXXXXXXXX&#39;</span>)<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Remarketing page_view event: replace value and item id per page --&gt;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gtag</span>(<span class="st">&#39;event&#39;</span><span class="op">,</span> <span class="st">&#39;page_view&#39;</span><span class="op">,</span> {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;send_to&#39;</span><span class="op">:</span> <span class="st">&#39;AW-XXXXXXXXX&#39;</span><span class="op">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;value&#39;</span><span class="op">:</span> <span class="st">&#39;replace with value&#39;</span><span class="op">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;items&#39;</span><span class="op">:</span> [{</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;id&#39;</span><span class="op">:</span> <span class="st">&#39;replace with value&#39;</span><span class="op">,</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="st">&#39;google_business_vertical&#39;</span><span class="op">:</span> <span class="st">&#39;retail&#39;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    }]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+</details><details class="part" id="checking-tags-with-tag-assistant"><summary><h2>Checking tags with Tag Assistant</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Google Tag Assistant is a Chrome extension <span class="ex">(a small add-on for the Chrome browser)</span>. It shows which Google tags and conversions fire <span class="ex">(send data)</span> on each page. Use it to <strong>confirm conversion tracking is set up correctly</strong>.</li>
+<li>It is used to check that the Google Ads remarketing tag, the global site tag <span class="ex">(the main Google tracking code for the site)</span> and the Analytics code are live on the store. Refresh the store page after activation to confirm all tags load.</li>
+<li>Tag Assistant is a tool for debugging <span class="ex">(finding and fixing faults)</span>. It verifies that Google tracking tags are installed correctly on the store and fire on customer actions.</li>
+</ul>
+</details><details class="part" id="merchant-center-linking-reports-and-rules"><summary><h2>Merchant Center: linking, reports and rules</h2><span class="pm">3 min</span></summary>
+<p>Merchant Center is Google's account where you list your products for shopping ads.</p>
+<p><strong>Linking and performance</strong></p>
+<ul>
+<li>Link Merchant Center and Google Ads to Analytics so data is shared. <strong>Check that the linked account numbers</strong> are the correct ones.</li>
+<li>Google's <strong>Top Seller</strong> rating <span class="ex">(a Google badge for strong sellers)</span> appears to be achieved by meeting the score thresholds <span class="ex">(minimum score levels)</span> shown in Merchant Center. <strong>Applying to the program</strong> is recommended to check eligibility <span class="ex">(whether you qualify)</span>. A 50-review threshold was mentioned for one Google form. (Source dated 2024.)</li>
+</ul>
+<p><strong>Shopping Actions reports</strong></p>
+<p>Shopping Actions reports are Google's sales reports for shopping ads.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Report</th>
+<th>Fields</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Today's Snapshot</td>
+<td>Pending shipment, Missing tracking information, Wrong tracking information, Unshipped orders, Item fill rate, Ordered item sales, Orders, AOV, Returns <span class="ex">(last 24 hours)</span></td>
+</tr>
+<tr>
+<td>Sales &amp; Orders</td>
+<td>Ordered item sales, Orders, AOV, segmented by product, brand or category</td>
+</tr>
+<tr>
+<td>Returns</td>
+<td>Returns, Returned items</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Shipped orders, Days to ship, Shipped items sales, Shipped items, Item fill rate, Unshipped orders, Unshipped items, Rejected items</td>
+</tr>
+</tbody>
+</table></div>
+<p>Terms in the table: AOV means average order value <span class="ex">(average money per order)</span>. Item fill rate means the share of ordered items you could supply.</p>
+<ul>
+<li>Example: diagnostics (Google's health check of your product list) showed 549 active items (88%), 0 expiring items and <strong>77 disapproved items (12%)</strong> out of 626 submitted items. Disapproved means Google rejected the item. Disapproval rates like this show how much of the feed is still eligible.</li>
+</ul>
+<p><strong>Compliance, feed and shipping rules</strong></p>
+<p>Compliance means following Google's rules for shops. A suspension means Google blocks your account.</p>
+<ul>
+<li>Following the compliance steps <strong>greatly reduces suspension risk</strong> (the chance Google blocks your account). Still, a Merchant Center account can be suspended at any time. For example, this can happen after a site change, a hack <span class="ex">(someone breaking into the site)</span>, or a crawler (Google's page-reading robot) misclassifying a page.</li>
+<li>If an initial batch of feed products is approved and no suspension appears, the rest can be uploaded. <strong>Keep running the business normally</strong> while uploading.</li>
+<li><strong>Do not run</strong> the Shopify Google sales channel (Shopify's built-in Google connection) alongside Feed for Google Shopping or another feed app that submits to Merchant Center, because they conflict. If you try the Google channel, <strong>disconnect Feed for Google Shopping first</strong>.</li>
+<li>The Google channel asks for fields such as <strong>GTIN</strong> (the product barcode number). The same fields are in the feed settings of Feed for Google Shopping, which may leave less to chance.</li>
+<li>Made-to-order products <span class="ex">(products made after ordering)</span> with long lead times <span class="ex">(a long wait before shipping)</span>, such as 17 weeks, can be listed as custom products. The estimated shipping time can be set in <strong>days</strong> directly in Merchant Center.</li>
+<li>Final-sale products <span class="ex">(products that cannot be returned)</span> should be set up <strong>as an exception</strong> in Merchant Center. State on the product page and on the shipping and returns policy page that these products are not eligible for return.</li>
+<li>Shipping settings in Merchant Center <strong>must match</strong> the store's shipping exactly. Mismatches cause rejected products and suspension errors.</li>
+<li>For a postcode-based shipping setup <span class="ex">(shipping rules by postcode area)</span>, for example an Australian free-shipping rule for remote areas, <strong>ask Shopify live chat</strong> how to mirror it in Merchant Center. Do not guess the configuration.</li>
+</ul>
+<p><strong>Merchant Center resets</strong></p>
+<p><strong>Procedure: reset a stuck Merchant Center account, only after the compliance issues are fully fixed.</strong></p>
+<ol type="1">
+<li><strong>Remove</strong> the feed and all store information linked to the account.</li>
+<li><strong>Delete</strong> the Merchant Center account.</li>
+<li><strong>Create</strong> a new Merchant Center account.</li>
+<li><strong>Upload</strong> the feed again and see whether it passes the filters. Do not apply this reset to the Google Ads account.</li>
+</ol>
+<ul>
+<li>If Google Ads is fine but Merchant Center stays stuck for a long time without help, <strong>another Merchant Center account</strong> can be linked to the Google Ads account.</li>
+</ul>
+</details><details class="part" id="microsoft-advertising-uet-tag-and-conversions"><summary><h2>Microsoft Advertising UET tag and conversions</h2><span class="pm">1 min</span></summary>
+<p>Microsoft Advertising is Microsoft's ad tool, similar to Google Ads. UET (Universal Event Tracking) is Microsoft's tracking code.</p>
+<p><strong>Procedure: set up the Microsoft UET tag and conversion tracking via the Shopify feed app, in this order. Source: Source A, undated.</strong></p>
+<ol type="1">
+<li>In the feed app header menu, open <strong>Microsoft UET tag and conversion goal setup</strong>.</li>
+<li>Click <strong>Let's get started</strong>.</li>
+<li>Confirm that you want conversion tracking for Microsoft Advertising.</li>
+<li>Before continuing, <strong>remove</strong> any previously added conversion tracking scripts (UET or other) from the Shopify Additional scripts section (Shopify's place for extra code), since duplicates can conflict.</li>
+<li>Leave all tracking options checked on a new account.</li>
+<li>Click <strong>Continue</strong>.</li>
+<li>Under the Microsoft Advertising account, choose <strong>Create a new tag</strong> rather than an existing tag. This lets the app create the tags automatically.</li>
+<li>Verify the status shows conversion tracking as <strong>active</strong> for Dynamic Remarketing, Add to Cart and Begin Checkout.</li>
+</ol>
+<ul>
+<li>The UET tag inserted by the app runs through Shopify scripts. So it keeps working when the theme is changed or replaced. Remove existing UET or other conversion scripts first to avoid duplicate tracking.</li>
+<li>The automatically created Microsoft conversion types are Dynamic Remarketing, Add to Cart and Begin Checkout. The app generates the tags and their names when Create new tag is chosen.</li>
+<li><strong>Mistake:</strong> choosing an existing UET tag instead of creating a new one can be an error in a new setup. The app can create and configure the full set of tags automatically.</li>
+</ul>
+</details><details class="part" id="troubleshooting-and-verification"><summary><h2>Troubleshooting and verification</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Duplicate accounts, such as one made with a personal email and one with a business email, often cause audiences and product feeds to be missing. <strong>Check that each linked account number</strong> matches the intended account.</li>
+<li>Google Analytics shows conversion rate <span class="ex">(the share of visits that become sales)</span> for each product page in its dashboard. This is hard to see directly in Shopify when running ads for four or five products.</li>
+<li>Duplicate tracking: if a Google dynamic remarketing tag already exists on the site, <strong>remove it</strong> before using the app. Keeping both counts every sale twice.</li>
+<li>A "no conversions" warning is <strong>not proof of a fault</strong> if the tag was added recently and no conversion has been recorded yet.</li>
+<li>If the GA4 test sales do not appear, check the GA4 connection through the Google &amp; YouTube app. GA4 means Google Analytics 4, the current version of Google Analytics.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/19-metrics-finance-and-tracking/06-setting-up-google-tracking-analytics-search-console-merchant/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../19-metrics-finance-and-tracking/05-ad-metrics-glossary-and-how-to-read-them/"><span class="k">&larr; Previous</span><span class="v">Ad metrics glossary and how to read them</span></a><a class="nx" href="../../19-metrics-finance-and-tracking/07-setting-up-meta-tiktok-pinterest-and-other-pixels/"><span class="k">Next &rarr;</span><span class="v">Setting up Meta, TikTok, Pinterest and other pixels</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

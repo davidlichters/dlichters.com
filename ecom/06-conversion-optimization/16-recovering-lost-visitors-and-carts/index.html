@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Recovering lost visitors and carts | Ecommerce Playbook</title>
+<meta name="description" content="- A customer who started checkout and left is the most likely to buy later, so win them back first. - Send the first follow-up email about 4 hours after they leave, and the second about 24 hours after. - Reach out fast. The first hour gets the best ...">
+<link rel="canonical" href="https://dlichters.com/ecom/06-conversion-optimization/16-recovering-lost-visitors-and-carts/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Recovering lost visitors and carts | Ecommerce Playbook"><meta property="og:description" content="- A customer who started checkout and left is the most likely to buy later, so win them back first. - Send the first follow-up email about 4 hours after they leave, and the second about 24 hours after. - Reach out fast. The first hour gets the best ..."><meta property="og:url" content="https://dlichters.com/ecom/06-conversion-optimization/16-recovering-lost-visitors-and-carts/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">Playbook</a> &rsaquo; <a href="../../06-conversion-optimization/">6. Conversion optimization</a></div><h1>Recovering lost visitors and carts</h1><p class="meta">Section 6.16 &middot; 16 of 22 in this chapter &middot; 10 min read</p><div class="short"><p class="lab">In short</p><ul>
+<li>A customer who started checkout and left is the most likely to buy later, so win them back first.</li>
+<li>Send the first follow-up email about 4 hours after they leave, and the second about 24 hours after.</li>
+<li>Reach out fast. The first hour gets the best results.</li>
+<li>Turn the automation on and check that its button says <code>Turn off workflow</code>.</li>
+</ul>
+</div><article><div class="parts-bar"><span>This section has 13 parts. Tap one to open it.</span><button type="button" id="openall">Open all</button></div><details class="part" id="abandoned-checkout-versus-abandoned-cart"><summary><h2>Abandoned checkout versus abandoned cart</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>An <strong>abandoned cart</strong> means items were added to the cart <span class="ex">(the shopping basket)</span>, but checkout <span class="ex">(the payment step)</span> was never started.</li>
+<li>An <strong>abandoned checkout</strong> means the customer started checkout and did not finish.</li>
+<li>Reasons a checkout is abandoned: a declined payment, missing information, or an interruption.</li>
+<li><strong>Abandoned checkout recovery</strong> (winning back these sales) works better than abandoned cart recovery.</li>
+<li>Why it works better: these customers went further in the buying process.</li>
+<li>An <strong>automation</strong> (a set of steps the store runs by itself) follows up with customers who add products, start checkout, and leave without buying.</li>
+<li>It recovers sales that would otherwise be lost while the customer still wants to buy <span class="ex">(high purchase intent, meaning strong readiness to buy)</span>.</li>
+<li>It runs without daily work from you.</li>
+<li>A <strong>workflow</strong> (another word for an automation) starts, called a trigger, when checkout is abandoned with a total <strong>greater than $0</strong>.</li>
+<li>Customers who complete their purchase leave the workflow.</li>
+<li>An <strong>abandoned cart flow</strong> is an automatic email sequence <span class="ex">(a series of emails sent in order)</span>.</li>
+<li>It follows visitors who entered checkout but did not finish. These are people with high intent, meaning they are very ready to buy.</li>
+<li>An <strong>exit-intent overlay</strong> is a pop-up shown when a visitor is about to leave the site.</li>
+<li>Exit-intent overlays and abandoned cart flows fix two different leaks: visitors who leave without acting, and prospects who quit checkout.</li>
+<li>Each leak needs a <strong>separate strategy</strong>.</li>
+</ul>
+</details><details class="part" id="setting-up-the-abandoned-checkout-automation"><summary><h2>Setting up the abandoned checkout automation</h2><span class="pm">2 min</span></summary>
+<ol type="1">
+<li>Open <strong>Marketing &gt; Automations</strong> in the Shopify admin (Shopify is the store software, and the admin is its back office).</li>
+<li>Automations are created in the Messaging app but edited in the Automations section.</li>
+<li>Build the workflow using the settings in the table below.</li>
+<li>Check that the workflow is <strong>on</strong>.</li>
+<li>When it is on, the button shows <code>Turn off workflow</code>.</li>
+<li>If it shows <code>Turn on workflow</code>, the automation is not yet active.</li>
+<li>Once set up, the automation keeps running with no end date. It fires each time a customer abandons a checkout.</li>
+<li>You can change or pause it at any time without setting it up again.</li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Setting</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trigger <span class="ex">(the event that starts the workflow)</span></td>
+<td>Checkout abandoned with a total greater than $0</td>
+<td>,</td>
+</tr>
+<tr>
+<td>Stock check <span class="ex">(is the item still for sale?)</span></td>
+<td>Stock status is verified before the first email. The email does not send if the product is no longer in inventory <span class="ex">(stock)</span>.</td>
+<td></td>
+</tr>
+<tr>
+<td>Exit check <span class="ex">(is the customer already done?)</span></td>
+<td>Before each email, the system checks whether the customer has placed an order or started another checkout since abandonment. If either occurred, the customer is removed from the flow.</td>
+<td></td>
+</tr>
+<tr>
+<td>First email</td>
+<td>Sent after a 4-hour initial delay <span class="ex">(a wait before sending)</span></td>
+<td></td>
+</tr>
+<tr>
+<td>Second email wait</td>
+<td>Second wait timer <span class="ex">(a countdown)</span> set to 20 hours after the first email. Combined with the 4-hour delay, the second email is sent 24 hours after the original abandonment.</td>
+<td></td>
+</tr>
+<tr>
+<td>Second email condition <span class="ex">(rule for sending)</span></td>
+<td>Sent only if the customer's total amount spent equals $0</td>
+<td></td>
+</tr>
+<tr>
+<td>Customer tag <span class="ex">(a label on the customer record)</span></td>
+<td>Add the customer tag <code>abandoned cart</code> to all contacts entering the workflow. Other automations reference this tag to exclude these customers and prevent duplicate messages.</td>
+<td></td>
+</tr>
+<tr>
+<td>New subscribers <span class="ex">(people who joined your email list)</span></td>
+<td>Enable only the abandoned checkout automation, not the abandoned cart automation. New subscribers already receive welcome emails, so abandoned cart emails would send extra, unneeded messages.</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The <strong>4-hour</strong> first-email delay does not match the one-hour window in.</li>
+<li>The sources do not agree on these figures.</li>
+<li>The table follows the setup in.</li>
+</ul>
+</details><details class="part" id="speed-of-follow-up"><summary><h2>Speed of follow-up</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Customers who open the abandoned cart email within the <strong>first hour</strong> are 400% more likely to buy.</li>
+<li>Speed matters because customers stay focused on the purchase for only minutes.</li>
+<li>After <strong>30 minutes</strong>, distractions take over, memory of the purchase fades, and competitors can take the sale.</li>
+<li>Where possible, <strong>call</strong> the customer as soon as possible after they abandon, because speed matters most.</li>
+</ul>
+</details><details class="part" id="manual-follow-up-of-abandoned-checkouts"><summary><h2>Manual follow-up of abandoned checkouts</h2><span class="pm">1 min</span></summary>
+<p>Procedure A (2024):</p>
+<ol type="1">
+<li>Open the Shopify admin, go to <strong>Orders</strong>, then <strong>Abandoned checkouts</strong>.</li>
+<li>Count how many abandoned checkouts contain an email address or phone number.</li>
+<li>Send each of those customers a manual follow-up email <span class="ex">(written and sent by hand, not automatically)</span>.</li>
+<li>Where possible, call them as soon as possible after they abandon, because speed matters most.</li>
+</ol>
+<p>Procedure B (2023):</p>
+<ol type="1">
+<li>Go to <strong>Shopify &gt; Orders &gt; Abandoned Carts</strong>.</li>
+<li>Follow up with all abandoned cart customers via email, phone, or <strong>SMS</strong> (text message).</li>
+<li>Message: <code>Noticed you started checkout, happy to help if you have questions.</code></li>
+<li>This can recover <strong>1-3 quick sales</strong>.</li>
+</ol>
+<ul>
+<li>The <strong>Abandoned checkouts</strong> section lists customers who started checkout but did not finish the order.</li>
+<li>Check this list often and follow up. This is a way to win back lost sales.</li>
+</ul>
+</details><details class="part" id="phone-and-sms-follow-up"><summary><h2>Phone and SMS follow-up</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>When calling an abandoned checkout customer, use this template.</li>
+<li>The template treats the stop as a checkout problem, not a lack of interest.</li>
+<li>This raises <strong>answer rates</strong> (how many people pick up or reply) and conversion <span class="ex">(how many visitors buy)</span>.</li>
+</ul>
+<pre><code>Hi [customer name], I saw you were looking at a [product name] that would ship to [city/state]. You didn&#39;t complete your checkout-how can I help you finish the order?</code></pre>
+<ul>
+<li>Follow-up can run by email, phone, or SMS <span class="ex">(text message)</span>.</li>
+<li>Checkout contact setting: go to <strong>Settings &gt; Checkout &gt; Customer contact</strong>.</li>
+<li>This field is where the shopper types their contact details.</li>
+<li>Set the field to <strong>email address only</strong> if SMS retargeting <span class="ex">(sending text reminders to people who left)</span> is not working.</li>
+<li>Then customers can only enter an email at checkout.</li>
+<li>The store can then retarget them <span class="ex">(reach them again)</span> with Klaviyo, an email tool.</li>
+<li>During a paid testing phase <span class="ex">(when you spend money on ads to test)</span>, always keep <strong>SMS Bump</strong>, or an equivalent SMS flow, active.</li>
+<li>SMS Bump is a text message app.</li>
+<li>Checkout drop-offs with a phone number can be retargeted by SMS.</li>
+<li>Without SMS Bump, collect <strong>email addresses</strong> at checkout so email retargeting can be used instead.</li>
+</ul>
+</details><details class="part" id="real-time-alerts-and-tracking"><summary><h2>Real-time alerts and tracking</h2><span class="pm">1 min</span></summary>
+<p>Procedure:</p>
+<ol type="1">
+<li>Send automatic follow-up emails to customers with abandoned carts.</li>
+<li>Display targeted Facebook ads to the customer <span class="ex">(ads shown to a chosen group)</span>.</li>
+<li>Send a <strong>real-time</strong> notification <span class="ex">(an instant alert)</span> including customer name, cart value, phone number, item details, and cart link.</li>
+<li>Log customer information to a <strong>Google Sheet</strong> (an online spreadsheet) for tracking.</li>
+</ol>
+<ul>
+<li>Abandoned cart notification messages <strong>must include</strong>: customer name, total cart value, customer contact phone number, specific items in the cart, and a direct link to the abandoned cart.</li>
+<li>Real-time <strong>Slack</strong> alerts <span class="ex">(instant messages in Slack, a team chat app)</span> add to email follow-ups and Facebook retargeting.</li>
+<li>Slack alerts do not replace email or Facebook.</li>
+<li>Using all three together maximizes recovery.</li>
+<li>Recovery tracking: <strong>create a second Zapier automation</strong> (Zapier is a tool that links apps and moves data between them).</li>
+<li>This Zapier automation checks incoming paid orders against the abandoned cart sheet in Google Sheets.</li>
+<li>If the customer appears in both, update the sheet with the recovery date and method <span class="ex">(phone call, email, etc.)</span>.</li>
+</ul>
+</details><details class="part" id="diagnosing-clicks-without-abandoned-checkouts"><summary><h2>Diagnosing clicks without abandoned checkouts</h2><span class="pm">1 min</span></summary>
+<p>Procedure (2025):</p>
+<ol type="1">
+<li>In Shopify, open Orders and click Abandoned checkouts.</li>
+<li>If abandoned checkouts exist, email each customer personally from the owner's address, referencing the product and offering help.</li>
+<li>If there are none despite many clicks, check which keywords and search terms triggered the clicks in <strong>Google Ads</strong> (the ad tool where you pay per click).</li>
+<li>Keywords are the words your ads target. Search terms are the words people actually typed.</li>
+<li>Adjust ad spend based on what the search terms show.</li>
+</ol>
+</details><details class="part" id="why-visitors-leave"><summary><h2>Why visitors leave</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Abandoned checkout visitors show high purchase intent but did not buy.</li>
+<li>The usual reasons are the <strong>overall offer</strong> (not only price, but any discount, bonus item, or ebook).</li>
+<li>Other usual reasons are the product price and trust.</li>
+<li>First-time visitors may doubt the store or be unsure whether to buy now.</li>
+<li>Common reasons for cart abandonment are <strong>high or unexpected shipping costs</strong>.</li>
+<li>Other common reasons are complicated shipping rates or policies.</li>
+<li>Distractions such as a doorbell, a phone call, or a notification also cause abandonment.</li>
+<li>Distraction cases are solved mainly by reminders.</li>
+<li>Visitors who do not buy right away are unlikely to come back on their own.</li>
+<li>The speaker estimated that about <strong>90%</strong> will not bookmark the store.</li>
+<li>Instead, they search again and click a competitor or a paid ad, which costs more money.</li>
+<li>Close the sale on the <strong>first visit</strong>.</li>
+</ul>
+</details><details class="part" id="reminders-retargeting-and-second-chances"><summary><h2>Reminders, retargeting, and second chances</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Visitors who leave without buying, and abandoned carts, should be followed up later with reminders.</li>
+<li>Reminders let you reach them once they are ready to buy.</li>
+<li>Pop-up offers, flow emails, and SMS reminders are each a <strong>second chance</strong> to convert.</li>
+<li>Traffic <span class="ex">(visitors)</span> from paid ads or organic content <span class="ex">(free posts)</span> without retargeting messages is largely wasted when visitors leave without buying.</li>
+<li>Conversion rates increase when customers interact with the website <strong>multiple times</strong>.</li>
+<li>Retargeting <span class="ex">(showing messages again to people who visited)</span> and multi-touch strategies <span class="ex">(several contacts, one after another)</span> are therefore essential.</li>
+<li>They move visitors closer to purchase.</li>
+<li>Set up remarketing <span class="ex">(the same as retargeting)</span> from the start with a small budget, around <strong>a few dollars per day</strong>.</li>
+<li>This lets you reach visitors who did not buy again.</li>
+<li></li>
+</ul>
+</details><details class="part" id="exit-intent-visitors"><summary><h2>Exit-intent visitors</h2><span class="pm">1 min</span></summary>
+<p>Procedure:</p>
+<ol type="1">
+<li>Check how many visitors entered their email on the exit-intent overlay <span class="ex">(the pop-up shown as they leave)</span>.</li>
+<li>Email each person personally with an introduction as the owner.</li>
+<li>Invite a reply or call, and offer help choosing the right product.</li>
+</ol>
+</details><details class="part" id="abandoned-cart-email-content"><summary><h2>Abandoned cart email content</h2><span class="pm">2 min</span></summary>
+<ul>
+<li>Test changes to live flow emails through <strong>split tests</strong> (sending two versions to see which works better) whenever traffic <span class="ex">(visitors)</span> allows.</li>
+<li>A low-traffic store cannot test reliably.</li>
+<li>So keep changes small and treat results as weak evidence.</li>
+<li>Subject line <span class="ex">(the email's title line)</span> effectiveness varies by audience and product type.</li>
+<li>Test formulas across successive sends: question, how-to, scarcity, declaration, numbers, curiosity, personalized.</li>
+<li>Compare <strong>open rates</strong> (the share of people who open the email).</li>
+<li></li>
+<li>Open the first abandoned cart email with the <strong>logo</strong>.</li>
+<li>The message must build trust before it asks the shopper to return to checkout.</li>
+<li>Place the company logo at the top of <strong>every email</strong>, in the same form it uses on the website.</li>
+<li>This way readers know they are in the right place.</li>
+<li></li>
+<li>Generous spacing between blocks makes the email easier to scan.</li>
+<li>Avoid crowding sections.</li>
+<li>Changing the email width matters little compared with clean spacing.</li>
+<li>Show third-party ratings <span class="ex">(scores from outside sites)</span> as trust icons <span class="ex">(small badges)</span>.</li>
+<li>For example, a <strong>4.9-star</strong> rating on Google and Trustpilot, and a 5-star rating on a review site.</li>
+<li>Shoppers check reviews before buying, so placing the proof in the email saves them the search.</li>
+<li>Test <strong>one to three</strong> customer testimonials <span class="ex">(written praise)</span> as social proof <span class="ex">(other people's approval)</span>.</li>
+<li>Import reviews automatically with Klaviyo Reviews (Klaviyo's review feature) where the account is connected.</li>
+<li>The testimonial test is planned as the next iteration <span class="ex">(next version)</span> of the email.</li>
+<li>Answer the "why" with specific relevance to this customer, rather than generic benefits.</li>
+<li>Specificity makes the email feel personally relevant rather than broadcast <span class="ex">(sent to everyone)</span>.</li>
+<li>Example: <code>We understand keeping your gear comfortable during long rides is what matters to you.</code> instead of <code>This product is great.</code></li>
+<li>A <strong>USP</strong> (unique selling point, the main reason to buy) pattern can also handle an objection <span class="ex">(a doubt)</span>.</li>
+<li>Choose the selling point that answers a common doubt, so one line does two jobs.</li>
+<li>Shipping speed answers "when will it arrive".</li>
+<li>Own example: <code>Order before 2pm, shipped the same day</code> answers the delivery-time doubt.</li>
+<li>A <strong>risk-reduction</strong> email pattern makes buying feel safe.</li>
+<li>Step 1: give a review count and star rating as proof.</li>
+<li>Step 2: invite the shopper to buy with confidence.</li>
+<li>Step 3: restate the return promise.</li>
+<li>Own examples: <code>Over 2,000 five-star reviews from riders across the country. Buy with confidence.</code> and <code>Rated 4.8 by 900 home cooks: try it risk-free.</code></li>
+<li>The risk-reduction email can show secure payment options as payment badges <span class="ex">(small logos of payment methods)</span>.</li>
+<li>It can also point to social proof such as Instagram stories and customer reviews.</li>
+<li>Together these reassure a shopper worried about scams before they return to checkout.</li>
+</ul>
+</details><details class="part" id="welcome-series-and-personal-outreach"><summary><h2>Welcome series and personal outreach</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Manually email every new subscriber <span class="ex">(someone who joined your email list)</span> within <strong>one business day</strong>, as the store owner.</li>
+<li>Personal outreach converts better than automation alone.</li>
+<li>Structure each email in four parts:
+<ul>
+<li>(1) Acknowledge their signup.</li>
+<li>(2) Introduce yourself as owner and briefly state your store's stage or focus.</li>
+<li>(3) Ask what they need or whether they have questions.</li>
+<li>(4) Invite them to reply directly.</li>
+</ul></li>
+<li>Example 1: <code>Hi, just saw your signup. I'm [name], founder here. We focus on [category]-what brought you in?</code></li>
+<li>Example 2: <code>I'm [name], owner of [store]. Noticed you joined our list. What got your attention-any specific products or questions?</code></li>
+<li>Each email must feel <strong>personal</strong> and vary by subscriber.</li>
+<li>Do not include standard unsubscribe links <span class="ex">(the "stop emails" link)</span> or brand signatures <span class="ex">(the company's standard sign-off)</span>.</li>
+<li>The goal is to start real conversations and learn what visitors want.</li>
+<li>Add <strong>urgency and scarcity</strong> (a limited-time feeling) in the final emails of a welcome series.</li>
+<li>For example, a countdown to offer expiry.</li>
+<li>This pushes subscribers who have not bought yet to act before the deadline.</li>
+<li>Abandoned cart emails should run as a <strong>sequence in Klaviyo</strong> to recover checkouts that were not finished.</li>
+<li></li>
+</ul>
+</details><details class="part" id="reorder-pages"><summary><h2>Reorder pages</h2><span class="pm">1 min</span></summary>
+<ul>
+<li>Reorder landing pages <span class="ex">(a page made for buying again)</span> make it easy for existing customers to buy the same products again.</li>
+<li>The vendor presents them as a way to build <strong>repeat purchases</strong> and loyalty after the first order.</li>
+</ul>
+</details></article><p class="techlink">Every number and source for this section: <a href="../../../aiecom/06-conversion-optimization/16-recovering-lost-visitors-and-carts/">technical version</a>.</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><nav class="pn"><a href="../../06-conversion-optimization/15-email-and-phone-capture-pop-ups-opt-ins-and-lead-magnets/"><span class="k">&larr; Previous</span><span class="v">Email and phone capture: pop-ups, opt-ins and lead magnets</span></a><a class="nx" href="../../06-conversion-optimization/17-live-chat-forms-and-customer-contact/"><span class="k">Next &rarr;</span><span class="v">Live chat, forms and customer contact</span></a></nav><a id="top" href="#" aria-label="Back to top">&uarr;</a>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+<script src="../../search.js" defer></script>
+<script src="../../page.js" defer></script>
+</body></html>

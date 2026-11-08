@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ad operations, delegation and platform maintenance | Ecommerce Playbook for AI</title>
+<meta name="description" content="Technical section 9.21: Ad operations, delegation and platform maintenance.">
+<link rel="canonical" href="https://dlichters.com/aiecom/09-meta-and-facebook-ads/21-ad-operations-delegation-and-platform-maintenance/">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Ad operations, delegation and platform maintenance | Ecommerce Playbook for AI"><meta property="og:description" content="Technical section 9.21: Ad operations, delegation and platform maintenance."><meta property="og:url" content="https://dlichters.com/aiecom/09-meta-and-facebook-ads/21-ad-operations-delegation-and-platform-maintenance/"><meta property="og:type" content="article">
+<link rel="stylesheet" href="../../style.css">
+</head><body data-base="../../">
+<header class="top"><div class="wrap"><a class="brand" href="../../">Ecommerce Playbook for AI</a><span class="by">by Lichters</span></div></header>
+<main><div class="wrap">
+<div class="crumb"><a href="../../">AI version</a> &rsaquo; <a href="../">9. Meta and Facebook ads</a> &rsaquo; <a href="../../../ecom/09-meta-and-facebook-ads/21-ad-operations-delegation-and-platform-maintenance/">Plain version</a></div><h1>9.21 Ad operations, delegation and platform maintenance</h1><article><h2 id="daily-tracking-routine">Daily Tracking Routine</h2>
+<ul>
+<li>Track these Meta ad metrics every day in the tracker: ad spend, CPM, CTR, cost per click, cost per purchase (compared with target cost per purchase), and ROAS. The tracker colours each metric green, amber or red against its benchmark. [L1354.009]</li>
+<li>Do not refresh the ad account every 20 minutes. Refreshing interrupts the algorithm's learning and drives emotional reactions. Step away from the dashboard so the campaign runs long enough to produce usable data. [L1445.006]</li>
+<li>Compare the set budget with actual spend in Ads Manager instead of trusting the displayed budget. A campaign can keep showing a daily budget that the account no longer spends after a failed payment. One account went from a 50 USD daily budget rising to about 100 USD back to a displayed 50 USD, while delivery stayed near 10 USD in 24 hours. [L1432.041]</li>
+</ul>
+<h2 id="ad-account-limits-and-ad-housekeeping">Ad Account Limits and Ad Housekeeping</h2>
+<ul>
+<li>Meta limits active or in-review ads to around 250 per ad account. Turn off non-performing ads to free space, rather than creating new copies of the same creative. [L0637.030]</li>
+<li>To reuse an existing post and avoid creating new ads: [L0637.031]
+<ol type="1">
+<li>Open the ad set and duplicate it. [L0637.031]</li>
+<li>At the ad level, choose "Use existing post" instead of creating a new ad. [L0637.031]</li>
+<li>Select the ad or paste its Post ID from the Page post column. [L0637.031]</li>
+<li>Keep the same creative, so the engagement from the original ad is combined into one post. [L0637.031]</li>
+</ol></li>
+<li>To apply a new offer to all ads: [L0650.019]
+<ol type="1">
+<li>Copy the offer sentence from the store. [L0650.019]</li>
+<li>Go to the ads and select all of them. [L0650.019]</li>
+<li>Click edit on the ad and paste the offer into the primary text. [L0650.019]</li>
+</ol></li>
+<li>If many advertisers report the same platform-side inconsistency, pause the affected campaigns and relaunch them after one or two days, since the problem is often solved within that time. [L0692.025]</li>
+</ul>
+<h2 id="batch-launching">Batch Launching</h2>
+<ul>
+<li>Batch processing applies the same targeting, budget and placement settings to an entire group of creatives and launches them all simultaneously, instead of creating each ad individually in Meta Ads Manager. This eliminates repetitive configuration steps and drastically reduces launch time. [L0207.010]</li>
+<li>The built-in Meta Ad Manager integration in Ad Manage.ai loads campaign data and analytics in 2.9 seconds. [L0207.006]</li>
+</ul>
+<h2 id="account-structure-and-spend-control">Account Structure and Spend Control</h2>
+<ul>
+<li>A new ad account may start with a daily spend limit of about $50. Split that daily budget across several interest audiences so each one gets enough spend to show usable metrics. [L0640.047]</li>
+<li>After about 100-200 sales, switch to a dedicated ad account with a simple structure of two to three main campaigns. Use one pixel dedicated only to that store. [L1217.043]</li>
+<li>Products from the same niche can be tested in parallel in the same ad account and pixel. Separate ad accounts when a winning product belongs to a different niche. [L1217.044]</li>
+<li><em>Older advice (2020):</em> Facebook supports multiple ad accounts within one Business Manager. Keep one credit card per business network and separate ad accounts for each store. [L1277.089]</li>
+</ul>
+<h2 id="billing-charges-and-payment-methods">Billing Charges and Payment Methods</h2>
+<ul>
+<li><p>A Facebook ad account can start spending and bill the card on file even when no campaigns are switched on, with one case reported at about £10,000. Remove unused payment cards from ad accounts you no longer use. [L1214.031]</p></li>
+<li><p>Threshold charges on new accounts:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Amount</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Typical threshold charge on a new ad account</td>
+<td>About 10 USD</td>
+<td>Signals that the account will pay in the future. [L1347.012]</td>
+</tr>
+<tr>
+<td>Threshold charge on a new account</td>
+<td>200 EUR</td>
+<td>Not normal and should be disputed. [L1347.012]</td>
+</tr>
+</tbody>
+</table></div></li>
+<li><p>Example of an unexplained charge: a seller bought a Business Manager, created a new ad account and started spending. When the spend reached the threshold, Facebook charged 200 EUR that had not been spent, and the money was not held as a budget. Support forwarded the case to an internal team and no quick fix followed. The ad kept running and Facebook then tried to charge another 150 EUR for money not spent. The seller created a second ad account, and the third account was charged 16 EUR. The seller asked for a screenshot of the billing page to investigate, and the issue was described as rare and unusual. [L1347.013]</p></li>
+<li><p>If Facebook charges an unexplained amount on an ad account: [L1347.014]</p>
+<ol type="1">
+<li>Take a screenshot of the billing page to document the charge. [L1347.014]</li>
+<li>Contact Facebook support and ask for the charge to be reviewed. [L1347.014]</li>
+<li>Do not assume the issue is resolved while ads are still running. Monitor the billing page for further charges. [L1347.014]</li>
+</ol></li>
+</ul>
+<h2 id="facebook-shop-refunds">Facebook Shop Refunds</h2>
+<ul>
+<li>Orders can come in through Facebook Shop without the buyer visiting the Shopify store, so refunds and returns for these orders must still be handled. Facebook can side with the buyer in disputes, so keep the order records in Shopify ready. [L1128.009]</li>
+<li>Case: a seller issued a refund for a Facebook Shop order to avoid trouble with Facebook. The buyer then appealed with Facebook and received a second refund, pulling money back from the seller's account. The seller appealed with Facebook by sending the Shopify order information and records, and Facebook reversed the refund and returned the money to the seller. [L1128.010]</li>
+</ul>
+<h2 id="delegating-ad-setup">Delegating Ad Setup</h2>
+<ul>
+<li>Delegate traffic and ads only after you know which Facebook or TikTok ad strategy works for your store. Otherwise a contractor who leaves or suddenly raises rates leaves you with no way to keep the ads running. [L1358.014]</li>
+<li>To delegate ad campaign setup: [L1358.015, L1360.015]
+<ol type="1">
+<li>Have the team member prepare the creatives first, including videos and pictures for the ads. [L1358.015, L1360.015]</li>
+<li>Give the team member access to your Business Manager so they can build the campaign structure. [L1358.015, L1360.015]</li>
+<li>Tell them exactly how many ad sets you want, the budget, and how many creatives per ad set have been successful for you in the past. [L1358.015, L1360.015]</li>
+<li>Let them run the campaigns for a couple of days, while you monitor them closely. [L1358.015, L1360.015]</li>
+<li>Give feedback. [L1358.015, L1360.015]</li>
+<li>Once you have a proven, experienced team member and results are stable, let them manage the campaigns independently. [L1358.015, L1360.015]</li>
+</ol></li>
+</ul>
+</article><nav class="pn"><a href="../../09-meta-and-facebook-ads/20-seasonality-market-conditions-and-special-cases/"><span class="k">&larr; Previous</span><span class="v">Seasonality, market conditions and special cases</span></a><a class="nx" href="../../09-meta-and-facebook-ads/22-other-details/"><span class="k">Next &rarr;</span><span class="v">Other details</span></a></nav>
+</div></main>
+<footer><div class="wrap">Ecommerce Playbook by <a href="https://dlichters.com/">Lichters</a>. Free to read. No tracking. &middot; <a href="https://dlichters.com/imprint/">Imprint</a> &middot; <a href="https://dlichters.com/privacy/">Privacy</a></div></footer>
+</body></html>
