@@ -7,9 +7,9 @@
 <meta name="description" content="David Lichters: story, ai, diet, ecom, instagram, car, apps and support.">
 <link rel="canonical" href="https://dlichters.com/">
 <style>
-html{background:#fafafc;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-synthesis:none}
-.gp{position:relative;min-height:calc(100vh + 100px);min-height:calc(100lvh + 100px);background:#fff}
+html{height:100%;overflow:hidden;overscroll-behavior:none;background:#fafafc;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{position:fixed;top:0;right:0;bottom:0;left:0;margin:0;overflow:hidden;overscroll-behavior:none;background:#fafafc;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-synthesis:none}
+.gp{position:relative;height:100%;background:#fafafc}
 .gp:has(.gn-open){background:#fafafc}
 .gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
 --sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -19,7 +19,7 @@ body{margin:0;background:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-s
 .gn-content{--rate:375ms;position:absolute;top:0;left:0;width:100%;height:48px;overflow:hidden;
 background:rgba(250,250,252,.8);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
 transition:height var(--rate) var(--cb) 80ms,background var(--rate) var(--cb) 80ms}
-.gn-open .gn-content{height:100vh;height:100dvh;background:#fafafc;overflow-x:hidden;overflow-y:auto;transition-delay:0ms}
+.gn-open .gn-content{height:100vh;height:100dvh;background:#fafafc;overflow-x:hidden;overflow-y:auto;overscroll-behavior:none;transition-delay:0ms}
 .gn-menu,.gn-submenu{position:absolute;top:0;left:0;width:100%}
 .gn-flyout{padding-top:50px;box-sizing:border-box}
 .gn-menu-list{display:flex;flex-direction:column;padding-bottom:84px}
@@ -110,7 +110,7 @@ padding:0;font:inherit;cursor:pointer;outline-offset:-7px;-webkit-tap-highlight-
 </div>
 </nav>
 </div>
-<footer class="foot"><nav aria-label="Legal"><p>Copyright © 2026 Lichters Apps. All rights reserved.</p><a class="fl" href="terms/">Terms of Service</a><a class="fl" href="privacy/">Privacy Policy</a><a class="fl" href="imprint/">Imprint</a></nav></footer>
+
 <script>(function(){var g=document.getElementById("gn");if(!g)return;
 var menu=g.querySelector(".gn-menu"),sub=document.getElementById("gn-ai"),
 ai=g.querySelector("[data-sub]"),back=g.querySelector(".gn-menuback-button"),busy=0;
