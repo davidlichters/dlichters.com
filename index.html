@@ -75,16 +75,12 @@ transition:opacity .24s var(--cb),transform .24s var(--cb),visibility .24s step-
 transition:opacity .24s var(--cb) .16s,transform .24s var(--cb) .16s,visibility .24s step-start .16s}
 .gn.gn-closing .gn-menuback{opacity:0;transform:translate(0) scale(.8)}
 .gn button:focus:not(:focus-visible){outline:none}
-.gn-menuback-button,.gn-menutrigger-button{-webkit-appearance:none;appearance:none;background:none;border:0;margin:0;
+.gn-menuback-button{-webkit-appearance:none;appearance:none;background:none;border:0;margin:0;
 padding:0;font:inherit;cursor:pointer;outline-offset:-7px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .gn-menuback-button{display:flex;justify-content:center;width:100%;height:100%;color:#333336;transition:color .32s var(--cb)}
 .gn-menuback-button:hover{color:#000}
 .gn-chevron-icon{display:flex;margin-left:-1px}
 .gn-chevron-icon svg{fill:currentColor}
-.gn-menutrigger{position:absolute;top:0;right:max(0px,env(safe-area-inset-right) - 16px);z-index:3;width:48px}
-.gn-menutrigger-button{position:relative;display:flex;justify-content:center;align-items:center;width:48px;height:48px;
-color:#000;opacity:.8;transition:opacity .32s var(--cb),color .32s var(--cb)}
-.gn-menutrigger-button:hover{opacity:1}
 .foot{background:#f5f5f7;color:#6e6e73;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;line-height:1.33337;font-weight:400;letter-spacing:-.01em}
 .foot nav{max-width:980px;margin:0 auto;padding:17px 16px 21px;display:flex;flex-wrap:wrap}
 .foot p{width:100%;margin:0 0 7px}
@@ -111,18 +107,15 @@ color:#000;opacity:.8;transition:opacity .32s var(--cb),color .32s var(--cb)}
 <h2 class="gn-submenu-header">everything david knows, written for ai</h2>
 <ul class="gn-submenu-list"><li class="gn-submenu-list-item"><a class="gn-submenu-link" href="https://chatgpt.com/?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know.">test davids brain upload</a></li></ul>
 </div></div></div>
-<div class="gn-menutrigger"><button class="gn-menutrigger-button" type="button" aria-label="Close" aria-expanded="true"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><polyline fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="3.5 15, 15 3.5"><animate id="gn-bread-bottom-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"></animate><animate id="gn-bread-bottom-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12"></animate></polyline><polyline fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" points="3.5 3.5, 15 15"><animate id="gn-bread-top-open" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"></animate><animate id="gn-bread-top-close" attributeName="points" keyTimes="0;0.5;1" dur="0.24s" begin="indefinite" fill="freeze" calcMode="spline" keySplines="0.42, 0, 1, 1;0, 0, 0.58, 1" values=" 3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5"></animate></polyline></svg></button></div>
 </div>
 </nav>
 </div>
 <footer class="foot"><nav aria-label="Legal"><p>Copyright © 2026 Lichters Apps. All rights reserved.</p><a class="fl" href="terms/">Terms of Service</a><a class="fl" href="privacy/">Privacy Policy</a><a class="fl" href="imprint/">Imprint</a></nav></footer>
 <script>(function(){var g=document.getElementById("gn");if(!g)return;
-var c=g.querySelector(".gn-content"),menu=g.querySelector(".gn-menu"),sub=document.getElementById("gn-ai"),
-ai=g.querySelector("[data-sub]"),back=g.querySelector(".gn-menuback-button"),trig=g.querySelector(".gn-menutrigger-button"),busy=0;
+var menu=g.querySelector(".gn-menu"),sub=document.getElementById("gn-ai"),
+ai=g.querySelector("[data-sub]"),back=g.querySelector(".gn-menuback-button"),busy=0;
 function has(k){return g.classList.contains(k)}
 function hide(el,on){el.inert=on;if(on)el.setAttribute("aria-hidden","true");else el.removeAttribute("aria-hidden")}
-function bread(n){["bottom","top"].forEach(function(p){var a=document.getElementById("gn-bread-"+p+"-"+n);
-if(a&&a.beginElement)a.beginElement()})}
 ai.addEventListener("click",function(e){e.preventDefault();if(busy||!has("gn-open")||has("gn-sub"))return;busy=1;
 hide(sub,false);ai.setAttribute("aria-expanded","true");g.classList.add("gn-sub","gn-anim","gn-fwd");
 setTimeout(function(){g.classList.remove("gn-anim","gn-fwd");hide(menu,true);busy=0;back.focus({preventScroll:true})},400)});
@@ -130,13 +123,5 @@ back.addEventListener("click",function(){if(busy||!has("gn-sub"))return;busy=1;h
 g.classList.add("gn-anim","gn-bwd");
 setTimeout(function(){g.classList.remove("gn-sub","gn-anim","gn-bwd");hide(sub,true);ai.setAttribute("aria-expanded","false");
 busy=0;ai.focus({preventScroll:true})},400)});
-trig.addEventListener("click",function(){if(busy)return;busy=1;var r=Math.min(480,Math.max(240,innerHeight/2));
-c.style.setProperty("--rate",r+"ms");
-if(has("gn-open")){g.classList.add("gn-closing");g.classList.remove("gn-open");bread("close");
-trig.setAttribute("aria-label","Menu");trig.setAttribute("aria-expanded","false");
-setTimeout(function(){g.classList.remove("gn-closing","gn-sub");hide(menu,false);hide(sub,true);
-ai.setAttribute("aria-expanded","false");busy=0},r+80)}
-else{g.classList.add("gn-open");bread("open");trig.setAttribute("aria-label","Close");trig.setAttribute("aria-expanded","true");
-setTimeout(function(){busy=0},Math.max(r,200+20*8+240))}});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"&&has("gn-sub"))back.click()})})()</script>
 </body></html>
