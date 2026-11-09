@@ -284,19 +284,34 @@ function aktuell(el){var cr=el.querySelector('.cr');if(!cr||!cr.clientWidth||!cr
 function pille(el,i){var n=el._p.sl.length,x=el.querySelector('.pl');if(x)x.textContent=(i+1)+'/'+n;var l=el.querySelector('.pf.l'),r=el.querySelector('.pf.r');if(l){l.hidden=i===0;r.hidden=i===n-1}}
 function zeige(el,i,sanft){var cr=el.querySelector('.cr');el.dataset.i=i;if(!cr||!cr.firstChild)return;var w=cr.clientWidth;if(sanft&&cr.scrollTo)cr.scrollTo({left:i*w,behavior:'smooth'});else cr.scrollLeft=i*w;pille(el,i)}
 
-function wach(el){if(el._wach)return;el._wach=1;var cr=el.querySelector('.cr'),p=el._p;cr.innerHTML=p.sl.map(function(s){return '<div class="s">'+slideHTML(s)+'</div>'}).join('');var i=+el.dataset.i||0;if(i)cr.scrollLeft=i*cr.clientWidth}
+function wach(el){if(el._wach)return;el._wach=1;var cr=el.querySelector('.cr'),p=el._p;tonHol(p.id.slice(0,5));cr.innerHTML=p.sl.map(function(s){return '<div class="s">'+slideHTML(s)+'</div>'}).join('');var i=+el.dataset.i||0;if(i)cr.scrollLeft=i*cr.clientWidth}
 function schlaf(el){if(!el._wach||(spricht&&spricht.el===el))return;el.dataset.i=aktuell(el);el._wach=0;el.querySelector('.cr').innerHTML=''}
 function nahFolge(es){es.forEach(function(e){if(e.isIntersecting)wach(e.target);else schlaf(e.target)})}
 var nah=new IntersectionObserver(nahFolge,{rootMargin:'1500px 0px'});
 
 var spricht=null;
 function fertigSprechen(){if(spricht){spricht.btn.textContent='speak';spricht.btn.setAttribute('aria-pressed','false');spricht=null}}
-function stop(){fertigSprechen();try{speechSynthesis.cancel()}catch(e){}}
+function stop(){fertigSprechen();try{speechSynthesis.cancel()}catch(e){}try{ton.pause()}catch(e){}}
+/* David 09.11.: Speak laeuft fuer jeden Besucher auf der Website. Der fertige Ton liegt je Post als Datei online, das Handy muss nichts umwandeln. Wo noch keiner liegt, liest die Stimme des Geraets. */
+var TON=location.origin+HIER.replace(/feed\/$/,'ton/'),ton=new Audio(),tonListe=new Set(),tonM={};ton.preload='none';ton.setAttribute('playsinline','');
+var tonDa=fetch(TON+'liste.json').then(function(r){return r.ok?r.json():[]}).catch(function(){return []}).then(function(l){tonListe=new Set(l)});
+function tonHol(f){if(tonM[f])return;var e=tonM[f]={w:null};tonDa.then(function(){if(!tonListe.has(f))return;return fetch(TON+f+'/m.json').then(function(r){return r.ok?r.json():null}).then(function(j){e.w=j})}).catch(function(){})}
+function spieleTon(el,btn,f,n,marken){
+ var mark={el:el,btn:btn},letzte=-1;try{speechSynthesis.cancel()}catch(e){}
+ fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
+ ton.src=TON+f+'/'+n+'.m4a';
+ ton.ontimeupdate=function(){if(spricht!==mark)return;var i=marken.length-1;while(i>0&&marken[i]>ton.currentTime+.05)i--;if(i!==letzte){letzte=i;zeige(el,i,true)}};
+ ton.onended=ton.onerror=function(){if(spricht===mark)fertigSprechen()};
+ var p=ton.play();if(p&&p.catch)p.catch(function(){if(spricht===mark)fertigSprechen()});
+}
 function stimme(){var v=speechSynthesis.getVoices().filter(function(x){return /^en[-_](US|GB)/i.test(x.lang)});
  function p(x){var n=x.name;if(/^Jamie/.test(n))return 9;/* Davids Wahl 09.11.: Jamie, wenn das Geraet sie der Seite zeigt */return /premium/i.test(n)?5:/enhanced|neural|natural/i.test(n)?4:/^(Daniel|Ava|Zoe|Evan|Nathan|Noelle|Allison|Susan|Tom)\b|^Google (US|UK) English/.test(n)?3:/^Samantha/.test(n)?2:/Eloquence|Fred|Albert|Bad News|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox/i.test(n)?0:1}
  return v.sort(function(a,b){return p(b)-p(a)})[0]||null}
 function sprich(el,btn){
  if(spricht&&spricht.el===el){stop();return}
+ var tid=el._p.id.match(/^(\d\d-\d\d)-(\d+)$/),te=tid&&tonM[tid[1]],tm=te&&te.w&&te.w[tid[2]];
+ if(tm){spieleTon(el,btn,tid[1],tid[2],tm);return}
+ try{ton.pause()}catch(e){}
  var S=window.speechSynthesis;if(!S){melde('Speech is not available in this browser');return}
  var mark={el:el,btn:btn},lief=S.speaking||S.pending;
  fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
