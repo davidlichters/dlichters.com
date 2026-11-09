@@ -152,15 +152,15 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cu
 .ic svg.im{width:14.667px;height:23px}
 /* Tippflaechen 44 pt, das Symbol sitzt genau wie in Davids Bild */
 .ic .bl{left:2.6px;top:2.6px;width:44px;height:44px}.ic .bl svg{left:10.7px;top:11.4px}
-.ic .bi{left:42.4px;top:2px;width:44px;height:44px}.ic .bi svg{left:10.9px;top:11.33px}
-.ic .bs{left:81.1px;top:0;width:44px;height:44px}.ic .bs svg{left:12.6px;top:10.33px}/* gleicher Abstand wie Herz zu i: 18,6 pt (David 09.11.) */
+.ic .bi{left:57.05px;top:2px;width:44px;height:44px}.ic .bi svg{left:10.9px;top:11.33px}
+.ic .bs{left:110.41px;top:0;width:44px;height:44px}.ic .bs svg{left:12.6px;top:10.33px}/* Abstand wie in Davids Bild (99 zu 64 Bildpunkte), hier 33,2 pt (David 09.11.) */
 .ic .bm{right:2px;top:1px;width:44px;height:44px}.ic .bm svg{left:14.667px;top:10.83px}
 .bl.on svg{fill:#ff3b30;stroke:#ff3b30}
 .bm.on svg{fill:#1d1d1f}
 .bl.pop svg{animation:pop .32s cubic-bezier(.3,1.6,.5,1)}
 @keyframes pop{0%{transform:scale(.72)}100%{transform:scale(1)}}
 .tm{display:block;margin:14.14px 0 0 12.6px;font-size:11.8px;line-height:14px;color:var(--mut)}
-#saved{position:fixed;top:3px;right:max(40px,calc(env(safe-area-inset-right) + 24px));z-index:9998;width:44px;height:48px;display:flex;align-items:center;justify-content:center}
+#saved{position:fixed;top:3px;right:max(50.13px,calc(env(safe-area-inset-right) + 34.13px));z-index:9998;width:44px;height:48px;display:flex;align-items:center;justify-content:center}
 #saved svg{display:block;width:14.667px;height:23px;fill:none;stroke:#1d1d1f;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
 #saved.on svg{fill:#1d1d1f}
 html.gn-lock #saved{visibility:hidden}
@@ -221,7 +221,7 @@ addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.clic
 (function(){
 var WA='https://wa.me/4915123849907', feed=document.getElementById('feed'), sent=document.getElementById('sent'), sv=document.getElementById('saved'), toast=document.getElementById('toast');
 var H={l:"<svg class=\"ih\" viewBox=\"0 0 21.4 19.8\" aria-hidden=\"true\"><path d=\"M10.7 18.9C4.3 14.3 1 11.1 1 6.9 1 3.6 3.4 1.1 6.3 1.1c1.9 0 3.5 1 4.4 2.8.9-1.8 2.5-2.8 4.4-2.8 2.9 0 5.3 2.5 5.3 5.8 0 4.2-3.3 7.4-9.7 12z\"/></svg>",i:"<svg class=\"ii\" viewBox=\"0 0 21.8 21.8\" aria-hidden=\"true\"><circle cx=\"10.9\" cy=\"10.9\" r=\"10.1\"/><path d=\"M8.1 16.1h5.6M10.9 16.1V9.5H8.6\" /><circle class=\"pkt\" cx=\"10.8\" cy=\"5.9\" r=\"1.25\"/></svg>",s:"<svg class=\"is\" viewBox=\"0 0 19.2 24\" aria-hidden=\"true\"><path d=\"M5.6 7.8H4.2C2.4 7.8 1 9.2 1 11v8.8C1 21.6 2.4 23 4.2 23H15c1.8 0 3.2-1.4 3.2-3.2V11c0-1.8-1.4-3.2-3.2-3.2h-1.4M9.6 15.2V1.2M5.6 5.2l4-4 4 4\"/></svg>",m:"<svg class=\"im\" viewBox=\"0 0 14.667 23\" aria-hidden=\"true\"><path d=\"M2.625 .925h9.417a1.7 1.7 0 0 1 1.7 1.7v19.123a.377 .377 0 0 1-.644 .267L7.333 16.25l-5.764 5.765a.377 .377 0 0 1-.644-.267V2.625a1.7 1.7 0 0 1 1.7-1.7z\"/></svg>"};
-var idx=[], cache={}, pos={}, modus='alle', quelle=null, laeuft=false, zuende=false, lauf=0;
+var idx=[], cache={}, pos={}, modus='alle', quelle=null, laeuft=false, zuende=false, lauf=0, BASIS="", GRENZE=0, gezeigt=0;
 var U=new URLSearchParams(location.search);
 
 function lesen(k){try{return JSON.parse(localStorage.getItem(k))||[]}catch(e){return []}}
@@ -242,7 +242,7 @@ function slideHTML(sl){
  return '<div class="b">'+(sl.h?'<h3>'+esc(sl.h)+'</h3>':'')+sl.t.split('\n').map(function(p){return '<p>'+fett(p)+'</p>'}).join('')+'</div>';
 }
 
-function abschnitt(f){if(!cache[f])cache[f]=fetch('d/'+f+'.json').then(function(r){if(!r.ok)throw 0;return r.json()});return cache[f]}
+function abschnitt(f){if(!cache[f])cache[f]=fetch(BASIS+'d/'+f+'.json').then(function(r){if(!r.ok)throw 0;return r.json()});return cache[f]}
 function link(p,i){return location.origin+location.pathname+'?p='+p.id+(i?'&s='+(i+1):'')}
 function aktuell(el){var cr=el.querySelector('.cr');if(!cr||!cr.clientWidth||!cr.firstChild)return +el.dataset.i||0;return Math.max(0,Math.min(el._p.sl.length-1,Math.round(cr.scrollLeft/cr.clientWidth)))}
 function pille(el,i){var n=el._p.sl.length,x=el.querySelector('.pl');if(x)x.textContent=(i+1)+'/'+n;var l=el.querySelector('.pf.l'),r=el.querySelector('.pf.r');if(l){l.hidden=i===0;r.hidden=i===n-1}}
@@ -281,7 +281,7 @@ function melde(t){toast.textContent=t;toast.classList.add('an');clearTimeout(mel
 function post(p){
  var el=document.createElement('article');el.className='p';el._p=p;el.dataset.i=p.start||0;
  var ig='https://www.instagram.com/davidlichters/';
- el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="davidlichters on Instagram"><img src="a.jpg" alt="" width="32" height="32"></a><div class="who"><a class="nm" href="'+ig+'">davidlichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
+ el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="davidlichters on Instagram"><img src="'+BASIS+'a.jpg" alt="" width="32" height="32"></a><div class="who"><a class="nm" href="'+ig+'">davidlichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
  '<div class="c"><div class="cr" tabindex="0" aria-label="'+esc(p.titel)+'"></div><span class="pl"></span><button class="pf l" type="button" aria-label="Previous slide">&#8249;</button><button class="pf r" type="button" aria-label="Next slide">&#8250;</button></div>'+
  '<div class="ic"><button class="bl'+(likes.has(p.id)?' on':'')+'" type="button" aria-label="Like" aria-pressed="'+likes.has(p.id)+'">'+H.l+'</button><a class="bi" href="'+WA+'" aria-label="Ask David about this slide on WhatsApp">'+H.i+'</a><button class="bs" type="button" aria-label="Share">'+H.s+'</button><button class="bm'+(saves.indexOf(p.id)>=0?' on':'')+'" type="button" aria-label="Save" aria-pressed="'+(saves.indexOf(p.id)>=0)+'">'+H.m+'</button></div>'+
  '<time class="tm">'+ago(p.u)+'</time>';
@@ -301,7 +301,7 @@ function post(p){
 function ausPost(f,d,n,u,start){return {id:f+'-'+n,sl:d.p[n],titel:d.p[n][0].t,u:u,start:start||0}}
 
 /* Quellen: der ganze Kurs ab einer Stelle, oder die gemerkten Posts */
-function kursAb(a,b){return function(){if(a>=idx.length)return Promise.resolve(null);var e=idx[a],x=a,y=b;a++;b=0;return abschnitt(e.f).then(function(d){var l=[];for(var n=y;n<d.p.length;n++)l.push(ausPost(e.f,d,n,e.u));return l})}}
+function kursAb(a,b){return function(){if(a>=idx.length||(GRENZE&&gezeigt>=GRENZE))return Promise.resolve(null);var e=idx[a],x=a,y=b;a++;b=0;return abschnitt(e.f).then(function(d){var l=[];for(var n=y;n<d.p.length&&!(GRENZE&&gezeigt>=GRENZE);n++){gezeigt++;l.push(ausPost(e.f,d,n,e.u))}return l})}}
 function gemerkte(){var l=saves.slice().reverse(),i=0;return function(){if(i>=l.length)return Promise.resolve(null);var teil=l.slice(i,i+8);i+=8;return Promise.all(teil.map(function(id){var m=id.match(/^(\d\d-\d\d)-(\d+)$/);if(!m)return null;var e=idx.filter(function(x){return x.f===m[1]})[0];if(!e)return null;return abschnitt(m[1]).then(function(d){return d.p[+m[2]]?ausPost(m[1],d,+m[2],e.u):null}).catch(function(){return null})})).then(function(a){return a.filter(Boolean)})}}
 
 function weiter(){
@@ -310,7 +310,7 @@ function weiter(){
 }
 var unten=new IntersectionObserver(function(es){if(es[0].isIntersecting)weiter()},{rootMargin:'2500px 0px'});
 
-function leeren(){stop();lauf++;laeuft=false;zuende=false;Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
+function leeren(){stop();lauf++;laeuft=false;zuende=false;gezeigt=0;Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
 function startFeed(){leeren();modus='alle';sv.classList.remove('on');sv.setAttribute('aria-pressed','false');
  var m=(U.get('p')||'').match(/^(\d\d-\d\d)-(\d+)$/);
  if(m&&!startFeed.fertig){startFeed.fertig=1;var a=idx.map(function(e){return e.f}).indexOf(m[1]);if(a>=0){var s=Math.max(0,(+U.get('s')||1)-1);quelle=function(){var q=kursAb(a,+m[2]),erst=true;return function(){return q().then(function(l){if(erst&&l&&l[0]){l[0].start=Math.min(s,l[0].sl.length-1);erst=false}return l})}}();weiter();return}}
@@ -318,7 +318,7 @@ function startFeed(){leeren();modus='alle';sv.classList.remove('on');sv.setAttri
 function startGemerkt(){leeren();modus='gemerkt';sv.classList.add('on');sv.setAttribute('aria-pressed','true');quelle=gemerkte();weiter()}
 sv.addEventListener('click',function(){if(modus==='gemerkt')startFeed();else startGemerkt()});
 
-fetch('idx.json').then(function(r){return r.json()}).then(function(d){idx=d;unten.observe(sent);startFeed()});
+fetch(BASIS+'idx.json').then(function(r){return r.json()}).then(function(d){idx=d;unten.observe(sent);startFeed()});
 })();
 </script>
 </body></html>
