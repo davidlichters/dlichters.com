@@ -54,10 +54,53 @@ Part 3 of 3 of "25. Full audit details: every course specific missing from chapt
 - [11:39] Both courses are included for existing members at no extra cost (lifetime access with updates).
 - [12:37] Enrollment closes to NEW members in October (messaging "Course A is closing"; does not affect members); the course was closed to new enrollments every year until 2019 to update; this is the first full refresh since; the course is "13 or 14 years" old.
 
-### Einführung in Doing Business Abroad (Course A) [L0587, 2020-26]
+### Episode 11 (Dokument) (Course A) [L0615, undated]
 
-- [00:27] About 70% of Course A members are from the US (US members can skip this course).
-- [00:42] About 30% are in Canada, UK, Europe, Australia, New Zealand or elsewhere; course covers doing business in the US from abroad or small tweaks for your own country.
-- [01:11] Course is supplemental, does not replace the blueprints; 98%+ of time should be spent in the dropship blueprint, which works worldwide.
+- Minor,: update to the Course A Blueprint (preview of new addition) and link to the new Course A Research Software (research software itself is referenced elsewhere).
+
+### Episode 12 (Dokument) (Course A) [L0616, undated]
+
+- Member case: shop open about 1 month, close to $6k in sales through only one supplier; supplier unresponsive for 2 weeks, 4 orders unprocessable, phone number dead, only email; other suppliers did not sign on. Teacher's answer is not in the document (only a question).
+- Episode states Meta Ads are "currently on sale" and how to take advantage (no figures given).
+
+### Episode 13 (Dokument) (Course A) [L0617, undated]
+
+- Covered topic-wise (Google Ads product inclusions/exclusions exist in 10-google-ads-and-shopping); no numbers in the document. Product Page SEO link only.
+
+### Episode 8 (Dokument) (Course A) [L0628, undated]
+
+- (Pointer document only, no transcript.) Episode 8 content: insights from a coaching call with a Course A member, covering business partnerships and additional methods for supplier sourcing. Not found in the target dirs.
+
+### Episode 9 (Dokument) (Course A) [L0629, 2025+]
+
+- (Pointer document only.) Episode 9 lists: updated Course A Blueprint Lesson 2.9 "How Much Competition Is Too Much Competition?", updated Lesson 4.5 "Business Email Account Creation & Setup", a new video "How To Increase ROAS", the tool Loom, and a new way to connect with potential customers "I'm excited about for 2025". Not found in the target dirs (the lesson titles 2.9 and 4.5 exist only as bare names elsewhere).
+
+### Faruk Ilkhans EU-Dropshipping: General Stores und Fashion-Nischen (Course C) [L0660, 2019+]
+
+- [02:00] The speaker scaled his EU general stores to about 11 to 12 million euros in revenue (also [01:18]: age 26, went broke three times, started late 2019); he now also builds a brand.
+- [15:33] He sold in the big four markets (US, Canada, UK, Australia) only after about three years of selling in the EU, because competition is high there; he says EU is easier to start in.
+- [20:27] and [25:10] He used Klarna for about three years, stopped three or four months before the call (no Klarna in any store now) after it nearly bankrupted him two years earlier despite millions in revenue.
+- [07:28] and [07:49] Fad Closet (the host's fashion brand in Canada/US) has done 4 million dollars since it exists; best sellers in analytics are leather jackets.
+- [32:47] "Do not try to copy paste brand": copying a competitor's whole brand is a waste of time; copy-paste works for the creative/product page of general-store products only, and not for all products.
+- [34:39] Jewelry case in France: five ads/assets at about 5 each, about 50 to 75 euros spent, no sales but 24 add-to-carts (3 to 4 per ad): speaker calls 24 add-to-carts after 75 spent "not bad at all, quite good" and points to the funnel (payment methods, checkout, price point too high, slow site speed) before killing the product.
+
+### Februar 2025 Q&A Coaching Call (Course A) [L0667, 2025]
+
+- [06:00] With a 10 dollar per day Shopping budget, 10% would be only 1 dollar, so run Google remarketing and Meta remarketing at about 3 dollars a day each (lessons 6.1.8 and 6.3.4); keep the 10 dollar Shopping budget unchanged until it is profitable.
+- [16:22] and [17:15] 2024 reverted to pre-COVID conditions (cheap ads and extra consumer money gone); for Course A's businesses January 2025 beat each of the 12 months of 2024.
+- [45:32], [46:24] and [2:13:59] 21-Day Live Launch Challenge: 8 to 28 February 2025, 15 to 20 members in a private Discord, four mastermind calls (first call Sunday 9 February), daily videos/updates, done-for-you store included, enrollment closes Friday 7 February; goal: first two suppliers with products live, email flows (abandoned cart, post-purchase) and Meta plus Google ads live by day 21; lifetime access to a document of everything covered; no other date scheduled.
+- [2:14:55] First-month profit expectations (no income claim): Course A would not be shocked by 1,200 dollars profit in the first month after launch, 4,000 would be a solid first month, 10,000 would be crushing it.
+- [1:47:58] Merchant Center products flagged "personal hardships in personalized advertising": Course A says that is probably an AI mistake; email the store link to him to check.
+- [1:47:58] A US company whose products are made in China is not a middleman (example: Apple has factories overseas); only distributors/importers reselling other brands are the concern.
+- [27:39] Outsourcing uploads: after recording a Loom of 5 to 10 products, post the Upwork job and send a paid test job of about 100 products to three or four applicants, then let the best one do the rest.
+
+### Mentor C3 Gritsenko: Von €0 zu €215k in 11 Monaten - Dropshipping Case Study (Course C) [L0690, 2022+]
+
+- [03:08] Mentee case numbers: started the mentorship in December 2022; the first money-making product started on 18 May; about 11 months in he is at roughly 215,000 (EUR) revenue, of which 120,000 came in the last four months.
+- [08:36] First and worst problem: about one week after the product turned profitable, his payment account(s) were banned/closed "forever" (a Greek one, then a US one; the provider could not agree which one was proper), which lowered conversion rate. (Payment provider not named in the transcript, probably PayPal.)
+- [29:42] Teacher's advice on going full-time: he knows dropshippers who earn enough to go full-time but keep a (low-hour) job, because income is guaranteed; one month can be very good and the next very bad; a small low-hour job covers the consistent bills; do not go full-time until you can hit the monthly minimums comfortably. Mentee: for the first 8 months of his product he feared every week it would die, so he plans a second/third product or store to feel safer.
+- [30:35]/[31:26] Even big sellers get cash-flow from lending companies or sell car/watch/house to pay for stock; the stock-bill month-end worry never goes away.
+- [11:26] Mentee: total ad spend before first profit "around two to three thousand" (EUR), in addition to the mentorship fee and a couple hundred dollars for a US LLC, with products cut at 300 loss.
+- [32:16] Teacher: "I wouldn't say never quit, but if you try 40 products and don't make a dollar maybe it's not for you"; set a budget of e.g. five to six thousand dollars for product testing up front.
 
 Part 3 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 01. Business Model and Strategy". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/01-business-model-and-strategy.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/01-business-model-and-strategy/02-das-high-ticket-dropshipping-marketing-system.md

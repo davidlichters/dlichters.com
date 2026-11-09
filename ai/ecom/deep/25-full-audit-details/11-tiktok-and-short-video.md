@@ -43,4 +43,22 @@ Main chapter: https://dlichters.com/ai/ecom/deep/11-tiktok-and-short-video.md
 - [34:39] Product examples from Peakster: the teacher says gyro balls were one of his own products that did over 500k (in 2019).
 - [36:33] UGC reference: "social savannah" on Twitter named as a good person to follow for UGC (the teacher says it is very female driven, take with a pinch of salt).
 
+### Fallstudie: Virale Produkte - Race Car vs. Infinity Pencil (Course C) [L0655, undated]
+
+- [00:25] Race Car account: follower counts were 3,365 the day before and about 5,000 to 5,300 (about 1,500 more in one day) when recorded; the viral video was two days old.
+- [16:48] Trending sound/hashtag growth example: a hashtag can be at about 10 million users and then over a billion; a sound goes from a few thousand to 100,000 to a million uses. (Notes only say "thousands to hundreds of thousands or millions".)
+- [15:54] Infinity Pencil account had two or three videos over 1 million views besides the 6.8 million corn video; the speaker thinks a good part of the sales came from the most recent one.
+- [17:47] Second pencil seller started July 17 with a lower price and probably charges shipping; "his marketing angle got him views but he did not execute" (little sales).
+
+### Fallstudien: TikTok-Accounts für Flaschenöffner analysieren (Course C) [L0656, undated]
+
+- [03:55] Timeline of the two Mist Buddy accounts: the 41k account began posting in June; the second account was created about three weeks after that account's viral video; both uploaded at identical times.
+- [19:38] Comment pattern for the Drink Hacks bottle opener: many "I'm Mexican" reply comments (video replies) rather than order comments; the speaker still treats comments such as "where do I buy", "I just bought two", order number questions as the buying signal.
+
+### Fallstudien viraler Dropshipping-Produkte: Von Fruity Bullet zu Eisrollern (Course C) [L0657, undated]
+
+- [28:49] If the face-ice-cube video had opened with "here's why you need this for your face" and then demonstrated, the speaker thinks its 200k views "could have easily converted into a thousand orders".
+- [07:36] The speakers say the majority of their own views, and a good amount of their sales, are not from the US.
+- [33:03] The hair remover/shaver product was hot for under one month, got a bad reputation fast (bad reviews on Amazon, partly from TikTok viewers), and the speakers say it is "not a move anymore".
+
 Part 11 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/12-creatives-and-ad-copy.md

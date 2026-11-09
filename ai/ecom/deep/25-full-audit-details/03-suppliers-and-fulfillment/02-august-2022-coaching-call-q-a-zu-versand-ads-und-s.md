@@ -88,4 +88,30 @@ Part 2 of 2 of "25. Full audit details: every course specific missing from chapt
 - [2:20:43 to 2:21:33] Amex Platinum: "no spending limit"; the most they ever charged on it was about $700,000 in one month, paid off at month end (Platinum about $500/year; Business Gold suggested to start).
 - [2:14:07] PayPal flag example: his first business did a few thousand dollars a month through PayPal ("5,000 on a good month"), then went to $100,000 in one month (about 2008) and PayPal flagged the account; consequence examples: a 7-day hold or 30 days. They only say "few thousand" holds.
 
+### February 2021 Coaching Call: Lieferantenmargen, Launch-Strategie und Google Ads Struktur (Course A) [L0671, 2021]
+
+- [1:25:33] Walmart: when asked about dropshipping through Walmart (someone had approached the student), Course A says "Not good. Don't, I don't recommend it."
+- [32:20] Product upload outsourcing: hire help supplier by supplier, because each supplier's file format makes it a different job even with the same product count; treat each supplier as an individual job whether you do it yourself or outsource.
+- [33:15] Course A does not use the "cost of sales" field in Shopify.
+- [1:22:06] Early sales are random: e.g. 5 sales one day and 0 for the next two days, or 30 sales one week and 15 the next with no change in traffic or ads; to smooth it, send promotions to the email list and add more traffic sources. (Debra: 3 sales in the first 2 days after launch, then none = "very good start".)
+- [43:16] Friends-and-family promo idea (Family Day in Canada): 10% off all orders, coupon code such as "FAF", "this weekend only".
+- [45:50] Competitor with the same address as a supplier: don't assume collusion; ask the supplier directly whether they run that e-commerce site (could be another branch).
+- [50:52] Numbers behind niches with domain names: look at website brokerages' listings of dropshipping stores for sale (niche, year established, monthly profit); Course A does not let students share store URLs.
+- [51:40] Buying your own product through your own store is fine with suppliers (they earn the same).
+- [2:24:05] Crypto is not accepted in Course A's stores: easy to add, but most crypto buyers just hold it.
+- [2:36:40] Shipping cost estimation: do not calculate for every product; calculate about 10 products, then reuse those estimates for ranges of product sizes/weights.
+- [2:37:30] Business credit card is optional (Course A started with a personal card); a business card shows both the business name and your name as cardholder.
+- [2:35:51] A wholesale store selling to retailers does not fit this model (retailers would simply get approved with the same suppliers).
+- [2:34:12] English as a second language is not a barrier: several members with ESL built stores with millions in sales and hundreds of thousands in profit per year; start sooner, English improves along the way. [2:35:02] An attorney is not needed (Course A only hired one to sell businesses).
+- [29:37] Blueprint version 9 with a new Course A theme in development, expected late Q1 or early Q2 2021, free updates for life (announced by email, newsletter, forum, Facebook group). Possibly outdated.
+- [56:42] / [2:12:53] Course A research keyword tool ([Course A research tools link], same login as members area): free, no search limit, countries US, UK, Australia, Canada, India, New Zealand, South Africa (later said UK only outside US, still in beta); Ubersuggest alternative = about 5 free searches per day. Possibly outdated.
+- [2:31:44] Done-for-you store content (2021): whole store built, theme optimized, custom logo, banners/images/colors, custom conversion code, 4 custom content pages, 20 demo products, Google Analytics and Webmaster Tools linked, sitemap created and submitted, Google Shopping feed set up, mobile responsive, apps installed. [1:42:05] Only discount: three-store pack. Possibly outdated.
+- [2:32:34] Course A retreat: 2 to 4 September 2021 in Lisbon; if travel restrictions force postponement, tickets transferable or refundable; open to any Course A member. Possibly outdated.
+- [32:20] / [2:20:32] Course A's monthly Q&A call: first Wednesday of the month, 2 pm Eastern (GoToWebinar, replays on fastbusinessforum.com); mentor program has one private call per week.
+- [1:22:57] Facebook: Course A has a call with his Facebook rep every two weeks; Apple tracking fight in Feb 2021 was not affecting his business at that time. Possibly outdated.
+
+### Geschäftsadresse statt Privatadresse verwenden (Course A) [L0696, 2020-26]
+
+- [01:25] Where to use the business address: supplier applications, the "contact us" page of the store (optional, but adds a level of trust), email footers, bank account settings, Shopify settings, Google Ads (module 5), Facebook business account (module 6). Contact-us page and email-footer use are covered separately; the full list with Shopify/Google/Facebook settings is not in one place. Otherwise fully covered (UPS Store folder-in-cabinet cheapest, suite number vs P.O. box, smallest size, forward or pick up, 28+ NYC locations, Post Scan Mail starter $15 per month).
+
 Part 2 of 2 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 03. Suppliers and Fulfillment". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/03-suppliers-and-fulfillment.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/03-suppliers-and-fulfillment/01-4-0-introduction-to-getting-suppliers.md

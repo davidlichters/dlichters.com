@@ -128,4 +128,38 @@ Main chapter: https://dlichters.com/ai/ecom/deep/06-conversion-optimization.md
 - [14:00 to 14:45] When many problem-aware visitors land on a product page that does not move them from problem aware to solution aware to product aware, there are two options: (1) segment your marketing so problem-aware traffic goes first to a more appropriate page, or (2) add content to the existing page so it walks them through those levels.
 - [03:19 to 06:27] Worked example: a beginner who wants to surf; problems: no surfboard, in cooler water no wetsuit; problem turns into a want ("I need a surfboard"); solution aware = surfboard; product aware = a six or seven foot mini mal beginner board; ninja aware = knows the exact product and only picks the retailer.
 
+### Ecomm Monthly Q&A April 2023 - Conversion, Branding, Produktsuche (Course C) [L0577, 2023]
+
+- [1:11:13-1:12:07] A branded box template is "a huge thing not enough people talk about"; the speaker says it would "kick out like 90% of your drop shipping competitors" just by doing this.
+- [1:12:07-1:13:02] Brand name with a trademark symbol (example "Shower Fresh™ purified water") is used only to make the store feel like a legit, cool brand, not a real registration.
+- [1:41:09] Teammate: they only use Google Ads for brands and rarely for drop shipping, unless the drop shipping store is first converted into a private label brand. (Only the "brands only / branded search intent" part is on the knowledge pages, not the "convert drop shipping store into private label first" condition.)
+
+### Ein Bild malen (Course B) [L0580, 2021-22]
+
+- [12:25-13:16] Infrared sauna example: the health angle is deliberately left out of the added picture paragraphs because the page must stay able to receive traffic (no health claims); buyers at the bottom of the funnel already know the health benefits, so the copy lets them draw that conclusion themselves instead of explaining health benefits.
+
+### Einführung ins Conversion-Optimierungs-Modul (Course B) [L0598, 2021-22]
+
+- [01:05-01:25] Module approach: break CRO myths (small tips/hacks are not the main game), focus on big-ticket items that move the needle; theory plus many action items; action item checklist is in the last video of the module; watch sequentially.
+- [01:38-02:01] Some items can be done immediately, others are ongoing processes over weeks/months; two coaching calls this month cover the module.
+
+### Frag deine Kunden nach Feedback (Course B) [L0682, 2021-22]
+
+- [09:53] Speaker recommends Drip for all e-commerce emails (post-purchase survey email and browse-abandonment survey email); Klaviyo "still a decent option"; he says he moved 100% from Klaviyo to Drip, especially for the Shopify integration. [12:32] Do not switch tools just for this if the existing tool (e.g. Klaviyo) is already well set up, since rebuilding flows is a lot of work.
+- [10:04] OptinMonster is the speaker's only pop-up tool (exit intent or not, inline forms, opt-ins), integrates with Shopify; a survey pop-up can also trigger after 30 seconds or a minute on site instead of exit intent.
+- [10:48] / [11:03] Chat survey tools: tawk.to ("Talk2" in transcript) as the great option for Shopify; Gorgias as the fuller, more integrated option but more expensive.
+- [11:36] Do not overthink the survey form: it does not need to be beautiful, Google Forms is fine.
+- [14:15] Always send a reminder email for a survey (and any action request such as reviews), even if some recipients already responded; reason given: average email open rate is only 30%.
+- [03:37] Method choice depends on volume: with ~100 customers a day just ask customers often; with no customers yet, find ways to reach visitors who are on the site but not buying. Do not run all six methods at once.
+- [05:21] / [06:12] Customer-service call: first solve the caller's problem, only then say "before you go, a couple of quick questions we ask everyone"; sample questions: did you notice anything not working on the site, which other sites did you look at while researching, did you like any better and why.
+- [09:17] Speaker says he often does not like to track browse abandonment, but it is an option for a feedback survey email.
+
+### Mentor C3 Q&A: Advertorials, Testbudgets und Facebook Account Sicherheit (Course C) [L0691, 2024]
+
+- [10:30] Mentor C3's mentorship has a cap of 15 students; he currently has 12 to 13, because he and the other mentors run their own businesses.
+- [11:24] Example student: about 3,000 in sales in two weeks, slightly unprofitable; student wanted to stop the product, Mentor C3 would have tested an improved product page instead (but only gives his opinion, never orders).
+- [03:02] Advertorials "work better for problem-solving products" (a toy example is doubtful: "five reasons why this toy"); he has used advertorials for almost a year and says he would test an advertorial straight away for a suitable product.
+- [15:49] Market note: Mentor C3 sells about 90% to the USA; Greek market is "USA six years ago" (easier pages) but low buying power and expensive shipping.
+- [14:04] Teacher's rule of thumb: set a goal for how many products you will test before quitting, e.g. 20 to 30, and "if you test only three products it is difficult to find a winner" (the three-products remark is not).
+
 Part 6 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/05-apps-and-tools.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/07-offers-pricing-and-bundles.md

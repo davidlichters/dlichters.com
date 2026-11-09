@@ -59,4 +59,20 @@ Main chapter: https://dlichters.com/ai/ecom/deep/05-apps-and-tools.md
 - [01:08] The recommendation for Codex over Claude Code is dated "as of 19 May" (2026), with the note that newer Claude models may later outweigh it. (2025-26)
 - [01:53] Folder structure and data hygiene for agent folders is a separate 30 to 40 minute topic that this lesson does not cover. (2025-26)
 
+### Essenzielle Shopify-Apps für E-Commerce-Automatisierung (Course C) [L0634, undated]
+
+- [17:03-21:19] Klaviyo abandoned-cart email ladder: email 1 (sent 15 min after cart, no code, copy about "100% satisfaction guarantee" and items selling out), email 2 (4 h later) offers $5 off with code save5, email 3 (20 h later, cloned from email 2) steps up to $10 off with code save10 (create the new code in Shopify Discounts).
+- [04:28] Teacher's stated personal experience for the pop-up: a fixed dollar discount ("Do you want five dollars off?") works better than a percentage because people cannot imagine what a percent is worth. Not stated as a rationale anywhere.
+
+### Essenzielle und optionale Shopify-Apps für Dropshipping (Course C) [L0635, undated]
+
+- [18:38] Looks review setup in this lesson: review-request email after 14 days (21 days if customers need longer to receive the product), review incentive discount "normally 10", beginner plan with 7-day free trial.
+
+### Google Sheets Automatisierung für Abandoned-Cart-Tracking (Course A) [L0737, 2020-26]
+
+- [00:53-01:32] Why log carts in a sheet: "what gets measured gets managed"; Shopify's default abandoned-checkouts view (Orders > Abandoned checkouts: checkout number, order date, placed by, email status, recovered or not) is "okay but not great" and is a section most owners know exists but rarely check.
+- [02:29] The owner who is not on the phone logs into the sheet once a day or once every few days to see exactly how many abandoned carts came in, when the team reached out, what happened, how many were recovered, where it slips, and what to improve.
+- [03:20] Use the sheet even when you are alone and have no phone person, "sooner than later": about two months later review the abandoned-cart close ratio; possible findings the teacher names: too slow to respond, calling without leaving voicemails, people saying prices are too high.
+- [01:32] Example sheet shows customer email, name, phone, date created, a "were they emailed" status, and column H as the notes column where sales/phone people record what happened per call (picked up, wrong number, bought).
+
 Part 5 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/04-store-build-and-shopify.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/06-conversion-optimization.md

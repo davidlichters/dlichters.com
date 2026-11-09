@@ -75,12 +75,12 @@ Already covered in 22-mindset-and-planning.md: the 10 questions (paraphrased), 9
 - [02:42] The teacher's intention when starting brands: build something massive and sell the business in the future "for six eight figures", not test random products to look at metrics.
 - [03:44] The inputs to create are: launching new creatives, improving operations, fulfilling orders and talking to customers. Customer service is "the most important thing" for progressing, because speaking to real buyers shows the bottleneck so you can solve it.
 
-### When Things Get Hard — What to Do Instead of Quitting (Lesson 020), wann-es-hart-wird-statt-zu-kuendigen-673a7.md
+### When Things Get Hard: What to Do Instead of Quitting (Lesson 020), wann-es-hart-wird-statt-zu-kuendigen-673a7.md
 
-- [00:28] "Week 3" is named "The moment most students quit. Not because the strategy stopped working — but because the discomfort got loud." The teacher gave up about four times when he started dropshipping.
-- [01:27] At week 3 "The algorithm is optimising in the background — touching it too early resets everything".
+- [00:28] "Week 3" is named "The moment most students quit. Not because the strategy stopped working, but because the discomfort got loud." The teacher gave up about four times when he started dropshipping.
+- [01:27] At week 3 "The algorithm is optimising in the background, touching it too early resets everything".
 - [03:48] Close the dashboard: "Stop refreshing your ad account every 20 minutes."
-- [04:16] Reframe table, quitters vs builders: "Day 1 was unprofitable — it's not working" vs "Day 1 is the pixel learning who buys"; "My product flopped - wrong product" vs "wrong angle, better research needed"; "I've been at this 3 weeks and I'm not profitable" vs "3 weeks of skill-building that compounds"; "Other people are succeeding faster than me" vs "Other people are running a different race"; "I don't have what it takes" vs "haven't yet done the thing that makes it work".
+- [04:16] Reframe table, quitters vs builders: "Day 1 was unprofitable, it's not working" vs "Day 1 is the pixel learning who buys"; "My product flopped - wrong product" vs "wrong angle, better research needed"; "I've been at this 3 weeks and I'm not profitable" vs "3 weeks of skill-building that compounds"; "Other people are succeeding faster than me" vs "Other people are running a different race"; "I don't have what it takes" vs "haven't yet done the thing that makes it work".
 - [04:49] Mindset is "essentially 80" percent of why you succeed or not (spoken). Takeaway: "The only people who don't make it are the ones who stop. Everyone who stays in, figures it out."
 
 ### Daily Form (die-taegliche-accountability-form-66fed.md)

@@ -78,10 +78,22 @@ Main chapter: https://dlichters.com/ai/ecom/deep/12-creatives-and-ad-copy.md
 
 - [20:17] Anchoring with pricing, different numbers from lesson 491: "this consultation call worth $1,000", "a PDF worth $50", "in total $20,000 in value", "but you're getting it today for $49.99".
 
-### Echte Gemeinschaft auf Social Media aufbauen (Course E) [L0576, 2025-26]
+### Farbtheorie und Typografie für ansprechende Designs (Course C) [L0659, undated]
 
-- [06:46-06:56] The teacher's named recurring formats: "Tips Tuesday", "Sunday Recap", "This or That Thursday", posted every Monday, Wednesday, Friday.
-- [00:00-00:23] Duolingo as the example of a brand with a community around its owl character.
-- [05:00] Sticker wording "drop a yellow heart if you've been here before".
+- [28:31] RGB/hex example: hex has two characters each for red, green and blue; the speaker's example colour in RGB is 102 red, 20 green, 65 blue (page builders such as Shopify page builders ask for the three RGB values).
+- [05:15] Red in Africa signals mourning (also mentioned: China prosperity, brides in Eastern cultures; only those two are in the notes).
+- [17:24] "Value" = how dark or light a colour is (hue → tint/tone/shade, value, chroma = purity of the hue).
+- [26:12] Light grays can replace whites and dark grays can replace blacks; gray can read as moody or depressing; gray takes on blue or red depending on the surrounding design.
+- [02:34] Orange is more friendly and inviting than red and is sometimes linked to health and vitality because of fruit; yellow in babies' items replaces pink/blue (soft yellow = calm, bright yellow = more happiness).
+- [09:50] Black also stands for rebellion, Halloween and the occult; black designs are "one of the hardest designs to do" but look very good when done right.
+- [14:10] Brown is hard to balance; can be dull; the darkest brown can replace black for backgrounds or type; a wood texture looks very good on a page.
+- [23:15] Font types listed: serif, sans serif, monospaced (every letter same width), script (handwritten look), display (designed typeface); "each font has a voice of its own". Example pairs also named: Oswald (liked), Allegreya Sans with Black Allegreya, Abril Fatface with Lato (Oswald not found in notes).
+- [23:47] Where to look up pairings: the Elementor blog list of best font combinations and Google Fonts; Dribbble and Behance for niche examples.
+
+### Für wen ist dieser Kurs? (Course B) [L0684, 2021-22]
+
+- [00:10] to [00:56] Course is for anyone who wants to improve sales copy quickly: e-commerce owners, their employees, freelancers and virtual assistants who write product descriptions and emails.
+- [00:38] / [02:12] Owner may pass the course login to team members (small team); additional logins are requested from the course team at [email address].
+- [00:56] Best copywriters cost too much early on; [01:24] teacher started his first e-commerce business with about $1,000 to his name and learned copy by practising and testing (motivation for the course).
 
 Part 12 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/11-tiktok-and-short-video.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/13-influencers-and-ugc.md

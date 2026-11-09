@@ -102,4 +102,58 @@ Part 3 of 3 of "25. Full audit details: every course specific missing from chapt
 - [1:19:12] Idea sourcing: Kickstarter for trending high-price products, then find other brands making them.
 - [26:26] Net 30 terms: never offer; use third-party financing (Accept Financing lesson, v8) so you are paid on day one.
 
+### Episode 7: Discord-Q&A zu Lieferanten, Google Ads und Tarif-Strategie (Course A) [L0626, 2025+]
+
+- [06:21] Supplier replies "can you let me know the terms": the terms they ask about are pricing (if MAP, what multiple of wholesale: "2X wholesale? 2.5?"), how shipping works (e.g. ship on their account and bill you) and the return policy / return window length; the supplier likely has no standard process for online retailers. Fix: copy the agreements you like from existing suppliers into a Word/Google doc and send it as PDF (only the PDF step is in the site, not the terms checklist).
+- [05:11] For electronics: defective/damaged goes back to the supplier for replacement, but customer-confusion tickets land on the retailer (no gap).
+- [01:33]-[03:16] 2025 retreat poll: Asia 23 votes, Europe 19, South/North-Central America behind; at least six months notice before tickets/travel; teacher lived almost five years in Thailand and Vietnam.
+- [00:54] Black Friday: teacher points to two earlier coaching calls (one Q4/Black Friday strategy presentation, one on creating promo images and email copy for BFCM, Christmas, New Year); site has the "create images/copy per event" rule, so covered.
+- [15:10] Module 5 lesson called "their weakness is your strength" (competitor comparison) is not named on the site.
+
+### Facebook Ad Library für Produktforschung (Course C) [L0638, 2023]
+
+- [1:05:35-1:08:14] TikTok agency companies (e-com media, East Coast Commerce, "ECC") do a full audit of the store (landing page and ads) before allowing it on their agency accounts and refuse policy-violating products; recommended when TikTok keeps taking down creatives uploaded from a suspended account.
+- [1:01:50-1:02:45] Gray-hat practice: buying 50 or 100 likes/comments (SMM panels) on a new ad to lower CPM; some Chinese dropshipping sites show about 6,000 likes on day one. Facebook's quality/engagement/conversion ranking drives CPM.
+
+### Fashion-Produkte mit AdSpy und AliExpress recherchieren (Course C) [L0661, undated]
+
+- [00:34] Host example: ecom wizard made 251,000 dollars dropshipping a handbag (motivation for fashion research).
+- [01:27] Speaker's shoe (his 4th or 5th tested shoe, found on AliExpress) made 60,000 dollars within 60 days, targeted on Facebook at women 40 to 45+.
+- [03:19] Africa-map necklace store: ads in US, UK and France; offer = buy one necklace in gold, get a second necklace of your choice free (most chose their home country); store made about 60,000 dollars within two months.
+- [04:14] Slippers tested in Australia made about 40,000 dollars within a month.
+- [16:19] A demographic of "mothers and grandmothers" did very well for the shoe product.
+- [18:47] Other suppliers to quote against CJ: Hyper Rescue, Best Dealer; ask CJ to go down on price or get a quote from each and pick the best.
+- [21:07] and [22:56] A customer who got a two-sentence reply minutes after emailing bought six bracelets five minutes later; Tidio is in the free course because Shopify Inbox did not exist then (the speaker would now recommend Shopify Inbox first; Tidio has more automations but is more complicated). Also [26:29]: the shoe sold at 34 dollars.
+
+### Februar 2019 Coaching Call: Fragen zu Nische, Lieferanten und Werbebudget (Course A) [L0663, 2019]
+
+- [03:30] and [04:22] A member with 75 items but "saturated" after four months: first redo the newest trainings in module 1 and 2 (competition at product level); if still stuck, email Course A the top three niches.
+- [49:42] and [1:02:10] Pre-launch website audit is a member benefit (sidebar of the members area, "Are you ready to launch your store?"); hoped turnaround within 24 hours, says 48 hours to be safe. Also [49:29]: sidebar "get your niche verified".
+- [57:47] Website design package purchasers are emailed automatically about 10 days after purchase to check readiness; they can email earlier to start sooner.
+- [1:06:42] Done-for-you stores come with demo products uploaded so the buyer can immediately contact suppliers and get approvals.
+- [1:08:38] Demo store pricing example: 99 dollars crossed out = MSRP (compare-at price), 84.99 = MAP shown as price; wholesale is never shown on the site (tracked only in the Course A Shopify app back end).
+
+### Februar 2022 Q&A Coaching Call, Preise, Lieferanten und Werbebudgets (Course A) [L0665, 2022]
+
+- [09:12] Big-box competition example: chandeliers are sold in big-box stores but those carry maybe 5 to 10 brands while there are about 400 chandelier brands; so an online-only niche with many brands is fine.
+- [1:28:30] The Charlotte theme has an authenticator because the previous theme leaked onto black-hat sites (people contacted them after about six months); you enter your Course A member email on first use; no analytics or customer data is collected (developers to confirm the exact list).
+- [1:39:58] Portugal supplier example: no MAP, tiered margin 20% to start, 25% over 10K, max 35% over 20K, no US distribution until 2023 = bronze supplier; margin too thin after ads, merchant fees, shipping; keep in touch and re-check after they open a US center.
+- [2:11:19] and [2:12:12] 13 suppliers all "enforce" MAP but nobody follows it, seller broke MAP then shipping costs made him uncompetitive: contact suppliers bluntly (everyone violates, reported six months ago, not profitable to advertise, please act), and keep adding new suppliers rather than fighting the price game.
+- [21:28] Banning Surveillance Advertising Act (introduced 2022): Course A had not heard of it, nothing had changed yet, will watch the news.
+- [1:12:16] WhatsApp chat instead of Tidio can make sense in countries like Chile where WhatsApp is the main app; not big in the US, so not recommended there.
+- [2:27:46] Amazon Pay deactivated the merchant account (asked for certified articles of incorporation): remove the Amazon Pay button for now so shoppers do not see a dead button, keep following up in the background.
+- [2:26:54] Daily DMARC report emails: find who sends them and opt out; Course A no longer sees them.
+- [1:01:25] The Course A keyword tool (beta) works for any keyword where Google has data; send the keyword and chosen location to support if it misbehaves.
+- [1:54:22] Products on page 1 of Google Shopping being sourced from China: "most likely not", but cannot be ruled out; Course A has never seen it.
+
+### Future Competitors Master List im Spreadsheet (Course A) [L0687, 2020-26]
+
+- [02:21] SimilarWeb Chrome extension is free and needs no account; the same data on similarweb.com requires making a free trial account (possibly outdated: later lessons say do not start a SimilarWeb trial, use the free searches).
+- [01:17] Reason for a duplicated, renamed worksheet per niche (e.g. "outdoor kitchens, future competitors"): cleaner than one sheet with every niche. (this reasoning is minor.)
+- [03:52] "Niches sold" use: if a future competitor is not niche-specific (Wayfair "everything home"), note related categories to find a later second-store niche.
+
+### Gewinnende Produkte finden: Kompletter Leitfaden (Course C) [L0706, 2020+]
+
+- [15:50] TikTok Creative Center top-ads filter: always choose "last 30 days" or "last 7 days" (not longer). Only a general "time window" is in the folders.
+
 Part 3 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 02. Niche and Product Research". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/02-niche-and-product-research.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/02-niche-and-product-research/02-april-2022-coaching-call-nischenwahl-google-shoppi.md

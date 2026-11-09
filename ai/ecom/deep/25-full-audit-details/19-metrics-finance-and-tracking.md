@@ -65,4 +65,43 @@ Main chapter: https://dlichters.com/ai/ecom/deep/19-metrics-finance-and-tracking
 - [18:29] The speaker contrasts the "negative cashflow pattern" of service businesses (pay the team first, get paid on 30-day terms) with the dropshipping "positive cashflow pattern": order, charge card, payout, then order from the supplier, who is usually paid at shipment, often on a credit card with 30 days before payoff.
 - [22:46] Anecdote with numbers: the speaker's first $25,000 in the bank was $10,000 a week later (cash-wave lesson: keep a level head).
 
+### Einführung ins Kennen deiner Zahlen (Course B) [L0599, 2021-22]
+
+- [01:11] "You cannot scale your business without knowing your numbers." Numbers tell what works and what does not; the main purpose of bookkeeping is NOT taxes, audit proof or spending records.
+- [04:21-05:16] Case: record year 2017, sharp decline from January 2018, panic by May, in about Aug/Sep coaching call John advised "sell your store" (if heading to zero, get something for it). Listing on a brokerage required all four years of financials.
+- [05:16-06:44] Isaac had used accountants for years but never understood their reports and did not trust them; self-educated deep dive showed revenue was declining but profit was higher on less revenue, so the feeling of failing was untrue.
+- [08:26] Good numbers are required to sell a business; nobody buys without them. Truth gives stress relief, confidence, stability. Side note: store "took off like a rocket" the month it was listed.
+- [09:24-10:17] Even if you are doing worse than you think you must know, so you can change something; owners typically find out during or after an emergency (cannot cover an expense, barely breaking even).
+- [10:17] Meaning of bookkeeping: truth, confidence, stability, understanding cause and effect of changes, stress relief. Treat the business as a business, not a hobby.
+- [02:07-03:41] Background (also partly in full-audit): architect before; high-ticket dropshipping since 2014; Super RC Shop failed; Aria Chairs (salon furniture) sold 2019; podcast Next Level E-commerce (John's story in episode 4); [firm name] offers bookkeeping (partner Jason), coaching for teams/systems and occasional virtual summits.
+
+### Es wird Zeit zu skalieren, Probleme mit Finanzwissen lösen (Course B) [L0632, 2021-22]
+
+- [10:56] The teacher's stated mission is "2x1k": double the profits of 1,000 e-commerce businesses (the module starts by teaching financial literacy as the first step). Not found anywhere.
+- [01:02-01:59] A DIY bookkeeping course (set up accounting software, import bank transactions, classify them) is being built as a paid course; Course B members get it free (in beta at recording time).
+
+### Februar 2020 Coaching Call: Gewinnoptimierung, Lieferanten und Nischenverifikation (Course A) [L0664, 2020]
+
+- [52:52] Supplier also sells on Amazon about 30 dollars below its MAP: ask the supplier whether that is the new price (then match it); if it says "that is how we do business", omit that supplier's products from the Google feed so no ad spend goes to them.
+- [1:02:21] Hiring a coach: no fixed amount of ad data; "a couple of weeks of traffic is more than enough" for ad advice, or coach before ads are even on.
+- [20:00] Supplier rejections (15+ vendors, no luck): Course A asks for what exactly the suppliers say so he can give rebuttals.
+- [58:14] and [1:01:30] Financing lesson was lesson 5.9 "Accept Financing" in module 5 (possibly outdated: numbering changed); PayPal Credit offered for years but no measurable percentage uplift can be given.
+- [15:32] Demo store happypausebydsl.com ran the newest theme version in 2020 (possibly outdated).
+- [49:26] Social media book tip from a member: Gary Vaynerchuk's "Crush It" (Course A read it around 2008 to 2010); Course A's own pick is Building a StoryBrand.
+
+### Finanzübersicht für Dropshipping und Facebook-Ads Q&A (Course C) [L0678, 2023]
+
+- [01:15]-[04:01] Worked example in the finance sheet: orders valued at 800, 250 USD spent fulfilling them (platform name in description); payout of 237 USD on 3 June entered as "Shopify Payments payout"; planned test budget 500 USD, an extra 100 USD Facebook spend shows as 100 above plan; month result in the example = profit 437. Sheet is shared in the Discord resources section.
+- [09:57] The 18 USD CPM case used one ad set with every ePacket country (versus US, Canada, Australia, New Zealand, Sweden, Netherlands at 50 to 80 USD).
+- [26:37] Niche finding (answer to "how to find a winning niche"): ask your mother, sisters, wife whether they would buy; the speaker settled on fashion and jewelry for women after several years and never found a product that men bought for him; a "winning niche" video was promised.
+- [12:42] Sourcing via VA: pay a virtual assistant to contact CJ about a product found on a competitor site (the speaker offers contact of his VA).
+- [33:15] Peakstar features requested by students (saturation inspector, AI telling which country a product sells in): implementation takes time, the Facebook feature took about three to four weeks; send feedback to the boardroom/Q&A at month end.
+
+### Fundament für rentable bezahlte Werbung (Course B) [L0686, 2021-22]
+
+- [01:14] Two diagnostic questions before running ads: (1) what is your maximum target cost per sale (break-even), (2) what is your ideal target cost per sale; teacher says many e-commerce owners cannot answer quickly; answers needed per product or at least per product group to know when to scale up or pull back.
+- [03:01] Example for the ideal cost per sale: aim for "20 percent profit in your pocket" instead of break-even, since not every sale can be break-even.
+- [10:30] / [10:52] Conversion rate and affordable bid are linked: to bid more at the same profit per sale the conversion rate must rise; before raising bids check profitability at the current conversion rate; "the assumption that just getting more traffic is going to convert better is really dangerous and rarely happens".
+- [11:30] Use the results to compare with current bids/spend: you may find you are not aggressive enough (room to bid more) or need to revise.
+
 Part 19 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/18-legal-tax-banking-and-payments.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/20-scaling-team-and-processes.md

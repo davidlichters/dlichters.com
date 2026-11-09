@@ -1,7 +1,7 @@
 <!-- part of ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md -->
-Part 1 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md
+Part 1 of 4 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md
 
-## 10. Google Ads and Shopping (page 1 of 3)
+## 10. Google Ads and Shopping (page 1 of 4)
 
 ### 1.1 Why Use Google Ads (Dokument) (Course A) [L0013, undated]
 
@@ -115,4 +115,4 @@ Part 1 of 3 of "25. Full audit details: every course specific missing from chapt
 - [1:15:13-1:16:09] The Course A app is not in the Shopify App Store; install it from [Course A app link], activation is verified by your email address. [2019]
 - Course map referenced in the call: Alpha/Beta setup is lesson 2.4 of the Google Ads for e-commerce bonus course (Members area > Bonuses > Bonus training); "How much competition is too much" is lesson 2.8; Keywords Everywhere is recommended in module 2.2; resellers license and US sales tax are in "Business fundamentals", week zero of the Blueprint; traffic is module 6. [28:21-29:18, 50:32, 56:12, 44:34, 1:15:13, 2019]
 
-Part 1 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md
+Part 1 of 4 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md

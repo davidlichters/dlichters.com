@@ -19,4 +19,9 @@ Main chapter: https://dlichters.com/ai/ecom/deep/17-customer-service-returns-and
 - [1:11:39] Supplier without MAP policy: search the supplier's products in Google Shopping; if sellers visibly make only about 10% margin, do not sell them; if sellers are extremely profitable, sell them (and exclude them from your price-match policy).
 - [27:39 to 28:31] Owners of brick-and-mortar retail: no complications joining the model; one Hawaii-retreat member's physical store gave connections to brands that refuse online-only retailers, so he could sell for brands most online-only stores cannot; when calling suppliers, say you call from the named store at its location to secure even more suppliers; if the store's niche is outside the sweet spot, find related products that fit better.
 
+### Gorgias Automate: Kompletter Überblick zur Kundenservice-Automatisierung (Course E) [L0752, 2025-26]
+
+- [23:21] Return policy quick-response flow in the example: 52 interactions automated, 7 not; the 7 should be inspected for further automation.
+- [06:26] Brand-new brand had 4 of 6 quick-response slots built; use all six with the most frequent questions.
+
 Part 17 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/16-retargeting.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/18-legal-tax-banking-and-payments.md

@@ -34,7 +34,7 @@ Part 3 of 5 of "24. Course D 2026: every missing specific, by topic". Map of all
 - [12:47] Prompts must make sense, so don't prompt blindly. If you are unsure, ask Claude to write the prompt.
 - [13:58] [14:38] Run a test of the first five pages first, then raise the batch up to 50 to speed things up. Frames sometimes error (example: frame 3). Map the failed frame back to its original file, regenerate it, and check the download folder for missing pages before stitching.
 
-#### Batch Frame Generator ("Nano Banana — Batch Image Converter · Gemini Image · A4"), settings in the tool file
+#### Batch Frame Generator ("Nano Banana: Batch Image Converter · Gemini Image · A4"), settings in the tool file
 
 - Page format options: A4 portrait 210×297 mm (default), A4 landscape 297×210 mm, 3:4, 1:1, 4:3, 9:16, 16:9.
 - The default format prompt includes a page-number rule. If the source image shows a page number ("3", "Page 3", "3/12", "- 3 -"), the output must show that exact number in the reference's page-number position and style. The tool never renumbers, increments or copies a number from a reference image. If the source shows no page number, the output shows none.

@@ -40,4 +40,34 @@ Main chapter: https://dlichters.com/ai/ecom/deep/18-legal-tax-banking-and-paymen
 
 - [02:00-02:15] Example for inspiration: check large brands in your niche; REI's policy section covers purchase status, payment information, sales tax, shipping rates and return policy (a checklist of topics for the legal/help pages).
 
+### Mentor C3's E-Commerce Coaching Q&A: Dropshipping, Ads & Skalierung (Course C) [L0693, 2024]
+
+- [00:00] LLC registered agents: "Buffalo" agent about 150 (USD) versus "James Baker" about 350 for LLC set-up; the difference is smaller than expected. Also: confirm tax treatment with the home-country CPA/tax advisor (Denmark example) and make sure they understand dropshipping.
+- [22:12] CBO start budget: $50 per day for a new product with just-okay ROAS, "even a $100 CBO" if the interest has a crazy/very high ROAS.
+- [25:49] Mentor C3's own rule: after launching a CBO, wait four to five days; if profitable at day five raise by 20 percent, then check every four days.
+- [13:20] Pricing check: if a product sells for $20 on Amazon you can probably sell for about double; check how competitors price on Facebook (example competitor showed 40 crossed out to 20, "definitely not worth 20"); for real COGS open a CJ sourcing request instead of AliExpress estimates.
+- [16:12] Market result of a student: after one week of testing the big five, US and Australia gave the most sales, Scandinavian countries also gave sales; reporting for five days only reached break-even while some days profit, some loss. A colleague (Usman) only scales an interest after five days in a row of consistent profitable sales; the student's old rule was three days at 10 EUR then duplicate to 50 EUR (not working).
+- [36:15] Creative testing: if a creative wins, make something very similar, e.g. keep a video and only change the hook; new creatives are tested in a new campaign with the best interests inside; a colleague's videos on testing creatives are in Dropbox under "Facebook ads".
+- [37:46] Product research method: Facebook Ad Library method is the most popular; also scroll Facebook/Instagram feed, click an ad, add to cart and go to checkout so Facebook shows more of that type of ad; then check the competitor's Meta page for how long the ad has been running.
+- [48:36] "The most difficult part in e-commerce is making the first winner, making your first 50 to 100 thousand dollars"; after that you have options and money to reinvest; best skill is product research.
+- [51:13] Another mentee (Mo) personally sells products between 25 and 45 euros; teacher prefers products over $30, "30 to 60", has no experience over $80 or $100; high ticket in US from about $90 to $100.
+- [31:07] Post-purchase upsell: a low take rate of about 3 per 100 buyers, plus Ezra Firestone's observation (via One Click Upsell) that the best-performing first upsell is the same product at a great discount; one-click upsell app is probably pricier than Reconvert (Mentor C3 considered switching to Reconvert).
+- [34:45] Mentor C3 does not show "you may also like" below the main product, to keep focus on one product, and says established brands use it.
+- [44:05] Jewelry: product from China for five dollars can be sold at 10x if perceived value is there; also "shoes sell great on Facebook for years" and one-size items such as winter beanies avoid sizing issues (beanies covered, shoes not).
+- [03:45] Using a competitor/AliExpress video and UGC for the test phase: copyright-strike risk, keep it to a couple of weeks at 10 dollars per ad set per day, 50 total. Extra: before using AliExpress/Alibaba supplier content ask the supplier by message whether the content is theirs, because suppliers also copy others' content.
+
+### Geschäftsstruktur, Banking und Steuern außerhalb der USA (Course B) [L0702, 2021-22]
+
+- [10:58] A business bank account can be opened online for most banks in about 10 minutes, cards are then sent.
+- [15:52] Basic bookkeeping is all that is needed in the beginning; the course points to Instructor B1's bookkeeping videos (track profit per sale and where costs are).
+- [16:41] Do not wait until you have lots of sales to set up accounting; it is a mess and harder to grow if you do not know where money comes from and goes.
+- [07:57 to 08:52] Easy to move from sole trader to company later; the speaker started as sole trader, formed companies later (in and outside Australia) when it was necessary and affordable, because he did not want to pay $2,000 at the start and had little cash. Not found as one fact.
+
+### Google Compliance Checklist mit AI (Course A) [L0724, 2020-26]
+
+- [06:20-06:35] The teacher uses Google Gemini, not ChatGPT, to review the store's policy pages, because Google's own AI is "probably best trained on Google's policies"; he uses ChatGPT for most other things.
+- [06:47-13:51, 14:41] Workflow: run EVERY policy page through Gemini one at a time (returns/exchanges first, then shipping, privacy, terms of service; start at the top of the footer Quick Links menu). Prompt: "I own <domain> and I'm about to submit the site to Google Merchant Center and Google Ads for approval ... let me know if anything is currently not compliant ... reply with what that is and what your recommended updates are." Gemini first crawls the live site, so paste the new policy text into the chat ("I wrote a new draft of our refund policy, please check this"), apply its changes, then ask it to check again. Typically after applying everything it says the policy is "100% compliant".
+- [11:38] Gemini advice on the refund page: "We do not charge any restocking fees" is a big plus for Google Merchant Center ("Google loves seeing zero dollar restocking fees"); make it prominent and add a quick "Returns and Refunds at a Glance" table at the very top because Google's crawlers pull shipping/return data from tables.
+- [12:57] Gemini advice on the shipping policy: it must state the shipping cost explicitly (Google Shopping policy: the user must know exactly what they pay for shipping before checkout). The store header says free shipping, so the shipping policy must mirror that and say "free shipping".
+
 Part 18 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/17-customer-service-returns-and-chargebacks.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/19-metrics-finance-and-tracking.md

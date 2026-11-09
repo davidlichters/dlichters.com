@@ -46,10 +46,9 @@ Main chapter: https://dlichters.com/ai/ecom/deep/14-seo-and-content.md
 
 - [11:51] Boilerplate content is present "on about 50% of the sites that I look at" (teacher's frequency estimate).
 
-### E-Commerce Skyscraper: Link Building für Online-Shops (Course B) [L0565, 2021-22]
+### Einführung in Suchmaschinenoptimierung (Course A) [L0594, 2020-26]
 
-- [00:41] Google confirmed top three ranking factors: produce content, build links, optimize for RankBrain.
-- [06:55] Cost per link is the lowest tier of any link-building activity; [08:51] no high skill needed, ordinary VA can do it; [09:35] 100% white hat, no paid links, no penalty risk.
-- [10:22] Outreach builds relationships: co-promotions, guest posts, features.
+- [02:27-03:51, 2020-26] Do NOT target broad keywords such as the niche name (example "stand up paddle boards"): ranking for them takes a lot of time and investment (companies needed) and, as done in the past, brings a lot of traffic but not many sales. Broad terms = curious people; long-tail terms = people with buying intent and also much easier to rank.
+- [00:45-01:45, 2020-26] SEO means appearing organically (not paid) in Google AND Bing; everything below the "Sponsored" label is organic, product listing ads and search text ads at top/bottom are paid and not the topic. Specific Bing mention not found in the SEO files.
 
 Part 14 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/13-influencers-and-ugc.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/15-email-and-sms.md

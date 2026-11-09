@@ -48,4 +48,20 @@ Main chapter: https://dlichters.com/ai/ecom/deep/22-mindset-and-planning.md
 - [05:25] Beginners go straight into Build Phase and ignore Grow Phase until launched; do not skip around, follow videos in order. Expect at least about a month in Build Phase.
 - [09:54] Onboarding call with the team is included in membership; book it via the email link.
 
+### Fokus bewahren: Rocks, To-do-Listen und Tagesplanung (Course B) [L0679, 2021-22]
+
+- [06:50] Weekly list planning slot: 15 minutes, usually Friday or Saturday, as a recurring calendar entry with a phone notification so nobody can book it.
+- [07:39] Daily list: written at the end of the workday, after first reviewing how that day's list went; put it where you will see it (paper or post-it at the computer).
+- [10:28] Evernote (checklists with history) was used in the past as an alternative to paper.
+- [17:47] At the end of the day, review the notes written on the back of the daily list: add important ones to tomorrow's list, keep a record, or turn them into a future 90-day rock.
+- [14:24] Nothing non-urgent (email, social media) until the first daily item is done; number 1 is the highest-value activity and gets the most time.
+
+### Geschäftssicherheit finden: Deine persönliche Währung entdecken (Course A) [L0701, 2015]
+
+- [07:00 to 08:38] Browning's list of low-confidence symptoms: marketing "double takes", plans that are only good on paper, bad partnerships, shiny button syndrome, poor customer service, doing it only for the money, an ineffective work week. Shiny button, 50% plan failure and the six to 12 month rule are present in the folders; the full symptom list as one checklist is not.
+- [41:55 to 47:21] Case study Dave (t-shirts for hobbies for older women, 2015 retreat): started on Teespring with about 50 sales per product, then used personality/proficiency/values work. Whole business grew "probably like a three X" from working together. A VA manages his Facebook group (he had not looked at it for two weeks), a full-time designer makes the designs, his assistant manages ad budgets, he only built the framework. Not in the folders.
+- [12:32 to 23:41] Bank of Self parable with numbers: balance 100 units, refilled at one minute past midnight daily and forever; buyers offer $1,000, $800 and $400 for one 100-unit note; umbrella waterproofing costs $500, so a service $250 cheaper is a business; the provider gives a discount for a lined-up group. Only the lessons from it (notice others' problems, market the symptoms) are in the folders, not the numbers.
+- [50:13 to 51:53] "Conference paradox" (two near-identical people leave the same conference, one says "I can", one says "won't work for me"); cause is two inner personas. Once aligned, rejection by a supplier no longer matters ("if this one doesn't work, there's another").
+- [00:52 to 01:37] Browning says he spent over $100,000 on doctors and that someone in a room typically has spent over $100,000 on information products without acting. Not in the folders.
+
 Part 21 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/20-scaling-team-and-processes.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/99-general.md

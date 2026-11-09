@@ -1,7 +1,7 @@
 <!-- part of ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md -->
-Part 2 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/01-1-1-why-use-google-ads.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/03-aufbau-einer-google-ads-suchanzeigen-kampagne.md
+Part 2 of 4 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/01-1-1-why-use-google-ads.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/03-aufbau-einer-google-ads-suchanzeigen-kampagne.md
 
-## 10. Google Ads and Shopping (page 2 of 3)
+## 10. Google Ads and Shopping (page 2 of 4)
 
 ### April 2023 Coaching Call: Google Shopping, Lieferanten und Pricing-Strategie (Course A) [L0251, 2023]
 
@@ -102,4 +102,4 @@ Part 2 of 3 of "25. Full audit details: every course specific missing from chapt
 - [11:38] The stock GA Source/Medium report (Acquisition) gives a high-level snapshot of all traffic sources. Medium separates paid (cpc) from organic for the same source (Google, Bing, Facebook).
 - [24:16] Revenue per user is "not particularly useful" in the custom report. The same custom-report method can also be filtered to google/organic to track organic traffic.
 
-Part 2 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/01-1-1-why-use-google-ads.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/03-aufbau-einer-google-ads-suchanzeigen-kampagne.md
+Part 2 of 4 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/01-1-1-why-use-google-ads.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/03-aufbau-einer-google-ads-suchanzeigen-kampagne.md

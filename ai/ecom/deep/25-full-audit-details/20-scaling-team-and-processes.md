@@ -80,4 +80,8 @@ Main chapter: https://dlichters.com/ai/ecom/deep/20-scaling-team-and-processes.m
 - [01:32] Teacher's exact trigger for mixing other Google ad types: stores reaching $50,000 to $100,000 per month that "can't scale their Google Ads past 10 extra on ad spend anymore" (transcript wording; presumably a 10x return/spend ceiling, unclear).
 - [02:27] Readiness check: go to XA only when everything in Course A is maxed out to full potential and results are good, but you want extra levers.
 
+### Einführung in Outsourcing und Automation (Modul 7.0) (Course A) [L0592, 2020-26]
+
+- [00:50-01:47, 2020-26] Day-to-day task examples named by the teacher for outsourcing/automation: visitor inquiries (phone, live chat, email before purchase), customer inquiries after purchase (phone, live chat, email), and order processing (order placed, must be shipped).
+
 Part 20 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/19-metrics-finance-and-tracking.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/22-mindset-and-planning.md

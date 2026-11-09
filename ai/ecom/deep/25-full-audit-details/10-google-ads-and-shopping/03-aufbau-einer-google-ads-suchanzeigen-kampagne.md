@@ -1,7 +1,7 @@
 <!-- part of ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md -->
-Part 3 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md
+Part 3 of 4 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/04-google-shopping-kampagnen-live-optimierung.md
 
-## 10. Google Ads and Shopping (page 3 of 3)
+## 10. Google Ads and Shopping (page 3 of 4)
 
 ### Aufbau einer Google Ads Suchanzeigen-Kampagne (Course B) [L0262, 2021-22]
 
@@ -94,10 +94,79 @@ Part 3 of 3 of "25. Full audit details: every course specific missing from chapt
 
 - [04:35] The first version of the AdWords course did not include dynamic retargeting because it needed too much campaign/coding know-how; now it takes "a couple minutes" with a free app. (Possibly outdated.)
 
-### Einführung in die Traffic-Strategie mit Google (Course A) [L0586, 2020-26]
+### Einführung in Traffic-Quellen und deren Bedeutung (Course A) [L0597, 2020-26]
 
-- [00:20] Course A: focus only on Google traffic; no reason to expand to other traffic sources until the store is extremely profitable and Google ads are maxed out ("squeeze every last drop out of Google").
-- [01:13] Four traffic methods in module 6: (1) Google organic search (free, first-page text links; ranks fast because we sell specific suppliers/brands/SKU numbers), (2) Google product listings (free, Google Shopping section), (3) Google Shopping ads (paid; product image, store name, price; top of Shopping section; start with small budgets, then scale), (4) Google remarketing ads.
-- [03:21] Remarketing ads show visitors who left without buying the exact products they viewed and link back to the exact product page.
+- [01:47] "Good traffic" = people searching for the brand names, product names and SKU numbers listed in the store; the more specific the search, the more likely the buy (vs. just a target demographic).
+- [03:04] Track where revenue comes from with Google Analytics synced to Shopify; this is how the teacher found which traffic sources are consistently profitable and which were a waste of time.
+- [03:33-04:23] Module 6 traffic sources taught: Google Ads, Bing Ads, Facebook Ads, SEO (free traffic from Google/Bing), influencers (mostly advertising on niche authority blogs/sites, not paying random people), referral marketing (Hourglass Funnel), remarketing (bring back previous visitors), email marketing (broadcast list in Klaviyo with promotions). Also [00:16] Module 5 (conversion optimization) must be finished first, and [05:27] revisit the module repeatedly.
 
-Part 3 of 3 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md
+### Februar 2024 Q&A Coaching Call (Course A) [L0666, 2024]
+
+- [1:02:34] and [1:08:55] Private coaching package: four 30-minute calls over one month, no commitment, about 997 dollars per month (check the current link); one credit = 30 minutes, you pick the coach and a calendar slot in the members area; calls run in private Discord channels (possibly outdated pricing).
+
+### Google Ads Ad Extensions für bessere CTR und Qualitätsbewertung (Course A) [L0712, 2020-26]
+
+- [05:42 to 06:12] Merchant Center promotions setup: the Promotions entry appears in the left column only after products are synced and ads are serving (not on a new account); give it an ID name, choose the country, enter the promo with a redemption code, apply to specific products or all products. Only a general description of Merchant Center promotions (coupon code, promo tab) is in the folders.
+- [04:01] Callout extensions named "the third most important extension for e-commerce stores" after product showcase and site links; callouts appear in white under the ad in addition to site links.
+
+### Google Ads Konto erstellen und mit Google Tools verknüpfen (Course A) [L0718, 2020-26]
+
+- [03:43] In the Google Ads sign-up wizard, answer "No" to "do you want personalized guidance from a Google Ads account strategist by phone or messaging app". Teacher: after 20 years of Google Ads, their advice is terrible; they are salespeople who push automated/AI features that blow through the budget. (Only the general "Google reps push higher spend" is in the files, not this concrete wizard step.)
+
+### Google Ads Standorteinstellungen und Kampagnenoptimierung (Course B) [L0719, 2021-22]
+
+- [1:01:41] Smart Google audiences: teacher does not use them; the other coach (Ben) has a specific use and will add program content on it; ask him how to use it. Low-value, likely only a pointer.
+
+### Google Merchant Center und Product Feed (Course B) [L0731, 2021-22]
+
+- [07:29] Example order cutoff time in the shipping service: 5 PM in the business's time zone (teacher uses GMT+10 Brisbane); he also says an order cutoff time is not required.
+- [25:13] In the Feed for Google Shopping app's tracking-tag step, enable only the top two options (Google dynamic remarketing and conversion tracking) and leave the other two off ("we don't need these two"); the app then creates one purchase conversion action.
+
+### Google-Kontosperrung: Gründe und Beschwerdeverfahren (Course B) [L0727, 2021-22]
+
+- [08:31] In the teacher's experience with high-ticket dropshipping sites, Google Ads suspensions are much rarer than Merchant Center suspensions; if something is suspended it is usually the Merchant Center.
+- [10:17-11:08] Payment-method suspension detail: a credit card registered to a business address in a country other than the country the business operates in and the account's time zone/country is flagged as potentially fraudulent and can suspend the account automatically; also a card flagged in a database Google can access, or one that bounced/had payment trouble on a Google account before. Advice: a new bank account and payment method just for this business.
+- [07:02-07:45] Prohibited Google Shopping categories named: adult-related products, guns, cars/vehicles, smoking-related implements; if you list such products the Merchant Center will most likely be suspended and "your chances of fixing that are actually very slim".
+- [25:29-26:27] After "Request review" on a wrongly disapproved product (tick the box that it complies with Shopping ads policies and the feed specification), a person manually reviews it; the teacher expects it to be re-approved within 24 hours.
+
+### Google Merchant Center: Kontoeinrichtung und Fehlerüberwachung (Course B) [L0730, 2021-22]
+
+- Same recording content as 8fcff (business information, phone verification by voice call with six-character code, branding specs, diagnostics, 4 of ~6,000 unapproved, yellow warnings do not suspend, request review within about 24 hours). The 24-hour manual-review expectation at [07:03] is listed under 8fcff above.
+
+### Google Shopping: Auktionen, Suchintention und Bewertung (Course B) [L0739, 2021-22]
+
+- [34:39] The speaker says the method he uses to avoid low-value traffic and win high-value traffic has been in use "for seven years now".
+
+### Google Shopping: Die Shopping-Funnel-Bitstrategie (Course B) [L0740, 2021-22]
+
+- [00:26] Speaker credential: has run ads for over 50 high-ticket dropshipping stores and spent over $10 million in Google Ads spend.
+- [01:46] Smart shopping campaigns and other "trendy" Google automation "99% of the time" do not work for high-ticket products; they do work for other physical products.
+- [02:12-03:18] Origin of search query level bidding: uncovered and popularized around 2013 to 2014 by a Dutch guy and his agency, presented at a big European conference (he thinks Ad World or PPC Hero); that presentation has circulated since; big agencies use it to manage Google Shopping; the speaker also ran an agency and hired agencies, saw the same method, and says an exact implementation means "you wouldn't be able to pay somebody to do a better job".
+- [05:04] Speaker has done it "seven years, day in day out" at the time of recording (so it feels simple to him); some students take to it "like fish to water", others struggle with the concept, not the clicking: watch the videos several times.
+
+### Google Shopping: Funktionsweise und Search Intent verstehen (Course B) [L0741, 2021-22]
+
+- [34:40] The method the speaker has used "for seven years now" (same statement as in fd6b3).
+
+### Google Shopping Funnel: Drei-Kampagnen Setup (Course B) [L0742, 2021-22]
+
+- [19:51-20:42] Interface changes: Google fully redesigned the Ads interface about three years before the recording; the speaker cannot update the course for every change; the shopping-funnel strategy "has worked for over seven years through multiple changes to the ad account interface", and Google Shopping ads "have changed very little in the last decade", only how they are set up looks different.
+- [38:21-39:15] Why per-product bids: in one brand a $1,000 product and a $5,000 product at the same 25% margin leave very different money; if you spend 50% of gross profit on acquiring the sale, you can bid significantly higher on the $5,000 product than on the $1,000 one (the general "up to 50% of gross profit" rule exists, this worked example does not).
+- [21:36] Speaker says Google earns most of its revenue/profit from Google Ads (transcript garbled: "90 percent of its revenue, nearly one billion dollars per year") and therefore its automation is partly built to make you spend more [possibly unclear in the original; the "spend more" part is covered].
+
+### Google Shopping Kampagnen erstellen: Alpha und Beta Setup (Course A) [L0743, 2026+]
+
+- [12:11-13:05] Starting budget guidance: $5 per day is a good start and can go up; for a new store and new Ads account the teacher's own maximum is $30 a day, even with a big budget, because starting small gives Google time to learn instead of burning money fast; for most people he recommends $5 to $10 a day, and that is the total shared between alpha and beta (demo uses $10).
+- [13:34] Bid strategy kept at the default "bid equally for new and existing customers": previous buyers who search again for another product should still be bid on equally so they can buy again.
+- [14:26] Locations/targeting: "local products" stays off because there is no retail location; the campaign has no EU political ads (declaration); "no networks targeted" in the settings does not mean the ads show nowhere, only on google.com.
+
+### Google Shopping Kampagnen laufend verwalten (Course B) [L0744, 2021-22]
+
+- [06:15] Starting bids of the three-campaign funnel: $0.30 in the low-bid campaign, $0.60 in the medium-bid campaign, $1.20 in the high-bid campaign (only $0.30 as a live value and $1.20 were found; the $0.60 medium start bid was not).
+- [37:52] In the high-value (product-specific) campaign healthy average CPCs were about 75 cents, 80 cents, 87 cents overall and $1.16 for one group; seeing generic terms there means "limited by budget" or negatives not carried over.
+- [42:17] Search impression share example on high-value brand terms: 94%, 88%, 80% = fine; 26% = bids too low versus competitors.
+- [26:02] Reason for always using the shared list: a negative set only in the high-priority campaign lets the term leak into the medium or low-priority campaign at a higher bid, so you pay more per click with no better conversion chance ("double hit").
+- [35:41] Example of a negative decision: a bare generic term ("sauna") alone was added as negative to the master list because it attracts local-gym, repair, build-it-for-me and outdoor-sauna searches; only that single word is blocked, not longer phrases containing it.
+- [43:30] Benchmark max CPC is not a point of truth: it is based on similar auctions and similar products, may include brands you do not sell, and is not shown when impressions or competing bids are too few.
+
+Part 3 of 4 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 10. Google Ads and Shopping". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/02-april-2023-coaching-call-google-shopping-lieferant.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/10-google-ads-and-shopping/04-google-shopping-kampagnen-live-optimierung.md

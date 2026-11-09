@@ -60,47 +60,72 @@ Main chapter: https://dlichters.com/ai/ecom/deep/15-email-and-sms.md
   - New Year: "Out with the Old, In with the Deals - Shop Now!", "Resolution: Save More - Shop Our New Year Sale!", "Ring in the Savings - New Year Sale Inside!", "Start the Year Off Right with Big Savings!", "Cheers to a New Year - Exclusive Deals Just for You!", "Celebrate 20XX with Incredible New Year Offers!", "New Year, New Deals! Shop Now and Save 🎉"
   - Pattern: urgency by countdown hours (24h, 6h, 4h), "EXTENDED" follow-ups, emoji per event, [X%] and [NAME] personalization slots.
 
-### E-Mail-Adresse mit Google Workspace einrichten (Course B) [L0566, 2021-22]
-
-- [03:26] Workspace about $12/month, 14-day trial; [04:20] country cannot be changed after account creation; [06:11] prefixes support@/sales@/hello@/info@; [10:10] GoDaddy auto-activation of Gmail, smaller registrars need other verification; [12:25] "problem updating settings in GoDaddy" is common, just click Sign in to activate again, else switch verification method; [13:51] billing can be added now or after trial, no charge during trial.
-
 ### E-Mail-Content für verlassene Warenkörbe (Course E) [L0567, 2025-26]
 
-- [01:46]/[05:44] ChatGPT prompt: copywriter in style of Gary Bencivenga, 11-point email format (USP headline, desire sub-headline, "you left this behind", product image, CTA "Complete Your Order"/"Return to Cart", urgency line, intro on desire, top 3 objections without the word "objection", contact line, CTA, sign-off), "maximize burstiness and perplexity"; Step 3 subject line variations with preview text.
-- [03:05] "Priming prompt": client questionnaire (~1 hour), paste into GPT "learn my brand"; thread-based approach (edit first message to restart); re-prime if results drift.
-- [01:46] "Prompt Bible" abandoned-cart doc, regularly updated.
-- [05:56] best USP seen: "order today unpacked tomorrow" (1 hit). [08:23] test showed sub-headline not needed.
-- [09:13] trust icons: 4.9 Google, Trustpilot 4.9, 5-star product reviews; later split-test 1-3 reviews via Klaviyo reviews.
-- Flow example (Fyxo, AU): trigger Checkout Started, 50% split, wait 20 min, E1 desire/objection, E2 pain point (9.5% click [10:53]), E3 risk mitigation/social proof (1500+ five-star reviews, 100% money back, ~24 h left), wait 1 day, E4 15% offer sent 7:00a with code RIDESAFE15 and countdown timer (12 h shown, midnight expiry) plus best-seller product block as AOV booster [13:27], wait 13 hours, E5 "4 Hours Left: 15% Off". Stats: E4 open 56.7% click 11.1%; E5 open 60.7% click 9.0% (OCR). Free AU shipping over $150 banner.
-- [07:31] remove announcement/header when redundant; lots of spacing.
-
-### E-Mail-Copywriting: Click-Through statt Verkauf (Course B) [L0568, 2021-22]
-
-- [02:00] email must not do the selling; long copy unread; primary purpose = click through to website/blog; [00:25] transactional emails need no copywriting.
+- [01:46, flow screen] Revenue and rates of the first-email paths in the example Klaviyo flow (30 days, OCR, small store): Email #1A path 1 "RE: About your FYXO order": 83.8% open, 16.2% click, 8.1% placed order, A$463.80 revenue. Email #1B path 2 "Saddle sores? Say no more!": 82.4% open, 5.9% click, 2.9% placed order, A$43.50. Path 3 (#1A): 55.6% open, 14.8% click, 3.7% placed order, A$99.00. Path 4 (#1B): 79.3% open, 6.9% click, 0% placed order, A$0.00. Teacher says the flow is built so a wait of 20 min goes to path 1 and later ones follow; the flow also carries the 51%/49% sample split.
 
 ### E-Mail-Design-Grundlagen für E-Commerce (Course B) [L0569, 2021-22]
 
-- [07:51] short paragraphs 1-2 lines, minimum 18 pt font, up to 22 pt; [08:33] button with contrasting colour, one CTA per email; [10:01] logo at top as on site, white background behind text; [10:49] images sparingly, no evidence images perform better; [04:06] emoji/curiosity/compelling subject lines (examples 39% off, free shipping ends tomorrow); [07:03] avoid spam trigger words.
-
-### E-Mail-Kampagnen optimieren: Confidence Score und Split-Tests (Course E) [L0570, 2026]
-
-- [00:52] at least 1,000 per variant (50/50 test = 2,000 total), still not enough; [01:51] ~80% confidence at 1,000, 95%, 98% at more (1 hit); [02:14] abandoned checkout test ~6 months, 2,000 carts maybe a year; [03:14] only images, headlines, colours; [03:46] test in campaigns (e.g. 20K list, 10K per arm), later 50K per arm, then port winners to flows as A/B.
+- [03:24] Teacher recommends a separate inbox for promotional emails and signs up to many lists "as I recommend you doing in competitive research".
+- [00:00, 13:17] Teacher will critique the students' real emails on the week 6 (or week 7) coaching call.
 
 ### E-Mail-Listen aufbauen: Die 7 Methoden (Course B) [L0571, 2021-22]
 
-- [06:06] seven methods: content opt-ins, discount, quizzes, contests/giveaways, sales-event opt-ins, surveys; content opt-in on every content page, exit intent except product pages; own list+sequence per opt-in; [15:06] short lead magnets (checklist, how-to) beat ebooks; examples "50 page ultimate guide" vs "newsletter"; "12 proven ways...".
-- [22:41] discount only product pages/first purchase; popups after ~30 s (maybe 20); time-limited e.g. 15% for 48/36 h; drop out of list on purchase. [26:56] quiz tools Typeform, QZZR. [33:23] only ~20% reach page bottom. [34:16] one quick win per lead magnet. [31:32] sales-event opt-in 1-2 weeks before.
+- [29:30] Contests: teacher reports "hundreds of opt-ins just off very small contests"; prize can be sale items bought at about $100 even when the product costs $2,000.
+- [19:04] Resource-list example: a download "the 50 best Shopify apps to use on your Shopify store" with a short synopsis of why each app is great.
+- [26:10] Quiz screen example: "Which USA Wrestling World Team Member Are You?" with 6 questions and "Enter your email to see your results", plus the SKIP THIS STEP link.
+- [11:32] Screen: OptinMonster blog lead magnet "12 Proven Ways to Convert Abandoning Visitors into Subscribers" placed below the author box at the end of a blog post; OptinMonster claim "Join 700,000+ using OptinMonster".
 
 ### E-Mail-Marketing: 6 Schritte zu 30% mehr Shop-Umsatz (Course A) [L0572, 2014]
 
-- [00:26] email adds 10-30% revenue; [09:37] 7-8 of 10 abandon carts; [29:55] 10%+10%+10% = 33.3% compounding; [31:13] 72 emails over a year autoresponder; [31:55] from name = person's name; plain text/HTML+CSS no images; [26:45] transactional emails high open rate, ask reply. Checklist at mcmethod.com/bsl (steps 2-5 lost in garbled transcript).
+- [33:39 to 34:28] The free gift bundle at mcmethod.com/bsl contains: the six-step checklist as a Google Doc (you must sign up and are put on his list, can unsubscribe), a slide deck of the presentation, three interviews with e-commerce experts (names garbled in the transcript), and the fill-in-the-blank template for the first cart-abandonment email.
+- [29:18] Compounding example: raising visit-to-next-page, add-to-cart and checkout-click each by 10% and picking up "25% of the carts that abandoned". Possibly outdated (2014 talk).
 
 ### E-Mail-Marketing mit Klaviyo: Von Anmeldung bis Kampagnen (Course C) [L0573, undated]
 
-- Popup form: no teaser, static code welcome10 (10%, one use/customer), targeting after 10 s AND scroll 50%; Smart Sending OFF, UTM tracking ON on every email; welcome series email 2 after 1 day not 3; abandoned cart wait 30 min (not 4 h), 3 emails 30 min/8-10 h/24 h; thank-you flow 1st vs repeat buyer split; text-based emails avoid promotions tab; campaign gradual send 20%/hour from 11 am Eastern; VIP segment orders > 1.
+- [13:08] Default Klaviyo welcome subject line in the template is "Score big savings"; teacher replaces it with "A welcome gift for you" (replacement present, default subject missing, trivial).
+- [13:42] Sender name used in the demo is "Emma" and the sender email is asked when creating the account.
 
 ### E-Mail-Versand mit G Suite und Mailshake einrichten (Course B) [L0574, 2021-22]
 
-- [00:38] G Suite ~$6-7/month single user; personal sender, face photo; [10:07] DKIM key length 1024, TXT name google._domainkey, authentication up to 48 h; SPF TXT host SPF; Mailshake basic plan $39 monthly/$29 yearly, 1 user; limit 20/day start, then 50, 100 up to 300 per day over weeks; {{unsubscribe_url}} in signature.
+- [13:01] Mailshake pricing screen: "30-Day Guarantee. If you're not 100% satisfied, let us know in the first 30 days for a full refund." Basic $29 per month per user when billed yearly.
+- [06:03] In the demo the profile-photo upload failed with an error even after waiting; teacher says chalk it up to Google and not wait days. Profile editing change "may take up to 24 hours to propagate" (screen text) is not recorded.
+- [20:38] Mailshake dashboard offers a free 45-minute one-on-one walkthrough, live training three times per week and "Cold Email Academy" (14 videos on list-building, copywriting, scaling outreach).
+
+### Email-Häufigkeit und Zielgruppen-Segmentierung (Course B) [L0603, 2021-22]
+
+- [00:47-02:32] Named analogy "hot potato": a new subscriber is at peak heat and must be "thrown hand to hand" (emailed often); as they cool they need less attention.
+
+### Email Marketing für Anfänger mit Klaviyo (Course C) [L0605, undated]
+
+- [50:04] Resource: an email marketing agency's design library (high-converting designs, niche-specific; welcome flow, abandoned cart, post-purchase "thanks for shopping again" designs) used as inspiration to replicate in the own store.
+- [58:41-59:36] ChatGPT use: ask for colour combinations for a niche store (example: online pet store) and then for hex codes / a colour palette to use in the store; also niche ideas, brand names (mix two words), landing-page sections (e.g. four-line paragraph per feature), video captions.
+
+### Email Marketing mit Klaviyo für Shopify (Course C) [L0607, undated]
+
+- Only minor, possibly: [29:52-30:44] campaigns are for events (Father's Day, Mother's Day, Valentine's Day, Christmas) vs flows triggered by behavior; [10:27] later flows to add: browse abandonment, cross sell, customer win back.
+
+### Email-Marketing-Tools im Überblick (Course B) [L0608, 2021-22]
+
+- [00:21] The tool never decides success; success depends on what you put in emails, how consistently you send, how many emails you send to prospects and customers.
+- [02:22] Teacher used MailChimp at the very start, switched to Klaviyo soon after; Klaviyo was built specifically for Shopify; Drip came later and "made up a lot of ground" in the last 12 months. Choice between them is mainly interface/usability (building flows, moving people between lists); customer sees no difference [04:15].
+- [07:05] Do not use the email tool's built-in form feature (e.g. Klaviyo forms): they feel like an afterthought and are less full-featured than dedicated pop-up/form tools.
+- [05:09] Teacher uses OptinMonster almost exclusively now, OptiMonk for many years before; Sumo mentioned as another acceptable alternative [06:06]. Opt-in forms cover pop-ups, exit intents, inline content forms, sidebar forms.
+- [09:23] There is no import/transfer tool between email automation platforms; switching means setting up flows manually, so do not switch if the current one works ("time is money").
+
+### Email-Marketing verstehen und beginnen (Course B) [L0609, 2021-22]
+
+- [00:15] Email marketing returns about $40 revenue per $1 invested; the teacher had marketed online about 7 years and heard "email is dead" the whole time while it performed as before.
+- [01:10-02:07] Email is a personal communication platform (invented for person-to-person); write and present emails like one person to another; inbox providers prefer that too.
+- [02:42-03:39] Direct mail has worked since at least the 1920s; individual physical sales letters generated the equivalent of a billion dollars; email works with the same principles.
+- [04:27] Biggest mistake of small/medium e-commerce businesses: not doing email marketing at all; you find your style by sending continuously and optimizing.
+- [06:09-07:01] Do not stress if implementation takes 1, 2 or 3 months; list growth starts slowly then snowballs as traffic grows, so have the basic flows ready before it does.
+- [07:50-09:45] Homework: sign up to competitors' email lists (opt-in forms, pop-ups, blog forms) or enter an email at their checkout and abandon it to enter their abandoned-checkout flow; older e-commerce competitors often send no email = open inbox opportunity; shows which products/topics they push and what they do not talk about.
+- [11:26] Use a separate Gmail account under a bogus name only for competitor/research sign-ups; teacher uses his as a swipe file for ideas.
+
+### Email-Module als wiederverwendbare Bausteine (Course E) [L0610, 2025-26]
+
+- [02:57] Goal is to lift volume to two, three or four emails a week; doing that by hand as a founder is operationally too hard, hence modules.
+- [02:18] Modules already built for multiple brands in the done-for-you service; brands build an email in three to five minutes (3-5 minutes found in target).
 
 Part 15 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/14-seo-and-content.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/16-retargeting.md

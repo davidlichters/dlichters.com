@@ -64,4 +64,9 @@ Part 7 of 7 of "25. Full audit details: every course specific missing from chapt
   - Sheet 1 "Monthly Budget June": start budget 1,000, end 1,437, change +43.7% (monthly result 437); Expenses planned 500 vs actual 600 (-100: Facebook Ads 500 planned / 600 actual, Shopify Fees 0, COGS 0, Other 0); Income planned 700 vs actual 1,037 (+337: Shopify minus transaction costs; Agency Client 0).
   - Sheet 2 transaction log columns: Date | Amount | Description | Category (expenses: Facebook Ads "Testing" 500, COGS "CJ" 250, Facebook Ads 100; income: Shopify sales 800, "SP Payout" 237 as Shopify (- Transaction Costs)); categories Facebook Ads, Shopify Fees, COGS, Other / Shopify (- Transaction Costs), Agency Client.
 
+### Extensive Product Research Process - Mentor C2 (Dokument) (Course C) [L0636, undated]
+
+- Stage 2 rule: if more than 5 different competitors run ads with 5K+ likes each, remove the product; if fewer than 5 competitors and good likes, that is a good sign, copy their FB links and product page links as angle references. (Existing file 21 uses "more than 7" / "7 or more plus 2 big brands" as thresholds, so this is a different, stricter threshold: possibly conflicting.)
+- Funnel counts per stage: stage 1 ends with a list of 10 potential products; stage 2 removes 3-5 more (if not, the list is good); stage 3 leaves 3-5; stage 4 leaves 3-4 which are then ranked. Not found as a stage-by-stage funnel.
+
 Part 7 of 7 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter / 99. General (lessons whose topics have no chapter)". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details/99-general.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/99-general/06-ca-hvertising.md

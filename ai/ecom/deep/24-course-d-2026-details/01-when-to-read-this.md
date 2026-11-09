@@ -171,7 +171,7 @@ Tool shown is WinningHunter (the file name says Kalodata).
 - Zipify OCU rule: "A/B test your post-purchase daily. A cracked upsell makes the front-end breakeven and everything else pure profit." Post-purchase upsells are called "Absolutely essential".
 - UpCart cross-sell warning: the teacher has seen conversions drop and Facebook comments saying "you auto-added products". So test it, and maybe leave upsells off in the cart until you are scaling.
 - Judge.me hack on the Awesome plan: in the widget "text" settings, change it to show 4.8 stars and 10,000+ reviews (teacher's setting; the deep pages advise against inflated counts, so treat this as the lesson's statement only).
-- Judge.me: with the ChatGPT sample-review prompt you have 100+ reviews on launch, "Then tweak text to make it look like thousands." (teacher's statement; the prompt itself marks output "SAMPLE REVIEWS — FOR DESIGN/TEST ONLY. DO NOT PUBLISH.").
+- Judge.me: with the ChatGPT sample-review prompt you have 100+ reviews on launch, "Then tweak text to make it look like thousands." (teacher's statement; the prompt itself marks output "SAMPLE REVIEWS: FOR DESIGN/TEST ONLY. DO NOT PUBLISH.").
 - Track123: the tracking page "improves conversion rate because it builds trust before purchase", not only after the sale.
 - Disputifier is "Non-negotiable. You need this before you scale." If it is not set up correctly, "3 chargebacks in a week = store gone." Shopify will ban the store instantly and keep the money.
 - TxtCart was found via Kyle Bigley's posts on X; the teacher tried all the big SMS recovery apps and calls TxtCart "one of the most plug-and-play profit apps".

@@ -27,4 +27,11 @@ Main chapter: https://dlichters.com/ai/ecom/deep/07-offers-pricing-and-bundles.m
 - [48:05-49:04] Student asked for a Google Ads session for dropshipping after Merchant Center suspension (said Google policy does not allow selling products not in stock); teacher agreed to prepare a session.
 - [32:57] Seasonal brand note: snow/extreme-sports brand has poor Q2/Q3 (season ends about March-April, Australia starts about July); keep evergreen core and event campaigns.
 
+### Fünf Wege, dein Angebot zu differenzieren (Course C) [L0683, undated]
+
+- [04:19] to [05:53] Stacked-bonus example (neck massager): weak offer "buy a neck massager for 59.99 and get a free ebook"; stronger offer lists "59.99 instead of 119.99" (price drop shown), free ebook worth 19.99, free shipping instead of 9.99 shipping, 24/7 customer service (service you offer anyway, shown as bonus), and a second neck massager for only 39.99 instead of 59.99; claimed to increase average order value. Principle: a single offer is less valuable than the same offer broken into components and stacked as bonuses.
+- [03:20] Countdown timer on the product page, example "this special offer is only valid for the next 10 minutes"; [02:28] flash sale / limited-time discount like Black Friday and Cyber Monday (24 hours) as urgency.
+- [05:53] Speaker says the money-back guarantee is the single best offer that has worked for him to this day; the single greatest objection to any product is risk, so reversing risk makes any offer more attractive; with a good supplier and good quality the refund risk should be small.
+- [07:56] Tip: read Alex Hormozi's "100 Million Offers", write down every idea while reading and implement it immediately; test different product names to see which performs best; ChatGPT output still needs the human touch (not copy-paste), ChatGPT can also draft the description from the same formula.
+
 Part 7 of 22 of "25. Full audit details: every course specific missing from chapters 01 to 24, by chapter". Map of all parts: https://dlichters.com/ai/ecom/deep/25-full-audit-details.md · Previous: https://dlichters.com/ai/ecom/deep/25-full-audit-details/06-conversion-optimization.md · Next: https://dlichters.com/ai/ecom/deep/25-full-audit-details/08-brand-and-positioning.md
