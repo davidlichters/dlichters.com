@@ -2,13 +2,173 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Ecommerce Playbook</title>
-<meta name="description" content="A free ecommerce playbook in 22 chapters and 507 sections: niches, suppliers, Shopify, ads, email, scaling.">
-<link rel="canonical" href="https://dlichters.com/ecom/">
-<meta name="color-scheme" content="light dark">
-<meta property="og:title" content="Ecommerce Playbook"><meta property="og:description" content="A free ecommerce playbook in 22 chapters and 507 sections: niches, suppliers, Shopify, ads, email, scaling."><meta property="og:url" content="https://dlichters.com/ecom/"><meta property="og:type" content="article">
-<link rel="stylesheet" href="style.css">
-</head><body data-base="">
-<header class="top"><div class="wrap"><a class="brand" href="">Ecommerce Playbook</a><a class="by" href="#q">Search</a></div></header>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<style>.gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
+--sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+--sft:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+--cb:cubic-bezier(.4,0,.6,1)}
+.gn ul{list-style:none;margin:0;padding:0}
+.gn-content{--rate:375ms;position:absolute;top:0;left:0;width:100%;height:48px;overflow:hidden;
+background:rgba(250,250,252,.8);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
+transition:height var(--rate) var(--cb) 80ms,background var(--rate) var(--cb) 80ms}
+.gn-open .gn-content{height:100vh;height:100dvh;background:#fafafc;overflow-x:hidden;overflow-y:auto;overscroll-behavior:none;transition-delay:0ms}
+.gn-menu,.gn-submenu{position:absolute;top:0;left:0;width:100%}
+.gn-flyout{padding-top:50px;box-sizing:border-box}
+.gn-menu-list{display:flex;flex-direction:column;padding-bottom:84px}
+.gn-item{opacity:0;transform:translateY(-8px);
+transition:opacity .24s var(--cb) calc(.2s + var(--n) * 20ms),transform .24s var(--cb) calc(.2s + var(--n) * 20ms)}
+.gn-open .gn-item{opacity:1;transform:none}
+.gn-closing .gn-item{transition-delay:0s;transition-duration:min(.16s + 20ms * (8 - var(--n)),.24s)}
+.gn-sub .gn-item{transition:none}
+.gn-sub:not(.gn-anim) .gn-item{opacity:0;visibility:hidden;transform:translate(-8px)}
+.gn-item:first-child{margin-top:-3px}
+.gn-link{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:-7px;padding:3px 48px 4px;
+color:#333336;text-decoration:none;font-family:var(--sfd);font-size:28px;line-height:1.1428571429;font-weight:600;
+letter-spacing:-.0066em;pointer-events:none;transition:color .32s var(--cb);-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-open .gn-link{pointer-events:auto}
+.gn-link:hover,.gn-link:focus-visible{color:#000}
+.gn-link:focus{outline:none}
+.gn-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
+.gn-link-text{pointer-events:none;padding-top:7.5px;padding-bottom:7.5px}
+.gn-link-chevron{display:block;height:47px;margin-top:-1px;margin-right:-48px;padding-right:19px;color:#333336;
+opacity:0;visibility:hidden;transform:scale(.8);transform-origin:center;
+transition:opacity .24s var(--cb),transform .24s var(--cb),visibility .24s step-end}
+.gn-link-chevron svg{fill:currentColor;transform:scaleX(-1) translateZ(0)}
+@media (hover:hover){.gn-open:not(.gn-sub):not(.gn-closing) .gn-link:hover .gn-link-chevron{visibility:visible;
+opacity:1;transform:none;transition:visibility .24s step-start;animation:gn-chevron-in .24s var(--cb) both}}
+@keyframes gn-chevron-in{0%{opacity:0;transform:translate(-4px)}to{opacity:1;transform:translate(0)}}
+.gn-submenu{opacity:0;visibility:hidden;pointer-events:none;overflow:hidden}
+.gn-sub .gn-submenu{opacity:1;visibility:visible;pointer-events:auto}
+.gn.gn-closing .gn-submenu{opacity:0;transform:translateY(-8px);transition:opacity .24s var(--cb),transform .24s var(--cb)}
+.gn-submenu-content{display:flex;flex-wrap:wrap;padding:50px 48px 0;box-sizing:border-box}
+.gn-submenu-group{padding-bottom:92px}
+.gn-submenu-header{margin:0;color:#6e6e73;font-family:var(--sft);font-size:17px;line-height:1.2353641176;
+font-weight:400;letter-spacing:.0033em}
+.gn-submenu-list-item{margin:0 -11px;font-family:var(--sft);font-size:17px;line-height:1.4705882353;font-weight:600;
+letter-spacing:-.022em}
+.gn-submenu-list-item:first-child{margin-top:14px}
+.gn-submenu-link{display:flex;align-items:center;max-width:max-content;padding:8px 11px 7px;margin-bottom:-5px;
+color:#333336;text-decoration:none;transition:color .32s var(--cb);-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-submenu-link:hover,.gn-submenu-link:focus-visible{color:#000}
+.gn-submenu-link:focus{outline:none}
+.gn-submenu-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
+.gn-fwd .gn-menu .gn-link-text{animation:gn-fwd-prev .24s var(--cb) both}
+.gn-fwd .gn-submenu{animation:gn-fwd-next .24s var(--cb) .16s both}
+.gn-bwd .gn-submenu{animation:gn-bwd-prev .24s var(--cb) both}
+.gn-bwd .gn-menu .gn-link-text{animation:gn-bwd-next .24s var(--cb) .16s both}
+@keyframes gn-fwd-next{0%{opacity:0;transform:translate(8px)}to{opacity:1;transform:translate(0)}}
+@keyframes gn-fwd-prev{0%{opacity:1;transform:translate(0)}to{opacity:0;transform:translate(-8px)}}
+@keyframes gn-bwd-prev{0%{opacity:1;transform:translate(0)}to{opacity:0;transform:translate(8px)}}
+@keyframes gn-bwd-next{0%{opacity:0;transform:translate(-8px)}to{opacity:1;transform:translate(0)}}
+.gn-menuback{position:absolute;top:0;left:max(0px,env(safe-area-inset-left) - 18px);z-index:3;width:48px;height:48px;
+opacity:0;pointer-events:none;visibility:hidden;transform:translate(4px) scale(1);transform-origin:center;
+transition:opacity .24s var(--cb),transform .24s var(--cb),visibility .24s step-end}
+.gn-sub:not(.gn-bwd):not(.gn-closing) .gn-menuback{visibility:visible;transform:translate(0) scale(1);opacity:1;pointer-events:auto;
+transition:opacity .24s var(--cb) .16s,transform .24s var(--cb) .16s,visibility .24s step-start .16s}
+.gn.gn-closing .gn-menuback{opacity:0;transform:translate(0) scale(.8)}
+.gn button:focus:not(:focus-visible){outline:none}
+.gn-menuback-button{-webkit-appearance:none;appearance:none;background:none;border:0;margin:0;
+padding:0;font:inherit;cursor:pointer;outline-offset:-7px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-menuback-button{display:flex;justify-content:center;width:100%;height:100%;color:#333336;transition:color .32s var(--cb)}
+.gn-menuback-button:hover{color:#000}
+.gn-chevron-icon{display:flex;margin-left:-1px}
+.gn-chevron-icon svg{fill:currentColor}
+
+.gn-page{--rate:375ms;position:fixed;pointer-events:none}
+.gn-page a,.gn-page a:hover{text-decoration:none}
+.gn-page .gn-content,.gn-page.gn-open .gn-content{height:100vh;height:100dvh;background:none;-webkit-backdrop-filter:none;backdrop-filter:none;
+overflow:hidden;transition:none;pointer-events:none}
+.gn-page.gn-open .gn-content{pointer-events:auto}
+.gn-page.gn-fertig .gn-content{overflow-x:hidden;overflow-y:auto}
+.gn-schleier,.gn-tuch{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;pointer-events:none}
+.gn-schleier{background:rgb(232,232,237);opacity:0;will-change:opacity;transition:opacity var(--rate) var(--cb)}
+.gn-page.gn-open .gn-schleier{opacity:1;transition:opacity .36s var(--cb) .1s}
+.gn-tuch{transform:translate3d(0,-100%,0);will-change:transform;transition:transform var(--rate) var(--cb) 80ms}
+.gn-page.gn-open .gn-tuch{transform:translate3d(0,0,0);transition-delay:0ms}
+.gn-glas,.gn-voll{position:absolute;top:0;right:0;bottom:0;left:0}
+.gn-glas{background:rgba(250,250,252,.8);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+.gn-voll{background:#fafafc;opacity:0;will-change:opacity;transition:opacity var(--rate) var(--cb) 80ms}
+.gn-page.gn-open .gn-voll{opacity:1;transition-delay:0ms}
+.gn-page.gn-fertig .gn-glas{visibility:hidden}
+.gn-page .gn-item{will-change:opacity,transform}
+.gn-strich{position:absolute;left:50%;top:50%;width:24px;height:6px;margin:-3px 0 0 -12px;will-change:transform}
+.gn-strich-oben{transform:translate(0,-4px)}
+.gn-strich-unten{transform:translate(0,3px)}
+.gn-open .gn-strich-oben{animation:gn-oben-auf .24s linear both}
+.gn-open .gn-strich-unten{animation:gn-unten-auf .24s linear both}
+.gn-closing .gn-strich-oben{animation:gn-oben-zu .24s linear both}
+.gn-closing .gn-strich-unten{animation:gn-unten-zu .24s linear both}
+.gn-menutrigger{position:absolute;top:3px;right:max(0px,env(safe-area-inset-right) - 16px);z-index:3;width:48px;pointer-events:auto}
+.gn-menutrigger-button{-webkit-appearance:none;appearance:none;background:none;border:0;margin:0;padding:0;font:inherit;cursor:pointer;
+outline-offset:-7px;-webkit-tap-highlight-color:rgba(0,0,0,0);position:relative;display:flex;justify-content:center;align-items:center;
+width:48px;height:48px;color:#000;opacity:.8;transition:opacity .32s var(--cb),color .32s var(--cb)}
+.gn-menutrigger-button:hover{opacity:1}
+html.gn-lock,html.gn-lock body{overflow:hidden}
+html.srch .gn{display:none}
+@keyframes gn-oben-auf{0.000%{transform:translate(0.000px,-4.000px) rotate(0.000deg) scaleX(1.0000)}8.333%{transform:translate(0.000px,-3.822px) rotate(0.000deg) scaleX(1.0000)}16.667%{transform:translate(0.000px,-3.375px) rotate(0.000deg) scaleX(1.0000)}25.000%{transform:translate(0.000px,-2.739px) rotate(0.000deg) scaleX(1.0000)}33.333%{transform:translate(0.000px,-1.953px) rotate(0.000deg) scaleX(1.0000)}41.667%{transform:translate(0.000px,-1.041px) rotate(0.000deg) scaleX(1.0000)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.065px,0.065px) rotate(12.641deg) scaleX(0.9772)}66.667%{transform:translate(0.122px,0.122px) rotate(23.724deg) scaleX(0.9971)}75.000%{transform:translate(0.171px,0.171px) rotate(32.648deg) scaleX(1.0425)}83.333%{transform:translate(0.211px,0.211px) rotate(39.219deg) scaleX(1.0963)}91.667%{transform:translate(0.239px,0.239px) rotate(43.421deg) scaleX(1.1419)}100.000%{transform:translate(0.250px,0.250px) rotate(45.000deg) scaleX(1.1617)}}@keyframes gn-oben-zu{0.000%{transform:translate(0.250px,0.250px) rotate(45.000deg) scaleX(1.1617)}8.333%{transform:translate(0.239px,0.239px) rotate(43.421deg) scaleX(1.1419)}16.667%{transform:translate(0.211px,0.211px) rotate(39.219deg) scaleX(1.0963)}25.000%{transform:translate(0.171px,0.171px) rotate(32.648deg) scaleX(1.0425)}33.333%{transform:translate(0.122px,0.122px) rotate(23.724deg) scaleX(0.9971)}41.667%{transform:translate(0.065px,0.065px) rotate(12.641deg) scaleX(0.9772)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.000px,-1.041px) rotate(0.000deg) scaleX(1.0000)}66.667%{transform:translate(0.000px,-1.953px) rotate(0.000deg) scaleX(1.0000)}75.000%{transform:translate(0.000px,-2.739px) rotate(0.000deg) scaleX(1.0000)}83.333%{transform:translate(0.000px,-3.375px) rotate(0.000deg) scaleX(1.0000)}91.667%{transform:translate(0.000px,-3.822px) rotate(0.000deg) scaleX(1.0000)}100.000%{transform:translate(0.000px,-4.000px) rotate(0.000deg) scaleX(1.0000)}}@keyframes gn-unten-auf{0.000%{transform:translate(0.000px,3.000px) rotate(0.000deg) scaleX(1.0000)}8.333%{transform:translate(0.000px,2.867px) rotate(0.000deg) scaleX(1.0000)}16.667%{transform:translate(0.000px,2.532px) rotate(0.000deg) scaleX(1.0000)}25.000%{transform:translate(0.000px,2.054px) rotate(0.000deg) scaleX(1.0000)}33.333%{transform:translate(0.000px,1.465px) rotate(0.000deg) scaleX(1.0000)}41.667%{transform:translate(0.000px,0.781px) rotate(0.000deg) scaleX(1.0000)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.065px,0.065px) rotate(-12.641deg) scaleX(0.9772)}66.667%{transform:translate(0.122px,0.122px) rotate(-23.724deg) scaleX(0.9971)}75.000%{transform:translate(0.171px,0.171px) rotate(-32.648deg) scaleX(1.0425)}83.333%{transform:translate(0.211px,0.211px) rotate(-39.219deg) scaleX(1.0963)}91.667%{transform:translate(0.239px,0.239px) rotate(-43.421deg) scaleX(1.1419)}100.000%{transform:translate(0.250px,0.250px) rotate(-45.000deg) scaleX(1.1617)}}@keyframes gn-unten-zu{0.000%{transform:translate(0.250px,0.250px) rotate(-45.000deg) scaleX(1.1617)}8.333%{transform:translate(0.239px,0.239px) rotate(-43.421deg) scaleX(1.1419)}16.667%{transform:translate(0.211px,0.211px) rotate(-39.219deg) scaleX(1.0963)}25.000%{transform:translate(0.171px,0.171px) rotate(-32.648deg) scaleX(1.0425)}33.333%{transform:translate(0.122px,0.122px) rotate(-23.724deg) scaleX(0.9971)}41.667%{transform:translate(0.065px,0.065px) rotate(-12.641deg) scaleX(0.9772)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.000px,0.781px) rotate(0.000deg) scaleX(1.0000)}66.667%{transform:translate(0.000px,1.465px) rotate(0.000deg) scaleX(1.0000)}75.000%{transform:translate(0.000px,2.054px) rotate(0.000deg) scaleX(1.0000)}83.333%{transform:translate(0.000px,2.532px) rotate(0.000deg) scaleX(1.0000)}91.667%{transform:translate(0.000px,2.867px) rotate(0.000deg) scaleX(1.0000)}100.000%{transform:translate(0.000px,3.000px) rotate(0.000deg) scaleX(1.0000)}}
+:root{--fg:#1d1d1f;--mut:#6e6e73;color-scheme:light}
+*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+html{-webkit-text-size-adjust:100%;background:#fff}
+body{margin:0;background:#fff;color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cursor:pointer;-webkit-appearance:none;appearance:none}
+#feed{max-width:560px;margin:0 auto;padding:79px 0 40px}
+.p{margin:0 0 47.04px}
+.ph{display:flex;align-items:flex-start;height:32px;padding-left:10.7px}
+.av{display:block;flex:none;width:32px;height:32px;border-radius:50%;background:#fff;box-shadow:0 0 0 .5px rgba(0,0,0,.16)}
+.av img{display:block;width:32px;height:32px;border-radius:50%}
+.who{position:relative;flex:1;height:32px;margin-left:9.3px;min-width:0}
+.nm{position:absolute;top:-.21px;left:0;font-size:13.8px;line-height:17px;font-weight:600;letter-spacing:0;color:var(--fg);white-space:nowrap}
+.sp{position:absolute;top:18.28px;left:0;font-size:11.6px;line-height:14px;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:.9px;color:var(--fg)}
+.c{position:relative;margin-top:9.67px;background:#b3b3b4;container-type:inline-size}
+.c::before{content:"";display:block;padding-top:75%}
+.cr{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
+.cr::-webkit-scrollbar{display:none}
+.s{flex:0 0 100%;width:100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#b3b3b4;color:#1d1d1f;padding:0 5.6%;container-type:inline-size}
+.s .b{font-size:6.107vw;line-height:1.22;letter-spacing:-.012em;width:100%}
+@supports (font-size:1cqw){.s .b{font-size:6.876cqw}}
+.s h3{font:inherit;font-weight:600;margin:0 0 .5em}
+.s p{margin:0 0 .5em}.s p:last-child{margin-bottom:0}
+.s b{font-weight:600}
+.s .tl{font-weight:600;font-size:1.25em;line-height:1.15;letter-spacing:-.018em}
+.s .tl.m{font-size:1em;line-height:1.22;letter-spacing:-.012em}
+.s .kl{display:block;font-size:.66em;line-height:1.3;font-weight:400;color:#1d1d1f;letter-spacing:0}
+.s .kl:first-child{margin-bottom:.8em}.s .kl:last-child{margin-top:.8em}
+.pl{position:absolute;top:14.4px;right:14.4px;min-width:36.25px;height:25.8px;padding:0 5.6px;border-radius:12.9px;background:rgba(45,45,45,.54);color:#fff;font-size:11.2px;line-height:25.8px;text-align:center;pointer-events:none;z-index:2}
+/* Die Pille waechst mit der Slide-Breite: 36,25 von 393 pt wie in Davids Beispiel */
+@supports (font-size:1cqw){.pl{top:3.664cqw;right:3.664cqw;min-width:9.224cqw;height:6.565cqw;padding:0 1.425cqw;border-radius:3.282cqw;font-size:2.85cqw;line-height:6.565cqw}}
+.pf{position:absolute;top:50%;width:34px;height:34px;margin-top:-17px;border-radius:50%;background:rgba(255,255,255,.85);display:none;align-items:center;justify-content:center;font-size:18px;line-height:1;color:#1d1d1f}
+.pf.l{left:10px}.pf.r{right:10px}
+@media (hover:hover) and (pointer:fine){.c:hover .pf{display:flex}.c .pf[hidden]{display:none}}
+.ic{position:relative;height:35.4px;margin-top:0}
+.ic button,.ic a{position:absolute;display:block}
+.ic svg{position:absolute;display:block;overflow:visible;fill:none;stroke:#1d1d1f;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
+.ic .pkt{fill:#1d1d1f;stroke:none}
+.ic svg.ih{width:21.4px;height:19.8px}
+.ic svg.ii{width:21.8px;height:21.8px}
+.ic svg.is{width:19.2px;height:24px}
+.ic svg.im{width:14.667px;height:23px}
+/* Tippflaechen 44 pt, das Symbol sitzt genau wie in Davids Bild */
+.ic .bl{left:2.6px;top:2.6px;width:44px;height:44px}.ic .bl svg{left:10.7px;top:11.4px}
+.ic .bi{left:42.4px;top:2px;width:44px;height:44px}.ic .bi svg{left:10.9px;top:11.33px}
+.ic .bs{left:81.1px;top:0;width:44px;height:44px}.ic .bs svg{left:12.6px;top:10.33px}/* gleicher Abstand wie Herz zu i: 18,6 pt (David 09.11.) */
+.ic .bm{right:2px;top:1px;width:44px;height:44px}.ic .bm svg{left:14.667px;top:10.83px}
+.bl.on svg{fill:#ff3b30;stroke:#ff3b30}
+.bm.on svg{fill:#1d1d1f}
+.bl.pop svg{animation:pop .32s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(.72)}100%{transform:scale(1)}}
+.tm{display:block;margin:14.14px 0 0 12.6px;font-size:11.8px;line-height:14px;color:var(--mut)}
+#saved{position:fixed;top:3px;right:max(40px,calc(env(safe-area-inset-right) + 24px));z-index:9998;width:44px;height:48px;display:flex;align-items:center;justify-content:center}
+#saved svg{display:block;width:14.667px;height:23px;fill:none;stroke:#1d1d1f;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
+#saved.on svg{fill:#1d1d1f}
+html.gn-lock #saved{visibility:hidden}
+.leer{text-align:center;color:var(--mut);font-size:15px;line-height:1.4;padding:60px 24px}
+#sent{height:1px}
+#toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,12px);background:rgba(29,29,31,.92);color:#fff;font-size:14px;line-height:1;padding:11px 16px;border-radius:18px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:9999}
+#toast.an{opacity:1;transform:translate(-50%,0)}</style>
+</head><body>
 <nav class="gn gn-page" id="gn" aria-label="Menu">
 <div class="gn-schleier"></div>
 <div class="gn-tuch"><div class="gn-glas"></div><div class="gn-voll"></div></div>
@@ -53,9 +213,112 @@ else{g.classList.add("gn-open");trig.setAttribute("aria-label","Close");trig.set
 setTimeout(function(){g.classList.add("gn-fertig");document.documentElement.classList.add("gn-lock");busy=0},Math.max(r,200+20*8+240))}});
 document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
-<main><div class="wrap">
-<a class="aibtn" href="../ai/"><b>AI</b><span>Everything we know, for AI assistants &rarr;</span></a><div class="hero"><h1>Ecommerce Playbook</h1><p class="lead">Everything about running an online store, from choosing a niche to ads, suppliers, email and scaling. Free, in plain English.</p></div><p class="stats">22 chapters &middot; 507 sections</p><div class="search" id="search"><input id="q" type="search" placeholder="Search the playbook" autocomplete="off" aria-label="Search"><div id="res"></div></div><ul class="list"><li><a href="01-business-model-and-strategy/"><span class="n">Chapter 1 &middot; 23 sections</span><span class="t">Business model and strategy</span><span class="d">Pick the right business model, set your goals and decide what kind of store to build first.</span></a></li><li><a href="02-niche-and-product-research/"><span class="n">Chapter 2 &middot; 24 sections</span><span class="t">Niche and product research</span><span class="d">Find a niche and products that sell: demand, margins, competition and how to check them step by step.</span></a></li><li><a href="03-suppliers-and-fulfillment/"><span class="n">Chapter 3 &middot; 22 sections</span><span class="t">Suppliers and fulfillment</span><span class="d">Find and contact real suppliers, get approved and handle shipping, stock and fulfillment.</span></a></li><li><a href="04-store-build-and-shopify/"><span class="n">Chapter 4 &middot; 20 sections</span><span class="t">Store build and Shopify</span><span class="d">Set up Shopify, the theme, pages, policies and checkout so the store is ready to sell.</span></a></li><li><a href="05-apps-and-tools/"><span class="n">Chapter 5 &middot; 22 sections</span><span class="t">Apps and tools</span><span class="d">The apps and tools worth installing, what they cost and which ones to skip.</span></a></li><li><a href="06-conversion-optimization/"><span class="n">Chapter 6 &middot; 22 sections</span><span class="t">Conversion optimization</span><span class="d">Turn more visitors into buyers: product pages, trust, speed and testing.</span></a></li><li><a href="07-offers-pricing-and-bundles/"><span class="n">Chapter 7 &middot; 28 sections</span><span class="t">Offers, pricing and bundles</span><span class="d">Set prices, build offers and bundles, and raise the order value without hurting trust.</span></a></li><li><a href="08-brand-and-positioning/"><span class="n">Chapter 8 &middot; 24 sections</span><span class="t">Brand and positioning</span><span class="d">Give the store a name, a look and a promise customers remember.</span></a></li><li><a href="09-meta-and-facebook-ads/"><span class="n">Chapter 9 &middot; 22 sections</span><span class="t">Meta and Facebook ads</span><span class="d">Run Meta and Facebook ads: account setup, campaigns, budgets, testing and scaling.</span></a></li><li><a href="10-google-ads-and-shopping/"><span class="n">Chapter 10 &middot; 23 sections</span><span class="t">Google Ads and Shopping</span><span class="d">Google Ads and Google Shopping: feeds, campaigns, bids and how to grow what works.</span></a></li><li><a href="11-tiktok-and-short-video/"><span class="n">Chapter 11 &middot; 22 sections</span><span class="t">TikTok and short video</span><span class="d">Get sales from TikTok and short videos, organic and paid.</span></a></li><li><a href="12-creatives-and-ad-copy/"><span class="n">Chapter 12 &middot; 26 sections</span><span class="t">Creatives and ad copy</span><span class="d">Make ads that stop the scroll: hooks, angles, scripts and copy.</span></a></li><li><a href="13-influencers-and-ugc/"><span class="n">Chapter 13 &middot; 21 sections</span><span class="t">Influencers and UGC</span><span class="d">Work with influencers and creators and get UGC that sells.</span></a></li><li><a href="14-seo-and-content/"><span class="n">Chapter 14 &middot; 20 sections</span><span class="t">SEO and content</span><span class="d">Get free traffic from Google with SEO, blog posts and content.</span></a></li><li><a href="15-email-and-sms/"><span class="n">Chapter 15 &middot; 17 sections</span><span class="t">Email and SMS</span><span class="d">Email and SMS flows and campaigns that bring buyers back.</span></a></li><li><a href="16-retargeting/"><span class="n">Chapter 16 &middot; 24 sections</span><span class="t">Retargeting</span><span class="d">Win back visitors who did not buy, with retargeting ads.</span></a></li><li><a href="17-customer-service-returns-and-chargebacks/"><span class="n">Chapter 17 &middot; 22 sections</span><span class="t">Customer service, returns and chargebacks</span><span class="d">Answer customers, handle returns and refunds and avoid chargebacks.</span></a></li><li><a href="18-legal-tax-banking-and-payments/"><span class="n">Chapter 18 &middot; 24 sections</span><span class="t">Legal, tax, banking and payments</span><span class="d">The legal, tax, bank and payment basics every store needs.</span></a></li><li><a href="19-metrics-finance-and-tracking/"><span class="n">Chapter 19 &middot; 23 sections</span><span class="t">Metrics, finance and tracking</span><span class="d">Know your numbers: profit, ROAS, tracking and reporting.</span></a></li><li><a href="20-scaling-team-and-processes/"><span class="n">Chapter 20 &middot; 26 sections</span><span class="t">Scaling, team and processes</span><span class="d">Grow past the first sales: hiring, systems and daily routines.</span></a></li><li><a href="21-phone-sales/"><span class="n">Chapter 21 &middot; 26 sections</span><span class="t">Phone sales</span><span class="d">Sell expensive products by phone and close more big orders.</span></a></li><li><a href="22-mindset-and-planning/"><span class="n">Chapter 22 &middot; 26 sections</span><span class="t">Mindset and planning</span><span class="d">Plan your weeks, stay steady and keep going when results are slow.</span></a></li></ul>
-</div></main>
-<script src="search.js" defer></script>
-<script src="page.js" defer></script>
+<button id="saved" type="button" aria-label="Saved posts" aria-pressed="false"><svg class="im" viewBox="0 0 14.667 23" aria-hidden="true"><path d="M2.625 .925h9.417a1.7 1.7 0 0 1 1.7 1.7v19.123a.377 .377 0 0 1-.644 .267L7.333 16.25l-5.764 5.765a.377 .377 0 0 1-.644-.267V2.625a1.7 1.7 0 0 1 1.7-1.7z"/></svg></button>
+<main id="feed"><div id="sent"></div></main>
+<div id="toast" role="status"></div>
+<noscript><p style="padding:90px 24px;text-align:center"><a href="kapitel.html">Read the Ecommerce Playbook</a></p></noscript>
+<script>
+(function(){
+var WA='https://wa.me/4915123849907', feed=document.getElementById('feed'), sent=document.getElementById('sent'), sv=document.getElementById('saved'), toast=document.getElementById('toast');
+var H={l:"<svg class=\"ih\" viewBox=\"0 0 21.4 19.8\" aria-hidden=\"true\"><path d=\"M10.7 18.9C4.3 14.3 1 11.1 1 6.9 1 3.6 3.4 1.1 6.3 1.1c1.9 0 3.5 1 4.4 2.8.9-1.8 2.5-2.8 4.4-2.8 2.9 0 5.3 2.5 5.3 5.8 0 4.2-3.3 7.4-9.7 12z\"/></svg>",i:"<svg class=\"ii\" viewBox=\"0 0 21.8 21.8\" aria-hidden=\"true\"><circle cx=\"10.9\" cy=\"10.9\" r=\"10.1\"/><path d=\"M8.1 16.1h5.6M10.9 16.1V9.5H8.6\" /><circle class=\"pkt\" cx=\"10.8\" cy=\"5.9\" r=\"1.25\"/></svg>",s:"<svg class=\"is\" viewBox=\"0 0 19.2 24\" aria-hidden=\"true\"><path d=\"M5.6 7.8H4.2C2.4 7.8 1 9.2 1 11v8.8C1 21.6 2.4 23 4.2 23H15c1.8 0 3.2-1.4 3.2-3.2V11c0-1.8-1.4-3.2-3.2-3.2h-1.4M9.6 15.2V1.2M5.6 5.2l4-4 4 4\"/></svg>",m:"<svg class=\"im\" viewBox=\"0 0 14.667 23\" aria-hidden=\"true\"><path d=\"M2.625 .925h9.417a1.7 1.7 0 0 1 1.7 1.7v19.123a.377 .377 0 0 1-.644 .267L7.333 16.25l-5.764 5.765a.377 .377 0 0 1-.644-.267V2.625a1.7 1.7 0 0 1 1.7-1.7z\"/></svg>"};
+var idx=[], cache={}, pos={}, modus='alle', quelle=null, laeuft=false, zuende=false, lauf=0, BASIS="feed/", GRENZE=10, gezeigt=0;
+var U=new URLSearchParams(location.search);
+
+function lesen(k){try{return JSON.parse(localStorage.getItem(k))||[]}catch(e){return []}}
+function schreiben(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var likes=new Set(lesen('feed.likes')), saves=lesen('feed.saved');
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fett(s){return esc(s).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*\*/g,'')}
+function ago(t){var s=Math.max(60,Date.now()/1000-t),a=[[31536000,'year'],[2592000,'month'],[604800,'week'],[86400,'day'],[3600,'hour'],[60,'minute']];
+ for(var i=0;i<a.length;i++){var n=Math.floor(s/a[i][0]);if(n>=1)return n+' '+a[i][1]+(n>1?'s':'')+' ago'}return 'just now'}
+function klar(s){return s.replace(/\*\*/g,'')}
+function vorlese(sl){if(sl.k==='t')return [sl.t,sl.s].filter(Boolean).join('. ');return klar((sl.h?sl.h+'. ':'')+sl.t.replace(/\n/g,'. '))}
+function sichtbar(sl){if(sl.k==='t')return sl.t;return klar((sl.h?sl.h+'\n':'')+sl.t)}
+
+/* Das Innere einer Slide. Hier kommt Davids Slide-Design rein. */
+function slideHTML(sl){
+ if(sl.k==='t')return '<div class="b"><span class="kl">'+esc(sl.c)+'</span><div class="tl'+(sl.m?' m':'')+'">'+esc(sl.t)+'</div>'+(sl.s?'<span class="kl">'+esc(sl.s)+'</span>':'')+'</div>';
+ return '<div class="b">'+(sl.h?'<h3>'+esc(sl.h)+'</h3>':'')+sl.t.split('\n').map(function(p){return '<p>'+fett(p)+'</p>'}).join('')+'</div>';
+}
+
+function abschnitt(f){if(!cache[f])cache[f]=fetch(BASIS+'d/'+f+'.json').then(function(r){if(!r.ok)throw 0;return r.json()});return cache[f]}
+function link(p,i){return location.origin+location.pathname+'?p='+p.id+(i?'&s='+(i+1):'')}
+function aktuell(el){var cr=el.querySelector('.cr');if(!cr||!cr.clientWidth||!cr.firstChild)return +el.dataset.i||0;return Math.max(0,Math.min(el._p.sl.length-1,Math.round(cr.scrollLeft/cr.clientWidth)))}
+function pille(el,i){var n=el._p.sl.length,x=el.querySelector('.pl');if(x)x.textContent=(i+1)+'/'+n;var l=el.querySelector('.pf.l'),r=el.querySelector('.pf.r');if(l){l.hidden=i===0;r.hidden=i===n-1}}
+function zeige(el,i,sanft){var cr=el.querySelector('.cr');el.dataset.i=i;if(!cr||!cr.firstChild)return;var w=cr.clientWidth;if(sanft&&cr.scrollTo)cr.scrollTo({left:i*w,behavior:'smooth'});else cr.scrollLeft=i*w;pille(el,i)}
+
+function wach(el){if(el._wach)return;el._wach=1;var cr=el.querySelector('.cr'),p=el._p;cr.innerHTML=p.sl.map(function(s){return '<div class="s">'+slideHTML(s)+'</div>'}).join('');var i=+el.dataset.i||0;if(i)cr.scrollLeft=i*cr.clientWidth}
+function schlaf(el){if(!el._wach||(spricht&&spricht.el===el))return;el.dataset.i=aktuell(el);el._wach=0;el.querySelector('.cr').innerHTML=''}
+var nah=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)wach(e.target);else schlaf(e.target)})},{rootMargin:'1500px 0px'});
+
+var spricht=null;
+function fertigSprechen(){if(spricht){spricht.btn.textContent='speak';spricht.btn.setAttribute('aria-pressed','false');spricht=null}}
+function stop(){fertigSprechen();try{speechSynthesis.cancel()}catch(e){}}
+function stimme(){var v=speechSynthesis.getVoices().filter(function(x){return /^en[-_]US/i.test(x.lang)});
+ function p(x){var n=x.name;return /premium/i.test(n)?5:/enhanced|neural|natural/i.test(n)?4:/^(Ava|Zoe|Evan|Nathan|Noelle|Allison|Susan|Tom)\b|^Google US English/.test(n)?3:/^Samantha/.test(n)?2:/Eloquence|Fred|Albert|Bad News|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox/i.test(n)?0:1}
+ return v.sort(function(a,b){return p(b)-p(a)})[0]||null}
+function sprich(el,btn){
+ if(spricht&&spricht.el===el){stop();return}
+ var S=window.speechSynthesis;if(!S){melde('Speech is not available in this browser');return}
+ var mark={el:el,btn:btn},lief=S.speaking||S.pending;
+ fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
+ function los(){
+  if(spricht!==mark)return;
+  var sl=el._p.sl,vo=stimme();
+  sl.forEach(function(s,i){var u=new SpeechSynthesisUtterance(vorlese(s));u.lang='en-US';if(vo)u.voice=vo;u.rate=1;
+   u.onstart=function(){if(spricht===mark)zeige(el,i,true)};
+   if(i===sl.length-1)u.onend=function(){if(spricht===mark)fertigSprechen()};
+   u.onerror=function(ev){if(spricht===mark&&ev.error!=='canceled'&&ev.error!=='interrupted')fertigSprechen()};
+   S.speak(u)});
+ }
+ if(lief){S.cancel();setTimeout(los,120)}else los();
+}
+addEventListener('pagehide',function(){stop()});
+
+function melde(t){toast.textContent=t;toast.classList.add('an');clearTimeout(melde.t);melde.t=setTimeout(function(){toast.classList.remove('an')},1800)}
+
+function post(p){
+ var el=document.createElement('article');el.className='p';el._p=p;el.dataset.i=p.start||0;
+ var ig='https://www.instagram.com/davidlichters/';
+ el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="davidlichters on Instagram"><img src="'+BASIS+'a.jpg" alt="" width="32" height="32"></a><div class="who"><a class="nm" href="'+ig+'">davidlichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
+ '<div class="c"><div class="cr" tabindex="0" aria-label="'+esc(p.titel)+'"></div><span class="pl"></span><button class="pf l" type="button" aria-label="Previous slide">&#8249;</button><button class="pf r" type="button" aria-label="Next slide">&#8250;</button></div>'+
+ '<div class="ic"><button class="bl'+(likes.has(p.id)?' on':'')+'" type="button" aria-label="Like" aria-pressed="'+likes.has(p.id)+'">'+H.l+'</button><a class="bi" href="'+WA+'" aria-label="Ask David about this slide on WhatsApp">'+H.i+'</a><button class="bs" type="button" aria-label="Share">'+H.s+'</button><button class="bm'+(saves.indexOf(p.id)>=0?' on':'')+'" type="button" aria-label="Save" aria-pressed="'+(saves.indexOf(p.id)>=0)+'">'+H.m+'</button></div>'+
+ '<time class="tm">'+ago(p.u)+'</time>';
+ var cr=el.querySelector('.cr'),q=function(s){return el.querySelector(s)},t=0;
+ cr.addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;pille(el,aktuell(el))})},{passive:true});
+ q('.sp').addEventListener('click',function(){sprich(el,this)});
+ q('.bl').addEventListener('click',function(){var b=this,on=!likes.has(p.id);if(on)likes.add(p.id);else likes.delete(p.id);schreiben('feed.likes',Array.from(likes));b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.classList.remove('pop');void b.offsetWidth;if(on)b.classList.add('pop')});
+ q('.bm').addEventListener('click',function(){var at=saves.indexOf(p.id),on=at<0;if(on)saves.push(p.id);else saves.splice(at,1);schreiben('feed.saved',saves);this.classList.toggle('on',on);this.setAttribute('aria-pressed',on)});
+ q('.bs').addEventListener('click',function(){var i=aktuell(el),u=link(p,i);if(navigator.share){navigator.share({title:p.titel,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){melde('Link copied')})}else{prompt('Copy this link',u)}});
+ q('.bi').addEventListener('click',function(){var i=aktuell(el),text='Hi David, I need help with this:\n\n"'+sichtbar(p.sl[i]).slice(0,900)+'"\n\n'+p.titel+', slide '+(i+1)+'/'+p.sl.length+'\n'+link(p,i);this.href=WA+'?text='+encodeURIComponent(text);if(matchMedia('(hover:hover) and (pointer:fine)').matches)this.target='_blank'});
+ q('.pf.l').addEventListener('click',function(){zeige(el,Math.max(0,aktuell(el)-1),true)});
+ q('.pf.r').addEventListener('click',function(){zeige(el,Math.min(p.sl.length-1,aktuell(el)+1),true)});
+ pille(el,+el.dataset.i);
+ feed.insertBefore(el,sent);nah.observe(el);
+ return el;
+}
+function ausPost(f,d,n,u,start){return {id:f+'-'+n,sl:d.p[n],titel:d.p[n][0].t,u:u,start:start||0}}
+
+/* Quellen: der ganze Kurs ab einer Stelle, oder die gemerkten Posts */
+function kursAb(a,b){return function(){if(a>=idx.length||(GRENZE&&gezeigt>=GRENZE))return Promise.resolve(null);var e=idx[a],x=a,y=b;a++;b=0;return abschnitt(e.f).then(function(d){var l=[];for(var n=y;n<d.p.length&&!(GRENZE&&gezeigt>=GRENZE);n++){gezeigt++;l.push(ausPost(e.f,d,n,e.u))}return l})}}
+function gemerkte(){var l=saves.slice().reverse(),i=0;return function(){if(i>=l.length)return Promise.resolve(null);var teil=l.slice(i,i+8);i+=8;return Promise.all(teil.map(function(id){var m=id.match(/^(\d\d-\d\d)-(\d+)$/);if(!m)return null;var e=idx.filter(function(x){return x.f===m[1]})[0];if(!e)return null;return abschnitt(m[1]).then(function(d){return d.p[+m[2]]?ausPost(m[1],d,+m[2],e.u):null}).catch(function(){return null})})).then(function(a){return a.filter(Boolean)})}}
+
+function weiter(){
+ if(laeuft||zuende||!quelle)return;laeuft=true;var r=lauf;
+ quelle().then(function(l){if(r!==lauf)return;laeuft=false;if(l===null){zuende=true;if(modus==='gemerkt'&&!feed.querySelector('.p')){var m=document.createElement('p');m.className='leer';m.textContent='No saved posts yet.';feed.insertBefore(m,sent)}return}l.forEach(post);var b=sent.getBoundingClientRect();if(b.top<innerHeight+2500)setTimeout(weiter,0)}).catch(function(){if(r===lauf)laeuft=false});
+}
+var unten=new IntersectionObserver(function(es){if(es[0].isIntersecting)weiter()},{rootMargin:'2500px 0px'});
+
+function leeren(){stop();lauf++;laeuft=false;zuende=false;gezeigt=0;Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
+function startFeed(){leeren();modus='alle';sv.classList.remove('on');sv.setAttribute('aria-pressed','false');
+ var m=(U.get('p')||'').match(/^(\d\d-\d\d)-(\d+)$/);
+ if(m&&!startFeed.fertig){startFeed.fertig=1;var a=idx.map(function(e){return e.f}).indexOf(m[1]);if(a>=0){var s=Math.max(0,(+U.get('s')||1)-1);quelle=function(){var q=kursAb(a,+m[2]),erst=true;return function(){return q().then(function(l){if(erst&&l&&l[0]){l[0].start=Math.min(s,l[0].sl.length-1);erst=false}return l})}}();weiter();return}}
+ quelle=kursAb(0,0);weiter()}
+function startGemerkt(){leeren();modus='gemerkt';sv.classList.add('on');sv.setAttribute('aria-pressed','true');quelle=gemerkte();weiter()}
+sv.addEventListener('click',function(){if(modus==='gemerkt')startFeed();else startGemerkt()});
+
+fetch(BASIS+'idx.json').then(function(r){return r.json()}).then(function(d){idx=d;unten.observe(sent);startFeed()});
+})();
+</script>
 </body></html>
