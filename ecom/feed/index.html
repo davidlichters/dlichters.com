@@ -293,13 +293,15 @@ var spricht=null;
 function fertigSprechen(){if(spricht){spricht.btn.textContent='speak';spricht.btn.setAttribute('aria-pressed','false');spricht=null}}
 function stop(){fertigSprechen();try{speechSynthesis.cancel()}catch(e){}try{ton.pause()}catch(e){}}
 /* David 09.11.: Speak laeuft fuer jeden Besucher auf der Website. Der fertige Ton liegt je Post als Datei online, das Handy muss nichts umwandeln. Wo noch keiner liegt, liest die Stimme des Geraets. */
-var TON=location.origin+HIER.replace(/feed\/$/,'ton/'),ton=new Audio(),tonListe=new Set(),tonM={};ton.preload='none';ton.setAttribute('playsinline','');
-var tonDa=fetch(TON+'liste.json').then(function(r){return r.ok?r.json():[]}).catch(function(){return []}).then(function(l){tonListe=new Set(l)});
-function tonHol(f){if(tonM[f])return;var e=tonM[f]={w:null};tonDa.then(function(){if(!tonListe.has(f))return;return fetch(TON+f+'/m.json').then(function(r){return r.ok?r.json():null}).then(function(j){e.w=j})}).catch(function(){})}
-function spieleTon(el,btn,f,n,marken){
+/* 09.11. abends: der ganze Kurs passt nicht in ein Repo. liste.json nennt je Abschnitt den Ort: "21-08:1" liegt im Repo ton-1, "01-01" allein liegt hier auf der Seite. Steht beides da, gilt das Repo, sobald dort Ton liegt. */
+var TON=location.origin+HIER.replace(/feed\/$/,'ton/'),TONFERN='https://davidlichters.github.io/ton-',ton=new Audio(),tonOrt={},tonM={};ton.preload='none';ton.setAttribute('playsinline','');
+var tonDa=fetch(TON+'liste.json').then(function(r){return r.ok?r.json():[]}).catch(function(){return []}).then(function(l){l.forEach(function(x){var a=String(x).split(':'),o=tonOrt[a[0]]||(tonOrt[a[0]]={});if(/^\d+$/.test(a[1]||''))o.r=TONFERN+a[1]+'/';else o.l=TON})});
+function tonLies(b,f){return b?fetch(b+f+'/m.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}):Promise.resolve(null)}
+function tonHol(f){if(tonM[f])return;var e=tonM[f]={w:null,b:''};tonDa.then(function(){var o=tonOrt[f];if(!o)return;return tonLies(o.r,f).then(function(j){if(j){e.b=o.r;e.w=j;return}return tonLies(o.l,f).then(function(k){if(k){e.b=o.l;e.w=k}})})}).catch(function(){})}
+function spieleTon(el,btn,f,n,marken,basis){
  var mark={el:el,btn:btn},letzte=-1;try{speechSynthesis.cancel()}catch(e){}
  fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
- ton.src=TON+f+'/'+n+'.m4a';
+ ton.src=basis+f+'/'+n+'.m4a';
  ton.ontimeupdate=function(){if(spricht!==mark)return;var i=marken.length-1;while(i>0&&marken[i]>ton.currentTime+.05)i--;if(i!==letzte){letzte=i;zeige(el,i,true)}};
  ton.onended=ton.onerror=function(){if(spricht===mark)fertigSprechen()};
  var p=ton.play();if(p&&p.catch)p.catch(function(){if(spricht===mark)fertigSprechen()});
@@ -310,7 +312,7 @@ function stimme(){var v=speechSynthesis.getVoices().filter(function(x){return /^
 function sprich(el,btn){
  if(spricht&&spricht.el===el){stop();return}
  var tid=el._p.id.match(/^(\d\d-\d\d)-(\d+)$/),te=tid&&tonM[tid[1]],tm=te&&te.w&&te.w[tid[2]];
- if(tm){spieleTon(el,btn,tid[1],tid[2],tm);return}
+ if(tm){spieleTon(el,btn,tid[1],tid[2],tm,te.b);return}
  try{ton.pause()}catch(e){}
  var S=window.speechSynthesis;if(!S){melde('Speech is not available in this browser');return}
  var mark={el:el,btn:btn},lief=S.speaking||S.pending;
