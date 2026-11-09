@@ -318,7 +318,7 @@ function melde(t){toast.textContent=t;toast.classList.add('an');clearTimeout(mel
 function post(p,ziel){
  var el=document.createElement('article');el.className='p';el._p=p;el.dataset.i=p.start||0;
  var ig='https://www.instagram.com/davidlichters/';
- el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="lichters on Instagram"><img src="'+BASIS+'a.jpg" alt="" width="32" height="32">'+H.r+'</a><div class="who"><a class="nm" href="'+ig+'">lichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
+ el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="lichters on Instagram"><img src="'+BASIS+'a.jpg" alt="" width="32" height="32" decoding="sync">'+H.r+'</a><div class="who"><a class="nm" href="'+ig+'">lichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
  '<div class="c"><div class="cr" tabindex="0" aria-label="'+esc(p.titel)+'"></div><span class="pl"></span><button class="pf l" type="button" aria-label="Previous slide">&#8249;</button><button class="pf r" type="button" aria-label="Next slide">&#8250;</button></div>'+
  '<div class="ic"><button class="bl'+(likes.has(p.id)?' on':'')+'" type="button" aria-label="Like" aria-pressed="'+likes.has(p.id)+'">'+H.l+'</button><a class="bi" href="'+WA+'" aria-label="Ask David about this slide on WhatsApp">'+H.i+'</a><button class="bs" type="button" aria-label="Share">'+H.s+'</button><button class="bm'+(saves.indexOf(p.id)>=0?' on':'')+'" type="button" aria-label="Save" aria-pressed="'+(saves.indexOf(p.id)>=0)+'">'+H.m+'</button></div>'+
  '<time class="tm">'+ago(p.u)+'</time>';
@@ -326,20 +326,19 @@ function post(p,ziel){
  cr.addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;pille(el,aktuell(el))})},{passive:true});
  q('.sp').addEventListener('click',function(){sprich(el,this)});
  q('.bl').addEventListener('click',function(){var b=this,on=!likes.has(p.id);if(on)likes.add(p.id);else likes.delete(p.id);schreiben('feed.likes',Array.from(likes));b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.classList.remove('pop');void b.offsetWidth;if(on)b.classList.add('pop')});
- q('.bm').addEventListener('click',function(){var at=saves.indexOf(p.id),on=at<0;if(on)saves.push(p.id);else saves.splice(at,1);schreiben('feed.saved',saves);this.classList.toggle('on',on);this.setAttribute('aria-pressed',on)});
+ q('.bm').addEventListener('click',function(){var at=saves.indexOf(p.id),on=at<0;if(on)saves.push(p.id);else saves.splice(at,1);schreiben('feed.saved',saves);this.classList.toggle('on',on);this.setAttribute('aria-pressed',on);svSync()});
  q('.bs').addEventListener('click',function(){var i=aktuell(el),u=link(p,i);if(navigator.share){navigator.share({title:p.titel,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){melde('Link copied')})}else{prompt('Copy this link',u)}});
  q('.bi').addEventListener('click',function(){var i=aktuell(el),text='Hi David, I need help with this:\n\n"'+sichtbar(p.sl[i]).slice(0,900)+'"\n\n'+p.titel+', slide '+(i+1)+'/'+p.sl.length+'\n'+link(p,i);this.href=WA+'?text='+encodeURIComponent(text);if(matchMedia('(hover:hover) and (pointer:fine)').matches)this.target='_blank'});
  q('.pf.l').addEventListener('click',function(){zeige(el,Math.max(0,aktuell(el)-1),true)});
  q('.pf.r').addEventListener('click',function(){zeige(el,Math.min(p.sl.length-1,aktuell(el)+1),true)});
  pille(el,+el.dataset.i);
- if(ziel){ziel.b.insertBefore(el,ziel.v);if(ziel.spaet)setTimeout(function(){ziel.o.observe(el)},ziel.spaet);else ziel.o.observe(el)}else{feed.insertBefore(el,sent);nah.observe(el);liste.push(el)}
+ if(ziel){ziel.b.insertBefore(el,ziel.v);ziel.o.observe(el)}else{feed.insertBefore(el,sent);nah.observe(el);liste.push(el)}
  return el;
 }
 function ausPost(f,d,n,u,start){return {id:f+'-'+n,sl:d.p[n],titel:d.p[n][0].t,u:u,start:start||0}}
 
-/* Quellen: der ganze Kurs ab einer Stelle, oder die gemerkten Posts */
+/* Quelle: der ganze Kurs ab einer Stelle */
 function kursAb(a,b){return function(){if(a>=idx.length||(GRENZE&&gezeigt>=GRENZE))return Promise.resolve(null);var e=idx[a],x=a,y=b;a++;b=0;return abschnitt(e.f).then(function(d){var l=[];for(var n=y;n<d.p.length&&!(GRENZE&&gezeigt>=GRENZE);n++){gezeigt++;l.push(ausPost(e.f,d,n,e.u))}return l})}}
-function gemerkte(){var l=saves.slice().reverse(),i=0;return function(){if(i>=l.length)return Promise.resolve(null);var teil=l.slice(i,i+8);i+=8;return Promise.all(teil.map(function(id){var m=id.match(/^(\d\d-\d\d)-(\d+)$/);if(!m)return null;var e=idx.filter(function(x){return x.f===m[1]})[0];if(!e)return null;return abschnitt(m[1]).then(function(d){return d.p[+m[2]]?ausPost(m[1],d,+m[2],e.u):null}).catch(function(){return null})})).then(function(a){return a.filter(Boolean)})}}
 
 function weiter(){
  if(laeuft||zuende||!quelle)return;laeuft=true;var r=lauf;
@@ -353,26 +352,31 @@ function startFeed(){leeren();
  if(m&&!startFeed.fertig){startFeed.fertig=1;var a=idx.map(function(e){return e.f}).indexOf(m[1]);if(a>=0){var s=Math.max(0,(+U.get('s')||1)-1);quelle=function(){var q=kursAb(a,+m[2]),erst=true;return function(){return q().then(function(l){if(erst&&l&&l[0]){l[0].start=Math.min(s,l[0].sl.length-1);erst=false}return l})}}();weiter();return}}
  quelle=kursAb(0,0);weiter()}
 
-/* David 09.11.: /ecom/saved ist eine eigene Seite, die von rechts hereinkommt. Oben links Zurueck-Pfeil, oben rechts bleiben die 2 Striche. */
-var svp=document.getElementById('sv'), svs=document.getElementById('svs'), svf=document.getElementById('svf'), svsent=document.getElementById('svsent'), zu=document.getElementById('zu'), svOffen=false, svLauf=0, svT=0, vonFeed=false;
+/* David 09.11.: /ecom/saved liegt in derselben Seite und ist vorab fertig gebaut: "damit nix laedt". Beim Tippen schiebt es nur noch herein, es wird nichts geholt und nichts neu gebaut. Oben links Zurueck-Pfeil, oben rechts bleiben die 2 Striche. */
+var svp=document.getElementById('sv'), svs=document.getElementById('svs'), svf=document.getElementById('svf'), svsent=document.getElementById('svsent'), zu=document.getElementById('zu'), svOffen=false, svT=0, vonFeed=false, svEl={};
 var SV={b:svf,v:svsent,o:new IntersectionObserver(nahFolge,{root:svs,rootMargin:'1500px 0px'})};
 var idxDa=fetch(BASIS+'idx.json').then(function(r){return r.json()}).then(function(d){idx=d});
-function svLeeren(){svLauf++;Array.prototype.slice.call(svf.querySelectorAll('.p,.leer')).forEach(function(e){SV.o.unobserve(e);e.remove()})}
-function svLaden(bereit){var r=++svLauf,n=0;function fertig(){if(bereit){bereit();bereit=null}}
- idxDa.then(function(){if(r!==svLauf)return;var q=gemerkte();(function w(){q().then(function(l){if(r!==svLauf)return;if(l===null){if(!n){var m=document.createElement('p');m.className='leer';m.textContent='No saved posts yet.';svf.insertBefore(m,svsent)}fertig();return}l.forEach(function(p){var el=post(p,SV);if(n++<2)wach(el)});fertig();w()}).catch(fertig)})()}).catch(fertig)}
-/* Kein Ruckler am Anfang: erst ausserhalb des Bildschirms fertig malen, dann schieben; waehrend des Schiebens keine Arbeit auf dem Hauptfaden */
-function svAuf(zug){if(svOffen)return;svOffen=true;clearTimeout(svT);if(spricht)stop();svLeeren();svs.scrollTop=0;svp.setAttribute('aria-hidden','false');SV.spaet=zug?480:0;
- var los=0;function geh(){if(los||!svOffen)return;los=1;if(!zug){svp.classList.remove('zug');svp.classList.add('an');return}
-  svp.style.visibility='visible';requestAnimationFrame(function(){requestAnimationFrame(function(){if(!svOffen)return;svp.classList.add('zug');void svp.offsetWidth;svp.classList.add('an');svp.style.visibility=''})})}
- if(!zug)geh();svLaden(geh);if(zug)setTimeout(geh,120)}
-function zustand(){liste.forEach(function(el){var id=el._p.id,b=el.querySelector('.bm'),l=el.querySelector('.bl'),s=saves.indexOf(id)>=0,h=likes.has(id);b.classList.toggle('on',s);b.setAttribute('aria-pressed',s);l.classList.toggle('on',h);l.setAttribute('aria-pressed',h)})}
-function svZu(zug){if(!svOffen)return;svOffen=false;if(spricht)stop();svp.setAttribute('aria-hidden','true');svp.classList.toggle('zug',zug);if(zug)void svp.offsetWidth;svp.classList.remove('an');zustand();clearTimeout(svT);svT=setTimeout(svLeeren,zug?460:0)}
+var leerEl=document.createElement('p');leerEl.className='leer';leerEl.textContent='No saved posts yet.';leerEl.hidden=true;svf.insertBefore(leerEl,svsent);
+function svDaten(id){var m=id.match(/^(\d\d-\d\d)-(\d+)$/),e=m&&idx.filter(function(x){return x.f===m[1]})[0];if(!e)return Promise.resolve(null);return abschnitt(m[1]).then(function(d){return d.p[+m[2]]?ausPost(m[1],d,+m[2],e.u):null}).catch(function(){return null})}
+/* Haelt die Saved-Seite im Hintergrund genau auf dem Stand der gemerkten Posts, neueste zuerst. Vorhandene Posts bleiben unberuehrt. Solange sie offen ist, bleibt ein gerade entfernter Post stehen. */
+function svSync(){return idxDa.then(function(){return Promise.all(saves.slice().reverse().map(svDaten))}).then(function(a){
+ if(!svOffen)Object.keys(svEl).forEach(function(id){if(saves.indexOf(id)<0){SV.o.unobserve(svEl[id]);svEl[id].remove();delete svEl[id]}});
+ var c=leerEl.nextSibling;a.forEach(function(p){if(!p)return;var el=svEl[p.id];if(!el){SV.v=c;el=svEl[p.id]=post(p,SV)}c=el.nextSibling});
+ leerEl.hidden=Object.keys(svEl).length>0;setTimeout(svWarm,250)}).catch(function(){})}
+/* Einmal unsichtbar ausserhalb des Bildschirms vormalen, sonst stockt das allererste Oeffnen (gemessen 227 ms statt 45) */
+function svWarm(){if(svOffen||svWarm.f||!Object.keys(svEl).length)return;svWarm.f=1;svp.style.visibility='visible';requestAnimationFrame(function(){requestAnimationFrame(function(){requestAnimationFrame(function(){if(!svOffen)svp.style.visibility=''})})})}
+function zustand(){liste.concat(Object.keys(svEl).map(function(k){return svEl[k]})).forEach(function(el){var id=el._p.id,b=el.querySelector('.bm'),l=el.querySelector('.bl'),s=saves.indexOf(id)>=0,h=likes.has(id);b.classList.toggle('on',s);b.setAttribute('aria-pressed',s);l.classList.toggle('on',h);l.setAttribute('aria-pressed',h)})}
+function svAuf(zug){if(svOffen)return;svOffen=true;clearTimeout(svT);if(spricht)stop();zustand();svs.scrollTop=0;svp.setAttribute('aria-hidden','false');
+ if(!zug){svp.classList.remove('zug');svp.classList.add('an');return}
+ svp.style.visibility='visible';requestAnimationFrame(function(){requestAnimationFrame(function(){if(!svOffen)return;svp.classList.add('zug');void svp.offsetWidth;svp.classList.add('an');svp.style.visibility=''})})}
+function svZu(zug){if(!svOffen)return;svOffen=false;if(spricht)stop();svp.setAttribute('aria-hidden','true');svp.classList.toggle('zug',zug);if(zug)void svp.offsetWidth;svp.classList.remove('an');zustand();clearTimeout(svT);svT=setTimeout(svSync,zug?460:0)}
 var backT=0;/* history.back erst nach dem Zurueckschieben, sonst steht der Hauptfaden am Anfang der Bewegung */
 mk.addEventListener('click',function(){if(svOffen)return;if(backT){clearTimeout(backT);backT=0}else{vonFeed=true;history.pushState({sv:1},'',SAVED)}svAuf(true)});
-zu.addEventListener('click',function(e){e.preventDefault();if(!vonFeed){location.href=FEED;return}svZu(true);backT=setTimeout(function(){backT=0;history.back()},440)});
+zu.addEventListener('click',function(e){e.preventDefault();svZu(true);if(vonFeed)backT=setTimeout(function(){backT=0;history.back()},440);else history.replaceState(null,'',FEED)});
 addEventListener('popstate',function(e){var s=aufSaved(),z=!e.hasUAVisualTransition;if(s&&!svOffen)svAuf(z);else if(!s&&svOffen)svZu(z)});
 
-if(aufSaved())svAuf(false);else idxDa.then(function(){unten.observe(sent);startFeed();setTimeout(function(){saves.slice(-8).forEach(function(id){var m=id.match(/^(\d\d-\d\d)-/);if(m)abschnitt(m[1]).catch(function(){})})},1200)});
+if(aufSaved())svAuf(false);
+idxDa.then(function(){unten.observe(sent);startFeed();svSync()});
 })();
 </script>
 <script>(function(){function n(e){e.preventDefault()}['gesturestart','gesturechange','gestureend'].forEach(function(t){document.addEventListener(t,n,{passive:false})});addEventListener('wheel',function(e){if(e.ctrlKey)e.preventDefault()},{passive:false})})();</script>
