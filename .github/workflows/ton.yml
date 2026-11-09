@@ -1,0 +1,37 @@
+name: ton
+on:
+  workflow_dispatch:
+    inputs:
+      auswahl:
+        description: "Posts und Stimmen, z. B. 01-01-0:bm_george,01-01-1:bm_fable"
+        required: true
+permissions:
+  contents: write
+jobs:
+  ton:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - run: pip install -q kokoro-onnx soundfile
+      - name: Modell holen
+        run: |
+          curl -sSL -o kokoro.onnx https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/kokoro-v1.0.onnx
+          curl -sSL -o voices.bin https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
+          ls -la kokoro.onnx voices.bin
+      - name: Ton erzeugen
+        env:
+          AUSWAHL: ${{ inputs.auswahl }}
+        run: python .github/ton.py "$AUSWAHL"
+      - name: Hochladen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ecom/ton
+          git commit -q -m "ecom: fertiger Ton fuer Speak" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" || exit 0
+          git pull --rebase -q
+          git push -q
