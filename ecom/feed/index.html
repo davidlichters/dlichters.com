@@ -230,7 +230,8 @@ var idx=[], cache={}, pos={}, modus='alle', quelle=null, laeuft=false, zuende=fa
 var U=new URLSearchParams(location.search);
 var kt=document.getElementById('kt'), liste=[], ktText=null, ktF=0, KT={"17": "Customer service and returns", "18": "Legal, tax and payments"};
 /* Titel oben: Kapitel des Posts, der gerade den Bildschirm fuellt. Eine Zeile: erst kleiner bis 13,5 pt, dann Auslassungspunkte */
-function kopfTitel(t){if(t===ktText)return;ktText=t;kt.textContent=t;kt.style.fontSize='';var f=16;while(f>13.5&&kt.scrollWidth>kt.clientWidth){f-=.25;kt.style.fontSize=f+'px'}}
+function ktBreit(){var r=document.createRange();r.selectNodeContents(kt);return r.getBoundingClientRect().width}/* scrollWidth rundet, Safari setzte deshalb Punkte, obwohl es fast passte (Foto 09.11. 19:30) */
+function kopfTitel(t){if(t===ktText)return;ktText=t;kt.textContent=t;kt.style.fontSize='';var f=16;while(f>13.5&&ktBreit()>kt.clientWidth-1){f-=.25;kt.style.fontSize=f+'px'}}
 function kopfFolgt(){if(!liste.length)return;var y=60+(innerHeight-60)/2,a=0,b=liste.length-1;while(a<b){var m=Math.ceil((a+b)/2);if(liste[m].getBoundingClientRect().top<=y)a=m;else b=m-1}var c=String(liste[a]._p.sl[0].c||''),n=c.match(/^(\d+)\./);kopfTitel(n&&KT[n[1]]||c.replace(/^\d+\.\s*/,''))}
 addEventListener('scroll',function(){if(ktF)return;ktF=requestAnimationFrame(function(){ktF=0;kopfFolgt()})},{passive:true});
 addEventListener('resize',function(){var t=ktText;ktText=null;if(t!==null)kopfTitel(t)});
