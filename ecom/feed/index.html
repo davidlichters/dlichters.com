@@ -229,7 +229,7 @@ function schreiben(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}
 var likes=new Set(lesen('feed.likes')), saves=lesen('feed.saved');
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function fett(s){return esc(s).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>')}
+function fett(s){return esc(s).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\*\*/g,'')}
 function ago(t){var s=Math.max(60,Date.now()/1000-t),a=[[31536000,'year'],[2592000,'month'],[604800,'week'],[86400,'day'],[3600,'hour'],[60,'minute']];
  for(var i=0;i<a.length;i++){var n=Math.floor(s/a[i][0]);if(n>=1)return n+' '+a[i][1]+(n>1?'s':'')+' ago'}return 'just now'}
 function klar(s){return s.replace(/\*\*/g,'')}
