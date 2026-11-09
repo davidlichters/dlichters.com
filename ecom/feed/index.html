@@ -152,18 +152,22 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cu
 .ic svg.im{width:14.667px;height:23px}
 /* Tippflaechen 44 pt, das Symbol sitzt genau wie in Davids Bild */
 .ic .bl{left:2.6px;top:2.6px;width:44px;height:44px}.ic .bl svg{left:10.7px;top:11.4px}
-.ic .bi{left:57.05px;top:2px;width:44px;height:44px}.ic .bi svg{left:10.9px;top:11.33px}
-.ic .bs{left:110.41px;top:0;width:44px;height:44px}.ic .bs svg{left:12.6px;top:10.33px}/* Abstand wie in Davids Bild (99 zu 64 Bildpunkte), hier 33,2 pt (David 09.11.) */
+.ic .bi{left:68.34px;top:2px;width:44px;height:44px}.ic .bi svg{left:10.9px;top:11.33px}
+.ic .bs{left:132.99px;top:0;width:44px;height:44px}.ic .bs svg{left:12.6px;top:10.33px}/* Abstand wie in Davids zweitem Bild: Luecke 2,14-mal so breit wie die Symbole (98,5 zu 46 Bildpunkte), hier 44,5 pt (David 09.11.) */
 .ic .bm{right:2px;top:1px;width:44px;height:44px}.ic .bm svg{left:14.667px;top:10.83px}
 .bl.on svg{fill:#ff3b30;stroke:#ff3b30}
 .bm.on svg{fill:#1d1d1f}
 .bl.pop svg{animation:pop .32s cubic-bezier(.3,1.6,.5,1)}
 @keyframes pop{0%{transform:scale(.72)}100%{transform:scale(1)}}
 .tm{display:block;margin:14.14px 0 0 12.6px;font-size:11.8px;line-height:14px;color:var(--mut)}
-#saved{position:fixed;top:3px;right:max(50.13px,calc(env(safe-area-inset-right) + 34.13px));z-index:9998;width:44px;height:48px;display:flex;align-items:center;justify-content:center}
+#saved{position:fixed;top:3px;right:max(49.76px,calc(env(safe-area-inset-right) + 33.76px));z-index:9998;width:44px;height:48px;display:flex;align-items:center;justify-content:center}
 #saved svg{display:block;width:14.667px;height:23px;fill:none;stroke:#1d1d1f;stroke-width:1.85;stroke-linecap:round;stroke-linejoin:round}
 #saved.on svg{fill:#1d1d1f}
 html.gn-lock #saved{visibility:hidden}
+/* Davids Skizze 09.11.: Kapitelname fett, darunter lichters, mittig; Platz bis zum Merken-Symbol. Lage aus der Skizze (3-fach). */
+#kopf{position:fixed;top:0;left:0;right:0;height:60px;background:#fff;z-index:9000}
+#kt{position:absolute;top:16.64px;left:89.5px;right:89.5px;margin:0;font-size:16px;line-height:20px;font-weight:700;letter-spacing:0;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--fg)}
+#kn{position:absolute;top:36.2px;left:50%;transform:translateX(-50%);font-size:12.5px;line-height:16px;color:var(--fg);white-space:nowrap}
 .leer{text-align:center;color:var(--mut);font-size:15px;line-height:1.4;padding:60px 24px}
 #sent{height:1px}
 #toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,12px);background:rgba(29,29,31,.92);color:#fff;font-size:14px;line-height:1;padding:11px 16px;border-radius:18px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:9999}
@@ -213,6 +217,7 @@ else{g.classList.add("gn-open");trig.setAttribute("aria-label","Close");trig.set
 setTimeout(function(){g.classList.add("gn-fertig");document.documentElement.classList.add("gn-lock");busy=0},Math.max(r,200+20*8+240))}});
 document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
+<header id="kopf"><h1 id="kt"></h1><a id="kn" href="https://www.instagram.com/davidlichters/">lichters</a></header>
 <button id="saved" type="button" aria-label="Saved posts" aria-pressed="false"><svg class="im" viewBox="0 0 14.667 23" aria-hidden="true"><path d="M2.625 .925h9.417a1.7 1.7 0 0 1 1.7 1.7v19.123a.377 .377 0 0 1-.644 .267L7.333 16.25l-5.764 5.765a.377 .377 0 0 1-.644-.267V2.625a1.7 1.7 0 0 1 1.7-1.7z"/></svg></button>
 <main id="feed"><div id="sent"></div></main>
 <div id="toast" role="status"></div>
@@ -223,6 +228,12 @@ var WA='https://wa.me/4915123849907', feed=document.getElementById('feed'), sent
 var H={l:"<svg class=\"ih\" viewBox=\"0 0 21.4 19.8\" aria-hidden=\"true\"><path d=\"M10.7 18.9C4.3 14.3 1 11.1 1 6.9 1 3.6 3.4 1.1 6.3 1.1c1.9 0 3.5 1 4.4 2.8.9-1.8 2.5-2.8 4.4-2.8 2.9 0 5.3 2.5 5.3 5.8 0 4.2-3.3 7.4-9.7 12z\"/></svg>",i:"<svg class=\"ii\" viewBox=\"0 0 21.8 21.8\" aria-hidden=\"true\"><circle cx=\"10.9\" cy=\"10.9\" r=\"10.1\"/><path d=\"M8.1 16.1h5.6M10.9 16.1V9.5H8.6\" /><circle class=\"pkt\" cx=\"10.8\" cy=\"5.9\" r=\"1.25\"/></svg>",s:"<svg class=\"is\" viewBox=\"0 0 19.2 24\" aria-hidden=\"true\"><path d=\"M5.6 7.8H4.2C2.4 7.8 1 9.2 1 11v8.8C1 21.6 2.4 23 4.2 23H15c1.8 0 3.2-1.4 3.2-3.2V11c0-1.8-1.4-3.2-3.2-3.2h-1.4M9.6 15.2V1.2M5.6 5.2l4-4 4 4\"/></svg>",m:"<svg class=\"im\" viewBox=\"0 0 14.667 23\" aria-hidden=\"true\"><path d=\"M2.625 .925h9.417a1.7 1.7 0 0 1 1.7 1.7v19.123a.377 .377 0 0 1-.644 .267L7.333 16.25l-5.764 5.765a.377 .377 0 0 1-.644-.267V2.625a1.7 1.7 0 0 1 1.7-1.7z\"/></svg>"};
 var idx=[], cache={}, pos={}, modus='alle', quelle=null, laeuft=false, zuende=false, lauf=0, BASIS="", GRENZE=0, gezeigt=0;
 var U=new URLSearchParams(location.search);
+var kt=document.getElementById('kt'), liste=[], ktText=null, ktF=0;
+/* Titel oben: Kapitel des Posts, der gerade den Bildschirm fuellt. Eine Zeile: erst kleiner bis 13,5 pt, dann Auslassungspunkte */
+function kopfTitel(t){if(t===ktText)return;ktText=t;kt.textContent=t;kt.style.fontSize='';var f=16;while(f>13.5&&kt.scrollWidth>kt.clientWidth){f-=.25;kt.style.fontSize=f+'px'}}
+function kopfFolgt(){if(!liste.length)return;var y=60+(innerHeight-60)/2,a=0,b=liste.length-1;while(a<b){var m=Math.ceil((a+b)/2);if(liste[m].getBoundingClientRect().top<=y)a=m;else b=m-1}kopfTitel(String(liste[a]._p.sl[0].c||'').replace(/^\d+\.\s*/,''))}
+addEventListener('scroll',function(){if(ktF)return;ktF=requestAnimationFrame(function(){ktF=0;kopfFolgt()})},{passive:true});
+addEventListener('resize',function(){var t=ktText;ktText=null;if(t!==null)kopfTitel(t)});
 
 function lesen(k){try{return JSON.parse(localStorage.getItem(k))||[]}catch(e){return []}}
 function schreiben(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
@@ -281,7 +292,7 @@ function melde(t){toast.textContent=t;toast.classList.add('an');clearTimeout(mel
 function post(p){
  var el=document.createElement('article');el.className='p';el._p=p;el.dataset.i=p.start||0;
  var ig='https://www.instagram.com/davidlichters/';
- el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="davidlichters on Instagram"><img src="'+BASIS+'a.jpg" alt="" width="32" height="32"></a><div class="who"><a class="nm" href="'+ig+'">davidlichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
+ el.innerHTML='<header class="ph"><a class="av" href="'+ig+'" aria-label="lichters on Instagram"><img src="'+BASIS+'a.jpg" alt="" width="32" height="32"></a><div class="who"><a class="nm" href="'+ig+'">lichters</a><button class="sp" type="button" aria-pressed="false">speak</button></div></header>'+
  '<div class="c"><div class="cr" tabindex="0" aria-label="'+esc(p.titel)+'"></div><span class="pl"></span><button class="pf l" type="button" aria-label="Previous slide">&#8249;</button><button class="pf r" type="button" aria-label="Next slide">&#8250;</button></div>'+
  '<div class="ic"><button class="bl'+(likes.has(p.id)?' on':'')+'" type="button" aria-label="Like" aria-pressed="'+likes.has(p.id)+'">'+H.l+'</button><a class="bi" href="'+WA+'" aria-label="Ask David about this slide on WhatsApp">'+H.i+'</a><button class="bs" type="button" aria-label="Share">'+H.s+'</button><button class="bm'+(saves.indexOf(p.id)>=0?' on':'')+'" type="button" aria-label="Save" aria-pressed="'+(saves.indexOf(p.id)>=0)+'">'+H.m+'</button></div>'+
  '<time class="tm">'+ago(p.u)+'</time>';
@@ -295,7 +306,7 @@ function post(p){
  q('.pf.l').addEventListener('click',function(){zeige(el,Math.max(0,aktuell(el)-1),true)});
  q('.pf.r').addEventListener('click',function(){zeige(el,Math.min(p.sl.length-1,aktuell(el)+1),true)});
  pille(el,+el.dataset.i);
- feed.insertBefore(el,sent);nah.observe(el);
+ feed.insertBefore(el,sent);nah.observe(el);liste.push(el);
  return el;
 }
 function ausPost(f,d,n,u,start){return {id:f+'-'+n,sl:d.p[n],titel:d.p[n][0].t,u:u,start:start||0}}
@@ -306,11 +317,11 @@ function gemerkte(){var l=saves.slice().reverse(),i=0;return function(){if(i>=l.
 
 function weiter(){
  if(laeuft||zuende||!quelle)return;laeuft=true;var r=lauf;
- quelle().then(function(l){if(r!==lauf)return;laeuft=false;if(l===null){zuende=true;if(modus==='gemerkt'&&!feed.querySelector('.p')){var m=document.createElement('p');m.className='leer';m.textContent='No saved posts yet.';feed.insertBefore(m,sent)}return}l.forEach(post);var b=sent.getBoundingClientRect();if(b.top<innerHeight+2500)setTimeout(weiter,0)}).catch(function(){if(r===lauf)laeuft=false});
+ quelle().then(function(l){if(r!==lauf)return;laeuft=false;if(l===null){zuende=true;if(modus==='gemerkt'&&!feed.querySelector('.p')){var m=document.createElement('p');m.className='leer';m.textContent='No saved posts yet.';feed.insertBefore(m,sent);kopfTitel('Saved')}return}l.forEach(post);kopfFolgt();var b=sent.getBoundingClientRect();if(b.top<innerHeight+2500)setTimeout(weiter,0)}).catch(function(){if(r===lauf)laeuft=false});
 }
 var unten=new IntersectionObserver(function(es){if(es[0].isIntersecting)weiter()},{rootMargin:'2500px 0px'});
 
-function leeren(){stop();lauf++;laeuft=false;zuende=false;gezeigt=0;Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
+function leeren(){stop();lauf++;laeuft=false;zuende=false;gezeigt=0;liste=[];kopfTitel('');Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
 function startFeed(){leeren();modus='alle';sv.classList.remove('on');sv.setAttribute('aria-pressed','false');
  var m=(U.get('p')||'').match(/^(\d\d-\d\d)-(\d+)$/);
  if(m&&!startFeed.fertig){startFeed.fertig=1;var a=idx.map(function(e){return e.f}).indexOf(m[1]);if(a>=0){var s=Math.max(0,(+U.get('s')||1)-1);quelle=function(){var q=kursAb(a,+m[2]),erst=true;return function(){return q().then(function(l){if(erst&&l&&l[0]){l[0].start=Math.min(s,l[0].sl.length-1);erst=false}return l})}}();weiter();return}}
