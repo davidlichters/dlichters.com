@@ -297,6 +297,8 @@ button{font:inherit;color:inherit}
   .galerie__spur{aspect-ratio:1/1;background:var(--weiss)}
   .folie img{background:var(--grau-h)}
   .folie:first-child img{background:var(--weiss)}
+  .folie:nth-child(5){display:flex;align-items:center}
+  .folie:nth-child(5) img{height:auto;border-radius:var(--r)}
   .zaehler{display:none}
   .daumen{display:flex;gap:var(--s2);margin-top:var(--s2);overflow-x:auto;scrollbar-width:none;padding:2px}
   .daumen::-webkit-scrollbar{display:none}
