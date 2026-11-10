@@ -501,7 +501,12 @@ function abschnitt(f){if(!cache[f])cache[f]=fetch(BASIS+'d/'+f+'.json').then(fun
 function link(p,i){return FEED+'?p='+p.id+(i?'&s='+(i+1):'')}
 function aktuell(el){var cr=el.querySelector('.cr');if(!cr||!cr.clientWidth||!cr.firstChild)return +el.dataset.i||0;return Math.max(0,Math.min(el._p.sl.length-1,Math.round(cr.scrollLeft/cr.clientWidth)))}
 function pille(el,i){var n=el._p.sl.length,x=el.querySelector('.pl');if(x)x.textContent=(i+1)+'/'+n;var l=el.querySelector('.pf.l'),r=el.querySelector('.pf.r');if(l){l.hidden=i===0;r.hidden=i===n-1}}
-function zeige(el,i,sanft){var cr=el.querySelector('.cr');el.dataset.i=i;if(!cr||!cr.firstChild)return;var w=cr.clientWidth;if(sanft&&cr.scrollTo)cr.scrollTo({left:i*w,behavior:'smooth'});else cr.scrollLeft=i*w;pille(el,i)}
+/* David 10.11.: "bei automatischen scrollen die zahl oben rechts nicht flackert". Gleitet eine Slide von selbst (Speak, Pfeile), zeigt der Zaehler sofort das Ziel. Frueher stellte ihn das Scroll-Ereignis auf halbem Weg noch einmal auf die alte Zahl zurueck: neu, alt, neu. _ziel haelt ihn fest, bis das Gleiten 250 ms steht oder ein Finger die Slides selbst zur Seite schiebt; danach zaehlt er wieder mit der Stelle. */
+function zielFrei(el,nach){clearTimeout(el._zt);if(el._ziel==null)return;el._ziel=null;if(nach)pille(el,aktuell(el))}
+function zielWarte(el,ms){clearTimeout(el._zt);el._zt=setTimeout(function(){zielFrei(el,true)},ms)}
+function zeige(el,i,sanft){var cr=el.querySelector('.cr');el.dataset.i=i;if(!cr||!cr.firstChild)return;var w=cr.clientWidth;
+ if(sanft&&cr.scrollTo){el._ziel=i;zielWarte(el,900);cr.scrollTo({left:i*w,behavior:document.hidden?'auto':'smooth'})}else{zielFrei(el);cr.scrollLeft=i*w}
+ pille(el,i)}
 
 function wach(el){if(el._wach)return;el._wach=1;var cr=el.querySelector('.cr'),p=el._p;tonHol(p.id.slice(0,5));cr.innerHTML=p.sl.map(function(s){return s.k==='n'?'<div class="s n">'+slideNeu(s,BASIS)+'</div>':'<div class="s">'+slideHTML(s)+'</div>'}).join('');var i=+el.dataset.i||0;if(i)cr.scrollLeft=i*cr.clientWidth}
 function schlaf(el){if(!el._wach||(spricht&&spricht.el===el))return;el.dataset.i=aktuell(el);el._wach=0;el.querySelector('.cr').innerHTML=''}
@@ -511,31 +516,58 @@ var nah=new IntersectionObserver(nahFolge,{rootMargin:'1500px 0px'});
 var spricht=null;
 function fertigSprechen(){if(spricht){spricht.btn.textContent='speak';spricht.btn.setAttribute('aria-pressed','false');spricht=null}}
 function stop(){fertigSprechen();try{speechSynthesis.cancel()}catch(e){}try{ton.pause()}catch(e){}}
+/* David 10.11.: "Bei speak beim autoscrollen sollen alle posts auf der hoehe platziert sein das genau name lichters ausserhalb des menu blur ist (wie im beispiel screenshot)". HOEHE = Abstand vom oberen Rand bis zum Kopf des Posts (.ph), aus Davids Bild gemessen (1179 x 2556, 3-fach): der Rand der Slide liegt bei 138,0, der Kopf beginnt 40,33 darueber, die Buchstaben von "lichters" bei 99,67. Der Feed scrollt im Fenster, Saved in #svs. Der allererste Post kommt nicht so tief (79 bei Stelle 0), dort ist der Nebel aber aus. */
+var HOEHE=97.67;
+function aufHoehe(el){var k=el.querySelector('.ph'),drin=svs.contains(el),d=k.getBoundingClientRect().top-(drin?svs.getBoundingClientRect().top:0)-HOEHE;if(Math.abs(d)<.5)return;
+ /* Im Fenster zaehlt die groessere der beiden Hoehen: faehrt die Leiste des Browsers ein, ist der sichtbare Bereich hoeher als der feste, und die Seite laesst sich entsprechend weniger weit schieben. Lieber ein paar Punkte zu viel Rand als ein Post, der nicht hoch genug kommt. */
+ var y=(drin?svs.scrollTop:(window.scrollY||0))+d,se=document.scrollingElement||document.documentElement,max=drin?svs.scrollHeight-svs.clientHeight:se.scrollHeight-Math.max(se.clientHeight,window.innerHeight||0),c=drin?svf:feed;
+ /* Die letzten Posts einer Liste kaemen nicht so hoch, weil darunter Platz fehlt (zwei gemerkte Posts: Kopf bei 215 statt 97,67). Dann waechst der Rand unter der Liste um genau das fehlende Stueck; beim naechsten Oeffnen von Saved und beim Neuaufbau des Feeds gilt wieder der normale Rand von 40. */
+ if(y>max+.5)c.style.paddingBottom=((parseFloat(c.style.paddingBottom)||40)+Math.ceil(y-max))+'px';
+ var ruhe=document.hidden||(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches);
+ try{(drin?svs:window).scrollTo({top:y,behavior:ruhe?'auto':'smooth'})}catch(e){if(drin)svs.scrollTop=y;else window.scrollTo(0,y)}}
+/* David 10.11.: "automatisch am ende des posts runter scrollt zum naechsten und bei vorherigen post speak ausmacht und beim naechsten anmacht und scrollt". Nur am echten Ende des Tons oder des letzten Satzes: Stop von Hand, ein Fehler oder ein anderer Post beenden die Kette. Der naechste Post startet im selben Augenblick, in dem der alte endet; so laeuft der Ton auf dem iPhone ohne neuen Tipp weiter (derselbe Spieler, den der erste Tipp freigegeben hat). */
+function danach(el){var n=el.nextElementSibling;while(n&&!n.classList.contains('p'))n=n.nextElementSibling;return n}
+/* Nur wenn der fertige Post noch (teilweise) auf dem Bildschirm steht, gleitet die Seite zum naechsten. Wer beim Zuhoeren woanders liest, wird nicht quer durch den Feed gezogen; der Ton laeuft trotzdem mit dem naechsten Post weiter. */
+function imBild(el){var r=el.getBoundingClientRect(),b=svs.contains(el)?svs.getBoundingClientRect():{top:0,bottom:window.innerHeight};return r.bottom>b.top&&r.top<b.bottom}
+function folge(mark){var el=mark.el,n=danach(el),da=imBild(el);zeige(el,el._p.sl.length-1,true);fertigSprechen();el._ende=Date.now();if(!n)return;wach(n);
+ /* Einen Post weiter vorausschauen: bei verdecktem Bildschirm ruhen die Beobachter, die sonst Posts wecken, ihre Marken holen und den naechsten Abschnitt nachladen. */
+ var nn=danach(n);if(nn)wach(nn);else if(!svs.contains(n))weiter();
+ sprich(n,n.querySelector('.sp'),da?1:2)}
 /* David 09.11.: Speak laeuft fuer jeden Besucher auf der Website. Der fertige Ton liegt je Post als Datei online, das Handy muss nichts umwandeln. Wo noch keiner liegt, liest die Stimme des Geraets. */
 /* 09.11. abends: der ganze Kurs passt nicht in ein Repo. liste.json nennt je Abschnitt den Ort: "21-08:1" liegt im Repo ton-1, "01-01" allein liegt hier auf der Seite. Steht beides da, gilt das Repo, sobald dort Ton liegt. */
 var TON=location.origin+HIER.replace(/feed\/$/,'ton/'),TONFERN='https://davidlichters.github.io/ton-',ton=new Audio(),tonOrt={},tonM={};ton.preload='none';ton.setAttribute('playsinline','');
 var tonDa=fetch(TON+'liste.json').then(function(r){return r.ok?r.json():[]}).catch(function(){return []}).then(function(l){l.forEach(function(x){var a=String(x).split(':'),o=tonOrt[a[0]]||(tonOrt[a[0]]={});if(/^\d+$/.test(a[1]||''))o.r=TONFERN+a[1]+'/';else o.l=TON})});
 function tonLies(b,f){return b?fetch(b+f+'/m.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}):Promise.resolve(null)}
 function tonHol(f){if(tonM[f])return;var e=tonM[f]={w:null,b:''};tonDa.then(function(){var o=tonOrt[f];if(!o)return;return tonLies(o.r,f).then(function(j){if(j){e.b=o.r;e.w=j;return}return tonLies(o.l,f).then(function(k){if(k){e.b=o.l;e.w=k}})})}).catch(function(){})}
-function spieleTon(el,btn,f,n,marken,basis){
+function spieleTon(el,btn,f,n,marken,basis,auto){
  var mark={el:el,btn:btn},letzte=-1;try{speechSynthesis.cancel()}catch(e){}
  fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
  ton.src=basis+f+'/'+n+'.m4a';
  ton.ontimeupdate=function(){if(spricht!==mark)return;var i=marken.length-1;while(i>0&&marken[i]>ton.currentTime+.05)i--;if(i!==letzte){letzte=i;zeige(el,i,true)}};
- ton.onended=ton.onerror=function(){if(spricht===mark)fertigSprechen()};
- var p=ton.play();if(p&&p.catch)p.catch(function(){if(spricht===mark)fertigSprechen()});
+ ton.onended=function(){if(spricht===mark)folge(mark)};
+ ton.onerror=function(){if(spricht===mark)fertigSprechen()};
+ /* Lehnt das Geraet den Start in der Kette ab (kein Tipp hat den Spieler freigegeben), sagt die Seite, was zu tun ist. */
+ var p=ton.play();if(p&&p.catch)p.catch(function(e){if(spricht===mark){fertigSprechen();if(auto&&e&&e.name==='NotAllowedError')melde('Tap speak to continue')}});
 }
 function stimme(){var v=speechSynthesis.getVoices().filter(function(x){return /^en[-_](US|GB)/i.test(x.lang)});
  function p(x){var n=x.name;if(/^Jamie/.test(n))return 9;/* Davids Wahl 09.11.: Jamie, wenn das Geraet sie der Seite zeigt */return /premium/i.test(n)?5:/enhanced|neural|natural/i.test(n)?4:/^(Daniel|Ava|Zoe|Evan|Nathan|Noelle|Allison|Susan|Tom)\b|^Google (US|UK) English/.test(n)?3:/^Samantha/.test(n)?2:/Eloquence|Fred|Albert|Bad News|Bells|Boing|Bubbles|Cellos|Good News|Jester|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox/i.test(n)?0:1}
  return v.sort(function(a,b){return p(b)-p(a)})[0]||null}
-function sprich(el,btn){
+/* auto: 1 oder 2 = von der Kette gestartet (folge), nicht vom Finger; bei 2 bleibt die Seite stehen, weil der Leser woanders ist. */
+/* frei: was ein Tipp schon freigegeben hat. Auf dem iPhone spricht die Stimme des Geraets (s) und spielt der Spieler (t) ohne Tipp erst, wenn je ein Tipp sie einmal angestossen hat. Darum stoesst der erste Tipp auf Speak beide an: beim fertigen Ton ein leerer Satz (spieleTon nimmt ihn mit cancel im selben Augenblick wieder weg), bei der Stimme ein leeres Laden des Spielers. So laeuft die Kette auch ueber den Wechsel zwischen Posts mit und ohne fertigen Ton (heute nach Post 10). Am echten iPhone nicht gemessen; bleibt es dort doch stumm, greift der Waechter unten. */
+var frei={s:0,t:0};
+function sprich(el,btn,auto){
  if(spricht&&spricht.el===el){stop();return}
  var tid=el._p.id.match(/^(\d\d-\d\d)-(\d+)$/),te=tid&&tonM[tid[1]],tm=te&&te.w&&te.w[tid[2]];
  /* Fertiger Ton nur, wenn er zu den Slides passt: je Slide genau eine Marke. Die Posts im neuen Slide-Design haben andere Slides als ihre alte Aufnahme; bis zur neuen Aufnahme liest dort die Stimme des Geraets. */
- if(tm&&tm.length===el._p.sl.length){spieleTon(el,btn,tid[1],tid[2],tm,te.b);return}
+ if(tm&&tm.length===el._p.sl.length){
+  if(!auto){frei.t=1;if(!frei.s&&window.speechSynthesis&&window.SpeechSynthesisUtterance){frei.s=1;try{speechSynthesis.speak(new SpeechSynthesisUtterance(' '))}catch(e){}}}
+  if(auto!==2)aufHoehe(el);spieleTon(el,btn,tid[1],tid[2],tm,te.b,auto);return}
+ if(!auto&&!frei.t){frei.t=1;try{ton.load()}catch(e){}}
  try{ton.pause()}catch(e){}
- var S=window.speechSynthesis;if(!S){melde('Speech is not available in this browser');return}
- var mark={el:el,btn:btn},lief=S.speaking||S.pending;
+ var S=window.speechSynthesis;if(!S){if(!auto)melde('Speech is not available in this browser');return}
+ if(!auto)frei.s=1;
+ if(auto!==2)aufHoehe(el);
+ var mark={el:el,btn:btn},lief=S.speaking||S.pending,an=0;
  fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
  function los(){
   if(spricht!==mark)return;
@@ -544,10 +576,13 @@ function sprich(el,btn){
   tx.forEach(function(t,i){if(t&&t.trim())le=i});
   if(le<0){fertigSprechen();return}
   tx.forEach(function(t,i){if(!t||!t.trim())return;var u=new SpeechSynthesisUtterance(t);u.lang=vo?vo.lang:'en-US';if(vo)u.voice=vo;u.rate=1.3;/* David 09.11.: 1,3x ist am besten */
-   u.onstart=function(){if(spricht===mark)zeige(el,i,true)};
-   if(i===le)u.onend=function(){if(spricht===mark){if(le<sl.length-1)zeige(el,sl.length-1,true);fertigSprechen()}};
-   u.onerror=function(ev){if(spricht===mark&&ev.error!=='canceled'&&ev.error!=='interrupted')fertigSprechen()};
+   u.onstart=function(){an=1;if(spricht===mark)zeige(el,i,true)};
+   if(i===le)u.onend=function(){if(spricht===mark)folge(mark)};/* folge zeigt erst die letzte Slide, dann geht es zum naechsten Post */
+   /* Ein echter Fehler beendet alles (stop nimmt auch die restlichen Saetze aus der Warteschlange, sonst laese die Stimme ohne Knopf weiter). Verweigert das Geraet den Start in der Kette, sagt die Seite, was zu tun ist. */
+   u.onerror=function(ev){if(spricht===mark&&ev.error!=='canceled'&&ev.error!=='interrupted'){stop();if(auto&&ev.error==='not-allowed')melde('Tap speak to continue')}};
    S.speak(u)});
+  /* Waechter: bleibt die Stimme des Geraets in der Kette stumm (sie meldet dann weder Start noch Ende), geht Speak nach 4 s ohne Start sauber aus, statt fuer immer "stop" zu zeigen, und die Seite sagt, was zu tun ist. */
+  if(auto)setTimeout(function(){if(spricht===mark&&!an){stop();melde('Tap speak to continue')}},4000);
  }
  if(lief){S.cancel();setTimeout(los,120)}else los();
 }
@@ -563,14 +598,22 @@ function post(p,ziel){
  '<div class="ic"><button class="bl'+(likes.has(p.id)?' on':'')+'" type="button" aria-label="Like" aria-pressed="'+likes.has(p.id)+'">'+H.l+'</button><a class="bi" href="'+WA+'" aria-label="Ask David about this slide on WhatsApp">'+H.i+'</a><button class="bs" type="button" aria-label="Share">'+H.s+'</button><button class="bm'+(saves.indexOf(p.id)>=0?' on':'')+'" type="button" aria-label="Save" aria-pressed="'+(saves.indexOf(p.id)>=0)+'">'+H.m+'</button></div>'+
  '<time class="tm">'+ago(p.u)+'</time>';
  var cr=el.querySelector('.cr'),q=function(s){return el.querySelector(s)},t=0;
- cr.addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;pille(el,aktuell(el))})},{passive:true});
- q('.sp').addEventListener('click',function(){sprich(el,this)});
+ cr.addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=0;var a=aktuell(el);if(el._ziel!=null){zielWarte(el,250);if(a!==el._ziel)return}pille(el,a)})},{passive:true});
+ /* Schiebt der Finger (oder Rad, Pfeiltaste) die Slides selbst zur Seite, gilt sofort wieder die echte Stelle. Ein Finger, der nur die Seite hoch oder runter schiebt, laesst den Zaehler in Ruhe. */
+ var fx0=0,fy0=0,fax=0;/* fax: Richtung dieses Fingers, einmal je Beruehrung entschieden (1 quer, 2 hoch oder runter), damit ein Hoch-und-runter mit etwas Seitendrift nicht als Wisch zaehlt */
+ cr.addEventListener('touchstart',function(e){var f=e.touches[0];fax=0;if(f){fx0=f.clientX;fy0=f.clientY}},{passive:true});
+ cr.addEventListener('touchmove',function(e){var f=e.touches[0];if(!f)return;if(!fax){var dx=Math.abs(f.clientX-fx0),dy=Math.abs(f.clientY-fy0);if(dx>8||dy>8)fax=dx>dy?1:2}if(fax===1&&el._ziel!=null)zielFrei(el,true)},{passive:true});
+ cr.addEventListener('wheel',function(e){if(el._ziel!=null&&Math.abs(e.deltaX)>Math.abs(e.deltaY))zielFrei(el,true)},{passive:true});
+ cr.addEventListener('keydown',function(e){if(el._ziel!=null&&/^Arrow(Left|Right)$|^Home$|^End$/.test(e.key))zielFrei(el,true)});
+ /* Tipp auf den Post, der gerade eben zu Ende war (die Kette liest schon den naechsten): gemeint ist Stop, nicht noch einmal von vorn. */
+ q('.sp').addEventListener('click',function(){if(spricht&&spricht.el!==el&&Date.now()-(el._ende||0)<600){stop();return}sprich(el,this)});
  q('.bl').addEventListener('click',function(){var b=this,on=!likes.has(p.id);if(on)likes.add(p.id);else likes.delete(p.id);schreiben('feed.likes',Array.from(likes));b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.classList.remove('pop');void b.offsetWidth;if(on)b.classList.add('pop')});
  q('.bm').addEventListener('click',function(){var at=saves.indexOf(p.id),on=at<0;if(on)saves.push(p.id);else saves.splice(at,1);schreiben('feed.saved',saves);this.classList.toggle('on',on);this.setAttribute('aria-pressed',on);svSync()});
  q('.bs').addEventListener('click',function(){var i=aktuell(el),u=link(p,i);if(navigator.share){navigator.share({title:p.titel,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){melde('Link copied')})}else{prompt('Copy this link',u)}});
  q('.bi').addEventListener('click',function(){var i=aktuell(el),z=sichtbar(p.sl[i]).slice(0,900),text='Hi David, I need help with this:\n\n'+(z?'"'+z+'"\n\n':'')/* die Ende-Slide im neuen Design ist nur ein Bild, dann ohne leeres Zitat */+p.titel+', slide '+(i+1)+'/'+p.sl.length+'\n'+link(p,i);this.href=WA+'?text='+encodeURIComponent(text);if(matchMedia('(hover:hover) and (pointer:fine)').matches)this.target='_blank'});
- q('.pf.l').addEventListener('click',function(){zeige(el,Math.max(0,aktuell(el)-1),true)});
- q('.pf.r').addEventListener('click',function(){zeige(el,Math.min(p.sl.length-1,aktuell(el)+1),true)});
+ /* Pfeile zaehlen ab dem Ziel, das der Zaehler schon zeigt: schnelle Klicks hintereinander gehen so je eine Slide weiter, statt verschluckt zu werden. */
+ q('.pf.l').addEventListener('click',function(){var a=el._ziel!=null?el._ziel:aktuell(el);zeige(el,Math.max(0,a-1),true)});
+ q('.pf.r').addEventListener('click',function(){var a=el._ziel!=null?el._ziel:aktuell(el);zeige(el,Math.min(p.sl.length-1,a+1),true)});
  pille(el,+el.dataset.i);
  if(ziel){ziel.b.insertBefore(el,ziel.v);ziel.o.observe(el)}else{feed.insertBefore(el,sent);nah.observe(el);liste.push(el)}
  return el;
@@ -586,7 +629,7 @@ function weiter(){
 }
 var unten=new IntersectionObserver(function(es){if(es[0].isIntersecting)weiter()},{rootMargin:'2500px 0px'});
 
-function leeren(){stop();lauf++;laeuft=false;zuende=false;gezeigt=0;liste=[];kopfTitel('');Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
+function leeren(){stop();lauf++;laeuft=false;zuende=false;gezeigt=0;liste=[];kopfTitel('');feed.style.paddingBottom='';Array.prototype.slice.call(feed.querySelectorAll('.p,.leer')).forEach(function(e){nah.unobserve(e);e.remove()});scrollTo(0,0)}
 function startFeed(){leeren();
  var m=(U.get('p')||'').match(/^(\d\d-\d\d)-(\d+)$/);
  if(m&&!startFeed.fertig){startFeed.fertig=1;var a=idx.map(function(e){return e.f}).indexOf(m[1]);if(a>=0){var s=Math.max(0,(+U.get('s')||1)-1);quelle=function(){var q=kursAb(a,+m[2]),erst=true;return function(){return q().then(function(l){if(erst&&l&&l[0]){l[0].start=Math.min(s,l[0].sl.length-1);erst=false}return l})}}();weiter();return}}
@@ -606,7 +649,7 @@ function svSync(){return idxDa.then(function(){return Promise.all(saves.slice().
 /* Einmal unsichtbar ausserhalb des Bildschirms vormalen, sonst stockt das allererste Oeffnen (gemessen 227 ms statt 45) */
 function svWarm(){if(svOffen||svWarm.f||!Object.keys(svEl).length)return;svWarm.f=1;svp.style.visibility='visible';requestAnimationFrame(function(){requestAnimationFrame(function(){requestAnimationFrame(function(){if(!svOffen)svp.style.visibility=''})})})}
 function zustand(){liste.concat(Object.keys(svEl).map(function(k){return svEl[k]})).forEach(function(el){var id=el._p.id,b=el.querySelector('.bm'),l=el.querySelector('.bl'),s=saves.indexOf(id)>=0,h=likes.has(id);b.classList.toggle('on',s);b.setAttribute('aria-pressed',s);l.classList.toggle('on',h);l.setAttribute('aria-pressed',h)})}
-function svAuf(zug){if(svOffen)return;svOffen=true;clearTimeout(svT);if(spricht)stop();zustand();svs.scrollTop=0;svp.setAttribute('aria-hidden','false');
+function svAuf(zug){if(svOffen)return;svOffen=true;clearTimeout(svT);if(spricht)stop();zustand();svf.style.paddingBottom='';svs.scrollTop=0;svp.setAttribute('aria-hidden','false');
  if(!zug){svp.classList.remove('zug');svp.classList.add('an');return}
  svp.style.visibility='visible';requestAnimationFrame(function(){requestAnimationFrame(function(){if(!svOffen)return;svp.classList.add('zug');void svp.offsetWidth;svp.classList.add('an');svp.style.visibility=''})})}
 function svZu(zug){if(!svOffen)return;svOffen=false;if(spricht)stop();svp.setAttribute('aria-hidden','true');svp.classList.toggle('zug',zug);if(zug)void svp.offsetWidth;svp.classList.remove('an');zustand();clearTimeout(svT);svT=setTimeout(svSync,zug?460:0)}
