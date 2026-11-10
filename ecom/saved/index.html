@@ -139,6 +139,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cu
 .s .tl.m{font-size:1em;line-height:1.22;letter-spacing:-.012em}
 .s .kl{display:block;font-size:.66em;line-height:1.3;font-weight:400;color:#1d1d1f;letter-spacing:0}
 .s .kl:first-child{margin-bottom:.8em}.s .kl:last-child{margin-top:.8em}
+/* Neues Slide-Design (David 10.11.: "Bau die Slides genau so"): Slides mit der Klasse n zeichnet slideNeu() aus ecom_slides.js, alle Masse stehen dort inline wie in Davids Vorlage. Hier wird nur zurueckgesetzt, was die alten Regeln von .s und der Seite sonst hineintragen wuerden (Flex-Kasten, Rand, Mitte, Grau, Kastenmass). Gemessen wird das von ecom_slides_pruefen.sh: jedes Element liegt wie in der Vorlage. */
+.s.n{display:block;padding:0;text-align:left;background:#fff;color:#111;line-height:normal;letter-spacing:normal;font-size:16px;font-weight:400}
+.s.n *{box-sizing:content-box}
 /* System aus Davids Bildern (09.11., 3-fach gemessen): 1/5 bis 5/5 sind alle 101,9 x 77,5 Bildpunkte, Schrift mittig; 1/13 ist 109 breit. Das passt nur so:
    feste Mindestbreite 33,97 pt fuer kurze Zahlen, darueber Textbreite plus fester Rand 7,17 pt je Seite. Volle Kapsel, rechte Kante bleibt stehen. Alles waechst mit der Slide-Breite. */
 .pl{position:absolute;top:14.4px;right:14.4px;min-width:33.97px;height:25.8px;padding:0 7.17px;border-radius:12.9px;background:rgba(45,45,45,.54);color:#fff;font-size:11.7px;line-height:25.8px;text-align:center;white-space:nowrap;pointer-events:none;z-index:2}
@@ -170,9 +173,20 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;margin:0;cu
 #saved:active svg,#zu:active{opacity:.5}
 html.gn-lock #saved,html.gn-lock #zu{visibility:hidden}
 /* Davids Skizze 09.11.: Kapitelname fett, darunter lichters, mittig. Lage aus der Skizze (3-fach). Nie Auslassungspunkte. */
-#kopf,#sv .kopf{top:0;left:0;right:0;height:60px;background:#fff}
+#kopf,#sv .kopf{top:0;left:0;right:0;height:60px}
 #kopf{position:fixed;z-index:9000}
 #sv .kopf{position:absolute;z-index:2;touch-action:none}
+/* David 10.11.: "oben kein balken sondern den selben nebel wie /diet hat". Der Kopf hat keinen Hintergrund mehr, der Inhalt laeuft unter einem weichen weissen Nebel durch. Werte 1:1 von dlichters.com/diet (.navfx): 104 hoch, Blur 2 mit Maske, Weiss .85 bis 56 Prozent und dann auf 0, aus bei Scroll 0, an ab 2 px (nebel() im JS). Der Nebel liegt direkt unter dem Kopf: Titel, Merken-Symbol, Pfeil und die 2 Striche bleiben darueber und tippbar. */
+.navfx{top:0;left:0;right:0;height:104px;pointer-events:none;opacity:0;transition:opacity .2s}
+.navfx::before,.navfx::after{content:"";position:absolute;inset:0}
+.navfx::before{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);-webkit-mask-image:linear-gradient(#000 67%,transparent 88%);mask-image:linear-gradient(#000 67%,transparent 88%)}
+.navfx::after{background:linear-gradient(rgba(255,255,255,.85) 56%,rgba(255,255,255,0))}
+.navfx.on{opacity:1}
+#fx{position:fixed;z-index:8999}
+/* Saved scrollt in #svs, darum ein eigener Nebel in #sv: ueber dem Scroller, unter .kopf. #svs bekommt eine eigene Ebene (z-index 0), sonst malt die Pille 1/16 (z-index 2) ueber Nebel und Kopf. Solange die Seite draussen ist, schaltet der Nebel ohne Uebergang, damit beim Hereinschieben kein alter Nebel nachblendet. */
+#svfx{position:absolute;z-index:1}
+#svs{z-index:0}
+#sv:not(.an) #svfx{transition:none}
 #kt,#sv .kt{position:absolute;top:16.64px;left:44px;right:44px;margin:0;font-size:16px;line-height:20px;font-weight:700;letter-spacing:0;text-align:center;white-space:nowrap;overflow:hidden;color:var(--fg)}
 #kn,#sv .kn{position:absolute;top:36.2px;left:50%;transform:translateX(-50%);font-size:12.5px;line-height:16px;color:var(--fg);white-space:nowrap}
 /* /ecom/saved: eigene Seite, kommt von rechts und geht nach rechts zurueck (David 09.11.). Die 2 Striche liegen darueber und bleiben stehen. */
@@ -234,10 +248,12 @@ else{g.classList.add("gn-open");trig.setAttribute("aria-label","Close");trig.set
 setTimeout(function(){g.classList.add("gn-fertig");document.documentElement.classList.add("gn-lock");busy=0},Math.max(r,200+20*8+240))}});
 document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
+<div class="navfx" id="fx" aria-hidden="true"></div>
 <header id="kopf"><h1 id="kt"></h1><a id="kn" href="https://www.instagram.com/davidlichters/">lichters</a></header>
 <button id="saved" type="button" aria-label="Saved posts"><svg class="im" viewBox="0 0 14.667 23" aria-hidden="true"><path d="M2.625 .925h9.417a1.7 1.7 0 0 1 1.7 1.7v19.123a.377 .377 0 0 1-.644 .267L7.333 16.25l-5.764 5.765a.377 .377 0 0 1-.644-.267V2.625a1.7 1.7 0 0 1 1.7-1.7z"/></svg></button>
 <main id="feed"><div id="sent"></div></main>
 <section id="sv" aria-label="Saved posts" aria-hidden="true">
+<div class="navfx" id="svfx" aria-hidden="true"></div>
 <div class="kopf"><a id="zu" href="../feed/" aria-label="Back"><span class="gn-chevron-icon" aria-hidden="true"><svg height="48" viewBox="0 0 9 48" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m1.5618 24.0621 6.5581-6.4238c.2368-.2319.2407-.6118.0088-.8486-.2324-.2373-.6123-.2407-.8486-.0088l-7 6.8569c-.1157.1138-.1807.2695-.1802.4316.001.1621.0674.3174.1846.4297l7 6.7241c.1162.1118.2661.1675.4155.1675.1577 0 .3149-.062.4326-.1846.2295-.2388.2222-.6187-.0171-.8481z"/></svg></span></a><h2 class="kt">Saved</h2><a class="kn" href="https://www.instagram.com/davidlichters/">lichters</a></div>
 <div id="svs"><div id="svf"><div id="svsent"></div></div></div>
 </section>
@@ -269,10 +285,213 @@ function fett(s){return esc(s).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/
 function ago(t){var s=Math.max(60,Date.now()/1000-t),a=[[31536000,'year'],[2592000,'month'],[604800,'week'],[86400,'day'],[3600,'hour'],[60,'minute']];
  for(var i=0;i<a.length;i++){var n=Math.floor(s/a[i][0]);if(n>=1)return n+' '+a[i][1]+(n>1?'s':'')+' ago'}return 'just now'}
 function klar(s){return s.replace(/\*\*/g,'')}
-function vorlese(sl){if(sl.k==='t')return [sl.t,sl.s].filter(Boolean).join('. ');return klar((sl.h?sl.h+'. ':'')+sl.t.replace(/\n/g,'. '))}
-function sichtbar(sl){if(sl.k==='t')return sl.t;return klar((sl.h?sl.h+'\n':'')+sl.t)}
+/* Slides im neuen Design (k 'n') bringen beide Texte fertig mit: v fuer die Stimme, x zum Lesen. Die Ende-Slide hat keinen Text. */
+function vorlese(sl){if(sl.k==='n')return sl.v||'';if(sl.k==='t')return [sl.t,sl.s].filter(Boolean).join('. ');return klar((sl.h?sl.h+'. ':'')+sl.t.replace(/\n/g,'. '))}
+function sichtbar(sl){if(sl.k==='n')return sl.x||'';if(sl.k==='t')return sl.t;return klar((sl.h?sl.h+'\n':'')+sl.t)}
 
-/* Das Innere einer Slide. Hier kommt Davids Slide-Design rein. */
+/* Neues Slide-Design (David 10.11.: "Bau die Slides genau so"): slideNeu(sl,basis) zeichnet eine Slide mit k 'n' genau wie Davids Vorlage.
+   Der Text darunter ist die Datei ecom_slides.js, unveraendert eingesetzt; ecom_slides_test.py vergleicht sie Byte fuer Byte mit der Vorlage. */
+/* ecom_slides.js: zeichnet EINE Slide im neuen Design des Kurs-Feeds (dlichters.com/ecom/feed).
+
+   Vorlage: ~/kurs/slides/vorlage/reference.html (Davids Design-Canvas, Regeln in README.md daneben).
+   slideNeu(sl, basis) gibt den Container der Vorlage als HTML-Text zurueck, Byte fuer Byte gleich, nur mit
+   voller Breite und Hoehe statt 400 x 300 px. Alle Stile stehen inline, alle Masse in cqw.
+   Richter ist ecom_slides_test.py: die 43 Slides der Vorlage muessen gleich herauskommen.
+
+   Dieselbe Datei laeuft an zwei Orten: im script-Block der Feed-Seite (danach gibt es genau EINEN neuen Namen,
+   slideNeu) und unter node (module.exports). Nur altes JavaScript: var, function, Text verbinden.
+   Die Datei enthaelt kein Prozentzeichen (dafuer String.fromCharCode(37)), kein schliessendes script-Tag und
+   keine langen Striche. So passt sie unveraendert in die Seite und auch in einen Python-Formatstring.
+
+   sl = kurze Slide-Form aus ecom_slides.py, immer mit k:'n' und y:Art:
+     start      c Kapitel, t Titel, s Untertitel, i Bild        end       i Bild
+     story      n Einleitung (freiwillig), m [[Name, Text], ...]
+     term, statement, risk, check, remember                      h Kopf (freiwillig), t Text
+     quiz       q Frage, o [3 Antworten], a Nummer der richtigen (wird hier nicht gezeigt)
+     compare    h Kopf, bx [[Begriff, Erklaerung], [Begriff, Erklaerung]]
+     steps      h Kopf, st [Schritte]                            list      h Kopf, it [Punkte], f Schluss (freiwillig)
+     section    t Text                                           numbers   h Kopf, ca [[Zahl, Beschriftung], ...]
+   basis = Adresse vor dem Bild: src ist basis + sl.i.
+
+   Auf der Seite gehoert die Slide in einen Kasten mit fester Groesse im Format 4:3, als Block, ohne Innenabstand
+   und linksbuendig (im Feed etwa .s.n{display:block;padding:0;text-align:left}). So gemessen am 10.11.2026 im
+   Feed-Aufbau: jedes der 355 Elemente der 43 Vorlage-Slides liegt am selben Ort wie in reference.html.
+   Alle Groessen sind cqw wie in der Vorlage: ein Browser ohne Container-Einheiten zeigt sie nicht richtig.
+
+   Regeln (aus der Vorlage gemessen):
+   - Textarten: Woerter von Kopf plus Text zaehlen (ohne Etikett, ohne **). Bis 14 Woerter 6.2cqw mit
+     Zeilenhoehe 1.18, sonst 4.8cqw mit 1.28.
+   - Reicher Text (**fett** und Geldbetraege orange) nur dort, wo die Vorlage ihn hat: Kopf und Text der
+     Textarten, Kopf von compare und steps, Punkte und Schluss von list. Ueberall sonst schlichter Text,
+     ein ** wird dort entfernt und nie gezeigt.
+   - Geld: Dollarzeichen plus Zahl, Tausender-Kommas, Dezimalstellen, k oder M, Plus, auch "X to Y" als ein
+     Stueck. Ein Komma direkt dahinter gehoert dazu (so steht es in der Vorlage), ein Punkt am Satzende nicht.
+     Auf der orangen Merksatz-Slide ist der Betrag weiss und fett, orange auf orange waere unsichtbar.
+   - Story: David rechts in Gruen, alle anderen links in Dunkelgrau. Die Namenszeile steht nur, wenn der
+     Sprecher ein anderer ist als bei der Nachricht davor.
+   - Zeichen: &, < und > werden zu Entities. Anfuehrungszeichen und Apostrophe bleiben im Text, wie sie sind
+     (die Vorlage schreibt Apostrophe direkt). Nur in der Bildadresse wird " zu &quot;. */
+function slideNeu(sl, basis) {
+  var P = String.fromCharCode(37);
+  var VOLL = 'width: 100' + P + '; height: 100' + P;
+  var PFEIL = String.fromCharCode(8594);
+  var ORANGE = '#C2410C';
+  var KASTEN = '<div style="position: relative; ' + VOLL + '; flex: 0 0 auto; container-type: inline-size; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, \'SF Pro Display\', \'SF Pro Text\', \'Helvetica Neue\', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; ';
+  var WEISS = 'background: #FFFFFF; color: #111111">';
+  var INNEN = '<div style="position: absolute; inset: 0; box-sizing: border-box; padding: 6cqw 7cqw; display: flex; flex-direction: column; justify-content: center; align-items: stretch">';
+  var BLOCK = '<div style="display: flex; flex-direction: column; gap: 2.4cqw">';
+  var ABSATZ = '<p style="margin: 0; font-size: 4.8cqw; line-height: 1.28; font-weight: 500; letter-spacing: -0.005em">';
+  var ABSATZ_KURZ = '<p style="margin: 0; font-size: 6.2cqw; line-height: 1.18; font-weight: 500; letter-spacing: -0.005em">';
+  var GELD = /\$\d[\d,]*(?:\.\d+)?(?:[kKmM](?![A-Za-z]))?\+?(?: to \$\d[\d,]*(?:\.\d+)?(?:[kKmM](?![A-Za-z]))?\+?)?/g;
+  var ETIKETT = {
+    term: ['Term', '#EDE9FE', '#5B21B6'],
+    risk: ['Risk', '#FEE2E2', '#B91C1C'],
+    check: ['Check', '#FEF3C7', '#92400E'],
+    quiz: ['Quiz', '#DBEAFE', '#1D4ED8'],
+    remember: ['Remember', '#FFFFFF', ORANGE]
+  };
+  var y, a, i, e, liste, name, vor, rechts, merk, kurz, geldfarbe, stil;
+
+  function txt(v) { return v === null || v === undefined ? '' : String(v); }
+  function esc(v) { return txt(v).split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;'); }
+  function attr(v) { return esc(v).split('"').join('&quot;'); }
+  function ohneMarken(v) { return txt(v).split('**').join(''); }
+  /* schlichter Text: ** entfernt, Zeichen gesichert */
+  function klar(v) { return esc(ohneMarken(v)); }
+  function geld(s, farbe) {
+    return s.replace(GELD, function (m) { return '<span style="color: ' + farbe + '; font-weight: 800">' + m + '</span>'; });
+  }
+  /* reicher Text: **x** wird fett, Geldbetraege bekommen Farbe. Ein ** ohne Partner wird nur entfernt. */
+  function reich(v, farbe) {
+    var teile = txt(v).split('**'), aus = '', n, t;
+    for (n = 0; n < teile.length; n++) {
+      t = geld(esc(teile[n]), farbe);
+      if ((n & 1) && n < teile.length - 1) { if (t) aus += '<b style="font-weight: 800">' + t + '</b>'; }
+      else aus += t;
+    }
+    return aus;
+  }
+  function woerter(v) {
+    var w = ohneMarken(v).split(/\s+/), z = 0, n;
+    for (n = 0; n < w.length; n++) { if (w[n]) z++; }
+    return z;
+  }
+  function pille(art) {
+    var p = ETIKETT[art];
+    return '<div style="align-self: flex-start; font-size: 3.2cqw; font-weight: 700; line-height: 1.2; padding: 0.9cqw 2.4cqw; border-radius: 999px; background: ' + p[1] + '; color: ' + p[2] + '; margin-bottom: 3cqw">' + p[0] + '</div>';
+  }
+  function bild() {
+    return sl.i ? '<img src="' + attr(txt(basis) + sl.i) + '" alt="" style="position: absolute; inset: 0; ' + VOLL + '; object-fit: cover">' : '';
+  }
+  /* Kopf wie bei compare und steps: derselbe Absatz wie auf den Textarten, immer in der normalen Groesse */
+  function kopfBlock() {
+    return sl.h ? BLOCK + ABSATZ + reich(sl.h, ORANGE) + '</p></div>' : '';
+  }
+
+  if (!sl) return '';
+  y = sl.y;
+
+  if (y === 'start') {
+    a = KASTEN + 'background: #000000">' + bild() + '<div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.5)"></div><div style="position: absolute; inset: 0; box-sizing: border-box; padding: 6cqw 9cqw; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #FFFFFF; text-shadow: 0 0.2cqw 1.2cqw rgba(0, 0, 0, 0.35)">';
+    if (sl.c) a += '<p style="margin: 0 0 2cqw; font-size: 3.4cqw; font-weight: 700; color: rgba(255, 255, 255, 0.85)">' + klar(sl.c) + '</p>';
+    a += '<h1 style="margin: 0; font-size: 8.2cqw; font-weight: 800; line-height: 1.04; letter-spacing: -0.015em; text-wrap: balance">' + klar(sl.t) + '</h1>';
+    if (sl.s) a += '<p style="margin: 3cqw 0 0; max-width: 74cqw; font-size: 3.5cqw; font-weight: 600; line-height: 1.3; color: rgba(255, 255, 255, 0.9)">' + klar(sl.s) + '</p>';
+    return a + '</div></div>';
+  }
+
+  if (y === 'end') return KASTEN + 'background: #000000">' + bild() + '</div>';
+
+  if (y === 'story') {
+    a = KASTEN + WEISS + INNEN;
+    if (sl.n) a += '<p style="margin: 0 0 2.6cqw; font-size: 3.2cqw; font-weight: 600; line-height: 1.3; color: #6E6E73">' + klar(sl.n) + '</p>';
+    a += '<div style="display: flex; flex-direction: column; gap: 1.8cqw">';
+    liste = sl.m || [];
+    vor = null;
+    for (i = 0; i < liste.length; i++) {
+      e = liste[i] || [];
+      name = txt(e[0]);
+      rechts = name === 'David';
+      a += '<div style="align-self: ' + (rechts ? 'flex-end' : 'flex-start') + '; max-width: 80' + P + '; display: flex; flex-direction: column">';
+      if (name && name !== vor) a += '<p style="margin: 0 1.4cqw 0.7cqw; font-size: 3.1cqw; font-weight: 700; color: #6E6E73; text-align: ' + (rechts ? 'right' : 'left') + '">' + klar(name) + '</p>';
+      a += '<p style="margin: 0; padding: 1.7cqw 3cqw; border-radius: 3.6cqw; background: ' + (rechts ? '#144D36' : '#242626') + '; color: #FFFFFF; font-size: 4.3cqw; line-height: 1.26; font-weight: 500">' + klar(e[1]) + '</p></div>';
+      vor = name;
+    }
+    return a + '</div></div></div>';
+  }
+
+  if (y === 'quiz') {
+    a = KASTEN + WEISS + INNEN + pille('quiz') + '<p style="margin: 0 0 2.6cqw; font-size: 4.6cqw; font-weight: 800; line-height: 1.22; letter-spacing: -0.005em">' + klar(sl.q) + '</p><div style="display: flex; flex-direction: column; gap: 1.4cqw">';
+    liste = sl.o || [];
+    for (i = 0; i < liste.length; i++) {
+      a += '<div style="display: flex; align-items: center; gap: 2.4cqw; background: #F2F2F7; border-radius: 2.4cqw; padding: 1.5cqw 2.4cqw"><span style="flex: 0 0 5cqw; height: 5cqw; box-sizing: border-box; border-radius: 50' + P + '; background: #FFFFFF; border: 0.3cqw solid #C7C7CC; display: flex; align-items: center; justify-content: center; font-size: 2.8cqw; font-weight: 800">' + String.fromCharCode(65 + i) + '</span><span style="font-size: 4cqw; line-height: 1.25; font-weight: 500">' + klar(liste[i]) + '</span></div>';
+    }
+    return a + '</div><p style="margin: 2.4cqw 0 0; font-size: 3.1cqw; font-weight: 600; color: #6E6E73">Swipe for the answer ' + PFEIL + '</p></div></div>';
+  }
+
+  if (y === 'compare') {
+    a = KASTEN + WEISS + INNEN + kopfBlock() + '<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.4cqw; margin-top: 3.4cqw">';
+    liste = sl.bx || [];
+    for (i = 0; i < liste.length; i++) {
+      e = liste[i] || [];
+      a += '<div style="background: #F2F2F7; border-radius: 2.6cqw; padding: 3cqw"><p style="margin: 0 0 1cqw; font-size: 4.2cqw; font-weight: 800; line-height: 1.2">' + klar(e[0]) + '</p><p style="margin: 0; font-size: 3.8cqw; font-weight: 500; line-height: 1.3; color: #3A3A3C">' + klar(e[1]) + '</p></div>';
+    }
+    return a + '</div></div></div>';
+  }
+
+  if (y === 'steps') {
+    a = KASTEN + WEISS + INNEN + kopfBlock() + '<div style="display: flex; flex-direction: column; margin-top: 3.4cqw">';
+    liste = sl.st || [];
+    for (i = 0; i < liste.length; i++) {
+      if (i) a += '<div style="width: 0.5cqw; height: 2cqw; margin-left: 2.45cqw; background: #D1D1D6"></div>';
+      a += '<div style="display: flex; align-items: center; gap: 2.6cqw"><span style="flex: 0 0 5.4cqw; height: 5.4cqw; border-radius: 50' + P + '; background: #C2410C; color: #FFFFFF; font-size: 3cqw; font-weight: 800; display: flex; align-items: center; justify-content: center">' + (i + 1) + '</span><span style="font-size: 4.2cqw; line-height: 1.25; font-weight: 600">' + klar(liste[i]) + '</span></div>';
+    }
+    return a + '</div></div></div>';
+  }
+
+  if (y === 'list') {
+    a = KASTEN + WEISS + INNEN;
+    if (sl.h) a += '<p style="margin: 0 0 2.8cqw; font-size: 4.6cqw; font-weight: 800; line-height: 1.22; letter-spacing: -0.005em">' + klar(sl.h) + '</p>';
+    a += '<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2cqw">';
+    liste = sl.it || [];
+    for (i = 0; i < liste.length; i++) {
+      a += '<li style="display: flex; gap: 2.2cqw; align-items: baseline"><span style="flex: 0 0 3.6cqw; font-size: 4.4cqw; font-weight: 800; color: #C2410C">' + (i + 1) + '</span><span style="font-size: 4.2cqw; line-height: 1.28; font-weight: 500">' + reich(liste[i], ORANGE) + '</span></li>';
+    }
+    a += '</ol>';
+    if (sl.f) a += '<p style="margin: 3cqw 0 0; font-size: 4.4cqw; line-height: 1.28; font-weight: 500">' + reich(sl.f, ORANGE) + '</p>';
+    return a + '</div></div>';
+  }
+
+  if (y === 'section') {
+    return KASTEN + 'background: #0B0B0C; color: #FFFFFF">' + INNEN + '<div style="width: 10cqw; height: 1.2cqw; border-radius: 1cqw; background: #C2410C; margin-bottom: 3.6cqw"></div><h2 style="margin: 0; font-size: 8.4cqw; font-weight: 800; line-height: 1.04; letter-spacing: -0.015em; text-wrap: balance">' + klar(sl.t) + '</h2></div></div>';
+  }
+
+  if (y === 'numbers') {
+    a = KASTEN + WEISS + INNEN;
+    if (sl.h) a += '<p style="margin: 0; font-size: 4.4cqw; font-weight: 600; line-height: 1.28">' + klar(sl.h) + '</p>';
+    a += '<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3.4cqw; margin-top: 3.4cqw">';
+    liste = sl.ca || [];
+    for (i = 0; i < liste.length; i++) {
+      e = liste[i] || [];
+      a += '<div style="border-top: 0.4cqw solid #E5E5EA; padding-top: 2.6cqw"><p style="margin: 0; font-size: 9cqw; font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: #C2410C">' + klar(e[0]) + '</p><p style="margin: 1.8cqw 0 0; font-size: 3.8cqw; font-weight: 500; line-height: 1.3; color: #3A3A3C">' + klar(e[1]) + '</p></div>';
+    }
+    return a + '</div></div></div>';
+  }
+
+  /* Textarten: statement (ohne Etikett), term, risk, check, remember. Eine unbekannte Art wird wie statement gezeichnet. */
+  merk = y === 'remember';
+  kurz = woerter((sl.h ? txt(sl.h) + ' ' : '') + txt(sl.t)) <= 14;
+  stil = kurz ? ABSATZ_KURZ : ABSATZ;
+  geldfarbe = merk ? '#FFFFFF' : ORANGE;
+  a = KASTEN + (merk ? 'background: #C2410C; color: #FFFFFF">' : WEISS) + INNEN;
+  if (y === 'term' || y === 'risk' || y === 'check' || merk) a += pille(y);
+  a += BLOCK;
+  if (sl.h) a += stil + reich(sl.h, geldfarbe) + '</p>';
+  if (sl.t) a += stil + reich(sl.t, geldfarbe) + '</p>';
+  return a + '</div></div></div>';
+}
+if (typeof module !== 'undefined' && module.exports) { module.exports = slideNeu; module.exports.slideNeu = slideNeu; }
+
+/* Das Innere einer Slide im alten Design. */
 function slideHTML(sl){
  if(sl.k==='t')return '<div class="b"><span class="kl">'+esc(sl.c)+'</span><div class="tl'+(sl.m?' m':'')+'">'+esc(sl.t)+'</div>'+(sl.s?'<span class="kl">'+esc(sl.s)+'</span>':'')+'</div>';
  return '<div class="b">'+(sl.h?'<h3>'+esc(sl.h)+'</h3>':'')+sl.t.split('\n').map(function(p){return '<p>'+fett(p)+'</p>'}).join('')+'</div>';
@@ -284,7 +503,7 @@ function aktuell(el){var cr=el.querySelector('.cr');if(!cr||!cr.clientWidth||!cr
 function pille(el,i){var n=el._p.sl.length,x=el.querySelector('.pl');if(x)x.textContent=(i+1)+'/'+n;var l=el.querySelector('.pf.l'),r=el.querySelector('.pf.r');if(l){l.hidden=i===0;r.hidden=i===n-1}}
 function zeige(el,i,sanft){var cr=el.querySelector('.cr');el.dataset.i=i;if(!cr||!cr.firstChild)return;var w=cr.clientWidth;if(sanft&&cr.scrollTo)cr.scrollTo({left:i*w,behavior:'smooth'});else cr.scrollLeft=i*w;pille(el,i)}
 
-function wach(el){if(el._wach)return;el._wach=1;var cr=el.querySelector('.cr'),p=el._p;tonHol(p.id.slice(0,5));cr.innerHTML=p.sl.map(function(s){return '<div class="s">'+slideHTML(s)+'</div>'}).join('');var i=+el.dataset.i||0;if(i)cr.scrollLeft=i*cr.clientWidth}
+function wach(el){if(el._wach)return;el._wach=1;var cr=el.querySelector('.cr'),p=el._p;tonHol(p.id.slice(0,5));cr.innerHTML=p.sl.map(function(s){return s.k==='n'?'<div class="s n">'+slideNeu(s,BASIS)+'</div>':'<div class="s">'+slideHTML(s)+'</div>'}).join('');var i=+el.dataset.i||0;if(i)cr.scrollLeft=i*cr.clientWidth}
 function schlaf(el){if(!el._wach||(spricht&&spricht.el===el))return;el.dataset.i=aktuell(el);el._wach=0;el.querySelector('.cr').innerHTML=''}
 function nahFolge(es){es.forEach(function(e){if(e.isIntersecting)wach(e.target);else schlaf(e.target)})}
 var nah=new IntersectionObserver(nahFolge,{rootMargin:'1500px 0px'});
@@ -312,17 +531,21 @@ function stimme(){var v=speechSynthesis.getVoices().filter(function(x){return /^
 function sprich(el,btn){
  if(spricht&&spricht.el===el){stop();return}
  var tid=el._p.id.match(/^(\d\d-\d\d)-(\d+)$/),te=tid&&tonM[tid[1]],tm=te&&te.w&&te.w[tid[2]];
- if(tm){spieleTon(el,btn,tid[1],tid[2],tm,te.b);return}
+ /* Fertiger Ton nur, wenn er zu den Slides passt: je Slide genau eine Marke. Die Posts im neuen Slide-Design haben andere Slides als ihre alte Aufnahme; bis zur neuen Aufnahme liest dort die Stimme des Geraets. */
+ if(tm&&tm.length===el._p.sl.length){spieleTon(el,btn,tid[1],tid[2],tm,te.b);return}
  try{ton.pause()}catch(e){}
  var S=window.speechSynthesis;if(!S){melde('Speech is not available in this browser');return}
  var mark={el:el,btn:btn},lief=S.speaking||S.pending;
  fertigSprechen();spricht=mark;btn.textContent='stop';btn.setAttribute('aria-pressed','true');
  function los(){
   if(spricht!==mark)return;
-  var sl=el._p.sl,vo=stimme();
-  sl.forEach(function(s,i){var u=new SpeechSynthesisUtterance(vorlese(s));u.lang=vo?vo.lang:'en-US';if(vo)u.voice=vo;u.rate=1.3;/* David 09.11.: 1,3x ist am besten */
+  var sl=el._p.sl,vo=stimme(),tx=sl.map(vorlese),le=-1;
+  /* Eine Slide ohne Text (die Ende-Slide im neuen Design) bekommt keinen Satz: fuer einen leeren Satz meldet die Stimme weder Start noch Ende, Speak bliebe haengen. Fertig ist nach der letzten Slide mit Text; danach wird die letzte Slide gezeigt. */
+  tx.forEach(function(t,i){if(t&&t.trim())le=i});
+  if(le<0){fertigSprechen();return}
+  tx.forEach(function(t,i){if(!t||!t.trim())return;var u=new SpeechSynthesisUtterance(t);u.lang=vo?vo.lang:'en-US';if(vo)u.voice=vo;u.rate=1.3;/* David 09.11.: 1,3x ist am besten */
    u.onstart=function(){if(spricht===mark)zeige(el,i,true)};
-   if(i===sl.length-1)u.onend=function(){if(spricht===mark)fertigSprechen()};
+   if(i===le)u.onend=function(){if(spricht===mark){if(le<sl.length-1)zeige(el,sl.length-1,true);fertigSprechen()}};
    u.onerror=function(ev){if(spricht===mark&&ev.error!=='canceled'&&ev.error!=='interrupted')fertigSprechen()};
    S.speak(u)});
  }
@@ -345,7 +568,7 @@ function post(p,ziel){
  q('.bl').addEventListener('click',function(){var b=this,on=!likes.has(p.id);if(on)likes.add(p.id);else likes.delete(p.id);schreiben('feed.likes',Array.from(likes));b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.classList.remove('pop');void b.offsetWidth;if(on)b.classList.add('pop')});
  q('.bm').addEventListener('click',function(){var at=saves.indexOf(p.id),on=at<0;if(on)saves.push(p.id);else saves.splice(at,1);schreiben('feed.saved',saves);this.classList.toggle('on',on);this.setAttribute('aria-pressed',on);svSync()});
  q('.bs').addEventListener('click',function(){var i=aktuell(el),u=link(p,i);if(navigator.share){navigator.share({title:p.titel,url:u}).catch(function(){})}else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){melde('Link copied')})}else{prompt('Copy this link',u)}});
- q('.bi').addEventListener('click',function(){var i=aktuell(el),text='Hi David, I need help with this:\n\n"'+sichtbar(p.sl[i]).slice(0,900)+'"\n\n'+p.titel+', slide '+(i+1)+'/'+p.sl.length+'\n'+link(p,i);this.href=WA+'?text='+encodeURIComponent(text);if(matchMedia('(hover:hover) and (pointer:fine)').matches)this.target='_blank'});
+ q('.bi').addEventListener('click',function(){var i=aktuell(el),z=sichtbar(p.sl[i]).slice(0,900),text='Hi David, I need help with this:\n\n'+(z?'"'+z+'"\n\n':'')/* die Ende-Slide im neuen Design ist nur ein Bild, dann ohne leeres Zitat */+p.titel+', slide '+(i+1)+'/'+p.sl.length+'\n'+link(p,i);this.href=WA+'?text='+encodeURIComponent(text);if(matchMedia('(hover:hover) and (pointer:fine)').matches)this.target='_blank'});
  q('.pf.l').addEventListener('click',function(){zeige(el,Math.max(0,aktuell(el)-1),true)});
  q('.pf.r').addEventListener('click',function(){zeige(el,Math.min(p.sl.length-1,aktuell(el)+1),true)});
  pille(el,+el.dataset.i);
@@ -391,6 +614,11 @@ var backT=0;/* history.back erst nach dem Zurueckschieben, sonst steht der Haupt
 mk.addEventListener('click',function(){if(svOffen)return;if(backT){clearTimeout(backT);backT=0}else{vonFeed=true;history.pushState({sv:1},'',SAVED)}svAuf(true)});
 zu.addEventListener('click',function(e){e.preventDefault();svZu(true);if(vonFeed)backT=setTimeout(function(){backT=0;history.back()},440);else history.replaceState(null,'',FEED)});
 addEventListener('popstate',function(e){var s=aufSaved(),z=!e.hasUAVisualTransition;if(s&&!svOffen)svAuf(z);else if(!s&&svOffen)svZu(z)});
+
+/* David 10.11.: Nebel oben wie auf /diet statt Balken, an sobald mehr als 2 px gescrollt sind. Der Feed scrollt im Fenster, Saved in #svs. */
+var fx=document.getElementById('fx'), svfx=document.getElementById('svfx');
+function nebel(){fx.classList.toggle('on',(window.scrollY||0)>2);svfx.classList.toggle('on',svs.scrollTop>2)}
+addEventListener('scroll',nebel,{passive:true});svs.addEventListener('scroll',nebel,{passive:true});nebel();
 
 if(aufSaved())svAuf(false);
 idxDa.then(function(){unten.observe(sent);startFeed();svSync()});

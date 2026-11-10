@@ -26,6 +26,8 @@ def holen(f):
 
 def vorlese(s):
     """Genau derselbe Text wie vorlese() in der Seite."""
+    if s.get("k") == "n":  # neues Slide-Design: der Vorlesetext liegt fertig in der Slide, die End-Slide ist stumm
+        return s.get("v") or ""
     if s.get("k") == "t":
         return ". ".join(x for x in (s.get("t"), s.get("s")) if x)
     t = ((s["h"] + ". ") if s.get("h") else "") + s["t"].replace("\n", ". ")
@@ -50,10 +52,16 @@ def main():
         daten.setdefault(f, holen(f))
         slides = daten[f]["p"][n]
         t0 = time.time()
-        stuecke, marken, jetzt, sr = [], [], 0.0, 24000
+        stuecke, marken, jetzt, sr, typ = [], [], 0.0, 24000, np.float32
         for s in slides:
             marken.append(round(jetzt, 2))
-            a, sr = k.create(vorlese(s), voice=stimme, speed=TEMPO, lang="en-gb")
+            text = vorlese(s).strip()
+            if not text:  # stumme Slide (End-Slide): nur die Pause, die Marke steht trotzdem
+                stuecke.append(np.zeros(int(PAUSE * sr), dtype=typ))
+                jetzt += PAUSE
+                continue
+            a, sr = k.create(text, voice=stimme, speed=TEMPO, lang="en-gb")
+            typ = a.dtype
             stille = np.zeros(int(PAUSE * sr), dtype=a.dtype)
             stuecke += [a, stille]
             jetzt += len(a) / sr + PAUSE
