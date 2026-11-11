@@ -128,15 +128,17 @@ letter-spacing:0}
 
 body:has(.dev){background:#fff}
 main:has(.dev){max-width:none;padding:0}
-/* David 11.11.2026 20:2x: ohne Nebel scrollt das Menue mit dem Titel weg, sonst liegt es auf den View-Knoepfen */
-body:has(.dev) .gn-page:not(.gn-open):not(.gn-closing){position:absolute}
-/* David 11.11.2026 21:13: das D von David gleich weit von oben und links (gemessen 14 zu 22 Punkte, also 8 tiefer);
-   Menueknopf und Zurueck-Knopf wandern mit, damit sie auf Titelhoehe bleiben */
-body:has(.dev) .gn-menutrigger{top:11px}
-body:has(.dev) .gn-menuback{top:8px}
+/* David 11.11.2026 21:2x: fester weisser Balken oben, 1:1 wie apps.apple.com (dort gemessen: position fixed, 44 px hoch,
+   #fff, box-shadow 0 1px 2px rgba(0,0,0,.1)). Die zwei Menuelinien sitzen mittig darin und bleiben beim Scrollen stehen.
+   Unter dem Menue (z-index 9999), ueber dem Inhalt; faengt Tipps ab, damit keine App darunter aufgeht. Mitte bleibt leer: das App-Store-Zeichen gehoert Apple. */
+body:has(.dev)::before{content:"";position:fixed;top:0;left:0;right:0;z-index:9998;height:calc(44px + env(safe-area-inset-top));
+background:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,.1)}
+body:has(.dev) .gn-menutrigger,body:has(.dev) .gn-menuback{top:calc(env(safe-area-inset-top) - 2px)}
+/* Ecken-Regel (David 21:13): das D von David 22 Punkte unter dem Balken und 22 vom linken Rand. Auf Davids iPhone gemessen:
+   7 px Abstand oben ergaben 14 Punkte bis zum D, also 44 + 15 = 59 px. */
 .dev{max-width:600px;margin:0 auto;padding-bottom:40px;color:#000;letter-spacing:0;
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
-.dev h1{margin:0;padding:15px 64px 0 20px;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+.dev h1{margin:0;padding:calc(59px + env(safe-area-inset-top)) 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
 .dev h2{margin:17px 0 0;padding:0 20px;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
