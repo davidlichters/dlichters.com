@@ -106,8 +106,8 @@ Sources disagree on the rate, because each one describes a different program or 
 
 | Source | Rate or amount | When it applies | Ids |
 |---|---|---|---|
-| E-Converts, one source 2026 | 25% of the complete membership amount, paid to members who successfully refer new members | Member referral program for a membership product | [L0214, 2026] |
-| E-Converts payout timing, one source 2026 | Paid within 48 hours of the referred member completing their membership purchase | Same program | [L0214, 2026] |
+| Course D, one source 2026 | 25% of the complete membership amount, paid to members who successfully refer new members | Member referral program for a membership product | [L0214, 2026] |
+| Course D payout timing, one source 2026 | Paid within 48 hours of the referred member completing their membership purchase | Same program | [L0214, 2026] |
 | one source, refer program | $250 per new customer enrolled through the refer program | The referral program described in that course | [L0270, 2021] |
 | one source, example | $500 per sign-up on a $2,000 yoga retreat | Illustration of an affiliate offer on a site that sells yoga mats | [L1002, 2019] |
 | one source | About 10 to 20% of sales generated through your affiliate link | Standard deals for content-led affiliate sites | [L1279, 2021] |
@@ -118,7 +118,7 @@ Sources disagree on the rate, because each one describes a different program or 
 #### Economics and incentive design
 
 - The 25% commission rate is positioned as an investment in the business, not a cost. Paying high commissions for member referrals aligns the company's goal, helping people build real businesses, with member incentives to grow the community. [L0214, 2026]
-- Case: A member referred a friend to E-Converts and received a $1,000 referral commission. He invested the entire amount as startup capital for a dropshipping store and is now generating approximately $100,000 in monthly revenue. [L0214, 2026]
+- Case: A member referred a friend to Course D and received a $1,000 referral commission. He invested the entire amount as startup capital for a dropshipping store and is now generating approximately $100,000 in monthly revenue. [L0214, 2026]
 
 #### Scope rules
 

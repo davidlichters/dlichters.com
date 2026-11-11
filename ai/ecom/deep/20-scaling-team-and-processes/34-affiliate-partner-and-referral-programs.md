@@ -101,15 +101,15 @@ Part 34 of 37 of "20. Scaling Team and Processes: full technical reference". Map
 - A referral program can pay affiliate commissions to members who refer others. The referral links are tied to member logins. ** [L0834, 2021]
 - Members refer others for three core reasons: they know people seeking financial freedom or a real business skill, they want someone to compete and build alongside, and they want peers in their community. [L0214, 2026]
 - When recruiting referrals, show results and evidence that the program works, such as wins and earnings examples, rather than making promises. Combine this with your personal testimony, because an existing member's authentic endorsement carries more weight than marketing materials. [L0214, 2026]
-- Referral procedure for E-Converts:
-  1. Show the prospect results from inside E-Converts: pull up the wins channel, share earnings examples (16-year-olds earning $20,000+ monthly, 17-year-olds earning $500,000 in 90 days, adults earning six figures monthly), and share your personal experience. Members' endorsements are more convincing than marketing materials.
+- Referral procedure for Course D:
+  1. Show the prospect results from inside Course D: pull up the wins channel, share earnings examples (16-year-olds earning $20,000+ monthly, 17-year-olds earning $500,000 in 90 days, adults earning six figures monthly), and share your personal experience. Members' endorsements are more convincing than marketing materials.
   2. Send them the referral link and direct them to book a call with the team, instructing them to enter your Discord name in the *Did someone recommend you?* field during booking.
   3. Once they join and complete their payment, you receive your 25% commission within 48 hours.
 
   [L0214, 2026]
-- Commission rates depend on the program. Product affiliate commissions are set per product on your margins, typically 5-10% ** [L0213, 2021-22]. The E-Converts member referral commission is 25% [L0214, 2026].
+- Commission rates depend on the program. Product affiliate commissions are set per product on your margins, typically 5-10% ** [L0213, 2021-22]. The Course D member referral commission is 25% [L0214, 2026].
 - Reinvest affiliate commission earnings into the business. Allocate the money to testing new products, scaling advertising or other growth activities, so referral income becomes leverage for your own scaling. [L0214, 2026]
-- You can refer anyone to E-Converts: a friend, family member, co-worker, or anyone in your direct messages whom you believe would benefit from the community and succeed in it. [L0214, 2026]
+- You can refer anyone to Course D: a friend, family member, co-worker, or anyone in your direct messages whom you believe would benefit from the community and succeed in it. [L0214, 2026]
 
 
 Part 34 of 37 of "20. Scaling Team and Processes: full technical reference". Map of all parts: https://dlichters.com/ai/ecom/deep/20-scaling-team-and-processes.md · Previous: https://dlichters.com/ai/ecom/deep/20-scaling-team-and-processes/33-expanding-second-stores-markets-inventory-and-bran.md · Next: https://dlichters.com/ai/ecom/deep/20-scaling-team-and-processes/35-business-partners-mentors-and-community-support.md

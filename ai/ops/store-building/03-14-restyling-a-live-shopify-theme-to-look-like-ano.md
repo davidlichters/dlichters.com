@@ -22,31 +22,6 @@ Lessons (never again):
 - No video autoplay on first load.
 - PayPal is a checkout setting, not a theme matter. A course says start without PayPal; David said "we need PayPal". Mention the course only as a note, never switch PayPal off yourself.
 
-## 15. The three student store previews of 2026-11-07
-
-Context: on 07.11.2026 we analysed three stores of fellow students in the Course D course, wrote a current-state analysis, a 10-competitor table, a gap list with 10 changes, a domain table of 25 checked names each, and a critique pass, then built a full preview of how each store could look, with all open decisions in yellow. Timo approved contacting the owners. Nothing touches their stores. Built with the slim generator (section 4), all live on GitHub Pages (section 12).
-
-**GigglePeek (squishy advent calendar, 24 squishy cubes).** https://davidlichters.github.io/gigglepeek.com/
-- Main problem found: shipping policy said "processed within 14 business days" plus 14 to 21 business days delivery, so an order on 07.11. could land after December 1, the whole point of an advent calendar.
-- Critique: all 10 competitors initially chosen sold dumpling squishies, not cubes ("cube" 0 times in their texts), so their price, images and reviews were not the same product. The same product was then found on Amazon US (identical listing images; the store had only changed "ADVENT CALENDAR" to "CALENDAR" on the box). Amazon price measured 41.99 USD.
-- Built: one delivery promise everywhere with an "order by" line at the top and under the button (dates yellow); price ladder with price per calendar, "Most popular" on 2, "Best value" on 3, a fourth tier "4+ calendars, $25 each" with a quantity field (button price = 25 x quantity) for classes; kid-with-the-box photo first instead of the cube collage; size image plus a size table in inch and cm; "Beats a chocolate calendar" comparison; "Screen-free" benefit; material and age proven from Amazon listings ("thermoplastic elastomer (TPE)", "Ages 3 and up. Small parts: not for children under 3. Play under adult supervision."); 5 free e-books and an unrelated book shelf removed from menu and footer (name promises squishies; one book was a publisher's title without proof of resale rights). Buy test price 79.99.
-- Reviews: 116 from 5 sources (two European Judge.me stores of one company with the same article number, translated; a UK store; Amazon US public part; Amazon.de, advent variant only), average 4.698, so the single most harmful one went; later one more removed for naming the foreign brand: shown **114, average 4.737**.
-- Domain: GigglePeek.com (alternatives Plumpeek.com, DimpleJoy.com), replacing HoneySquishy.
-
-**Pantrymoon (book "Freeze Fresh" about freezing 55 fruits and vegetables).** https://davidlichters.github.io/pantrymoon.com/
-- Main problem found: a well-known magazine shop sells the same book for 19.99 USD and the author's name is on the cover, so one search shows it next to the store's 43.95 USD.
-- Built: book plus a printable "Freezer Kit" (3 one-page US Letter PDFs: blanching times copied word for word from the US National Center for Home Food Preservation, a freezer log, a seasonal produce calendar based on the USDA SNAP-Ed seasonal guide; winter only as a notes field because the source list was reconstructed) so the offer is no longer 1:1 comparable; tiers "Book + Freezer Kit" $35 (preselected) and "2 Books + 2 Kits" $52 GIFT SET ("Save $18 vs. two Book + Kit"); Black Friday prices with a fixed end and the regular price from Dec 2 shown per tier; buy button moved from 1,676 px to 746 to 843 px on 390 x 844; author photo and author line from the publisher's author page; two blurbs from the back cover word for word; "More than 100 recipes" proven from the back cover; EPA food-waste figure.
-- Reviews: 138 raw (Goodreads 107, Amazon 22, Target 2, Walmart 2, the magazine shop 2, B&N 3), 133 after duplicates, 2 removed by the 4.7 rule, later reduced by the book selection layer to **123 shown, average 4.748**. All 9 reviews in the original store were removed: two were word-for-word Goodreads reviews of other people under different names, two more were found on Amazon under other names, five were nowhere.
-- Domain: Pantrymoon.com, replacing HomesteadPreserving.
-
-**PlushSweep (pet hair removal glove, black mesh with yellow side trim).** https://davidlichters.github.io/plushsweep.com/
-- Main problem found: a competitor that runs Meta ads for what looks like the same glove sells the 2-pack for 26.99 USD on its site; the student's 2-pack was 45.95.
-- Built: pair preselected (yellow suggestion $26.95, "Buy 1, get the 2nd for $4"), 4 tiers, brush and gift bag in the bigger bundles instead of only discounts; "Stop buying lint roller refills." hook with the measured refill price; main image a hand in the glove on a car mat, one half clean, one half full of hair; looping clip; 3 review voices under the button; one 60-day guarantee everywhere; privacy and terms pages.
-- Reviews: **3,700 shown, average 4.7003**, from 6,846 raw across 10 files (details in section 7.4), 452 customer photos.
-- Domain: PlushSweep.com (LiftPetHair was the interim pick; SweepPetHair rejected for the double p at the word boundary and reading as a command).
-
-**What all three still lacked (critique):** a confirmed supplier price and supplier with delivery time (step 0 is a lock, not optional); a real Christmas order cutoff from the supplier's delivery time; raw RDAP files and a registrar price before buying; a clean separation of what is course rule and what is our own rule (one analysis cited our own 60 USD / 70 % gate as a "course gate" and cited a course line for the opposite of what it says).
-
 ## 16. Helping other students: outreach rules
 
 - Start with "I saw your website", a compliment on the product choice, then one concrete finding with a fact the owner can check (a policy sentence, a competitor price), then "I'm a student in the course too and made a mockup of how I'd fix it, nothing touches your store. Want screenshots?". About 60 words. Never say who asked us to write. No "for free", no domain in the first message, screenshots instead of a link, finding first (changed after two second readers, 07.11.).
@@ -102,14 +77,14 @@ Sources: David after about an hour with his lawyer, 2026-11-05, confirmed in wri
 
 ## 20. Design rules for every store we build (moved here from ops/gaps-2-1.md)
 
-Source: David 2026-11-07, after reviewing the three fellow-student previews (GigglePeek, Pantrymoon, PlushSweep), and David 2026-11-01. The AI had called the stores "perfect"; David saw in seconds that the design was off ("noch nicht komplett durchdacht").
+Source: David 2026-11-07, after reviewing the three previews (Store A, Store B, Store C), and David 2026-11-01. The AI had called the stores "perfect"; David saw in seconds that the design was off ("noch nicht komplett durchdacht").
 
 1. **No yellow markings, anywhere** (David 2026-11-07: "Why is everything marked yellow? We decide these things. The people who own the store have no idea and will be grateful."). Yellow marks make a finished store look unfinished. This **overrides** on /ai: "Yellow means unproven" (`ops/store-building.md`), the `[[...]]` yellow render convention, "Remove all yellow" as a later step, the preview banner text "Yellow = your decision", and the outreach line "Yellow parts are your decision". New banner wording: "Preview by David: how your store could look." Nothing else.
 2. **We decide every open question ourselves.** Limits: never invent company data (address, registration, phone, team) and never make a promise nobody can keep (delivery date, guarantee, stock). If a line would need either, drop the line instead of marking it.
 3. **One font family.** Weights may vary, families may not.
 4. **At most 3 colors plus grey.**
 5. **One spacing grid** (one base unit, every gap a multiple of it; unequal gaps were a named defect).
-6. **Calm, clear first image.** GigglePeek's first image was overloaded; David moved image 2 to the front. The first image shows the product clearly, little text, no collage.
+6. **Calm, clear first image.** Store A's first image was overloaded; David moved image 2 to the front. The first image shows the product clearly, little text, no collage.
 7. **Images preload; no visible lazy loading.** Images that pop in while scrolling were a named defect. This **overrides** "lazy loading for everything below the first image" in the slim-build description of `ops/store-building.md`: preload all product and section images (eager loading, preload hints for the first screens, correctly sized WebP), and never let the visitor see an image arrive late.
 8. **Mobile first** (David 2026-11-01: "Almost nobody opens the store on a computer"). Design for the phone in the Facebook/Instagram in-app browser, which has a shorter screen: price directly under the title, no thumbnail strip on mobile (dots and "1 / 6" on the image instead, saves 72 px), tap opens fullscreen with pinch zoom, header hides on scroll down, sticky buy bar from the first screen ("Choose your size" jumps to sizes if none is chosen), size help as a bottom sheet, all buttons at least 44 px high, smallest text 12 to 13 px, main image under 4 s on slow 4G (Curlmoon measured 1.5 s with 4x CPU throttling, layout shift 0).
 9. **Check at 390 px before delivery** and look at it yourself (screenshots, not reports).

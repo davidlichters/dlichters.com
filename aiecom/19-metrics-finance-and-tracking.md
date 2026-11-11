@@ -5018,9 +5018,9 @@ Two conventions appear in the sources. Use each for its own purpose and do not m
 - Affiliate marketing gives controllable, predictable costs, unlike paid traffic. You know your exact commission rate per sale in advance, which supports cash-flow forecasting and financial planning. Paid advertising has variable daily costs beyond your control. (Older advice, 2021-22.) [L0213.013]
 - E-commerce businesses typically allocate 10% of annual revenue to Google Ads. Affiliate marketing is more cost-efficient, because you pay commissions only on completed sales, not for clicks or impressions. (Older advice, 2021-22.) [L0213.017]
 - Organic traffic usually has a lower cost per acquisition than paid traffic, because each click carries no direct cost. Use organic and other non-paid channels alongside paid ads, especially for traffic too expensive to target with paid ads. (Older advice, 2021-22.) [L1507.011]
-- Example: if a referred prospect pays 4,000 USD for E-Converts membership, the referrer receives 1,000 USD in commission, which is 25%. [L0214.002]
-- During the E-Converts booking call, the field labelled 'Did someone recommend you?' must contain the referrer's Discord name. Otherwise the referral is not tracked and the commission is not paid. [L0214.004]
-- About 10 new members join E-Converts each month through referrals from existing members, not through paid advertising. [L0214.008]
+- Example: if a referred prospect pays 4,000 USD for Course D membership, the referrer receives 1,000 USD in commission, which is 25%. [L0214.002]
+- During the Course D booking call, the field labelled 'Did someone recommend you?' must contain the referrer's Discord name. Otherwise the referral is not tracked and the commission is not paid. [L0214.004]
+- About 10 new members join Course D each month through referrals from existing members, not through paid advertising. [L0214.008]
 - A creator's story with about 5,000 views and an audience that closely matches the niche can achieve around 20 to 100 sales. Small numbers of sales can still justify the spend when the product margin is strong. [L1379.038]
 
 ### Paid partner placements: ROAS and CPC

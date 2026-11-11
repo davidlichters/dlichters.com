@@ -2388,8 +2388,8 @@ Sources disagree on the rate, because each one describes a different program or 
 
 | Source | Rate or amount | When it applies | Ids |
 |---|---|---|---|
-| E-Converts, Source D 2026 | 25% of the complete membership amount, paid to members who successfully refer new members | Member referral program for a membership product | [L0214.001] |
-| E-Converts payout timing, Source D 2026 | Paid within 48 hours of the referred member completing their membership purchase | Same program | [L0214.003] |
+| Course D, Source D 2026 | 25% of the complete membership amount, paid to members who successfully refer new members | Member referral program for a membership product | [L0214.001] |
+| Course D payout timing, Source D 2026 | Paid within 48 hours of the referred member completing their membership purchase | Same program | [L0214.003] |
 | Source A, refer program (older advice, 2021) | $250 per new customer enrolled through the refer program | The referral program described in that course | [L0270.001] |
 | Source A, example (older advice, 2019) | $500 per sign-up on a $2,000 yoga retreat | Illustration of an affiliate offer on a site that sells yoga mats | [L1002.005] |
 | Source A (older advice, 2021) | About 10 to 20% of sales generated through your affiliate link | Standard deals for content-led affiliate sites | [L1279.099] |
@@ -2400,7 +2400,7 @@ Sources disagree on the rate, because each one describes a different program or 
 #### Economics and incentive design
 
 - The 25% commission rate is positioned as an investment in the business, not a cost. Paying high commissions for member referrals aligns the company's goal, helping people build real businesses, with member incentives to grow the community. [L0214.009]
-- Case: A member referred a friend to E-Converts and received a $1,000 referral commission. He invested the entire amount as startup capital for a dropshipping store and is now generating approximately $100,000 in monthly revenue. [L0214.006]
+- Case: A member referred a friend to Course D and received a $1,000 referral commission. He invested the entire amount as startup capital for a dropshipping store and is now generating approximately $100,000 in monthly revenue. [L0214.006]
 
 #### Scope rules
 

@@ -2395,8 +2395,8 @@ Sources disagree on the rate, because each one describes a different program or 
 
 | Source | Rate or amount | When it applies | Ids |
 |---|---|---|---|
-| E-Converts, Source D 2026 | 25% of the complete membership amount, paid to members who successfully refer new members | Member referral program for a membership product | [L0214.001] |
-| E-Converts payout timing, Source D 2026 | Paid within 48 hours of the referred member completing their membership purchase | Same program | [L0214.003] |
+| Course D, Source D 2026 | 25% of the complete membership amount, paid to members who successfully refer new members | Member referral program for a membership product | [L0214.001] |
+| Course D payout timing, Source D 2026 | Paid within 48 hours of the referred member completing their membership purchase | Same program | [L0214.003] |
 | Source A, refer program (older advice, 2021) | $250 per new customer enrolled through the refer program | The referral program described in that course | [L0270.001] |
 | Source A, example (older advice, 2019) | $500 per sign-up on a $2,000 yoga retreat | Illustration of an affiliate offer on a site that sells yoga mats | [L1002.005] |
 | Source A (older advice, 2021) | About 10 to 20% of sales generated through your affiliate link | Standard deals for content-led affiliate sites | [L1279.099] |
@@ -2407,7 +2407,7 @@ Sources disagree on the rate, because each one describes a different program or 
 #### Economics and incentive design
 
 - The 25% commission rate is positioned as an investment in the business, not a cost. Paying high commissions for member referrals aligns the company's goal, helping people build real businesses, with member incentives to grow the community. [L0214.009]
-- Case: A member referred a friend to E-Converts and received a $1,000 referral commission. He invested the entire amount as startup capital for a dropshipping store and is now generating approximately $100,000 in monthly revenue. [L0214.006]
+- Case: A member referred a friend to Course D and received a $1,000 referral commission. He invested the entire amount as startup capital for a dropshipping store and is now generating approximately $100,000 in monthly revenue. [L0214.006]
 
 #### Scope rules
 
@@ -116708,9 +116708,9 @@ Two conventions appear in the sources. Use each for its own purpose and do not m
 - Affiliate marketing gives controllable, predictable costs, unlike paid traffic. You know your exact commission rate per sale in advance, which supports cash-flow forecasting and financial planning. Paid advertising has variable daily costs beyond your control. (Older advice, 2021-22.) [L0213.013]
 - E-commerce businesses typically allocate 10% of annual revenue to Google Ads. Affiliate marketing is more cost-efficient, because you pay commissions only on completed sales, not for clicks or impressions. (Older advice, 2021-22.) [L0213.017]
 - Organic traffic usually has a lower cost per acquisition than paid traffic, because each click carries no direct cost. Use organic and other non-paid channels alongside paid ads, especially for traffic too expensive to target with paid ads. (Older advice, 2021-22.) [L1507.011]
-- Example: if a referred prospect pays 4,000 USD for E-Converts membership, the referrer receives 1,000 USD in commission, which is 25%. [L0214.002]
-- During the E-Converts booking call, the field labelled 'Did someone recommend you?' must contain the referrer's Discord name. Otherwise the referral is not tracked and the commission is not paid. [L0214.004]
-- About 10 new members join E-Converts each month through referrals from existing members, not through paid advertising. [L0214.008]
+- Example: if a referred prospect pays 4,000 USD for Course D membership, the referrer receives 1,000 USD in commission, which is 25%. [L0214.002]
+- During the Course D booking call, the field labelled 'Did someone recommend you?' must contain the referrer's Discord name. Otherwise the referral is not tracked and the commission is not paid. [L0214.004]
+- About 10 new members join Course D each month through referrals from existing members, not through paid advertising. [L0214.008]
 - A creator's story with about 5,000 views and an audience that closely matches the niche can achieve around 20 to 100 sales. Small numbers of sales can still justify the spend when the product margin is strong. [L1379.038]
 
 ### Paid partner placements: ROAS and CPC
@@ -124533,15 +124533,15 @@ Ads often spend little overnight, when buyers are not in buying mode. [L1436.054
 - A referral program can pay affiliate commissions to members who refer others. The referral links are tied to member logins. *(older, 2021)* [L0834.106]
 - Members refer others for three core reasons: they know people seeking financial freedom or a real business skill, they want someone to compete and build alongside, and they want peers in their community. [L0214.007]
 - When recruiting referrals, show results and evidence that the program works, such as wins and earnings examples, rather than making promises. Combine this with your personal testimony, because an existing member's authentic endorsement carries more weight than marketing materials. [L0214.010]
-- Referral procedure for E-Converts:
-  1. Show the prospect results from inside E-Converts: pull up the wins channel, share earnings examples (16-year-olds earning $20,000+ monthly, 17-year-olds earning $500,000 in 90 days, adults earning six figures monthly), and share your personal experience. Members' endorsements are more convincing than marketing materials.
+- Referral procedure for Course D:
+  1. Show the prospect results from inside Course D: pull up the wins channel, share earnings examples (16-year-olds earning $20,000+ monthly, 17-year-olds earning $500,000 in 90 days, adults earning six figures monthly), and share your personal experience. Members' endorsements are more convincing than marketing materials.
   2. Send them the referral link and direct them to book a call with the team, instructing them to enter your Discord name in the *Did someone recommend you?* field during booking.
   3. Once they join and complete their payment, you receive your 25% commission within 48 hours.
 
   [L0214.005]
-- Commission rates depend on the program. Product affiliate commissions are set per product on your margins, typically 5-10% *(older, 2021-22)* [L0213.015]. The E-Converts member referral commission is 25% [L0214.005].
+- Commission rates depend on the program. Product affiliate commissions are set per product on your margins, typically 5-10% *(older, 2021-22)* [L0213.015]. The Course D member referral commission is 25% [L0214.005].
 - Reinvest affiliate commission earnings into the business. Allocate the money to testing new products, scaling advertising or other growth activities, so referral income becomes leverage for your own scaling. [L0214.011]
-- You can refer anyone to E-Converts: a friend, family member, co-worker, or anyone in your direct messages whom you believe would benefit from the community and succeed in it. [L0214.012]
+- You can refer anyone to Course D: a friend, family member, co-worker, or anyone in your direct messages whom you believe would benefit from the community and succeed in it. [L0214.012]
 
 ## Business partners, mentors and community support
 

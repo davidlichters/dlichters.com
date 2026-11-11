@@ -28,13 +28,13 @@ Per source: same images (the product image used as the first image on two produc
 Judge.me marks imported reviews with `review_collected_from_another_provider`. Other signals: timestamp exactly 00:00, dates before the product was created (check `/products.json` created_at), photo files named "chatgptimage..." or "screenshot...", many uniform one-liners on the same day, Amazon-style names ("UserKB"), texts praising another brand, texts that do not match the attached photo ("I'd show a photo but it's disgusting" with a photo attached). Rule: imported texts are not used as buyer reviews; their photos may be used as a photo row if the photo visibly shows the same product (6 photos taken that way, texts not).
 
 ### 7.4 The filter pipeline (in this order)
-1. Raw from all sources (PlushSweep: 6,846 from 10 files).
+1. Raw from all sources (Store C: 6,846 from 10 files).
 2. Remove empty texts without a photo (1,434, all AliExpress star-only).
 3. Remove duplicates: same text after normalising to letters and digits, or over 90 % similar; keep the version with a photo (766).
 4. Remove reviews that reveal another store or brand (255): any competitor brand in all its misspellings, marketplace names (Amazon, Temu, AliExpress, "on Ali", eBay, Walmart), store domains, review-service links, other brand names; plus the "fake vs. the real one" class (fake, knock-off, counterfeit, imitation, copies, dupes, "the original", trademark, "real one"), with a few hand-checked exceptions that reveal nothing. Keep: Facebook/Instagram mentions (we advertise there), pet names that look like brands, typos like "Lindt" for lint, "hoover" as a verb. Read every hit by hand. Also remove reviews that talk about the other store's service (shipping, delivery speed, seller, price, package, "as described", "like in the video", "buy 1 get one free").
 5. Remove reviews of a different size or variant ("large glove").
-6. Apply the 4.7 rule: while the average is below 4.7, remove the most harmful bad reviews first: "looks different from the picture / scam / fake / never arrived / refund" before "does not work / junk / sent back" before the rest by stars. PlushSweep: 691 removed in that order (99, 434, 158); every 1-star review went. Books: only 2 removed. Cube calendar: only 1 (a 1-star "This is not an advent calendar." with a photo of another box).
-7. Result: PlushSweep **3,700 shown, average 4.7003** (2,909 x 5, 511 x 4, 242 x 3, 38 x 2), 288 with photos, 452 unique customer photos after AI-looking and screenshot images were removed.
+6. Apply the 4.7 rule: while the average is below 4.7, remove the most harmful bad reviews first: "looks different from the picture / scam / fake / never arrived / refund" before "does not work / junk / sent back" before the rest by stars. Store C: 691 removed in that order (99, 434, 158); every 1-star review went. Books: only 2 removed. Cube calendar: only 1 (a 1-star "This is not an advent calendar." with a photo of another box).
+7. Result: Store C **3,700 shown, average 4.7003** (2,909 x 5, 511 x 4, 242 x 3, 38 x 2), 288 with photos, 452 unique customer photos after AI-looking and screenshot images were removed.
 
 ### 7.5 Ordering
 - Top of the list: 5 stars with photo and a concrete surface or use (sofa, couch, car, seat, bed), then the rest by stars. Weak reviews (price talk, "$", cheap, scam, free comb, machine wash, "not used yet", "not magical", only one glove arrived, delivery time, seller, expensive, repetition spam) only from position 201. Assert in the build: positions 1 to 200 contain no weak review.
@@ -84,19 +84,19 @@ Rule (from David's 10 messages that were 4 avoidable mistakes): nobody else sees
 
 Fixed procedure since 2026-11-07, do not rethink it. Sources: Course D lesson 46 (brand names with ChatGPT), Course E 2026 (choosing a brand name), Course A 3.2 and the domain lesson, Course B.
 
-**Lesson of 07.11.:** HoneySquishy, HomesteadPreserving and LiftPetHair came from the old Course A "Domain Name Prompt", whose line "The niche keyword itself must be included" forces a category word. All three failed our rules and were replaced by GigglePeek, Pantrymoon and PlushSweep. When using that course prompt, use it word for word but deliberately overrule that one line and write that you did.
+**Lesson of 07.11.:** the old store name, HomesteadPreserving and LiftPetHair came from the old Course A "Domain Name Prompt", whose line "The niche keyword itself must be included" forces a category word. All three failed our rules and were replaced by Store A, Store B and Store C. When using that course prompt, use it word for word but deliberately overrule that one line and write that you did.
 
 **Rules** (in the short file): no product or category word; 5 to 10 letters; two soft real English words or one made-up word (pattern: place or feeling plus rest or benefit; round soft sounds for round soft products, "bouba" over "kiki"); radio test (no double letter at the word boundary, no two spellings); only .com, no number, no hyphen, no filler; neutral or positive meaning also in Urban Dictionary; not close to a known brand of the same buyers (Harvest is too close to Harvest Right, Tidy to Tidy Cats, Peepmoon to Peeps, Wigglemoon to The Wiggles, Gleemoon to Glee, anything with "merry" next to a competitor called merrysquish).
-**Best-practice extra (Curlmoon standard):** the name carries the benefit and becomes the ad line. GigglePeek: the child giggles when peeking behind the door, ad line "A giggle behind every door", and the name still fits if the product changes from cubes to dumplings or birthday boxes.
+**Best-practice extra (Curlmoon standard):** the name carries the benefit and becomes the ad line. Store A: the child giggles when peeking behind the door, ad line "A giggle behind every door", and the name still fits if the product changes from cubes to dumplings or birthday boxes.
 
 **Steps:**
-1. Generate 60 candidates (places and feelings from the buying situation: nursery, pantry, sofa). For GigglePeek 105 names were checked, 30 were free.
+1. Generate 60 candidates (places and feelings from the buying situation: nursery, pantry, sofa). For Store A 105 names were checked, 30 were free.
 2. Check all live:
    - `.com` registry: `curl -s -o /dev/null -w '%{http_code}' https://rdap.verisign.com/com/v1/domain/<name>.com` (404 = free, 200 = taken). Save the raw results in a TSV (name, letters, RDAP .com, RDAP plural, myshopify).
    - the plural `.com` and `<name>.myshopify.com`.
    - no website (no DNS).
-3. Cut the free ones with the rules, keep the best 3 with one reason each and a weakness each (GigglePeek: 10 letters, right at the limit, "peek" sounds hard; Plumpeek: spoken as "plump peek", so also buy plumppeek.com).
-4. Brand check: 10 seconds of Google and Amazon for a known brand in the category. Better: Trademarkia search (gigglepeek and plumpeek: "No results"; control search "squishmallows" gave 54 marks, proving the search works). A full USPTO search per class is not required for short-lived test stores (David, 07.11.). Optional: Wayback history (archive.org answered 429 once; retry later) and a `site:` search.
+3. Cut the free ones with the rules, keep the best 3 with one reason each and a weakness each (Store A: 10 letters, right at the limit, "peek" sounds hard; Plumpeek: spoken as "plump peek", so also buy plumppeek.com).
+4. Brand check: 10 seconds of Google and Amazon for a known brand in the category. Better: Trademarkia search (store-a and plumpeek: "No results"; control search "squishmallows" gave 54 marks, proving the search works). A full USPTO search per class is not required for short-lived test stores (David, 07.11.). Optional: Wayback history (archive.org answered 429 once; retry later) and a `site:` search.
 5. Buy: David buys at checkdomain as a new customer for 0.84 EUR the first year (renewal for .com is about 2.39 EUR a month). Give him the name as a copy block and have him check the cart against it before paying. Price is not a selection criterion. Right after buying, cancel to the end of the term (never delete immediately), so test domains never renew. Exceptions: our mail domain and dlichters.com. Record the domain and account (never passwords) in our account list and put an expiry reminder line with "David" and a date in our open-items file.
 6. Store email: `<storename>@` our catch-all mail domain, no paid mail package.
 
@@ -109,7 +109,7 @@ Fixed procedure since 2026-11-07, do not rethink it. Sources: Course D lesson 46
 
 Checklist used for all three previews on 07.11.:
 - In the build script: the NAME and MAIL constants (mail stays yellow until the domain is bought), the word mark in header and footer (two-part logo, one part accented in the brand colour; on a black footer use coloured text instead of a dark band, the band looked dull), titles, og:title, meta descriptions, product name, comparison table, about page, legal pages, copyright, image alt texts, comments in `shop.js`, the CSS class names that contained the old name, generated PDFs or printables (brand top right and footer line).
-- New icon if the old one carried the name (GigglePeek got a smiling gift box).
+- New icon if the old one carried the name (Store A got a smiling gift box).
 - Check: a case-insensitive grep for the old name over the output folder, the build script and generated files returns 0; diff against the previous state shows only name, mail and logo; screenshots at 390 px of header, footer and about page opened. Older lines in the build log that mention the old name are history, not errors.
 - Images where the name is only 2 to 3 px and unreadable can stay.
 
@@ -119,7 +119,7 @@ Checklist used for all three previews on 07.11.:
 - Copy only the public files: `index.html`, `robots.txt`, `assets`, `img`, `fonts`, `pages`, `products`, `kit` (if any), `.nojekyll`. Never the build folder, raw competitor captures, review raw data, supplier files.
 - Push with the GitHub CLI credential helper. Then verify: every file byte-identical to the source (sha per file), and run the page check once against the live URL. If a hash differs, do not report it as live.
 - Every page keeps the preview banner, `noindex,nofollow`, and robots Disallow. `og:image` needs an absolute URL after upload.
-- Live and measured 2026-11-07 (HTTP 200): https://davidlichters.github.io/gigglepeek.com/ , https://davidlichters.github.io/pantrymoon.com/ , https://davidlichters.github.io/plushsweep.com/
+- Live and measured 2026-11-07 (HTTP 200): [preview link] , [preview link] , [preview link]
 
 ## 13. Part B: going live on Shopify
 

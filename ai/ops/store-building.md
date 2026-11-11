@@ -43,7 +43,7 @@ Steps:
 4. Brand check: 10 seconds of Google and Amazon for a known brand in the same category. A full trademark search is not needed for short-lived test stores.
 5. Buy where a new customer pays the least (we paid under 1 EUR for the first year of a .com) and set it to expire at the end of the term right after buying, so test domains never renew by accident.
 
-Why the old way failed: a name prompt that forced a niche word produced names like HoneySquishy and LiftPetHair, all rejected.
+Why the old way failed: a name prompt that forced a niche word produced names like the old store name and LiftPetHair, all rejected.
 
 ### Images and ads
 
@@ -76,4 +76,4 @@ More: our Meta playbook https://dlichters.com/ai/ourrules/meta-ads-playbook.md �
 2. https://dlichters.com/ai/ops/store-building/02-6-images-and-video.md (3,884 words)
    6. Images and video · 7. Reviews: collecting, proving, filtering, ordering, showing · 7.1 Where real reviews come from · 7.2 Proving it is the same product · 7.3 Detecting imported, unproven reviews · 7.4 The filter pipeline (in this order) · 7.5 Ordering · 7.6 Showing · 8. Checks at 390 px (and 1280 px) · 9. Judge rounds ("Musk judge") until perfect · 10. Domain and store name SOP (full version) · 11. Renaming a store that is already built · 12. Publishing a preview on GitHub Pages · 13. Part B: going live on Shopify
 3. https://dlichters.com/ai/ops/store-building/03-14-restyling-a-live-shopify-theme-to-look-like-ano.md (3,273 words)
-   14. Restyling a live Shopify theme to look like another store (03.10.2026) · 15. The three student store previews of 2026-11-07 · 16. Helping other students: outreach rules · 17. What is still missing in the system · Corrections 2026-11-07 evening (newer than the text above; details in sections 18 to 20 below) · 18. Reviews: which ones we show and what star average a store must display (moved here from ops/gaps-2-1.md, 2026-11-07) · 19. Invented reviews, star counts and customer numbers: never, and the real alternatives (moved here from ops/gaps-2-1.md) · 20. Design rules for every store we build (moved here from ops/gaps-2-1.md)
+   14. Restyling a live Shopify theme to look like another store (03.10.2026) · 15. The three store previews of 2026-11-07 · 16. Helping other students: outreach rules · 17. What is still missing in the system · Corrections 2026-11-07 evening (newer than the text above; details in sections 18 to 20 below) · 18. Reviews: which ones we show and what star average a store must display (moved here from ops/gaps-2-1.md, 2026-11-07) · 19. Invented reviews, star counts and customer numbers: never, and the real alternatives (moved here from ops/gaps-2-1.md) · 20. Design rules for every store we build (moved here from ops/gaps-2-1.md)

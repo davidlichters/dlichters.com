@@ -17,7 +17,6 @@ Part 1 of 3 of "Store building: the full procedure". Map of all parts: https://d
 12. Publishing a preview on GitHub Pages
 13. Part B: going live on Shopify
 14. Restyling a live Shopify theme to look like another store (03.10.2026)
-15. The three student store previews of 2026-11-07 (GigglePeek, Pantrymoon, PlushSweep)
 16. Helping other students: outreach rules
 17. What is still missing in the system
 18. Reviews: which ones we show and what star average a store must display (2026-11-07)
@@ -105,7 +104,7 @@ Why: images were 17 of 91 defects in Tuckwell, and a wrong product was only noti
 - Header slim, 52 px.
 - Gallery full width on the phone, main image 390 x 390 (or close to square, e.g. 354 x 329 for a book scene). Dots on the phone; on desktop from 900 px a thumbnail row (9 thumbnails, 200 px, about 50 KB together) under the main image, click switches the image.
 - Under the title: stars plus "4.7 · N reviews", jumping to the review section. Then one benefit sentence in one line on 390 px.
-- Price, stars and the first tiers in the first phone screen. The buy button bottom edge was measured at 746 to 843 px on a 390 x 844 screen; where it falls below the fold, a **sticky buy bar** with price and button is shown. Final rule (PlushSweep round 3): the sticky bar appears only once the tiers and the buy button have scrolled out of view upwards, implemented with a scroll check, not IntersectionObserver (the observer reports nothing when you jump back up).
+- Price, stars and the first tiers in the first phone screen. The buy button bottom edge was measured at 746 to 843 px on a 390 x 844 screen; where it falls below the fold, a **sticky buy bar** with price and button is shown. Final rule (Store C round 3): the sticky bar appears only once the tiers and the buy button have scrolled out of view upwards, implemented with a scroll check, not IntersectionObserver (the observer reports nothing when you jump back up).
 - Quantity tiers side by side or stacked, one preselected (usually the pair or the "book plus kit" bundle). Badges: "Most popular" only once there is sales data; until then a descriptive badge ("Couch + car", "For 2 kids", "Best value", "GIFT SET"). Badge positioned so it never covers the price.
 - Savings shown as "Save $X" directly under the tier price, computed from our own single-unit price. **No strike-through prices, no "was $", no compare-at prices** (our legal rule: a reference price only if it really applied; two courses recommend the opposite, we do not follow them).
 - A hook in the tier where it helps: "Buy 1, get the 2nd for $4" (computed: 26.95 minus 22.95).
@@ -126,7 +125,7 @@ Why: images were 17 of 91 defects in Tuckwell, and a wrong product was only noti
 - **Placeholders never visible.** The build asserts against visible "Operator name", "$X", " __", "[[", TODO, TBD, Lorem, "placeholder" and against strike-through markup. In one preview "Operator name and address" stood visible in 15 places (footer of 8 pages, contact, privacy, terms); it was removed, not filled. The operator comes with the real owner.
 - **Notes never as customer text.** Replace internal notes with honest customer sentences: "Every order ships with tracking. You see the carrier in your shipping email." (claims nothing). An unproven "Who we are" section is hidden until the owner gives three true sentences. "Live chat: on this page" only if the free Shopify Inbox chat is really switched on.
 - **Measured facts can be white.** Example: "The EPA says the average family of four spends almost $3,000 a year on food that never gets eaten." checked word for word on the EPA page with curl ("family of four", not "household", because the source says only that).
-- **Remove promises the product does not keep well.** PlushSweep: clothing was taken out of the main promises because reviews said it is weak on thin clothes; FAQ now says "Best on upholstery and thicker fabric... On thin clothes a quick pass works, but a lint roller is finer there."
+- **Remove promises the product does not keep well.** In one store, clothing was taken out of the main promises because reviews said it is weak on thin clothes; FAQ now says "Best on upholstery and thicker fabric... On thin clothes a quick pass works, but a lint roller is finer there."
 - **Product title identical everywhere** (a judge found two different titles in buy box and sticky bar).
 - **No German words, no David, no age** in visible US text, no self-sabotaging true sentences ("you can do this yourself in two minutes" above our proof once killed a sale). Our English rules checker scans the finished page, not the input sheet, because a customer can see text from any field.
 - **About us, Shipping, Refund pages** built in the structure of the course prompts (Course A, module 3), with their high-ticket and "domestic supplier" assumptions and invented years and places removed, open values yellow.

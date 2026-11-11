@@ -141,7 +141,7 @@ A fix is not live until the live file proves it (our deploy rule since August 20
 3. Poll every 15 s for up to 6 minutes until the sha256 of the live index file equals the local one, and check 3 other changed files the same way.
 4. Report the commit and whether live matches. For stores, also take a 390 px screenshot of the live URL and open it.
 
-Example from the book (2026-11-07 18:5x): three student store previews published, sha equal on all three, each looked at on 390 px by the chat itself.
+Example from the book (2026-11-07 18:5x): three store previews published, sha equal on all three, each looked at on 390 px by the chat itself.
 
 ---
 

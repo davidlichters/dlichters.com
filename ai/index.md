@@ -27,7 +27,7 @@ Everything we know, in plain Markdown. Open only the page that fits the question
   - Billionaire and Musk thinking rules with evidence: https://dlichters.com/ai/ourrules/thinking-billionaires.md
   - Full Porchnap playbook, every rule ID with course source: https://dlichters.com/ai/ops/playbook-full.md
   - How Porchnap and Curlmoon actually ran (products, prices, results): https://dlichters.com/ai/ops/porchnap.md
-  - Building stores and student store previews, reviews, domains: https://dlichters.com/ai/ops/store-building.md
+  - Building stores, reviews, domains: https://dlichters.com/ai/ops/store-building.md
   - Product gate, calculator, ad watcher, course judge, test form per new product and wave 1 cost and chances: https://dlichters.com/ai/ops/product-testing.md
   - Every tool we built and how to redo it by hand: https://dlichters.com/ai/ops/tools.md
   - Loop, usage pacing (daily 10-14 %, two accounts Ultra and Max, effort level, context size), loop stop rules, watchers (incl. the Sensor app that reports new Curlmoon orders without a Chrome tab): https://dlichters.com/ai/ops/automation.md
