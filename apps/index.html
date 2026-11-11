@@ -130,9 +130,13 @@ body:has(.dev){background:#fff}
 main:has(.dev){max-width:none;padding:0}
 /* David 11.11.2026 20:2x: ohne Nebel scrollt das Menue mit dem Titel weg, sonst liegt es auf den View-Knoepfen */
 body:has(.dev) .gn-page:not(.gn-open):not(.gn-closing){position:absolute}
+/* David 11.11.2026 21:13: das D von David gleich weit von oben und links (gemessen 14 zu 22 Punkte, also 8 tiefer);
+   Menueknopf und Zurueck-Knopf wandern mit, damit sie auf Titelhoehe bleiben */
+body:has(.dev) .gn-menutrigger{top:11px}
+body:has(.dev) .gn-menuback{top:8px}
 .dev{max-width:600px;margin:0 auto;padding-bottom:40px;color:#000;letter-spacing:0;
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
-.dev h1{margin:0;padding:7px 64px 0 20px;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+.dev h1{margin:0;padding:15px 64px 0 20px;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
 .dev h2{margin:17px 0 0;padding:0 20px;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
