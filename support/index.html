@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#ffffff">
-<title>Support</title><meta name="description" content="Support for all apps by Lichters Apps.">
+<title>Support</title><meta name="description" content="Support for all apps by Lichters Apps: email, address, WhatsApp.">
 <style>
 :root{color-scheme:light;--bg:#fff;--bar:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#d2d2d7;
 --link:#0071e3;--chev:#aeaeb2;--ring:rgba(0,0,0,.1);--press:#f5f5f7;
@@ -128,9 +128,17 @@ letter-spacing:0}
 
 body:has(.dev){background:#fff}
 main:has(.dev){max-width:none;padding:0}
+/* David 11.11.2026 21:2x: fester weisser Balken oben, 1:1 wie apps.apple.com (dort gemessen: position fixed, 44 px hoch,
+   #fff, box-shadow 0 1px 2px rgba(0,0,0,.1)). Die zwei Menuelinien sitzen mittig darin und bleiben beim Scrollen stehen.
+   Unter dem Menue (z-index 9999), ueber dem Inhalt; faengt Tipps ab, damit keine App darunter aufgeht. Mitte bleibt leer: das App-Store-Zeichen gehoert Apple. */
+body:has(.dev)::before{content:"";position:fixed;top:0;left:0;right:0;z-index:9998;height:calc(44px + env(safe-area-inset-top));
+background:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,.1)}
+body:has(.dev) .gn-menutrigger,body:has(.dev) .gn-menuback{top:calc(env(safe-area-inset-top) - 2px)}
+/* Ecken-Regel (David 21:13): das D von David 22 Punkte unter dem Balken und 22 vom linken Rand. Auf Davids iPhone gemessen:
+   7 px Abstand oben ergaben 14 Punkte bis zum D, also 44 + 15 = 59 px. */
 .dev{max-width:600px;margin:0 auto;padding-bottom:40px;color:#000;letter-spacing:0;
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
-.dev h1{margin:0;padding:67.33px 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+.dev h1{margin:0;padding:calc(59px + env(safe-area-inset-top)) 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
 .dev h2{margin:17px 0 0;padding:0 20px;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
@@ -273,10 +281,17 @@ width:48px;height:48px;color:#000;opacity:.8;transition:opacity .32s var(--cb),c
 html.gn-lock,html.gn-lock body{overflow:hidden}
 html.srch .gn{display:none}
 @keyframes gn-oben-auf{0.000%{transform:translate(0.000px,-4.000px) rotate(0.000deg) scaleX(1.0000)}8.333%{transform:translate(0.000px,-3.822px) rotate(0.000deg) scaleX(1.0000)}16.667%{transform:translate(0.000px,-3.375px) rotate(0.000deg) scaleX(1.0000)}25.000%{transform:translate(0.000px,-2.739px) rotate(0.000deg) scaleX(1.0000)}33.333%{transform:translate(0.000px,-1.953px) rotate(0.000deg) scaleX(1.0000)}41.667%{transform:translate(0.000px,-1.041px) rotate(0.000deg) scaleX(1.0000)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.065px,0.065px) rotate(12.641deg) scaleX(0.9772)}66.667%{transform:translate(0.122px,0.122px) rotate(23.724deg) scaleX(0.9971)}75.000%{transform:translate(0.171px,0.171px) rotate(32.648deg) scaleX(1.0425)}83.333%{transform:translate(0.211px,0.211px) rotate(39.219deg) scaleX(1.0963)}91.667%{transform:translate(0.239px,0.239px) rotate(43.421deg) scaleX(1.1419)}100.000%{transform:translate(0.250px,0.250px) rotate(45.000deg) scaleX(1.1617)}}@keyframes gn-oben-zu{0.000%{transform:translate(0.250px,0.250px) rotate(45.000deg) scaleX(1.1617)}8.333%{transform:translate(0.239px,0.239px) rotate(43.421deg) scaleX(1.1419)}16.667%{transform:translate(0.211px,0.211px) rotate(39.219deg) scaleX(1.0963)}25.000%{transform:translate(0.171px,0.171px) rotate(32.648deg) scaleX(1.0425)}33.333%{transform:translate(0.122px,0.122px) rotate(23.724deg) scaleX(0.9971)}41.667%{transform:translate(0.065px,0.065px) rotate(12.641deg) scaleX(0.9772)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.000px,-1.041px) rotate(0.000deg) scaleX(1.0000)}66.667%{transform:translate(0.000px,-1.953px) rotate(0.000deg) scaleX(1.0000)}75.000%{transform:translate(0.000px,-2.739px) rotate(0.000deg) scaleX(1.0000)}83.333%{transform:translate(0.000px,-3.375px) rotate(0.000deg) scaleX(1.0000)}91.667%{transform:translate(0.000px,-3.822px) rotate(0.000deg) scaleX(1.0000)}100.000%{transform:translate(0.000px,-4.000px) rotate(0.000deg) scaleX(1.0000)}}@keyframes gn-unten-auf{0.000%{transform:translate(0.000px,3.000px) rotate(0.000deg) scaleX(1.0000)}8.333%{transform:translate(0.000px,2.867px) rotate(0.000deg) scaleX(1.0000)}16.667%{transform:translate(0.000px,2.532px) rotate(0.000deg) scaleX(1.0000)}25.000%{transform:translate(0.000px,2.054px) rotate(0.000deg) scaleX(1.0000)}33.333%{transform:translate(0.000px,1.465px) rotate(0.000deg) scaleX(1.0000)}41.667%{transform:translate(0.000px,0.781px) rotate(0.000deg) scaleX(1.0000)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.065px,0.065px) rotate(-12.641deg) scaleX(0.9772)}66.667%{transform:translate(0.122px,0.122px) rotate(-23.724deg) scaleX(0.9971)}75.000%{transform:translate(0.171px,0.171px) rotate(-32.648deg) scaleX(1.0425)}83.333%{transform:translate(0.211px,0.211px) rotate(-39.219deg) scaleX(1.0963)}91.667%{transform:translate(0.239px,0.239px) rotate(-43.421deg) scaleX(1.1419)}100.000%{transform:translate(0.250px,0.250px) rotate(-45.000deg) scaleX(1.1617)}}@keyframes gn-unten-zu{0.000%{transform:translate(0.250px,0.250px) rotate(-45.000deg) scaleX(1.1617)}8.333%{transform:translate(0.239px,0.239px) rotate(-43.421deg) scaleX(1.1419)}16.667%{transform:translate(0.211px,0.211px) rotate(-39.219deg) scaleX(1.0963)}25.000%{transform:translate(0.171px,0.171px) rotate(-32.648deg) scaleX(1.0425)}33.333%{transform:translate(0.122px,0.122px) rotate(-23.724deg) scaleX(0.9971)}41.667%{transform:translate(0.065px,0.065px) rotate(-12.641deg) scaleX(0.9772)}50.000%{transform:translate(0.000px,0.000px) rotate(0.000deg) scaleX(1.0000)}58.333%{transform:translate(0.000px,0.781px) rotate(0.000deg) scaleX(1.0000)}66.667%{transform:translate(0.000px,1.465px) rotate(0.000deg) scaleX(1.0000)}75.000%{transform:translate(0.000px,2.054px) rotate(0.000deg) scaleX(1.0000)}83.333%{transform:translate(0.000px,2.532px) rotate(0.000deg) scaleX(1.0000)}91.667%{transform:translate(0.000px,2.867px) rotate(0.000deg) scaleX(1.0000)}100.000%{transform:translate(0.000px,3.000px) rotate(0.000deg) scaleX(1.0000)}}
+
+body:has(.sup){background:#fff}
+main:has(.sup){max-width:none;padding:0}
+.sup-h{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.sup{max-width:600px;margin:0 auto}
+.sup a{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.sup img{display:block;width:100%;height:auto}
+body:has(.sup) .gn-page{position:absolute}
+@media(min-width:601px){body:has(.sup) .gn-menutrigger{right:calc(50% - 300px)}}
 </style></head>
 <body>
-<div class="navfx" id="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-<header class="nb"><b>Support</b></header>
 <nav class="gn gn-page" id="gn" aria-label="Menu">
 <div class="gn-schleier"></div>
 <div class="gn-tuch"><div class="gn-glas"></div><div class="gn-voll"></div></div>
@@ -322,14 +337,13 @@ setTimeout(function(){g.classList.add("gn-fertig");document.documentElement.clas
 document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 <main class="wrap">
-<article class="legal"><h1>Support</h1>
-<p>Questions about one of our apps, a bug or an idea? Write us an email.</p>
-<nav class="card list links" aria-label="Support"><a class="row" href="mailto:support@lichtersapps.com">support@lichtersapps.com</a><a class="row" href="../apps/">All apps and their support pages</a></nav>
-<section class="card"><h2>Contact</h2>
-<p>David Lichters<br>Maurenbrecherstraße 16<br>47803 Krefeld<br>
-<a href="mailto:support@lichtersapps.com">support@lichtersapps.com</a></p></section></article>
+<h1 class="sup-h">Support</h1>
+<div class="sup">
+<a href="mailto:support@dlichters.com"><img src="mail.jpg" width="1179" height="1069" alt="Email support@dlichters.com"></a>
+<a href="https://maps.apple.com/?address=Maurenbrecherstra%C3%9Fe%2016%2C%2047803%20Krefeld%2C%20Germany"><img src="karte.jpg" width="1179" height="1409" alt="Our address on Apple Maps" loading="lazy"></a>
+<a href="https://wa.me/4915730331937"><img src="whatsapp.jpg" width="1179" height="993" alt="WhatsApp support" loading="lazy"></a>
+</div>
+<script>(function(){var g=document.getElementById("gn"),t=g&&g.querySelector(".gn-menutrigger-button");if(t)t.addEventListener("click",function(){if(!g.classList.contains("gn-open")&&scrollY>0)scrollTo(0,0)},true)})()</script>
 </main>
 
-<script>(function(){var fx=document.getElementById("fx");function u(){fx.classList.toggle("on",(window.scrollY||0)>2)}
-addEventListener("scroll",u,{passive:true});u()})()</script>
 </body></html>
