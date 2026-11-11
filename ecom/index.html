@@ -116,14 +116,17 @@ body{margin:0;background:#fafafc;font-family:-apple-system,BlinkMacSystemFont,"S
 .ue h1{margin:0 0 17.2px;font-size:17px;line-height:22px;font-weight:400;color:#6e6e73}
 .ue a{display:block;font-size:17px;line-height:34px;font-weight:600;color:#333336;text-decoration:none;white-space:nowrap}
 .ue a:hover,.ue a:focus-visible{color:#000}
-/* David 10.11.: "mach das /ecom oben kein balken sondern den selben nebel wie /diet hat". Derselbe Nebel wie im Feed, nur in der Seitenfarbe 250,250,252. */
-.navfx{position:fixed;z-index:8999;top:0;left:0;right:0;height:104px;pointer-events:none;opacity:0;transition:opacity .2s}
-.navfx::before,.navfx::after{content:"";position:absolute;inset:0}
-.navfx::before{-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);-webkit-mask-image:linear-gradient(#000 67%,transparent 88%);mask-image:linear-gradient(#000 67%,transparent 88%)}
-.navfx::after{background:linear-gradient(rgba(250,250,252,.85) 56%,rgba(250,250,252,0))}
-.navfx.on{opacity:1}</style>
+/* David 10.11.: "mach das /ecom oben kein balken sondern den selben nebel wie /diet hat". Derselbe Nebel wie im Feed (seit 11.11. weich, nebel_css), nur in der Seitenfarbe 250,250,252. */
+.navfx{position:fixed;z-index:8999;top:0;left:0;right:0;height:104px;pointer-events:none}
+.navfx i{position:absolute;inset:0;opacity:0;transition:opacity .2s}
+.navfx.on i{opacity:1}
+.navfx i:nth-child(1){-webkit-backdrop-filter:blur(1px);backdrop-filter:blur(1px);-webkit-mask-image:linear-gradient(rgba(0,0,0,1.000) 55.0%,rgba(0,0,0,0.926) 62.5%,rgba(0,0,0,0.741) 70.0%,rgba(0,0,0,0.500) 77.5%,rgba(0,0,0,0.259) 85.0%,rgba(0,0,0,0.074) 92.5%,rgba(0,0,0,0.000) 100.0%);mask-image:linear-gradient(rgba(0,0,0,1.000) 55.0%,rgba(0,0,0,0.926) 62.5%,rgba(0,0,0,0.741) 70.0%,rgba(0,0,0,0.500) 77.5%,rgba(0,0,0,0.259) 85.0%,rgba(0,0,0,0.074) 92.5%,rgba(0,0,0,0.000) 100.0%)}
+.navfx i:nth-child(2){-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);-webkit-mask-image:linear-gradient(rgba(0,0,0,1.000) 35.0%,rgba(0,0,0,0.926) 42.5%,rgba(0,0,0,0.741) 50.0%,rgba(0,0,0,0.500) 57.5%,rgba(0,0,0,0.259) 65.0%,rgba(0,0,0,0.074) 72.5%,rgba(0,0,0,0.000) 80.0%);mask-image:linear-gradient(rgba(0,0,0,1.000) 35.0%,rgba(0,0,0,0.926) 42.5%,rgba(0,0,0,0.741) 50.0%,rgba(0,0,0,0.500) 57.5%,rgba(0,0,0,0.259) 65.0%,rgba(0,0,0,0.074) 72.5%,rgba(0,0,0,0.000) 80.0%)}
+.navfx i:nth-child(3){-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);-webkit-mask-image:linear-gradient(rgba(0,0,0,1.000) 15.0%,rgba(0,0,0,0.926) 22.5%,rgba(0,0,0,0.741) 30.0%,rgba(0,0,0,0.500) 37.5%,rgba(0,0,0,0.259) 45.0%,rgba(0,0,0,0.074) 52.5%,rgba(0,0,0,0.000) 60.0%);mask-image:linear-gradient(rgba(0,0,0,1.000) 15.0%,rgba(0,0,0,0.926) 22.5%,rgba(0,0,0,0.741) 30.0%,rgba(0,0,0,0.500) 37.5%,rgba(0,0,0,0.259) 45.0%,rgba(0,0,0,0.074) 52.5%,rgba(0,0,0,0.000) 60.0%)}
+.navfx i:nth-child(4){-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);-webkit-mask-image:linear-gradient(rgba(0,0,0,1.000) 0.0%,rgba(0,0,0,0.926) 6.7%,rgba(0,0,0,0.741) 13.3%,rgba(0,0,0,0.500) 20.0%,rgba(0,0,0,0.259) 26.7%,rgba(0,0,0,0.074) 33.3%,rgba(0,0,0,0.000) 40.0%);mask-image:linear-gradient(rgba(0,0,0,1.000) 0.0%,rgba(0,0,0,0.926) 6.7%,rgba(0,0,0,0.741) 13.3%,rgba(0,0,0,0.500) 20.0%,rgba(0,0,0,0.259) 26.7%,rgba(0,0,0,0.074) 33.3%,rgba(0,0,0,0.000) 40.0%)}
+.navfx i:nth-child(5){background:linear-gradient(rgba(250,250,252,0.850) 42.0%,rgba(250,250,252,0.833) 46.8%,rgba(250,250,252,0.787) 51.7%,rgba(250,250,252,0.717) 56.5%,rgba(250,250,252,0.630) 61.3%,rgba(250,250,252,0.530) 66.2%,rgba(250,250,252,0.425) 71.0%,rgba(250,250,252,0.320) 75.8%,rgba(250,250,252,0.220) 80.7%,rgba(250,250,252,0.133) 85.5%,rgba(250,250,252,0.063) 90.3%,rgba(250,250,252,0.017) 95.2%,rgba(250,250,252,0.000) 100.0%)}</style>
 </head><body>
-<div class="navfx" id="fx" aria-hidden="true"></div>
+<div class="navfx" id="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
 <nav class="gn gn-page" id="gn" aria-label="Menu">
 <div class="gn-schleier"></div>
 <div class="gn-tuch"><div class="gn-glas"></div><div class="gn-voll"></div></div>
