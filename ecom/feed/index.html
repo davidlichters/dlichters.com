@@ -538,7 +538,7 @@ function folge(mark){var el=mark.el,n=danach(el),da=imBild(el);zeige(el,el._p.sl
  sprich(n,n.querySelector('.sp'),da?1:2)}
 /* David 09.11.: Speak laeuft fuer jeden Besucher auf der Website. Der fertige Ton liegt je Post als Datei online, das Handy muss nichts umwandeln. Wo noch keiner liegt, liest die Stimme des Geraets. */
 /* 09.11. abends: der ganze Kurs passt nicht in ein Repo. liste.json nennt je Abschnitt den Ort: "21-08:1" liegt im Repo ton-1, "01-01" allein liegt hier auf der Seite. Steht beides da, gilt das Repo, sobald dort Ton liegt. */
-var TON=location.origin+HIER.replace(/feed\/$/,'ton/'),TONFERN='https://davidlichters.github.io/ton-',ton=new Audio(),tonOrt={},tonM={};ton.preload='none';ton.setAttribute('playsinline','');
+var TON=location.origin+HIER.replace(/feed\/$/,'ton/'),TONFERN='https://lichters.github.io/ton-',ton=new Audio(),tonOrt={},tonM={};ton.preload='none';ton.setAttribute('playsinline','');
 var tonDa=fetch(TON+'liste.json').then(function(r){return r.ok?r.json():[]}).catch(function(){return []}).then(function(l){l.forEach(function(x){var a=String(x).split(':'),o=tonOrt[a[0]]||(tonOrt[a[0]]={});if(/^\d+$/.test(a[1]||''))o.r=TONFERN+a[1]+'/';else o.l=TON})});
 function tonLies(b,f){return b?fetch(b+f+'/m.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}):Promise.resolve(null)}
 function tonHol(f){if(tonM[f])return;var e=tonM[f]={w:null,b:''};tonDa.then(function(){var o=tonOrt[f];if(!o)return;return tonLies(o.r,f).then(function(j){if(j){e.b=o.r;e.w=j;return}return tonLies(o.l,f).then(function(k){if(k){e.b=o.l;e.w=k}})})}).catch(function(){})}
