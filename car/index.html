@@ -7,12 +7,14 @@
 <meta name="description" content="David's car: coming soon.">
 <link rel="canonical" href="https://dlichters.com/car/">
 <style>
-html{background:#faf9fb;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:#faf9fb;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-synthesis:none}
-.cs{min-height:calc(100vh + 100px);min-height:calc(100lvh + 100px);box-sizing:border-box;padding:50px 16px 0;text-align:center}
+html{height:100%;overflow:hidden;overscroll-behavior:none;background:#faf9fb;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{position:fixed;top:0;right:0;bottom:0;left:0;margin:0;overflow:hidden;overscroll-behavior:none;background:#faf9fb;
+-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-synthesis:none}
+.cs{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;box-sizing:border-box;padding:50px 16px 0;text-align:center}
 .cs h1{margin:0 0 24px;color:#333336;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 font-size:28px;line-height:1.1428571429;font-weight:600;letter-spacing:-.0066em}
-.cs img{display:block;width:100%;max-width:980px;height:auto;margin:0 auto}
+.cs img{display:block;width:100%;height:auto;margin:0 auto;max-width:min(980px,calc((100vh - 122px) * 1147 / 391));
+max-width:min(980px,calc((100dvh - 122px) * 1147 / 391))}
 .gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
 --sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 --sft:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -120,7 +122,7 @@ html.srch .gn{display:none}
 </style></head>
 <body>
 <main class="cs"><h1>coming soon</h1>
-<img src="car.png" width="1179" height="391" alt="Silhouette of a sports car with a question mark"></main>
+<img src="car.png" width="1147" height="391" alt="Silhouette of a sports car with a question mark"></main>
 <nav class="gn gn-page" id="gn" aria-label="Menu">
 <div class="gn-schleier"></div>
 <div class="gn-tuch"><div class="gn-glas"></div><div class="gn-voll"></div></div>
@@ -166,4 +168,6 @@ setTimeout(function(){g.classList.add("gn-fertig");document.documentElement.clas
 document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 
+<script>(function(){document.addEventListener("touchmove",function(e){var g=document.getElementById("gn");
+if(g&&g.classList.contains("gn-open")&&e.target.closest&&e.target.closest(".gn-content"))return;e.preventDefault()},{passive:false})})()</script>
 </body></html>

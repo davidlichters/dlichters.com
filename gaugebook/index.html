@@ -93,50 +93,22 @@ letter-spacing:-.018em}
 .legal .group section+section{border-top:1px solid var(--line)}
 .legal .group h2{margin:0 0 8px;font-size:19px}.legal .group p:last-child{margin-bottom:0}
 .legal section:not(.card)+.card,.legal h1+p+.card{margin-top:32px}
-.foot{display:flex;justify-content:center;background:var(--fbg);padding:0 0 8px;color:var(--fcopy);
-font:300 13px/20px -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
-letter-spacing:-.208px}
-.foot nav{display:flex;flex-direction:column;width:100%;max-width:800px;padding:12px 40px 0}
-.foot .logo{display:block;align-self:center;height:18px;margin:12px 0 8px;color:var(--flogo)}
-.foot .logo svg{display:block;width:18px;height:18px}
-.foot p,.foot .fl{display:block;margin:0;padding:8px 20px;text-align:center;border-bottom:1px solid var(--fline)}
-.foot .fl{color:var(--flink)}.foot .fl:last-child{border-bottom:0}
 
 body:has(.ios){background:#f2f2f7;--fog:242,242,247}
 main:has(.ios){max-width:none;padding:0}
 .ios{max-width:600px;margin:0 auto;color:#000;letter-spacing:normal;
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
 .ios a{color:#000;text-decoration:none}.ios a:hover{text-decoration:none}
-.ios h1{margin:0 0 7.67px;padding:13.33px 16px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-letter-spacing:0}
 .ios .grp{margin:0 16px;background:#fff;border-radius:26px;overflow:hidden}
-.ios .grp+.grp,.ios #apps{margin-top:35px}
-.ios .me{position:relative;display:flex;align-items:center;height:90px;padding:0 16px}
-.ios .av{flex:none;width:60px;height:60px;border-radius:50%;background:linear-gradient(#b7b7b7,#323232);color:#fff;
-font:900 28px/60px ui-rounded,-apple-system,BlinkMacSystemFont,"SF Pro Rounded",sans-serif;text-align:center;letter-spacing:0}
-.ios .tx{display:flex;flex-direction:column;margin-left:8px;padding-top:.38px;min-width:0}
-.ios .tx strong{font:600 20px/24px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;letter-spacing:0}
-.ios .tx span{margin-top:1.66px;color:#7f7f7f;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .grp+.grp{margin-top:35px}
 .ios .rw{position:relative;display:flex;align-items:center;height:52px;padding-left:13.67px}
 .ios .rw img:not(.chev){flex:none;width:28.67px;height:28.67px;border-radius:7px;margin-right:13.66px;
 box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
 .ios .rw span{position:relative;top:.33px;font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;
 white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:48px}
 .ios .rw:not(:last-child)::after{content:"";position:absolute;left:56px;right:16px;bottom:0;height:1px;background:#e7e7e8}
-.ios .rw[hidden]{display:none}
 .ios .chev{position:absolute;right:18.33px;top:50%;width:7px;height:12px;margin-top:-6px}
 .ios a,.ios button{-webkit-tap-highlight-color:transparent}
-.ios .sbw{position:-webkit-sticky;position:sticky;bottom:28px;z-index:5;margin:35px 28px 28px}
-.ios .sbw::before{content:"";position:absolute;left:50%;width:100vw;margin-left:-50vw;top:-24px;bottom:-28px;
-pointer-events:none;background:linear-gradient(rgba(242,242,247,0),rgba(242,242,247,.25) 21%,rgba(242,242,247,.6) 48%,
-rgba(242,242,247,.77) 74%)}
-.ios .sb{position:relative;display:flex;align-items:center;gap:10.67px;height:48px;padding:0 22.66px 0 19.33px;
-border-radius:24px}
-.glass{background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
-backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
-box-shadow:inset 0 0 0 .67px rgba(255,255,255,.95),inset 1.5px 1.5px 1px -1px rgba(255,255,255,1),
-inset -1.5px -1.5px 1px -1px rgba(255,255,255,.8),inset 0 0 14px rgba(255,255,255,.6),0 0 0 .33px rgba(0,0,0,.06),
-0 12px 40px rgba(0,0,0,.12)}
 /* App-Seite wie die Einstellungen-Seite „Accessibility“ (Davids Bild, 26.10.2026, 3 px je pt gemessen): Karte 22,67 pt
    unter der Leiste, Symbol 60 pt, Name 22 pt fett, Beschreibung 17/22 pt in #7f7f7f; Abschnittstitel 17 pt halbfett
    #85858a bei x 32, 27,5 pt unter der Karte und 6 pt über der nächsten */
@@ -152,35 +124,52 @@ letter-spacing:0}
 .ios .ft{height:auto;min-height:52px;padding-top:14px;padding-bottom:14px}
 .ios .ft span{white-space:normal;padding-right:16px}
 .ios .app{padding-bottom:40px}
-.sugg{display:none}.ios .xb{display:none}
-/* Suchansicht wie in den iOS-Einstellungen (Davids Bild 26.10.2026, 3 px je pt gemessen): weißer Grund, oben
-   „Suggestions“ 17 pt halbfett #8a8a8d bei x 17, Zeilen 61 pt ohne Karte, Symbol bei x 16, Text bei x 57, Linie von
-   57 bis 376,67 auch unter der letzten Zeile, keine Pfeile; Suchleiste von x 12 bis 321, daneben runder X-Knopf 48 pt
-   (SF Symbol xmark, mittel, Maßstab groß, 17 pt), beide 14 pt über der Tastatur */
-html.srch body{background:#fff}
-html.srch .navfx,html.srch .foot,html.srch .ios h1,html.srch .ios #me{display:none}
-html.srch .ios .sugg{display:block;margin:0;padding:35px 17px 9px;color:#8a8a8d;
-font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
-html.srch .ios .sugg.q{display:none}
-html.srch .ios #apps{margin:0;border-radius:0;background:transparent}
-html.srch .ios .rw{height:61px;padding-left:16px}
-html.srch .ios .rw img:not(.chev){margin-right:12.33px;box-shadow:none}
-html.srch .ios .rw::after{content:"";position:absolute;left:57px;right:16.33px;bottom:0;height:1px;background:#e7e7e8}
-html.srch .ios .chev{display:none}
-html.srch main:has(.ios){padding-bottom:130px}
-html.srch .ios .sbw{position:fixed;left:12px;right:72px;bottom:calc(14px + var(--kb,0px));margin:0}
-html.srch .ios .sbw::before{right:-72px;background:linear-gradient(rgba(255,255,255,0),rgba(250,250,250,.92) 55%)}
-html.srch .ios .xb{position:fixed;right:12px;bottom:calc(14px + var(--kb,0px));z-index:6;display:flex;align-items:center;
-justify-content:center;width:48px;height:48px;margin:0;padding:0;border:0;border-radius:50%;cursor:pointer}
-.ios .xb img{display:block}
-.ios .sb img{flex:none;display:block}
-.ios .sb img:last-child{position:relative;top:-.67px}
-.ios .sb input{flex:1;min-width:0;height:44px;margin:0;padding:0;border:0;background:transparent;color:#000;
-font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;outline:0;
--webkit-appearance:none;appearance:none}
-.ios .sb input::placeholder{color:#707073;opacity:1}
-.ios .sb input::-webkit-search-cancel-button{-webkit-appearance:none}
 :root{--back:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAA5CAYAAAC4YUKZAAACWUlEQVR42sXZS4hPcRQH8I8Z4/0OERYUyiywkIWIKCVKiFCKDVZkpWwkhWwkC0nZIIqFsCE1XnmMjIQyCiVRQh7jbcbmTk0TM+df94xTv92t36df/e4933OrdW1NwjJMxlt86MrNu2EPmtFSrB/Y3JWAQ202b79mVScDqnEE6zp4piUT0B0nOjiB1nWmexKgB05iceDZhgxAL5wPnEALXmJo2YA+uBgEvEJt2YD+uBwEvMD4sgEDcSMIeIqxZQOG4E4Q8BijywYMx/0g4AFGlA0YiUdBwN2MWzAGT4KAmxhUNmAcngUBV4pbU2pNKK5XBHCxeG+UWrXFCyYCOIeeZQOm4E0QcAo1ZQOm4V0QcLT4fJdaM4oWLAI4jKqyAXPwOQg4UHRQpdZ8fAkC9mb0A4vwLQjYkQFYVnTBEcDWDMBq/AoCNmUA1uJ3YPNmrM8AzAmewC+syWrNrwUAP7E8Mx98DSBWZMe01wHEJfTNROwP3oirGJCFGFBBn3gLg7Mgw3AvCGnI6Bfbtu71QcjDjM65bYi5HoQ0ZmSI1uqHuiDkWUaaaq3euFBBrpyQBemJs/8zYbdWDU4HIW8wNXPsczwIeY/pWZCqYgAWgXzEzMxR4MEgpAlzM781+4KQr1iQCdkdhHzHkkzI9iDkJ1ZmQrYGIb+LPjatNgchzdiYCdnQboLf0dqSCYnGhhZsy4SsqiBA7cyELK0gSu7KhCysIFTPy/rp0ojbRcDubHTUnJ1pZuNTJydxpioZUVcMXD528Ey9Lqp/Dd+eZ+aYv9XEYr7ZVDQ/xzAK/gAQcR7593xSwAAAAABJRU5ErkJggg==)}
+
+body:has(.dev){background:#fff}
+main:has(.dev){max-width:none;padding:0}
+.dev{max-width:600px;margin:0 auto;padding-bottom:40px;color:#000;letter-spacing:0;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+.dev h1{margin:0;padding:67.33px 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.dev h2{margin:17px 0 0;padding:0 20px;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.dev ul{margin:3.67px 0 0;padding:0;list-style:none}
+.dev li{position:relative}
+.dev li:not(:last-child)::after{content:"";position:absolute;left:91.67px;right:19.67px;bottom:0;height:1px;background:#e7e7e7;
+transform-origin:0 100%;pointer-events:none}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:2dppx){.dev li:not(:last-child)::after{transform:scaleY(.5)}}
+@media (-webkit-min-device-pixel-ratio:3),(min-resolution:3dppx){.dev li:not(:last-child)::after{transform:scaleY(.3333)}}
+.dev .zl{display:flex;align-items:center;height:78px;padding:0 20px;color:#000;-webkit-tap-highlight-color:transparent}
+.dev .zl:hover{text-decoration:none}.dev .zl:active{background:#f2f2f7}
+@media (hover:hover){.dev .zl:hover{background:#f5f5f7}}
+.dev .ic{position:relative;flex:none;width:62px;height:62px;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 62'%3E%3Cpath d='M24.566 0L37.434 0C44.508 0 48.045 0 51.234 1.053L51.852 1.204C56.009 2.617 59.383 5.991 60.796 10.148L60.947 10.766C62 13.955 62 17.492 62 24.566L62 37.434C62 44.508 62 48.045 60.947 51.234L60.796 51.852C59.383 56.009 56.009 59.383 51.852 60.796L51.234 60.947C48.045 62 44.508 62 37.434 62L24.566 62C17.492 62 13.955 62 10.766 60.947L10.148 60.796C5.991 59.383 2.617 56.009 1.204 51.852L1.053 51.234C0 48.045 0 44.508 0 37.434L0 24.566C0 17.492 0 13.955 1.053 10.766L1.204 10.148C2.617 5.991 5.991 2.617 10.148 1.204L10.766 1.053C13.955 0 17.492 0 24.566 0Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;
+mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 62'%3E%3Cpath d='M24.566 0L37.434 0C44.508 0 48.045 0 51.234 1.053L51.852 1.204C56.009 2.617 59.383 5.991 60.796 10.148L60.947 10.766C62 13.955 62 17.492 62 24.566L62 37.434C62 44.508 62 48.045 60.947 51.234L60.796 51.852C59.383 56.009 56.009 59.383 51.852 60.796L51.234 60.947C48.045 62 44.508 62 37.434 62L24.566 62C17.492 62 13.955 62 10.766 60.947L10.148 60.796C5.991 59.383 2.617 56.009 1.204 51.852L1.053 51.234C0 48.045 0 44.508 0 37.434L0 24.566C0 17.492 0 13.955 1.053 10.766L1.204 10.148C2.617 5.991 5.991 2.617 10.148 1.204L10.766 1.053C13.955 0 17.492 0 24.566 0Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.dev .ic img{display:block;width:62px;height:62px}
+.dev .ic::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 62'%3E%3Cpath d='M24.566 0L37.434 0C44.508 0 48.045 0 51.234 1.053L51.852 1.204C56.009 2.617 59.383 5.991 60.796 10.148L60.947 10.766C62 13.955 62 17.492 62 24.566L62 37.434C62 44.508 62 48.045 60.947 51.234L60.796 51.852C59.383 56.009 56.009 59.383 51.852 60.796L51.234 60.947C48.045 62 44.508 62 37.434 62L24.566 62C17.492 62 13.955 62 10.766 60.947L10.148 60.796C5.991 59.383 2.617 56.009 1.204 51.852L1.053 51.234C0 48.045 0 44.508 0 37.434L0 24.566C0 17.492 0 13.955 1.053 10.766L1.204 10.148C2.617 5.991 5.991 2.617 10.148 1.204L10.766 1.053C13.955 0 17.492 0 24.566 0Z' fill='none' stroke='rgba(142,142,142,.27)' stroke-width='2'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.dev .tx{flex:1;min-width:0;display:flex;flex-direction:column;margin-left:10px;padding-right:12px}
+.dev .nm,.dev .st{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.dev .nm{font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.dev .st{margin-top:1px;padding-bottom:.33px;color:#8a8a8e;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.dev .vw{flex:none;width:74px;height:32px;border-radius:16px;background:#eee;color:#0088ff;text-align:center;
+font:700 16px/32px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.kopf{position:-webkit-sticky;position:sticky;top:0;z-index:7;display:flex;align-items:center;height:54px;padding-left:20px}
+.kopf a{display:flex;align-items:center;min-height:44px;color:#000;font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;
+letter-spacing:0;-webkit-tap-highlight-color:transparent}
+.kopf a:hover{text-decoration:none}.kopf a:active{opacity:.6}
+.ios .fein{padding:35px 32px 0;color:#7f7f7f}
+.ios .fs{display:flex;align-items:center;gap:8px;height:44px;margin:0}
+.ios .fs img{flex:none;display:block;opacity:.47}
+.ios .fs input{flex:1;min-width:0;height:44px;margin:0;padding:0;border:0;background:transparent;color:#000;
+font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;outline:0;-webkit-appearance:none;appearance:none}
+.ios .fs input::placeholder{color:#7f7f7f;opacity:1}
+.ios .fs input::-webkit-search-cancel-button{-webkit-appearance:none}
+.ios .ftr a,.ios .ftr p{display:block;margin:0;padding:11px 0;color:#7f7f7f;font:400 17px/22px -apple-system,BlinkMacSystemFont,
+sans-serif;letter-spacing:0}
+.ios .ftr [hidden]{display:none}
+.ios .fuss{margin-top:16px;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .fuss p{margin:0}
+.ios .fuss .fl{display:inline-block;padding:13px 18px 13px 0;color:#7f7f7f}
 .gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
 --sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 --sft:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -287,7 +276,7 @@ html.srch .gn{display:none}
 </style></head>
 <body>
 <div class="navfx" id="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-<header class="nb"><b>Gaugebook</b></header>
+<header class="kopf"><a href="../apps/">David Lichters</a></header>
 <nav class="gn gn-page" id="gn" aria-label="Menu">
 <div class="gn-schleier"></div>
 <div class="gn-tuch"><div class="gn-glas"></div><div class="gn-voll"></div></div>
@@ -352,6 +341,16 @@ Purchases are restored in the app under Settings, subscriptions are managed in t
 <div class="rw ft"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>CSV export and a clean PDF vehicle report, handy when you sell the vehicle</span></div>
 <div class="rw ft"><img src="data:image/png;base64,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" width="29" height="29" alt=""><span>No account, no ads, no tracking</span></div>
 </div>
+<div class="fein">
+<form class="fs" role="search" onsubmit="return false"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAADTUlEQVR4nOWaS2xNURSGv9I2kh6VICJKa0BLxCsx0EaENqlXDYgYMDPTARKMGDVExIBEpKYSBAOPATqSYKBe0Uol1XgklSBUS6hXy5WdrJvcHGvfs889557b8idrstv+a/37nLXX2uu0iGiYAywGqoEpwHhgGPgMvAK6gbvAe0YY6oCTwGsg5WC/gU5gH1BZ6OCbgHuOgdvMPKXTQE3Swc8ErkUM3m8/gUPAuCQEbAQ+xiwg0x4Bs6MGWZTlZ3uBwwG/8xC4AXQALyWhxwITJbilQCNQkYWjH1gHtBMz9mfZvUHgWIgdHAM0ANcDOGvjFLAti7OLwPQI3PVAj4X7gxzVkbEI+K44GAKa43AAeMAFi5DOqMleAnQpxD/keI0TJs9OWIQciUK8x0K6hfzACDlneerzciEsA/oUwuPxx/6XX9Oa+P2a1y00dipEveIk31iu+P4FzApL1KEQmVMqKVxR/LeEIahRCN5KoieFZUoMT8MQNCsER0kez5U4ZrhWU9Na+9FG8mhT1mpdRWhtcex9jAPalbUaVxH+i8o74BPJo0dZq3QVUa50lYVAv7Lmj80qoti3ZipmITCkrJW4iviSi/o8oFxZ++oqwj+JqFCeTlLXYD/e4CjCX1SKc23AImKhpXY4iTAth3Z5SRoNytoD1z+uVypl0nVimjR9mTEMhHmtS+V48wtZQnJoUfyfCUvSqpBcJRlMtoyFzJQkFObKuNFPtIH845Ti90nAqMgK7fLel+f56VbLlXhzroRVMv/RdsUMw+LGCstk5VZU4l2Wnely7e0d0WTZsMFcrqUaLluEmMq+PiK3OQkPKsdpKmM8ZEaakVEmH0ZSFjMiF4TkNEV1k3QHNt5U3EImBQgxJ9lNYLuMHossu14nNeCFQ/CpDDO5sjauJ3LJ0emgHAB3gPvS8wyHDDyVLyHpmZSWhFHtsYgOErImLiFVUke0ghjWTHXeId8xzHD5dpJC0pW91dJrBVm3fLiZ4ON0FbKamFEqrfMB6bGeyXDhl+TCgLwu54HdwPwAPq9QQuKGJ9U6m5BvwCpGOLz/TUgjIxyeQ44YISv5B4T0Sksz6oVUMwrgBQiZyiiBZ0n2QnyCiATTkKa7BfPvF2fTN84/25AymWvew0cAAAAASUVORK5CYII=" width="16.33" height="16.33" alt=""><input type="search" placeholder="Search apps" aria-label="Search apps" autocomplete="off" enterkeyhint="go" id="fq"></form>
+<nav class="ftr" id="ftr" aria-label="Search results"><a href="../bracketmaker/" data-n="bracket maker" hidden>Bracket Maker</a><a href="../breedbook/" data-n="breedbook" hidden>Breedbook</a><a href="../clapnote/" data-n="clapnote" hidden>Clapnote</a><a href="../coffer/" data-n="coffer" hidden>Coffer</a><a href="../floorscribe/" data-n="floorscribe" hidden>Floorscribe</a><a href="../hertzline/" data-n="hertzline" hidden>Hertzline</a><a href="../coinclock/" data-n="coinclock" hidden>Coinclock</a><a href="../gaugebook/" data-n="gaugebook" hidden>Gaugebook</a><a href="../panelwise/" data-n="panelwise" hidden>Panelwise</a><a href="../regiebericht/" data-n="regiebericht" hidden>Regiebericht</a><a href="../schichtblatt/" data-n="schichtblatt" hidden>Schichtblatt</a><a href="../halfspeed/" data-n="halfspeed" hidden>Halfspeed</a><a href="../spurbuch/" data-n="spurbuch" hidden>Spurbuch</a><a href="../stitchnook/" data-n="stitchnook" hidden>Stitchnook</a><a href="../tallybin/" data-n="tallybin" hidden>Tallybin</a><a href="../ton80/" data-n="ton80" hidden>Ton80</a><p id="fno" hidden>No apps found</p></nav>
+<footer class="fuss"><p>Copyright © 2026 Lichters Apps. All rights reserved.</p><a class="fl" href="../terms/">Terms of Service</a><a class="fl" href="privacy/">Privacy Policy</a><a class="fl" href="../imprint/">Imprint</a></footer>
+</div>
+<script>(function(){var q=document.getElementById("fq"),r=document.querySelectorAll("#ftr a"),n=document.getElementById("fno");
+function f(){var v=q.value.trim().toLowerCase(),k=0;r.forEach(function(a){var t=!!v&&a.dataset.n.indexOf(v)>-1;a.hidden=!t;if(t)k++});
+n.hidden=!v||k>0}
+q.addEventListener("input",f);
+q.form.addEventListener("submit",function(){var a=document.querySelector("#ftr a:not([hidden])");if(a)location.href=a.href})})()</script>
 </div>
 </main>
 

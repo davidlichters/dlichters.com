@@ -93,50 +93,22 @@ letter-spacing:-.018em}
 .legal .group section+section{border-top:1px solid var(--line)}
 .legal .group h2{margin:0 0 8px;font-size:19px}.legal .group p:last-child{margin-bottom:0}
 .legal section:not(.card)+.card,.legal h1+p+.card{margin-top:32px}
-.foot{display:flex;justify-content:center;background:var(--fbg);padding:0 0 8px;color:var(--fcopy);
-font:300 13px/20px -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif;
-letter-spacing:-.208px}
-.foot nav{display:flex;flex-direction:column;width:100%;max-width:800px;padding:12px 40px 0}
-.foot .logo{display:block;align-self:center;height:18px;margin:12px 0 8px;color:var(--flogo)}
-.foot .logo svg{display:block;width:18px;height:18px}
-.foot p,.foot .fl{display:block;margin:0;padding:8px 20px;text-align:center;border-bottom:1px solid var(--fline)}
-.foot .fl{color:var(--flink)}.foot .fl:last-child{border-bottom:0}
 
 body:has(.ios){background:#f2f2f7;--fog:242,242,247}
 main:has(.ios){max-width:none;padding:0}
 .ios{max-width:600px;margin:0 auto;color:#000;letter-spacing:normal;
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
 .ios a{color:#000;text-decoration:none}.ios a:hover{text-decoration:none}
-.ios h1{margin:0 0 7.67px;padding:13.33px 16px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-letter-spacing:0}
 .ios .grp{margin:0 16px;background:#fff;border-radius:26px;overflow:hidden}
-.ios .grp+.grp,.ios #apps{margin-top:35px}
-.ios .me{position:relative;display:flex;align-items:center;height:90px;padding:0 16px}
-.ios .av{flex:none;width:60px;height:60px;border-radius:50%;background:linear-gradient(#b7b7b7,#323232);color:#fff;
-font:900 28px/60px ui-rounded,-apple-system,BlinkMacSystemFont,"SF Pro Rounded",sans-serif;text-align:center;letter-spacing:0}
-.ios .tx{display:flex;flex-direction:column;margin-left:8px;padding-top:.38px;min-width:0}
-.ios .tx strong{font:600 20px/24px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;letter-spacing:0}
-.ios .tx span{margin-top:1.66px;color:#7f7f7f;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .grp+.grp{margin-top:35px}
 .ios .rw{position:relative;display:flex;align-items:center;height:52px;padding-left:13.67px}
 .ios .rw img:not(.chev){flex:none;width:28.67px;height:28.67px;border-radius:7px;margin-right:13.66px;
 box-shadow:0 0 0 .5px rgba(0,0,0,.08)}
 .ios .rw span{position:relative;top:.33px;font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;
 white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:48px}
 .ios .rw:not(:last-child)::after{content:"";position:absolute;left:56px;right:16px;bottom:0;height:1px;background:#e7e7e8}
-.ios .rw[hidden]{display:none}
 .ios .chev{position:absolute;right:18.33px;top:50%;width:7px;height:12px;margin-top:-6px}
 .ios a,.ios button{-webkit-tap-highlight-color:transparent}
-.ios .sbw{position:-webkit-sticky;position:sticky;bottom:28px;z-index:5;margin:35px 28px 28px}
-.ios .sbw::before{content:"";position:absolute;left:50%;width:100vw;margin-left:-50vw;top:-24px;bottom:-28px;
-pointer-events:none;background:linear-gradient(rgba(242,242,247,0),rgba(242,242,247,.25) 21%,rgba(242,242,247,.6) 48%,
-rgba(242,242,247,.77) 74%)}
-.ios .sb{position:relative;display:flex;align-items:center;gap:10.67px;height:48px;padding:0 22.66px 0 19.33px;
-border-radius:24px}
-.glass{background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
-backdrop-filter:blur(7px) saturate(220%) brightness(1.06);
-box-shadow:inset 0 0 0 .67px rgba(255,255,255,.95),inset 1.5px 1.5px 1px -1px rgba(255,255,255,1),
-inset -1.5px -1.5px 1px -1px rgba(255,255,255,.8),inset 0 0 14px rgba(255,255,255,.6),0 0 0 .33px rgba(0,0,0,.06),
-0 12px 40px rgba(0,0,0,.12)}
 /* App-Seite wie die Einstellungen-Seite „Accessibility“ (Davids Bild, 26.10.2026, 3 px je pt gemessen): Karte 22,67 pt
    unter der Leiste, Symbol 60 pt, Name 22 pt fett, Beschreibung 17/22 pt in #7f7f7f; Abschnittstitel 17 pt halbfett
    #85858a bei x 32, 27,5 pt unter der Karte und 6 pt über der nächsten */
@@ -152,35 +124,52 @@ letter-spacing:0}
 .ios .ft{height:auto;min-height:52px;padding-top:14px;padding-bottom:14px}
 .ios .ft span{white-space:normal;padding-right:16px}
 .ios .app{padding-bottom:40px}
-.sugg{display:none}.ios .xb{display:none}
-/* Suchansicht wie in den iOS-Einstellungen (Davids Bild 26.10.2026, 3 px je pt gemessen): weißer Grund, oben
-   „Suggestions“ 17 pt halbfett #8a8a8d bei x 17, Zeilen 61 pt ohne Karte, Symbol bei x 16, Text bei x 57, Linie von
-   57 bis 376,67 auch unter der letzten Zeile, keine Pfeile; Suchleiste von x 12 bis 321, daneben runder X-Knopf 48 pt
-   (SF Symbol xmark, mittel, Maßstab groß, 17 pt), beide 14 pt über der Tastatur */
-html.srch body{background:#fff}
-html.srch .navfx,html.srch .foot,html.srch .ios h1,html.srch .ios #me{display:none}
-html.srch .ios .sugg{display:block;margin:0;padding:35px 17px 9px;color:#8a8a8d;
-font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
-html.srch .ios .sugg.q{display:none}
-html.srch .ios #apps{margin:0;border-radius:0;background:transparent}
-html.srch .ios .rw{height:61px;padding-left:16px}
-html.srch .ios .rw img:not(.chev){margin-right:12.33px;box-shadow:none}
-html.srch .ios .rw::after{content:"";position:absolute;left:57px;right:16.33px;bottom:0;height:1px;background:#e7e7e8}
-html.srch .ios .chev{display:none}
-html.srch main:has(.ios){padding-bottom:130px}
-html.srch .ios .sbw{position:fixed;left:12px;right:72px;bottom:calc(14px + var(--kb,0px));margin:0}
-html.srch .ios .sbw::before{right:-72px;background:linear-gradient(rgba(255,255,255,0),rgba(250,250,250,.92) 55%)}
-html.srch .ios .xb{position:fixed;right:12px;bottom:calc(14px + var(--kb,0px));z-index:6;display:flex;align-items:center;
-justify-content:center;width:48px;height:48px;margin:0;padding:0;border:0;border-radius:50%;cursor:pointer}
-.ios .xb img{display:block}
-.ios .sb img{flex:none;display:block}
-.ios .sb img:last-child{position:relative;top:-.67px}
-.ios .sb input{flex:1;min-width:0;height:44px;margin:0;padding:0;border:0;background:transparent;color:#000;
-font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;outline:0;
--webkit-appearance:none;appearance:none}
-.ios .sb input::placeholder{color:#707073;opacity:1}
-.ios .sb input::-webkit-search-cancel-button{-webkit-appearance:none}
 :root{--back:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAA5CAYAAAC4YUKZAAACWUlEQVR42sXZS4hPcRQH8I8Z4/0OERYUyiywkIWIKCVKiFCKDVZkpWwkhWwkC0nZIIqFsCE1XnmMjIQyCiVRQh7jbcbmTk0TM+df94xTv92t36df/e4933OrdW1NwjJMxlt86MrNu2EPmtFSrB/Y3JWAQ202b79mVScDqnEE6zp4piUT0B0nOjiB1nWmexKgB05iceDZhgxAL5wPnEALXmJo2YA+uBgEvEJt2YD+uBwEvMD4sgEDcSMIeIqxZQOG4E4Q8BijywYMx/0g4AFGlA0YiUdBwN2MWzAGT4KAmxhUNmAcngUBV4pbU2pNKK5XBHCxeG+UWrXFCyYCOIeeZQOm4E0QcAo1ZQOm4V0QcLT4fJdaM4oWLAI4jKqyAXPwOQg4UHRQpdZ8fAkC9mb0A4vwLQjYkQFYVnTBEcDWDMBq/AoCNmUA1uJ3YPNmrM8AzAmewC+syWrNrwUAP7E8Mx98DSBWZMe01wHEJfTNROwP3oirGJCFGFBBn3gLg7Mgw3AvCGnI6Bfbtu71QcjDjM65bYi5HoQ0ZmSI1uqHuiDkWUaaaq3euFBBrpyQBemJs/8zYbdWDU4HIW8wNXPsczwIeY/pWZCqYgAWgXzEzMxR4MEgpAlzM781+4KQr1iQCdkdhHzHkkzI9iDkJ1ZmQrYGIb+LPjatNgchzdiYCdnQboLf0dqSCYnGhhZsy4SsqiBA7cyELK0gSu7KhCysIFTPy/rp0ojbRcDubHTUnJ1pZuNTJydxpioZUVcMXD528Ey9Lqp/Dd+eZ+aYv9XEYr7ZVDQ/xzAK/gAQcR7593xSwAAAAABJRU5ErkJggg==)}
+
+body:has(.dev){background:#fff}
+main:has(.dev){max-width:none;padding:0}
+.dev{max-width:600px;margin:0 auto;padding-bottom:40px;color:#000;letter-spacing:0;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
+.dev h1{margin:0;padding:67.33px 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.dev h2{margin:17px 0 0;padding:0 20px;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+letter-spacing:0}
+.dev ul{margin:3.67px 0 0;padding:0;list-style:none}
+.dev li{position:relative}
+.dev li:not(:last-child)::after{content:"";position:absolute;left:91.67px;right:19.67px;bottom:0;height:1px;background:#e7e7e7;
+transform-origin:0 100%;pointer-events:none}
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:2dppx){.dev li:not(:last-child)::after{transform:scaleY(.5)}}
+@media (-webkit-min-device-pixel-ratio:3),(min-resolution:3dppx){.dev li:not(:last-child)::after{transform:scaleY(.3333)}}
+.dev .zl{display:flex;align-items:center;height:78px;padding:0 20px;color:#000;-webkit-tap-highlight-color:transparent}
+.dev .zl:hover{text-decoration:none}.dev .zl:active{background:#f2f2f7}
+@media (hover:hover){.dev .zl:hover{background:#f5f5f7}}
+.dev .ic{position:relative;flex:none;width:62px;height:62px;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 62'%3E%3Cpath d='M24.566 0L37.434 0C44.508 0 48.045 0 51.234 1.053L51.852 1.204C56.009 2.617 59.383 5.991 60.796 10.148L60.947 10.766C62 13.955 62 17.492 62 24.566L62 37.434C62 44.508 62 48.045 60.947 51.234L60.796 51.852C59.383 56.009 56.009 59.383 51.852 60.796L51.234 60.947C48.045 62 44.508 62 37.434 62L24.566 62C17.492 62 13.955 62 10.766 60.947L10.148 60.796C5.991 59.383 2.617 56.009 1.204 51.852L1.053 51.234C0 48.045 0 44.508 0 37.434L0 24.566C0 17.492 0 13.955 1.053 10.766L1.204 10.148C2.617 5.991 5.991 2.617 10.148 1.204L10.766 1.053C13.955 0 17.492 0 24.566 0Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;
+mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 62'%3E%3Cpath d='M24.566 0L37.434 0C44.508 0 48.045 0 51.234 1.053L51.852 1.204C56.009 2.617 59.383 5.991 60.796 10.148L60.947 10.766C62 13.955 62 17.492 62 24.566L62 37.434C62 44.508 62 48.045 60.947 51.234L60.796 51.852C59.383 56.009 56.009 59.383 51.852 60.796L51.234 60.947C48.045 62 44.508 62 37.434 62L24.566 62C17.492 62 13.955 62 10.766 60.947L10.148 60.796C5.991 59.383 2.617 56.009 1.204 51.852L1.053 51.234C0 48.045 0 44.508 0 37.434L0 24.566C0 17.492 0 13.955 1.053 10.766L1.204 10.148C2.617 5.991 5.991 2.617 10.148 1.204L10.766 1.053C13.955 0 17.492 0 24.566 0Z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.dev .ic img{display:block;width:62px;height:62px}
+.dev .ic::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 62'%3E%3Cpath d='M24.566 0L37.434 0C44.508 0 48.045 0 51.234 1.053L51.852 1.204C56.009 2.617 59.383 5.991 60.796 10.148L60.947 10.766C62 13.955 62 17.492 62 24.566L62 37.434C62 44.508 62 48.045 60.947 51.234L60.796 51.852C59.383 56.009 56.009 59.383 51.852 60.796L51.234 60.947C48.045 62 44.508 62 37.434 62L24.566 62C17.492 62 13.955 62 10.766 60.947L10.148 60.796C5.991 59.383 2.617 56.009 1.204 51.852L1.053 51.234C0 48.045 0 44.508 0 37.434L0 24.566C0 17.492 0 13.955 1.053 10.766L1.204 10.148C2.617 5.991 5.991 2.617 10.148 1.204L10.766 1.053C13.955 0 17.492 0 24.566 0Z' fill='none' stroke='rgba(142,142,142,.27)' stroke-width='2'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat}
+.dev .tx{flex:1;min-width:0;display:flex;flex-direction:column;margin-left:10px;padding-right:12px}
+.dev .nm,.dev .st{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.dev .nm{font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.dev .st{margin-top:1px;padding-bottom:.33px;color:#8a8a8e;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.dev .vw{flex:none;width:74px;height:32px;border-radius:16px;background:#eee;color:#0088ff;text-align:center;
+font:700 16px/32px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.kopf{position:-webkit-sticky;position:sticky;top:0;z-index:7;display:flex;align-items:center;height:54px;padding-left:20px}
+.kopf a{display:flex;align-items:center;min-height:44px;color:#000;font:600 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;
+letter-spacing:0;-webkit-tap-highlight-color:transparent}
+.kopf a:hover{text-decoration:none}.kopf a:active{opacity:.6}
+.ios .fein{padding:35px 32px 0;color:#7f7f7f}
+.ios .fs{display:flex;align-items:center;gap:8px;height:44px;margin:0}
+.ios .fs img{flex:none;display:block;opacity:.47}
+.ios .fs input{flex:1;min-width:0;height:44px;margin:0;padding:0;border:0;background:transparent;color:#000;
+font:400 17px/22px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0;outline:0;-webkit-appearance:none;appearance:none}
+.ios .fs input::placeholder{color:#7f7f7f;opacity:1}
+.ios .fs input::-webkit-search-cancel-button{-webkit-appearance:none}
+.ios .ftr a,.ios .ftr p{display:block;margin:0;padding:11px 0;color:#7f7f7f;font:400 17px/22px -apple-system,BlinkMacSystemFont,
+sans-serif;letter-spacing:0}
+.ios .ftr [hidden]{display:none}
+.ios .fuss{margin-top:16px;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
+.ios .fuss p{margin:0}
+.ios .fuss .fl{display:inline-block;padding:13px 18px 13px 0;color:#7f7f7f}
 .gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
 --sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 --sft:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -287,7 +276,6 @@ html.srch .gn{display:none}
 </style></head>
 <body>
 <div class="navfx" id="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-<header class="nb"><b>Lichters Apps</b></header>
 <nav class="gn gn-page" id="gn" aria-label="Menu">
 <div class="gn-schleier"></div>
 <div class="gn-tuch"><div class="gn-glas"></div><div class="gn-voll"></div></div>
@@ -333,44 +321,30 @@ setTimeout(function(){g.classList.add("gn-fertig");document.documentElement.clas
 document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(has("gn-sub"))back.click();else if(has("gn-open"))trig.click()});
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 <main class="wrap">
-<div class="ios">
-<h1 id="lt">Lichters Apps</h1>
-<div class="grp" id="me"><a class="me" href="mailto:support@lichtersapps.com"><span class="av" aria-hidden="true">DL</span>
-<span class="tx"><strong>David Lichters</strong><span>Support Email</span></span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a></div>
-<p class="sugg" id="sugg">Suggestions</p>
-<nav class="grp" aria-label="Apps" id="apps">
-<a class="rw" href="../bracketmaker/" data-n="bracket maker"><img src="../bracketmaker/icon.png" alt="" width="29" height="29"><span>Bracket Maker</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../breedbook/" data-n="breedbook"><img src="../breedbook/icon.png" alt="" width="29" height="29"><span>Breedbook</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../clapnote/" data-n="clapnote"><img src="../clapnote/icon.png" alt="" width="29" height="29"><span>Clapnote</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../coffer/" data-n="coffer"><img src="../coffer/icon.png" alt="" width="29" height="29"><span>Coffer</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../floorscribe/" data-n="floorscribe"><img src="../floorscribe/icon.png" alt="" width="29" height="29"><span>Floorscribe</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../hertzline/" data-n="hertzline"><img src="../hertzline/icon.png" alt="" width="29" height="29"><span>Hertzline</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../coinclock/" data-n="coinclock"><img src="../coinclock/icon.png" alt="" width="29" height="29"><span>Coinclock</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../gaugebook/" data-n="gaugebook"><img src="../gaugebook/icon.png" alt="" width="29" height="29"><span>Gaugebook</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../panelwise/" data-n="panelwise"><img src="../panelwise/icon.png" alt="" width="29" height="29"><span>Panelwise</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../regiebericht/" data-n="regiebericht"><img src="../regiebericht/icon.png" alt="" width="29" height="29"><span>Regiebericht</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../schichtblatt/" data-n="schichtblatt"><img src="../schichtblatt/icon.png" alt="" width="29" height="29"><span>Schichtblatt</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../halfspeed/" data-n="halfspeed"><img src="../halfspeed/icon.png" alt="" width="29" height="29"><span>Halfspeed</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../spurbuch/" data-n="spurbuch"><img src="../spurbuch/icon.png" alt="" width="29" height="29"><span>Spurbuch</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../stitchnook/" data-n="stitchnook"><img src="../stitchnook/icon.png" alt="" width="29" height="29"><span>Stitchnook</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../tallybin/" data-n="tallybin"><img src="../tallybin/icon.png" alt="" width="29" height="29"><span>Tallybin</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-<a class="rw" href="../ton80/" data-n="ton80"><img src="../ton80/icon.png" alt="" width="29" height="29"><span>Ton80</span><img class="chev" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAkCAYAAABmMXGeAAAB5UlEQVR4nKXWaYuNYRjA8d+M8XLyqYgk2fclO9lCUdS8oKihIVmTJdtoaDJZUko0Qj6DD2EJg0FX3UfHzLnv8zxn/u/OfV39e577XMvTNTr6BuZiNb7jIt6ZAj3YgktNZ6uwDMOdSrvRN+FsOu5h0VSkM1qch3gQSzqV3i9czV0s70S6G+8z8Wm4hZV1pZ8wE28L4ptYU0cafMQsvJbPu451mfik5AafMRuv5HOvYkMm/l9iM18wBy/k869gUybeUhp8TR32XGu6cBlb60iDb5iHZ/LiC9hRRyrNgfl4LC8+h511pMEYFmJEnrPYU0ca/MDiNgPmNPbVkQY/sRRD8pzCgUZ/V+UXVmC8MA/68aHqkzYYT8M85kGOXXWlDfHLQry3E+nmVPw5RupKt6fVEzXaiqc4UUcaRX6+IHyCBVEpVaV7U5HneJSEY/GjinQ/Bgrxh2lJRpOoIj2Ik4X4cFqO/4TtpIfj0gvxB6nLottUkfbhWEE4lLoqumwSPS3OjuJIQTiYuiqaQBXpcRwqCO9gbUk4UdrfmDIZot/XtxM2SwdSLea4kbbobxXoTsO1JLxWR9iQll451vHGOkJJ2puJxSSKb9c/dYQN6e0W57F+t3UiDOKPijuN14vai4Fwpk3ht+UvB+9kkXxmMoQAAAAASUVORK5CYII=" width="7" height="12" alt=""></a>
-</nav>
-<div class="sbw"><form class="sb glass" role="search" onsubmit="return false"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAxCAYAAABznEEcAAADTUlEQVR4nOWaS2xNURSGv9I2kh6VICJKa0BLxCsx0EaENqlXDYgYMDPTARKMGDVExIBEpKYSBAOPATqSYKBe0Uol1XgklSBUS6hXy5WdrJvcHGvfs889557b8idrstv+a/37nLXX2uu0iGiYAywGqoEpwHhgGPgMvAK6gbvAe0YY6oCTwGsg5WC/gU5gH1BZ6OCbgHuOgdvMPKXTQE3Swc8ErkUM3m8/gUPAuCQEbAQ+xiwg0x4Bs6MGWZTlZ3uBwwG/8xC4AXQALyWhxwITJbilQCNQkYWjH1gHtBMz9mfZvUHgWIgdHAM0ANcDOGvjFLAti7OLwPQI3PVAj4X7gxzVkbEI+K44GAKa43AAeMAFi5DOqMleAnQpxD/keI0TJs9OWIQciUK8x0K6hfzACDlneerzciEsA/oUwuPxx/6XX9Oa+P2a1y00dipEveIk31iu+P4FzApL1KEQmVMqKVxR/LeEIahRCN5KoieFZUoMT8MQNCsER0kez5U4ZrhWU9Na+9FG8mhT1mpdRWhtcex9jAPalbUaVxH+i8o74BPJo0dZq3QVUa50lYVAv7Lmj80qoti3ZipmITCkrJW4iviSi/o8oFxZ++oqwj+JqFCeTlLXYD/e4CjCX1SKc23AImKhpXY4iTAth3Z5SRoNytoD1z+uVypl0nVimjR9mTEMhHmtS+V48wtZQnJoUfyfCUvSqpBcJRlMtoyFzJQkFObKuNFPtIH845Ti90nAqMgK7fLel+f56VbLlXhzroRVMv/RdsUMw+LGCstk5VZU4l2Wnely7e0d0WTZsMFcrqUaLluEmMq+PiK3OQkPKsdpKmM8ZEaakVEmH0ZSFjMiF4TkNEV1k3QHNt5U3EImBQgxJ9lNYLuMHossu14nNeCFQ/CpDDO5sjauJ3LJ0emgHAB3gPvS8wyHDDyVLyHpmZSWhFHtsYgOErImLiFVUke0ghjWTHXeId8xzHD5dpJC0pW91dJrBVm3fLiZ4ON0FbKamFEqrfMB6bGeyXDhl+TCgLwu54HdwPwAPq9QQuKGJ9U6m5BvwCpGOLz/TUgjIxyeQ44YISv5B4T0Sksz6oVUMwrgBQiZyiiBZ0n2QnyCiATTkKa7BfPvF2fTN84/25AymWvew0cAAAAASUVORK5CYII=" width="16.33" height="16.33" alt="">
-<input type="search" placeholder="Search" aria-label="Search apps" autocomplete="off" id="q"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAA2CAYAAACr6+s1AAADb0lEQVR4nO2ZW4iNURTHf3NOw7jUmMHMSMpEeJHbyNS4FE8jRBo1riEUD548UEMelAe5zQOaB4qJFJHy4FIazYyJB9fILWVSGoQZZjBnjva0j45t7fPt75zvHCbnX/tl77XW/n/7stZe68shdUwBxgHFwBfgDdAEfOIvYBCwE2gFokL7DlwGpmeS1FTgtYWQ2XqA/UAo3aTKgQ5HUvGtPp2khvpYKaltTRexfZYJ3wG1wBZgO9BgkfsMFARNKt+yhY1AoSC/FogI8juCJrZEmKQdKEmgUyvoNAdN7KAwSZ2HzlhBpxsY6DKh6zUeKfQ1eeg8B9qMvrDHKvsmNlzoa3PQk2SGBUksV+iLOOhFHG39gbR75GSRJeYXWWJ+kSWWDLE8YDdwDdjjGjICxlzgInAOKIt1Hjfi2WlBsVGIe5UOE94X9CoMmTIdQ2Pj6hVTqlas2hCs0jEtU1hmzKfyiYWKWH9DMOwaNgJCntT3Tx/+Pk0sIvTlJGnf5VXSqxh1MPhekClwsD9E6PvgMZdCVHV2CgPqZsTjrSXxTYQiy8vXtCX5za8hnVaZKBH8mInlHs54vdD3SKhpjBDkejk1C06wSlCOd4KxdtKyFeW6wGLKq9zUxEtBbpYaOCEMHBAMnLIksnf06lToaHAY+CbI/QBGCx8s2VTHgA3CgPoKKR3rSKFEcEiwuUmQexYbLLUYmicYqtYVHL+kWoB+gr3bguyReIFbgsANwVCMXJcPUld1icFEpUV+TrzQGovQKmSMB857rF6rPiZhizt6Kug8jDnumPfO1YLm4WzXh/qBhWAxMD+u1NmhS50NehcUcRM5ul5mvmoUVkq1tMWWL1cTTSQYhICjlnkaE4W5eouScoorUiSlXMMVi321MxMSKQ8G7iY4N9eB2UlUImu0N5dsRgSHLkKdlcceN+0JsFe9NLV/G6B1w7oAMwPYDFzQsdhmR53BjX6+slC7Cz++qsenvApZS32u/q+vr7GEl2iKrUW7nJQwRmdOUhD321Qxb7XjI9MZo4BdwD2fZD7q274gE0/5In3wtwEvBDLHgHXApAyngr/hkkBsMv97lpRxhOhjyAfOaK8d8WhRS5hJ1Lr1pVEXyBfq0uBUo0LrFJ5aCbdyJpkrqEzzQ+wmmUGXzrKcoc7YWf1vO13b+ApYZGPwEzuxEizJZkxjAAAAAElFTkSuQmCC" width="12.67" height="18" alt=""></form></div>
-<button class="xb glass" id="xb" type="button" aria-label="Close search"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAClElEQVR4nNXau2sVQRTH8e89EQQbMVst2mgniBpFiY1g0MQ/QfABdoKIpf+DnYpVCk0a/wERfJZiYuEDFAQhEVEwCD4KG0HkwA4s4e7szO7MztxT7p3d/X24c8+dWXZUliXACDgJ7AZeAS/Jv6aABWAXsAK80YNbgK3AA2CuNngRuAT8I88qqsxHa8euA9dGZVleAW6OOWkZuJghqgCeAfvHfHZEgNmGEy8AdwAdkxPmaQNGa1bDfrVcQFF3M0EVFeaAZcwXDXob+GEZdD4DVOGAeQ3c15DrVbf42YJKNf0KB8x74DTw1wTUNj3fgkrxmyqAJw4Y7dDf2BQuN5TBHHTFMCaYQf1KjOqEoSGUok4lRHXGYAmUCtULQ0uYoVHTfTE4BBkKNV215l4YHEPERgXD4BEgFiooBs+bu6Jcl0nBMXSYIi4ol7WfK+aED4aOc97lz9eG8sFs+Ibr2plWO6KiYujZan1R0TFaugWnZ+m+/hGw3TLmHrA3NiYUyBVFbAwB12Eu0y86hsALyy6ooBgiLP99UMExRNrPfAQ+O4x7C3wPfXMJfD2zBdjnMPZMjKdJEgEz43FO8EdkkhBTRy2FyiIBrmFWADbMh5ZGcS4USgbaNh936H5BUBJ5mtVb8+oQKBkIYyo6SgbE1FELsVAyMMbUSiyUJMBERUkiTDSUJMREQUlizGbU774osXy2YyBMHTXfFyWZYHxRy03ZxYI5NPTmzAN1tgklmWG6oKaaQLlgfFFLdZRkiumMEmAb8LgF8y4BxpQratGALgOHWzBziTA+KH3R6phMAMYHNaOgTxOAcV1RrEn1rtzGBGCo6kXD2u858NA8rN8JXAX2VK863mj5anMozaqZ9RVN3TTeAv78B3aSD17gxYkVAAAAAElFTkSuQmCC" width="17.33" height="17.33" alt=""></button>
-<script>(function(){var q=document.getElementById("q"),R=document.documentElement,s=document.getElementById("sugg");
-function f(){var v=q.value.trim().toLowerCase();s.classList.toggle("q",!!v);
-document.querySelectorAll("#apps .rw").forEach(function(r){r.hidden=v&&r.dataset.n.indexOf(v)<0})}
-function kb(){var V=window.visualViewport;R.style.setProperty("--kb",(V?Math.max(0,innerHeight-V.height-V.offsetTop):0)+"px")}
-q.addEventListener("input",f);
-q.addEventListener("focus",function(){if(!R.classList.contains("srch")){R.classList.add("srch");window.scrollTo(0,0)}kb()});
-document.getElementById("xb").addEventListener("click",function(){q.value="";f();q.blur();R.classList.remove("srch");
-R.style.setProperty("--kb","0px")});
-if(window.visualViewport){visualViewport.addEventListener("resize",kb);visualViewport.addEventListener("scroll",kb)}})()</script>
+<div class="dev">
+<h1>David Lichters</h1>
+<h2>Apps</h2>
+<ul>
+<li><a class="zl" href="../bracketmaker/"><span class="ic"><img src="../bracketmaker/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Bracket Maker</span><span class="st">Tournament Plan</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../breedbook/"><span class="ic"><img src="../breedbook/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Breedbook</span><span class="st">Dog Breeder Log</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../clapnote/"><span class="ic"><img src="../clapnote/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Clapnote</span><span class="st">Rhythm Trainer</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../coffer/"><span class="ic"><img src="../coffer/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Coffer</span><span class="st">Collection Tracker</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../floorscribe/"><span class="ic"><img src="../floorscribe/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Floorscribe</span><span class="st">Floor Plan Maker</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../hertzline/"><span class="ic"><img src="../hertzline/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Hertzline</span><span class="st">Voice Pitch Trainer</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../coinclock/"><span class="ic"><img src="../coinclock/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Coinclock</span><span class="st">Hours Tracker &amp; Pay</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../gaugebook/"><span class="ic"><img src="../gaugebook/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Gaugebook</span><span class="st">Car Maintenance Log</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../panelwise/"><span class="ic"><img src="../panelwise/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Panelwise</span><span class="st">Cut List Optimizer</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../regiebericht/"><span class="ic"><img src="../regiebericht/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Regiebericht</span><span class="st">Site Reports</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../schichtblatt/"><span class="ic"><img src="../schichtblatt/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Schichtblatt</span><span class="st">Shift Calendar</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../halfspeed/"><span class="ic"><img src="../halfspeed/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Halfspeed</span><span class="st">Slow Down Music</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../spurbuch/"><span class="ic"><img src="../spurbuch/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Spurbuch</span><span class="st">Trip Logbook</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../stitchnook/"><span class="ic"><img src="../stitchnook/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Stitchnook</span><span class="st">Row Counter</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../tallybin/"><span class="ic"><img src="../tallybin/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Tallybin</span><span class="st">Stock &amp; Inventory</span></span><span class="vw">View</span></a></li>
+<li><a class="zl" href="../ton80/"><span class="ic"><img src="../ton80/icon.png" alt="" width="62" height="62"></span><span class="tx"><span class="nm">Ton80</span><span class="st">Darts Score Counter</span></span><span class="vw">View</span></a></li>
+</ul>
 </div>
 </main>
-<footer class="foot"><nav aria-label="Legal"><p>Copyright © 2026 Lichters Apps. All rights reserved.</p><a class="fl" href="../terms/">Terms of Service</a><a class="fl" href="../privacy/">Privacy Policy</a><a class="fl" href="../imprint/">Imprint</a></nav></footer>
+
 <script>(function(){var fx=document.getElementById("fx");function u(){fx.classList.toggle("on",(window.scrollY||0)>2)}
 addEventListener("scroll",u,{passive:true});u()})()</script>
 </body></html>
