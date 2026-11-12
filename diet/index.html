@@ -128,17 +128,9 @@ letter-spacing:0}
 
 body:has(.dev){background:#fff}
 main:has(.dev){max-width:none;padding:0}
-/* David 11.11.2026 21:2x: fester weisser Balken oben, 1:1 wie apps.apple.com (dort gemessen: position fixed, 44 px hoch,
-   #fff, box-shadow 0 1px 2px rgba(0,0,0,.1)). Die zwei Menuelinien sitzen mittig darin und bleiben beim Scrollen stehen.
-   Unter dem Menue (z-index 9999), ueber dem Inhalt; faengt Tipps ab, damit keine App darunter aufgeht. In der Mitte Apples Zeichen mit Schriftzug App Store (David 11.11.2026 23:4x, APPSTORE_CSS unten). */
-body:has(.dev)::before{content:"";position:fixed;top:0;left:0;right:0;z-index:9998;height:calc(44px + env(safe-area-inset-top));
-background:#fff;box-shadow:0 1px 2px 0 rgba(0,0,0,.1)}
-body:has(.dev) .gn-menutrigger,body:has(.dev) .gn-menuback{top:calc(env(safe-area-inset-top) - 2px)}
-/* Ecken-Regel (David 21:13): das D von David 22 Punkte unter dem Balken und 22 vom linken Rand. Auf Davids iPhone gemessen:
-   7 px Abstand oben ergaben 14 Punkte bis zum D, also 44 + 15 = 59 px. */
 .dev{max-width:600px;margin:0 auto;padding-bottom:40px;color:#000;letter-spacing:0;
 font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Helvetica,Arial,sans-serif}
-.dev h1{margin:0;padding:calc(59px + env(safe-area-inset-top)) 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+.dev h1{margin:0;padding:67.33px 20px 0;font:700 34px/41px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
 .dev h2{margin:17px 0 0;padding:0 20px;font:700 22px/28px -apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
 letter-spacing:0}
@@ -178,7 +170,6 @@ sans-serif;letter-spacing:0}
 .ios .fuss{margin-top:16px;font:400 13px/18px -apple-system,BlinkMacSystemFont,sans-serif;letter-spacing:0}
 .ios .fuss p{margin:0}
 .ios .fuss .fl{display:inline-block;padding:13px 18px 13px 0;color:#7f7f7f}
-body:has(.dev)::after{content:"";position:fixed;z-index:9998;top:calc(env(safe-area-inset-top) + 13.33px);left:calc(50% + .5px);width:103.714px;height:18px;margin-left:-51.857px;pointer-events:none;background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjEiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAxMjEgMjEiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iLjg4IiBmaWxsLXJ1bGU9Im5vbnplcm8iIG9wYWNpdHk9Ii45Ij48cGF0aCBkPSJNMTEuNDE3IDEyLjIwNEg4LjA5NGw1LjgtMTAuMDY3cS4yODUtLjQ5Mi4xNzgtMS4wNjVhMS4yMSAxLjIxIDAgMCAwLS42MzctLjg3UTEyLjktLjExMiAxMi4zNTMuMDgyYTEuNDMgMS40MyAwIDAgMC0uODExLjY4NGwtLjU3NS45NDItLjU3Mi0uOTQyYTEuNDYgMS40NiAwIDAgMC0uODEtLjY5cS0uNTQxLS4xOTgtMS4wODQuMTI4LS41My4zMDYtLjYyOC44NzR0LjE4OCAxLjA2TDkuNDEyIDQuNDVsLTQuNDkgNy43NTVIMS40MzRxLS41NTQgMC0uOTk0LjM3OC0uNDQuMzc5LS40NC45OTIgMCAuNjA1LjQ0Ljk4M3QuOTk0LjM3OGgxMS45NzlhMi40NSAyLjQ1IDAgMCAwLS4wMTctMS4yNDIgMi4xIDIuMSAwIDAgMC0uNjYtMS4wNnEtLjQ5LS40MjktMS4zMi0uNDI5bTkuMDg2IDBoLTMuNDc3bC0zLjc5OC02LjU1OXEtLjU3LjQyLS44MTEgMS4yNDRhNC43IDQuNyAwIDAgMC0uMTU0IDEuNzU1cS4wODcuOTMuNTA2IDEuNjU2bDQuNzk4IDguMjg4cS4yNzYuNDkuODE4LjY4NS41NC4xOTUgMS4wODQtLjExMi41MzMtLjI5OS42NC0uODcuMTA5LS41NzMtLjE3OS0xLjA3M0wxOC42IDE0LjkzNWgxLjkwNHEuNTYxIDAgLjk5OC0uMzc4LjQzNS0uMzc4LjQzNi0uOTgzIDAtLjYxNC0uNDM2LS45OTJhMS40OCAxLjQ4IDAgMCAwLS45OTgtLjM3OG0tMTcuNzIgMy43MTMtLjc1OCAxLjNxLS4yODUuNS0uMTg0IDEuMDY5LjEwMi41NjcuNjI1Ljg3NS41NTEuMzE1IDEuMDk0LjExNmExLjUgMS41IDAgMCAwIC44MTgtLjY4OWwxLjEwNi0xLjg4MXEtLjEzMi0uMjM4LS41MDYtLjQ5OGEyLjUgMi41IDAgMCAwLS45MzctLjM3NHEtLjU2NC0uMTEzLTEuMjU3LjA4Mk0yOC4xNDUgMTYuOTA2aDIuNzY4bDEuMjUxLTMuODI1aDUuNTA2bDEuMjUxIDMuODI1aDIuNzhMMzYuNDA4IDIuMTA5aC0yLjk3M3ptNi43NDctMTIuMTYyaC4wNjFsMi4wNSA2LjI5NmgtNC4xNzJ6TTQzLjAxMyAyMC40OTRoMi41NTNWMTUuMDdoLjA1MWMuNjE1IDEuMjcyIDEuODU2IDIuMDUgMy40MDQgMi4wNSAyLjcyOCAwIDQuNDcxLTIuMTUyIDQuNDcxLTUuNjM5di0uMDFjMC0zLjUwNy0xLjc0My01LjY2LTQuNTAxLTUuNjYtMS41NTkgMC0yLjc0OC44LTMuMzc0IDIuMTAyaC0uMDUxVjYuMDM2aC0yLjU1M3ptNS4yMTktNS41MjZjLTEuNTggMC0yLjY4Ny0xLjM2NC0yLjY4Ny0zLjQ4N3YtLjAxYzAtMi4xMzMgMS4xMDgtMy41MDcgMi42ODctMy41MDcgMS42MyAwIDIuNjU2IDEuMzMzIDIuNjU2IDMuNTA3di4wMWMwIDIuMTQzLTEuMDI2IDMuNDg3LTIuNjU2IDMuNDg3TTU1LjEzMyAyMC40OTRoMi41NTNWMTUuMDdoLjA1MWMuNjE2IDEuMjcyIDEuODU2IDIuMDUgMy40MDUgMi4wNSAyLjcyNyAwIDQuNDctMi4xNTIgNC40Ny01LjYzOXYtLjAxYzAtMy41MDctMS43NDMtNS42Ni00LjUwMS01LjY2LTEuNTU5IDAtMi43NDguOC0zLjM3NCAyLjEwMmgtLjA1MVY2LjAzNmgtMi41NTN6bTUuMjE5LTUuNTI2Yy0xLjU4IDAtMi42ODctMS4zNjQtMi42ODctMy40ODd2LS4wMWMwLTIuMTMzIDEuMTA4LTMuNTA3IDIuNjg3LTMuNTA3IDEuNjMgMCAyLjY1NiAxLjMzMyAyLjY1NiAzLjUwN3YuMDFjMCAyLjE0My0xLjAyNiAzLjQ4Ny0yLjY1NiAzLjQ4N003Ni45MTIgMTcuMTYyYzMuNjEgMCA1Ljc4My0xLjc1NCA1Ljc4My00LjUxMnYtLjAxYzAtMi4zMDctMS4zNDMtMy41NTgtNC40Mi00LjE5NGwtMS41OTktLjMyOGMtMS43ODQtLjM3LTIuNTk0LS45ODQtMi41OTQtMi4wM3YtLjAxYzAtMS4xOCAxLjA3Ny0xLjk5IDIuODEtMiAxLjY2IDAgMi43OTkuNzY5IDIuOTczIDIuMDZsLjAyLjEyNGgyLjUzM2wtLjAxLS4xNzRjLS4xNTQtMi41MzMtMi4yNjYtNC4yMzUtNS40OTYtNC4yMzUtMy4xODkgMC01LjQ3NiAxLjc2My01LjQ4NiA0LjM2OHYuMDFjMCAyLjIwNSAxLjQzNiAzLjU1OCA0LjM0OCA0LjE2M2wxLjU5LjMyOGMxLjkwNi40IDIuNjc2Ljk5NSAyLjY3NiAyLjEwMnYuMDFjMCAxLjI3Mi0xLjE3IDIuMTAzLTMuMDM2IDIuMTAzLTEuODU2IDAtMy4xNTgtLjc5LTMuMzUzLTIuMDYxbC0uMDItLjEyM2gtMi41MzNsLjAxLjE1NGMuMTc1IDIuNjU1IDIuNDEgNC4yNTUgNS44MDQgNC4yNTVNODguNDU4IDE3LjEyYy41MTMgMCAuOTY0LS4wNSAxLjI2MS0uMDkxVjE1LjExYy0uMTc0LjAxLS4zNjkuMDQxLS42MTUuMDQxLS45MzMgMC0xLjQwNS0uMzM4LTEuNDA1LTEuNDA1VjguMDA1aDIuMDJWNi4wMzZIODcuN1YzLjI3OGgtMi41OTR2Mi43NThoLTEuNTM4djEuOTdoMS41Mzh2NS45NTdjMCAyLjIzNSAxLjA3NyAzLjE1OCAzLjM1MyAzLjE1OE05Ni4yNzEgMTcuMTJjMy4xOSAwIDUuMjYtMi4xMjIgNS4yNi01LjY0OXYtLjAyYzAtMy41MDctMi4xMDEtNS42NC01LjI3LTUuNjQtMy4xNTggMC01LjI1IDIuMTUzLTUuMjUgNS42NHYuMDJjMCAzLjUxNyAyLjA2MSA1LjY1IDUuMjYgNS42NW0uMDEtMi4wNmMtMS42MyAwLTIuNjY1LTEuMzAyLTIuNjY1LTMuNTg5di0uMDJjMC0yLjI1NiAxLjA1Ni0zLjU2OSAyLjY0NS0zLjU2OSAxLjYyIDAgMi42NjYgMS4zMDIgMi42NjYgMy41Njh2LjAyMWMwIDIuMjc2LTEuMDM1IDMuNTg5LTIuNjQ1IDMuNTg5TTEwMy4xNzIgMTYuOTA2aDIuNTU0di02LjMwN2MwLTEuNjEuODcxLTIuNTIyIDIuMzE3LTIuNTIyLjQzIDAgLjgyLjA2MSAxLjAzNi4xNDNWNS45MTNhMy4zIDMuMyAwIDAgMC0uODEtLjEwMmMtMS4yNTEgMC0yLjE1NC43OS0yLjQ5MiAyLjEwMmgtLjA1MVY2LjAzNmgtMi41NTR6TTExNS4xNyAxNy4xMmMyLjg0IDAgNC40NC0xLjY4IDQuNzc4LTMuMzUybC4wMy0uMTEzaC0yLjM4OWwtLjAyLjA3MmMtLjI0Ni43MjgtMS4wNzcgMS40MDUtMi4zNDggMS40MDUtMS42NjEgMC0yLjcwNy0xLjEyOC0yLjc0OC0zLjAzNmg3LjYwOHYtLjgyYzAtMy4yODEtMS45MjgtNS40NjUtNS4wMzUtNS40NjVzLTUuMTA2IDIuMjU2LTUuMTA2IDUuNjh2LjAxYzAgMy40NTYgMS45NjkgNS42MiA1LjIzIDUuNjJtLS4wOTMtOS4zMWMxLjM1NCAwIDIuMzM4Ljg2MiAyLjUyMyAyLjU4NGgtNS4wOTdjLjIwNS0xLjY3MSAxLjIyLTIuNTg0IDIuNTc0LTIuNTg0IiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6bm9ybWFsIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSguMDg2IC4wOTUpIj48L3BhdGg+PC9nPjwvc3ZnPg==") 0 0/100% 100% no-repeat}
 .gn{position:absolute;top:0;left:0;right:0;z-index:9999;height:48px;
 --sfd:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
 --sft:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -296,11 +287,6 @@ main.wrap{max-width:1180px;padding:8px 16px 64px}
 .kost h2{margin:11px 0 0;font-size:17px;line-height:1.24;font-weight:600;letter-spacing:-.022em}
 .kost p{margin:2px 0 0;font-size:15px;line-height:1.33;color:var(--muted)}
 @media(min-width:860px){.kost{max-width:none;grid-template-columns:repeat(5,minmax(0,1fr));gap:44px 20px}}
-/* David 12.11.2026 20:4x: "Mach in /diet vor allen sachen 1:1 wie in meinem gemalten beispiel oben eine karte so hin in
-   exakt der größe". In seinem iPhone-Bild gemessen (1179 px breit = 393 Punkte, Faktor 3): grauer Kasten x 108 bis 966,5,
-   y 141,4 bis 1400,7, also 858,5 x 1259,3 px = 286 x 419,67 Punkte, 36 Punkte vom linken Bildschirmrand (16 Rand der
-   Seite + 20), Farbe #c2c2c2, Ecken eckig wie gemalt. Feste Größe auf jedem Bildschirm. Abstand zur Liste = Zeilenabstand der Liste. */
-.kost-karte{width:286px;height:419.67px;margin:0 0 26px 20px;background:#c2c2c2}
 </style></head>
 <body>
 <div class="navfx" id="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -356,7 +342,6 @@ document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(ha
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 <main class="wrap">
 <h1 class="kost-h">diet</h1>
-<div class="kost-karte" aria-hidden="true"></div>
 <ul class="kost">
 <li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>700g raw ribeye</h2><p>$420 per month</p></li>
 <li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>10 raw oysters</h2><p>$900 per month</p></li>
