@@ -230,7 +230,8 @@ color:#333336;text-decoration:none;transition:color .32s var(--cb);-webkit-tap-h
 .gn-submenu-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
 .gn-ki{display:block;max-width:none;margin:0;padding:0 0 calc(48px + env(safe-area-inset-bottom));box-sizing:border-box;min-height:100vh;min-height:100dvh;--w:min(100vw,600px)}
 .gn-ki-h{position:relative;pointer-events:none;--x:calc(var(--k) * var(--w) - .5px);margin:0 0 calc(0px - var(--x));padding:14px max(20px,calc(50% - 280px)) 0;background:linear-gradient(var(--von),var(--nach) calc(100% - var(--x)),transparent 0);color:#000;font:700 34px/41px var(--sfd);letter-spacing:0}
-.gn-ki-h:first-child{padding-top:64px}
+.gn-ki-h:first-of-type{padding-top:64px}
+.gn-ki-titel{position:absolute;top:0;left:64px;right:64px;z-index:1;margin:0;color:#1d1d1f;font:600 17px/48px var(--sft);letter-spacing:-.4px;text-align:center;white-space:nowrap;pointer-events:none}
 .gn-ki-a{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}
 .gn-ki-a img{display:block;width:100%;max-width:600px;height:auto;margin:0 auto}
 .gn-fwd .gn-menu .gn-link-text{animation:gn-fwd-prev .24s var(--cb) both}
@@ -391,6 +392,7 @@ font:400 15px/1.35 -apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neu
 <li class="gn-item" style="--n:8"><a class="gn-link" href="../support/"><span class="gn-link-text">support</span></a></li>
 </ul></div></div>
 <div class="gn-submenu" id="gn-ai" inert aria-hidden="true"><div class="gn-submenu-content gn-ki" style="background:#fefefe">
+<p class="gn-ki-titel">Click one</p>
 <h2 class="gn-ki-h" style="--k:0.09839;--von:#f9f9f7;--nach:#f9f9f7">Claude</h2>
 <a class="gn-ki-a" href="https://claude.ai/new?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know." style="background:#f6f6f4"><img src="../ai/chat/claude.jpg" width="1179" height="797" alt="Ask Claude about David" decoding="async"></a>
 <h2 class="gn-ki-h" style="--k:0.09500;--von:#f7f7f5;--nach:#f5f5f5">ChatGPT</h2>
