@@ -227,6 +227,10 @@ color:#333336;text-decoration:none;transition:color .32s var(--cb);-webkit-tap-h
 .gn-submenu-link:hover,.gn-submenu-link:focus-visible{color:#000}
 .gn-submenu-link:focus{outline:none}
 .gn-submenu-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
+.gn-ki{display:block;max-width:600px;margin:0 auto;padding:50px 0 48px}
+.gn-ki-h{margin:0;padding:14px 20px 12px;color:#000;font:700 34px/41px var(--sfd);letter-spacing:0}
+.gn-ki-a{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-ki-a img{display:block;width:100%;height:auto}
 .gn-fwd .gn-menu .gn-link-text{animation:gn-fwd-prev .24s var(--cb) both}
 .gn-fwd .gn-submenu{animation:gn-fwd-next .24s var(--cb) .16s both}
 .gn-bwd .gn-submenu{animation:gn-bwd-prev .24s var(--cb) both}
@@ -308,10 +312,14 @@ body:has(.sup) .gn-page{position:absolute}
 <li class="gn-item" style="--n:7"><a class="gn-link" href="../apps/"><span class="gn-link-text">apps</span></a></li>
 <li class="gn-item" style="--n:8"><a class="gn-link" href="../support/"><span class="gn-link-text">support</span></a></li>
 </ul></div></div>
-<div class="gn-submenu" id="gn-ai" inert aria-hidden="true"><div class="gn-submenu-content"><div class="gn-submenu-group">
-<h2 class="gn-submenu-header">everything david knows, written for ai</h2>
-<ul class="gn-submenu-list"><li class="gn-submenu-list-item"><a class="gn-submenu-link" href="https://chatgpt.com/?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know.">test davids brain upload</a></li></ul>
-</div></div></div>
+<div class="gn-submenu" id="gn-ai" inert aria-hidden="true"><div class="gn-submenu-content gn-ki">
+<h2 class="gn-ki-h">Claude</h2>
+<a class="gn-ki-a" href="https://claude.ai/new?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know."><img src="../ai/chat/claude.jpg" width="1179" height="797" alt="Ask Claude about David" decoding="async"></a>
+<h2 class="gn-ki-h">ChatGPT</h2>
+<a class="gn-ki-a" href="https://chatgpt.com/?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know."><img src="../ai/chat/chatgpt.jpg" width="1179" height="778" alt="Ask ChatGPT about David" decoding="async"></a>
+<h2 class="gn-ki-h">Grok</h2>
+<a class="gn-ki-a" href="https://grok.com/?q=Read%20https%3A//dlichters.com/ai/%20and%20the%20pages%20it%20links%20to.%20Then%20answer%20my%20questions%20the%20way%20David%20would%2C%20only%20from%20what%20is%20written%20there.%20Start%20by%20asking%20what%20I%20want%20to%20know."><img src="../ai/chat/grok.jpg" width="1179" height="717" alt="Ask Grok about David" decoding="async"></a>
+</div></div>
 </div>
 </nav>
 <script>(function(){var g=document.getElementById("gn");if(!g)return;

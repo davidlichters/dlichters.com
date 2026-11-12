@@ -127,6 +127,10 @@ color:#333336;text-decoration:none;transition:color .32s var(--cb);-webkit-tap-h
 .gn-submenu-link:hover,.gn-submenu-link:focus-visible{color:#000}
 .gn-submenu-link:focus{outline:none}
 .gn-submenu-link:focus-visible{outline:2px solid #0071e3;outline-offset:-7px}
+.gn-ki{display:block;max-width:600px;margin:0 auto;padding:50px 0 48px}
+.gn-ki-h{margin:0;padding:14px 20px 12px;color:#000;font:700 34px/41px var(--sfd);letter-spacing:0}
+.gn-ki-a{display:block;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.gn-ki-a img{display:block;width:100%;height:auto}
 .gn-fwd .gn-menu .gn-link-text{animation:gn-fwd-prev .24s var(--cb) both}
 .gn-fwd .gn-submenu{animation:gn-fwd-next .24s var(--cb) .16s both}
 .gn-bwd .gn-submenu{animation:gn-bwd-prev .24s var(--cb) both}
