@@ -482,7 +482,8 @@ o.push('<rect x="0" y="'+h+'" width="'+W+'" height="1" fill="#d2d2d7"/>');
 var y0=new Date(first).getFullYear(),y1=new Date(hor).getFullYear();
 for(var y=y0;y<=y1;y++){var a=y===y0?first:new Date(y,0,1).getTime(),b=y===y1?hor:new Date(y+1,0,1).getTime(),tw=cv.measureText(String(y)).width;
 if(y>y0)o.push('<rect x="'+x(a).toFixed(2)+'" y="'+h+'" width="1" height="5" fill="#6e6e73"/>');
-if(x(b)-x(a)>=tw+4)o.push('<text x="'+Math.max((x(a)+x(b))/2,tw/2).toFixed(2)+'" y="'+(h+12)+'" text-anchor="middle" dominant-baseline="central" fill="#6e6e73">'+y+'</text>')}
+var mj=y===y0&&y<y1?(x(new Date(y,0,1).getTime())+x(b))/2:(x(a)+x(b))/2;
+if(x(b)-x(a)>=tw+4)o.push('<text x="'+Math.max(mj,tw/2).toFixed(2)+'" y="'+(h+12)+'" text-anchor="middle" dominant-baseline="central" fill="#6e6e73">'+y+'</text>')}
 o.push('</svg>');box.innerHTML=o.join("")}
 zeichne();var rz=0;addEventListener("resize",function(){if(rz)return;rz=requestAnimationFrame(function(){rz=0;zeichne()})});
 function meta(b){return tx(b.m)+(b.h?(b.m?' · ':'')+'<a href="'+esc(b.h)+'" target="_blank" rel="noopener">Open chat</a>':'')}
