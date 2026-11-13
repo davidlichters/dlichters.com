@@ -300,7 +300,7 @@ main.wrap{max-width:1180px;padding:8px 16px 64px}
    ungefähr so, aber mach halt mit ordentlichen Rändern und ordentlichen Kurven in den Ecken." Gemessen in seinem Bild
    (1179 px = 393 Punkte, Faktor 3): Karte 927 x 1351 px = 309 x 450, linker Rand 66 px = 22, Lücke 59 px = 20, Ecken 79 bis
    84 px = 27. Die zweite Karte schaut rechts 42 Punkte herein; nach dem Wischen steht sie 22 vom rechten Rand und die erste
-   schaut links herein. Eigener Aufbau, Farbe vorerst der Platzhalter --bar. Der Wischbereich geht von Rand zu Rand
+   schaut links herein. Eigener Aufbau; Farben seit 13.11. je Karte aus WISCH_FARBEN, --bar bleibt nur Ersatz. Der Wischbereich geht von Rand zu Rand
    (-16 gleicht den Seitenrand aus); ::after hält rechts 20 + 2 = 22 frei, weil Safari den rechten Innenabstand nicht mitscrollt. */
 /* David 12.11.2026 21:0x: "Mach 10 karten statt 2". Lücke jetzt 22 wie der linke Rand: mit 20 blieb bei jeder Karte in der
    Mitte ein 2 Punkte breiter Streifen der vorigen Karte am linken Rand stehen. Rechts hält ::after 22 + 1 frei (WebKit zählt
@@ -365,7 +365,7 @@ document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(ha
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 <main class="wrap">
 <h1 class="kost-h">diet</h1>
-<div class="kost-wisch" aria-hidden="true"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<div class="kost-wisch" aria-hidden="true"><div style="background:#BC706D"></div><div style="background:#EBEBEB"></div><div style="background:#E7EAE3"></div><div style="background:#8A413B"></div><div style="background:#F2DEC1"></div><div style="background:#E9E2C3"></div><div style="background:#060606"></div><div style="background:#A95869"></div><div style="background:#E9E8E2"></div><div style="background:#8D141A"></div></div>
 <ul class="kost">
 <li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>700g raw ribeye</h2><p>$420 per month</p></li>
 <li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>10 raw oysters</h2><p>$900 per month</p></li>
