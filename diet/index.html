@@ -291,11 +291,6 @@ html.srch .gn{display:none}
 
 main.wrap{max-width:1180px;padding:8px 16px 64px}
 .kost-h{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.kost{list-style:none;margin:0 auto;padding:0;max-width:640px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 12px}
-.kost img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:16px;background:var(--bar)}
-.kost h2{margin:11px 0 0;font-size:17px;line-height:1.24;font-weight:600;letter-spacing:-.022em}
-.kost p{margin:2px 0 0;font-size:15px;line-height:1.33;color:var(--muted)}
-@media(min-width:860px){.kost{max-width:none;grid-template-columns:repeat(5,minmax(0,1fr));gap:44px 20px}}
 /* David 12.11.2026 20:5x, zwei Karten zum Wischen nach seiner Zeichnung (schwarz = Karte, weiss = Hintergrund): "Mach das
    ungefähr so, aber mach halt mit ordentlichen Rändern und ordentlichen Kurven in den Ecken." Gemessen in seinem Bild
    (1179 px = 393 Punkte, Faktor 3): Karte 927 x 1351 px = 309 x 450, linker Rand 66 px = 22, Lücke 59 px = 20, Ecken 79 bis
@@ -309,7 +304,12 @@ main.wrap{max-width:1180px;padding:8px 16px 64px}
 scroll-snap-type:x mandatory;scroll-padding-left:22px;-webkit-overflow-scrolling:touch;scrollbar-width:none;overscroll-behavior-x:contain}
 .kost-wisch::-webkit-scrollbar{display:none}
 .kost-wisch::after{content:"";flex:none;width:1px}
-.kost-wisch>div{flex:none;width:309px;height:450px;border-radius:27px;background:var(--bar);scroll-snap-align:start}
+.kost-wisch>div{position:relative;flex:none;width:309px;height:450px;border-radius:27px;background:var(--bar);scroll-snap-align:start}
+/* 14.11.2026: Bild genau in der Mitte der Karte, 265 breit (309 minus 2 x 22 Rand wie der Seitenrand), Davids Zeile 18 darunter.
+   Schriftfarbe je Karte aus _schrift_auf(): weiß oder dunkel, was auf seiner Kartenfarbe mehr Kontrast hat. */
+.kost-wisch img{position:absolute;left:22px;top:calc(50% - 132.5px);width:265px;height:265px;object-fit:cover;border-radius:18px;display:block}
+.kost-wisch p{position:absolute;left:14px;right:14px;top:calc(50% + 150.5px);margin:0;text-align:center;font-size:21px;line-height:1.24;
+font-weight:600;letter-spacing:-.021em}
 </style></head>
 <body>
 <div class="navfx" id="fx" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -365,19 +365,7 @@ document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(ha
 addEventListener("pageshow",function(e){if(e.persisted&&has("gn-open"))trig.click()})})()</script>
 <main class="wrap">
 <h1 class="kost-h">diet</h1>
-<div class="kost-wisch" aria-hidden="true"><div style="background:#BC706D"></div><div style="background:#EBEBEB"></div><div style="background:#E7EAE3"></div><div style="background:#8A413B"></div><div style="background:#F2DEC1"></div><div style="background:#E9E2C3"></div><div style="background:#060606"></div><div style="background:#A95869"></div><div style="background:#E9E8E2"></div><div style="background:#8D141A"></div></div>
-<ul class="kost">
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>700g raw ribeye</h2><p>$420 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>10 raw oysters</h2><p>$900 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>10 raw egg yolks</h2><p>$60 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>300g raw liver</h2><p>$50 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>100g raw butter</h2><p>$60 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>200g sardines</h2><p>$100 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>200g raw heart</h2><p>$50 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>0.5 liters bone broth</h2><p>$40 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>1 liter raw milk</h2><p>$70 per month</p></li>
-<li><img src="ribeye.jpg" width="800" height="800" alt=""><h2>200g blackcurrants</h2><p>$30 per month</p></li>
-</ul>
+<div class="kost-wisch"><div style="background:#BC706D;color:#1d1d1f"><img src="01-ribeye.jpg" width="800" height="800" alt=""><p>700g ribeye - $420</p></div><div style="background:#EBEBEB;color:#1d1d1f"><img src="02-oysters.jpg" width="800" height="800" alt=""><p>10 oysters - $900</p></div><div style="background:#E7EAE3;color:#1d1d1f"><img src="03-egg-yolks.jpg" width="800" height="800" alt="" loading="lazy"><p>10 egg yolks - $60</p></div><div style="background:#8A413B;color:#fff"><img src="04-liver.jpg" width="800" height="800" alt="" loading="lazy"><p>300g liver - $50</p></div><div style="background:#F2DEC1;color:#1d1d1f"><img src="05-butter.jpg" width="800" height="800" alt="" loading="lazy"><p>100g butter - $60</p></div><div style="background:#E9E2C3;color:#1d1d1f"><img src="06-honey.jpg" width="800" height="800" alt="" loading="lazy"><p>honey - $10</p></div><div style="background:#060606;color:#fff"><img src="07-sardines.jpg" width="800" height="800" alt="" loading="lazy"><p>200g sardines - $100</p></div><div style="background:#A95869;color:#fff"><img src="08-heart.jpg" width="800" height="800" alt="" loading="lazy"><p>200g heart - $50</p></div><div style="background:#E9E8E2;color:#1d1d1f"><img src="09-raw-milk.jpg" width="800" height="800" alt="" loading="lazy"><p>1 liter raw milk - $70</p></div><div style="background:#8D141A;color:#fff"><img src="10-fruit.jpg" width="800" height="800" alt="" loading="lazy"><p>fruit - $30</p></div></div>
 </main>
 
 <script>(function(){var fx=document.getElementById("fx");function u(){fx.classList.toggle("on",(window.scrollY||0)>2)}
