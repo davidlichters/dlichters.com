@@ -21,6 +21,10 @@
 .kauf__timer .timer__zeit{color:var(--marke)}
 .preis__zeile{display:flex;align-items:baseline;gap:6px}
 .streich{color:var(--grau);font-size:13px;font-weight:400;text-decoration:line-through}
+.lager{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 var(--s2);font-size:var(--t2);font-weight:600;color:var(--ink)}
+.lager__punkt{flex:none;width:8px;height:8px;border-radius:50%;background:var(--marke);animation:lagerpuls 2s infinite}
+@keyframes lagerpuls{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.lager__punkt{animation:none}}
 </style>
 </head>
 <body>
