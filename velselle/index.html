@@ -21,7 +21,7 @@
 .kauf__timer .timer__zeit{color:var(--marke)}
 .preis__zeile{display:flex;align-items:baseline;gap:6px}
 .streich{color:var(--grau);font-size:13px;font-weight:400;text-decoration:line-through}
-.lager{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 var(--s2);font-size:var(--t2);font-weight:600;color:var(--ink)}
+.lager{display:flex;align-items:center;justify-content:center;gap:8px;margin:var(--s2) 0 0;font-size:var(--t2);font-weight:600;color:var(--ink)}
 .lager__punkt{flex:none;width:8px;height:8px;border-radius:50%;background:var(--marke);animation:lagerpuls 2s infinite}
 @keyframes lagerpuls{0%,100%{opacity:1}50%{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.lager__punkt{animation:none}}
@@ -64,8 +64,8 @@
       <span class="stufe__preis"><span class="preis__zeile"><s class="streich">$149.99</s>$104.99</span><small class="stufe__spar">$21.00 each</small></span><span class="stufe__badge">Save $69.96</span>
     </label>
   </fieldset>
-  <p class="lager" role="status"><span class="lager__punkt" aria-hidden="true"></span>Only 5 left in stock</p>
   <button class="knopf" type="button" data-kauf>Add to cart · <span data-preis-anzeige>$69.99</span></button>
+  <p class="lager" role="status"><span class="lager__punkt" aria-hidden="true"></span>Only 5 left in stock</p>
   <p class="kauf__timer" data-timer hidden>30% off ends in <span class="timer__zeit" role="timer">3:00:00</span></p>
   <ul class="kauf__info">
     <li class="nur-handy">16 Christmas patterns turn slowly across your wall or ceiling. <b>No ladder, no string lights.</b></li>
