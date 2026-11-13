@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>FAQ · DotingDen</title>
+<meta name="description" content="Answers about the 2-in-1 LED Nail Clipper: delivery, dark nails, which pets it fits, noise, charging, packs and returns.">
+<meta property="og:title" content="FAQ · DotingDen">
+<meta property="og:image" content="../../img/og.jpg">
+<link rel="preload" href="../../fonts/Figtree.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../img/apple-icon.png">
+<link rel="stylesheet" href="../../assets/shop.css">
+<!-- vorschau-tricks: nur dlichters.com, nie im Theme (David 13.11.2026) -->
+<style>
+.leiste__timer,.kauf__timer,.timer__zeit{font-variant-numeric:tabular-nums}
+.timer__zeit{display:inline-block;text-align:left;min-width:4.4em}
+.kauf__timer{margin:var(--s3) 0 0;text-align:center;font-size:var(--t2);font-weight:700;color:var(--ink)}
+.kauf__timer .timer__zeit{color:var(--marke)}
+.preis__zeile{display:flex;align-items:baseline;gap:6px}
+.streich{color:var(--grau);font-size:13px;font-weight:400;text-decoration:line-through}
+.lager{display:flex;align-items:center;justify-content:center;gap:8px;margin:var(--s2) 0 0;font-size:var(--t2);font-weight:600;color:var(--ink)}
+.lager__punkt{flex:none;width:8px;height:8px;border-radius:50%;background:var(--marke);animation:lagerpuls 2s infinite}
+@keyframes lagerpuls{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.lager__punkt{animation:none}}
+</style>
+</head>
+<body>
+<div class="leiste">Free shipping on 2+<span class="leiste__timer" data-timer hidden> · 30% off ends in <span class="timer__zeit" role="timer">3:00:00</span></span></div>
+<header class="kopf">
+  <a class="logo" href="../../" aria-label="DotingDen home">DotingDen<span class="logo__punkt">.</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../">Shop</a><a href="../../pages/faq/">FAQ</a><a href="../../pages/contact/">Contact</a>
+  </nav>
+</header>
+<main>
+<section class="block seite"><h1>Questions and answers</h1><details class="akk"><summary>Will it arrive before Christmas?</summary><p>Order today, arrives <span data-lieferung data-bearb="2,5" data-lauf="7,12">in 13 to 25 days</span>. We pack your order within 2 to 5 business days, then it arrives within 7 to 12 business days. <span data-weihnacht data-bearb="2,5" data-lauf="7,12" data-ziel="23" hidden>Order by <span data-schluss></span> for Christmas delivery.</span> Every order ships with tracking.</p></details><details class="akk"><summary>Can I see the quick on dark nails?</summary><p>On light-colored nails the two LEDs show the pink quick. On dark nails the light shows the surface only, so clip tiny pieces at a time and finish with the grinder.</p></details><details class="akk"><summary>Is it right for my pet?</summary><p>It is made for adult cats and small to medium dogs. Each nail should rest comfortably between the blades before you clip. For very large dogs with thick nails, a larger clipper is the better choice.</p></details><details class="akk"><summary>How loud is the grinder?</summary><p>About 55 dB, softer than a normal conversation. Let your pet hear and sniff it for a moment before the first trim.</p></details><details class="akk"><summary>How do the 2-pack and 3-pack work?</summary><p>Choose 2 or 3 above and the discount is applied automatically in your cart, no code needed: 2 clippers cost $89.90 ($44.95 each), 3 cost $129.90 ($43.30 each).</p></details><details class="akk"><summary>How does it charge?</summary><p>It has a rechargeable battery and charges over USB-C, so there are no batteries to buy. Charge it fully before the first trim.</p></details><details class="akk"><summary>What is in the box?</summary><p>One 2-in-1 nail clipper and grinder.</p></details><details class="akk"><summary>Where do you ship?</summary><p>To the United States, the United Kingdom, Canada, Australia and New Zealand, always with tracking. Orders of 2 or more clippers ship free.</p></details><details class="akk"><summary>What if it isn't right for me?</summary><p>If the clipper is not right for you or your pet, send it back within 30 days of delivery and we refund the full price. Arrived damaged or not working? Send us a photo within the same 30 days and we send a replacement or refund you, your choice.</p></details><p>Still unsure? Write to hello@dotingden.com.</p></section></main>
+<footer class="fuss">
+  <div class="fuss__innen">
+    <div class="fuss__logo">DotingDen<span class="logo__punkt">.</span></div>
+    <p class="fuss__satz">Clip, catch and smooth with one tool, for cats and dogs.</p>
+    <nav class="fuss__links" aria-label="Footer">
+      <a href="../../">Shop</a><a href="../../pages/faq/">FAQ</a><a href="../../pages/shipping-policy/">Shipping</a>
+      <a href="../../pages/refund-policy/">Returns</a><a href="../../pages/contact/">Contact</a><a href="../../pages/about-us/">About us</a>
+      <a href="../../pages/privacy-policy/">Privacy policy</a><a href="../../pages/terms/">Terms of service</a>
+    </nav>
+    <p class="fuss__mail">Questions? hello@dotingden.com</p>
+    <p class="fuss__klein">Reviews shown are a selection from buyers of this clipper and very similar models at other stores. Some product images, photos and videos come from suppliers and other sellers of this clipper.</p>
+    <p class="fuss__klein">© 2026 DotingDen</p>
+    <p class="vorschau-band">Preview of the new store design. Not a live store, no checkout.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../../assets/shop.js" defer></script>
+<script>
+(function () {
+  var el = document.querySelectorAll('[data-timer]');
+  if (!el.length) return;
+  function zwei(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var jetzt = new Date(), ende = new Date(jetzt.getTime());
+    ende.setMinutes(0, 0, 0); ende.setHours(ende.getHours() + 3);
+    var s = Math.max(0, Math.floor((ende - jetzt) / 1000));
+    var text = Math.floor(s / 3600) + ':' + zwei(Math.floor(s % 3600 / 60)) + ':' + zwei(s % 60);
+    for (var i = 0; i < el.length; i++) { el[i].querySelector('.timer__zeit').textContent = text; el[i].hidden = false; }
+  }
+  tick();
+  setTimeout(function () { tick(); setInterval(tick, 1000); }, 1000 - new Date().getMilliseconds());
+})();
+</script>
+</body>
+</html>

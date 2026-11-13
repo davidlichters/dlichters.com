@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Privacy policy · DotingDen</title>
+<meta name="description" content="How DotingDen collects, uses and protects your personal information.">
+<meta property="og:title" content="Privacy policy · DotingDen">
+<meta property="og:image" content="../../img/og.jpg">
+<link rel="preload" href="../../fonts/Figtree.woff2" as="font" type="font/woff2" crossorigin>
+
+<link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../img/apple-icon.png">
+<link rel="stylesheet" href="../../assets/shop.css">
+<!-- vorschau-tricks: nur dlichters.com, nie im Theme (David 13.11.2026) -->
+<style>
+.leiste__timer,.kauf__timer,.timer__zeit{font-variant-numeric:tabular-nums}
+.timer__zeit{display:inline-block;text-align:left;min-width:4.4em}
+.kauf__timer{margin:var(--s3) 0 0;text-align:center;font-size:var(--t2);font-weight:700;color:var(--ink)}
+.kauf__timer .timer__zeit{color:var(--marke)}
+.preis__zeile{display:flex;align-items:baseline;gap:6px}
+.streich{color:var(--grau);font-size:13px;font-weight:400;text-decoration:line-through}
+.lager{display:flex;align-items:center;justify-content:center;gap:8px;margin:var(--s2) 0 0;font-size:var(--t2);font-weight:600;color:var(--ink)}
+.lager__punkt{flex:none;width:8px;height:8px;border-radius:50%;background:var(--marke);animation:lagerpuls 2s infinite}
+@keyframes lagerpuls{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.lager__punkt{animation:none}}
+</style>
+</head>
+<body>
+<div class="leiste">Free shipping on 2+<span class="leiste__timer" data-timer hidden> · 30% off ends in <span class="timer__zeit" role="timer">3:00:00</span></span></div>
+<header class="kopf">
+  <a class="logo" href="../../" aria-label="DotingDen home">DotingDen<span class="logo__punkt">.</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../">Shop</a><a href="../../pages/faq/">FAQ</a><a href="../../pages/contact/">Contact</a>
+  </nav>
+</header>
+<main>
+<section class="block seite"><h1>Privacy policy</h1>
+<p>Last updated: November 13, 2026</p>
+<p>This privacy policy explains how DotingDen ("we", "us") collects, uses and shares your personal information when you visit our store, contact us or buy from us.</p>
+<h2>What we collect</h2>
+<ul class="liste">
+<li><b>When you order:</b> your name, shipping and billing address, email, phone number if you give it, and the items you buy. Card details go straight to the payment provider; we never see or store your full card number.</li>
+<li><b>When you write to us:</b> your email address and what you tell us.</li>
+<li><b>When you browse:</b> device and browser information, IP address, pages you view and how you reached the store, collected through cookies and similar technology.</li>
+</ul>
+<h2>How we use it</h2>
+<p>To process and ship your order, send order and shipping emails, answer your questions, handle refunds, prevent fraud, keep the store working, and, if you agree, tell you about offers. We use browsing information to understand which pages help shoppers and to measure our ads.</p>
+<h2>Who we share it with</h2>
+<p>Only with the companies that help us run the store: our store platform (Shopify), payment providers, the supplier and carriers who pack and deliver your order, and advertising and analytics partners for the browsing information above. We also share information when the law requires it. We do not sell your personal information for money.</p>
+<h2>Cookies</h2>
+<p>Cookies keep your cart, remember your settings and help us measure visits and ads. You can block or delete cookies in your browser; the store still works, but some parts such as the cart may not.</p>
+<h2>Your rights</h2>
+<p>You can ask us what personal information we hold about you, ask us to correct or delete it, and opt out of marketing emails at any time with the link in each email. Depending on where you live (for example California, the UK or the EU), you may have further rights, including the right to opt out of the sharing of your information for targeted ads. Write to hello@dotingden.com and we answer within the time the law sets. We will not treat you differently for using these rights.</p>
+<h2>How long we keep it</h2>
+<p>We keep order information as long as we need it for the order, refunds and our tax and accounting duties, and delete it after that.</p>
+<h2>Children</h2>
+<p>The store is meant for adults. We do not knowingly collect information from children under 13.</p>
+<h2>Changes</h2>
+<p>If we change this policy, we update the date at the top of this page.</p>
+<h2>Contact</h2>
+<p>Questions about your data: hello@dotingden.com.</p>
+</section></main>
+<footer class="fuss">
+  <div class="fuss__innen">
+    <div class="fuss__logo">DotingDen<span class="logo__punkt">.</span></div>
+    <p class="fuss__satz">Clip, catch and smooth with one tool, for cats and dogs.</p>
+    <nav class="fuss__links" aria-label="Footer">
+      <a href="../../">Shop</a><a href="../../pages/faq/">FAQ</a><a href="../../pages/shipping-policy/">Shipping</a>
+      <a href="../../pages/refund-policy/">Returns</a><a href="../../pages/contact/">Contact</a><a href="../../pages/about-us/">About us</a>
+      <a href="../../pages/privacy-policy/">Privacy policy</a><a href="../../pages/terms/">Terms of service</a>
+    </nav>
+    <p class="fuss__mail">Questions? hello@dotingden.com</p>
+    <p class="fuss__klein">Reviews shown are a selection from buyers of this clipper and very similar models at other stores. Some product images, photos and videos come from suppliers and other sellers of this clipper.</p>
+    <p class="fuss__klein">© 2026 DotingDen</p>
+    <p class="vorschau-band">Preview of the new store design. Not a live store, no checkout.</p>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="../../assets/shop.js" defer></script>
+<script>
+(function () {
+  var el = document.querySelectorAll('[data-timer]');
+  if (!el.length) return;
+  function zwei(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var jetzt = new Date(), ende = new Date(jetzt.getTime());
+    ende.setMinutes(0, 0, 0); ende.setHours(ende.getHours() + 3);
+    var s = Math.max(0, Math.floor((ende - jetzt) / 1000));
+    var text = Math.floor(s / 3600) + ':' + zwei(Math.floor(s % 3600 / 60)) + ':' + zwei(s % 60);
+    for (var i = 0; i < el.length; i++) { el[i].querySelector('.timer__zeit').textContent = text; el[i].hidden = false; }
+  }
+  tick();
+  setTimeout(function () { tick(); setInterval(tick, 1000); }, 1000 - new Date().getMilliseconds());
+})();
+</script>
+</body>
+</html>
