@@ -13,9 +13,18 @@
 <link rel="icon" href="../../img/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="../../img/apple-icon.png">
 <link rel="stylesheet" href="../../assets/shop.css">
+<!-- vorschau-tricks: nur dlichters.com, nie im Theme (David 13.11.2026) -->
+<style>
+.leiste__timer,.kauf__timer,.timer__zeit{font-variant-numeric:tabular-nums}
+.timer__zeit{display:inline-block;text-align:left;min-width:4.4em}
+.kauf__timer{margin:var(--s3) 0 0;text-align:center;font-size:var(--t2);font-weight:700;color:var(--ink)}
+.kauf__timer .timer__zeit{color:var(--marke)}
+.preis__zeile{display:flex;align-items:baseline;gap:6px}
+.streich{color:var(--grau);font-size:13px;font-weight:400;text-decoration:line-through}
+</style>
 </head>
 <body>
-<div class="leiste">Free shipping on 2+<span data-weihnacht data-bearb="2,5" data-lauf="7,12" data-ziel="23" hidden> · Order by <span data-schluss></span> for Christmas</span></div>
+<div class="leiste">Free shipping on 2+<span class="leiste__timer" data-timer hidden> · 30% off ends in <span class="timer__zeit" role="timer">3:00:00</span></span></div>
 <header class="kopf">
   <a class="logo" href="../../" aria-label="velselle home">velselle<span class="logo__punkt">.</span></a>
   <nav class="nav" aria-label="Main">
@@ -56,5 +65,21 @@
 </footer>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="../../assets/shop.js" defer></script>
+<script>
+(function () {
+  var el = document.querySelectorAll('[data-timer]');
+  if (!el.length) return;
+  function zwei(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var jetzt = new Date(), ende = new Date(jetzt.getTime());
+    ende.setMinutes(0, 0, 0); ende.setHours(ende.getHours() + 3);
+    var s = Math.max(0, Math.floor((ende - jetzt) / 1000));
+    var text = Math.floor(s / 3600) + ':' + zwei(Math.floor(s % 3600 / 60)) + ':' + zwei(s % 60);
+    for (var i = 0; i < el.length; i++) { el[i].querySelector('.timer__zeit').textContent = text; el[i].hidden = false; }
+  }
+  tick();
+  setTimeout(function () { tick(); setInterval(tick, 1000); }, 1000 - new Date().getMilliseconds());
+})();
+</script>
 </body>
 </html>
