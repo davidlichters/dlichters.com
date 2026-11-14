@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>GiggleBun Mystery Dumpling | GigglePeek</title>
+<style>@font-face{font-family:Figtree;src:url(fonts/Figtree.woff2) format("woff2");font-weight:400 700;font-display:swap}</style>
+<style>:root{
+  --tinte:#2A1E12;--honig:#F4B02A;--creme:#FFF8EC;
+  --grau:#6B5D4E;--linie:#EBDDC4;--weiss:#fff;
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;
+  --r:12px
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--creme);color:var(--tinte);font:400 16px/1.5 Figtree,system-ui,-apple-system,sans-serif;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-weight:700;letter-spacing:-.01em;line-height:1.2;margin:0 0 var(--s3)}
+h1{font-size:24px}
+h2{font-size:24px}
+h3{font-size:18px}
+p{margin:0 0 var(--s3)}
+.kopf{background:var(--creme);border-bottom:1px solid var(--linie);position:relative;z-index:20}
+.kopf__in{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 var(--s4)}
+.logo{display:flex;align-items:center;gap:var(--s2);text-decoration:none;font-weight:700;font-size:18px;color:var(--tinte)}
+.logo b{font-weight:700;color:var(--tinte)}
+.logo__zeichen{width:28px;height:28px}
+.kopf__nav{display:none;gap:var(--s5)}
+.kopf__nav a{text-decoration:none;font-size:16px}
+.kopf__nav a:hover{text-decoration:underline}
+.kopf__rechts{display:flex;align-items:center;gap:var(--s1)}
+.korb{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:0;background:none;color:var(--tinte);cursor:pointer;padding:0}
+.korb svg{width:24px;height:24px}
+.menue summary{list-style:none;width:44px;height:44px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:var(--s1);cursor:pointer}
+.menue summary::-webkit-details-marker{display:none}
+.menue summary span{width:20px;height:2px;background:var(--tinte);border-radius:2px}
+.menue nav{position:absolute;left:0;right:0;top:56px;background:var(--creme);border-bottom:1px solid var(--linie);display:flex;flex-direction:column;padding:0 var(--s4) var(--s2)}
+.menue nav a{text-decoration:none;padding:var(--s3) 0;border-bottom:1px solid var(--linie)}
+.menue nav a:last-child{border-bottom:0}
+.produkt{max-width:1160px;margin:0 auto}
+.galerie{position:relative}
+.streifen{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;background:var(--weiss)}
+.streifen::-webkit-scrollbar{display:none}
+.streifen img{flex:0 0 100%;width:100%;height:312px;object-fit:cover;scroll-snap-align:start}
+.galerie__zahl{position:absolute;right:var(--s3);bottom:var(--s3);background:rgba(42,30,18,.7);color:#fff;font-size:14px;padding:var(--s1) var(--s2);border-radius:var(--r)}
+.daumen{display:none}
+.kasten{padding:var(--s4) var(--s4) var(--s5)}
+.kasten h1{margin-bottom:var(--s2)}
+.sterne{display:flex;align-items:center;gap:var(--s2);text-decoration:none;font-size:14px;margin:0 0 var(--s3)}
+.sterne span{color:var(--grau);text-decoration:underline}
+.sterne__reihe{display:inline-flex;gap:2px}
+.sterne__reihe i{display:block;width:16px;height:16px}
+.sterne__reihe svg{width:100%;height:100%;display:block}
+.sterne__reihe .an{fill:var(--honig)}
+.sterne__reihe .aus{fill:var(--linie)}
+.nutzen{list-style:none;margin:0 0 var(--s4);padding:0;font-size:16px}
+.nutzen li{padding-left:var(--s5);position:relative;margin:0 0 var(--s1)}
+.nutzen li::before{content:"";position:absolute;left:var(--s1);top:8px;width:8px;height:8px;border-radius:50%;background:var(--honig)}
+.stufen{border:0;margin:0 0 var(--s3);padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2)}
+.stufen legend{font-size:14px;font-weight:700;margin-bottom:var(--s2);padding:0}
+.stufe{position:relative;border:1px solid var(--linie);background:var(--weiss);border-radius:var(--r);padding:var(--s3) var(--s1);text-align:center;cursor:pointer;display:flex;flex-direction:column;gap:2px}
+.stufe input{position:absolute;opacity:0;pointer-events:none}
+.stufe:has(input:checked){border-color:var(--tinte);box-shadow:inset 0 0 0 1px var(--tinte)}
+.stufe:has(input:focus-visible){outline:2px solid var(--tinte);outline-offset:2px}
+.stufe__n{font-size:14px}
+.stufe__preis{font-size:18px;font-weight:700}
+.stufe__je{font-size:14px;color:var(--grau)}
+.stufe--viele{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:flex-start;gap:var(--s3);text-align:left;padding:var(--s2) var(--s3);min-height:44px}
+.stufe--viele .stufe__zahl{display:none}
+.stufe--viele:has(input:checked) .stufe__zahl{display:flex}
+.stufe__mehr{font-size:14px;color:var(--grau)}
+.stufe--viele:has(input:checked) .stufe__mehr{display:none}
+.stufe--viele .stufe__je{margin-right:auto}
+.stufe__zahl{display:flex;align-items:center;border:1px solid var(--linie);border-radius:var(--r);background:var(--weiss);overflow:hidden}
+.stufe__zahl button{width:40px;height:40px;border:0;background:transparent;font:inherit;font-size:18px;font-weight:700;color:var(--tinte);cursor:pointer}
+.stufe .stufe__zahl input{position:static;opacity:1;pointer-events:auto;width:40px;height:40px;border:0;text-align:center;font:inherit;font-size:16px;font-weight:700;-moz-appearance:textfield;background:transparent;color:var(--tinte)}
+.stufe__zahl input::-webkit-outer-spin-button,.stufe__zahl input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.knopf{display:inline-flex;align-items:center;justify-content:center;gap:var(--s2);border:0;border-radius:999px;background:var(--tinte);color:#fff;font:700 16px/1 Figtree,sans-serif;padding:0 var(--s5);min-height:52px;cursor:pointer;text-decoration:none}
+.knopf:hover{background:#000}
+.kaufen{width:100%}
+.knopf--zweit{background:transparent;color:var(--tinte);border:1px solid var(--tinte)}
+.knopf--zweit:hover{background:var(--weiss)}
+.schloss{width:16px;height:16px;flex:0 0 16px;margin-top:-2px}
+.vertrauen{list-style:none;padding:0;margin:var(--s4) 0 var(--s3);font-size:14px}
+.vertrauen li{display:flex;gap:var(--s2);align-items:flex-start;margin:0 0 var(--s2)}
+.vertrauen svg{flex:0 0 20px;width:20px;height:20px;color:var(--tinte)}
+.zahlsymbole{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:var(--s1)}
+.zahlsymbole svg{width:38px;height:24px;display:block}
+.block{padding:var(--s6) var(--s4);max-width:1160px;margin:0 auto;border-top:1px solid var(--linie)}
+.block__unter{color:var(--grau)}
+.produkt + .block{border-top:0}
+.bewertungen__zahl{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;margin:0 0 var(--s4);font-size:16px}
+.bewertungen__zahl span{color:var(--grau)}
+.bewertungen{display:grid;gap:var(--s3)}
+.kundenfotos{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);margin:0 0 var(--s4)}
+.kundenfotos a{display:block}
+.kundenfotos a:only-child{grid-column:1/-1}
+.kundenfotos img{width:100%;height:auto;aspect-ratio:1000/680;object-fit:cover;border-radius:var(--r)}
+.bewertung,.karte{background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:var(--s4)}
+.bewertung__kopf{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);margin-bottom:var(--s2)}
+.bewertung__monat{font-size:14px;color:var(--grau)}
+.bewertung h3{font-size:16px;margin:0 0 var(--s1)}
+.bewertung p{margin:0 0 var(--s2)}
+.bewertung__text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.bewertung__text.offen{display:block;-webkit-line-clamp:unset;overflow:visible}
+.bewertung__mehr{background:none;border:0;padding:0;margin:0 0 var(--s2);font:inherit;font-size:14px;font-weight:700;color:var(--tinte);text-decoration:underline;cursor:pointer}
+.bewertung__mehr[hidden]{display:none}
+.bewertung .bewertung__name{font-size:14px;font-weight:700;margin:0}
+.mehr-knopf{display:flex;align-items:center;margin:var(--s4) auto 0;min-height:52px;padding:0 var(--s5);border:1px solid var(--tinte);border-radius:999px;background:transparent;color:var(--tinte);font:700 16px/1 Figtree,sans-serif;cursor:pointer}
+.mehr-knopf:disabled{opacity:.5}
+.vergleich{width:100%;max-width:720px;border-collapse:separate;border-spacing:0;background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);overflow:hidden;font-size:14px;table-layout:fixed}
+.vergleich th,.vergleich td{padding:var(--s3) var(--s2);border-bottom:1px solid var(--linie);text-align:left;vertical-align:top}
+.vergleich thead th{font-weight:700}
+.vergleich tbody th{font-weight:400;color:var(--grau);width:36%}
+.vergleich td:nth-child(2){font-weight:700}
+.vergleich td:nth-child(3){color:var(--grau)}
+.vergleich tr:last-child>*{border-bottom:0}
+.zwei{display:grid;gap:var(--s4)}
+.zwei img{border-radius:var(--r)}
+.arten{padding-left:var(--s5);margin:0 0 var(--s3)}
+.arten li{margin:0 0 var(--s1)}
+.masse{margin:0;background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:0 var(--s4)}
+.masse div{display:flex;justify-content:space-between;gap:var(--s3);padding:var(--s3) 0;border-bottom:1px solid var(--linie)}
+.masse div:last-child{border-bottom:0}
+.masse dt{font-weight:700}
+.masse dd{margin:0;text-align:right}
+.faq details{background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);margin:0 0 var(--s2)}
+.faq summary{cursor:pointer;font-weight:700;padding:var(--s3) var(--s6) var(--s3) var(--s4);list-style:none;position:relative;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:var(--s4);top:var(--s3);font-weight:400}
+.faq details[open] summary::after{content:"\2013"}
+.faq p{margin:0;padding:0 var(--s4) var(--s4);color:var(--grau)}
+.mehr-link{margin:var(--s4) 0 0}
+.mehr-link a{font-weight:700}
+.seite{max-width:760px;margin:0 auto;padding:var(--s6) var(--s4) var(--s7)}
+.seite h1{font-size:32px}
+.seite h2{font-size:18px;margin-top:var(--s5)}
+.seite .lead{font-size:18px}
+.seite li{margin:0 0 var(--s1)}
+.kontakt{display:grid;gap:var(--s3);margin:var(--s4) 0}
+.kontakt>div{background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:var(--s4)}
+.kontakt h2{margin-top:0}
+.kontakt p:last-child{margin-bottom:0}
+.fuss{background:var(--tinte);color:#F3E9D8;padding:var(--s6) var(--s4) 96px;font-size:14px}
+.fuss__in{max-width:1128px;margin:0 auto;display:grid;gap:var(--s5)}
+.fuss h3{font-size:14px;color:#fff;margin:0 0 var(--s2)}
+.fuss a{display:block;text-decoration:none;padding:var(--s1) 0}
+.fuss a:hover{text-decoration:underline}
+.fuss p{margin:0 0 var(--s2)}
+.logo--fuss,.logo--fuss b{color:#fff}
+.logo--fuss{margin-bottom:var(--s2)}
+.fuss .fuss__klein{max-width:1128px;margin:var(--s5) auto 0;color:#BFAF98}
+.fuss .fuss__herkunft{margin-top:var(--s2)}
+.leiste{position:fixed;left:0;right:0;bottom:0;background:var(--creme);border-top:1px solid var(--linie);padding:var(--s2) var(--s4) calc(var(--s2) + env(safe-area-inset-bottom));display:flex;gap:var(--s3);align-items:center;transform:translateY(110%);transition:transform .2s;z-index:30}
+.leiste.an{transform:none}
+.leiste__t{font-weight:700;font-size:14px;line-height:1.3;flex:1}
+.leiste .knopf{width:auto;min-height:44px}
+@media (min-width:860px){
+  h1{font-size:40px}
+  h2{font-size:32px}
+  .kopf__nav{display:flex}
+  .menue{display:none}
+  .kopf__in{height:64px}
+  .produkt{display:grid;grid-template-columns:56% 1fr;gap:var(--s7);padding:var(--s6) var(--s4) var(--s5)}
+  .streifen{border-radius:var(--r)}
+  .streifen img{height:auto;aspect-ratio:1/1}
+  .galerie__zahl{display:none}
+  .daumen{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--s2);margin-top:var(--s2)}
+  .daumen button{padding:0;border:2px solid transparent;border-radius:var(--s2);background:none;cursor:pointer;overflow:hidden}
+  .daumen button.an{border-color:var(--tinte)}
+  .daumen img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+  .kasten{padding:0}
+  .block{padding:var(--s7) var(--s4)}
+  .zwei{grid-template-columns:1fr 1fr;align-items:center;gap:var(--s7)}
+  .zwei--um img{order:2}
+  .faq{max-width:760px}
+  .bewertungen{grid-template-columns:repeat(3,1fr);align-items:start}
+  .kundenfotos{grid-template-columns:repeat(auto-fill,minmax(260px,320px))}
+  .kundenfotos a:only-child{grid-column:auto}
+  .fuss__in{grid-template-columns:2fr 1.3fr 1fr 1.6fr}
+  .fuss{padding-bottom:var(--s6)}
+  .kontakt{grid-template-columns:1fr 1fr}
+}
+@media (max-width:859px){.streifen img{height:288px}}
+.shopify-section:has(.produkt) + .shopify-section .block{border-top:0}
+.band{background:var(--tinte);color:var(--weiss);font-size:14px;font-weight:700;text-align:center;padding:var(--s2) var(--s4);line-height:1.4}
+@media (max-width:859px){.streifen img{height:288px}}
+.logo__bild{height:32px;width:auto}
+.korb{position:relative;text-decoration:none}
+.korb__zahl{position:absolute;right:2px;top:4px;min-width:18px;height:18px;border-radius:9px;background:var(--honig);color:var(--tinte);font-size:12px;font-weight:700;line-height:18px;text-align:center;padding:0 var(--s1)}
+.knopf:disabled{opacity:.5;cursor:not-allowed}
+.sorte{display:block;margin:0 0 var(--s3);font-size:14px;font-weight:700}
+.sorte span{display:block;margin-bottom:var(--s2)}
+select,input[type=text],input[type=email],input[type=password],input[type=search],textarea{width:100%;min-height:44px;font:inherit;font-size:16px;color:var(--tinte);background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:var(--s2) var(--s3)}
+.beschreibung{margin-top:var(--s4)}
+.formular{display:grid;gap:var(--s3);margin:var(--s4) 0}
+.formular label{font-size:14px;font-weight:700;display:grid;gap:var(--s1)}
+.suche{grid-template-columns:1fr auto}
+.inhalt img{border-radius:var(--r)}
+.klein{font-size:14px;color:var(--grau);margin:0 0 var(--s1)}
+.posten{display:flex;gap:var(--s3);padding:var(--s4) 0;border-bottom:1px solid var(--linie);align-items:flex-start}
+.posten img{width:72px;height:72px;object-fit:cover;border-radius:var(--s2)}
+.posten__mitte{flex:1;min-width:0}
+.posten__t{font-weight:700;text-decoration:none}
+.posten__zeile{display:flex;align-items:center;gap:var(--s4);font-size:14px;margin-top:var(--s2)}
+.posten__zeile input{width:64px;min-height:44px;font:inherit;font-size:16px;text-align:center;border:1px solid var(--linie);border-radius:var(--r);background:var(--weiss);color:var(--tinte)}
+.korb__summe{display:flex;justify-content:space-between;font-size:18px;margin:var(--s4) 0 var(--s1)}
+.korb__neu{margin-top:var(--s3)}
+.land__ok{min-height:44px;padding:0 var(--s4);border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer}
+.fuss__land{max-width:1128px;margin:var(--s5) auto 0}
+.fuss__land form{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2)}
+.fuss__land label{width:100%;font-weight:700}
+.fuss__land select{width:auto;max-width:100%}
+.raster{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-top:var(--s4)}
+.kachel{display:block;text-decoration:none;background:var(--weiss);border:1px solid var(--linie);border-radius:var(--r);padding:var(--s3)}
+.kachel img{border-radius:var(--s2);margin-bottom:var(--s2);width:100%;aspect-ratio:1/1;object-fit:cover}
+.kachel__t{display:block;font-weight:700}
+.shopify-policy__container{max-width:760px;margin:0 auto;padding:var(--s6) var(--s4) var(--s7)}
+.js .korb__neu,.js .land__ok{display:none}
+@media (min-width:860px){.raster{grid-template-columns:repeat(4,1fr)}}
+
+/* Geschenk-Vorlagen (Zeichentafel, Dumpling) 14.11.2026 */
+[hidden]{display:none!important}
+.unsichtbar{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.band__timer{white-space:nowrap}
+.timer__zeit{font-variant-numeric:tabular-nums}
+.g-produkt .kasten h1{margin-bottom:var(--s1)}
+.g-produkt .sterne{margin-bottom:var(--s2)}
+.g-unter{font-size:15px;line-height:1.4;color:var(--grau);margin:0 0 var(--s3)}
+.g-unter b{color:var(--tinte);font-weight:700}
+.g-stufen{margin-top:var(--s3)}
+.g-stufen .stufe{padding:var(--s3) 2px var(--s2);gap:0;line-height:1.25}
+.stufe__pill{position:absolute;top:-10px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--honig);color:var(--tinte);font-size:11px;font-weight:700;line-height:1;padding:4px 8px;border-radius:999px}
+.stufe__alt{font-size:13px;color:var(--grau)}
+.g-stufen .stufe__preis{font-size:18px}
+.g-stufen .stufe__je{font-size:12px}
+.lager{display:flex;align-items:center;justify-content:center;gap:var(--s2);font-size:14px;font-weight:700;margin:6px 0 0;color:#A8321C}
+.lager__punkt{width:8px;height:8px;border-radius:50%;background:#E5483A;animation:g-puls 1.6s ease-in-out infinite}
+@keyframes g-puls{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.lager__punkt{animation:none}}
+.g-timer{text-align:center;font-size:14px;font-weight:700;margin:var(--s1) 0 0}
+.g-produkt .vertrauen{margin-top:var(--s3)}
+.bewertung__foto{display:block;width:100%;max-width:320px;height:auto;max-height:240px;object-fit:cover;border-radius:var(--s2);margin:0 0 var(--s2)}
+.g-zu{display:none}
+.g-bildtext img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+@media (max-width:859px){.g-produkt .streifen img{height:262px}}
+@media (min-width:860px){.g-produkt .daumen{grid-template-columns:repeat(8,1fr)}}
+</style>
+</head>
+<body>
+<div class="band">Free shipping on 2+<span class="band__timer" data-timer hidden> · 30% off ends in <span class="timer__zeit" role="timer">3:00:00</span></span></div>
+<header class="kopf"><div class="kopf__in">
+<a class="logo" href="./" aria-label="GigglePeek home"><svg class="logo__zeichen" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="22" rx="6" fill="#F4B02A"/><path d="M3 13a6 6 0 0 1 6-6h14a6 6 0 0 1 6 6z" fill="#FFD36E"/><path d="M16 7c-2.4-4.2-7-4.4-7-1.6 0 1.6 3.2 1.6 7 1.6zm0 0c2.4-4.2 7-4.4 7-1.6 0 1.6-3.2 1.6-7 1.6z" fill="#E39412"/><circle cx="11.5" cy="18.5" r="2.1" fill="#2A1A05"/><circle cx="20.5" cy="18.5" r="2.1" fill="#2A1A05"/><circle cx="12.2" cy="17.8" r=".7" fill="#fff"/><circle cx="21.2" cy="17.8" r=".7" fill="#fff"/><path d="M12.5 23c1.9 2 5.1 2 7 0" stroke="#2A1A05" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg><span>Giggle<b>Peek</b></span></a>
+<nav class="kopf__nav" aria-label="Main"><a href="./">Shop</a><a href="pages/faq/">FAQ</a><a href="pages/shipping/">Shipping</a><a href="pages/returns/">Returns</a><a href="pages/contact/">Contact</a><a href="pages/about/">About</a></nav>
+<div class="kopf__rechts"><button type="button" class="korb kaufen" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.3 11.2a1.6 1.6 0 0 1-1.6 1.4H7.9a1.6 1.6 0 0 1-1.6-1.4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg></button>
+<details class="menue"><summary aria-label="Menu"><span></span><span></span><span></span></summary><nav aria-label="Mobile"><a href="./">Shop</a><a href="pages/faq/">FAQ</a><a href="pages/shipping/">Shipping</a><a href="pages/returns/">Returns</a><a href="pages/contact/">Contact</a><a href="pages/about/">About</a></nav></details></div>
+</div></header>
+<main><section class="produkt g-produkt" id="kaufen">
+<div class="galerie">
+<div class="streifen" id="streifen" tabindex="0" aria-label="Product photos"><img src="img/plush-1.webp" alt="Two kids lift the steamer lid and find a purple plush dumpling inside" width="900" height="900" fetchpriority="high"><img src="img/plush-2.webp" alt="Blue, pink and rainbow plush dumplings with their steamer boxes" width="900" height="900" loading="lazy"><img src="img/plush-3.webp" alt="The steamer box with its fuzzy handle and blue sleeve, next to a pink dumpling" width="900" height="900" loading="lazy"><img src="img/plush-4.webp" alt="Small hands hold a soft yellow dumpling, its steamer box behind" width="900" height="900" loading="lazy"><img src="img/plush-5.webp" alt="Close-up of the embroidered face with rosy cheeks" width="900" height="900" loading="lazy"><img src="img/plush-6.webp" alt="A hand lifts a steamer by its fuzzy handle, a green dumpling sits beside the boxes" width="900" height="900" loading="lazy"><img src="img/plush-7-weit.webp" alt="Size: case 6.3 x 5.1 x 3.5 in, plush 5.9 x 4.7 x 3.1 in" width="900" height="900" loading="lazy"><img src="img/plush-8.webp" alt="Two kids sit behind a row of plush dumplings in many colors" width="900" height="900" loading="lazy"></div>
+<span class="galerie__zahl" id="zahl"></span>
+<div class="daumen" id="daumen"><button type="button" aria-label="Show photo 1"><img src="img/daumen-plush-1.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 2"><img src="img/daumen-plush-2.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 3"><img src="img/daumen-plush-3.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 4"><img src="img/daumen-plush-4.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 5"><img src="img/daumen-plush-5.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 6"><img src="img/daumen-plush-6.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 7"><img src="img/daumen-plush-7-weit.webp" alt="" width="72" height="72" loading="lazy"></button><button type="button" aria-label="Show photo 8"><img src="img/daumen-plush-8.webp" alt="" width="72" height="72" loading="lazy"></button></div>
+</div>
+<div class="kasten">
+<h1>GiggleBun Mystery Dumpling</h1>
+<a class="sterne" href="#bewertungen"><span class="sterne__reihe" aria-hidden="true"><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i></span><b>4.8</b></a><p class="g-unter">A soft dumpling hides in its own steamer box. <b>Nobody knows the color until the lid comes off.</b></p><form method="post" action="/cart/add" id="kaufform" accept-charset="UTF-8" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="id" value="1"><fieldset class="stufen g-stufen" data-muster="$1,234.56"><legend class="unsichtbar">Choose how many</legend><label class="stufe"><input type="radio" name="quantity" value="1" data-preis="$39.99" data-titel="1 dumpling"><span class="stufe__n">1 dumpling</span><s class="stufe__alt">$57.13</s><span class="stufe__preis">$39.99</span><span class="stufe__je">&nbsp;</span></label><label class="stufe"><input type="radio" name="quantity" value="2" checked data-preis="$69.99" data-titel="2 dumplings"><span class="stufe__pill">Most popular</span><span class="stufe__n">2 dumplings</span><s class="stufe__alt">$99.99</s><span class="stufe__preis">$69.99</span><span class="stufe__je">$35.00 each</span></label><label class="stufe"><input type="radio" name="quantity" value="3" data-preis="$94.99" data-titel="3 dumplings"><span class="stufe__pill">Best value</span><span class="stufe__n">3 dumplings</span><s class="stufe__alt">$135.70</s><span class="stufe__preis">$94.99</span><span class="stufe__je">$31.66 each</span></label></fieldset><button type="submit" name="add" class="knopf kaufen" id="kaufknopf"><svg class="schloss" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="currentColor"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>Add to cart · <span id="knopfpreis">$69.99</span></button><p class="lager" role="status"><span class="lager__punkt" aria-hidden="true"></span>Only 3 left in stock</p><p class="g-timer" data-timer hidden>30% off ends in <span class="timer__zeit" role="timer">3:00:00</span></p></form>
+<ul class="vertrauen">
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.7" fill="currentColor"/><circle cx="17" cy="17.5" r="1.7" fill="currentColor"/></svg><span>Free shipping on 2+. Order today, arrives <span data-lieferung data-bearb="1,3" data-lauf="6,12">in 7 to 15 business days</span>.</span></li>
+<li data-weihnacht data-bearb="1,3" data-lauf="6,12" data-ziel="23" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="9" width="17" height="11.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 9h19v-3h-19zM12 6v14.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 6c-1.5-3.5-6-3.5-5-.8.6 1.4 3 .8 5 .8zm0 0c1.5-3.5 6-3.5 5-.8-.6 1.4-3 .8-5 .8z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Order by <span data-schluss></span> for Christmas delivery.</span></li>
+<li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>30-day money-back guarantee</span></li>
+</ul>
+<ul class="zahlsymbole" aria-label="Payment methods"><li><svg viewBox="0 0 38 24" role="img" aria-label="Visa"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><text x="19" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="9" fill="#1A1F71">VISA</text></svg></li><li><svg viewBox="0 0 38 24" role="img" aria-label="Mastercard"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><circle cx="15" cy="12" r="6.5" fill="#EB001B"/><circle cx="23" cy="12" r="6.5" fill="#F79E1B" fill-opacity=".9"/></svg></li><li><svg viewBox="0 0 38 24" role="img" aria-label="American Express"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><rect x="3" y="3" width="32" height="18" rx="2" fill="#1F72CD"/><text x="19" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8" fill="#fff">AMEX</text></svg></li><li><svg viewBox="0 0 38 24" role="img" aria-label="Discover"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><text x="19" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="6" fill="#231F20">DISCOVER</text><circle cx="31.5" cy="7" r="2.4" fill="#F48120"/></svg></li><li><svg viewBox="0 0 38 24" role="img" aria-label="Apple Pay"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><text x="19" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="6.6" fill="#000">Apple Pay</text></svg></li><li><svg viewBox="0 0 38 24" role="img" aria-label="Google Pay"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><text x="19" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8" fill="#3C4043">G Pay</text></svg></li><li><svg viewBox="0 0 38 24" role="img" aria-label="Shop Pay"><rect x=".5" y=".5" width="37" height="23" rx="3" fill="#fff" stroke="#D9CBB2"/><rect x="3" y="3" width="32" height="18" rx="2" fill="#5A31F4"/><text x="19" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#fff">shop</text></svg></li></ul>
+</div>
+</section>
+<div class="leiste" id="leiste" aria-hidden="true"><span class="leiste__t">GiggleBun Mystery Dumpling</span><button type="button" class="knopf" tabindex="-1">Add to cart</button></div>
+<section class="block g-bildtext">
+<div class="zwei"><img src="img/plush-auf.webp" alt="A blue plush dumpling in front of its open steamer box" width="900" height="900" loading="lazy"><div><h2>Who's inside?</h2><p>Every GiggleBun hides in its own little steamer box. Nobody knows the color until the lid comes off, and that moment is half the fun.</p></div>
+</div>
+</section>
+<section class="block g-bildtext">
+<div class="zwei zwei--um"><img src="img/plush-farben.webp" alt="Five steamer boxes and five plush dumplings in different colors" width="900" height="900" loading="lazy"><div><h2>So many colors to find</h2><p>Rainbow, pink, blue, purple, peach, green and more. Each box holds one surprise color.</p></div>
+</div>
+</section>
+<section class="block g-bildtext">
+<div class="zwei"><img src="img/plush-6.webp" alt="A hand lifts a steamer by its fuzzy handle, a green dumpling sits beside the boxes" width="900" height="900" loading="lazy"><div><h2>The box becomes a carry case</h2><p>After the reveal, the fuzzy handle and the removable lid turn the steamer into a little case for car rides, sleepovers and the backpack.</p></div>
+</div>
+</section>
+<section class="block g-bildtext">
+<div class="zwei zwei--um"><img src="img/plush-familie.webp" alt="A grandma and four kids, each with a dumpling and a steamer box" width="900" height="900" loading="lazy"><div><h2>One for every kid</h2><p>Siblings, cousins, best friends: with 2 or 3 in the cart, everyone gets their own reveal.</p></div>
+</div>
+</section>
+<section class="block">
+<h2>What you get</h2>
+<dl class="masse"><div><dt>Plush</dt><dd>About 5.9 x 4.7 x 3.1 in (15 x 12 x 8 cm)</dd></div><div><dt>Case</dt><dd>Steamer box, about 6.3 x 5.1 x 3.5 in (16 x 13 x 9 cm), removable lid, fuzzy handle</dd></div><div><dt>Face</dt><dd>Embroidered eyes and cheeks</dd></div><div><dt>Color</dt><dd>A surprise, one dumpling per box</dd></div><div><dt>Age</dt><dd>3 years and up</dd></div><div><dt>In the box</dt><dd>One plush dumpling in its steamer box</dd></div></dl>
+</section>
+<section class="block" id="bewertungen">
+<h2>What buyers say</h2>
+<p class="bewertungen__zahl"><span class="sterne__reihe" aria-hidden="true"><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i></span><b>4.8 out of 5</b></p><div class="kundenfotos" aria-label="Customer photos"><a href="img/kunde-plush-1.webp" target="_blank" rel="noopener"><img src="img/kunde-plush-1.webp" alt="Customer photo" width="640" height="480" loading="lazy"></a><a href="img/kunde-plush-2.webp" target="_blank" rel="noopener"><img src="img/kunde-plush-2.webp" alt="Customer photo" width="640" height="480" loading="lazy"></a></div><div class="bewertungen" id="bewertungsliste"><article class="bewertung"><div class="bewertung__kopf"><span class="sterne__reihe" aria-hidden="true"><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i></span><span class="bewertung__monat">November 2026</span></div><h3>Adorable</h3><p class="bewertung__text">This is adorable! The container is so cute. It has a good and soft handle.</p><button type="button" class="bewertung__mehr" hidden>Read more</button><p class="bewertung__name">Danell</p></article><article class="bewertung"><div class="bewertung__kopf"><span class="sterne__reihe" aria-hidden="true"><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i></span><span class="bewertung__monat">October 2026</span></div><p class="bewertung__text">So cute and ever so fluffy my daughter will love it</p><button type="button" class="bewertung__mehr" hidden>Read more</button><p class="bewertung__name">L***n</p></article><article class="bewertung"><div class="bewertung__kopf"><span class="sterne__reihe" aria-hidden="true"><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i></span><span class="bewertung__monat">November 2026</span></div><p class="bewertung__text">Very nice item  to include in a gift stocking..</p><button type="button" class="bewertung__mehr" hidden>Read more</button><p class="bewertung__name">Michelle</p></article><article class="bewertung"><div class="bewertung__kopf"><span class="sterne__reihe" aria-hidden="true"><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="an"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i><i class="aus"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></i></span><span class="bewertung__monat">November 2026</span></div><p class="bewertung__text">came in a bag was in good shape smelled a little funny</p><button type="button" class="bewertung__mehr" hidden>Read more</button><p class="bewertung__name">ReviewerALA</p></article></div>
+</section>
+<section class="block">
+<h2>Questions before you order</h2>
+<div class="faq"><details><summary>Which color will I get?</summary><p>It is a surprise: every dumpling stays hidden in its steamer box until the lid comes off. Colors include rainbow, pink, blue, purple, peach, green and more.</p></details><details><summary>How big is it?</summary><p>The plush is about 5.9 x 4.7 x 3.1 in (15 x 12 x 8 cm). The steamer box is about 6.3 x 5.1 x 3.5 in (16 x 13 x 9 cm).</p></details><details><summary>What age is it for?</summary><p>3 years and up. The eyes and cheeks are embroidered.</p></details><details><summary>Is it gift-ready?</summary><p>Yes. It comes in its printed steamer box with the fuzzy handle, ready to wrap or to tuck into a stocking.</p></details><details><summary>When will it arrive?</summary><p>Orders ship within 1 to 3 business days and arrive 6 to 12 business days later. You get a tracking link by email as soon as your order ships.</p></details><details><summary>What if it is not right?</summary><p>You have our 30-day money-back guarantee: email us within 30 days of delivery and we refund you in full.</p></details></div>
+</section></main>
+<footer class="fuss"><div class="fuss__in">
+<div><a class="logo logo--fuss" href="./"><svg class="logo__zeichen" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="22" rx="6" fill="#F4B02A"/><path d="M3 13a6 6 0 0 1 6-6h14a6 6 0 0 1 6 6z" fill="#FFD36E"/><path d="M16 7c-2.4-4.2-7-4.4-7-1.6 0 1.6 3.2 1.6 7 1.6zm0 0c2.4-4.2 7-4.4 7-1.6 0 1.6-3.2 1.6-7 1.6z" fill="#E39412"/><circle cx="11.5" cy="18.5" r="2.1" fill="#2A1A05"/><circle cx="20.5" cy="18.5" r="2.1" fill="#2A1A05"/><circle cx="12.2" cy="17.8" r=".7" fill="#fff"/><circle cx="21.2" cy="17.8" r=".7" fill="#fff"/><path d="M12.5 23c1.9 2 5.1 2 7 0" stroke="#2A1A05" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg><span>Giggle<b>Peek</b></span></a>
+<p>Squishy toys, countdown calendars, glow drawing boards and surprise plush, sent from our store to the US, Canada, the UK, Australia and New Zealand.</p></div>
+<div><h3>Shop</h3><a href="./#kaufen">24-Day Squishy Advent Calendar</a></div>
+<div><h3>Help</h3><a href="pages/faq/">FAQ</a><a href="pages/shipping/">Shipping</a><a href="pages/returns/">Returns</a><a href="pages/contact/">Contact</a><a href="pages/about/">About us</a></div>
+<div><h3>Contact</h3><p>hello@gigglepeek.com</p><p>We answer every email, Monday to Friday.</p></div>
+</div>
+<p class="fuss__klein">&copy; 2026 GigglePeek. 30-day money-back guarantee: not happy with your order? Email us within 30 days of delivery and we refund you in full.</p><script>document.querySelectorAll(".jahr").forEach(function(e){e.textContent=new Date().getFullYear()})</script>
+<p class="fuss__klein fuss__herkunft">Reviews and customer photos shown come from buyers of the same products at other stores. Some product images, photos and videos come from suppliers and other sellers of these products.</p>
+</footer>
+<script>(function () {
+  document.documentElement.classList.add('js');
+  var streifen = document.getElementById('streifen');
+  var zahl = document.getElementById('zahl');
+  var daumen = document.querySelectorAll('#daumen button');
+  if (streifen) {
+    var n = streifen.children.length;
+    var setze = function (i) {
+      if (zahl && n) zahl.textContent = (i + 1) + ' / ' + n;
+      daumen.forEach(function (b, j) { b.classList.toggle('an', j === i); });
+    };
+    streifen.addEventListener('scroll', function () {
+      setze(Math.round(streifen.scrollLeft / streifen.clientWidth));
+    }, { passive: true });
+    daumen.forEach(function (b, i) {
+      b.addEventListener('click', function () {
+        streifen.scrollTo({ left: i * streifen.clientWidth, behavior: 'smooth' });
+        setze(i);
+      });
+    });
+    setze(0);
+  }
+
+  var knopfpreis = document.getElementById('knopfpreis');
+  var stufen = document.querySelector('.stufen');
+  var viele = document.getElementById('viele');
+  var vieleRadio = document.querySelector('.stufe--viele input[name="quantity"]');
+  var geld = function (cent) {
+    var m = stufen.getAttribute('data-muster'), z = m.match(/\d[\d.,]*\d/)[0];
+    var dez = z.charAt(z.length - 3), tsd = z.charAt(z.length - 7);
+    var t = (cent / 100).toFixed(2).split('.');
+    return m.replace(z, t[0].replace(/\B(?=(\d{3})+$)/g, tsd) + dez + t[1]);
+  };
+  var zahlViele = function () { var n = parseInt(viele.value, 10); if (isNaN(n) || n < 4) n = 4; if (n > 99) n = 99; return n; };
+  var preis = function () {
+    var r = document.querySelector('input[name="quantity"]:checked');
+    if (!r || !knopfpreis) return;
+    if (r === vieleRadio) {
+      r.value = zahlViele();
+      knopfpreis.textContent = geld(parseInt(r.getAttribute('data-je'), 10) * zahlViele());
+    } else knopfpreis.textContent = r.getAttribute('data-preis');
+  };
+  document.querySelectorAll('input[name="quantity"]').forEach(function (r) { r.addEventListener('change', preis); });
+  if (viele && vieleRadio) {
+    var setzeViele = function (n) { viele.value = Math.max(4, Math.min(99, n)); vieleRadio.checked = true; preis(); };
+    document.querySelector('.stufe__minus').addEventListener('click', function (e) { e.preventDefault(); setzeViele(zahlViele() - 1); });
+    document.querySelector('.stufe__plus').addEventListener('click', function (e) { e.preventDefault(); setzeViele(zahlViele() + 1); });
+    viele.addEventListener('input', function () { vieleRadio.checked = true; preis(); });
+    viele.addEventListener('change', function () { setzeViele(zahlViele()); });
+    viele.addEventListener('click', function () { vieleRadio.checked = true; preis(); });
+    preis();
+    window.addEventListener('pageshow', preis);
+  } else if (document.getElementById('kaufknopf')) {
+    document.querySelectorAll('[data-stufen]').forEach(function (e) { e.style.display = 'none'; });
+  }
+
+  var sorte = document.getElementById('sorte');
+  if (sorte) sorte.addEventListener('change', function () {
+    location.href = sorte.getAttribute('data-url') + '?variant=' + sorte.value;
+  });
+
+  var leiste = document.getElementById('leiste');
+  var haupt = document.getElementById('kaufknopf');
+  if (leiste && haupt && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) {
+      var weg = e[0].intersectionRatio < 0.99;
+      leiste.classList.toggle('an', weg);
+      leiste.setAttribute('aria-hidden', weg ? 'false' : 'true');
+      leiste.querySelector('button').tabIndex = weg ? 0 : -1;
+    }, { threshold: [0, 0.99, 1] }).observe(haupt);
+    leiste.querySelector('button').addEventListener('click', function () {
+      document.getElementById('kaufen').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  var kuerze = function (a) {
+    var tx = a.querySelector('.bewertung__text'), rm = a.querySelector('.bewertung__mehr');
+    if (!tx || !rm) return;
+    if (tx.scrollHeight > tx.clientHeight + 2) rm.hidden = false;
+    rm.addEventListener('click', function () { tx.classList.add('offen'); rm.remove(); });
+  };
+  document.querySelectorAll('.bewertung').forEach(kuerze);
+  var mehr = document.getElementById('mehrbewertungen');
+  var liste = document.getElementById('bewertungsliste');
+  var daten = document.getElementById('bewertungsdaten');
+  if (mehr && liste && daten) {
+    var vorrat = JSON.parse(daten.textContent), pos = 0;
+    var stern = '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg>';
+    var el = function (tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+    var karte = function (b) {
+      var a = el('article', 'bewertung'), k = el('div', 'bewertung__kopf'), r = el('span', 'sterne__reihe');
+      r.setAttribute('aria-hidden', 'true');
+      for (var i = 0; i < 5; i++) { var s = el('i', i < b.n ? 'an' : 'aus'); s.innerHTML = stern; r.appendChild(s); }
+      k.appendChild(r); k.appendChild(el('span', 'bewertung__monat', b.monat)); a.appendChild(k);
+      if (b.titel) a.appendChild(el('h3', '', b.titel));
+      var tx = el('p', 'bewertung__text');
+      b.text.split('\n\n').forEach(function (t, i) { if (i) { tx.appendChild(el('br')); tx.appendChild(el('br')); } tx.appendChild(document.createTextNode(t)); });
+      a.appendChild(tx);
+      var rm = el('button', 'bewertung__mehr', 'Read more'); rm.type = 'button'; rm.hidden = true; a.appendChild(rm);
+      a.appendChild(el('p', 'bewertung__name', b.name));
+      return a;
+    };
+    mehr.addEventListener('click', function () {
+      vorrat.slice(pos, pos + 10).map(function (b) { var k = karte(b); liste.appendChild(k); return k; }).forEach(kuerze);
+      pos += 10;
+      if (pos >= vorrat.length) mehr.remove();
+    });
+  }
+
+  var korb = document.getElementById('korbform');
+  if (korb) korb.querySelectorAll('[data-menge]').forEach(function (e) {
+    e.addEventListener('change', function () { korb.submit(); });
+  });
+
+  var land = document.getElementById('land');
+  if (land) land.addEventListener('change', function () { land.form.submit(); });
+})();
+
+/* Geschenk-Vorlagen 14.11.2026: Lieferdaten, Weihnachtsfrist, Countdown, weitere Bewertungen */
+(function () {
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  function werktage(d, n) { d = new Date(d); while (n > 0) { d.setDate(d.getDate() + 1); var w = d.getDay(); if (w > 0 && w < 6) n--; } return d; }
+  function tage(d, n) { d = new Date(d); d.setDate(d.getDate() + n); return d; }
+  function fmt(d) { return MON[d.getMonth()] + ' ' + d.getDate(); }
+  $$('[data-lieferung]').forEach(function (el) {
+    var b = el.dataset.bearb.split(',').map(Number), l = el.dataset.lauf.split(',').map(Number), h = new Date();
+    el.textContent = fmt(werktage(werktage(h, b[0]), l[0])) + ' to ' + fmt(werktage(werktage(h, b[1]), l[1]));
+  });
+  // Weihnachten: letzter Bestelltag mit spaetester Ankunft am data-ziel. Dezember; danach bleibt die Zeile weg
+  $$('[data-weihnacht]').forEach(function (el) {
+    var b = el.dataset.bearb.split(',').map(Number), l = el.dataset.lauf.split(',').map(Number);
+    var h = new Date(); h.setHours(12, 0, 0, 0);
+    var ziel = new Date(h.getFullYear(), 11, Number(el.dataset.ziel || 23), 12), d = new Date(ziel);
+    function zuSpaet(x) { return werktage(werktage(x, b[1]), l[1]) > ziel; }
+    while (d > h && zuSpaet(d)) d = tage(d, -1);
+    if (d < h || zuSpaet(d)) return;
+    $$('[data-schluss]', el).forEach(function (x) { x.textContent = fmt(d); });
+    el.hidden = false;
+  });
+  // Countdown "30% off ends in h:mm:ss": Ende = volle Stunde jetzt (abgerundet) + 3 h; startet von selbst neu
+  var timer = $$('[data-timer]');
+  if (timer.length) {
+    var zwei = function (n) { return n < 10 ? '0' + n : '' + n; };
+    var tick = function () {
+      var j = new Date(), e = new Date(j.getTime());
+      e.setMinutes(0, 0, 0); e.setHours(e.getHours() + 3);
+      var s = Math.max(0, Math.floor((e - j) / 1000));
+      var txt = Math.floor(s / 3600) + ':' + zwei(Math.floor(s % 3600 / 60)) + ':' + zwei(s % 60);
+      timer.forEach(function (el) { var z = el.querySelector('.timer__zeit'); if (z) z.textContent = txt; el.hidden = false; });
+    };
+    tick();
+    setTimeout(function () { tick(); setInterval(tick, 1000); }, 1000 - new Date().getMilliseconds());
+  }
+  // Zurueck-Taste: Browser stellt die gewaehlte Stufe wieder her, der Knopfpreis folgt
+  window.addEventListener('pageshow', function () {
+    var r = document.querySelector('.g-stufen input[name="quantity"]:checked');
+    if (r) r.dispatchEvent(new Event('change'));
+  });
+  var mehr = document.getElementById('g-mehr');
+  if (mehr) mehr.addEventListener('click', function () {
+    $$('.g-zu').forEach(function (a) {
+      a.classList.remove('g-zu');
+      var tx = a.querySelector('.bewertung__text'), rm = a.querySelector('.bewertung__mehr');
+      if (tx && rm && tx.scrollHeight > tx.clientHeight + 2) rm.hidden = false;
+    });
+    mehr.remove();
+  });
+})();
+</script>
+</body></html>
