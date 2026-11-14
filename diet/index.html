@@ -312,15 +312,16 @@ body:has(.kost-wisch) .gn-page{position:absolute}
    Mitte ein 2 Punkte breiter Streifen der vorigen Karte am linken Rand stehen. Rechts hält ::after 22 + 1 frei (WebKit zählt
    ein Element ohne Breite nicht zum Scrollbereich). Start: zweite Karte schaut 40 herein; Ende: letzte 23 vom rechten Rand. */
 .kost-wisch{display:flex;gap:22px;margin:0 -16px 26px;padding:0 0 0 22px;overflow:hidden;touch-action:pan-y;
-scroll-snap-type:x mandatory;scroll-padding-left:22px;scrollbar-width:none;overscroll-behavior-x:contain}
+scrollbar-width:none;overscroll-behavior-x:contain}
 .kost-wisch::-webkit-scrollbar{display:none}
 .kost-wisch::after{content:"";flex:none;width:1px}
-.kost-wisch>div{position:relative;flex:none;width:309px;height:450px;border-radius:27px;background:var(--bar);scroll-snap-align:start;
+.kost-wisch>div{position:relative;flex:none;width:309px;height:450px;border-radius:27px;background:var(--bar);
 cursor:pointer;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 /* David 14.11.2026 10:4x: "Du sollst es so machen, dass man nicht wischen muss ... Wischen zählt auch einfach nur als Berühren.
    Wenn man es in den rechten zwei Dritteln von der Karte berührt, wischt es weiter, und wenn man es im linken Drittel der Karte
    berührt, wischt es zurück." Deshalb overflow hidden (kein freies Wischen) und touch-action pan-y (die Seite scrollt weiter
-   senkrecht); jede Berührung und jedes waagerechte Wischen geht an DIET_JS. */
+   senkrecht); jede Berührung und jedes waagerechte Wischen geht an DIET_JS. Kein Einrasten (scroll-snap) mehr: DIET_JS
+   fährt genau auf die Kartenplätze, und Safari soll das weiche Gleiten nicht mit einem Einrasten überlagern. */
 /* 14.11.2026: Bild genau in der Mitte der Karte, 265 breit (309 minus 2 x 22 Rand wie der Seitenrand), Davids Zeile 18 darunter.
    Schriftfarbe je Karte aus _schrift_auf(): weiß oder dunkel, was auf seiner Kartenfarbe mehr Kontrast hat. */
 .kost-wisch img{position:absolute;left:22px;top:calc(50% - 132.5px);width:265px;height:265px;object-fit:cover;border-radius:18px;display:block;pointer-events:none;-webkit-user-drag:none}
